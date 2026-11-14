@@ -7,6 +7,7 @@ geopandas
 shapely
 xarray
 netCDF4          # ESA CCI Permafrost NetCDF
+rasterio         # Mars/Ay DEM'leri (pipeline/target_values.py)
 matplotlib
 pyyaml
 
