@@ -128,6 +128,8 @@ Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun il
   "is_new": true,
   "target_id": "mars_jezero",
   "test_id": "biosignature",
+  "lat": 64.85,
+  "lon": -16.82,
   "rank": 1,
   "score_total": 82,
   "scores": { "topography": 75, "geology": 90, "climate": null },
@@ -150,6 +152,7 @@ Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun il
 | `breakdown` | `gravity`, `atmosphere`, `radiation`, `liquid_water`, `biology` |
 | `scores` anahtarları | `topography`, `geology`, `climate`. Değer `null` olabilir: o test amacında o boyuta ağırlık verilmemiştir (radarda boş). Operasyon bilgisi puan değil, `ops_tags` |
 | `ops_tags` anahtarları | `road_access`, `remote` (`config/grid.yaml > ops_tags`) |
+| Analog `lat`, `lon` | Karenin Dünya'daki merkezi (derece, `lon` -180..180). Statik GeoJSON'da `geometry` ile aynı değerdir; `/scenario` yanıtında `geometry` olmadığı için pin bu alanlardan çizilir |
 
 ## API
 
@@ -288,10 +291,14 @@ cd frontend && npm install
 
 ```
 GEMINI_API_KEY=
+GEMINI_MODEL=gemini-2.5-flash
 EE_PROJECT=
+EE_PERMAFROST_ASSETS=
 API_ALLOWED_ORIGIN=http://localhost:5173
 VITE_API_URL=http://localhost:8000
 ```
+
+`API_ALLOWED_ORIGIN` virgülle ayrılmış liste alır; sondaki `/` temizlenir. Yayında frontend adresini buraya ekleyin, örn. `http://localhost:5173,https://geocosmos.vercel.app`.
 
 ## Yayınlama
 

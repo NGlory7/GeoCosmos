@@ -69,6 +69,9 @@ class Analog(BaseModel):
     is_new: bool
     target_id: str
     test_id: TestId | Literal["custom"]  # "custom": /scenario serbest metin sonucu
+    # Karenin Dünya'daki merkezi. /scenario yanıtında geometry olmadığı için pin bundan çizilir.
+    lat: float = Field(ge=-90, le=90)
+    lon: float = Field(ge=-180, le=180)
     rank: int = Field(ge=1)
     score_total: float = Field(ge=0, le=100)
     scores: Scores

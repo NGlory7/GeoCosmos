@@ -44,6 +44,8 @@ export interface Analog {
   is_new: boolean;
   target_id: string;
   test_id: TestId | "custom"; // "custom": /scenario sonucu
+  lat: number; // Dünya'daki kare merkezi; /scenario yanıtında pin bundan çizilir
+  lon: number;
   rank: number;
   score_total: number;
   scores: Scores;

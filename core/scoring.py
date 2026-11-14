@@ -86,6 +86,8 @@ def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int
             is_new=bool(row.get("is_new", False)),
             target_id=target.id,
             test_id=profile.id,
+            lat=float(row["lat"]),
+            lon=float(row["lon"]),
             rank=rank,
             score_total=round(float(row["score_total"]), 1),
             scores=Scores(**{d: (None if pd.isna(row[d]) else round(float(row[d]), 1))

@@ -121,3 +121,9 @@ def test_ops_tags_reach_card(grid, target):
     analogs = top_analogs(grid, target, load_profiles()["rover"], n=2)
     assert analogs[0].ops_tags == {"road_access": True}
     assert "operations" not in analogs[0].scores.model_dump()
+
+
+def test_analogs_carry_coordinates(grid, target):
+    # /scenario yanıtında geometry yok: pin çizilebilmesi için koordinat Analog'da olmalı.
+    analogs = top_analogs(grid, target, load_profiles()["rover"], n=2)
+    assert [(a.id, a.lat, a.lon) for a in analogs] == [("benzer", 0, 0), ("orta", 1, 1)]
