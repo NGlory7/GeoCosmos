@@ -18,5 +18,6 @@ npm run build    # dist/
 | `/mars`, `/moon` | Dönen Ay/Mars küresi (NASA Trek mozaiği) üzerinde hedefler, hedef ve test seçimi |
 | `/:body/:hedef/:test` | Dünya haritası (NASA GIBS), ısı haritası, adaylar, analog kartı, senaryo kutusu |
 | `/dogrulama` | Doğrulama paneli |
+| `/bulgular` | Halka açık bulgular sayfası (`src/pages/FindingsPage.tsx`); yıldız adaylar `FINDINGS` listesinde kare kimliğiyle sabit |
 
 - API adresi: `VITE_API_URL` (varsayılan `http://localhost:8000`; boş = yayında API yok).

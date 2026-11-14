@@ -248,6 +248,7 @@ Hazır sonuçlar statik dosyadır; API sadece canlı senaryo içindir.
 | `/mars`, `/moon` | Dönen Ay/Mars küresi (NASA Trek mozaiği) üzerinde hedefler, hedef ve test seçimi | `targets.geojson`, `meta.json`, `analogs/index.json` |
 | `/:body/:hedef/:test` | Dünya haritası (NASA GIBS), ısı haritası, adaylar, analog kartı, senaryo kutusu | `analogs/<hedef>_<test>.geojson`, `heatmaps/index.json`, `POST /scenario` |
 | `/dogrulama` | Doğrulama paneli | `validation.json` |
+| `/bulgular` | Halka açık bulgular: üç yıldız aday (anlatı elle, sayılar dosyalardan), Dünya'nın taklit edemedikleri, dürüst sınırlar. Uydu görüntüsü NASA GIBS WMS | `meta.json`, `targets.geojson`, `analogs/*`, `validation.json` |
 
 - **Taban haritalar challenge kaynaklarından:** Ay/Mars için NASA Trek WMTS karoları (Viking MDIM 2.1 renkli mozaik, LRO WAC mozaik) birleştirilip WebGL küresine sarılır (`PlanetGlobe.tsx`), Dünya için NASA GIBS (Worldview) Blue Marble (Web Mercator).
 - Harita ve grafik kütüphaneleri ayrı parçada yüklenir (`React.lazy`); giriş sayfası onları beklemez.

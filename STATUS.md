@@ -141,3 +141,4 @@ Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yak�
 - `/scenario` API (Gemini tercüman, önbellek, maskeli kare filtresi, seyrek aday seçimi)
 - GitHub Actions: her push'ta testler ve üretilen dosya kontrolü
 - Frontend ekranları: Ay/Mars küresi (NASA Trek mozaiği), test seçimi, Dünya haritası (NASA GIBS), ısı haritası, analog kartı, senaryo kutusu, doğrulama paneli; GitHub Pages yayın iş akışı
+- Halka açık Bulgular sayfası (`/bulgular`): üç yıldız aday (Taklamakan güney kenarı, Amund Ringnes Adası, Peru And Dağları), uydu görüntüsü, benzeyen/benzemeyen parametreler, Dünya'nın taklit edemedikleri, dürüst sınırlar
