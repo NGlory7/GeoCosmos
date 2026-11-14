@@ -73,7 +73,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Marius Hills çukuru hedefi için yapılan \"Üs kurulumu ve iniş alanı\" testi motor çıktısına göre, Dünya'daki bu bölge 93.4 toplam skor elde etmiştir. Jeoloji kategorisinde 100.0, topografyada 97.5 ve iklimde 86.4 boyut skorlarına sahiptir. Ortalama eğim, yüzey pürüzlülüğü, yıllık ortalama öğlen güneş yüksekliği, donmuş zemin ile yüzeye yakın buz ve kuraklık parametrelerinin tamamında hedef ile uyum (\"benziyor\": true) sağlamaktadır. Yol erişimi ve uzaklık durumları ise olumsuzdur.\n\nÖte yandan, yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C olup Dünya'da tam bir karşılığı yoktur. Ayrıca atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
    }
   },
   {
@@ -148,7 +148,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki bu test sahası, 13.90°G, 76.05°B koordinatlarında yer almakta olup toplam 93.3 skorla Marius Hills hedefi için üs kurulumu ve iniş alanı testlerine elverişli özellikler göstermektedir. Topografya skoru 98.8, jeoloji skoru 100.0 ve iklim skoru 84.6 olarak ölçülmüştür. Ortalama eğim değerleri Dünya'da 1.4° iken hedefte 1.52°'dir; yüzey pürüzlülüğü ise Dünya için 32.23 m, hedef için 33.1 m seviyesindedir. Ayrıca yıllık ortalama öğlen güneş yüksekliği Dünya'da 72.44°, hedefte 75.9° olarak benzerlik göstermektedir. Donmuş zemin veya yüzeye yakın buz parametresi her iki alanda da 0.0 değerini alırken, kuraklık indisi Dünya'da 0.89, hedefte ise 1.0 olarak kaydedilmiştir. Tüm bu parametreler \"benziyor: true\" olarak eşleşmiştir.\n\nBununla birlikte, bazı temel fiziksel ve çevresel faktörlerde önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Bölgede manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C seviyesindedir ve bu durumun Dünya'da karşılığı yoktur. Son olarak, atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
    }
   },
   {
@@ -223,7 +223,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "17.75°G, 12.03°D konumundaki bölge, 93.2 toplam skor ile Marius Hills çukuru hedefindeki üs kurulumu ve iniş alanı testi için uygun bir aday olarak öne çıkmaktadır. Topografya ve jeoloji boyut skorlarının tam uyum göstermesi, ortalama eğim (Dünya'da 1.51°, hedefte 1.52°), yüzey pürüzlülüğü, yıllık ortalama öğlen güneş yüksekliği, yüzeye yakın buz eksikliği ve kuraklık derecesi gibi parametrelerin (\"benziyor\": true) hedeflenen koşulları büyük ölçüde sağladığını göstermektedir. Yol erişiminin bulunmaması ve bölgenin uzak yapısı, test sahasının operasyonel karakteristiğini belirlemektedir.\n\nBununla birlikte, bazı kritik alanlarda önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı seviyesinde (1,62 m/s²) olup, toz ve tekerlek davranışı Dünya'dakinden farklıdır. Bölgede manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve bu durumun Dünya'da birebir karşılığı yoktur. Atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ve ısı taşınımı da gerçekleşmemektedir."
    }
   },
   {
@@ -298,7 +298,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Marius Hills çukuru hedefi için yapılan \"Üs kurulumu ve iniş alanı\" testinde, bölge 93.2 toplam skor elde etmiştir. Ortalama eğim, yüzey pürüzlülüğü, yıllık ortalama öğlen güneş yüksekliği, donmuş zemin durumu ve kuraklık gibi parametrelerde hedef ile yüksek uyum (\"match\": true) sağlanmış; topoğrafya 98.1, jeoloji 100.0 ve iklim 85.1 boyut skorlarına ulaşılmıştır.\n\nBununla birlikte, bazı kritik alanlarda önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) seviyesindedir ve bu durum toz ile tekerlek davranışını değiştirir. Manyetik alan ile atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C olmakta ve bunun Dünya'da tam bir karşılığı yer almamaktadır. Ayrıca atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
    }
   },
   {
@@ -373,7 +373,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki bu bölge, 10.97°K, 51.04°D koordinatlarında yer almakta olup Marius Hills çukuru hedefi için toplam 93.1 skorla değerlendirilmiştir. Topografya skoru 98.4, jeoloji skoru 100.0 ve iklim skoru 84.5 olarak hesaplanmıştır. Ortalama eğim (Dünya'da 1.49, hedefte 1.52), yüzey pürüzlülüğü (Dünya'da 34.79, hedefte 33.1), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 73.51, hedefte 75.9), donmuş zemin (her ikisinde de 0.0) ve kuraklık (Dünya'da 0.86, hedefte 1.0) parametrelerinin tamamında eşleşme sağlanmıştır (\"benziyor\": true). \n\nAncak hedef ortam ile Dünya arasında kritik fiziksel farklılıklar bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Bölgede manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C seviyesindedir ve bunun Dünya'da bir karşılığı yoktur. Ayrıca atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı görülmemektedir."
    }
   },
   {

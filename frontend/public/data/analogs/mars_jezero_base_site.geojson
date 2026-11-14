@@ -73,7 +73,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "20.46°K, 37.00°D koordinatlarında yer alan bölge, Jezero Krateri hedefiyle yapılan karşılaştırmada 96.5 toplam skor elde etmiştir. Topografya (98.4), jeoloji (100.0) ve iklim (92.9) alt skorlarıyla öne çıkan bu sahanın iyi bir test alanı olmasının temel nedenleri, hedef ile büyük ölçüde örtüşen parametreleridir. Ortalama eğim Dünya'da 1.26° iken hedeflenen alanda 1.11° olarak ölçülmüştür; yüzey pürüzlülüğü ise Dünya'da 30.74 m iken hedefte 29.6 m'dir. Ayrıca yıllık ortalama öğlen güneş yüksekliği (Dünya'da 68.91°, hedefte 69.5°), donmuş zemin durumu (her ikisinde de 0.0) ve kuraklık oranları (Dünya'da 0.93, hedefte 1.0) parametrelerinin tamamı eşleşmektedir (\"benziyor\": true). Yol erişimine sahip olan ve uzak olmayan bu yeni aday bölge, operasyonel açıdan avantajlar sunmaktadır.\n\nBuna karşın, sistem verilerine göre yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksek olup, yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve bu değerler Dünya'daki çöl analoglarından onlarca derece daha soğuktur. Ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşmakta, toz taşınımı da farklı bir şekilde gerçekleşmektedir."
    }
   },
   {
@@ -148,7 +148,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "19.56°K, 19.54°D konumundaki bölge, Jezero Krateri hedefi için 96.5 toplam skorla üs kurulumu ve iniş alanı testleri açısından uygun özellikler göstermektedir. Topografi, jeoloji ve iklim alt skorları sırasıyla 98.7, 100.0 ve 92.6 olarak hesaplanmıştır. Ortalama eğim, yüzey pürüzlülüğü, yıllık ortalama öğlen güneş yüksekliği, donmuş zemin/yüzeye yakın buz ve kuraklık parametrelerinin tamamında hedef ile uyum (\"match\": true) sağlanmıştır; örneğin ortalama eğim dünyada 1.37 iken hedefte 1.11, yüzey pürüzlülüğü sırasıyla 29.17 ve 29.6, yıllık ortalama öğlen güneş yüksekliği ise 69.51 ve 69.5 olarak gerçekleşmiştir.\n\nBununla birlikte, motor çıktısında yer almayan ve sistem tarafından sağlanan bilgilere göre yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir, küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup Dünya'daki çöl analoglarından onlarca derece soğuktur; ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşmakta, toz taşınımı farklı çalışmaktadır. Bölge kara erişimine kapalı (road_access: false) ve uzaktır (remote: true)."
    }
   },
   {
@@ -223,7 +223,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "19.33°G, 12.97°D koordinatlarındaki Dünya bölgesi, toplam 96.0 skorla Jezero Krateri'ndeki üs kurulumu ve iniş alanı hedefi için güçlü bir test sahası potansiyeli sergilemektedir. Topografya (99.3), jeoloji (100.0) ve iklim (90.9) alt skorlarının yüksek olması, bölgenin bazı temel fiziksel parametrelerde hedefe oldukça yakın olduğunu göstermektedir. Özellikle ortalama eğim (Dünya'da 1.29°, hedefte 1.11°), yüzey pürüzlülüğü (Dünya'da 29.66 m, hedefte 29.6 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 69.65°, hedefte 69.5°), donmuş zemin/yüzeye yakın buz (her ikisinde de 0.0) ve kuraklık (Dünya'da 0.89, hedefte 1.0) parametrelerinin tamamında eşleşme (`benziyor: true`) sağlanmıştır. Ayrıca yol erişiminin olmaması (`road_access: false`) ve bölgenin uzak yapısı (`remote: true`), test koşullarının izolasyon gereksinimlerini desteklemektedir.\n\nBununla birlikte, motor çıktısında doğrudan yer almayan ve test sahası ile hedef arasındaki temel kopma noktalarını oluşturan çevresel ve fiziksel farklılıklar göz önünde bulundurulmalıdır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir, küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok daha yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece daha soğuktur. Ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluştuğu için toz taşınımı Dünya'dakinden farklı bir şekilde gerçekleşmektedir."
    }
   },
   {
@@ -298,7 +298,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "19.33°K, 18.31°D koordinatlarındaki bu bölge, 96.0 toplam skorla üs kurulumu ve iniş alanı testi için güçlü bir analog potansiyeli sunmaktadır. Jeoloji skoru 100.0, topografya skoru 97.5 ve iklim skoru 92.8 olarak hesaplanmıştır. Ortalama eğim, yüzey pürüzlülüğü, yıllık ortalama öğlen güneş yüksekliği, donmuş zemin ve kuraklık gibi incelenen tüm temel parametrelerde hedefe uyum sağlanmıştır (\"match\": true).\n\nBununla birlikte, motor çıktısındaki fiziksel ve çevresel kopma noktaları dikkate alınmalıdır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşur; toz taşınımı da farklı işler."
    }
   },
   {
@@ -373,7 +373,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya üzerindeki 18.20°G, 12.03°D koordinatlarında yer alan bu bölge, Jezero Krateri hedefine üs kurulumu ve iniş alanı testi için genel olarak 96.0 toplam skorla yüksek bir benzerlik sunmaktadır. Topografya boyut skorunun 98.9, jeoloji boyut skorunun 100.0 ve iklim boyut skorunun 91.2 olması, ortalama eğim (Dünya'da 1.17, hedefte 1.11), yüzey pürüzlülüğü (Dünya'da 28.66, hedefte 29.6), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 70.33, hedefte 69.5), donmuş zemin/yüzeye yakın buz (her ikisinde de 0.0) ve kuraklık (Dünya'da 0.91, hedefte 1.0) parametrelerinin tamamında (`benziyor`: true) eşleşme sağlandığını göstermektedir. Ayrıca bölgenin yol erişimi bulunmamakta (`road_access`: false) ve uzak bir konumda (`remote`: true) yer almaktadır.\n\nBuna karşın, sistem çıkışında yer alan fiziksel kopma noktaları ve çevresel farklar göz önünde bulundurulmalıdır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır; ayrıca yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer ise çok ince (~%0,6) ve çoğunlukla CO₂'den oluşmakta, bu da toz taşınımının farklı işlemesine neden olmaktadır."
    }
   },
   {

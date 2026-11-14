@@ -73,7 +73,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.55°K, 75.32°D konumundaki Dünya bölgesi, toplam 60.4 skorla Malapert Masifi hedefi için bazı alanlarda benzerlik göstermektedir. Özellikle jeoloji skoru 94.2 ile oldukça yüksektir; ortalama eğim (Dünya'da 22.82, hedef 16.78), yüzey pürüzlülüğü (Dünya'da 481.59 m, hedef 467.5 m), donmuş zemin/yüzeye yakın buz oranı (Dünya'da 0.26, hedef 0.29) ve kuraklık derecesi (Dünya'da 0.9, hedef 1.0) parametrelerinde eşleşme sağlanmıştır (\"match\": true).\n\nBuna karşın, 41.6'lık iklim skoru ve yıllık ortalama öğlen güneş yüksekliği parametresindeki uyumsuzluk (Dünya'da 51.45°, hedef 4.0°) önemli bir kopma noktası oluşturmaktadır. Ayrıca, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da bunun tam bir karşılığı yoktur; ayrıca atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir. Bölgeye karayolu erişimi bulunmamakta ve bölge izole durumdadır."
    }
   },
   {
@@ -148,7 +148,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.51°K, 74.15°D koordinatlarında bulunan bölge, Malapert Masifi hedefi için toplam 59.7 skorla değerlendirilmiştir. Jeoloji kategorisinde 95.2 gibi yüksek bir uyum oranı yakalayan saha; 467.5 m yüzey pürüzlülüğü (hedef: 473.35 m), 0.29 yüzeye yakın buz oranı (hedef: 0.32) ve 1.0 kuraklık derecesi (hedef: 0.87) parametrelerinde benzerlik göstermektedir. Topografya skoru 65.3 ve iklim skoru 39.4 olarak hesaplanırken, ortalama eğim hedef 16.78° iken dünyada 24.85° ve yıllık ortalama öğlen güneş yüksekliği hedef 4.0° iken dünyada 53.49° ölçülerek eşleşmemiştir. Ayrıca bölgede yol erişimi bulunmamaktadır ve alan uzaktır.\n\nBununla birlikte, bazı temel çevresel koşullarda önemli kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklıdır. Manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur. Atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
    }
   },
   {
@@ -223,7 +223,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.51°K, 72.27°D konumundaki Dünya bölgesi, 58.8 toplam skor ile Malapert Masifi hedefindeki üs kurulumu ve iniş alanı testleri için kısmi bir benzerlik sunmaktadır. Özellikle yüzey pürüzlülüğü (Dünya'da 476.49 m, hedefte 467.5 m), donmuş zemin veya yüzeye yakın buz (Dünya'da 0.35, hedefte 0.29) ve kuraklık (Dünya'da 0.9, hedefte 1.0) parametrelerinde eşleşme sağlamaktadır. Bu durum, jeoloji alt skorunun 89.7 gibi yüksek bir seviyeye ulaşmasını sağlamıştır.\n\nBuna karşın, ortalama eğim (Dünya'da 24.61°, hedefte 16.78°) ve yıllık ortalama öğlen güneş yüksekliği (Dünya'da 53.49°, hedefte 4.0°) parametrelerinde uyumsuzluk görülmekte olup, iklim alt skoru 41.5'te kalmaktadır. Ayrıca, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir; manyetik alan ile atmosfer koruması yoktur ve yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur; atmosfer yok denecek kadar incedir, rüzgar aşınması ve ısı taşınımı bulunmamaktadır."
    }
   },
   {
@@ -298,7 +298,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "81.96°K, 82.49°B konumundaki bu bölge, Malapert Masifi hedefi için toplam 58.7 skoruna sahiptir. 87.8 iklim skoru ve 43.1 topografya skoruyla öne çıkan bu sahada; 13.63 Dünya ve 16.78 hedef ortalama eğim ile 8.04 Dünya ve 4.0 hedef yıllık ortalama öğlen güneş yüksekliği parametreleri hedefe benzemektedir (\"benziyor\": true). Ayrıca 0.93 Dünya ve 1.0 hedef kuraklık değeri de benzerlik göstermektedir. Buna karşılık, 238.66 Dünya ve 467.5 hedef yüzey pürüzlülüğü ile 0.72 Dünya ve 0.29 hedef donmuş zemin / yüzeye yakın buz parametreleri hedefe benzememektedir (\"benziyor\": false). Toplam skorun sınırlayıcı diğer unsurları arasında 28.9 jeoloji skoru ve ` road_access: false` durumu yer almaktadır.\n\nÖte yandan, bu bölge ile hedef arasında temel fiziksel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olup toz ve tekerlek davranışı farklıdır. Manyetik alan ve atmosfer koruması yoktur ve yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C'dir ve Dünya'da karşılığı yoktur. Ayrıca atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı bulunmamaktadır."
    }
   },
   {
@@ -373,7 +373,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "81.51°K, 76.32°B konumundaki bu bölge, Malapert Masifi hedefi için toplam 58.6 skorla değerlendirilmiştir. Ortalama eğim (Dünya'da 12.0°, hedefte 16.78°), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 8.49°, hedefte 4.0°), donmuş zemin (Dünya'da 0.59, hedefte 0.29) ve kuraklık (Dünya'da 0.92, hedefte 1.0) parametrelerinde uyum sağlanmış olup, özellikle iklim boyutu 85.6 gibi yüksek bir skor almıştır.\n\nBuna karşın yüzey pürüzlülüğü parametresinde (Dünya'da 257.72 m, hedefte 467.5 m) uyumsuzluk görülmektedir. Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklılık gösterir; manyetik alan ve atmosfer koruması bulunmadığı için yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur ve atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ile ısı taşınımı gerçekleşmemektedir."
    }
   },
   {

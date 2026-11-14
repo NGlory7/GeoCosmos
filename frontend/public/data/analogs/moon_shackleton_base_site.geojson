@@ -73,7 +73,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "81.96°K, 82.49°B konumundaki bölge, Shackleton Krateri kenarı için üs kurulumu ve iniş alanı testinde toplam 67.9 skor almıştır. Ortalama eğim (Dünya'da 13.63°, hedefte 13.94°) neredeyse aynıdır. Yıllık ortalama öğlen güneş yüksekliği 8.04° ile hedefteki 0.1°'ye tolerans içinde yakındır; güneş ufka yakın seyreder. Donmuş zemin oranı (0.72'ye karşı 0.56) ve kuraklık (0.93'e karşı 1.0) da eşleşir; iklim skoru 81.3, jeoloji skoru 73.9'dur.\n\nBenzemeyen yön yüzey pürüzlülüğüdür: Dünya'da 238.66 m, hedefte 378.1 m; topografya skoru bu yüzden 53.4'te kalır. Güneş yüksekliği tolerans içinde olsa da hedefteki kadar alçak değildir. Bölgeye karayolu erişimi yoktur ve bölge izoledir. Kopma noktaları değişmez: yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklıdır; manyetik alan ve atmosfer koruması olmadığı için yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C'dir ve Dünya'da karşılığı yoktur; atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı da yoktur."
    }
   },
   {
@@ -148,7 +148,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "81.51°K, 76.32°B konumundaki bölge, toplam 67.7 skorla bu testin ikinci adayıdır. Donmuş zemin oranı (Dünya'da 0.59, hedefte 0.56) hedefe çok yakındır ve jeoloji skoru 95.0'tır. Ortalama eğim (12.0°'ye karşı 13.94°), öğlen güneş yüksekliği (8.49°'ye karşı 0.1°) ve kuraklık (0.92'ye karşı 1.0) da eşleşen parametrelerdir; iklim skoru 79.1'dir.\n\nYüzey pürüzlülüğü Dünya'da 257.72 m, hedefte 378.1 m'dir ve eşleşmez; topografya skoru 47.5'tir. Güneş hedefe göre daha yüksektedir. Karayolu erişimi yoktur ve bölge izoledir. Kopma noktaları değişmez: yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklıdır; manyetik alan ve atmosfer koruması olmadığı için yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C'dir ve Dünya'da karşılığı yoktur; atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı da yoktur."
    }
   },
   {
@@ -223,7 +223,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.29°K, 76.56°D konumundaki bölge toplam 64.8 skor almıştır. Arazi hedefe benzer: yüzey pürüzlülüğü (Dünya'da 377.21 m, hedefte 378.1 m) neredeyse aynıdır, ortalama eğim (20.74°'ye karşı 13.94°) tolerans içindedir ve topografya skoru 74.5'tir. Donmuş zemin oranı (0.61'e karşı 0.56) ve kuraklık (0.92'ye karşı 1.0) da eşleşir; jeoloji skoru 91.9'dur.\n\nAsıl kopma noktası aydınlanmadır: yıllık ortalama öğlen güneş yüksekliği Dünya'da 53.71°, hedefte 0.1°'dir. İklim skorunun 43.2'de kalmasının sebebi budur; bu bölge zemin ve arazi testleri için uygundur, alçak güneş ve uzun gölge koşulları için değil. Karayolu erişimi yoktur ve bölge izoledir. Kopma noktaları değişmez: yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklıdır; manyetik alan ve atmosfer koruması olmadığı için yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C'dir ve Dünya'da karşılığı yoktur; atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı da yoktur."
    }
   },
   {
@@ -298,7 +298,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "82.64°K, 66.73°B konumundaki bölge toplam 63.6 skor almıştır. Öğlen güneş yüksekliği 7.36° ile hedefteki 0.1°'ye tolerans içinde yakındır. Donmuş zemin oranı (Dünya'da 0.62, hedefte 0.56), kuraklık (0.88'e karşı 1.0) ve ortalama eğim (10.16°'ye karşı 13.94°) da eşleşir; jeoloji skoru 89.9, iklim skoru 78.1'dir.\n\nArazi hedeften daha yumuşaktır: yüzey pürüzlülüğü Dünya'da 173.38 m, hedefte 378.1 m'dir ve topografya skoru 40.8'e düşer. Karayolu erişimi yoktur ve bölge izoledir. Kopma noktaları değişmez: yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklıdır; manyetik alan ve atmosfer koruması olmadığı için yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C'dir ve Dünya'da karşılığı yoktur; atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı da yoktur."
    }
   },
   {
@@ -373,7 +373,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.06°K, 72.81°D konumundaki bölge toplam 63.4 skor almıştır. Yüzey pürüzlülüğü (Dünya'da 377.98 m, hedefte 378.1 m) ve donmuş zemin oranı (0.56'ya karşı 0.56) hedefle neredeyse aynıdır; jeoloji skoru 99.6, topografya skoru 75.6'dır. Ortalama eğim (20.61°'ye karşı 13.94°) ve kuraklık (0.83'e karşı 1.0) da eşleşir.\n\nBenzemeyen yön aydınlanmadır: yıllık ortalama öğlen güneş yüksekliği Dünya'da 53.94°, hedefte 0.1°'dir ve iklim skoru 35.5'te kalır. Kutup ışığı ve uzun gölge koşulları burada denenemez. Karayolu erişimi yoktur, ancak bölge izole değildir. Kopma noktaları değişmez: yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklıdır; manyetik alan ve atmosfer koruması olmadığı için yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C'dir ve Dünya'da karşılığı yoktur; atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı da yoktur."
    }
   },
   {

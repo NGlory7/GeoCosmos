@@ -10,6 +10,8 @@ Kurallar (ARCHITECTURE.md > Gemini kullanımı):
   existing_comments() ile toplanır; istem (prompt) birebir aynıysa yorum yeniden kullanılır, Gemini
   çağrılmaz. Önbellek dosyası olmayan bilgisayarda da GitHub'daki yorumlar silinmez.
 - GEMINI_API_KEY yoksa yeni yorum üretilmez; korunan yorumlar yine yazılır.
+- Günlük kota (ücretsiz: 500 istek/gün) dolarsa beklenmez: kalanlar boş kalır, ertesi gün yeniden çalıştırılır.
+- Her istekte 60 sn zaman sınırı var; takılan istek yeniden denenir.
 
 Kullanım:  python -m pipeline.commentary
 """
@@ -112,6 +114,15 @@ def payload_for(props: dict, labels: dict[str, str]) -> dict:
 _last_call = 0.0
 
 
+class DailyQuotaExhausted(RuntimeError):
+    """Günlük istek kotası (ücretsiz: 500/gün) doldu; beklemek anlamsız, ertesi gün yeniden çalıştır."""
+
+
+def _is_daily_quota(err: Exception) -> bool:
+    msg = str(err)
+    return "per day" in msg.lower() or "PerDay" in msg
+
+
 def _retry_delay_s(err: Exception, default: float) -> float:
     """429 hatasındaki "retry in 5.0s" / retryDelay değerini okur; bulamazsa default."""
     m = re.search(r"retry in ([\d.]+)s|'retryDelay': '([\d.]+)s'", str(err))
@@ -126,8 +137,11 @@ def gemini_generate(prompt: str) -> str:
     from google import genai  # sadece gerektiğinde yükle
     from google.genai import errors
 
+    import httpx
+
     cfg = load_grid_config()["commentary"]
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    # Zaman sınırı olmadan takılan bir istek tüm üretimi sessizce durduruyordu (60 sn, ms cinsinden).
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"], http_options={"timeout": 60_000})
     model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
     for attempt in range(cfg.get("rate_limit_retries", 5) + 1):
         wait = cfg.get("min_interval_s", 0) - (time.monotonic() - _last_call)
@@ -138,9 +152,15 @@ def gemini_generate(prompt: str) -> str:
             return client.models.generate_content(model=model, contents=prompt).text.strip()
         except errors.APIError as e:
             # 429: kota; 500/503: Gemini tarafında geçici yoğunluk ("high demand"). İkisi de beklenip denenir.
+            # Günlük kota ise saatler sonra açılır: beklemeden durulur.
+            if e.code == 429 and _is_daily_quota(e):
+                raise DailyQuotaExhausted(str(e)[:300]) from e
             if e.code not in (429, 500, 503) or attempt == cfg.get("rate_limit_retries", 5):
                 raise
             time.sleep(_retry_delay_s(e, default=30 * (attempt + 1)))
+        except httpx.TimeoutException:
+            if attempt == cfg.get("rate_limit_retries", 5):
+                raise
     raise RuntimeError("ulaşılamaz")
 
 
@@ -210,6 +230,8 @@ def add_comments(analog_dir: Path = ANALOG_DIR, generate: Callable[[str], str] |
     """Dönüş: {"written": n, "empty": n, "kept": n, "skipped": sebep|None}.
     kept: existing_comments() çıktısı; allow_generate=False ya da anahtar yoksa sadece korunanlar yazılır."""
     load_dotenv(ROOT / ".env")
+    if kept is None:  # tek başına çalıştırıldı (python -m pipeline.commentary): diskteki yorumları koru
+        kept = existing_comments(analog_dir)
     skipped = None
     if not allow_generate:
         generate, skipped = None, "yeni yorum üretimi kapalı (--skip-commentary)"
@@ -231,7 +253,12 @@ def add_comments(analog_dir: Path = ANALOG_DIR, generate: Callable[[str], str] |
         for feat in fc["features"][: cfg["top_k"]]:
             if kept and _prompt_key(prompt_for(feat["properties"])[0]) in kept:
                 reused += 1
-            text = comment_for(feat["properties"], generate, cache, cfg["max_retries"], kept)
+            try:
+                text = comment_for(feat["properties"], generate, cache, cfg["max_retries"], kept)
+            except DailyQuotaExhausted:
+                # Kalan adaylar için sadece korunan/önbellekteki yorumlar; boşlar önbelleğe yazılmaz.
+                generate, skipped = None, "Gemini günlük kotası doldu; yarın yeniden çalıştır"
+                text = comment_for(feat["properties"], None, cache, cfg["max_retries"], kept)
             feat["properties"]["ai_comment"] = text
             written += bool(text)
             empty += not text

@@ -73,7 +73,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "15.49°G, 74.41°B koordinatlarındaki bölge, Gale Krateri hedefi için toplam 89.7 skorla değerlendirilmiştir. Jeoloji kategorisinde 100.0, topografyada 87.3 ve iklimde 88.2 skor elde eden saha; ortalama eğim (Dünya'da 13.99, hedefte 10.51), yüzey pürüzlülüğü (Dünya'da 286.91 m, hedefte 286.9 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 71.74°, hedefte 73.8°), donmuş zemin/yüzeye yakın buz (her ikisinde de 0.0) ve kuraklık (Dünya'da 0.9, hedefte 1.0) parametrelerinde hedefe uyum sağlamaktadır. Ayrıca yol erişiminin bulunması operasyonel avantaj sunmaktadır.\n\nBununla birlikte, bazı temel çevresel ve fiziki parametrelerde belirgin farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksek olup, yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluştuğu için toz taşınımı farklı işlemektedir."
    }
   },
   {
@@ -148,7 +148,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "16.84°G, 71.14°B konumundaki bu bölge, Gale Krateri hedefiyle karşılaştırıldığında 84.8 toplam skor elde ederek üs kurulumu ve iniş alanı testleri için belirli alanlarda uyumluluk göstermektedir. Topoğrafya ve jeoloji alt skorları sırasıyla 79.5 ve 100.0 olan bölgede; 15.31° Dünya, 10.51° hedef ortalama eğim; 283.55 m Dünya, 286.9 m hedef yüzey pürüzlülüğü; 71.07° Dünya, 73.8° hedef yıllık ortalama öğlen güneş yüksekliği; 0.0 Dünya ve hedef donmuş zemin oranı ile 0.87 Dünya, 1.0 hedef kuraklık parametreleri hedef ile uyumlu (match: true) bulunmuştur. Ayrıca yol erişimi mevcuttur ve bölge uzakta değildir.\n\nBuna karşın, sistem motorunun belirttiği üzere yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer ise çok ince (~%0,6) ve çoğunlukla CO₂'den oluşup, toz taşınımı farklı işlemektedir."
    }
   },
   {
@@ -223,7 +223,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "15.94°G, 72.54°B konumundaki bu bölge, Gale Krateri hedefi için toplam 84.1 skor alarak üs kurulumu ve iniş alanı testleri açısından bazı avantajlı parametreler sunmaktadır. Özellikle jeoloji boyutu 100.0 tam puan alırken; 13.68° Dünya ve 10.51° hedef ortalama eğimleri, 291.75 m Dünya ve 286.9 m hedef yüzey pürüzlülüğü değerleri, 71.53° Dünya ve 73.8° hedef yıllık ortalama öğlen güneş yüksekliği, 0.0 donmuş zemin oranı ile 0.78 Dünya ve 1.0 hedef kuraklık seviyeleri eşleşmekte (`benziyor`: true) ve topography boyutu 84.1, climate boyutu ise 77.9 skorlarına ulaşmaktadır. Ayrıca yol erişimi (`road_access`) bulunmaktadır.\n\nBununla birlikte, bazı temel parametrelerde ve çevresel koşullarda ciddi kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır; yüzey radyasyonu ise Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur. Ek olarak, atmosfer çok ince olup (~%0,6) çoğunlukla CO₂'den oluşmaktadır ve toz taşınımı farklı işlemektedir."
    }
   },
   {
@@ -298,7 +298,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "13.00°G, 76.05°B konumundaki Dünya bölgesi, Gale Krateri hedefi için 83.4 toplam skorla değerlendirilmiştir. Topografi skoru 81.7, jeoloji skoru 100.0 ve iklim skoru 78.7 olarak hesaplanmıştır. Ortalama eğim (Dünya'da 15.47°, hedefte 10.51°), yüzey pürüzlülüğü (Dünya'da 286.62 m, hedefte 286.9 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 72.8°, hedefte 73.8°), donmuş zemin/yüzeye yakın buz (her ikisinde de 0.0) ve kuraklık (Dünya'da 0.76, hedefte 1.0) parametrelerinde eşleşme sağlanmıştır (`benziyor`: true). Ayrıca yol erişimi mevcut olup, bölge yeni bir aday olarak belirlenmiştir.\n\nBununla birlikte, bazı temel fiziksel ve çevresel parametrelerde önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'idir (3,71 m/s²) ve küresel manyetik alan bulunmamaktadır; yüzey radyasyonu ise Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer çok incedir (~%0,6) ve çoğunlukla CO₂'den oluşur, ayrıca toz taşınımı farklı işlemektedir."
    }
   },
   {
@@ -373,7 +373,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "11.87°G, 76.75°B konumundaki bu bölge, Gale Krateri hedefiyle karşılaştırıldığında 81.9 toplam skor elde etmiştir. Topografya (78.8), jeoloji (100.0) ve iklim (78.2) alt skorlarına sahip olan saha; ortalama eğim, yüzey pürüzlülüğü, yıllık ortalama öğlen güneş yüksekliği, donmuş zemin/yüzeye yakın buz ve kuraklık parametrelerinde hedefe uyum sağlamaktadır (\"match\": true). \n\nAncak bazı temel fiziksel ve çevresel parametrelerde belirgin kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir ve küresel manyetik alan yoktur. Yüzey radyasyonu Dünya'dan çok yüksektir; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Ayrıca atmosfer çok ince (~%0,6) olup çoğunlukla CO₂'den oluşur ve toz taşınımı farklı işler."
    }
   },
   {

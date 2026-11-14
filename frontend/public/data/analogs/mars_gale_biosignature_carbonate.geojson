@@ -53,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.70°K, 48.96°D bölgesindeki bu sahanın \"Biyo-imza: karbonat çökeli\" testi için incelenmesinde, jeoloji alanında 100.0 toplam skor elde edilmiştir. Mafik / bazaltik yüzey parametresinde Dünya değeri 0.5 ile hedef değer olan 0.5 birbirini tam olarak karşılamakta ve bu durum eşleşmenin \"true\" olmasını sağlamaktadır. Karbonat izi parametresinde ise Dünya'da 1.0 ölçülürken hedefte 0.25 düzeyindedir ve bu parametre de eşleşme kriterini (\"true\") karşılamaktadır. Operasyonel olarak yol erişimi mevcuttur (\"road_access\": true) ve saha uzak bir konumda değildir (\"remote\": false).\n\nAncak bazı temel noktalarda kopmalar yaşanmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alan bulunmamakta ve yüzey radyasyonu Dünya'dan çok yüksek seviyededir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -108,7 +108,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.25°K, 49.87°D koordinatlarındaki bu saha, 100.0 toplam skor ile \"Biyo-imza: karbonat çökeli\" testi için dikkat çekici bir potansiyel sunmaktadır. Jeoloji alanındaki tam uyum ve mafik / bazaltik yüzey parametresinde Dünya ile hedefin birebir örtüşmesi (0.5), saha minerolojisinin belirli yönlerden test hedefini desteklediğini göstermektedir. Ayrıca karbonat izi parametresinde Dünya'daki 1.0 değerine karşılık hedef 0.25 seviyesinde yer alsa da, motor çıktısı bu durumu eşik değerler dahilinde uyumlu (\"benziyor\": true) kabul etmektedir. Yol erişimi olmaması ve uzak operasyon gerektirmemesi gibi operasyonel kısıtlar bulunurken, bu yeni aday saha analiz edilmeye değer veriler barındırmaktadır.\n\nBununla birlikte, saha ile Gale Krateri hedefi arasında belirgin kopma noktaları ve çevresel farklar mevcuttur. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın varlığı, biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alan yok ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -163,7 +163,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "7.80°K, 42.66°D koordinatlarındaki bu saha, Gale Krateri hedefindeki \"Biyo-imza: karbonat çökeli\" testi için 100.0 toplam skorla değerlendirilmiştir. Jeoloji boyut skoru 100.0 olan bölge, mafik / bazaltik yüzey parametresinde (Dünya ve hedefte 0.5) ve karbonat izi parametresinde (\"benziyor\": true, Dünya'da 1.0, hedefte 0.25) eşleşme sağlamaktadır. Ayrıca yol erişimi bulunması (\"road_access\": true) operasyonel olarak avantaj sunmaktadır.\n\nBununla birlikte, saha bazı fiziksel ve çevresel parametrelerde hedeften farklılık göstermektedir. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve bugün yüzeyde kalıcı sıvı su yoktur; buna karşın Dünya sahalarında su döngüsü sürmektedir. Ayrıca, Dünya sahalarında modern yaşam olması biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır; bu durum, sahayı Dünya'daki çöl analoglarından onlarca derece soğuk kılmaktadır."
    }
   },
   {
@@ -218,7 +218,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "2.37°K, 41.09°D koordinatlarındaki bu saha, Gale Krateri hedefindeki \"Biyo-imza: karbonat çökeli\" testi için jeolojik açıdan dikkat çekici benzerlikler sunmaktadır. Mafik / bazaltik yüzey parametresinde Dünya ve hedef 0.5 değeriyle tam uyum gösterirken, karbonat izi parametresinde Dünya'daki 1.0 değeri hedeflenen 0.25 değeriyle eşleşmiş ve motor çıktısı bu durumu \"match\": true olarak değerlendirmiştir. Yol erişiminin bulunması ancak sahanın uzakta olmaması da operasyonel olarak değerlendirilen diğer özellikler arasındadır.\n\nBununla birlikte, saha ile hedef arasında önemli çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir ve bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca, Dünya sahalarında modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın bulunmadığı ortamda yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuk kalmaktadır."
    }
   },
   {
@@ -273,7 +273,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "15.94°K, 49.88°D bölgesindeki bu saha, \"Biyo-imza: karbonat çökeli\" testi için jeolojik açıdan belirli benzerlikler sunmaktadır. Mafik / bazaltik yüzey parametresinde Dünya değeri 0.5 ile hedef değer 0.5 birbiriyle tam olarak uyuşmaktadır (\"benziyor\": true). Ayrıca karbonat izi parametresinde Dünya 1.0, hedef 0.25 değerine sahip olup bu ölçüm de eşik kriterini sağlamaktadır (\"benziyor\": true). 100.0 toplam skor ve 100.0 jeoloji boyut skoru ile değerlendirilen bu saha, kara yolu erişimi olmasa da uzaktan operasyona uygun değildir ve yeni bir adaydır.\n\nBununla birlikte, saha bazı kritik çevresel ve fiziksel parametrelerde Gale Krateri hedefinden ve Dünya'daki standart koşullardan farklılaşmaktadır. Yerçekimi Dünya'nın yaklaşık %38'idir (3,71 m/s²). Bugün yüzeyde kalıcı sıvı su bulunmazken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca, Dünya sahalarında modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, bu değer Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {

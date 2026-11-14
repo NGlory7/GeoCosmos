@@ -53,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Bu bölge, Jezero Krateri hedefindeki \"Biyo-imza: karbonat çökeli\" testi için bazı jeolojik parametreler bakımından benzerlik göstermektedir. ASTER GED (AG100) TIR kaynağına göre, karbonat izi (0-1 sıralı ölçek) hedef için 0.5 iken Dünya'daki bu sahada 1.0 olarak ölçülmüş ve bu parametre eşleşmiştir (`match: true`). Ayrıca mafik / bazaltik yüzey (0-1 sıralı ölçek) parametresi hem Dünya'da hem de hedefte 0.75 değerini alarak tamamen benzerlik göstermiştir ve bölgenin toplam jeoloji skoru 100.0 olmuştur.\n\nBununla birlikte, iki ortam arasında önemli çevresel ve fiziksel farklılıklar bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın bulunmadığı hedefte yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -108,7 +108,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.25°K, 48.51°D konumundaki bu bölge, Jezero Krateri hedefindeki \"Biyo-imza: karbonat çökeli\" testi için karbonat izi (Dünya'da 1.0, hedef 0.5) ve mafik/bazaltik yüzey (Dünya'da 0.75, hedef 0.75) parametrelerinde eşleşme sağlayarak toplamda 100.0 skor almıştır. Yol erişiminin bulunması ve uzak konumda olmaması operasyonel olarak avantaj sunmaktadır.\n\nAncak, yerçekiminin Dünya'nın %38'i (3,71 m/s²) olması, bugün yüzeyde kalıcı sıvı su bulunmaması ve Dünya sahalarında su döngüsünün sürmesi önemli farklılıklardır. Ayrıca, Dünya sahalarında modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratırken, küresel manyetik alanın olmaması yüzey radyasyonunu Dünya'dan çok yüksek kılmaktadır. Yıllık ortalama yüzey sıcaklığının hedefe göre yaklaşık −40 ile −75 °C arasında değişmesi ve Dünya'daki çöl analoglarından onlarca derece soğuk olması diğer kopma noktalarını oluşturmaktadır."
    }
   },
   {
@@ -163,7 +163,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "15.26°K, 48.72°D koordinatlarındaki bu saha, Jezero Krateri hedefindeki \"Biyo-imza: karbonat çökeli\" testi için 100.0 toplam skor ile değerlendirilmiştir. Jeoloji boyut skorunun 100.0 olduğu alanda, karbonat izi (Dünya'da 1.0, hedefte 0.5) ve mafik/bazaltik yüzey (Dünya'da 0.75, hedefte 0.75) parametrelerinde eşleşme sağlanmıştır (`match: true`). Ayrıca sahanın kara erişimine sahip olması (`road_access: true`) ve uzak/izole olmaması (`remote: false`) operasyonel avantajlar sunmaktadır.\n\nBununla birlikte, saha ile hedef arasında bazı temel çevresel farklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -218,7 +218,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "11.19°K, 49.42°D koordinatlarındaki bu saha, Jezero Krateri'ndeki karbonat çökeli testi için jeolojik açıdan uygun özellikler göstermektedir. ASTER GED (AG100) TIR verilerine göre mafik ve bazaltik yüzey göstergesi hedefle birebir uyuşmaktadır (0.75). Karbonat izi parametresinde ise Dünya sahası 1.0 seviyesindeyken, hedef için bu değer 0.5 olarak belirlenmiş olup motor çıktısı bu durumu \"benziyor\" olarak değerlendirmiştir.\n\nBuna karşın, operasyonel ve çevresel koşullarda önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yoktur, oysa Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşam vardır ve bu durum biyo-imza testinde kirlilik riski yaratır. Ayrıca küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve bu değer Dünya'daki çöl analoglarından onlarca derece soğuktur. Saha yol erişimine uygundur ve uzak değildir."
    }
   },
   {
@@ -273,7 +273,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "10.51°K, 46.64°D koordinatlarındaki bu saha, Jezero Krateri hedefindeki \"Biyo-imza: karbonat çökeli\" testi için 100.0 toplam skorla değerlendirilmiştir. Jeoloji boyut skoru 100.0 olan sahada, karbonat izi (Dünya 1.0, hedef 0.5) ve mafik / bazaltik yüzey (Dünya 0.75, hedef 0.75) parametrelerinin ikisinde de \"match\": true çıktısı alınmış ve bu özellikleriyle test sahası olarak uyum göstermiştir.\n\nÖte yandan, hedefe kıyasla yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve bugün yüzeyde kalıcı sıvı su bulunmazken Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşam olması biyo-imza testinde kirlilik riski yaratmakta, küresel manyetik alan olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksek seviyededir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte ve Dünya'daki çöl analoglarından onlarca derece soğuk kalmaktadır."
    }
   },
   {

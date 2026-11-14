@@ -119,9 +119,51 @@ def test_invented_numbers_rejected(built, tmp_path):
         return "Bu bölge Mars'a %97 benziyor ve 1971'de test edildi."
 
     analogs = tmp / "out" / "analogs"
-    res = add_comments(analogs, generate=liar, cache_path=tmp_path / "c.json")
+    res = add_comments(analogs, generate=liar, cache_path=tmp_path / "c.json", kept={})
     assert res["written"] == 0 and res["empty"] > 0
     assert len(calls) >= 3  # ilk deneme + 2 yeniden deneme
+
+
+def test_daily_quota_stops_without_waiting(built, tmp_path):
+    """Günlük kota dolunca saatlerce yeniden denenmez; sonraki adaylar için Gemini çağrılmaz,
+    boş sonuç önbelleğe yazılmaz (ertesi gün üretilsin)."""
+    import shutil
+
+    from pipeline.commentary import DailyQuotaExhausted
+
+    analogs = tmp_path / "analogs"
+    shutil.copytree(built[0] / "out" / "analogs", analogs)
+    calls = []
+
+    def quota(prompt):
+        calls.append(1)
+        if len(calls) > 1:
+            raise DailyQuotaExhausted("per day limit")
+        return "Eğim ve engebe hedefe yakın."
+
+    cache_path = tmp_path / "c.json"
+    res = add_comments(analogs, generate=quota, cache_path=cache_path, kept={})
+    assert len(calls) == 2
+    assert res["written"] == 1 and res["empty"] > 0 and "kota" in res["skipped"]
+    assert list(json.loads(cache_path.read_text(encoding="utf-8")).values()) == ["Eğim ve engebe hedefe yakın."]
+
+
+def test_standalone_run_keeps_comments_on_disk(built, tmp_path):
+    """python -m pipeline.commentary (kept verilmeden) diskteki yorumları silmemeli ve yeniden yazdırmamalı."""
+    import shutil
+
+    analogs = tmp_path / "analogs"
+    shutil.copytree(built[0] / "out" / "analogs", analogs)
+    # Başka bir bilgisayarda yazılmış yorumlar: bu bilgisayarın önbelleğinde yok.
+    add_comments(analogs, generate=lambda p: "Eğim hedefe yakın.", cache_path=tmp_path / "baska.json", kept={})
+    before = {p.name: p.read_text(encoding="utf-8") for p in analogs.glob("*.geojson")}
+    assert any(f["properties"].get("ai_comment") for t in before.values() for f in json.loads(t)["features"])
+
+    def must_not_call(prompt):
+        raise AssertionError("dolu yorum yeniden üretildi")
+
+    add_comments(analogs, generate=must_not_call, cache_path=tmp_path / "bos.json")
+    assert {p.name: p.read_text(encoding="utf-8") for p in analogs.glob("*.geojson")} == before
 
 
 def test_number_check_accepts_turkish_decimals():
