@@ -11,27 +11,26 @@ function TestPicker({ body, target, meta, index }: { body: Body; target: TargetW
   return (
     <div className="mt-3 grid gap-2">
       {meta.tests.map((test) => {
+        const entry = index?.find((e) => e.target_id === target.id && e.test_id === test.id);
+        // index.json'da dosyası olmayan kayıt: test bu hedefte anlamsız (test_profiles.yaml > applies_to).
+        // Listede hiç gösterilmez; sebebi doğrudan test adresine gidilirse AnalogPage'de yazar.
+        if (index !== null && entry !== undefined && !entry.file) return null;
         const keys = Object.keys(test.weights);
         const have = keys.filter((k) => k in target.params).length;
-        const entry = index?.find((e) => e.target_id === target.id && e.test_id === test.id);
-        // index.json'da dosyası olmayan kayıt: test bu hedefte anlamsız (test_profiles.yaml > applies_to)
-        const skipped = index !== null && entry !== undefined && !entry.file;
-        const disabled = have === 0 || skipped;
-        const status =
-          index === null ? "Dünya verisi bekleniyor" : entry?.file ? `${entry.count} aday · ${entry.new_count ?? 0} yeni` : "bu hedefte uygulanmaz";
+        const disabled = have === 0;
+        const status = index === null ? "Dünya verisi bekleniyor" : entry?.file ? `${entry.count} aday · ${entry.new_count ?? 0} yeni` : "";
         return (
           <Link
             key={test.id}
             to={disabled ? "#" : `/${body}/${target.id}/${test.id}`}
             aria-disabled={disabled}
-            title={skipped ? entry?.reason : undefined}
             className={`flex items-center justify-between gap-3 rounded-lg border px-3 py-2 text-sm transition-colors ${
               disabled ? "pointer-events-none border-white/5 text-slate-600" : "border-white/10 text-slate-200 hover:border-cyan-400/40 hover:bg-cyan-400/5"
             }`}
           >
             <span>{test.label}</span>
             <span className="shrink-0 font-mono text-[10px] text-slate-500">
-              {skipped ? status : `${have}/${keys.length} PARAM · ${status}`}
+              {have}/{keys.length} PARAM{status && ` · ${status}`}
             </span>
           </Link>
         );
