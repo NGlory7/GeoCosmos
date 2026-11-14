@@ -19,25 +19,27 @@ scale:
                              # (pencere piksel cinsinden kurulur: 11 x 11 piksel = 5,5 km)
 
 # --- Maskeler ------------------------------------------------------------------
-# ESA WorldCover sınıfları. Bir karenin max_masked_fraction'dan fazlası bu sınıflardansa
-# kare keşiften çıkarılır. Küçük bir göl ya da kasaba kareyi tek başına elemez.
+# NASA MODIS MCD12Q1 arazi örtüsü (IGBP, 500 m). Bir karenin max_masked_fraction'dan fazlası bu
+# sınıflardansa kare keşiften çıkarılır. Küçük bir göl ya da kasaba kareyi tek başına elemez.
+# (ESA WorldCover 10 m tüm dünya için Earth Engine'in 2^31 piksel sınırını aşıyor; 25 km'lik
+# karede "yarısından fazlası şehir/tarım/su mu" sorusu için 500 m yeterli. WorldCover elle
+# kontrolde ve görselde kullanılır.)
 masks:
   max_masked_fraction: 0.5
   # Karenin yarısından azı karaysa (kıyı, ada) kare atılır: değerleri sadece küçük bir kara
-  # parçasını temsil eder. land_frac Copernicus DEM'in kapsadığı alandan gelir (ee_export.py).
+  # parçasını temsil eder. land_frac: MODIS MCD12Q1'de su (IGBP 17) olmayan alan oranı (ee_export.py).
   min_land_fraction: 0.5
-  # Buz yedeği: WorldCover Antarktika'yı kapsamayabilir. Buz oranı = max(wc_70, MODIS buz oranı).
-  ice_fallback:
+  landcover:
     source: MODIS/061/MCD12Q1
+    band: LC_Type1
     year: 2022
-    igbp_class: 15            # Permanent Snow and Ice
-  worldcover_classes:
-    40: Tarım
-    50: Yerleşim
-    70: Kalıcı kar ve buz   # Buz tabakaları (Antarktika, Grönland iç kesimi) TÜM testlerde dışarıda.
-                            # ground_ice donmuş zemini (permafrost) ölçer, buzulu değil; aksi halde
-                            # Mars'a sıcaklıkça en yakın yer olan buz tabakaları buz sondajını domine eder.
-    80: Kalıcı su
+    classes:
+      12: Tarım
+      13: Yerleşim
+      15: Kalıcı kar ve buz   # Buz tabakaları (Antarktika, Grönland iç kesimi) TÜM testlerde dışarıda.
+                              # ground_ice donmuş zemini (permafrost) ölçer, buzulu değil; aksi halde
+                              # Mars'a sıcaklıkça en yakın yer olan buz tabakaları buz sondajını domine eder.
+      17: Su
   # Doğrulama setindeki yerlerin kareleri maskelenmez: keşif listesine girmezler ama puanlanmaları gerekir.
   never_mask_known_analogs: true
 
@@ -67,7 +69,7 @@ indices:
 # --- Operasyon etiketleri (puan değil, kartta ✓/✗) --------------------------------
 ops_tags:
   road_access:
-    source: Oxford/MAP/accessibility_to_cities_2015_v1_0   # dakika
+    source: projects/malariaatlasproject/assets/accessibility/accessibility_to_cities/2015_v1_0   # dakika (eski Oxford/MAP/... kimliği kullanımdan kalktı)
     max_minutes: 360
   remote:
     source: CIESIN/GPWv411/GPW_Population_Density          # kişi/km²
@@ -98,8 +100,11 @@ export:
   lat_range: [-86, 84]         # güneyi Antarktika buz tabakası, kuzeyi Grönland buzu (ikisi de maskeli)
   max_stretch: 1.1             # şeridin iki kenarı arası doğu-batı uzama sınırı: kare boyu şerit içinde ±%5
   max_stripe_deg: 10           # şerit en fazla bu kadar geniş (B planı: zaman aşımına karşı küçük görevler)
-  date_range: ["2019-01-01", "2024-01-01"]       # MODIS LST, NDVI, IMERG için 5 yıl
-  aod_date_range: ["2022-01-01", "2024-01-01"]   # MAIAC granülleri ağır: 2 yıl yeter
+  # Earth Engine tek görevde en fazla 2^31 kaynak piksel ister; 30 m DEM'de bu ~150 derece² eder.
+  # Her şerit boylamda, karo alanı max_tile_deg2'yi geçmeyecek şekilde bölünür; kara içermeyen
+  # karolar görev olarak gönderilmez (ee_export.land_regions).
+  max_tile_deg2: 100
+  date_range: ["2019-01-01", "2024-01-01"]       # MODIS LST, NDVI, aylık AOD, IMERG için 5 yıl
   nodata: -9999                # Kara üzerinde verisi olmayan hücre (features.py NaN'a çevirir)
   drive_folder: GeoCosmos
   # Earth Engine kataloğunda olmayan ESA CCI Permafrost: GeoTIFF'e çevirip asset olarak yükleyin,

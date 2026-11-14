@@ -33,7 +33,7 @@
 ```mermaid
 flowchart LR
   subgraph Offline["make data (bir kere çalışır)"]
-    EE["Earth Engine<br/>Copernicus DEM, MODIS, IMERG, ASTER GED, WorldCover"] --> FEAT["pipeline/features.py<br/>grid.parquet"]
+    EE["Earth Engine<br/>Copernicus DEM, MODIS, IMERG, ASTER GED"] --> FEAT["pipeline/features.py<br/>grid.parquet"]
     TREK["Mars Trek / Moon Trek<br/>config/targets.yaml"] --> FEAT
     FEAT --> CORE1["core/scoring.py"]
     CORE1 --> OUT["frontend/public/data<br/>GeoJSON, PNG, JSON"]

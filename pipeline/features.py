@@ -9,8 +9,8 @@ Kurallar config/grid.yaml'dan okunur (core.profiles.load_grid_config):
 - mafic_index, carbonate_index: ASTER oranı -> indices.<param>.breaks ile 0-1 sıralı ölçek.
 - ground_ice: ESA CCI Permafrost oranı (0-1). data/raw/permafrost/*.nc varsa yerelde hesaplanır
   (pipeline/permafrost.py, Earth Engine'e yükleme gerekmez); yoksa Earth Engine asset sütunu kullanılır.
-- masked: (1) masks.worldcover_classes oranı masks.max_masked_fraction'ı geçen kareler; buz oranı
-  max(wc_70, modis_ice) alınır (WorldCover'ın kapsamadığı Antarktika için MODIS yedeği);
+- masked: (1) masks.landcover.classes (MODIS MCD12Q1: tarım, yerleşim, kar/buz, su) oranı
+  masks.max_masked_fraction'ı geçen kareler;
   (2) kara oranı masks.min_land_fraction'ın altındaki kıyı/ada kareleri. Satırlar
   silinmez, sadece işaretlenir: doğrulamanın yüzdelik paydası için gerekir. Doğrulama yerlerinin
   kendi kareleri hiçbir zaman maskelenmez (masks.never_mask_known_analogs).
@@ -92,12 +92,8 @@ def compute_features(raw: pd.DataFrame, cell_km: float, permafrost_files: list[P
         g["ground_ice"] = pf.clip(0, 1)  # ee_export yüzdeyi zaten 100'e böler
 
     # Maske: WorldCover sınıf oranları
-    wc = pd.DataFrame({c: raw[f"wc_{c}"] for c in cfg["masks"]["worldcover_classes"] if f"wc_{c}" in raw},
-                      index=raw.index).fillna(0)
-    ice_cls = 70  # WorldCover "kalıcı kar ve buz"
-    if "modis_ice" in raw:
-        wc[ice_cls] = np.maximum(wc.get(ice_cls, 0.0), raw["modis_ice"].fillna(0))
-    g["masked_fraction"] = wc.sum(axis=1).clip(0, 1) if len(wc.columns) else 0.0
+    lc_cols = [f"lc_{c}" for c in cfg["masks"]["landcover"]["classes"] if f"lc_{c}" in raw]
+    g["masked_fraction"] = raw[lc_cols].fillna(0).sum(axis=1).clip(0, 1) if lc_cols else 0.0
     g["land_frac"] = raw["land_frac"] if "land_frac" in raw else 1.0
 
     # Bilinen sahalara uzaklık -> is_new; doğrulama yerlerinin kendi kareleri -> known_id

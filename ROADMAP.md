@@ -91,9 +91,9 @@ Ayrıntılı kaynak haritası, formüller ve kapsam boşlukları: **[DATA_SOURCE
 | Yüzey sıcaklığı, gece-gündüz farkı | MODIS LST | Mars Climate Database (MODIS saatleriyle) | Diviner (LRO) | İklim |
 | Mafik yüzey, karbonat | ASTER GED (TIR indeksleri); EMIT sadece ek kanıt | CRISM, TES (PDS) | LROC, Lunar Prospector | Jeoloji |
 | Kuraklık ve bitki yokluğu | GPM IMERG yağış + MODIS NDVI (JAXA GSMaP ile kontrol) | Sabit 1 | Sabit 1 | İklim |
-| Toz ve aerosol | MODIS MAIAC AOD | TES toz opaklığı | Yok (parametre atılır) | İklim |
+| Toz ve aerosol | MODIS aylık AOD (MOD08_M3) | TES toz opaklığı | Yok (parametre atılır) | İklim |
 | Donmuş zemin | ESA CCI Permafrost | SHARAD, SWIM | Diviner PRP buz kararlılığı (LRO) | Jeoloji |
-| Arazi örtüsü (sadece filtre) | ESA WorldCover | — | — | — |
+| Arazi örtüsü (sadece filtre) | MODIS MCD12Q1 (500 m) | — | — | — |
 
 Mars ve Ay hedefleri için her parametre tek değerdir (PDS ürünleri veya makaleden). Mineral ve buz parametreleri, Dünya indeksleri ile makale bulguları aynı birimde olmadığı için ortak bir 0–1 sıralı ölçeğe çevrilir.
 
@@ -137,7 +137,7 @@ Tüm Dünya iki aşamada taranır. Ağır işlem Earth Engine'de, puanlama lokal
 | Aşama | Ne yapılır | Boyut |
 | --- | --- | --- |
 | 1. Kaba tarama | Tüm karalar 25 km'lik karelerle puanlanır | ~240 bin kare |
-| 2. Filtre | Yarısından fazlası şehir, tarım, su ya da kalıcı buz olan kareler (ESA WorldCover; buz için MODIS yedeği) ve yarısından azı kara olan kıyı kareleri çıkarılır; bilinen analoglara 50 km'den yakın kareler doğrulama setine ayrılır | — |
+| 2. Filtre | Yarısından fazlası şehir, tarım, su ya da kalıcı buz olan kareler (MODIS MCD12Q1) ve yarısından azı kara olan kıyı kareleri çıkarılır; bilinen analoglara 50 km'den yakın kareler doğrulama setine ayrılır | — |
 | 3. Yakın tarama | Her test amacı için en iyi 50–100 karenin çevresi 5 km'lik karelerle yeniden puanlanır | Birkaç bin kare |
 | 4. Elle kontrol | En iyi 3–5 aday NASA Worldview ve Sentinel-2 görüntüsüyle, lav akıntısı adayları RADARSAT/Sentinel-1 radarıyla, kurak bölgedekiler EMIT mineral haritalarıyla incelenir; en ilginç 1–2'si sunuma taşınır | — |
 
@@ -232,7 +232,7 @@ Her kapıda 10 dakikalık ekip kontrolü yapılır. Kapı geçilemiyorsa [MVP ta
 | Laptop belleği yetmez | Script kilitleniyor | Daha kaba ızgara; tabloyu kıta kıta işle |
 | Gemini limiti dolar / internet kesilir | Canlı çağrı hata veriyor | Kayıtlı yorumlar; senaryo çözücü için 3 hazır örnek cevap |
 | Gemini sayı uydurur | Yorumda motorda olmayan sayı var | Prompt'ta yasak, çıktıda sayı kontrolü; geçmiş testler elle girilir |
-| Keşif anlamsız yer bulur | Tarla, şehir, deniz, buz tabakası çıkıyor | WorldCover maskesi; buz tabakaları tüm testlerde dışarıda (buz sondajı donmuş zemini ölçer, buzulu değil) |
+| Keşif anlamsız yer bulur | Tarla, şehir, deniz, buz tabakası çıkıyor | MODIS arazi örtüsü maskesi; buz tabakaları tüm testlerde dışarıda (buz sondajı donmuş zemini ölçer, buzulu değil) |
 | Doğrulama tutmaz | Ünlüler alt sırada | Ağırlıkları sadece ayar yerlerine bakarak düzelt; sınav yerlerine bakarak ayar yapma, sonucu dürüstçe raporla |
 | Ay/Mars harita katmanı yüklenmez | Boş harita | Statik mozaik görüntü |
 | Canlı demo çöker | Sunum anı | Demo videosu hazır, yerel sunucu yedekte |

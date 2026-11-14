@@ -14,7 +14,7 @@ def raw_row(lat, lon, **kw):
     row = dict(lon=lon, lat=lat, land_frac=1.0, slope_deg=3.0, roughness_m=20.0,
                lst_day_c=40.0, lst_night_c=10.0, ndvi=0.05, precip_mm=50.0, aod=0.3,
                aster_mi=1.02, aster_ci=1.025, permafrost=0.0, access_min=120.0, pop_density=0.5,
-               modis_ice=0.0, wc_40=0.0, wc_50=0.0, wc_70=0.0, wc_80=0.0)
+               lc_12=0.0, lc_13=0.0, lc_15=0.0, lc_17=0.0)
     row.update(kw)
     return row
 
@@ -24,12 +24,12 @@ def grid(tmp_path):
     raw = tmp_path / "raw"
     raw.mkdir()
     rows = [
-        raw_row(37.55, 29.68, wc_80=0.6),                    # Salda karesi: suyla maskelenmeli ama korunur
-        raw_row(10.0, 10.0, wc_40=0.7),                      # tarım: maskeli
+        raw_row(37.55, 29.68, lc_17=0.6),                    # Salda karesi: suyla maskelenmeli ama korunur
+        raw_row(10.0, 10.0, lc_12=0.7),                      # tarım: maskeli
         raw_row(-20.0, 20.0, aod=NODATA, permafrost=NODATA), # veri boşluğu
         raw_row(78.0, -60.0, permafrost=0.8, ndvi=0.0, precip_mm=150),   # Earth Engine permafrost sütunu
         raw_row(0.0, 0.0),                                   # sıradan, uzak kare
-        raw_row(-80.0, 100.0, wc_70=0.0, modis_ice=0.9),     # Antarktika: WorldCover yok, MODIS buz
+        raw_row(-80.0, 100.0, lc_15=0.9),                  # Antarktika: MODIS kalıcı kar ve buz
         raw_row(5.0, 40.0, land_frac=0.2),                   # çoğu deniz kıyı karesi
         raw_row(29.16, -13.44, land_frac=0.3),               # Lanzarote: kıyı ama doğrulama karesi
     ]
@@ -97,11 +97,11 @@ def test_old_csv_without_new_columns(tmp_path):
     raw = tmp_path / "raw"
     raw.mkdir()
     row = raw_row(0.0, 0.0)
-    del row["modis_ice"], row["land_frac"]
+    del row["lc_15"], row["land_frac"]
     pd.DataFrame([row]).to_csv(raw / "old.csv", index=False)
     g = build_grid(raw, tmp_path / "g.parquet", cell_km=25, permafrost_files=[])
     assert not g.iloc[0]["masked"]
 
 
-def test_raw_columns_include_ice_fallback():
-    assert "modis_ice" in RAW_COLUMNS
+def test_raw_columns_have_no_worldcover():
+    assert not [c for c in RAW_COLUMNS if c.startswith("wc_")]  # maskeler MODIS lc_<sınıf> sütunlarından

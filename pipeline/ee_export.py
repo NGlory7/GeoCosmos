@@ -1,7 +1,7 @@
 """Earth Engine -> data/raw/*.csv. Tüm karalar 25 km ızgara.
 
-Kaynaklar (DATA_SOURCES.md): Copernicus DEM GLO-30, MODIS LST/NDVI/MAIAC AOD, GPM IMERG V07,
-ASTER GED, ESA WorldCover, MODIS arazi örtüsü (MCD12Q1, buz yedeği), MAP erişim süresi, SEDAC GPW nüfus; opsiyonel ESA CCI Permafrost asset'i.
+Kaynaklar (DATA_SOURCES.md): Copernicus DEM GLO-30, MODIS LST/NDVI/aylık AOD (MOD08_M3), GPM IMERG V07,
+ASTER GED, MODIS arazi örtüsü (MCD12Q1, maskeler), MAP erişim süresi, SEDAC GPW nüfus; opsiyonel ESA CCI Permafrost asset'i.
 
 Ham uydu verisi indirilmez; her şey Earth Engine'de karelere ortalanır, sadece tablo iner.
 Burada sadece HAM ölçümler çıkarılır (ör. ASTER oranı, gündüz/gece LST). Parametrelere çeviri
@@ -41,10 +41,11 @@ RAW_COLUMNS = [
     "slope_deg", "roughness_m",
     "lst_day_c", "lst_night_c", "ndvi", "precip_mm", "aod",
     "aster_mi", "aster_ci", "permafrost",
-    "access_min", "pop_density", "modis_ice",
-]  # + wc_<sınıf> sütunları (masks.worldcover_classes)
+    "access_min", "pop_density",
+]  # + lc_<sınıf> sütunları (masks.landcover.classes)
 
 PREVIEW_BBOX = (29.0, 37.0, 30.5, 38.0)  # Salda çevresi
+DEM_ASSET = "COPERNICUS/DEM/GLO30_2024_1"  # Copernicus DEM GLO-30 (eski COPERNICUS/DEM/GLO30 kullanımdan kalktı)
 
 # Bir derecelik yayın yaklaşık uzunluğu (WGS84).
 M_PER_DEG_LAT = 110_574.0
@@ -128,11 +129,15 @@ def _composite(collection, band: str):
 
 
 def _to_grid(img, native_m: float, mid_m: float, proj, mid_proj):
-    """Ortalama ile kare çözünürlüğüne indirir. Ara çözünürlükten (mid_m) ince veri önce oraya
-    iner: yüksek enlemde tek adım MAX_PIXELS sınırını aşıp kareyi boş bırakırdı."""
+    """Ortalama ile kare çözünürlüğüne indirir.
+
+    Ara çözünürlükten (mid_m, 500 m) ince veri önce oraya Earth Engine'in hazır ORTALAMA
+    piramit katmanından iner (reproject): 30 m ya da 100 m pikseller tek tek okunmaz. Piramit
+    seviyeleri 2'nin katı blok ortalamalarıdır (30 m -> ~480 m), yani "500 m'ye ortalanmış" kuralı
+    korunur; okunan veri ~250 kat azalır. 500 m -> kare adımı gerçek reduceResolution ortalamasıdır."""
     ee = _ee()
     if native_m < mid_m:
-        img = img.reduceResolution(ee.Reducer.mean(), maxPixels=MAX_PIXELS).reproject(mid_proj)
+        img = img.reproject(mid_proj)
     return img.reduceResolution(ee.Reducer.mean(), maxPixels=MAX_PIXELS).reproject(proj)
 
 
@@ -145,23 +150,27 @@ def build_image(cell_km: float, lat: float):
     proj = local_projection(cell_km * 1000, lat)
     dem_proj = local_projection(mid_m, lat)
     start, end = exp["date_range"]
-    aod_start, aod_end = exp["aod_date_range"]
 
     def grid(img, native_m):
         return _to_grid(img, native_m, mid_m, proj, dem_proj)
 
-    # --- Topografya: Copernicus DEM -> 500 m kare piksel -> eğim ve pürüzlülük -> kare ortalaması
-    dem30 = (ee.ImageCollection("COPERNICUS/DEM/GLO30").select("DEM").mosaic()
-             .setDefaultProjection("EPSG:4326", None, 30))
-    dem500 = dem30.reduceResolution(ee.Reducer.mean(), maxPixels=MAX_PIXELS).reproject(dem_proj)
+    # --- Arazi örtüsü (MODIS MCD12Q1, 500 m): maskeler ve kara oranı
+    lcfg = cfg["masks"]["landcover"]
+    lc = (ee.ImageCollection(lcfg["source"]).filter(ee.Filter.calendarRange(lcfg["year"], lcfg["year"], "year"))
+          .first().select(lcfg["band"]))
+    lc_bands = [grid(lc.eq(int(c)).rename(f"lc_{c}"), 500) for c in lcfg["classes"]]
+    # Kara: su (IGBP 17) değil ve veri var (okyanus maskeli ya da 17 olabilir; ikisi de 0).
+    land = lc.neq(17).unmask(0).setDefaultProjection(lc.projection())
+    land_frac = grid(land, 500).rename("land_frac")
+
+    # --- Topografya: Copernicus DEM -> 500 m (piramit ortalaması) -> eğim ve pürüzlülük -> kare ortalaması
+    dem500 = ee.ImageCollection(DEM_ASSET).select("DEM").mosaic().reproject(dem_proj)
     slope = ee.Terrain.slope(dem500).rename("slope_deg")
     # Pencere piksel cinsinden: dem_proj pikselleri her enlemde ~kare olduğu için gerçek boy aynı kalır.
     radius_px = max(1, round(scale["roughness_window_km"] * 1000 / 2 / mid_m))
     rough = dem500.reduceNeighborhood(ee.Reducer.stdDev(), ee.Kernel.square(radius_px, "pixels")).rename("roughness_m")
-    land = dem30.mask().gt(0).unmask(0).setDefaultProjection("EPSG:4326", None, 30)
-    land_frac = grid(land, 30).rename("land_frac")
 
-    # --- İklim: MODIS LST (K*0.02), NDVI (*0.0001), IMERG (mm/saat), MAIAC AOD (*0.001)
+    # --- İklim: MODIS LST (K*0.02), NDVI (*0.0001), IMERG (mm/saat), MODIS aylık AOD (*0.001)
     lst = ee.ImageCollection("MODIS/061/MOD11A2").filterDate(start, end)
     lst_day = _composite(lst, "LST_Day_1km").multiply(0.02).subtract(273.15).rename("lst_day_c")
     lst_night = _composite(lst, "LST_Night_1km").multiply(0.02).subtract(273.15).rename("lst_night_c")
@@ -169,8 +178,10 @@ def build_image(cell_km: float, lat: float):
         .multiply(0.0001).rename("ndvi")
     precip = _composite(ee.ImageCollection("NASA/GPM_L3/IMERG_MONTHLY_V07").filterDate(start, end),
                         "precipitation").multiply(24 * 365.25).rename("precip_mm")
-    aod = _composite(ee.ImageCollection("MODIS/061/MCD19A2_GRANULES").filterDate(aod_start, aod_end),
-                     "Optical_Depth_055").multiply(0.001).rename("aod")
+    # MOD08_M3: aylık küresel 1° ürün, Dark Target + Deep Blue birleşik 550 nm (Deep Blue çölleri kapsar).
+    # Günlük MAIAC granülleri (MCD19A2) on binlerce dosya demekti ve exportu saatlerce uzatıyordu.
+    aod = _composite(ee.ImageCollection("MODIS/061/MOD08_M3").filterDate(start, end),
+                     "AOD_550_Dark_Target_Deep_Blue_Combined_Mean_Mean").multiply(0.001).rename("aod")
 
     # --- Jeoloji: ASTER GED TIR emisivite -> Ninomiya oranları (ölçek katsayısı oranda sadeleşir)
     aster = ee.Image("NASA/ASTER_GED/AG100_003")
@@ -189,16 +200,6 @@ def build_image(cell_km: float, lat: float):
         # Normal yol: features.py ground_ice'ı data/raw/permafrost/*.nc dosyasından yerelde hesaplar.
         permafrost = ee.Image.constant(exp["nodata"]).rename("permafrost")
 
-    # --- Maskeler: WorldCover sınıf oranları (10 m -> 500 m -> kare)
-    wc = ee.ImageCollection("ESA/WorldCover/v200").first().select("Map")
-    wc_bands = [grid(wc.eq(int(c)).rename(f"wc_{c}"), 10) for c in cfg["masks"]["worldcover_classes"]]
-    # Buz yedeği: MODIS MCD12Q1 "kalıcı kar ve buz" (IGBP 15) oranı. Antarktika dahil küreseldir;
-    # WorldCover'ın kapsamadığı yerde buz tabakası bu bantla maskelenir (features.py: max(wc_70, modis_ice)).
-    ice = cfg["masks"]["ice_fallback"]
-    lc = (ee.ImageCollection(ice["source"]).filter(ee.Filter.calendarRange(ice["year"], ice["year"], "year"))
-          .first().select("LC_Type1"))
-    modis_ice = grid(lc.eq(ice["igbp_class"]).rename("modis_ice"), 500)
-
     # --- Operasyon etiketleri
     access = ee.Image(cfg["ops_tags"]["road_access"]["source"]).select("accessibility").rename("access_min")
     pop = (ee.ImageCollection(cfg["ops_tags"]["remote"]["source"])
@@ -208,8 +209,8 @@ def build_image(cell_km: float, lat: float):
     bands = [
         grid(slope, mid_m), grid(rough, mid_m),
         grid(lst_day, 1000), grid(lst_night, 1000), grid(ndvi, 1000), grid(precip, 11132),
-        grid(aod, 1000), grid(aster_mi, 100), grid(aster_ci, 100), permafrost,
-        grid(access, 1000), grid(pop, 1000), modis_ice, *wc_bands,
+        grid(aod, 111_320), grid(aster_mi, 100), grid(aster_ci, 100), permafrost,
+        grid(access, 1000), grid(pop, 1000), *lc_bands,
     ]
     data = ee.Image.cat(bands).unmask(exp["nodata"])
     lonlat = ee.Image.pixelLonLat().reproject(proj).rename(["lon", "lat"])
@@ -231,25 +232,66 @@ def preview(cell_km: float, bbox=PREVIEW_BBOX, n: int = 5) -> None:
 
 
 def regions(cell_km: float, bbox=None) -> list[tuple[str, tuple[float, float, float, float]]]:
-    """(görev adı, (lon0, lat0, lon1, lat1)) listesi. bbox verilse de enlemde şeritlere bölünür."""
+    """(görev adı, (lon0, lat0, lon1, lat1)) listesi. bbox verilse de enlemde şeritlere bölünür.
+    |enlem| > polar_lat şeritleri boylamda polar_lon_parts parçaya bölünür (2^31 piksel sınırı)."""
     cfg = load_grid_config()["export"]
     if bbox:
         lon0, lat0, lon1, lat1 = bbox
     else:
         (lat0, lat1), lon0, lon1 = cfg["lat_range"], -180, 180
     prefix = f"bbox{lon0:g}_" if bbox else ""
-    return [(prefix + stripe_name(cell_km, a), (lon0, a, lon1, b))
-            for a, b in plan_stripes(lat0, lat1, cfg["max_stretch"], cfg["max_stripe_deg"])]
+    max_area = float(cfg.get("max_tile_deg2", 1e9))
+    out = []
+    for a, b in plan_stripes(lat0, lat1, cfg["max_stretch"], cfg["max_stripe_deg"]):
+        name = prefix + stripe_name(cell_km, a)
+        parts = max(1, math.ceil((lon1 - lon0) * (b - a) / max_area))
+        if parts == 1:
+            out.append((name, (lon0, a, lon1, b)))
+            continue
+        step = (lon1 - lon0) / parts
+        for k in range(parts):
+            x0 = round(lon0 + k * step, 4)
+            out.append((f"{name}_x{k + 1:02d}", (x0, a, round(x0 + step, 4), b)))
+    return out
 
 
-def export_grid(cell_km: float = 25, bbox=None) -> list:
-    """Enlem şeritleri halinde Drive'a CSV export görevleri başlatır, görev listesini döndürür."""
+def land_regions(items: list[tuple[str, tuple[float, float, float, float]]]) -> list:
+    """Kara içermeyen karoları atar: tek bir Earth Engine sorgusuyla Copernicus DEM kapsamına bakılır."""
+    ee = _ee()
+    land = (ee.ImageCollection(DEM_ASSET).select("DEM").mosaic().mask().gt(0)
+            .unmask(0).rename("land"))
+    fc = ee.FeatureCollection([ee.Feature(ee.Geometry.Rectangle(list(r), None, False), {"name": n})
+                               for n, r in items])
+    stats = land.reduceRegions(collection=fc, reducer=ee.Reducer.max(), scale=5000, tileScale=4)
+    has_land = {f["properties"]["name"] for f in stats.getInfo()["features"] if f["properties"].get("max", 0) > 0}
+    return [(n, r) for n, r in items if n in has_land]
+
+
+def task_states(prefix: str = "") -> dict[str, str]:
+    """Görev adı -> en yeni görevin durumu (READY, RUNNING, COMPLETED, FAILED, CANCELLED)."""
+    ee = _ee()
+    latest: dict[str, dict] = {}
+    for t in ee.data.getTaskList():
+        d = t.get("description", "")
+        if d.startswith(prefix) and (d not in latest or t["creation_timestamp_ms"] > latest[d]["creation_timestamp_ms"]):
+            latest[d] = t
+    return {d: t["state"] for d, t in latest.items()}
+
+
+def export_grid(cell_km: float = 25, bbox=None, resume: bool = False) -> list:
+    """Enlem şeritleri halinde Drive'a CSV export görevleri başlatır, görev listesini döndürür.
+    resume=True: kuyrukta, çalışan ya da bitmiş görevi olan bölgeler atlanır (sadece eksik/hatalı)."""
     ee = _ee()
     cfg = load_grid_config()
-    columns = RAW_COLUMNS + [f"wc_{c}" for c in cfg["masks"]["worldcover_classes"]]
+    columns = RAW_COLUMNS + [f"lc_{c}" for c in cfg["masks"]["landcover"]["classes"]]
+    active = {"READY", "RUNNING", "COMPLETED"}
+    states = task_states() if resume else {}
 
+    todo = [(n, r) for n, r in regions(cell_km, bbox) if states.get(n) not in active]
+    todo = land_regions(todo) if todo else []
+    print(f"{len(todo)} karo kara içeriyor ve gönderilecek")
     tasks = []
-    for name, (x0, y0, x1, y1) in regions(cell_km, bbox):
+    for name, (x0, y0, x1, y1) in todo:
         image, proj = build_image(cell_km, center_lat(y0, y1))
         region = ee.Geometry.Rectangle([x0, y0, x1, y1], None, False)
         task = ee.batch.Export.table.toDrive(
@@ -270,6 +312,7 @@ def main() -> None:
     ap.add_argument("--bbox", type=float, nargs=4, metavar=("LON0", "LAT0", "LON1", "LAT1"))
     ap.add_argument("--preview", action="store_true", help="küçük bölgede birkaç satır yazdır, export etme")
     ap.add_argument("--plan", action="store_true", help="şerit planını yazdır (Earth Engine gerekmez)")
+    ap.add_argument("--resume", action="store_true", help="sadece eksik ya da hatalı görevleri başlat")
     args = ap.parse_args()
     cell_km = args.cell_km or load_grid_config()["grid"]["coarse_km"]
     bbox = tuple(args.bbox) if args.bbox else None
@@ -282,7 +325,7 @@ def main() -> None:
     if args.preview:
         preview(cell_km, bbox or PREVIEW_BBOX)
     else:
-        export_grid(cell_km, bbox)
+        export_grid(cell_km, bbox, resume=args.resume)
 
 
 if __name__ == "__main__":

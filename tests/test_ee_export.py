@@ -51,3 +51,19 @@ def test_task_names_valid_and_unique():
     for n in names:
         assert re.fullmatch(r"[A-Za-z0-9.,:;_-]{1,100}", n), n
     assert stripe_name(25, -86) == "grid25km_lat86.00S"
+
+
+def test_tiles_stay_under_pixel_limit():
+    # Earth Engine: tek görevde en fazla 2^31 kaynak piksel; 30 m DEM'de karo <= max_tile_deg2.
+    exp = load_grid_config()["export"]
+    for name, (x0, y0, x1, y1) in regions(25):
+        assert (x1 - x0) * (y1 - y0) <= exp["max_tile_deg2"] + 1e-6, name
+        assert ((x1 - x0) * 3600) * ((y1 - y0) * 3600) < 2**31, name  # 1 yay saniyesi ≈ 30 m
+    # karolar boylamda boşluksuz: her şeridin parçaları -180..180'i kaplar
+    by_stripe = {}
+    for name, (x0, _, x1, _) in regions(25):
+        by_stripe.setdefault(name.split("_x")[0], []).append((x0, x1))
+    for parts in by_stripe.values():
+        parts.sort()
+        assert parts[0][0] == -180 and abs(parts[-1][1] - 180) < 1e-3
+        assert all(abs(a[1] - b[0]) < 1e-3 for a, b in zip(parts, parts[1:]))

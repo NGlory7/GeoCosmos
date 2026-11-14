@@ -43,7 +43,7 @@ parameters:
     label: Toz / aerosol optik derinliği (550 nm)
     dimension: climate
     tolerance: 0.8
-    earth_source: MODIS MAIAC AOD (MCD19A2)
+    earth_source: MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)
   mafic_index:
     label: Mafik / bazaltik yüzey (0-1 sıralı ölçek)
     dimension: geology

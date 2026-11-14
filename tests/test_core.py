@@ -89,7 +89,7 @@ def test_validation_set_split():
 def test_grid_config():
     cfg = load_grid_config()
     assert cfg["scale"]["slope_baseline_m"] > 0
-    assert 70 in cfg["masks"]["worldcover_classes"]  # buz tabakaları maskede
+    assert 15 in cfg["masks"]["landcover"]["classes"]  # buz tabakaları maskede (MODIS IGBP 15)
 
 
 def test_every_test_has_tune_site_or_rationale():

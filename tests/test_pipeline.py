@@ -26,7 +26,7 @@ def grid():
                             ndvi=float(rng.uniform(0, 0.8)), precip_mm=float(rng.uniform(0, 2000)),
                             aod=float(rng.uniform(0, 1)), aster_mi=float(rng.uniform(0.95, 1.05)),
                             aster_ci=float(rng.uniform(0.98, 1.05)), permafrost=float(rng.uniform(0, 1)),
-                            wc_50=float(rng.choice([0.0, 0.9], p=[0.9, 0.1]))))
+                            lc_13=float(rng.choice([0.0, 0.9], p=[0.9, 0.1]))))
     return compute_features(pd.DataFrame(rows), cell_km=25, permafrost_files=[])
 
 
