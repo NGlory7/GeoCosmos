@@ -206,7 +206,7 @@ PNG satırları Web Mercator'dadır; Leaflet'te `L.imageOverlay(url, bounds)` il
 | Alan | Değerler |
 | --- | --- |
 | `body` | `moon`, `mars` |
-| `test_id` | `rover`, `ice_drilling`, `lava_tube`, `dust`, `biosignature_arid`, `biosignature_carbonate`; `/scenario` sonuçlarında `custom` |
+| `test_id` | `rover`, `ice_drilling`, `lava_tube`, `dust`, `biosignature_arid`, `biosignature_carbonate`, `base_site`; `/scenario` sonuçlarında `custom` |
 | `breakdown` | `gravity`, `atmosphere`, `radiation`, `liquid_water`, `biology`, `temperature` (mutlak sıcaklık; buz sondajı dışında puana girmez) |
 | `scores` anahtarları | `topography`, `geology`, `climate`. Değer `null` olabilir: o test amacında o boyuta ağırlık verilmemiştir (radarda boş). Operasyon bilgisi puan değil, `ops_tags` |
 | `ops_tags` anahtarları | `road_access`, `remote` (`config/grid.yaml > ops_tags`) |
@@ -289,7 +289,7 @@ GeoCosmos/
 │
 ├── config/
 │   ├── targets.yaml          # 6 Ay/Mars hedefi + kaynaklar
-│   ├── test_profiles.yaml    # 6 test amacı = 6 ağırlık seti
+│   ├── test_profiles.yaml    # 7 test amacı = 7 ağırlık seti
 │   ├── known_analogs.yaml    # doğrulama seti (ayar / sınav / rapor) + keşif dışı bilinen sahalar
 │   └── grid.yaml             # ızgara boyutu, eğim ölçeği, maske kuralları
 │

@@ -78,6 +78,20 @@
   "params_total": 2
  },
  {
+  "target_id": "moon_shackleton",
+  "test_id": "base_site",
+  "file": "moon_shackleton_base_site.geojson",
+  "count": 20,
+  "new_count": 20,
+  "params_used": [
+   "ground_ice",
+   "roughness_m",
+   "slope_deg",
+   "sun_elevation_deg"
+  ],
+  "params_total": 4
+ },
+ {
   "target_id": "moon_malapert",
   "test_id": "rover",
   "file": "moon_malapert_rover.geojson",
@@ -154,6 +168,20 @@
    "mafic_index"
   ],
   "params_total": 2
+ },
+ {
+  "target_id": "moon_malapert",
+  "test_id": "base_site",
+  "file": "moon_malapert_base_site.geojson",
+  "count": 20,
+  "new_count": 20,
+  "params_used": [
+   "ground_ice",
+   "roughness_m",
+   "slope_deg",
+   "sun_elevation_deg"
+  ],
+  "params_total": 4
  },
  {
   "target_id": "moon_marius_hills",
@@ -236,6 +264,20 @@
    "mafic_index"
   ],
   "params_total": 2
+ },
+ {
+  "target_id": "moon_marius_hills",
+  "test_id": "base_site",
+  "file": "moon_marius_hills_base_site.geojson",
+  "count": 20,
+  "new_count": 20,
+  "params_used": [
+   "ground_ice",
+   "roughness_m",
+   "slope_deg",
+   "sun_elevation_deg"
+  ],
+  "params_total": 4
  },
  {
   "target_id": "mars_jezero",
@@ -323,6 +365,20 @@
   "params_total": 2
  },
  {
+  "target_id": "mars_jezero",
+  "test_id": "base_site",
+  "file": "mars_jezero_base_site.geojson",
+  "count": 20,
+  "new_count": 20,
+  "params_used": [
+   "ground_ice",
+   "roughness_m",
+   "slope_deg",
+   "sun_elevation_deg"
+  ],
+  "params_total": 4
+ },
+ {
   "target_id": "mars_gale",
   "test_id": "rover",
   "file": "mars_gale_rover.geojson",
@@ -408,6 +464,20 @@
   "params_total": 2
  },
  {
+  "target_id": "mars_gale",
+  "test_id": "base_site",
+  "file": "mars_gale_base_site.geojson",
+  "count": 20,
+  "new_count": 20,
+  "params_used": [
+   "ground_ice",
+   "roughness_m",
+   "slope_deg",
+   "sun_elevation_deg"
+  ],
+  "params_total": 4
+ },
+ {
   "target_id": "mars_arcadia",
   "test_id": "rover",
   "file": "mars_arcadia_rover.geojson",
@@ -491,5 +561,19 @@
    "mafic_index"
   ],
   "params_total": 2
+ },
+ {
+  "target_id": "mars_arcadia",
+  "test_id": "base_site",
+  "file": "mars_arcadia_base_site.geojson",
+  "count": 20,
+  "new_count": 20,
+  "params_used": [
+   "ground_ice",
+   "roughness_m",
+   "slope_deg",
+   "sun_elevation_deg"
+  ],
+  "params_total": 4
  }
 ]

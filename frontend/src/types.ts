@@ -2,7 +2,7 @@
 // Değişiklik gerekirse önce ARCHITECTURE.md > Veri sözleşmesi güncellenir.
 
 export type Body = "moon" | "mars";
-export type TestId = "rover" | "ice_drilling" | "lava_tube" | "dust" | "biosignature_arid" | "biosignature_carbonate";
+export type TestId = "rover" | "ice_drilling" | "lava_tube" | "dust" | "biosignature_arid" | "biosignature_carbonate" | "base_site";
 export type BreakdownKey = "gravity" | "atmosphere" | "radiation" | "liquid_water" | "biology" | "temperature";
 // Operasyon bilgisi puan değil: Analog.ops_tags (kartta ✓/✗).
 export type ScoreKey = "topography" | "geology" | "climate";

@@ -17,7 +17,8 @@
 | Gerçek Dünya verisi (`grid.parquet`) | ✅ Hazır (14 Kasım) | 470 karo, 250.022 kare (60.144 maskeli), 49 dk (`pipeline.ee_fetch`). Repoda: ekibin Earth Engine'e ihtiyacı yok |
 | **İlk doğrulama** | ❌ 0/4 | Teşhis ve sıradaki karar: aşağıda "Karar bekleyenler" |
 | Hedef değerleri (`config/targets.yaml`) | ✅ Hazır | Mars hedefleri tüm parametreler; Ay'da sadece tanımı gereği olmayanlar boş. Üç betikle yeniden üretilebilir |
-| Gemini yorumları | ⏳ Bekliyor | `.env` > `GEMINI_API_KEY` |
+| Gemini yorumları | ✅ Hazır | Her dosyada ilk 5 aday (210 yorum, uydurma sayı kontrolünden geçti). `make data` mevcut yorumları korur, sadece yenilerini üretir |
+| Üs kurulumu ve iniş alanı testi (`base_site`) | ✅ Hazır (14 Kasım) | Eğim, pürüzlülük, **aydınlanma** (yıllık ortalama öğlen güneş yüksekliği) ve buz. Ayar yeri yok, ağırlıklar önceden sabit |
 | Frontend (`frontend/`) | ✅ Hazır | Giriş (Çağrı) → Ay/Mars küresi (NASA Trek mozaiği) + hedef ve test seçimi → Dünya haritası (NASA GIBS + ısı haritası + pinler) → analog kartı → senaryo kutusu; doğrulama paneli. Veri yokken her ekran "henüz çalıştırılmadı" der |
 | Yayın (GitHub Pages) | ⏳ Repo ayarı bekleniyor | `.github/workflows/pages.yml` hazır; aşağıdaki "Yayın" bölümü |
 
@@ -127,6 +128,8 @@ Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yak�
 - **Mars sıcaklık ve tozu modelden.** Mars Climate Database ölçümlerle doğrulanmış bir model; rover ölçümü değil.
 - **Ay'da Dünya karşılığı olmayan değerler.** Örneğin Marius Hills'in 295 °C'lik gece-gündüz farkı; bu parametre her yerde 0 benzerlik alır ve kartta kopma olarak görünür.
 - **Krater ayrı bir parametre değil.** Challenge kraterleri bir analog boyutu olarak sayıyor, ama Dünya'da tüm karaları kapsayan güvenilir bir krater haritası yok: kraterlerin çoğu aşınmış, gömülmüş ya da bitki altında; doğrulanmış çarpma yapıları ~200 tane ve çoğu 25 km kareden küçük. Krater arazisi motorda eğim ve pürüzlülük (topografya boyutu) üzerinden yakalanır. Bilinen krater analogları zaten tanındığı için keşif dışı listededir: Meteor Krateri ve Ries (`config/known_analogs.yaml > exclude_only`); Haughton Krateri ise buz sondajı testinin ayar yerlerinden biri. Sunumda söylenecek: "Krateri doğrudan aramıyoruz; krater benzeri araziyi eğim ve pürüzlülükle buluyoruz, bilinen kraterleri tekrar önermiyoruz."
+- **Aydınlanma geometrik.** Güneş yüksekliği sadece enlemden hesaplanır; Malapert gibi tepelerin daha uzun güneş alması (yerel ufuk) hesaba katılmaz. Dünya karada en fazla ~84°K'ye çıkar (öğlen güneşi ortalama ~6°); Ay kutbunun 0–4°'si Dünya'da tam karşılanamaz.
+- **Üs testinde Malapert'in ikilemi.** Malapert kadar engebeli (pürüzlülük ~470 m) yerler orta enlem dağları (Karakurum), kutup ışığına yakın yerler ise yüksek Arktik (Ellesmere, 81°K). Dünya'da ikisi bir arada yok; kartta güneş yüksekliği ✗ olarak görünür. Shackleton için ilk aday Ellesmere Adası (81,5°K).
 - **25 km çözünürlük.** Küçük sahalar (Dumont Dunes, ~30 km²) karede kaybolur; yakın tarama (5 km) bunun için.
 
 ## Yapılanlar (özet)

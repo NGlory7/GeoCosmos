@@ -46,6 +46,11 @@
    "file": "moon_shackleton_biosignature_carbonate.png"
   },
   {
+   "target_id": "moon_shackleton",
+   "test_id": "base_site",
+   "file": "moon_shackleton_base_site.png"
+  },
+  {
    "target_id": "moon_malapert",
    "test_id": "rover",
    "file": "moon_malapert_rover.png"
@@ -74,6 +79,11 @@
    "target_id": "moon_malapert",
    "test_id": "biosignature_carbonate",
    "file": "moon_malapert_biosignature_carbonate.png"
+  },
+  {
+   "target_id": "moon_malapert",
+   "test_id": "base_site",
+   "file": "moon_malapert_base_site.png"
   },
   {
    "target_id": "moon_marius_hills",
@@ -106,6 +116,11 @@
    "file": "moon_marius_hills_biosignature_carbonate.png"
   },
   {
+   "target_id": "moon_marius_hills",
+   "test_id": "base_site",
+   "file": "moon_marius_hills_base_site.png"
+  },
+  {
    "target_id": "mars_jezero",
    "test_id": "rover",
    "file": "mars_jezero_rover.png"
@@ -134,6 +149,11 @@
    "target_id": "mars_jezero",
    "test_id": "biosignature_carbonate",
    "file": "mars_jezero_biosignature_carbonate.png"
+  },
+  {
+   "target_id": "mars_jezero",
+   "test_id": "base_site",
+   "file": "mars_jezero_base_site.png"
   },
   {
    "target_id": "mars_gale",
@@ -166,6 +186,11 @@
    "file": "mars_gale_biosignature_carbonate.png"
   },
   {
+   "target_id": "mars_gale",
+   "test_id": "base_site",
+   "file": "mars_gale_base_site.png"
+  },
+  {
    "target_id": "mars_arcadia",
    "test_id": "rover",
    "file": "mars_arcadia_rover.png"
@@ -194,6 +219,11 @@
    "target_id": "mars_arcadia",
    "test_id": "biosignature_carbonate",
    "file": "mars_arcadia_biosignature_carbonate.png"
+  },
+  {
+   "target_id": "mars_arcadia",
+   "test_id": "base_site",
+   "file": "mars_arcadia_base_site.png"
   }
  ]
 }

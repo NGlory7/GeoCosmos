@@ -118,6 +118,24 @@
     "carbonate_index"
    ],
    "rationale": "Jezero'nun hedefi kenar karbonatları ve olivin-karbonat birimidir: ultramafik kayacın suyla etkileşiminden (serpantinleşme) çökelen karbonat mikrobiyal izleri koruyabilir; Salda'nın hidromanyeziti de aynı süreçle oluşur. Belirleyici karbonat (hedeften fazlası ceza değil) ve mafik/ultramafik ana kayadır. Bugünkü iklim karbonat çökelinin varlığını belirlemez; kuraklığın ağırlığı yok. Ayar yeri yok: ağırlıklar önceden sabitlendi, sınav sonucuna bakılarak değiştirilmez."
+  },
+  {
+   "id": "base_site",
+   "label": "Üs kurulumu ve iniş alanı",
+   "weights": {
+    "slope_deg": 0.3,
+    "roughness_m": 0.25,
+    "sun_elevation_deg": 0.25,
+    "ground_ice": 0.2
+   },
+   "breakdown": [
+    "gravity",
+    "radiation",
+    "temperature",
+    "atmosphere"
+   ],
+   "at_least": [],
+   "rationale": "İniş ve üs kurulumunu belirleyen arazi geometrisidir (eğim, pürüzlülük: iniş tehlikesi algılama, inşaat, yol). Güneş yüksekliği enerji ve görüş koşulunu temsil eder: kutup üssünde güneş ufka yakın, gölgeler uzun, paneller dikey. Yakındaki buz yerinde kaynak kullanımı (ISRU) içindir. Güneş yüksekliği geometriktir; Malapert gibi tepelerin daha uzun güneş alması (yerel ufuk) Dünya'da da hedefte de hesaba katılmaz."
   }
  ],
  "parameters": {
@@ -174,6 +192,12 @@
    "dimension": "geology",
    "tolerance": 0.6,
    "earth_source": "ESA CCI Permafrost"
+  },
+  "sun_elevation_deg": {
+   "label": "Yıllık ortalama öğlen güneş yüksekliği (°, geometrik)",
+   "dimension": "climate",
+   "tolerance": 30.0,
+   "earth_source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)"
   }
  },
  "breakdown_always": [

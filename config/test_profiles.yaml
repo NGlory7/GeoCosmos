@@ -1,4 +1,4 @@
-# Parametreler ve 5 test amacı (= 5 ağırlık seti).
+# Parametreler ve 7 test amacı (= 7 ağırlık seti).
 # Kaynaklar ve hesaplama: DATA_SOURCES.md, config/grid.yaml.
 #
 # parameters:
@@ -64,6 +64,14 @@ parameters:
     dimension: geology
     tolerance: 0.6
     earth_source: ESA CCI Permafrost
+  sun_elevation_deg:
+    # Aydınlanma: kutup üssünde güneş ufka yakın, gölgeler uzun ve güneş paneli dikey kurulur.
+    # Yerel ufuk (krater duvarı, tepe) hesaba katılmaz; Malapert'in tepede olması gibi etkiler yok.
+    # Tolerans 30°: Ay kutbu (~0-4°) için 60° enlemin altındaki her yer 0 benzerlik alır.
+    label: Yıllık ortalama öğlen güneş yüksekliği (°, geometrik)
+    dimension: climate
+    tolerance: 30
+    earth_source: Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)
 
 # Her testte ağırlık toplamı 1 olmalı (yükleyici yine de normalize eder).
 # breakdown: bu test için kartta vurgulanacak kopma noktaları.
@@ -144,3 +152,19 @@ tests:
       carbonate_index: 0.60
       mafic_index: 0.40
     breakdown: [liquid_water, biology, radiation, temperature]
+  # 14 Kasım: challenge'daki "kalıcı Ay üssü ve iniş alanı" ile "aydınlanma" maddeleri için eklendi.
+  # Ayar yeri yok: ağırlıklar fiziksel gerekçeyle önceden sabitlendi, sonuca bakılarak değiştirilmez.
+  base_site:
+    label: Üs kurulumu ve iniş alanı
+    rationale: >-
+      İniş ve üs kurulumunu belirleyen arazi geometrisidir (eğim, pürüzlülük: iniş tehlikesi algılama,
+      inşaat, yol). Güneş yüksekliği enerji ve görüş koşulunu temsil eder: kutup üssünde güneş ufka
+      yakın, gölgeler uzun, paneller dikey. Yakındaki buz yerinde kaynak kullanımı (ISRU) içindir.
+      Güneş yüksekliği geometriktir; Malapert gibi tepelerin daha uzun güneş alması (yerel ufuk)
+      Dünya'da da hedefte de hesaba katılmaz.
+    weights:
+      slope_deg: 0.30
+      roughness_m: 0.25
+      sun_elevation_deg: 0.25
+      ground_ice: 0.20
+    breakdown: [gravity, radiation, temperature, atmosphere]

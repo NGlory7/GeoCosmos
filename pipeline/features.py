@@ -26,7 +26,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from core.geo import haversine_km
+from core.geo import OBLIQUITY_DEG, haversine_km, mean_noon_sun_elevation
 from core.profiles import load_grid_config, load_known_analogs, load_parameters
 from pipeline import permafrost
 
@@ -85,6 +85,7 @@ def compute_features(raw: pd.DataFrame, cell_km: float, permafrost_files: list[P
         "dust_aod": raw["aod"],
         "mafic_index": to_levels(raw["aster_mi"], ind["mafic_index"]["breaks"]),
         "carbonate_index": to_levels(raw["aster_ci"], ind["carbonate_index"]["breaks"]),
+        "sun_elevation_deg": mean_noon_sun_elevation(raw["lat"].to_numpy(), OBLIQUITY_DEG["earth"]),
     })
     local = permafrost.ground_ice_for(g["lat"].to_numpy(), g["lon"].to_numpy(), cell_km,
                                       files=permafrost_files)

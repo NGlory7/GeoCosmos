@@ -1,0 +1,1365 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -156.22560074348561,
+     20.687503391394
+    ]
+   },
+   "properties": {
+    "id": "g25_20.688_-156.226",
+    "name": "20.69°K, 156.23°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": 20.687503391394,
+    "lon": -156.22560074348561,
+    "rank": 1,
+    "score_total": 93.4,
+    "scores": {
+     "topography": 95.7,
+     "geology": 100.0,
+     "climate": 83.2
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 10.997498512268066,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 284.15189369857785,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 68.75769306781217,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": "20.69°K, 156.23°B koordinatlarındaki bu bölge, Gale Krateri hedefi için toplam 93.4 skorla üs kurulumu ve iniş alanı testleri açısından değerlendirilmiştir. Topografya 95.7, jeoloji 100.0 ve iklim 93.2 boyut skorlarına sahip olan sahanın; ortalama eğim, yüzey pürüzlülüğü, yıllık ortalama öğlen güneş yüksekliği ve donmuş zemin ile yüzeye yakın buz parametrelerinde hedefe uyum sağladığı görülmektedir. \n\nBununla birlikte, temel çevresel koşullarda önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Ayrıca atmosfer çok ince (~%0,6) olup çoğunlukla CO₂'den oluşur ve toz taşınımı farklı işler. Operasyonel olarak yol erişimi bulunmamaktadır ve bölge uzaktır."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     135.6018060271945,
+     -4.182719264926655
+    ]
+   },
+   "properties": {
+    "id": "g25_-4.183_135.602",
+    "name": "4.18°G, 135.60°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -4.182719264926655,
+    "lon": 135.6018060271945,
+    "rank": 2,
+    "score_total": 93.0,
+    "scores": {
+     "topography": 89.0,
+     "geology": 100.0,
+     "climate": 96.1
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 12.74439811706543,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 283.7741845438758,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 74.97438618066592,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": "4.18°G, 135.60°D koordinatlarında bulunan bu bölge, Gale Krateri hedefi için 93.0 toplam skorla değerlendirilmiştir. Topografi, jeoloji ve iklim boyutlarında sırasıyla 89.0, 100.0 ve 96.1 skorları elde edilmiştir. Ortalama eğim (Dünya'da 12.74, hedefte 10.51), yüzey pürüzlülüğü (Dünya'da 283.77 m, hedefte 286.9 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 74.97°, hedefte 73.8°) ve donmuş zemin/yüzeye yakın buz parametrelerinde (her ikisinde de 0.0) tam bir eşleşme (\"match\": true) sağlanmıştır. Bu uyumlu parametreler, bölgenin bazı temel fiziksel ve geometrik koşullar açısından benzerlik gösterdiğini ortaya koymaktadır.\n\nBununla birlikte, bazı temel çevresel ve fiziko-kimyasal faktörlerde belirgin uyumsuzluklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur. Ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşmakta, toz taşınımı farklı işlemektedir. Operasyonel açıdan ise yol erişimi bulunmamakta ve bölge uzaktır (\"road_access\": false, \"remote\": false)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.41056645749197,
+     -15.48736592689059
+    ]
+   },
+   "properties": {
+    "id": "g25_-15.487_-74.411",
+    "name": "15.49°G, 74.41°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -15.48736592689059,
+    "lon": -74.41056645749197,
+    "rank": 3,
+    "score_total": 91.3,
+    "scores": {
+     "topography": 87.3,
+     "geology": 100.0,
+     "climate": 93.1
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.991313934326172,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 286.91357956165024,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 71.74251110469919,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": "15.49°G, 74.41°B koordinatlarındaki bölge, Gale Krateri hedefi için toplam 91.3 skorla üs kurulumu ve iniş alanı testleri açısından dikkate değer bir potansiyel sergilemektedir. Jeoloji kategorisinde 100.0, iklim kategorisinde 93.1 ve topografya kategorisinde 87.3 puan alan bu saha; 10.51 hedef değerine karşın 13.99 olan ortalama eğim, 286.9 hedef değerine oldukça yakın 286.91 olan yüzey pürüzlülüğü, 73.8 hedefine yakın 71.74 olan yıllık ortalama öğlen güneş yüksekliği ve her iki alanda da 0.0 olan donmuş zemin parametrelerinde hedefle uyum (\"match\": true) göstermektedir. Ayrıca bölgenin karayolu erişimine sahip olması operasyonel avantaj sağlamaktadır.\n\nBununla birlikte, Dünya ile hedef arasında temel fiziksel ve çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer çok ince (~%0,6) olup çoğunlukla CO₂'den oluşur ve toz taşınımı farklı işler."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.24483894824795,
+     -5.991462730840885
+    ]
+   },
+   "properties": {
+    "id": "g25_-5.991_-78.245",
+    "name": "5.99°G, 78.24°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -5.991462730840885,
+    "lon": -78.24483894824795,
+    "rank": 4,
+    "score_total": 91.3,
+    "scores": {
+     "topography": 85.5,
+     "geology": 100.0,
+     "climate": 96.9
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.06438159942627,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 285.1786257025425,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 74.71564769787709,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": "5.99°G, 78.24°B konumundaki bu bölge, Gale Krateri hedefiyle karşılaştırıldığında özellikle jeoloji (100.0) ve iklim (96.9) alanlarında yüksek uyum göstererek toplam 91.3 skor elde etmiştir. Ortalama eğim (Dünya'da 14.06°, hedefte 10.51°), yüzey pürüzlülüğü (Dünya'da 285.18 m, hedefte 286.9 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 74.72°, hedefte 73.8°) ve donmuş zemin durumu (her ikisinde de 0.0) parametrelerinde \"benziyor: true\" çıktısı alınmıştır. Bu eşleşmeler, topografik ve geometrik koşulların test için elverişli yönlerini oluşturur.\n\nBuna karşın, sistemin temel kopma noktaları ve çevresel farkları şu fiziksel koşullardan kaynaklanmaktadır: Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Ayrıca atmosfer çok ince (~%0,6) olup çoğunlukla CO₂'den oluşur ve toz taşınımı farklı işler."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     142.15043612675925,
+     -5.539276864362328
+    ]
+   },
+   "properties": {
+    "id": "g25_-5.539_142.150",
+    "name": "5.54°G, 142.15°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -5.539276864362328,
+    "lon": 142.15043612675925,
+    "rank": 5,
+    "score_total": 91.1,
+    "scores": {
+     "topography": 85.4,
+     "geology": 100.0,
+     "climate": 96.7
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.677160263061523,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 283.5086913963813,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 74.78941198420364,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": "5.54°G, 142.15°D konumundaki bölge, Gale Krateri hedefiyle karşılaştırıldığında 91.1 toplam skor elde etmiştir. Topografya 85.4, jeoloji 100.0 ve iklim skorları 96.7 olarak hesaplanmıştır. 500 m tabanlı ortalama eğim Dünya'da 13.68° iken hedefte 10.51°'dir ve bu parametreler eşleşmektedir. Ayrıca, 5 km pencerede standart sapması alınan yüzey pürüzlülüğü Dünya'da 283.51 m, hedefte ise 286.9 m ölçülmüş olup benzerlik göstermektedir. Yıllık ortalama öğlen güneş yüksekliği Dünya için 74.79°, hedef için 73.8°'dir ve donmuş zemin ile yüzeye yakın buz oranı her iki konumda da 0.0'dır.\n\nBununla birlikte, bazı temel fiziksel ve çevresel parametrelerde belirgin farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır; ayrıca yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve bu değerler Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer ise çok ince (~%0,6) ve çoğunlukla CO₂'den oluşmaktadır, bu nedenle toz taşınımı farklı işlemektedir. Bölgede yol erişimi bulunmamaktadır ve konum uzaktır."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.56739445518951,
+     -9.382856729430065
+    ]
+   },
+   "properties": {
+    "id": "g25_-9.383_-77.567",
+    "name": "9.38°G, 77.57°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -9.382856729430065,
+    "lon": -77.56739445518951,
+    "rank": 6,
+    "score_total": 91.1,
+    "scores": {
+     "topography": 84.1,
+     "geology": 100.0,
+     "climate": 99.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.154662132263184,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 289.7665299716825,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 73.97454714982896,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.14809827232584,
+     -1.9217899325338688
+    ]
+   },
+   "properties": {
+    "id": "g25_-1.922_-79.148",
+    "name": "1.92°G, 79.15°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -1.9217899325338688,
+    "lon": -79.14809827232584,
+    "rank": 7,
+    "score_total": 91.1,
+    "scores": {
+     "topography": 85.8,
+     "geology": 100.0,
+     "climate": 95.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.71791934967041,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 284.15110523342133,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 75.16793910613276,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9433101532063,
+     -13.226436594497802
+    ]
+   },
+   "properties": {
+    "id": "g25_-13.226_-73.943",
+    "name": "13.23°G, 73.94°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -13.226436594497802,
+    "lon": -73.9433101532063,
+    "rank": 8,
+    "score_total": 90.6,
+    "scores": {
+     "topography": 84.6,
+     "geology": 100.0,
+     "climate": 96.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.10338020324707,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 289.44277517510625,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 72.71194827604266,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.47065377926742,
+     -7.348020330276557
+    ]
+   },
+   "properties": {
+    "id": "g25_-7.348_-78.471",
+    "name": "7.35°G, 78.47°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -7.348020330276557,
+    "lon": -78.47065377926742,
+    "rank": 9,
+    "score_total": 90.5,
+    "scores": {
+     "topography": 83.8,
+     "geology": 100.0,
+     "climate": 97.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.64097785949707,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 285.54924943730174,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 74.45968941573899,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.25485395464489,
+     9.382856729430065
+    ]
+   },
+   "properties": {
+    "id": "g25_9.383_-73.255",
+    "name": "9.38°K, 73.25°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": 9.382856729430065,
+    "lon": -73.25485395464489,
+    "rank": 10,
+    "score_total": 90.1,
+    "scores": {
+     "topography": 82.2,
+     "geology": 100.0,
+     "climate": 99.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 15.287153244018555,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 287.32620764364816,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 73.97454714982898,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5997279343648,
+     -3.278347531969541
+    ]
+   },
+   "properties": {
+    "id": "g25_-3.278_-79.600",
+    "name": "3.28°G, 79.60°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -3.278347531969541,
+    "lon": -79.5997279343648,
+    "rank": 11,
+    "score_total": 89.9,
+    "scores": {
+     "topography": 83.6,
+     "geology": 100.0,
+     "climate": 95.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.237895011901855,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 283.73391378942245,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 75.0690975883454,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.11145091392046,
+     -14.130808327454917
+    ]
+   },
+   "properties": {
+    "id": "g25_-14.131_-75.111",
+    "name": "14.13°G, 75.11°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -14.130808327454917,
+    "lon": -75.11145091392046,
+    "rank": 12,
+    "score_total": 89.9,
+    "scores": {
+     "topography": 83.8,
+     "geology": 100.0,
+     "climate": 95.2
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.26401138305664,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 284.1246705338501,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 72.34534564888547,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.47756527146338,
+     8.47848499647295
+    ]
+   },
+   "properties": {
+    "id": "g25_8.478_-71.478",
+    "name": "8.48°K, 71.48°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": 8.47848499647295,
+    "lon": -71.47756527146338,
+    "rank": 13,
+    "score_total": 89.9,
+    "scores": {
+     "topography": 82.2,
+     "geology": 100.0,
+     "climate": 98.6
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.499993324279785,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 283.2557720406545,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 74.20532504859476,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.47605384892064,
+     -12.322064861540689
+    ]
+   },
+   "properties": {
+    "id": "g25_-12.322_-73.476",
+    "name": "12.32°G, 73.48°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -12.322064861540689,
+    "lon": -73.47605384892064,
+    "rank": 14,
+    "score_total": 89.8,
+    "scores": {
+     "topography": 82.6,
+     "geology": 100.0,
+     "climate": 97.5
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.888693809509277,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 281.3244108295789,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 73.05103347776175,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     147.56999207122664,
+     -8.70457792971223
+    ]
+   },
+   "properties": {
+    "id": "g25_-8.705_147.570",
+    "name": "8.70°G, 147.57°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -8.70457792971223,
+    "lon": 147.56999207122664,
+    "rank": 15,
+    "score_total": 89.8,
+    "scores": {
+     "topography": 82.0,
+     "geology": 100.0,
+     "climate": 98.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.599300384521484,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 290.3898777068911,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 74.14981645090126,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.48630688973066,
+     10.513321395626459
+    ]
+   },
+   "properties": {
+    "id": "g25_10.513_-73.486",
+    "name": "10.51°K, 73.49°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": 10.513321395626459,
+    "lon": -73.48630688973066,
+    "rank": 16,
+    "score_total": 89.7,
+    "scores": {
+     "topography": 81.5,
+     "geology": 100.0,
+     "climate": 99.5
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 14.70276927947998,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 283.34766755447924,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 73.6510864186286,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -83.43878309841858,
+     9.382856729430065
+    ]
+   },
+   "properties": {
+    "id": "g25_9.383_-83.439",
+    "name": "9.38°K, 83.44°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": 9.382856729430065,
+    "lon": -83.43878309841858,
+    "rank": 17,
+    "score_total": 89.5,
+    "scores": {
+     "topography": 81.2,
+     "geology": 100.0,
+     "climate": 99.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.971442222595215,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 280.08973693580293,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 73.97454714982898,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     146.8925475781682,
+     -5.991462730840885
+    ]
+   },
+   "properties": {
+    "id": "g25_-5.991_146.893",
+    "name": "5.99°G, 146.89°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -5.991462730840885,
+    "lon": 146.8925475781682,
+    "rank": 18,
+    "score_total": 89.4,
+    "scores": {
+     "topography": 82.1,
+     "geology": 100.0,
+     "climate": 96.9
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.371052742004395,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 278.70670905180106,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 74.71564769787709,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.5415412403493,
+     -15.939551793369146
+    ]
+   },
+   "properties": {
+    "id": "g25_-15.940_-72.542",
+    "name": "15.94°G, 72.54°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": -15.939551793369146,
+    "lon": -72.5415412403493,
+    "rank": 19,
+    "score_total": 89.4,
+    "scores": {
+     "topography": 84.1,
+     "geology": 100.0,
+     "climate": 92.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.675151824951172,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 291.74802424719906,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 71.52677397945975,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.75496287825962,
+     6.669741530558721
+    ]
+   },
+   "properties": {
+    "id": "g25_6.670_-75.755",
+    "name": "6.67°K, 75.75°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "base_site",
+    "lat": 6.669741530558721,
+    "lon": -75.75496287825962,
+    "rank": 20,
+    "score_total": 89.3,
+    "scores": {
+     "topography": 81.8,
+     "geology": 100.0,
+     "climate": 97.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.833723068237305,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 280.16898939259096,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 74.59466781258836,
+      "target": 73.8,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

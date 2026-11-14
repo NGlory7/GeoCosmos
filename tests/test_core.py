@@ -175,3 +175,17 @@ def test_missing_data_is_unknown_not_mismatch():
     assert s.loc[2, "score_total"] == 0
     s2 = score_grid(g, t, {"slope_deg": 0.7, "aridity": 0.3})  # kapsam 0,7 >= 0,6: ceza yok
     assert s2.loc[1, "score_total"] == pytest.approx(100)
+
+
+def test_sun_elevation_targets_match_geometry():
+    """targets.yaml'daki güneş yüksekliği elle değil, core/geo.py hesabından gelmeli."""
+    from core.geo import OBLIQUITY_DEG, mean_noon_sun_elevation
+    for t in load_targets().values():
+        v = t.params["sun_elevation_deg"].value
+        assert abs(v - mean_noon_sun_elevation(t.lat, OBLIQUITY_DEG[t.body])) < 0.06, t.id
+
+
+def test_sun_elevation_poles_and_equator():
+    from core.geo import mean_noon_sun_elevation
+    assert abs(mean_noon_sun_elevation(80.0, 23.44) - 10.0) < 1e-9  # |enlem| ≥ ε: tam 90 − |enlem|
+    assert 74 < mean_noon_sun_elevation(0.0, 23.44) < 76

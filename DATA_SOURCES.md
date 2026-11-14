@@ -32,6 +32,7 @@ Tüm Dünya değerleri 25 km'lik (yakın taramada 5 km) karelere ortalanır. Mar
 | `dust_aod` | MODIS aylık AOD 550 nm (MOD08_M3, Dark Target + Deep Blue birleşik, 1°), 5 yıl ortalaması | Mars Climate Database v6.2, görünür sütun toz optik derinliği, 12 mevsim | Değer yok (atmosfer yok) → parametre atılır | Optik derinlik |
 | `mafic_index` | ASTER GED (AG100) TIR emisivite → Ninomiya mafik indeks → 0–1 | TES / CRISM, elle 0–1 | LROC / Lunar Prospector, elle 0–1 (mare bazalt yüksek) | 0–1 sıralı |
 | `carbonate_index` | ASTER GED TIR → Ninomiya karbonat indeks → 0–1 | CRISM tespitleri, elle 0–1 | Sabit 0 | 0–1 sıralı |
+| `sun_elevation_deg` | Hesap: kare enlemi, Dünya eğikliği 23,44° (`core/geo.py`) | Hesap: hedef enlemi, Mars eğikliği 25,19° | Hesap: hedef enlemi, Ay ekvatorunun ekliptiğe eğikliği 1,54° | ° (yıllık ortalama öğlen güneş yüksekliği; yerel ufuk hariç) |
 | `ground_ice` | ESA CCI Permafrost PFR (yüzde → oran, 0,01°, 25°K–85°K; yerelde `pipeline/permafrost.py`) | SHARAD / SWIM / Odyssey, elle 0–1 | Kutup: Diviner PRP, buzun 1 m içinde ısıl olarak kararlı olduğu alan oranı; ekvator: Lunar Prospector, elle | 0–1 oran |
 
 ### 0–1 sıralı ölçek
@@ -55,6 +56,7 @@ Dünya tarafında indeks → basamak eşikleri `config/grid.yaml > indices` böl
 | 6 hedefin `slope_deg`, `roughness_m` | `python -m pipeline.target_values --all` | PDS MOLA MEGDR, LOLA LDEM (uzaktan okuma, indirme yok) |
 | Mars `surface_temp_c`, `temp_range_c`, `dust_aod` | `python -m pipeline.mars_climate` | Mars Climate Database v6.2 web arayüzü |
 | Shackleton, Malapert `surface_temp_c`, `ground_ice` | `python -m pipeline.diviner_polar` | PDS Diviner Polar Resource Product |
+| 6 hedefin `sun_elevation_deg` | `core.geo.mean_noon_sun_elevation` (test, yaml'daki değerin hesapla aynı olduğunu kontrol eder) | NASA Moon / Mars Fact Sheet (eğiklik) |
 
 Komutlar `config/targets.yaml`'a yapıştırılacak satırları yazdırır; dosyayı kendileri değiştirmez.
 

@@ -141,7 +141,8 @@ def test_meta_json_matches_config(built):
     assert [t["id"] for t in meta["tests"]] == list(load_profiles())
     assert set(meta["parameters"]) >= {"slope_deg", "carbonate_index"}
     assert set(meta["breakdown_notes"]) == {"moon", "mars"}
-    assert meta["tests"][-1]["at_least"] == ["carbonate_index"]  # biyo-imza: Salda kararı
+    by_id = {t["id"]: t for t in meta["tests"]}
+    assert by_id["biosignature_carbonate"]["at_least"] == ["carbonate_index"]  # biyo-imza: Salda kararı
 
 
 def test_scenario_names_known_cells(grid, tmp_path, monkeypatch):

@@ -17,6 +17,7 @@
 #   slope_deg, roughness_m           -> python -m pipeline.target_values --all   (PDS MOLA / LOLA)
 #   Mars surface_temp_c, temp_range_c, dust_aod -> python -m pipeline.mars_climate (Mars Climate Database)
 #   Ay kutup surface_temp_c, ground_ice -> python -m pipeline.diviner_polar      (PDS Diviner PRP)
+#   sun_elevation_deg                -> core.geo.mean_noon_sun_elevation (enlem + eğiklik; testte doğrulanır)
 # Bilerek boş bırakılanlar:
 #   - temp_range_c: Shackleton, Malapert (Diviner PRP'de en düşük sıcaklık yok)
 #   - dust_aod: Ay hedefleri (atmosfer yok, tanımsız)
@@ -39,6 +40,7 @@ targets:
       # permafrost ısıl bir tanım olduğu için aynı tanım kullanıldı: buzun 1 m içinde kararlı olduğu alan oranı.
       ground_ice:      { value: 0.56, source: "Diviner PRP (PDS, LRO-L-DLRE-5-PRP-V2.0, dlre_prp_south), ice_depth ≤ 1 m alan oranı → 25 km kare ortalaması (pipeline.diviner_polar)" }
       surface_temp_c:  { value: -181.3, source: "Diviner PRP (PDS, LRO-L-DLRE-5-PRP-V2.0, dlre_prp_south), temp_avg (yıllık ortalama) → 25 km kare ortalaması (pipeline.diviner_polar)" }
+      sun_elevation_deg: { value: 0.1, source: "hesap — enlem -89.9° ve Ay eğikliği 1.54° (NASA Fact Sheet), yıllık ortalama öğlen güneş yüksekliği, yerel ufuk hariç (core/geo.py)" }
 
   - id: moon_malapert
     body: moon
@@ -54,6 +56,7 @@ targets:
       mafic_index:     { value: 0.25, source: "elle — feldspatik yayla, düşük FeO; Lawrence et al. 2002, JGR 107(E12), Lunar Prospector demir haritası" }
       ground_ice:      { value: 0.29, source: "Diviner PRP (PDS, LRO-L-DLRE-5-PRP-V2.0, dlre_prp_south), ice_depth ≤ 1 m alan oranı → 25 km kare ortalaması (pipeline.diviner_polar)" }
       surface_temp_c:  { value: -136.6, source: "Diviner PRP (PDS, LRO-L-DLRE-5-PRP-V2.0, dlre_prp_south), temp_avg (yıllık ortalama) → 25 km kare ortalaması (pipeline.diviner_polar)" }
+      sun_elevation_deg: { value: 4.0, source: "hesap — enlem -86.0° ve Ay eğikliği 1.54° (NASA Fact Sheet), yıllık ortalama öğlen güneş yüksekliği, yerel ufuk hariç (core/geo.py)" }
 
   - id: moon_marius_hills
     body: moon
@@ -72,6 +75,7 @@ targets:
       # (390 + 95) / 2 = 242,5 K = -30,7 °C; 390 - 95 = 295 °C. Dünya'da karşılığı yok: kartta kopma olarak görünür.
       surface_temp_c:  { value: -30.7, source: "Diviner — Williams et al. 2017, Icarus 283; ekvatoral en yüksek/en düşük ortalaması (yaklaşık)" }
       temp_range_c:    { value: 295,   source: "Diviner — Williams et al. 2017, Icarus 283; ekvatoral gündüz-gece farkı (yaklaşık)" }
+      sun_elevation_deg: { value: 75.9, source: "hesap — enlem 14.1° ve Ay eğikliği 1.54° (NASA Fact Sheet), yıllık ortalama öğlen güneş yüksekliği, yerel ufuk hariç (core/geo.py)" }
 
   - id: mars_jezero
     body: mars
@@ -89,6 +93,7 @@ targets:
       surface_temp_c:  { value: -43.6, source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
       temp_range_c:    { value: 54.8,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
       dust_aod:        { value: 0.51,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate); görünür toz optik derinliği (MODIS 550 nm AOD karşılığı)" }
+      sun_elevation_deg: { value: 69.5, source: "hesap — enlem 18.4° ve Mars eğikliği 25.19° (NASA Fact Sheet), yıllık ortalama öğlen güneş yüksekliği, yerel ufuk hariç (core/geo.py)" }
 
   - id: mars_gale
     body: mars
@@ -106,6 +111,7 @@ targets:
       surface_temp_c:  { value: -43.6, source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
       temp_range_c:    { value: 64.5,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
       dust_aod:        { value: 0.43,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate); görünür toz optik derinliği (MODIS 550 nm AOD karşılığı)" }
+      sun_elevation_deg: { value: 73.8, source: "hesap — enlem -5.4° ve Mars eğikliği 25.19° (NASA Fact Sheet), yıllık ortalama öğlen güneş yüksekliği, yerel ufuk hariç (core/geo.py)" }
 
   - id: mars_arcadia
     body: mars
@@ -123,3 +129,4 @@ targets:
       surface_temp_c:  { value: -72.3, source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
       temp_range_c:    { value: 41.4,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
       dust_aod:        { value: 0.33,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate); görünür toz optik derinliği (MODIS 550 nm AOD karşılığı)" }
+      sun_elevation_deg: { value: 43.0, source: "hesap — enlem 47.0° ve Mars eğikliği 25.19° (NASA Fact Sheet), yıllık ortalama öğlen güneş yüksekliği, yerel ufuk hariç (core/geo.py)" }
