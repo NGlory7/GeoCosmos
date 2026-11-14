@@ -46,32 +46,43 @@ function viewMatrix(lat0: number, lon0: number) {
   };
 }
 
-function loadMosaic(body: Body, z: number): Promise<HTMLCanvasElement> {
+interface Tile {
+  x: number;
+  y: number;
+  bmp: ImageBitmap;
+}
+
+/** Karoları indirip ana iş parçacığı dışında çözer (createImageBitmap). */
+async function loadTiles(body: Body, z: number, signal: AbortSignal): Promise<Tile[]> {
   const cols = 2 ** (z + 1);
   const rows = 2 ** z;
-  const canvas = document.createElement("canvas");
-  canvas.width = cols * TILE;
-  canvas.height = rows * TILE;
-  const ctx = canvas.getContext("2d")!;
-  const jobs: Promise<void>[] = [];
+  const jobs: Promise<Tile>[] = [];
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < cols; x++) {
+      const url = TREK[body].url.replace("{z}", String(z)).replace("{y}", String(y)).replace("{x}", String(x));
       jobs.push(
-        new Promise((resolve, reject) => {
-          const img = new Image();
-          img.crossOrigin = "anonymous";
-          img.onload = () => {
-            ctx.drawImage(img, x * TILE, y * TILE, TILE, TILE);
-            resolve();
-          };
-          img.onerror = () => reject(new Error(`Trek karosu yüklenemedi: ${z}/${y}/${x}`));
-          img.src = TREK[body].url.replace("{z}", String(z)).replace("{y}", String(y)).replace("{x}", String(x));
-        }),
+        fetch(url, { signal })
+          .then((r) => {
+            if (!r.ok) throw new Error(`Trek karosu yüklenemedi: ${z}/${y}/${x}`);
+            return r.blob();
+          })
+          .then((b) => createImageBitmap(b))
+          .then((bmp) => ({ x, y, bmp })),
       );
     }
   }
-  return Promise.all(jobs).then(() => canvas);
+  const tiles = await Promise.allSettled(jobs);
+  const ok = tiles.flatMap((t) => (t.status === "fulfilled" ? [t.value] : []));
+  if (ok.length < tiles.length) {
+    ok.forEach((t) => t.bmp.close());
+    const err = tiles.find((t) => t.status === "rejected") as PromiseRejectedResult;
+    throw err.reason;
+  }
+  return ok;
 }
+
+const nextFrame = () => new Promise<void>((r) => requestAnimationFrame(() => r()));
+const TILES_PER_FRAME = 4; // 4 × 256² karo bir karede GPU'ya; 2048 px mozaik ~8 kareye yayılır
 
 const wrap180 = (d: number) => ((((d + 180) % 360) + 360) % 360) - 180;
 
@@ -88,6 +99,14 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
   const markerRefs = useRef(new Map<string, HTMLButtonElement>());
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
+  // Prosedürel yedek gezegen ağır bir shader çalıştırır (büyük ekranda ~13 ms/kare).
+  // Doku gelip solma geçişi bitince tamamen kaldırılır; opacity-0 ile gizlemek yetmez, çizmeye devam eder.
+  const [fallback, setFallback] = useState(true);
+  useEffect(() => {
+    if (!ready || failed) return;
+    const id = setTimeout(() => setFallback(false), 800); // geçiş süresi 700 ms
+    return () => clearTimeout(id);
+  }, [ready, failed]);
 
   // Kare döngüsü güncel hedefleri buradan okur (dokular hedef değişince yeniden yüklenmesin)
   const targetsRef = useRef(targets);
@@ -153,16 +172,33 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
     gl.uniform3fv(gl.getUniformLocation(prog, "uLight"), LIGHT);
     gl.uniform1i(gl.getUniformLocation(prog, "uTex"), 0);
 
-    const tex = gl.createTexture();
+    // Ekranda çizilen doku `cur`. Keskin mozaik ayrı bir dokuda karo karo kurulur ve bitince
+    // yer değiştirir: tek seferde 2048 px yüklemek ana iş parçacığını ~70 ms donduruyordu.
+    let cur: WebGLTexture | null = null;
+    const abort = new AbortController();
     let alive = true;
     let hasTex = false;
     (async () => {
       for (const z of ZOOMS) {
+        let tiles: Tile[] = [];
+        let tex: WebGLTexture | null = null;
         try {
-          const mosaic = await loadMosaic(body, z);
+          tiles = await loadTiles(body, z, abort.signal);
           if (!alive) return;
+          const w = 2 ** (z + 1) * TILE;
+          const h = 2 ** z * TILE;
+          tex = gl.createTexture();
           gl.bindTexture(gl.TEXTURE_2D, tex);
-          gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, mosaic);
+          gl.texStorage2D(gl.TEXTURE_2D, Math.log2(w) + 1, gl.RGBA8, w, h);
+          for (let i = 0; i < tiles.length; i++) {
+            if (i > 0 && i % TILES_PER_FRAME === 0) {
+              await nextFrame();
+              if (!alive) return;
+              gl.bindTexture(gl.TEXTURE_2D, tex); // kare döngüsü arada `cur`u bağladı
+            }
+            const t = tiles[i];
+            gl.texSubImage2D(gl.TEXTURE_2D, 0, t.x * TILE, t.y * TILE, gl.RGBA, gl.UNSIGNED_BYTE, t.bmp);
+          }
           gl.generateMipmap(gl.TEXTURE_2D);
           gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
           gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
@@ -174,12 +210,18 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
             const max = gl.getParameter(aniso.MAX_TEXTURE_MAX_ANISOTROPY_EXT) as number;
             gl.texParameterf(gl.TEXTURE_2D, aniso.TEXTURE_MAX_ANISOTROPY_EXT, Math.min(8, max));
           }
+          if (cur) gl.deleteTexture(cur);
+          cur = tex;
           hasTex = true;
           setReady(true);
         } catch (e) {
+          if (!alive) return; // sayfadan çıkıldı, indirme iptal edildi
           console.error(e);
           if (!hasTex) setFailed(true);
           return;
+        } finally {
+          tiles.forEach((t) => t.bmp.close());
+          if (tex && tex !== cur) gl.deleteTexture(tex);
         }
       }
     })();
@@ -243,6 +285,7 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
 
       const m = viewMatrix(v.lat, v.lon);
       if (hasTex) {
+        gl.bindTexture(gl.TEXTURE_2D, cur);
         gl.uniformMatrix3fv(uView, false, m.columnMajor);
         gl.clearColor(0, 0, 0, 0);
         gl.clear(gl.COLOR_BUFFER_BIT);
@@ -266,13 +309,14 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
 
     return () => {
       alive = false;
+      abort.abort();
       cancelAnimationFrame(raf);
       ro.disconnect();
       wrap.removeEventListener("pointerdown", down);
       wrap.removeEventListener("pointermove", move);
       wrap.removeEventListener("pointerup", up);
       wrap.removeEventListener("pointercancel", up);
-      gl.deleteTexture(tex);
+      if (cur) gl.deleteTexture(cur);
       gl.deleteBuffer(buf);
       gl.deleteProgram(prog);
     };
@@ -282,10 +326,12 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
     <figure className="w-full">
       <div ref={wrapRef} className="relative aspect-square w-full cursor-grab touch-none select-none active:cursor-grabbing">
         {/* Doku yüklenene kadar (ya da yüklenemezse) prosedürel gezegen */}
-        <Planet
-          body={body}
-          className={`absolute inset-0 h-full w-full transition-opacity duration-700 ${ready && !failed ? "opacity-0" : "opacity-100"}`}
-        />
+        {(fallback || failed) && (
+          <Planet
+            body={body}
+            className={`absolute inset-0 h-full w-full transition-opacity duration-700 ${ready && !failed ? "opacity-0" : "opacity-100"}`}
+          />
+        )}
         <canvas
           ref={canvasRef}
           className={`absolute inset-0 h-full w-full transition-opacity duration-700 ${ready && !failed ? "opacity-100" : "opacity-0"}`}

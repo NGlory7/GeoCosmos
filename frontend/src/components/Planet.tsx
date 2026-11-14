@@ -8,16 +8,6 @@ const SUN: [number, number, number] = [0.55, 0.3, 0.78];
 // Kanvasın kenarında atmosfer parıltısına yer bırakılır; gezegen çapı = kanvas × PLANET_FRACTION.
 export const PLANET_FRACTION = 0.82;
 
-function compile(gl: WebGL2RenderingContext, type: number, src: string) {
-  const sh = gl.createShader(type)!;
-  gl.shaderSource(sh, src);
-  gl.compileShader(sh);
-  if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
-    throw new Error(gl.getShaderInfoLog(sh) ?? "shader derlenemedi");
-  }
-  return sh;
-}
-
 interface Props {
   body: Body;
   className?: string;
@@ -36,66 +26,97 @@ export default function Planet({ body, className }: Props) {
       return;
     }
 
-    let prog: WebGLProgram;
-    try {
-      prog = gl.createProgram()!;
-      gl.attachShader(prog, compile(gl, gl.VERTEX_SHADER, VERT));
-      gl.attachShader(prog, compile(gl, gl.FRAGMENT_SHADER, FRAG));
-      gl.linkProgram(prog);
-      if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog) ?? "");
-    } catch (e) {
-      console.error(e);
-      setFailed(true);
-      return;
-    }
-    gl.useProgram(prog);
+    // Bu shader ağır: senkron derleme (ANGLE/D3D) ana iş parçacığını 0,5-0,9 sn donduruyordu.
+    // KHR_parallel_shader_compile ile derleme arka planda biter; durum sorgusu (LINK_STATUS)
+    // derleme bitene kadar ertelenir, çünkü o sorgu da beklemeye zorlar.
+    const prog = gl.createProgram()!;
+    const shaders = (
+      [
+        [gl.VERTEX_SHADER, VERT],
+        [gl.FRAGMENT_SHADER, FRAG],
+      ] as const
+    ).map(([type, src]) => {
+      const sh = gl.createShader(type)!;
+      gl.shaderSource(sh, src);
+      gl.compileShader(sh);
+      gl.attachShader(prog, sh);
+      return sh;
+    });
+    gl.linkProgram(prog);
+    const parallel = gl.getExtension("KHR_parallel_shader_compile");
 
-    const buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
-    const loc = gl.getAttribLocation(prog, "aPos");
-    gl.enableVertexAttribArray(loc);
-    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-
-    const uTime = gl.getUniformLocation(prog, "uTime");
-    const uPx = gl.getUniformLocation(prog, "uPx");
-    gl.uniform1i(gl.getUniformLocation(prog, "uKind"), body === "mars" ? 0 : 1);
-    gl.uniform3fv(gl.getUniformLocation(prog, "uLight"), SUN);
-
-    const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const px = Math.min(Math.round(canvas.clientWidth * dpr), 1600);
-      if (canvas.width !== px) {
-        canvas.width = px;
-        canvas.height = px;
-      }
-      gl.viewport(0, 0, px, px);
-      gl.uniform1f(uPx, 2 / px);
-    };
-    const ro = new ResizeObserver(resize);
-    ro.observe(canvas);
-    resize();
-
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const t0 = performance.now();
     let raf = 0;
-    const draw = () => {
-      gl.uniform1f(uTime, reduced ? 0 : (performance.now() - t0) / 1000);
-      gl.clearColor(0, 0, 0, 0);
-      gl.clear(gl.COLOR_BUFFER_BIT);
-      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-      if (!reduced) raf = requestAnimationFrame(draw);
+    let teardown: (() => void) | null = null;
+
+    const start = () => {
+      if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+        const log = shaders.map((s) => gl.getShaderInfoLog(s)).join("\n").trim() || gl.getProgramInfoLog(prog);
+        console.error(log || "shader derlenemedi");
+        setFailed(true);
+        return;
+      }
+      gl.useProgram(prog);
+
+      const buf = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+      const loc = gl.getAttribLocation(prog, "aPos");
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+      const uTime = gl.getUniformLocation(prog, "uTime");
+      const uPx = gl.getUniformLocation(prog, "uPx");
+      gl.uniform1i(gl.getUniformLocation(prog, "uKind"), body === "mars" ? 0 : 1);
+      gl.uniform3fv(gl.getUniformLocation(prog, "uLight"), SUN);
+
+      const resize = () => {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const px = Math.min(Math.round(canvas.clientWidth * dpr), 1600);
+        if (canvas.width !== px) {
+          canvas.width = px;
+          canvas.height = px;
+        }
+        gl.viewport(0, 0, px, px);
+        gl.uniform1f(uPx, 2 / px);
+      };
+      const ro = new ResizeObserver(resize);
+      ro.observe(canvas);
+      resize();
+
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const t0 = performance.now();
+      const draw = () => {
+        gl.uniform1f(uTime, reduced ? 0 : (performance.now() - t0) / 1000);
+        gl.clearColor(0, 0, 0, 0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+        if (!reduced) raf = requestAnimationFrame(draw);
+      };
+      draw();
+      // Hareket kapalıysa tek kare çizilir; boyut değişince yeniden çizilir.
+      const redraw = reduced ? new ResizeObserver(() => draw()) : null;
+      redraw?.observe(canvas);
+
+      teardown = () => {
+        ro.disconnect();
+        redraw?.disconnect();
+        gl.deleteBuffer(buf);
+      };
     };
-    draw();
-    // Hareket kapalıysa tek kare çizilir; boyut değişince yeniden çizilir.
-    const redraw = reduced ? new ResizeObserver(() => draw()) : null;
-    redraw?.observe(canvas);
+
+    const waitForCompile = () => {
+      if (parallel && !gl.getProgramParameter(prog, parallel.COMPLETION_STATUS_KHR)) {
+        raf = requestAnimationFrame(waitForCompile);
+        return;
+      }
+      start();
+    };
+    waitForCompile();
 
     return () => {
       cancelAnimationFrame(raf);
-      ro.disconnect();
-      redraw?.disconnect();
-      gl.deleteBuffer(buf);
+      teardown?.();
+      shaders.forEach((s) => gl.deleteShader(s));
       gl.deleteProgram(prog);
     };
   }, [body]);
