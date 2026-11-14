@@ -126,6 +126,7 @@ Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yak�
 - **Ay kutup buzu ısıl kararlılıktır, gözlem değil.** Shackleton 0,56 / Malapert 0,29 = karenin ne kadarında buz 1 m içinde kararlı olabilir (Diviner). Dünya'daki permafrost da ısıl tanım olduğu için aynı tanım seçildi.
 - **Mars sıcaklık ve tozu modelden.** Mars Climate Database ölçümlerle doğrulanmış bir model; rover ölçümü değil.
 - **Ay'da Dünya karşılığı olmayan değerler.** Örneğin Marius Hills'in 295 °C'lik gece-gündüz farkı; bu parametre her yerde 0 benzerlik alır ve kartta kopma olarak görünür.
+- **Krater ayrı bir parametre değil.** Challenge kraterleri bir analog boyutu olarak sayıyor, ama Dünya'da tüm karaları kapsayan güvenilir bir krater haritası yok: kraterlerin çoğu aşınmış, gömülmüş ya da bitki altında; doğrulanmış çarpma yapıları ~200 tane ve çoğu 25 km kareden küçük. Krater arazisi motorda eğim ve pürüzlülük (topografya boyutu) üzerinden yakalanır. Bilinen krater analogları zaten tanındığı için keşif dışı listededir: Meteor Krateri ve Ries (`config/known_analogs.yaml > exclude_only`); Haughton Krateri ise buz sondajı testinin ayar yerlerinden biri. Sunumda söylenecek: "Krateri doğrudan aramıyoruz; krater benzeri araziyi eğim ve pürüzlülükle buluyoruz, bilinen kraterleri tekrar önermiyoruz."
 - **25 km çözünürlük.** Küçük sahalar (Dumont Dunes, ~30 km²) karede kaybolur; yakın tarama (5 km) bunun için.
 
 ## Yapılanlar (özet)
