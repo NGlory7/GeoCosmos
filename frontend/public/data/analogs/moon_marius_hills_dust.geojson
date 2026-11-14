@@ -65,7 +65,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "39.23°K, 89.17°D koordinatlarındaki 70.8 toplam skorlu bu bölge, Marius Hills çukuru hedefi için bazı fiziksel koşullarda uyumluluk göstermektedir. Kuraklık parametresinde Dünya'daki 0.95 değeri hedefteki 1.0 değerine denk gelerek `true` eşleşmesi sağlamıştır. Ayrıca ortalama eğim (Dünya'da 1.19°, hedefte 1.52°) ve yüzey pürüzlülüğü (Dünya'da 32.85 m, hedefte 33.1 m) parametreleri de `true` olarak eşleşen diğer iyi test sahası özellikleri arasında yer almaktadır.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde Dünya'daki 25.89 °C değeri ile hedefteki 295.0 °C değeri birbirini tutmamaktadır (`false`). Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve bu durum toz ile tekerlek davranışını farklılaştırır; ayrıca atmosferin yok denecek kadar ince olması rüzgar aşınması ile ısı taşınımını engeller. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C seviyesindedir ve bu koşulların Dünya'da karşılığı bulunmamaktadır. Bölge, yol erişimine sahip olmayıp uzaktan erişimlidir (`remote: true`)."
    }
   },
   {
@@ -132,7 +132,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "35.61°K, 84.60°D bölgesindeki saha, 70.7 toplam skorla Marius Hills çukuru hedefindeki toz fırtınası ve aşınma testleri için belirli alanlarda benzerlik göstermektedir. 99.0 topoğrafya skoruna sahip olan bu sahada; 0.94 Dünya değeriyle 1.0 hedef değerine sahip kuraklık, 1.72° Dünya ve 1.52° hedef ortalama eğim ile 32.8 m Dünya ve 33.1 m hedef yüzey pürüzlülüğü parametreleri eşleşmektedir (\"match\": true).\n\nBuna karşın, 56.5 iklim skoru ile gece-gündüz sıcaklık farkı parametresi eşleşmemektedir (\"match\": false); çünkü Dünya'da 27.12 °C olan bu fark, hedefte 295.0 °C'dir. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir; atmosfer yok denecek kadar incedir, rüzgar aşınması ve ısı taşınımı bulunmaz. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarındadır ve Dünya'da birebir karşılığı yoktur. Ayrıca sahanın yol erişimi bulunmamaktadır (road_access: false) ve bölge uzaktır (remote: true)."
    }
   },
   {
@@ -199,7 +199,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "25.89°K, 33.80°D konumundaki bu saha, 70.7 toplam skorla Marius Hills çukuru hedefindeki toz fırtınası ve aşınma testleri için bazı temel parametrelerde benzerlik göstermektedir. Özellikle topoğrafya alt skorunun 96.6 olması, ortalama eğim (Dünya'da 1.88°, hedefte 1.52°) ve yüzey pürüzlülüğü (Dünya'da 30.88 m, hedefte 33.1 m) değerlerinin birbirine yakın seyretmesiyle sağlanmıştır. Ayrıca kuraklık derecesi (Dünya'da 0.95, hedefte 1.0) açısından eşleşme (\"match\": true) sağlanmış olup, bölge yol erişimine ve uzaktan operasyona uygundur.\n\nBuna karşın, iklim alt skorunun 57.7'de kalması önemli farklılıkları göstermektedir. Gece-gündüz sıcaklık farkı Dünya'da 20.54 °C iken hedefte 295.0 °C olarak ölçülmüş ve bu parametre eşleşmemiştir (\"match\": false). Bu durum, yerçekiminin Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) seviyesinde olması nedeniyle toz ve tekerlek davranışının farklılaşmasına, atmosferin yok denecek kadar ince olması sebebiyle rüzgar aşınması ve ısı taşınımının bulunmamasına yol açmaktadır. Ayrıca yüzey sıcaklığının kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olması Dünya'da karşılığı olmayan kopma noktalarını oluşturmaktadır."
    }
   },
   {
@@ -266,7 +266,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki 70.65°K, 75.64°B koordinatlarında yer alan bölge, Marius Hills çukuru hedefi için toplam 70.5 skorla değerlendirilmiştir. Bu sahanın iyi bir test adayı olmasını sağlayan temel etkenler, 0.94 Dünya ve 1.0 hedef değerleriyle kuraklık parametresinde (\"match\": true), 1.85° Dünya ve 1.52° hedef değerleriyle ortalama eğimde ve 32.49 m Dünya ile 33.1 m hedef değerleriyle yüzey pürüzlülüğünde sağlanan uyumludur. Ayrıca topoğrafya alt skorunun 98.3 olması bu uyumu desteklemektedir.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresi 4.08 °C (Dünya) ile 295.0 °C (hedef) değerleri arasında büyük bir uyumsuzluk göstermektedir (\"match\": false) ve iklim alt skoru 56.6'da kalmıştır. Bu durum, yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması ve toz ile tekerlek davranışının farklılaşması, atmosferin yok denecek kadar ince olmasıyla rüzgar aşınması ile ısı taşınımının bulunmaması, ayrıca yüzey sıcaklığının kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyelerine ulaşması ve Dünya'da karşılığının bulunmaması gibi temel kopma noktalarıyla uyumludur."
    }
   },
   {
@@ -333,7 +333,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "39.91°K, 92.71°D bölgesinde yer alan bu alan, 70.5 toplam skorla Marius Hills çukuru hedefi için bazı benzerlikler sunmaktadır. Özellikle 97.3 topoğrafya boyutu skoru dikkat çekmektedir; kuraklık (Dünya 0.95, hedef 1.0), ortalama eğim (Dünya 2.14°, hedef 1.52°) ve yüzey pürüzlülüğü (Dünya 33.78 m, hedef 33.1 m) parametrelerinde eşleşme sağlanmıştır (\"benziyor\": true). \n\nBuna karşın, 57.1 iklim boyutu skoru ve gece-gündüz sıcaklık farkı parametresi (\"benziyor\": false) önemli farklılıklar göstermektedir; Dünya'da 26.85 °C olan bu fark hedefte 295.0 °C'dir. Yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması toz ve tekerlek davranışını değiştirirken, atmosferin yok denecek kadar ince olması rüzgar aşınması ve ısı taşınımını engeller. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve Dünya'da birebir karşılığı bulunmamaktadır."
    }
   },
   {

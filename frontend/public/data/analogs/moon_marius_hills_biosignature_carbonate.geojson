@@ -53,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.93°K, 82.73°B konumundaki bu bölge, \"Biyo-imza: karbonat çökeli\" testi için Marius Hills çukuru hedefine bazı temel parametrelerde uyum sağlamaktadır. ASTER GED (AG100) TIR verilerine göre, 0-1 sıralı ölçekte karbonat izi Dünya'da 0.5 iken hedefte 0.0 olarak ölçülmüş ve bu parametre \"benziyor: true\" olarak değerlendirilmiştir. Benzer şekilde, mafik / bazaltik yüzey parametresi hem Dünya'da hem de hedefte 1.0 değerini alarak eşleşmiştir.\n\nÖte yandan, yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve bu durum toz ile tekerlek davranışlarının farklı olmasına yol açar. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır ve bilinen bir biyolojik süreç yoktur; oysa Dünya'daki her sahada mikrobiyal yaşam mevcuttur. Manyetik alan ve atmosfer koruması bulunmayan yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarındadır ve bu koşulların Dünya'da karşılığı yoktur. Operasyonel olarak yol erişimi bulunmamaktadır ve uzaktır."
    }
   },
   {
@@ -108,7 +108,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki 8.70°K, 81.83°B bölgesinin Marius Hills çukuru hedefine benzeme analizi, mafik / bazaltik yüzey (0-1 sıralı ölçek) parametresinde Dünya'da 1.0 ve hedefte 1.0 değerleriyle tam uyum sağladığını ve karbonat izi (0-1 sıralı ölçek) parametresinde Dünya'da 0.5, hedefte ise 0.0 değerleriyle benzerlik gösterdiğini ortaya koymaktadır. Bu doğrultuda, toplam skor 100.0 üzerinden 100.0 olarak hesaplanmıştır.\n\nBununla birlikte, iki ortam arasında önemli fiziksel ve çevresel farklılıklar bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Bilinen bir biyolojik süreç mevcut değildir; buna karşın Dünya'daki her sahada mikrobiyal yaşam bulunmaktadır. Manyetik alan ve atmosfer koruması bulunmayan yüzey, doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda ise öğlen +120 °C civarındadır ve Dünya'da bunun bir karşılığı yoktur. Bölge için karayolu erişimi bulunmamaktadır (road_access: false) ve uzaktır (remote: false)."
    }
   },
   {
@@ -163,7 +163,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.93°K, 78.68°B konumundaki bu bölge, \"Biyo-imza: karbonat çökeli\" testi için Ay'daki Marius Hills çukuru hedefiyle değerlendirildiğinde toplam 100.0 skor almıştır. Jeoloji boyut skoru 100.0 olan sahada, Dünya'da 0.75 ve hedefte 0.0 olan \"Karbonat izi\" ile Dünya'da 1.0 ve hedefte 1.0 olan \"Mafik / bazaltik yüzey\" parametrelerinde \"match\": true (benziyor) çıkmıştır. Ayrıca operasyonel olarak yol erişimi vardır ve uzaktan değildir.\n\nÖte yandan, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olup toz ve tekerlek davranışı farklıdır; yüzeyde sıvı su yoktur ve buz sadece kalıcı gölgelerdedir. Bilinen bir biyolojik süreç bulunmazken Dünya'daki her sahada mikrobiyal yaşam vardır. Manyetik alan ve atmosfer koruması olmadığından yüzey doğrudan kozmik ışına açıktır ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur."
    }
   },
   {
@@ -218,7 +218,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki 8.93°K, 73.50°B bölgesindeki test sahası, Ay'daki Marius Hills çukurunda yapılması planlanan \"Biyo-imza: karbonat çökeli\" testi için 100.0 toplam skorla değerlendirilmiştir. Jeoloji alt kategorisinde 100.0 puan alan bu saha, karbonat izi (Dünya'da 0.25, hedefte 0.0) ve mafik/bazaltik yüzey (Dünya'da 1.0, hedefte 1.0) parametrelerinde her iki ortamın örtüştüğünü gösteren sonuçlar sunarak test için uygun olabileceğini göstermektedir. Ayrıca karayolu erişimine sahip olup uzaktan erişim gerektirmeyen bir yapıdadır.\n\nBuna karşın, iki ortam arasında önemli çevresel ve fiziksel farklılıklar bulunmaktadır. Yerçekimi Dünya'da farklıyken, hedefte 1,62 m/s² (Dünya'nın ~1/6'sı) seviyesindedir ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde mevcuttur. Bilinen bir biyolojik süreç barındırmayan hedefin aksine, Dünya'daki bu sahada mikrobiyal yaşam yer almaktadır. Ayrıca manyetik alan ve atmosfer koruması olmayan yüzey doğrudan kozmik ışına açıktır ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olmakta; bu durum Dünya'da karşılığı olmayan aşırı koşullar yaratmaktadır."
    }
   },
   {
@@ -273,7 +273,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Marius Hills çukuru hedefi (8.93°K, 70.58°B), ASTER GED (AG100) TIR kaynaklı verilere göre mafik ve bazaltik yüzey parametresinde Dünya ile tam bir uyum (değer: 1.0, \"benziyor\": true) gösterdiğinden, karbonat çökeli testi için belirli jeolojik ortaklıklar sunmaktadır. Ancak karbonat izi parametresinde Dünya'daki 1.0 değerine karşılık hedefte 0.0 ölçülmüş ve bu durum motor çıktısına \"benziyor\": true olarak yansımıştır. Toplam 100.0 skor alan bu bölge, yol erişimine sahip olup uzaktan operasyon gerektirmemektedir.\n\nÖte yandan, saha koşulları ve çevresel faktörler açısından önemli kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve bu durum toz ile tekerlek davranışını değiştirir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde mevcuttur. Dünya'daki her sahada mikrobiyal yaşam ve bilinen bir biyolojik süreç mevcutken, hedefte bilinen bir biyolojik süreç yoktur. Manyetik alan ve atmosfer koruması bulunmayan yüzey, doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da bunun bir karşılığı yoktur."
    }
   },
   {

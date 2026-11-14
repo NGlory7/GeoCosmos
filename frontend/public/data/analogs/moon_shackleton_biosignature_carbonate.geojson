@@ -53,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki bu bölge (0.11°G, 91.29°B), Ay'daki Shackleton Krateri kenarı hedefiyle yapılan \"Biyo-imza: karbonat çökeli\" testi için 100.0 toplam skorla değerlendirilmiştir. Jeoloji boyut skorunun 100.0 olduğu bu sahada, mafik / bazaltik yüzey parametresi Dünya'da 0.25 ve hedef üzerinde 0.25 değerleriyle eşleşmektedir (\"benziyor\": true). Ayrıca karbonat izi parametresinde Dünya değeri 0.25, hedef değeri ise 0.0 olmasına rağmen sistem bu durumu benzer olarak değerlendirmiştir (\"benziyor\": true). Bölge, uzaktan operasyon gerektirmekte ve yol erişimi bulunmamaktadır.\n\nÖte yandan, motor çıktısının belirttiği üzere yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Bilinen bir biyolojik süreç mevcut değildir ve Dünya'daki her sahada mikrobiyal yaşam bulunmaktadır. Manyetik alan ile atmosfer koruması olmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C iken ekvatorda öğlen +120 °C'ye ulaşır ve bu durumun Dünya'da karşılığı yoktur."
    }
   },
   {
@@ -108,7 +108,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.93°K, 82.06°B konumundaki bu bölge, hedef Shackleton Krateri kenarındaki \"Biyo-imza: karbonat çökeli\" testi için karbonat izi (0.0) ve mafik/bazaltik yüzey (0.25) parametrelerinde eşleşme (\"match\": true) sağlayarak toplam skorunu 100.0 puana ulaştırmıştır.\n\nBununla birlikte, iki saha arasında önemli fiziksel kopma noktaları bulunmaktadır: Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Dünya'daki her sahada mikrobiyal yaşam mevcutken, burada bilinen bir biyolojik süreç yoktur. Manyetik alan ve atmosfer koruması bulunmayan yüzey, doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da bunun bir karşılığı yoktur."
    }
   },
   {
@@ -163,7 +163,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.93°K, 80.71°B konumundaki bu bölge, \"Biyo-imza: karbonat çökeli\" testi için Shackleton Krateri kenarı (Ay) hedefiyle bazı jeolojik parametrelerde uyumluluk göstermektedir. ASTER GED (AG100) TIR kaynaklı verilere göre, karbonat izi (0-1 sıralı ölçek) hedef ile bu bölgede eşleşmektedir (`match`: true) ve her iki sahada da değer 0.0 olarak ölçülmüştür. Benzer şekilde, mafik / bazaltik yüzey (0-1 sıralı ölçek) parametresinde de hedef ve bu bölge 0.25 değeriyle tam uyum sağlamaktadır.\n\nBununla birlikte, iki saha arasında önemli çevresel ve fiziksel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz sadece kalıcı gölgelerde yer alır ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarındadır (Dünya'da bu sıcaklık aralığının bir karşılığı yoktur). Ayrıca, bilinen bir biyolojik süreç mevcut değildir (Dünya'daki her sahada mikrobiyal yaşam vardır) ve manyetik alan ile atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Operasyonel olarak yol erişimi vardır (`road_access`: true) ve uzaktan değildir (`remote`: false)."
    }
   },
   {
@@ -218,7 +218,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya üzerindeki belirtilen bölge, Ay'daki Shackleton Krateri kenarı hedefiyle yapılan \"Biyo-imza: karbonat çökeli\" testi için jeolojik açıdan bazı olumlu parametreler sunmaktadır. Karbonat izi (0-1 sıralı ölçek) hedef ve Dünya için 0.0, mafik / bazaltik yüzey (0-1 sıralı ölçek) ise her iki konum için de 0.25 değerine sahip olup, bu parametrelerde eşleşme sağlanmıştır.\n\nBununla birlikte, iki saha arasında önemli çevresel ve fiziksel farklılıklar bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz sadece kalıcı gölgelerde yer alır. Dünya'daki her sahada mikrobiyal yaşam mevcutken, hedef bölgede bilinen bir biyolojik süreç yoktur. Manyetik alan ve atmosfer koruması bulunmayan yüzey, doğrudan kozmik ışınlara açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da bunun bir karşılığı yoktur."
    }
   },
   {
@@ -273,7 +273,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.25°K, 81.38°B koordinatlarındaki bölge, \"Biyo-imza: karbonat çökeli\" testi için Shackleton Krateri kenarı (Ay) hedefine 100.0 toplam skorla benzerlik göstermektedir. Jeoloji boyut skoru 100.0 olan bu sahada, 0-1 sıralı ölçekte karbonat izi Dünya'da 0.25 iken hedef ay bölgesinde 0.0 olarak ölçülmüş ve bu parametre ile mafik / bazaltik yüzey parametresi (Dünya ve hedef için 0.25) eşleşmiştir. Operasyonel olarak yol erişiminin bulunması ve uzak konumda yer almaması da analitik motor çıktısına göre bu sahanın test için uygun yönleri arasındadır.\n\nBununla birlikte, Dünya ve Ay hedefi arasında belirgin çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz sadece kalıcı gölgelerde yer alır. Bilinen bir biyolojik süreç mevcut değildir; oysa Dünya'daki her sahada mikrobiyal yaşam vardır. Manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve Dünya'da bu koşulların tam bir karşılığı yoktur."
    }
   },
   {

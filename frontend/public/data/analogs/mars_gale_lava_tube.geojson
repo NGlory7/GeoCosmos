@@ -73,7 +73,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "62.29°K, 143.94°B konumundaki bu bölge, 81.3 toplam skorla Gale Krateri hedefindeki \"Lav tüpü ve yeraltı habitatı\" testleri için jeolojik açıdan dikkat çekici bir potansiyel sunmaktadır. 100.0 jeoloji skoruna sahip olan saha, 0.5 değerindeki mafik / bazaltik yüzey yapısıyla hedefle birebir uyuşmaktadır. Ayrıca yüzey pürüzlülüğü (Dünya'da 285.58 m, hedefte 286.9 m) ve ortalama eğim (Dünya'da 13.64°, hedefte 10.51°) parametrelerindeki eşleşmeler, bölgenin topografik uyumunu desteklemektedir (topography skoru 89.5).\n\nBuna karşın, iklim parametrelerindeki büyük uyumsuzluklar (climate skoru 24.8) önemli kopma noktaları oluşturmaktadır. Gece-gündüz sıcaklık farkı Dünya'da 6.45 °C iken hedefte 64.5 °C olarak ölçülmekte; kuraklık oranı ise Dünya'daki 0.68 değerinden hedefin 1.0 değerine yükselmektedir. Ayrıca yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir, küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşurken, toz taşınımı farklı işlemektedir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuk kalmaktadır. Yol erişimi bulunmayan (road_access: false) bu uzak (remote: true) ve yeni aday saha, operasyonel olarak bu çevresel ve iklimsel zorlukları barındırmaktadır."
    }
   },
   {
@@ -148,7 +148,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "34.48°K, 47.33°D konumundaki bu bölge, Gale Krateri hedefi için 80.0 toplam skorla değerlendirilmiştir. Bölgenin test sahası olarak öne çıkan yönleri, jeoloji alanında 100.0, topografya alanında ise 86.5 skorlarına sahip olmasıdır. Mafik / bazaltik yüzey verisi Dünya'da 0.5 iken hedefte de 0.5 olarak eşleşmiştir. Ayrıca 288.04 m olan yüzey pürüzlülüğü hedefteki 286.9 m değerine, 14.78° olan ortalama eğim ise hedefteki 10.51° değerine yakın seyrederek eşleşme sağlamıştır. Karayolu erişimine sahip olan ve uzak olmayan bu alan, bu özellikleri sayesinde teste uygun parametreler sunmaktadır.\n\nBuna karşın, iklim skoru 23.6 gibi düşük bir seviyede kalmıştır. Gece-gündüz sıcaklık farkı Dünya'da 14.42 °C iken hedefte 64.5 °C olarak uyuşmamaktadır; benzer şekilde kuraklık derecesi Dünya'da 0.58 iken hedefte 1.0 ölçülmüş ve eşleşmemiştir. Öte yandan, yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir; küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Atmosfer çok ince (~%0,6) ve çoğunlukla CO₂ içerirken, toz taşınımı farklı işler. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -223,7 +223,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "30.86°K, 51.62°D koordinatlarındaki bu bölge, Gale Krateri hedefi için toplam 79.5 skorla değerlendirilmiştir. Jeoloji alt skorunun 100.0, topografya skorunun ise 83.8 olması, bölgenin test sahası olarak potansiyelini artırmaktadır. ASTER GED (AG100) TIR verilerine göre mafik ve bazaltik yüzey özellikleri hedefle tam uyuşmaktadır (Dünya ve hedef değeri 0.5). Ayrıca Copernicus DEM GLO-30 verilerine dayanan yüzey pürüzlülüğü (Dünya 279.83 m, hedef 286.9 m) ve ortalama eğim (Dünya 13.36°, hedef 10.51°) parametreleri de hedefe benzerlik göstermektedir. Yol erişiminin bulunması operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, iklim alt skorunun 25.8 gibi düşük bir seviyede kalması önemli kopma noktaları oluşturmaktadır. MODIS LST (MOD11A2) verilerine göre gece-gündüz sıcaklık farkı Dünya'da 16.47 °C iken hedefte 64.5 °C olarak ölçülmüştür ve bu parametre uyuşmamaktadır. GPM IMERG V07 ve MODIS NDVI verileriyle incelenen kuraklık parametresi de Dünya'da 0.59 iken hedefte 1.0 değerindedir. Bu durum, yıllık ortalama yüzey sıcaklığının hedefe göre yaklaşık −40 ile −75 °C arasında değişmesi ve Dünya'daki çöl analoglarından onlarca derece soğuk olmasıyla uyumludur. Ek olarak, yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir, küresel manyetik alan bulunmamaktadır, yüzey radyasyonu Dünya'dan çok yüksektir ve atmosfer çok ince (~%0,6) olup çoğunlukla CO₂ içermektedir, ayrıca toz taşınımı farklı işlemektedir."
    }
   },
   {
@@ -298,7 +298,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Gale Krateri hedefindeki \"Lav tüpü ve yeraltı habitatı\" testi için incelenen 39.91°K, 71.49°D koordinatlarındaki bölge, 78.6 toplam skor elde etmiştir. Bu sahanın uygun olmasını sağlayan temel etkenler, jeoloji alanında 100.0, topografya alanında ise 80.2 skor almasıdır. Hedef ile Dünya arasında eşleşen parametreler (`benziyor: true`) arasında, 0.5 değerine sahip mafik / bazaltik yüzey, Dünya'da 290.39 m, hedefte ise 286.9 m olarak ölçülen yüzey pürüzlülüğü ve sırasıyla 16.05 ile 10.51 olan ortalama eğim yer almaktadır. Ayrıca yol erişiminin bulunması operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, iklim boyutunun 27.9 gibi düşük bir skor alması önemli kopma noktaları oluşturmaktadır. Gece-gündüz sıcaklık farkı Dünya'da 12.95 °C iken hedefte 64.5 °C'dir ve kuraklık derecesi Dünya'da 0.65 iken hedefte 1.0 ölçülmüştür; bu parametreler eşleşmemektedir (`benziyor: false`). Ek olarak, yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir, küresel manyetik alan bulunmamaktadır, yüzey radyasyonu Dünya'dan çok yüksektir, atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşmaktadır, toz taşınımı farklı işlemektedir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {
@@ -373,7 +373,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "9.38°G, 77.57°B konumundaki bu bölge, Gale Krateri hedefi için toplam 78.3 skorla değerlendirilmiştir. Jeoloji alt skorunun 100.0, topografya alt skorunun ise 86.3 olduğu sahada; mafik / bazaltik yüzey değeri Dünya ve hedef için 0.5 olarak eşleşmektedir. Ayrıca yüzey pürüzlülüğü Dünya'da 289.77 m iken hedef için 286.9 m ölçülmüş, ortalama eğim ise sırasıyla 14.15° ve 10.51° değerleriyle benzerlik göstermiştir (\"benziyor\": true). Bu parametreler sahanın lav tüpü ve yeraltı habitatı testleri için uygun olabilecek yönlerini oluşturmaktadır.\n\nBuna karşın, 15.3 gibi düşük bir iklim skoruna sahip olan bölge, gece-gündüz sıcaklık farkında (Dünya 19.42 °C, hedef 64.5 °C) ve kuraklıkta (Dünya 0.43, hedef 1.0) uyumsuzluk göstermektedir (\"benziyor\": false). Temel kopma noktaları arasında yerçekiminin Dünya'nın yaklaşık %38'i (3,71 m/s²) olması, küresel manyetik alanın bulunmaması, yüzey radyasyonunun Dünya'dan çok yüksek seviyede kalması yer alır. Ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂ içerirken, toz taşınımı farklı işlemektedir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuk kalmaktadır."
    }
   },
   {

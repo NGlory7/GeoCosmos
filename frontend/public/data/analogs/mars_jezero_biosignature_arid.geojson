@@ -60,7 +60,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "37.87°K, 85.05°D koordinatlarında yer alan bölge, 81.5 toplam skor ve iklim boyutunda elde ettiği 81.5 puanla \"Biyo-imza: aşırı kuraklıkta korunma\" testi için belirli açılardan uyumluluk göstermektedir. Motor çıktısına göre kuraklık derecesi (Dünya'da 0.95, hedefte 1.0), gece-gündüz sıcaklık farkı (Dünya'da 27.29 °C, hedefte 54.8 °C) ve toz/aerosol optik derinliği (Dünya'da 0.4, hedefte 0.51) parametrelerinin tamamında eşleşme sağlanmıştır. Ayrıca kara yolu erişiminin bulunmaması, bölgenin izole yapısını desteklemektedir.\n\nBununla birlikte, test sahası ile hedef arasında kritik kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratırken, küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -122,7 +122,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "39.68°K, 88.88°D koordinatlarında yer alan bu bölge, 81.5 toplam skor ve iklim kategorisindeki 81.5 puanı ile \"Aşırı kuraklıkta korunma\" biyo-imza testi için belirli parametrelerde uyumluluk göstermektedir. Motor çıktısına göre kuraklık derecesi Dünya'da 0.95 iken hedef bölgede 1.0 olarak ölçülmüştür; gece-gündüz sıcaklık farkı Dünya'da 26.04 °C, hedefte 54.8 °C'dir ve toz/aerosol optik derinliği Dünya için 0.43 iken hedefte 0.51 olarak tespit edilmiştir. Bu parametrelerin tamamında (\"benziyor\": true) eşleşme sağlanmıştır. Bölgeye karayolu erişimi bulunmamakta olup operasyonel olarak uzaktan (\"remote\": true) bir aday sahadır.\n\nBuna karşın, sistemin kopma noktaları ve hedef Jezero Krateri ile temel çevresel uyumsuzlukları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'idir (3,71 m/s²). Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir ve modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratmaktadır. Ayrıca küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişip, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -184,7 +184,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.29°K, 83.53°D konumundaki bu bölge, 81.3 toplam skor ve \"climate\" kategorisindeki 81.3'lük boyutsal skorla Jezero Krateri hedefindeki \"Biyo-imza: aşırı kuraklıkta korunma\" testi için belirli parametrelerde uyumluluk göstermektedir. Kuraklık derecesi Dünya'da 0.95 iken hedefte 1.0 olarak tam eşleşme sağlamaktadır. Ayrıca gece-gündüz sıcaklık farkı Dünya'da 26.66 °C, hedefte 54.8 °C; toz veya aerosol optik derinliği (550 nm) ise Dünya'da 0.4, hedefte 0.51 değerleriyle \"benziyor: true\" kriterini karşılamaktadır.\n\nBuna karşın, sistem çıkışındaki kopma noktalarına göre bu alan bazı temel fiziksel ve çevresel koşullarda hedefi tam olarak yansıtmamaktadır. Yerçekimi Dünya'nın yaklaşık %38'i (3,71 m/s²) seviyesindedir ve bugün yüzeyde kalıcı sıvı su bulunmazken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur. Bölge, yol erişimine sahip olmayıp uzaktan operasyon (\"remote: true\") gerektiren yeni bir adaydır."
    }
   },
   {
@@ -246,7 +246,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "37.42°K, 83.87°D koordinatlarındaki Dünya bölgesi, Jezero Krateri hedefiyle \"Biyo-imza: aşırı kuraklıkta korunma\" testi için toplam 81.2 skor almıştır. İklim alt boyutu da 81.2 skora sahiptir. Motor çıktısına göre kuraklık derecesi Dünya'da 0.95 iken hedefte 1.0 olarak ölçülmüş ve bu parametre benzer bulunmuştur. Ayrıca gece-gündüz sıcaklık farkı Dünya'da 27.05 °C, hedefte 54.8 °C; toz veya aerosol optik derinliği ise Dünya'da 0.41, hedefte 0.51 değerleriyle benzerlik gösteren diğer parametrelerdir. Bölgeye kara yolu erişimi yoktur ve saha uzaktır.\n\nÖte yandan, motor çıktısının belirttiği kopma noktaları ve çevresel farklar nedeniyle bu bölge her yönüyle hedefe benzememektedir. Yerçekimi Dünya'nın yaklaşık %38'i kadardır (3,71 m/s²). Bugün yüzeyde kalıcı sıvı su bulunmazken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın var olması, biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın bulunmadığı hedefte yüzey radyasyonu Dünya'dan çok yüksektir; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -308,7 +308,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "40.58°K, 88.58°D konumundaki 80.6 toplam skora sahip test sahası, Jezero Krateri hedefiyle bazı iklim parametrelerinde benzerlik gösterdiği için aşırı kuraklıkta korunma testi adına değerlendirilebilir. 0.96 Dünya ve 1.0 hedef kuraklık değerleri, 27.08 °C Dünya ve 54.8 °C hedef gece-gündüz sıcaklık farkı ile 0.33 Dünya ve 0.51 hedef toz/aerosol optik derinliği parametrelerinde eşleşme (\"match\": true) sağlanmaktadır. Sahanın kara yolu erişimi bulunmamakta ve yapısı itibarıyla uzaktan operasyon gerektirmektedir.\n\nBuna karşın, bazı temel çevresel ve fiziksel faktörlerde önemli kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yoktur; buna karşın Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşam var olup, bu durum biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan bulunmadığından yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve bu değerler Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {

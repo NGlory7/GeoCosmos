@@ -16,6 +16,7 @@ import hashlib
 import json
 import os
 import re
+import time
 from pathlib import Path
 from typing import Callable
 
@@ -86,25 +87,58 @@ def invented_numbers(text: str, allowed: set[str]) -> list[str]:
     return bad
 
 
+def _r(x):
+    """Gemini'ye giden sayıyı 2 ondalığa yuvarlar. Yuvarlanmamış değer (0.9502831390049846) yoruma
+    olduğu gibi kopyalanıyordu; uydurma sayı kontrolü de bu yuvarlanmış değerlere göre yapılır."""
+    return round(x, 2) if isinstance(x, float) else x
+
+
 def payload_for(props: dict, labels: dict[str, str]) -> dict:
     """Gemini'ye giden, yoruma gereken alanlar (geçmiş testler ve kimlikler hariç)."""
     return {
         "bolge": props["name"],
-        "toplam_skor": props["score_total"],
-        "boyut_skorlari": {k: v for k, v in props["scores"].items() if v is not None},
-        "parametreler": [{"ad": labels.get(p["key"], p["key"]), "dunya": p["earth"], "hedef": p["target"],
+        "toplam_skor": _r(props["score_total"]),
+        "boyut_skorlari": {k: _r(v) for k, v in props["scores"].items() if v is not None},
+        "parametreler": [{"ad": labels.get(p["key"], p["key"]), "dunya": _r(p["earth"]), "hedef": _r(p["target"]),
                           "benziyor": p["match"], "kaynak": p["source"]} for p in props["params"]],
         "operasyon": props.get("ops_tags", {}),
         "yeni_aday": props["is_new"],
     }
 
 
-def gemini_generate(prompt: str) -> str:
-    from google import genai  # sadece gerektiğinde yükle
+_last_call = 0.0
 
+
+def _retry_delay_s(err: Exception, default: float) -> float:
+    """429 hatasındaki "retry in 5.0s" / retryDelay değerini okur; bulamazsa default."""
+    m = re.search(r"retry in ([\d.]+)s|'retryDelay': '([\d.]+)s'", str(err))
+    return float(m.group(1) or m.group(2)) + 1 if m else default
+
+
+def gemini_generate(prompt: str) -> str:
+    """Ücretsiz kota dakikada sınırlı istek verir (gemini-3.5-flash-lite: 15). İstekler arasında
+    commentary.min_interval_s beklenir; yine de 429 (kota) ya da 500/503 (geçici yoğunluk) gelirse
+    beklenip yeniden denenir (commentary.rate_limit_retries)."""
+    global _last_call
+    from google import genai  # sadece gerektiğinde yükle
+    from google.genai import errors
+
+    cfg = load_grid_config()["commentary"]
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
-    return client.models.generate_content(model=model, contents=prompt).text.strip()
+    model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+    for attempt in range(cfg.get("rate_limit_retries", 5) + 1):
+        wait = cfg.get("min_interval_s", 0) - (time.monotonic() - _last_call)
+        if wait > 0:
+            time.sleep(wait)
+        _last_call = time.monotonic()
+        try:
+            return client.models.generate_content(model=model, contents=prompt).text.strip()
+        except errors.APIError as e:
+            # 429: kota; 500/503: Gemini tarafında geçici yoğunluk ("high demand"). İkisi de beklenip denenir.
+            if e.code not in (429, 500, 503) or attempt == cfg.get("rate_limit_retries", 5):
+                raise
+            time.sleep(_retry_delay_s(e, default=30 * (attempt + 1)))
+    raise RuntimeError("ulaşılamaz")
 
 
 def comment_for(props: dict, generate: Callable[[str], str], cache: dict, max_retries: int) -> str:

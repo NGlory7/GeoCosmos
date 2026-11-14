@@ -72,7 +72,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "81.96°K, 22.36°B konumundaki bu bölge, Marius Hills çukuru hedefiyle \"Donmuş zeminde buz sondajı (ISRU)\" testi için toplam 79.1 skoruna ulaşmıştır. Topoğrafya (98.1) ve jeoloji (95.8) alt skorları oldukça yüksek olan bu saha; donmuş zemin/yüzeye yakın buz (dünya 0.02, hedef 0.0), ortalama yüzey sıcaklığı (dünya -19.05 °C, hedef -30.7 °C), ortalama eğim (dünya 1.24°, hedef 1.52°) ve kuraklık (dünya 0.83, hedef 1.0) parametrelerinde hedeflenen koşullarla uyumluluk göstermektedir (\"benziyor\": true).\n\nBuna karşın, iklim alt skoru 61.8'de kalmıştır ve gece-gündüz sıcaklık farkı (dünya 1.48 °C, hedef 295.0 °C) parametresinde uyumsuzluk (\"benziyor\": false) görülmektedir. Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir; atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı bulunmamaktadır; yüzde yüzeyde sıvı su yoktur ve buz sadece kalıcı gölgelerde yer alır. Bölgede yol erişimi bulunmamakta olup, yapı uzaktır (road_access: false, remote: true)."
    }
   },
   {
@@ -146,7 +146,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "76.31°K, 68.83°B konumundaki bu bölge, Marius Hills çukuru hedefindeki donmuş zeminde buz sondajı (ISRU) testleri için 77.1 toplam skorla değerlendirilmiştir. Topografya skoru 83.4, jeoloji skoru ise 96.6 olarak hesaplanmıştır. Dünya'daki ortalama eğim 4.01° iken hedefte 1.52°'dir; ayrıca kuraklık seviyesi Dünya'da 0.9, hedefte ise 1.0 ölçülmüştür. Donmuş zemin / yüzeye yakın buz parametresi Dünya'da 0.02, hedefte 0.0 değerindedir ve bu parametreler ile ortalama yüzey sıcaklığının Dünya'da -12.79 °C, hedefte -30.7 °C olması durumları test için benzerlik göstermektedir. İklime ait alt skor ise 60.2'dir.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresi Dünya'da 2.24 °C iken hedefte 295.0 °C ölçülmüş olup bu durum benzememektedir. Operasyonel olarak yol erişiminin bulunmadığı (road_access: false) ve bölgenin uzaktan yönetildiği (remote: true) görülmektedir. Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğu için toz ve tekerlek davranışı farklılık gösterir; atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı bulunmaz, yüzeyde sıvı su yoktur ve buz yalnızca kalıcı gölgelerde yer alır."
    }
   },
   {
@@ -220,7 +220,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "46.46°K, 96.83°D koordinatlarındaki Dünya bölgesi, Marius Hills hedefine yönelik \"Donmuş zeminde buz sondajı (ISRU)\" testi için 72.3 toplam skor elde etmiştir. Jeoloji alt skoru 100.0 ve topografi alt skoru 98.4 seviyesindedir. Donmuş zemin / yüzeye yakın buz (0-1) parametresinde Dünya'da 0.0 ve hedefte 0.0 değerleri görülmekte olup eşleşme sağlanmıştır. Ayrıca ortalama eğim (Dünya: 1.28, hedef: 1.52) ile kuraklık (Dünya: 0.86, hedef: 1.0) parametreleri de eşleşen diğer unsurlardır ve bu durum bölgenin test için uygun yönlerini oluşturur.\n\nBuna karşın, iklim alt skoru 44.9'da kalmış ve bazı kritik parametrelerde uyumsuzluk görülmüştür. Ortalama yüzey sıcaklığı Dünya'da 3.3 °C iken hedefte -30.7 °C'dir; gece-gündüz sıcaklık farkı ise Dünya'da 21.99 °C iken hedefte 295.0 °C'dir ve bu parametreler eşleşmemektedir. Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) kadardır, toz ve tekerlek davranışı farklılık gösterir. Atmosfer yok denecek kadar incedir; rüzgar aşınması ve ısı taşınımı yoktur. Yüzeyde sıvı su bulunmaz, buz sadece kalıcı gölgelerdedir."
    }
   },
   {
@@ -294,7 +294,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.10°K, 90.94°D bölgesindeki saha, 72.2 toplam skor ile \"Donmuş zeminde buz sondajı (ISRU)\" testi için belirli alanlarda benzerlik göstermektedir. Topography ve geology alt skorları 100.0 seviyesindedir. Donmuş zemin / yüzeye yakın buz parametresinde 0.0 değeriyle hedefe uyum sağlanırken (\"benziyor\": true), 1.52° ortalama eğim değeri de hedefle eşleşmektedir. Ayrıca kuraklık parametresinde Dünya için 0.94, hedef için 1.0 değerleri ölçülmüş ve bu parametre de uyumlu bulunmuştur.\n\nBuna karşın, climate alt skoru 44.4'te kalmış olup bazı temel farklar ve kopma noktaları bulunmaktadır. Ortalama yüzey sıcaklığı Dünya'da 8.32°C iken hedefte -30.7°C'dir; gece-gündüz sıcaklık farkı ise Dünya'da 20.92°C iken hedefte 295.0°C olarak ölçülmüştür ve bu parametreler benzememektedir. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²); toz ve tekerlek davranışı farklıdır. Atmosfer yok denecek kadar ince; rüzgar aşınması ve ısı taşınımı yoktur. Yüzeyde sıvı su yok; buz sadece kalıcı gölgelerdedir. Ayrıca road_access ve remote operasyon değerleri false durumdadır."
    }
   },
   {
@@ -368,7 +368,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "45.56°K, 95.86°D konumundaki Dünya bölgesi, 72.2 toplam skor ile Marius Hills çukuru hedefinde yapılacak donmuş zeminde buz sondajı (ISRU) testi için bazı avantajlar sunmaktadır. Topoğrafya (98.1) ve jeoloji (100.0) boyut skorları oldukça yüksek olan bu saha; donmuş zemin veya yüzeye yakın buz parametresinde 0.0 değeriyle hedeflenen koşulları birebir karşılamaktadır. Ayrıca, 1.23° ortalama eğim değeri hedefteki 1.52°'lik eğimle ve 0.89 kuraklık değeri hedefteki 1.0 değeriyle uyum göstererek test için uygun bir zemin sağlamaktadır.\n\nBununla birlikte, iklim boyut skorunun 44.8'de kalması bazı önemli uyumsuzlukları göstermektedir. Dünya'daki ortalama yüzey sıcaklığı 4.95°C iken hedefte bu değer -30.7°C'dir; gece-gündüz sıcaklık farkı ise Dünya'da 23.37°C iken hedefte 295.0°C'ye ulaşmaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²); toz ve tekerlek davranışı farklıdır. Atmosfer yok denecek kadar ince; rüzgar aşınması ve ısı taşınımı yoktur. Yüzeyde sıvı su yoktur; buz sadece kalıcı gölgelerdedir."
    }
   },
   {

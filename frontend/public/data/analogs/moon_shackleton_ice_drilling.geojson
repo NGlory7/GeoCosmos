@@ -65,7 +65,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "35.61°K, 82.19°D koordinatlarındaki bölge, Shackleton Krateri kenarı hedefi için toplam 68.3 skorla değerlendirilmiştir. Jeoloji (98.1) ve topografi (90.7) boyut skorları yüksektir; özellikle donmuş zemin ile yüzeye yakın buz (Dünya'da 0.57, hedefte 0.56) ve ortalama eğim (Dünya'da 12.55°, hedefte 13.94°) parametrelerinde hedefle uyum sağlanmıştır (benziyor: true). Ayrıca kuraklık seviyesi de benzerlik göstermektedir (Dünya'da 0.93, hedefte 1.0).\n\nBuna karşın, iklim boyut skorunun 32.9'da kalması nedeniyle bazı belirgin uyumsuzluklar ve kopma noktaları bulunmaktadır. Ortalama yüzey sıcaklığı Dünya'da -5.91 °C iken hedefte -181.3 °C olarak ölçülmüş ve bu parametre benzer bulunmamıştır (benziyor: false). Ek olarak, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) seviyesinde olup toz ve tekerlek davranışı farklılık gösterir; atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı yoktur ve yüzeyde sıvı su bulunmayıp buz sadece kalıcı gölgelerdedir. Bölge karayolu erişimine kapalıdır (road_access: false) ve uzaktır (remote: true)."
    }
   },
   {
@@ -132,7 +132,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "35.84°K, 77.36°D bölgesindeki bu alan, Shackleton Krateri kenarı hedefiyle karşılaştırıldığında toplam 67.7 puanlık bir uyum sergiler. Toplofoloji skoru 96.2 ve jeoloji skoru 94.9 ile yüksek bir benzerlik gösterirken, iklim skoru 33.4 kalmaktadır. Donmuş zemin / yüzeye yakın buz parametresinde Dünya değeri 0.53 iken hedef 0.56 olarak eşleşmektedir (`match`: true). Ayrıca ortalama eğim (Dünya 14.51°, hedef 13.94°) ve kuraklık (Dünya 0.93, hedef 1.0) parametreleri de benzerlik göstermektedir (`match`: true).\n\nBuna karşın, ortalama yüzey sıcaklığı parametresinde Dünya -8.23 °C iken hedef -181.3 °C ölçülmüş olup bu parametre benzerlik göstermemektedir (`match`: false). Bu durumdaki kopma noktaları şunlardır: Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²); toz ve tekerlek davranışı farklıdır. Atmosfer yok denecek kadar incedir; rüzgar aşınması ve ısı taşınımı yoktur. Yüzeyde sıvı su yoktur; buz sadece kalıcı gölgelerdedir. Bölge için `road_access` false, `remote` ise true olarak belirlenmiştir."
    }
   },
   {
@@ -199,7 +199,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "35.61°K, 80.58°D bölgesindeki test sahası, Shackleton Krateri kenarı (Ay) hedefi için toplam 67.1 skorla değerlendirilmiştir. Donmuş zemin veya yüzeye yakın buz parametresinde Dünya değeri 0.54 iken hedef 0.56 ölçülmüş ve bu durum eşleşmeyi doğrulamıştır. Ayrıca, ortalama eğim Dünya'da 12.43° iken hedef için 13.94° olarak benzerlik göstermiş; kuraklık ise Dünya'da 0.91, hedefte 1.0 seviyesinde uyum sağlamıştır. Jeoloji alt skoru 97.0 ve topografya alt skoru 89.9 olarak hesaplanmıştır.\n\nBuna karşın, iklim alt skoru 31.6'da kalmış ve ortalama yüzey sıcaklığı parametresinde Dünya -7.83 °C iken hedef -181.3 °C ölçülerek eşleşmemiştir. Bu saha testlerinde kopma noktaları yaşanmaktadır: Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²); toz ve tekerlek davranışı farklıdır. Atmosfer yok denecek kadar ince; rüzgar aşınması ve ısı taşınımı yoktur. Yüzeyde sıvı su yok; buz sadece kalıcı gölgelerdedir. Bölgede yol erişimi bulunmamakta olup operasyon uzaktandır."
    }
   },
   {
@@ -266,7 +266,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki 33.12°K, 79.78°D bölgesinde yer alan test sahası, Shackleton Krateri kenarı hedefi için toplam 66.5 skor değerine ulaşmaktadır. Donmuş zemin / yüzeye yakın buz (Dünya 0.55, hedef 0.56), ortalama eğim (Dünya 16.01°, hedef 13.94°) ve kuraklık (Dünya 0.87, hedef 1.0) parametrelerinde uyum sağlanmış olup, bu durum donmuş zeminde buz sondajı (ISRU) testi için bazı olumlu koşullar sunmaktadır.\n\nBuna karşın, ortalama yüzey sıcaklığı parametresinde büyük bir uyumsuzluk görülmektedir; Dünya'da 3.3 °C olan değer, hedef konumda -181.3 °C olarak gerçekleşmektedir. Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklılık gösterir, atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı yoktur ve yüzeyde sıvı su bulunmayıp buz sadece kalıcı gölgelerdedir."
    }
   },
   {
@@ -333,7 +333,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "37.19°K, 85.41°D konumundaki bu bölge, 66.5 toplam skor ve 96.6 topography, 96.5 geology skorlarıyla Shackleton Krateri kenarı hedefi için bazı açılardan elverişlidir. 0.58 Dünya ve 0.56 hedef değerine sahip donmuş zemin / yüzeye yakın buz parametresi ile 13.43° Dünya ve 13.94° hedef ortalama eğim parametresi eşleşmektedir. Ayrıca 0.86 Dünya ve 1.0 hedef değerindeki kuraklık parametresi de hedeflenen koşullarla benzerlik göstermektedir.\n\nBuna karşın, 2.08 °C Dünya ve -181.3 °C hedef değerine sahip ortalama yüzey sıcaklığı parametresi uyuşmamaktadır ve 28.9 iklim skoru bu uyumsuzluğu yansıtmaktadır. Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir; toz ve tekerlek davranışı farklıdır. Atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı yoktur; yüzeyde sıvı su bulunmaz ve buz sadece kalıcı gölgelerdedir."
    }
   },
   {

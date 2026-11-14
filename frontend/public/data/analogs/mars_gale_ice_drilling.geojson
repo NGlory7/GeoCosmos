@@ -72,7 +72,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "27.92°G, 68.84°B konumundaki bu saha, Gale Krateri hedefindeki \"Donmuş zeminde buz sondajı (ISRU)\" testleri için 73.0 toplam skor sunmaktadır. Jeoloji kategorisinde 100.0, topografyada ise 92.1 skor elde eden bölge; donmuş zemin / yüzeye yakın buz (0.0), ortalama eğim (Dünya'da 9.32°, hedefte 10.51°) ve kuraklık (Dünya'da 0.91, hedefte 1.0) parametrelerinde hedeflenen koşullarla uyumludur (`benziyor: true`). Ayrıca 47.7 skor alan iklim bileşeninde yol erişimi bulunmamakta (`road_access: false`) ve saha uzak konumda (`remote: true`) yer almaktadır. Yeni aday statüsündeki bu alanın ortalama yüzey sıcaklığı (Dünya'da -1.96°C, hedefte -43.6°C) ile gece-gündüz sıcaklık farkı (Dünya'da 25.6°C, hedefte 64.5°C) parametreleri hedeflenen koşullarla uyuşmamaktadır (`benziyor: false`).\n\nBölgenin Gale Krateri hedefiyle birebir örtüşmeyen temel kopma noktaları ve çevresel farkları şunlardır: Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir; toz taşınımı farklı işler; bugün yüzeyde kalıcı sıvı su yoktur ve Dünya sahalarında su döngüsü sürmektedir."
    }
   },
   {
@@ -146,7 +146,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "27.02°G, 68.59°B bölgesinde bulunan aday saha, 72.8 toplam skor ile \"Donmuş zeminde buz sondajı (ISRU)\" testi için bazı uygun özellikler sergilemektedir. Topografya (99.2) ve jeoloji (100.0) boyut skorları oldukça yüksek çıkarken; Dünya'daki 10.39° ortalama eğim, hedefteki 10.51° değerine büyük oranda uyum sağlamaktadır. Ayrıca, donmuş zemin / yüzeye yakın buz parametresinde Dünya (0.0) ve hedef (0.0) değerleri eşleşmekte (`match`: true), kuraklık seviyesi ise Dünya'da 0.91 iken hedef için 1.0 olarak ölçülmektedir.\n\nBuna karşın, iklim boyut skorunun 45.7'de kalması bazı temel kopma noktalarına işaret etmektedir. Ortalama yüzey sıcaklığı Dünya'da 1.68 °C iken hedefte -43.6 °C'ye düşmekte; gece-gündüz sıcaklık farkı ise Dünya'daki 28.71 °C'den hedefteki 64.5 °C'ye çıkarak uyumsuzluk yaratmaktadır (`match`: false). Bu termal farkların yanı sıra, yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, toz taşınımı farklı işler, bugün yüzeyde kalıcı sıvı su yoktur ve Dünya sahalarında su döngüsü sürmektedir. Ayrıca operasyonel olarak yol erişimi bulunmamaktadır (`road_access`: false)."
    }
   },
   {
@@ -220,7 +220,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "29.51°G, 69.84°B koordinatlarındaki bölge, Gale Krateri hedefiyle yapılan testler için 71.4 toplam skor sunmaktadır. Topografya boyut skoru 99.8 ve jeoloji boyut skoru 100.0 olarak gerçekleşmiştir. Donmuş zemin / yüzeye yakın buz parametresinde Dünya değeri 0.0 ile hedef değeri 0.0 uyuşmaktadır (\"benziyor\": true). Ayrıca ortalama eğim parametresinde Dünya 10.54° iken hedef 10.51°'dir (\"benziyor\": true) ve kuraklık parametresinde Dünya 0.92, hedef ise 1.0 değerindedir (\"benziyor\": true). Bu durum, yüzey şekilleri ve kuraklık koşullarında belirli bir benzerlik sağlamaktadır.\n\nBuna karşın, iklim boyut skoru 42.9'da kalmış olup ortalama yüzey sıcaklığı Dünya'da 5.28 °C iken hedefte -43.6 °C'dir (\"benziyor\": false); gece-gündüz sıcaklık farkı ise Dünya'da 26.76 °C iken hedefte 64.5 °C'dir (\"benziyor\": false). Operasyonel olarak yol erişimi bulunmamaktadır (\"road_access\": false). Ayrıca, yerçekimi Dünya'nın ~%38'i (3,71 m/s²); atmosfer çok ince (~%0,6) ve çoğunlukla CO₂; toz taşınımı farklı işler.; Bugün yüzeyde kalıcı sıvı su yok; Dünya sahalarında su döngüsü sürüyor.."
    }
   },
   {
@@ -294,7 +294,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "28.60°G, 69.59°B konumundaki bu saha, 70.7 toplam skorla Gale Krateri hedefindeki \"Donmuş zeminde buz sondajı (ISRU)\" testi için bazı güçlü benzerlikler göstermektedir. Jeoloji boyutu 100.0, topografya boyutu ise 98.5 skorlarına ulaşırken; donmuş zemin veya yüzeye yakın buz parametresinde her iki ortam da 0.0 değeriyle tam uyum sağlamaktadır. Ayrıca ortalama eğim (Dünya'da 10.28°, hedefte 10.51°) ve kuraklık (Dünya'da 0.91, hedefte 1.0) parametreleri de eşleşmektedir. \n\nBuna karşın iklim boyutu 41.7 skoruyla düşük kalmıştır; ortalama yüzey sıcaklığı (Dünya'da 5.19°C, hedefte -43.6°C) ve gece-gündüz sıcaklık farkı (Dünya'da 25.72°C, hedefte 64.5°C) parametrelerinde belirgin uyumsuzluklar bulunmaktadır. Bu test sahasında yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, toz taşınımı farklı işler. Bugün yüzeyde kalıcı sıvı su yoktur ve Dünya sahalarında su döngüsü sürmektedir. Saha yol erişimine kapalıdır (road_access: false) ve uzaktır (remote: true)."
    }
   },
   {
@@ -368,7 +368,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "25.21°G, 68.34°B koordinatlarında yer alan bu saha, 69.8 toplam skorla Gale Krateri'ndeki donmuş zeminde buz sondajı (ISRU) testleri için bazı ortak özellikler sunmaktadır. Jeoloji kategorisinde 100.0, topografya kategorisinde ise 83.8 skor elde eden bölge; donmuş zemin ve yüzeye yakın buz parametresinde her iki ortamda da 0.0 değeriyle hedefe uyum sağlamaktadır (\"benziyor\": true). Ayrıca kuraklık derecesi Dünya'da 0.95 iken hedef için 1.0 olarak ölçülmüş, ortalama eğim ise Dünya için 8.08° iken hedefte 10.51° olarak benzerlik göstermiştir. Gece-gündüz sıcaklık farkı Dünya'da 34.69 °C, hedefte ise 64.5 °C olmasına rağmen bu parametre de uyumlu kabul edilmiştir.\n\nBuna karşın, iklim kategorisi 42.9 skorunda kalmış ve bazı temel noktalarda ayrışmalar görülmüştür (\"benziyor\": false). Ortalama yüzey sıcaklığı Dünya'da 9.76 °C iken hedefte -43.6 °C'dir. Ayrıca motor çıktısının belirttiği üzere; yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşur, toz taşınımı farklı işler, bugün yüzeyde kalıcı sıvı su yoktur ve Dünya sahalarında su döngüsü sürmektedir. Operasyonel olarak yol erişimi bulunmamaktadır (\"road_access\": false) ve saha uzaktır (\"remote\": false)."
    }
   },
   {

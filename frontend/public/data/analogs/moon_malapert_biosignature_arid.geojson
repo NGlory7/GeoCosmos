@@ -46,7 +46,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki bu bölge (22.95°K, 32.82°D), 99.6 toplam skor ve iklim boyut skoruna sahiptir. Kuraklık parametresinde Dünya değeri 1.0, hedef Malapert Masifi değeri ise 1.0 olarak ölçülmüş ve bu durum eşleşmeyi (`match`: true) doğrulamıştır. Bu özellik, aşırı kuraklıkta korunma testleri için bölgenin uygun bir analog saha olabileceğini gösterir.\n\nBununla birlikte, iki ortam arasında önemli fiziksel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Bilinen bir biyolojik süreç olmamasına karşın Dünya'daki her sahada mikrobiyal yaşam mevcuttur. Manyetik alan ve atmosfer koruması bulunmayan yüzey, doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da tam bir karşılığı yoktur."
    }
   },
   {
@@ -94,7 +94,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "82.18°K, 35.81°B koordinatlarındaki bölge, 97.5 toplam skor ve 97.5 iklim skoru ile Malapert Masifi hedefindeki aşırı kuraklıkta korunma testi için uygun bir aday sahasıdır. Motor çıktısındaki kuraklık parametresinde Dünya değeri 0.98, hedef değeri ise 1.0 olarak ölçülmüş ve bu parametre \"benziyor: true\" olarak eşleşmiştir.\n\nBuna karşın, Dünya'daki bu test sahası ile hedef arasında önemli çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Bilinen bir biyolojik süreç olmamasına karşın, Dünya'daki her sahada mikrobiyal yaşam mevcuttur. Manyetik alan ve atmosfer koruması bulunmayan yüzey, doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da bunun bir karşılığı yoktur. Bölgeye karayolu erişimi bulunmamakta olup operasyonlar uzaktan yürütülmektedir."
    }
   },
   {
@@ -142,7 +142,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "22.27°K, 31.59°D konumundaki bu Dünya bölgesi, 97.3 toplam skor ve 97.3 iklim boyutu skoru ile Malapert Masifi (Ay) hedefine \"Biyo-imza: aşırı kuraklıkta korunma\" testi için yüksek oranda benzemektedir. GPM IMERG V07 ve MODIS NDVI kaynaklı verilere göre, Dünya'daki kuraklık değeri 0.98 iken hedef için bu değer 1.0 (tamamen kuru) olarak ölçülmüş ve bu parametre \"match: true\" (benziyor) olarak doğrulanmıştır. Ayrıca bölgenin yol erişimi (road_access: true) bulunmakta ve uzak bir konumda olmadığı (remote: false) görülmektedir.\n\nBununla birlikte, bazı temel fiziksel parametrelerde önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve bu durum toz ile tekerlek davranışını değiştirir. Yüzeyde sıvı su bulunmazken, buz sadece kalıcı gölgelerde yer alır. Dünya'daki her sahada mikrobiyal yaşam olmasına rağmen, hedef bölgede bilinen bir biyolojik süreç yoktur. Manyetik alan ve atmosfer koruması bulunmayan yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da birebir karşılığı yoktur."
    }
   },
   {
@@ -190,7 +190,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "81.28°K, 51.65°B konumundaki bölge, 96.2 toplam skor ve iklim boyut skoruna sahip olup; 0.98 Dünya ve 1.0 hedef değerleriyle tamamen kuru kuraklık parametresinde eşleşme (\"match\": true) gösterdiği için aşırı kuraklıkta korunma testi için uygundur. Ayrıca yol erişiminin olmaması ve uzaktan operasyon imkanı sunması bu durumu desteklemektedir.\n\nBununla birlikte, motor çıktısındaki kopma noktalarında belirtildiği üzere yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve bu durum toz ile tekerlek davranışı farklılıklarına yol açar. Yüzeyde sıvı su bulunmazken buz sadece kalıcı gölgelerde yer alır; ayrıca Dünya'daki her sahada mikrobiyal yaşam varken burada bilinen bir biyolojik süreç yoktur. Manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ki bunların Dünya'da karşılığı yoktur."
    }
   },
   {
@@ -238,7 +238,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "83.09°K, 33.44°B koordinatlarındaki bölge, \"Biyo-imza: aşırı kuraklıkta korunma\" testi için toplam 96.0 puanlık bir uyum göstermektedir. İklim boyut skorunun 96.0 olduğu bu sahada, kuraklık parametresinde Dünya değeri 0.98, hedef değer ise 1.0 olarak ölçülmüş ve bu durum motor tarafından eşleşen (`match: true`) bir kriter olarak değerlendirilmiştir.\n\nBununla birlikte, test sahası ile Ay'daki Malapert Masifi hedefi arasında önemli fiziksel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) seviyesindedir ve bu durum toz ile tekerlek davranışı üzerinde farklılık yaratır. Yüzeyde sıvı su bulunmazken buz yalnızca kalıcı gölgelerde yer alır ve Dünya'daki her sahada mikrobiyal yaşam mevcut olmasına rağmen hedef bölgede bilinen bir biyolojik süreç yoktur. Ayrıca manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır; yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve bu aşırı koşulların Dünya'da birebir karşılığı yoktur. Bölgeye karayolu erişimi bulunmamakta olup operasyonel olarak uzaktan (`remote: true`) yönetilmektedir."
    }
   },
   {

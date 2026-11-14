@@ -65,7 +65,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "35.16°K, 77.36°D bölgesinin Malapert Masifi (Ay) hedefi için \"Donmuş zeminde buz sondajı (ISRU)\" testi bağlamındaki toplam skoru 68.1 olarak hesaplanmıştır. Bu sahanın iyi bir test adayı olmasını sağlayan temel özellikler, jeoloji (99.5) ve topoğrafya (85.4) boyut skorları ile eşleşen parametreleridir. Dünya'daki donmuş zemin / yüzeye yakın buz değeri (0.29) hedef ile tam olarak uyuşmakta ve eşleşmektedir (`match`: true). Ayrıca, ortalama eğim (Dünya'da 18.97°, hedefte 16.78°) ve kuraklık (Dünya'da 0.92, hedefte 1.0) parametreleri de benzerlik göstermektedir. Yol erişimi yoktur ve bölge uzaktır.\n\nBuna karşın, iklim boyutu skoru 32.4'te kalarak belirgin bir kopma noktası oluşturmaktadır. Ortalama yüzey sıcaklığı parametresinde Dünya'da -9.08°C olan değer, hedefte -136.6°C'ye düşmekte ve bu durum eşleşmemektedir (`match`: false). Ayrıca, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir; atmosfer yok denecek kadar incedir, rüzgar aşınması ve ısı taşınımı yoktur; yüzeyde sıvı su bulunmaz ve buz sadece kalıcı gölgelerdedir."
    }
   },
   {
@@ -132,7 +132,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki 34.48°K, 78.44°D bölgesindeki 68.0 toplam skorlu test sahası, Malapert Masifi hedefi için belirli parametrelerde benzerlik göstermektedir. Donmuş zemin / yüzeye yakın buz (0.31 ve 0.29), ortalama eğim (17.39° ve 16.78°) ile kuraklık (0.93 ve 1.0) parametreleri eşleşmektedir (\"benziyor\": true). Topografya ve jeoloji boyut skorları ise sırasıyla 96.0 ve 96.1 olarak gerçekleşmiştir.\n\nBuna karşın, iklim boyut skorunun 32.9 kalması ve ortalama yüzey sıcaklığının Dünya'da -9.34°C iken hedefte -136.6°C olması eşleşmemektedir (\"benziyor\": false). Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklılık gösterir; atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı yoktur, ayrıca yüzeyde sıvı su bulunmayıp buz sadece kalıcı gölgelerdedir. Bölgede yol erişimi bulunmamaktadır (\"road_access\": false) ve saha uzaktır (\"remote\": false)."
    }
   },
   {
@@ -199,7 +199,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.29°K, 76.02°D koordinatlarındaki Dünya bölgesi, toplam 66.6 puanlık skorla Malapert Masifi (Ay) hedefindeki \"Donmuş zeminde buz sondajı (ISRU)\" testi için belirli parametrelerde yakınlık göstermektedir. Jeoloji boyutu 98.5 ve topografi boyutu 73.4 puan almıştır. Donmuş zemin / yüzeye yakın buz (0-1) parametresi Dünya için 0.3 iken hedef için 0.29 olarak ölçülmüş ve eşleşmiştir (\"match\": true). Ayrıca ortalama eğim Dünya'da 20.77°, hedefte 16.78° olup benzerlik göstermektedir. Kuraklık parametresi ise Dünya'da 0.93, hedefte 1.0 değerleriyle uyumludur.\n\nBuna karşın, iklim boyutu 33.1 gibi düşük bir skorda kalmıştır. Ortalama yüzey sıcaklığı Dünya'da -8.26°C iken hedefte -136.6°C'dir ve bu parametre eşleşmemektedir (\"match\": false). Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğu için toz ve tekerlek davranışı farklıdır; atmosfer yok denecek kadar incedir, rüzgar aşınması ve ısı taşınımı yoktur; yüzeyde sıvı su yoktur ve buz sadece kalıcı gölgelerdedir."
    }
   },
   {
@@ -266,7 +266,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya üzerindeki bu bölge (38.77°K, 75.02°D), 66.6 toplam skorla Malapert Masifi hedefindeki \"Donmuş zeminde buz sondajı (ISRU)\" testi için bazı ortak özellikler sunmaktadır. Özellikle 16.93° Dünya ve 16.78° hedef ortalama eğim değerleri ile 0.26 Dünya ve 0.29 hedef donmuş zemin/yüzeye yakın buz oranları birbiriyle uyuşmaktadır. Ayrıca kuraklık parametresinde Dünya için 0.88 ve hedef için 1.0 değerleri görülmektedir. Topografi skoru 99.0 ve jeoloji skorunun 95.2 olması, bu coğrafi ve yapısal özelliklerin test için uygun zemin oluşturduğunu gösterir.\n\nBuna karşın, iklim skoru 29.9'da kalmakta olup ortalama yüzey sıcaklığında büyük farklılıklar bulunmaktadır; Dünya'da -0.55 °C olan sıcaklık, hedefte -136.6 °C'ye düşmektedir ve bu parametre uyuşmamaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²); toz ve tekerlek davranışı farklı. Atmosfer yok denecek kadar ince; rüzgar aşınması ve ısı taşınımı yok. Yüzeyde sıvı su yok; buz sadece kalıcı gölgelerde. Ayrıca bölgenin yol erişimi bulunmamaktadır (road_access: false)."
    }
   },
   {
@@ -333,7 +333,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "34.25°K, 77.36°D konumundaki Dünya bölgesi, 65.6 toplam skor ile Malapert Masifi (Ay) hedefindeki \"Donmuş zeminde buz sondajı (ISRU)\" testi için bazı açılardan elverişlidir. Jeoloji alt skorunun 98.5 ve topografi alt skorunun 89.3 olması bu durumu destekler. Özellikle donmuş zemin / yüzeye yakın buz parametresinde Dünya'daki 0.3 değeri, hedeflenen 0.29 değerine oldukça yakın seyrederek eşleşme sağlamaktadır (\"benziyor\": true). Ayrıca ortalama eğim (Dünya'da 15.18°, hedefte 16.78°) ve kuraklık (Dünya'da 0.83, hedefte 1.0) parametrelerinde de benzerlikler görülmektedir. Yol erişiminin bulunması operasyonel olarak avantaj yaratmaktadır.\n\nBuna karşın, 26.7 gibi düşük bir iklim alt skoruna sahip olan iklim parametresinde belirgin uyuşmazlıklar mevcuttur; örneğin ortalama yüzey sıcaklığı Dünya'da 4.63 °C iken hedefte -136.6 °C'dir ve bu parametre eşleşmemektedir (\"benziyor\": false). Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı yoktur; yüzeyde sıvı su bulunmaz ve buz yalnızca kalıcı gölgelerde yer alır."
    }
   },
   {

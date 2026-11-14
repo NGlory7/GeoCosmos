@@ -91,6 +91,8 @@ heatmap:
 commentary:
   top_k: 5                   # her dosyada ilk kaç adaya Gemini yorumu yazılır (kota)
   max_retries: 2             # yorumda motorda olmayan sayı çıkarsa yeniden üret
+  min_interval_s: 4.5        # istekler arası bekleme: ücretsiz kota dakikada 15 istek (lite); 4,5 sn ≈ 13/dk
+  rate_limit_retries: 5      # 429 (kota) ya da 500/503 (Gemini yoğun) gelirse bekleyip yeniden dene
 
 # --- Earth Engine exportu (pipeline/ee_export.py) -----------------------------------
 # Ham veri laptopa inmez: Earth Engine'de karelere ortalanır, sadece CSV tablo iner.

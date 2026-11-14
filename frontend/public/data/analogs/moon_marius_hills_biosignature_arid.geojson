@@ -53,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "22.95°K, 32.82°D koordinatlarında bulunan bölge, \"Biyo-imza: aşırı kuraklıkta korunma\" testi için toplam 70.3 puanlık bir skora ve 70.3 iklim boyut skoruna sahiptir. 0 ile 1 arasında yapılan değerlendirmede kuraklık parametresi Dünya'da 1.0, hedef konum olan Marius Hills çukurunda ise 1.0 olarak ölçülmüş ve bu parametre motor çıktısında \"benziyor: true\" olarak eşleşmiştir. Bu durum, bölgenin kuraklık koşulları açısından test hedefiyle benzerlik gösterdiğini ortaya koymaktadır.\n\nBuna karşın, gece-gündüz sıcaklık farkı (°C) parametresinde Dünya'da 8.67 iken, hedef bölgede 295.0 olarak gerçekleşmiş ve \"benziyor: false\" şeklinde sonuçlanmıştır. Bu sıcaklık farkı uyuşmazlığının yanı sıra, yerçekiminin Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) olması toz ve tekerlek davranışını farklılaştırmaktadır. Yüzeyde sıvı su bulunmazken buz sadece kalıcı gölgelerde yer almakta, bilinen bir biyolojik süreç olmamasına karşın Dünya'daki her sahada mikrobiyal yaşam bulunmaktadır. Ayrıca manyetik alan ve atmosfer koruması bulunmayan yüzey doğrudan kozmik ışına açıktır ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C seviyesine ulaşarak Dünya'da karşılığı olmayan koşullar oluşturmaktadır."
    }
   },
   {
@@ -108,7 +108,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "82.18°K, 35.81°B koordinatlarındaki bölge, \"Biyo-imza: aşırı kuraklıkta korunma\" testi için toplam 68.8 skor almıştır. İklim boyut skoru da 68.8 olan bu saha, kuraklık parametresinde (Dünya'da 0.98, hedefte 1.0) eşleşme sağlayarak (benziyor: true) aşırı kuraklık testleri için potansiyel sunmaktadır. \n\nAncak gece-gündüz sıcaklık farkı parametresinde (Dünya'da 1.06 °C, hedefte 295.0 °C) uyum sağlanamamıştır (benziyor: false). Ayrıca yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Bilinen bir biyolojik süreç barındırmayan bu hedef bölgenin aksine, Dünya'daki her sahada mikrobiyal yaşam mevcuttur. Manyetik alan ve atmosfer koruması olmayan yüzey doğrudan kozmik ışına açıktır ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarındadır; bu koşulların Dünya'da birebir karşılığı yoktur. Operasyonel olarak yol erişimi yoktur (road_access: false) ve uzaktan erişim gerektirir (remote: true)."
    }
   },
   {
@@ -163,7 +163,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "22.27°K, 31.59°D koordinatlarında yer alan Dünya'daki test sahası, 68.7 toplam skorla Marius Hills çukuru hedefi için bazı benzerlikler sunmaktadır. \"Climate\" alt boyutundan alınan 68.7 puan ve kuraklık parametresinde (\"match\": true) Dünya için ölçülen 0.98 değerinin hedefim olan 1.0 değerine yakın olması, aşırı kuraklık koşullarının test edilmesinde bu sahanın potansiyelini göstermektedir. Ayrıca yol erişiminin (`road_access: true`) bulunması operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde (`match`: false) belirgin kopma noktaları bulunmaktadır; Dünya'daki 10.63 °C'lik fark, hedefteki 295.0 °C'lik aşırı değerle uyuşmamaktadır. Bununla birlikte, yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması nedeniyle toz ve tekerlek davranışı farklılık gösterir, yüzeyde sıvı su bulunmaz ve buz yalnızca kalıcı gölgelerde yer alır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C iken ekvatorda öğlen +120 °C'ye ulaşır ve Dünya'da bunun bir karşılığı yoktur. Ayrıca manyetik alan ile atmosfer koruması olmadığından yüzey doğrudan kozmik ışına açıktır ve bilinen bir biyolojik süreç olmamasına rağmen Dünya'daki her sahada mikrobiyal yaşam mevcuttur."
    }
   },
   {
@@ -218,7 +218,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "81.28°K, 51.65°B koordinatlarındaki bölge, \"Biyo-imza: aşırı kuraklıkta korunma\" testi için toplam 67.9 skorla değerlendirilmiştir. Kuraklık parametresinde hedef değer 1.0 (tamamen kuru) iken Dünya'daki bölgede bu değer 0.98 olarak ölçülmüş ve bu parametrede eşleşme sağlanmıştır (\"match\": true).\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde hedef 295.0 °C iken Dünya'da 0.93 °C ölçülmüş ve bu durum uyumsuzluk yaratmıştır (\"match\": false). Bu sıcaklık aşırılıkları ile birlikte, yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) seviyesinde kalması toz ve tekerlek davranışını değiştirir. Yüzeyde sıvı su bulunmazken buz sadece kalıcı gölgelerde yer alır ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır; bu koşulların Dünya'da bir karşılığı yoktur. Ayrıca bilinen bir biyolojik süreç barındırmayan bu ortamda Dünya'daki her sahada mikrobiyal yaşam vardır, manyetik alan ile atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır."
    }
   },
   {
@@ -273,7 +273,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "83.09°K, 33.44°B koordinatlarında yer alan bu bölge, 67.8 toplam skor ile Marius Hills çukuru hedefindeki aşırı kuraklıkta korunma biyo-imza testi için değerlendirilmiştir. Bölgenin bu test sahası olarak potansiyeli, kuraklık parametresindeki benzerliğe dayanmaktadır; Dünya'daki değer 0.98 iken hedefte bu oran 1.0 olarak ölçülmüş ve sonuç \"benziyor\" olarak doğrulanmıştır.\n\nBununla birlikte, iki ortam arasında belirgin uyumsuzluklar ve operasyonel kopma noktaları bulunmaktadır. Gece-gündüz sıcaklık farkı Dünya'da 1.27 °C iken, hedefte 295.0 °C'ye ulaşarak eşleşmemiştir. Ayrıca yerçekimi Dünya'nın yaklaşık 1/6'sı (1.62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken buz yalnızca kalıcı gölgelerde yer alır ve yüzey sıcaklığı bu gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C'dir; bu durumun Dünya'da karşılığı yoktur. Bilinen bir biyolojik süreç mevcut olmayıp Dünya'daki her sahada mikrobiyal yaşam vardır. Ayrıca manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Operasyonel olarak yol erişimi yoktur (false) ve uzaktan erişim gerektirir (true). Yeni aday statüsündeki bu sahanın remote (uzaktan) işletilmesi öngörülmektedir."
    }
   },
   {

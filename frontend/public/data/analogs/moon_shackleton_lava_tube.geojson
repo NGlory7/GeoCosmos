@@ -66,7 +66,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki bu test sahası, 34.93°K, 77.10°D koordinatlarında yer almakta olup toplam 88.6 skorla Shackleton Krateri kenarındaki lav tüpü ve yeraltı habitatı hedefi için değerlendirilmiştir. Jeoloji alt skorunun 100.0, topografya skorunun 76.2 ve iklim skorunun 80.5 olduğu bölgede; 0.25 değerindeki mafik/bazaltik yüzey, 379.29 metre Dünya değeri ile 378.1 metre hedef değerine sahip yüzey pürüzlülüğü ve 0.88 Dünya değeri ile 1.0 hedef değerine sahip kuraklık parametreleri hedef ile uyumluluk göstermektedir. Ayrıca yol erişiminin olmaması ve uzak bir konumda bulunması operasyonel özellikleri arasında yer alır.\n\nBuna karşın, 500 metre tabanlı ortalama eğim parametresinde Dünya'da 21.79° olan değer hedefe uymayarak 13.94° olarak gerçekleşmiştir ve bu durum uyumsuzluk noktalarından biridir. Bununla birlikte, yerçekiminin Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) olması nedeniyle toz ve tekerlek davranışı farklılık gösterir; manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Atmosferin neredeyse yok denecek kadar ince olması rüzgar aşınması ve ısı taşınımını engellerken, yüzey sıcaklığının kalıcı gölgelerde yaklaşık −180 °C ve ekvatorda öğlen +120 °C olması Dünya'da karşılığı olmayan koşullar yaratmaktadır."
    }
   },
   {
@@ -134,7 +134,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "15.26°G, 73.24°B koordinatlarında bulunan bu Dünya bölgesi, Shackleton Krateri kenarı (Ay) hedefi için 88.3 toplam skorla değerlendirilmiştir. Jeoloji alt skorunun 100.0, topografya alt skorunun 89.6 olması ve mafik / bazaltik yüzey (0.25), yüzey pürüzlülüğü (Dünya'da 378.62 m, hedefte 378.1 m) ile ortalama eğim (Dünya'da 17.36°, hedefte 13.94°) parametrelerinin eşleşmesi (`benziyor`: true) buranın belirli açılardan uygun bir test sahası olabileceğini göstermektedir. Ayrıca yol erişiminin bulunması (`road_access`: true) operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, iklim alt skorunun 30.8 olması ve kuraklık parametresinin eşleşmemesi (`benziyor`: false, Dünya'da 0.58, hedefte 1.0) önemli bir farklılıktır. Bunun yanı sıra, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklılık gösterir; manyetik alan ve atmosfer koruması bulunmadığı için yüzey doğrudan kozmik ışına açıktır. Atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı yoktur; ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da tam bir karşılığı bulunmamaktadır."
    }
   },
   {
@@ -202,7 +202,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "33.80°G, 70.21°B konumundaki bu bölge, 87.5 toplam skor ve 100.0 jeoloji boyutu skoru ile bazı kritik parametrelerde Shackleton Krateri kenarı hedefine benzerlik göstermektedir. Mafik / bazaltik yüzey değeri hedefle birebir uyuşarak 0.25 oranında eşleşmektedir. Ayrıca yüzey pürüzlülüğü Dünya'da 378.81 m, hedefte ise 378.1 m olarak benzerlik gösterirken; ortalama eğim değerleri sırasıyla 19.41° ve 13.94° seviyelerindedir. Operasyonel olarak yol erişimi mevcuttur ve bölge uzakta değildir.\n\nBuna karşın, 44.9 iklim skoru ile bazı alanlarda belirgin uyumsuzluklar bulunmaktadır. Kuraklık parametresinde Dünya için 0.25 olan mafik değer 0.25 ile hedefe uyarken, kuraklık indeksi Dünya'da 0.67 iken hedefte 1.0 olarak eşleşmemektedir. Ayrıca bu test sahasının ötesinde, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklıdır; manyetik alan ve atmosfer koruması bulunmadığı için yüzey doğrudan kozmik ışına açıktır. Atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı yoktur ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarında olup Dünya'da karşılığı yoktur."
    }
   },
   {
@@ -270,7 +270,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "41.94°K, 80.63°D koordinatlarındaki Dünya bölgesi, Shackleton Krateri kenarı (Ay) hedefi için toplam 86.5 skorla değerlendirilmiştir. Bu sahanın uygun bulunmasında, mafik / bazaltik yüzey parametresinin hedef değerle tam uyuşması (0.25), yüzey pürüzlülüğünün Dünya'da 373.81 m iken hedefte 378.1 m olması, ortalama eğimin Dünya'da 21.22°, hedefte 13.94° ölçülmesi ve kuraklık derecesinin Dünya'da 0.81, hedefte 1.0 olması etkili olmuştur. Toporaphy boyutu 74.3, geology boyutu 100.0 ve climate boyutu 68.4 skor elde etmiştir. Yol erişimi bulunmamakta ve bölge uzaktır.\n\nBununla birlikte, bazı parametrelerde benzerlik sağlanamamaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ile atmosfer koruması bulunmamakta olup yüzey doğrudan kozmik ışına açıktır. Atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da tam bir karşılığı yoktur."
    }
   },
   {
@@ -338,7 +338,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "12.32°G, 76.28°B koordinatlarındaki bu Dünya bölgesi, toplam 85.6 skor ile Shackleton Krateri kenarındaki \"Lav tüpü ve yeraltı habitatı\" hedefi için bazı açılardan elverişli bir test sahası potansiyeli sunmaktadır. Jeoloji kategorisinde 100.0, topografya kategorisinde ise 82.7 skor elde eden bölge; mafik / bazaltik yüzey (0.25 Dünya ve hedef değeri), yüzey pürüzlülüğü (Dünya 376.19 m, hedef 378.1 m) ve ortalama eğim (Dünya 19.23°, hedef 13.94°) parametrelerinde hedef ile uyumluluk göstermektedir. Ayrıca yol erişiminin bulunması operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, iklim kategorisinde skor 30.5'te kalmakta ve kuraklık parametresinde (Dünya 0.58, hedef 1.0) uyumsuzluk görülmektedir. Bunun yanı sıra, yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması nedeniyle toz ve tekerlek davranışı farklılık gösterir; manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Atmosferin neredeyse hiç olmaması rüzgar aşınmasını ve ısı taşınımını engellerken, yüzey sıcaklığının kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C olması Dünya'da karşılığı olmayan aşırı koşullar yaratmaktadır."
    }
   },
   {

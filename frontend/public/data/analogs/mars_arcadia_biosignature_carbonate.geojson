@@ -53,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "0.57°G, 90.39°B konumundaki bu bölge, Arcadia Planitia (Mars) hedefindeki \"Biyo-imza: karbonat çökeli\" testi için karbonat izi (0.0) ve mafik / bazaltik yüzey (0.5) parametrelerindeki eşleşmeler (\"match\": true) nedeniyle bazı jeolojik ortaklıklar sunmaktadır.\n\nAncak, yerçekiminin Dünya'nın ~%38'i (3,71 m/s²) olması, bugün yüzeyde kalıcı sıvı su bulunmaması ve Dünya sahalarında su döngüsünün sürmesi gibi faktörler temel ayrışma noktalarıdır. Ayrıca, Dünya sahalarında modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratırken, küresel manyetik alanın olmaması yüzey radyasyonunu Dünya'dan çok yüksek kılmaktadır. Yıllık ortalama yüzey sıcaklığının hedefe göre yaklaşık −40 ile −75 °C arasında değişmesi ise bu sahanın Dünya'daki çöl analoglarından onlarca derece soğuk olduğunu göstermektedir."
    }
   },
   {
@@ -108,7 +108,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.93°K, 82.28°B koordinatlarında yer alan bu Dünya sahası, Arcadia Planitia hedefindeki \"Biyo-imza: karbonat çökeli\" testi için bazı jeolojik parametreler bakımından uyumluluk göstermektedir. Sistem motoru çıktısına göre, karbonat izi (0.25 Dünya, 0.0 hedef) ve mafik/bazaltik yüzey (0.5 Dünya, 0.5 hedef) parametrelerinde eşleşme sağlanmıştır (\"match\": true). Bu durum, jeoloji boyut skorunun 100.0, toplam skorun ise 100.0 olmasını sağlamıştır. Ayrıca sahanın yol erişimine sahip olması ve uzak (remote) olmaması operasyonel olarak kaydedilmiştir.\n\nBununla birlikte, saha ile hedef arasında önemli çevresel ve fiziksel farklılıklar bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, sahanın bulunduğu Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -163,7 +163,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.70°K, 83.63°B konumundaki bu bölge, \"Karbonat izi (0-1 sıralı ölçek)\" parametresinde 0.0 Dünya ve 0.0 hedef değerleriyle ile \"Mafik / bazaltik yüzey (0-1 sıralı ölçek)\" parametresinde 0.5 Dünya ve 0.5 hedef değerleriyle birebir eşleşme sağladığı için \"geology\" boyutunda 100.0 puan alarak toplamda 100.0 skoruna ulaşmıştır. Bu durum, jeolojik açıdan karbonat çökeli testi için belirli parametrelerde ortak özellikler barındırdığını göstermektedir.\n\nBununla birlikte, bölge ile hedef arasında belirgin çevresel ve fiziksel farklılıklar bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve bugün yüzeyde kalıcı sıvı su yoktur; oysa Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan bulunmadığından yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -218,7 +218,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.70°K, 81.38°B koordinatlarındaki bu saha, Arcadia Planitia hedefindeki biyo-imza karbonat çökeli testi için bazı mineralojik ve jeolojik özellikler bakımından uygun bir analog sunmaktadır. Motor çıktısına göre, her iki alanda da karbonat izi (0-1 sıralı ölçekte 0.0) ve mafik / bazaltik yüzey (0-1 sıralı ölçekte 0.5) parametreleri eşleşmektedir (\"match\": true). 100.0 toplam skor ve 100.0 jeoloji boyutu skoru ile bu temel yüzey bileşenleri hedef bölgeyle uyumluluk göstermektedir.\n\nBununla birlikte, saha ile hedef arasında önemli çevresel ve operasyonel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve bugün yüzeyde kalıcı sıvı su yoktur; buna karşın Dünya sahalarında su döngüsü sürmektedir. Ayrıca, Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -273,7 +273,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "7.80°K, 81.38°B koordinatlarındaki bölge, \"Biyo-imza: karbonat çökeli\" testi için 100.0 toplam skor ve 100.0 jeoloji boyutu skoruyla dikkat çekmektedir. Karbonat izi hedef ile Dünya'da 0.0 oranında eşleşirken, mafik ve bazaltik yüzey parametresinde her iki ortamda da 0.0 ve 0.5 değerleriyle tam uyum sağlanmış ve \"benziyor\": true kriteri karşılanmıştır. Ayrıca operasyonel olarak yol erişiminin bulunması ve uzak bir konumda yer almaması da bu sahanın değerlendirilmesinde etkilidir.\n\nBununla birlikte, bölge ile hedef arasında belirgin çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir ve bugün yüzeyde kalıcı sıvı su yoktur, oysa Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratırken, küresel manyetik alanın bulunmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {

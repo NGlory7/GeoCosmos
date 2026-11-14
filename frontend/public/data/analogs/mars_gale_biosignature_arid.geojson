@@ -60,7 +60,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "37.87°K, 85.05°D koordinatlarındaki bu bölge, 79.0 toplam skoru ile Gale Krateri hedefindeki \"Biyo-imza: aşırı kuraklıkta korunma\" testi için belirli açılardan benzerlik göstermektedir. \"Kuraklık (0 = nemli, 1 = tamamen kuru)\" parametresinde Dünya değeri 0.95 iken hedef 1.0 olarak belirlenmiş ve bu durum \"match\": true ile eşleşmiştir. Benzer şekilde, \"Toz / aerosol optik derinliği (550 nm)\" parametresinde de Dünya için 0.4, hedef için ise 0.43 değerleri ölçülmüş ve bu parametre de \"match\": true sonucu vermiştir. \"climate\" boyut skoru ise 79.0 olarak hesaplanmıştır.\n\nAncak bazı kritik parametrelerde uyumsuzluklar ve önemli kopma noktaları bulunmaktadır. \"Gece-gündüz sıcaklık farkı (°C)\" parametresi Dünya'da 27.29 iken hedeflenen değer 64.5'tir ve bu durum \"match\": false olarak sonuçlanmıştır. Bunun yanı sıra, yerçekiminin Dünya'nın ~%38'i (3,71 m/s²) olması, bugün yüzeyde kalıcı sıvı su bulunmaması ve Dünya sahalarında su döngüsünün sürmesi temel farklardandır. Ayrıca Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratmaktadır; küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur. Bölge operasyonel olarak \"road_access\": false ve \"remote\": true özelliklerine sahiptir."
    }
   },
   {
@@ -122,7 +122,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "39.91°K, 88.88°D koordinatlarında yer alan bu bölge, Gale Krateri hedefiyle \"Biyo-imza: aşırı kuraklıkta korunma\" testi için 78.9 toplam skorla değerlendirilmiştir. Bölgenin iyi bir test sahası olabileceğini gösteren başlıca parametreler arasında, Dünya değerinin 0.95, hedef değerin ise 1.0 olduğu kuraklık durumu ile Dünya değeri 0.42, hedef değeri 0.43 olan toz ve aerosol optik derinliği yer almaktadır; bu iki parametrede de \"match\": true olarak eşleşme sağlanmıştır.\n\nBununla birlikte, iki ortam arasında belirgin uyumsuzluklar ve kopma noktaları bulunmaktadır. Özellikle 25.99 °C olan Dünya gece-gündüz sıcaklık farkı, 64.5 °C olan hedef değerle uyuşmamaktadır. Ayrıca, yerçekiminin Dünya'nın ~%38'i (3,71 m/s²) olması, bugün yüzeyde kalıcı sıvı su bulunmaması, Dünya sahalarında su döngüsünün sürmesi ve modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın olmaması yüzey radyasyonunu Dünya'dan çok yüksek kılarken, yıllık ortalama yüzey sıcaklığının hedefe göre yaklaşık −40 ile −75 °C arasında değişmesi, bölgeyi Dünya'daki çöl analoglarından onlarca derece soğuk kılmaktadır."
    }
   },
   {
@@ -184,7 +184,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.29°K, 83.53°D koordinatlarındaki bölge, toplam 78.8 skorla Gale Krateri hedefinde aşırı kuraklıkta korunma biyo-imza testi için belirli yönlerden benzerlik göstermektedir. Kuraklık parametresinde Dünya'da 0.95, hedefte ise 1.0 değerleriyle tam uyum sağlanırken; toz ve aerosol optik derinliği parametresinde de Dünya'daki 0.4 değeri, hedefin 0.43 değerine yakın seyretmektedir. Bu durum, kuraklık ve atmosferik toz koşullarının test için elverişli olabileceğini göstermektedir.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde Dünya'da ölçülen 26.66 °C, hedefin 64.5 °C değerinden uzaklaşarak uyumsuzluk yaratmaktadır. Ayrıca yerçekiminin Dünya'nın yaklaşık %38'i (3,71 m/s²) seviyesinde kalması, bugün yüzeyde kalıcı sıvı su bulunmazken Dünya sahalarında su döngüsünün sürmesi ve modern yaşamın biyo-imza testinde kirlilik riski oluşturması temel kopma noktalarıdır. Küresel manyetik alanın olmaması yüzey radyasyonunu Dünya'dan çok yükseltirken, yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece daha soğuk koşullar sunmaktadır. Bölge karayolu erişimine kapalı olup uzaktan işletilmektedir."
    }
   },
   {
@@ -246,7 +246,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "37.42°K, 83.87°D koordinatlarındaki 78.6 toplam skorlu bu bölge, Gale Krateri hedefiyle bazı iklimsel parametrelerde benzerlik göstermektedir. Kuraklık seviyesi Dünya'da 0.95 iken hedefte 1.0 ölçülmüş ve bu parametre eşleşmiştir (\"match\": true). Ayrıca, 550 nm dalga boyundaki toz ve aerosol optik derinliği Dünya'da 0.41, hedefte ise 0.43 olarak birbirine oldukça yakın değerler vermiştir ve bu parametre de benzerlik göstermiştir. Öte yandan, gece-gündüz sıcaklık farkı Dünya'da 27.05 °C iken hedefte 64.5 °C olarak ölçülmüş ve bu parametre benzer bulunmamıştır.\n\nBu bölgenin test sahası olarak değerlendirilmesinde bazı önemli kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve bugün yüzeyde kalıcı sıvı su yoktur; oysa Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alan bulunmamakta, yüzey radyasyonu Dünya'dan çok yüksek seviyededir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur. Bölgeye karayolu erişimi yoktur ve operasyonel olarak uzaktır (\"remote\": true)."
    }
   },
   {
@@ -308,7 +308,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.97°K, 82.19°D koordinatlarında yer alan bölge, Gale Krateri hedefiyle \"Biyo-imza: aşırı kuraklıkta korunma\" testi için toplam 78.0 puan almıştır. Bu skorun temel dayanağı, iklim boyut skorunun 78.0 olmasıdır. Bölge, kuraklık parametresinde Dünya değerinin 0.94, hedef değerinin ise 1.0 olması ve toz/aerosol optik derinliği parametresinde Dünya değerinin 0.41, hedef değerinin 0.43 olması nedeniyle hedefe benzemektedir (\"match\": true). Ayrıca operasyon kategorisinde yol erişiminin olması (true) ve uzak bir konumda olmaması (false) avantaj sağlamaktadır.\n\nÖte yandan, gece-gündüz sıcaklık farkı parametresinde Dünya değerinin 27.96 °C, hedef değerinin ise 64.5 °C olması nedeniyle bu kriterde benzerlik bulunmamaktadır (\"match\": false). Bu durumun yanı sıra, sistemin belirttiği diğer kopma noktaları şunlardır: Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır; bugün yüzeyde kalıcı sıvı su yoktur; Dünya sahalarında su döngüsü sürmektedir; Dünya sahalarında modern yaşam vardır ve bu durum biyo-imza testinde kirlilik riski yaratır; küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {

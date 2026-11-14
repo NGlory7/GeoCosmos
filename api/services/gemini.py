@@ -14,7 +14,7 @@ from pydantic import BaseModel
 from core.profiles import Parameter
 
 CACHE_PATH = Path(__file__).resolve().parents[2] / "data" / "processed" / "gemini_cache.json"
-MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 
 
 class GeminiError(RuntimeError):
