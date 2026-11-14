@@ -1,0 +1,22 @@
+# Veri hattı
+earthengine-api
+pandas
+numpy
+pyarrow
+geopandas
+shapely
+scikit-learn
+matplotlib
+pyyaml
+
+# Backend
+fastapi
+uvicorn[standard]
+pydantic>=2
+python-dotenv
+
+# AI
+google-genai
+
+# Test
+pytest

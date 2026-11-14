@@ -1,0 +1,65 @@
+# Doğrulama seti: ünlü analoglar keşif listesine girmez, motoru test etmek için kullanılır.
+# Başarı ölçütü: 8 yerden en az 6'sı kendi test amacında ilk 3'e girmeli.
+# Bu yerlere 50 km'den yakın ızgara kareleri keşiften çıkarılır (exclude_radius_km).
+# Koordinatlar YAKLAŞIK; past_tests kaynaklı ve elle girilecek.
+
+exclude_radius_km: 50
+top_n: 3
+min_hits: 6
+
+analogs:
+  - id: holuhraun
+    name: Holuhraun (İzlanda)
+    test_id: rover
+    lat: 64.85
+    lon: -16.83
+    past_tests: []
+
+  - id: yungay
+    name: Yungay (Atacama, Şili)
+    test_id: biosignature
+    lat: -24.08
+    lon: -70.02
+    past_tests: []
+
+  - id: haughton
+    name: Haughton Krateri (Devon Adası, Kanada)
+    test_id: ice_drilling
+    lat: 75.38
+    lon: -89.68
+    past_tests: []
+
+  - id: svalbard
+    name: Svalbard (Norveç)
+    test_id: ice_drilling
+    lat: 79.4
+    lon: 13.3
+    past_tests: []
+
+  - id: lanzarote
+    name: Lanzarote lav tüpleri (İspanya)
+    test_id: lava_tube
+    lat: 29.16
+    lon: -13.44
+    past_tests: []
+
+  - id: dumont_dunes
+    name: Dumont Dunes (Mojave, ABD)
+    test_id: rover
+    lat: 35.68
+    lon: -116.22
+    past_tests: []
+
+  - id: lut
+    name: Lut Çölü (İran)
+    test_id: dust
+    lat: 30.5
+    lon: 59.0
+    past_tests: []
+
+  - id: salda
+    name: Salda Gölü (Türkiye)
+    test_id: biosignature
+    lat: 37.55
+    lon: 29.68
+    past_tests: []

@@ -1,7 +1,0 @@
-earthengine-api
-geopandas
-numpy
-pandas
-pyyaml
-google-generativeai
-python-dotenv

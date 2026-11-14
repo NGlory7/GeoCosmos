@@ -1,0 +1,105 @@
+# Parametreler ve 5 test amacı (= 5 ağırlık seti).
+# TASLAK: Ağırlıklar ve toleranslar ekipçe gözden geçirilecek (ROADMAP > Hackathon öncesi hazırlık).
+#
+# parameters:
+#   key:       veri sözleşmesindeki parametre adı (grid.parquet sütunu)
+#   dimension: hangi skora katkı verir (topography, geology, climate, operations)
+#   tolerance: |Dünya - hedef| bu kadar olunca benzerlik 0'a düşer (parametrenin biriminde)
+#   earth_source: Dünya verisinin kaynağı
+
+parameters:
+  slope_deg:
+    label: Ortalama eğim (°)
+    dimension: topography
+    tolerance: 15
+    earth_source: SRTM
+  roughness_m:
+    label: Yüzey pürüzlülüğü (m, yükseklik std)
+    dimension: topography
+    tolerance: 50
+    earth_source: SRTM
+  surface_temp_c:
+    label: Ortalama yüzey sıcaklığı (°C)
+    dimension: climate
+    tolerance: 60
+    earth_source: MODIS LST
+  temp_range_c:
+    label: Gece-gündüz sıcaklık farkı (°C)
+    dimension: climate
+    tolerance: 60
+    earth_source: MODIS LST
+  aridity:
+    label: Kuraklık (0 = nemli, 1 = tamamen kuru)
+    dimension: climate
+    tolerance: 0.6
+    earth_source: MODIS NDVI + GPM
+  dust_aod:
+    label: Toz / aerosol optik derinliği
+    dimension: climate
+    tolerance: 0.8
+    earth_source: MODIS AOD
+  basalt_index:
+    label: Bazaltik / volkanik yüzey oranı (0-1)
+    dimension: geology
+    tolerance: 0.6
+    earth_source: ASTER
+  clay_carbonate_index:
+    label: Kil / karbonat / sülfat izi (0-1)
+    dimension: geology
+    tolerance: 0.6
+    earth_source: EMIT
+  ground_ice:
+    label: Donmuş zemin / yüzeye yakın buz (0-1)
+    dimension: geology
+    tolerance: 0.6
+    earth_source: Permafrost haritaları
+
+# Her testte ağırlık toplamı 1 olmalı (yükleyici yine de normalize eder).
+# breakdown: bu test için kartta vurgulanacak kopma noktaları.
+tests:
+  rover:
+    label: Rover sürüşü ve tekerlek aşınması
+    weights:
+      slope_deg: 0.25
+      roughness_m: 0.25
+      basalt_index: 0.20
+      aridity: 0.15
+      dust_aod: 0.10
+      temp_range_c: 0.05
+    breakdown: [gravity, atmosphere, radiation]
+  ice_drilling:
+    label: Donmuş zeminde buz sondajı (ISRU)
+    weights:
+      ground_ice: 0.40
+      surface_temp_c: 0.25
+      temp_range_c: 0.10
+      slope_deg: 0.10
+      aridity: 0.15
+    breakdown: [gravity, atmosphere, liquid_water]
+  lava_tube:
+    label: Lav tüpü ve yeraltı habitatı
+    weights:
+      basalt_index: 0.45
+      roughness_m: 0.20
+      slope_deg: 0.15
+      temp_range_c: 0.10
+      aridity: 0.10
+    breakdown: [gravity, radiation, atmosphere]
+  dust:
+    label: Toz fırtınası ve aşınma
+    weights:
+      dust_aod: 0.40
+      aridity: 0.25
+      slope_deg: 0.10
+      roughness_m: 0.10
+      temp_range_c: 0.15
+    breakdown: [gravity, atmosphere]
+  biosignature:
+    label: Biyo-imza ve antik yaşam izi
+    weights:
+      clay_carbonate_index: 0.40
+      aridity: 0.30
+      surface_temp_c: 0.10
+      temp_range_c: 0.10
+      dust_aod: 0.10
+    breakdown: [liquid_water, biology, radiation]

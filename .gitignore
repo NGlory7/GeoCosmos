@@ -7,10 +7,13 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Ham veri
-analysis/data/raw/*
-!analysis/data/raw/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
 
 # Frontend
 node_modules/
 dist/
 .DS_Store
+
+# Gemini önbelleği (yerel)
+data/processed/gemini_cache.json

@@ -1,0 +1,107 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          -89.9
+        ]
+      },
+      "properties": {
+        "id": "moon_shackleton",
+        "body": "moon",
+        "name": "Shackleton Krateri kenarı",
+        "why": "Artemis güney kutbu üs bölgesi",
+        "params": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9,
+          -86.0
+        ]
+      },
+      "properties": {
+        "id": "moon_malapert",
+        "body": "moon",
+        "name": "Malapert Masifi",
+        "why": "Artemis aday bölgelerinden biri",
+        "params": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.8,
+          14.1
+        ]
+      },
+      "properties": {
+        "id": "moon_marius_hills",
+        "body": "moon",
+        "name": "Marius Hills çukuru",
+        "why": "Lav tüpü girişi",
+        "params": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.6,
+          18.4
+        ]
+      },
+      "properties": {
+        "id": "mars_jezero",
+        "body": "mars",
+        "name": "Jezero Krateri",
+        "why": "Perseverance, antik delta",
+        "params": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.8,
+          -5.4
+        ]
+      },
+      "properties": {
+        "id": "mars_gale",
+        "body": "mars",
+        "name": "Gale Krateri",
+        "why": "Curiosity, katmanlı çökeller",
+        "params": {}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -176.0,
+          47.0
+        ]
+      },
+      "properties": {
+        "id": "mars_arcadia",
+        "body": "mars",
+        "name": "Arcadia Planitia",
+        "why": "İnsanlı iniş adayı",
+        "params": {}
+      }
+    }
+  ]
+}

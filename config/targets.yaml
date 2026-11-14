@@ -1,0 +1,57 @@
+# 6 Ay/Mars hedefi.
+# Koordinatlar YAKLAŞIK; hackathon öncesi NASA kaynaklarından doğrulanacak (ROADMAP > Veri ve hedefler).
+# lon: -180..180 (doğu pozitif).
+#
+# params: her değer kaynaklı girilir. Anahtarlar config/test_profiles.yaml > parameters ile aynı.
+#   örnek:  slope_deg: { value: 3.5, source: "MOLA" }
+#           aridity:   { value: 1.0, source: "sabit — yüzeyde sıvı su yok" }
+# Değeri bilinmeyen parametre yazılmaz; motor o parametreyi atıp ağırlıkları yeniden dağıtır.
+
+targets:
+  - id: moon_shackleton
+    body: moon
+    name: Shackleton Krateri kenarı
+    why: Artemis güney kutbu üs bölgesi
+    lat: -89.9
+    lon: 0.0
+    params: {}
+
+  - id: moon_malapert
+    body: moon
+    name: Malapert Masifi
+    why: Artemis aday bölgelerinden biri
+    lat: -86.0
+    lon: 2.9
+    params: {}
+
+  - id: moon_marius_hills
+    body: moon
+    name: Marius Hills çukuru
+    why: Lav tüpü girişi
+    lat: 14.1
+    lon: -56.8
+    params: {}
+
+  - id: mars_jezero
+    body: mars
+    name: Jezero Krateri
+    why: Perseverance, antik delta
+    lat: 18.4
+    lon: 77.6
+    params: {}
+
+  - id: mars_gale
+    body: mars
+    name: Gale Krateri
+    why: Curiosity, katmanlı çökeller
+    lat: -5.4
+    lon: 137.8
+    params: {}
+
+  - id: mars_arcadia
+    body: mars
+    name: Arcadia Planitia
+    why: İnsanlı iniş adayı
+    lat: 47.0
+    lon: -176.0
+    params: {}
