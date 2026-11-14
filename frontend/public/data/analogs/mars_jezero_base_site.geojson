@@ -6,43 +6,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     12.96636244392717,
-     -19.557038725197607
+     36.997565557662604,
+     20.46141045815472
     ]
    },
    "properties": {
-    "id": "g25_-19.557_12.966",
-    "name": "19.56°G, 12.97°D",
+    "id": "g25_20.461_36.998",
+    "name": "20.46°K, 37.00°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
-    "lat": -19.557038725197607,
-    "lon": 12.96636244392717,
+    "lat": 20.46141045815472,
+    "lon": 36.997565557662604,
     "rank": 1,
-    "score_total": 99.6,
+    "score_total": 96.5,
     "scores": {
-     "topography": 99.3,
+     "topography": 98.4,
      "geology": 100.0,
-     "climate": 100.0
+     "climate": 92.9
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.1086642742156982,
+      "earth": 1.2648719549179077,
       "target": 1.11,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 28.88350259985025,
+      "earth": 30.744540674555626,
       "target": 29.6,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
+      "earth": 68.91358054450991,
       "target": 69.5,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -53,73 +53,12 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "19.56°G, 12.97°D koordinatlarında yer alan bu bölge, Jezero Krateri hedefiyle karşılaştırıldığında toplam 99.6 skor elde etmiştir. Topografi (99.3), jeoloji (100.0) ve iklim (100.0) boyut skorlarıyla öne çıkan sahanın ortalama eğimi Dünya ve hedef için 1.11° olarak eşleşmektedir. Ayrıca yüzey pürüzlülüğü Dünya'da 28.88 m, hedeflenen alanda ise 29.6 m ölçülmüştür. Yıllık ortalama öğlen güneş yüksekliği değerleri Dünya'da 69.51° iken hedefte 69.5°'dir; donmuş zemin veya yüzeye yakın buz parametresi ise her iki alanda da 0.0 olarak tespit edilmiştir. Tüm bu parametrelerin \"benziyor: true\" olarak sonuçlanması, bu sahanın üs kurulumu ve iniş alanı testleri için uyumlu yönlerini göstermektedir.\n\nBununla birlikte, motor çıktısında yer almayan ve kopma noktası oluşturan fiziksel ve çevresel farklar mevcuttur. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşur; toz taşınımı farklı işler. Operasyonel açıdan yol erişimi bulunmamakta (road_access: false) ve saha uzaktan yönetilmektedir (remote: true)."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -69.93891960900339,
-     19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_19.557_-69.939",
-    "name": "19.56°K, 69.94°B",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": 19.557038725197607,
-    "lon": -69.93891960900339,
-    "rank": 2,
-    "score_total": 99.6,
-    "scores": {
-     "topography": 99.2,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.2340381145477295,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
      },
      {
-      "key": "roughness_m",
-      "earth": 29.2246096437971,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
+      "key": "aridity",
+      "earth": 0.9267076415190227,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -134,7 +73,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": "Dünya üzerindeki 19.56°K, 69.94°B koordinatlarında yer alan bu bölge, Jezero Krateri hedefiyle karşılaştırıldığında 99.6 toplam skor elde etmiştir. Topografya (99.2), jeoloji (100.0) ve iklim (100.0) boyut skorlarında yüksek uyum sergileyen saha; ortalama eğim (Dünya'da 1.23°, hedefte 1.11°), yüzey pürüzlülüğü (Dünya'da 29.22 m, hedefte 29.6 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 69.51°, hedefte 69.5°) ve donmuş zemin/yüzeye yakın buz parametrelerinde (\"benziyor\": true) eşleşme sağlamaktadır. Ayrıca yol erişiminin bulunması operasyonel açıdan avantaj sunmaktadır.\n\nAncak bu coğrafi ve fiziksel benzerliklere rağmen, yerçekiminin Dünya'nın yaklaşık %38'i seviyesinde (3,71 m/s²) olması, küresel manyetik alanın bulunmaması ve yüzey radyasyonunun Dünya'dan çok yüksek olması gibi temel çevresel faktörlerde uyumsuzluklar mevcuttur. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece daha soğuktur. Ek olarak, atmosferin çok ince (~%0,6) ve çoğunlukla CO₂ olması ile toz taşınımının farklı mekanizmalarla işlemesi de önemli ayrışma noktalarıdır."
+    "ai_comment": ""
    }
   },
   {
@@ -154,12 +93,12 @@
     "test_id": "base_site",
     "lat": 19.557038725197607,
     "lon": 19.543564530459648,
-    "rank": 3,
-    "score_total": 99.3,
+    "rank": 2,
+    "score_total": 96.5,
     "scores": {
      "topography": 98.7,
      "geology": 100.0,
-     "climate": 100.0
+     "climate": 92.6
     },
     "params": [
      {
@@ -189,481 +128,12 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "19.56°K, 19.54°D koordinatlarında yer alan bu bölge, 99.3 toplam skor ile Jezero Krateri hedefinde gerçekleştirilecek üs kurulumu ve iniş alanı testleri için yüksek bir benzerlik sunmaktadır. Topography (98.7), geology (100.0) ve climate (100.0) boyut skorlarına sahip olan bu alan; 1.37 Dünya ve 1.11 hedef ortalama eğim, 29.17 Dünya ve 29.6 hedef yüzey pürüzlülüğü, 69.51 Dünya ve 69.5 hedef yıllık ortalama öğlen güneş yüksekliği ile 0.0 Dünya ve 0.0 hedef donmuş zemin/yüzeye yakın buz parametrelerinde uyum göstermektedir.\n\nBuna karşın, sistemin temel kopma noktaları ve çevresel farklılıkları göz önünde bulundurulmalıdır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur. Ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluştuğu için toz taşınımı farklı işlemektedir. Operasyonel olarak yol erişimi bulunmamakta ve bölge uzaktır (`remote: true`)."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -68.33623450177834,
-     -19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_-19.557_-68.336",
-    "name": "19.56°G, 68.34°B",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": -19.557038725197607,
-    "lon": -68.33623450177834,
-    "rank": 4,
-    "score_total": 99.2,
-    "scores": {
-     "topography": 98.5,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.3932443857192993,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
      },
      {
-      "key": "roughness_m",
-      "earth": 30.07509781834115,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "Dünya üzerindeki bu bölge, Jezero Krateri hedefiyle karşılaştırıldığında özellikle topoğrafya, jeoloji ve iklim kategorilerinde 99.2 toplam skor elde etmiştir. Ortalama eğim (Dünya'da 1.39, hedefte 1.11), yüzey pürüzlülüğü (Dünya'da 30.08 m, hedefte 29.6 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 69.51°, hedefte 69.5°) ve donmuş zemin/yüzeye yakın buz parametrelerinde (\"match\": true) gösterdiği uyum, buranın üs kurulumu ve iniş alanı testleri için uygun olabileceğini göstermektedir. Ayrıca yol erişimi ve uzak konum avantajları operasyonel olarak desteklenmektedir.\n\nBuna karşın, sistemin temel fiziksel ve çevresel kopma noktalarında önemli farklar bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşur; ayrıca toz taşınımı farklı işler."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     44.97341928749515,
-     -19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_-19.557_44.973",
-    "name": "19.56°G, 44.97°D",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": -19.557038725197607,
-    "lon": 44.97341928749515,
-    "rank": 5,
-    "score_total": 99.0,
-    "scores": {
-     "topography": 98.2,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.418679118156433,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 28.82873560754268,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "19.56°G, 44.97°D koordinatlarında yer alan bu bölge, Jezero Krateri hedefiyle yapılan üs kurulumu ve iniş alanı testlerinde 99.0 toplam skor elde etmiştir. Topoğrafya (98.2), jeoloji (100.0) ve iklim (100.0) boyut skorlarına sahip olan sahanın; ortalama eğim (Dünya'da 1.42, hedefte 1.11), yüzey pürüzlülüğü (Dünya'da 28.83 m, hedefte 29.6 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 69.51°, hedefte 69.5°) ve donmuş zemin/yüzeye yakın buz (her ikisinde de 0.0) parametrelerinin tamamında eşleşme sağlanmıştır (\"benziyor\": true). \n\nBununla birlikte, sistem çıktılarına göre yerçekimi Dünya'nın %38'i kadar (3,71 m/s²) olup küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuk kalmaktadır; ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluştuğu için toz taşınımı farklı çalışmaktadır. Yol erişimi bulunmamakta ve bölge uzaktır (\"road_access\": false, \"remote\": false)."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     16.938041030355315,
-     -19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_-19.557_16.938",
-    "name": "19.56°G, 16.94°D",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": -19.557038725197607,
-    "lon": 16.938041030355315,
-    "rank": 6,
-    "score_total": 99.0,
-    "scores": {
-     "topography": 98.1,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.5770313739776611,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 29.396599826296786,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     30.488473854639565,
-     -19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_-19.557_30.488",
-    "name": "19.56°G, 30.49°D",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": -19.557038725197607,
-    "lon": 30.488473854639565,
-    "rank": 7,
-    "score_total": 98.9,
-    "scores": {
-     "topography": 98.1,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.4980459213256836,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 29.048045020740158,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.29657260057929,
-     18.87875992547977
-    ]
-   },
-   "properties": {
-    "id": "g25_18.879_35.297",
-    "name": "18.88°K, 35.30°D",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": 18.87875992547977,
-    "lon": 35.29657260057929,
-    "rank": 8,
-    "score_total": 98.9,
-    "scores": {
-     "topography": 98.7,
-     "geology": 100.0,
-     "climate": 98.6
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.2911148071289062,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 30.310851447040324,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.93093173152945,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -71.65973661168537,
-     19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_19.557_-71.660",
-    "name": "19.56°K, 71.66°B",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": 19.557038725197607,
-    "lon": -71.65973661168537,
-    "rank": 9,
-    "score_total": 98.8,
-    "scores": {
-     "topography": 97.9,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.445762038230896,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 28.63371974605392,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     143.79812764391303,
-     -19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_-19.557_143.798",
-    "name": "19.56°G, 143.80°D",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": -19.557038725197607,
-    "lon": 143.79812764391303,
-    "rank": 10,
-    "score_total": 98.8,
-    "scores": {
-     "topography": 97.8,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.6246728897094727,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 29.219267107502972,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
+      "key": "aridity",
+      "earth": 0.9113913252448558,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -686,36 +156,36 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -57.8229676553509,
+     12.96636244392717,
      -19.330945791958328
     ]
    },
    "properties": {
-    "id": "g25_-19.331_-57.823",
-    "name": "19.33°G, 57.82°B",
+    "id": "g25_-19.331_12.966",
+    "name": "19.33°G, 12.97°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
     "lat": -19.330945791958328,
-    "lon": -57.8229676553509,
-    "rank": 11,
-    "score_total": 98.8,
+    "lon": 12.96636244392717,
+    "rank": 3,
+    "score_total": 96.0,
     "scores": {
-     "topography": 98.0,
+     "topography": 99.3,
      "geology": 100.0,
-     "climate": 99.5
+     "climate": 90.9
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.2500569820404053,
+      "earth": 1.290558099746704,
       "target": 1.11,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 27.94498497139375,
+      "earth": 29.656684490797453,
       "target": 29.6,
       "source": "Copernicus DEM GLO-30",
       "match": true
@@ -733,10 +203,92 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8938756796614511,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
-     "road_access": true,
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.314409528543948,
+     19.330945791958328
+    ]
+   },
+   "properties": {
+    "id": "g25_19.331_18.314",
+    "name": "19.33°K, 18.31°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 19.330945791958328,
+    "lon": 18.314409528543948,
+    "rank": 4,
+    "score_total": 96.0,
+    "scores": {
+     "topography": 97.5,
+     "geology": 100.0,
+     "climate": 92.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.7722309827804565,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 29.68075961108495,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 69.65278212585653,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9170630507589975,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
      "remote": true
     },
     "breakdown": [
@@ -766,12 +318,12 @@
     "test_id": "base_site",
     "lat": -18.200481125761932,
     "lon": 12.031849835355844,
-    "rank": 12,
-    "score_total": 98.7,
+    "rank": 5,
+    "score_total": 96.0,
     "scores": {
      "topography": 98.9,
      "geology": 100.0,
-     "climate": 97.2
+     "climate": 91.2
     },
     "params": [
      {
@@ -801,6 +353,13 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9112427681697308,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
@@ -822,43 +381,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     55.66443088812668,
-     17.974388192522653
+     31.58928354923352,
+     20.687503391394
     ]
    },
    "properties": {
-    "id": "g25_17.974_55.664",
-    "name": "17.97°K, 55.66°D",
+    "id": "g25_20.688_31.589",
+    "name": "20.69°K, 31.59°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
-    "lat": 17.974388192522653,
-    "lon": 55.66443088812668,
-    "rank": 13,
-    "score_total": 98.7,
+    "lat": 20.687503391394,
+    "lon": 31.58928354923352,
+    "rank": 6,
+    "score_total": 95.9,
     "scores": {
-     "topography": 99.1,
+     "topography": 97.4,
      "geology": 100.0,
-     "climate": 96.8
+     "climate": 92.6
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.279439926147461,
+      "earth": 1.4077006578445435,
       "target": 1.11,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 29.258765644050673,
+      "earth": 27.916486869546635,
       "target": 29.6,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 70.45998062497625,
+      "earth": 68.75769306781217,
       "target": 69.5,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -869,277 +428,12 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     80.01799062471214,
-     19.330945791958328
-    ]
-   },
-   "properties": {
-    "id": "g25_19.331_80.018",
-    "name": "19.33°K, 80.02°D",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": 19.330945791958328,
-    "lon": 80.01799062471214,
-    "rank": 14,
-    "score_total": 98.7,
-    "scores": {
-     "topography": 97.8,
-     "geology": 100.0,
-     "climate": 99.5
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.5735938549041748,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
      },
      {
-      "key": "roughness_m",
-      "earth": 29.0470863337749,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.65278212585653,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     43.14334056724111,
-     19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_19.557_43.143",
-    "name": "19.56°K, 43.14°D",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": 19.557038725197607,
-    "lon": 43.14334056724111,
-    "rank": 15,
-    "score_total": 98.7,
-    "scores": {
-     "topography": 97.6,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.620608925819397,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 30.222445335030624,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -98.94697765421394,
-     19.783131658436883
-    ]
-   },
-   "properties": {
-    "id": "g25_19.783_-98.947",
-    "name": "19.78°K, 98.95°B",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": 19.783131658436883,
-    "lon": -98.94697765421394,
-    "rank": 16,
-    "score_total": 98.7,
-    "scores": {
-     "topography": 97.8,
-     "geology": 100.0,
-     "climate": 99.5
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.398091197013855,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 30.918658544687155,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.36487778414447,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     15.302643965355491,
-     -19.557038725197607
-    ]
-   },
-   "properties": {
-    "id": "g25_-19.557_15.303",
-    "name": "19.56°G, 15.30°D",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "base_site",
-    "lat": -19.557038725197607,
-    "lon": 15.302643965355491,
-    "rank": 17,
-    "score_total": 98.6,
-    "scores": {
-     "topography": 97.5,
-     "geology": 100.0,
-     "climate": 100.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.682241439819336,
-      "target": 1.11,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 30.024822503125716,
-      "target": 29.6,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 69.51008167028643,
-      "target": 69.5,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
+      "key": "aridity",
+      "earth": 0.9255273329433701,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -1174,12 +468,12 @@
     "test_id": "base_site",
     "lat": 20.687503391394,
     "lon": -12.660296519731721,
-    "rank": 18,
-    "score_total": 98.6,
+    "rank": 7,
+    "score_total": 95.7,
     "scores": {
      "topography": 98.6,
      "geology": 100.0,
-     "climate": 97.5
+     "climate": 90.6
     },
     "params": [
      {
@@ -1209,6 +503,13 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9025822260750125,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
@@ -1230,36 +531,486 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     36.997565557662604,
-     20.46141045815472
+     35.52257955536376,
+     22.49624685730823
     ]
    },
    "properties": {
-    "id": "g25_20.461_36.998",
-    "name": "20.46°K, 37.00°D",
+    "id": "g25_22.496_35.523",
+    "name": "22.50°K, 35.52°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
-    "lat": 20.46141045815472,
-    "lon": 36.997565557662604,
-    "rank": 19,
-    "score_total": 98.6,
+    "lat": 22.49624685730823,
+    "lon": 35.52257955536376,
+    "rank": 8,
+    "score_total": 95.6,
     "scores": {
-     "topography": 98.4,
+     "topography": 97.7,
      "geology": 100.0,
-     "climate": 98.0
+     "climate": 91.6
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.2648719549179077,
+      "earth": 1.5839422941207886,
       "target": 1.11,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 30.744540674555626,
+      "earth": 28.96625844338934,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 67.39305245209289,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9412524455372129,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     37.243396558045745,
+     19.10485285871905
+    ]
+   },
+   "properties": {
+    "id": "g25_19.105_37.243",
+    "name": "19.10°K, 37.24°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 19.10485285871905,
+    "lon": 37.243396558045745,
+    "rank": 9,
+    "score_total": 95.5,
+    "scores": {
+     "topography": 97.2,
+     "geology": 100.0,
+     "climate": 91.9
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.2487947940826416,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 27.077995571011613,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 69.79304415273374,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9081119582868156,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.52257955536376,
+     20.91359632463328
+    ]
+   },
+   "properties": {
+    "id": "g25_20.914_35.523",
+    "name": "20.91°K, 35.52°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 20.91359632463328,
+    "lon": 35.52257955536376,
+    "rank": 10,
+    "score_total": 95.5,
+    "scores": {
+     "topography": 98.1,
+     "geology": 100.0,
+     "climate": 90.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.622126579284668,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 29.60290564030146,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 68.59896242182809,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9072761964636136,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.643620521264284,
+     20.91359632463328
+    ]
+   },
+   "properties": {
+    "id": "g25_20.914_13.644",
+    "name": "20.91°K, 13.64°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 20.91359632463328,
+    "lon": 13.643620521264284,
+    "rank": 11,
+    "score_total": 95.3,
+    "scores": {
+     "topography": 97.2,
+     "geology": 100.0,
+     "climate": 91.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.0845911502838135,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 26.660680564726114,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 68.59896242182809,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9149526592735008,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.49353653505733,
+     19.783131658436883
+    ]
+   },
+   "properties": {
+    "id": "g25_19.783_22.494",
+    "name": "19.78°K, 22.49°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 19.783131658436883,
+    "lon": 22.49353653505733,
+    "rank": 12,
+    "score_total": 95.3,
+    "scores": {
+     "topography": 97.1,
+     "geology": 100.0,
+     "climate": 91.5
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.2412041425704956,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 26.98385577903555,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 69.36487778414447,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9007710811344567,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.50590355689633,
+     22.27015392406895
+    ]
+   },
+   "properties": {
+    "id": "g25_22.270_36.506",
+    "name": "22.27°K, 36.51°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 22.27015392406895,
+    "lon": 36.50590355689633,
+    "rank": 13,
+    "score_total": 95.3,
+    "scores": {
+     "topography": 97.7,
+     "geology": 100.0,
+     "climate": 90.9
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.3973406553268433,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 31.006065199566176,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 67.57687712847317,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9289519046548127,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.543564530459648,
+     20.46141045815472
+    ]
+   },
+   "properties": {
+    "id": "g25_20.461_19.544",
+    "name": "20.46°K, 19.54°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 20.46141045815472,
+    "lon": 19.543564530459648,
+    "rank": 14,
+    "score_total": 95.3,
+    "scores": {
+     "topography": 97.2,
+     "geology": 100.0,
+     "climate": 91.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.8499321937561035,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 29.739789568475185,
       "target": 29.6,
       "source": "Copernicus DEM GLO-30",
       "match": true
@@ -1277,11 +1028,393 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9080904067961885,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.667246900355668,
+     -20.91359632463328
+    ]
+   },
+   "properties": {
+    "id": "g25_-20.914_13.667",
+    "name": "20.91°G, 13.67°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": -20.91359632463328,
+    "lon": 13.667246900355668,
+    "rank": 15,
+    "score_total": 95.3,
+    "scores": {
+     "topography": 97.4,
+     "geology": 100.0,
+     "climate": 91.2
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.2878845930099487,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 27.40458799090156,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 68.59896242182809,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9118363023753868,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
      "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.81843855114922,
+     21.365782191111833
+    ]
+   },
+   "properties": {
+    "id": "g25_21.366_32.818",
+    "name": "21.37°K, 32.82°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 21.365782191111833,
+    "lon": 32.81843855114922,
+    "rank": 16,
+    "score_total": 95.2,
+    "scores": {
+     "topography": 98.6,
+     "geology": 100.0,
+     "climate": 89.6
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.4018499851226807,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 29.254265968304534,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 68.27205698312488,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8994322776868525,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
      "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -11.9228035185823,
+     21.365782191111833
+    ]
+   },
+   "properties": {
+    "id": "g25_21.366_-11.923",
+    "name": "21.37°K, 11.92°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 21.365782191111833,
+    "lon": -11.9228035185823,
+    "rank": 17,
+    "score_total": 95.1,
+    "scores": {
+     "topography": 98.4,
+     "geology": 100.0,
+     "climate": 89.6
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.1225758790969849,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 27.894655380965794,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 68.27205698312488,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9000161073542996,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.04759355306492,
+     22.722339790547508
+    ]
+   },
+   "properties": {
+    "id": "g25_22.722_34.048",
+    "name": "22.72°K, 34.05°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 22.722339790547508,
+    "lon": 34.04759355306492,
+    "rank": 18,
+    "score_total": 95.1,
+    "scores": {
+     "topography": 97.7,
+     "geology": 100.0,
+     "climate": 90.3
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.715627670288086,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 29.478284172743223,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 67.20429389603936,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9298093076923523,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     25.197677539271876,
+     21.81796805759039
+    ]
+   },
+   "properties": {
+    "id": "g25_21.818_25.198",
+    "name": "21.82°K, 25.20°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "base_site",
+    "lat": 21.81796805759039,
+    "lon": 25.197677539271876,
+    "rank": 19,
+    "score_total": 95.1,
+    "scores": {
+     "topography": 98.0,
+     "geology": 100.0,
+     "climate": 89.9
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.37285315990448,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 28.3990162719173,
+      "target": 29.6,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 67.93203636547858,
+      "target": 69.5,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9099129619602238,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -1311,11 +1444,11 @@
     "lat": 20.687503391394,
     "lon": 45.35581957068938,
     "rank": 20,
-    "score_total": 98.6,
+    "score_total": 95.0,
     "scores": {
      "topography": 98.6,
      "geology": 100.0,
-     "climate": 97.5
+     "climate": 89.1
     },
     "params": [
      {
@@ -1344,6 +1477,13 @@
       "earth": 0.0,
       "target": 0.0,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8840075065920745,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],

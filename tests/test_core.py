@@ -177,6 +177,62 @@ def test_missing_data_is_unknown_not_mismatch():
     assert s2.loc[1, "score_total"] == pytest.approx(100)
 
 
+def test_tests_only_run_where_meaningful():
+    # applies_to: Ay'da toz ve biyo-imza yok; buzsuz hedefte buz sondajı, mafik olmayanda lav tüpü yok.
+    from core.profiles import not_applicable
+    targets, profiles = load_targets(), load_profiles()
+    runs = {(t, p) for t in targets for p in profiles if not not_applicable(profiles[p], targets[t])}
+    for moon in ("moon_shackleton", "moon_malapert", "moon_marius_hills"):
+        for test in ("dust", "biosignature_arid", "biosignature_carbonate"):
+            assert (moon, test) not in runs
+    assert ("mars_gale", "ice_drilling") not in runs and ("moon_marius_hills", "ice_drilling") not in runs
+    assert ("mars_arcadia", "lava_tube") not in runs and ("moon_shackleton", "lava_tube") not in runs
+    assert ("mars_arcadia", "biosignature_carbonate") not in runs  # karbonat 0: tek yönlü kural her yeri 100 yapıyordu
+    # Rover ve üs kurulumu her hedefte anlamlı
+    assert all((t, p) in runs for t in targets for p in ("rover", "base_site"))
+    # Doğrulama setinin her kombinasyonu çalışmaya devam etmeli
+    for a in load_known_analogs().analogs:
+        assert any((t, a.test_id) in runs for t in a.targets), a.id
+    reason = not_applicable(profiles["dust"], targets["moon_shackleton"])
+    assert reason and "Mars" in reason
+
+
+def test_vegetated_surface_is_mismatch_not_unknown():
+    # valid_if: bitki örtüsü altında ASTER kayacı değil bitkiyi ölçer. Bu eksik veri değil, gözlenmiş
+    # farklılıktır: benzerlik 0. Kuraklık sütunu yoksa kural uygulanmaz.
+    params = load_parameters()
+    assert params["mafic_index"].valid_if == ("aridity", 0.3)
+    assert params["carbonate_index"].valid_if == ("aridity", 0.3)
+    t = Target(id="t", body="mars", name="T", why="", lat=0, lon=0, params={
+        "mafic_index": SourcedValue(value=0.75, source="t"), "slope_deg": SourcedValue(value=3, source="t")})
+    g = pd.DataFrame({"id": ["kurak", "bitkili", "kuraklik_yok"], "name": ["a", "b", "c"], "lat": [0, 1, 2],
+                      "lon": [0, 1, 2], "slope_deg": [3, 3, 3], "mafic_index": [0.75, 0.75, 0.75],
+                      "aridity": [0.8, 0.1, None]})
+    s = score_grid(g, t, {"mafic_index": 0.5, "slope_deg": 0.5})
+    assert s.loc[0, "score_total"] == pytest.approx(100)
+    assert s.loc[1, "sim_mafic_index"] == 0  # bilinmiyor (NaN) değil: ağırlık diğer parametreye kaçmaz
+    assert s.loc[1, "score_total"] == pytest.approx(50)
+    assert s.loc[2, "score_total"] == pytest.approx(100)
+    # Kartta geçersiz değer sayı olarak gösterilmez
+    prof = Profile(id="rover", label="x", weights={"mafic_index": 0.5, "slope_deg": 0.5}, breakdown=())
+    card = {a.id: a for a in top_analogs(g, t, prof, n=3)}
+    assert next(p for p in card["bitkili"].params if p.key == "mafic_index").earth is None
+    assert next(p for p in card["kurak"].params if p.key == "mafic_index").earth == 0.75
+
+
+def test_ties_prefer_more_of_at_least_param():
+    # Eşit skorda (tek yönlü karbonat) hedefi daha çok aşan öne; skor değişmez.
+    t = Target(id="t", body="mars", name="T", why="", lat=0, lon=0,
+               params={"carbonate_index": SourcedValue(value=0.5, source="t")})
+    g = pd.DataFrame({"id": ["esit", "fazla", "cok_fazla"], "name": ["a", "b", "c"], "lat": [0, 10, 20],
+                      "lon": [0, 10, 20], "carbonate_index": [0.5, 0.75, 1.0], "aridity": [0.9, 0.9, 0.9]})
+    prof = Profile(id="biosignature_carbonate", label="x", weights={"carbonate_index": 1.0}, breakdown=(),
+                   at_least=("carbonate_index",))
+    out = top_analogs(g, t, prof, n=3)
+    assert [a.id for a in out] == ["cok_fazla", "fazla", "esit"]
+    assert all(a.score_total == 100 for a in out)
+
+
 def test_sun_elevation_targets_match_geometry():
     """targets.yaml'daki güneş yüksekliği elle değil, core/geo.py hesabından gelmeli."""
     from core.geo import OBLIQUITY_DEG, mean_noon_sun_elevation

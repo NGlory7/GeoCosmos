@@ -6,43 +6,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     34.88839139250882,
-     -1.4696040660553114
+     46.86921935486758,
+     13.67862246097636
     ]
    },
    "properties": {
-    "id": "g25_-1.470_34.888",
-    "name": "1.47°G, 34.89°D",
+    "id": "g25_13.679_46.869",
+    "name": "13.68°K, 46.87°D",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": -1.4696040660553114,
-    "lon": 34.88839139250882,
+    "lat": 13.67862246097636,
+    "lon": 46.86921935486758,
     "rank": 1,
-    "score_total": 99.3,
+    "score_total": 93.4,
     "scores": {
-     "topography": 99.7,
+     "topography": 97.5,
      "geology": 100.0,
-     "climate": 97.6
+     "climate": 86.4
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.473183274269104,
+      "earth": 1.5706779956817627,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 33.19937995597892,
+      "earth": 30.49845006043321,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 75.18920993436687,
+      "earth": 72.53184288255657,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -53,209 +53,12 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "1.47°G, 34.89°D koordinatlarında yer alan bu bölge, 99.3 toplam skorla Marius Hills çukuru hedefi için yürütülen üs kurulumu ve iniş alanı testlerinde yüksek bir benzerlik sergilemektedir. Topografya boyut skorunun 99.7, jeoloji skorunun 100.0 ve iklim skorunun 97.6 olduğu alanda; 1.47° olan Dünya ortalama eğimi hedefteki 1.52° ile, 33.2 m olan yüzey pürüzlülüğü hedefteki 33.1 m ile, 75.19° olan yıllık ortalama öğlen güneş yüksekliği hedefteki 75.9° ile ve 0.0 olan donmuş zemin oranı hedefteki 0.0 değeriyle eşleşmektedir. Ayrıca karayolu erişiminin bulunması operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) olan yerçekimi nedeniyle toz ve tekerlek davranışı farklılık göstermektedir; bu durum önemli bir kopma noktasıdır. Manyetik alan ile atmosfer korumasının bulunmadığı bölgede yüzey doğrudan kozmik ışına açıktır ve Dünya'da karşılığı olmayan yüzey sıcaklıkları kalıcı gölgelerde yaklaşık −180 °C, ekvatorda ise öğlen +120 °C seviyesindedir. Ek olarak, atmosferin yok denecek kadar ince olması rüzgar aşınması ve ısı taşınımını engellemektedir."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     111.77515325128053,
-     0.11304646661963934
-    ]
-   },
-   "properties": {
-    "id": "g25_0.113_111.775",
-    "name": "0.11°K, 111.78°D",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": 0.11304646661963934,
-    "lon": 111.77515325128053,
-    "rank": 2,
-    "score_total": 99.2,
-    "scores": {
-     "topography": 99.7,
-     "geology": 100.0,
-     "climate": 97.7
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.4819939136505127,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
      },
      {
-      "key": "roughness_m",
-      "earth": 33.31571989909528,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 75.21922073414427,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "0.11°K, 111.78°D konumundaki bölge, toplam 99.2 skorla Marius Hills çukuru hedefi için üs kurulumu ve iniş alanı testlerinde kullanılmaya uygundur. Topografi, jeoloji ve iklim boyut skorlarının sırasıyla 99.7, 100.0 ve 97.7 olması bu uyumu destekler. Özellikle 500 m tabanda ortalama eğim (Dünya'da 1.48°, hedefte 1.52°), 5 km pencerede yüzey pürüzlülüğü (Dünya'da 33.32 m, hedefte 33.1 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 75.22°, hedefte 75.9°) ve yüzeye yakın buz oranları (\"match\": true veren parametreler) hedef değerlerle büyük oranda örtüşmektedir. Ayrıca yol erişiminin olması (\"road_access\": true) operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, bazı fiziksel ve çevresel koşullarda önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Bölgede manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C seviyesindedir ve bu durumun Dünya'da karşılığı yoktur. Son olarak, atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.75957699901516,
-     -4.860998064644492
-    ]
-   },
-   "properties": {
-    "id": "g25_-4.861_-40.760",
-    "name": "4.86°G, 40.76°B",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": -4.860998064644492,
-    "lon": -40.75957699901516,
-    "rank": 3,
-    "score_total": 99.1,
-    "scores": {
-     "topography": 99.9,
-     "geology": 100.0,
-     "climate": 96.6
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.5191768407821655,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 32.99838371894079,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 74.8883102389735,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "Marius Hills çukuru hedefi için hazırlanan test sahası analizi, toplam 99.1 skorla yüksek bir uyum göstermektedir. Topografi (99.9), jeoloji (100.0) ve iklim (96.6) boyut skorlarına sahip olan bölge; 1.52° ortalama eğim, 33.0 ile 33.1 arasında değişen yüzey pürüzlülüğü, 74.89° ile 75.9 arasında değişen yıllık ortalama öğlen güneş yüksekliği ve 0.0 oranındaki donmuş zemin parametrelerinde hedefi tam olarak karşılamaktadır. Ayrıca yol erişiminin bulunması operasyonel uyumu desteklemektedir.\n\nBununla birlikte, bazı kritik çevresel ve fiziksel parametrelerde önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Bölgede manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C seviyesindedir ve bu durumun Dünya'da karşılığı yoktur. Son olarak, atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     36.35787965776799,
-     1.69569699929459
-    ]
-   },
-   "properties": {
-    "id": "g25_1.696_36.358",
-    "name": "1.70°K, 36.36°D",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": 1.69569699929459,
-    "lon": 36.35787965776799,
-    "rank": 4,
-    "score_total": 99.1,
-    "scores": {
-     "topography": 99.5,
-     "geology": 100.0,
-     "climate": 97.6
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.373625636100769,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 33.10431811753108,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 75.17924375279473,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
+      "key": "aridity",
+      "earth": 0.9037192724145852,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -270,7 +73,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": "1.70°K, 36.36°D koordinatlarındaki bölge, 99.1 toplam skor ve 100.0 jeoloji, 99.5 topoğrafya ve 97.6 iklim alt skorlarıyla Marius Hills hedefi için yüksek bir uyum sergiler. Ortalama eğim (Dünya'da 1.37°, hedefte 1.52°), yüzey pürüzlülüğü (her ikisinde de 33.1 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 75.18°, hedefte 75.9°) ve donmuş zemin/yüzeye yakın buz parametrelerinin tamamında (\"benziyor\": true) eşleşme sağlanmıştır.\n\nBununla birlikte, bazı temel fiziksel ve çevresel faktörlerde kritik farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Bölgede manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C seviyesindedir ve bunun Dünya'da bir karşılığı yoktur. Ayrıca atmosfer yok denecek kadar incedir; rüzgar aşınması ve ısı taşınımı gerçekleşmez."
+    "ai_comment": ""
    }
   },
   {
@@ -278,43 +81,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     118.52893894622194,
-     1.2435111328160326
+     -76.04596352249179,
+     -13.90471539421564
     ]
    },
    "properties": {
-    "id": "g25_1.244_118.529",
-    "name": "1.24°K, 118.53°D",
+    "id": "g25_-13.905_-76.046",
+    "name": "13.90°G, 76.05°B",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": 1.2435111328160326,
-    "lon": 118.52893894622194,
-    "rank": 5,
-    "score_total": 99.1,
+    "lat": -13.90471539421564,
+    "lon": -76.04596352249179,
+    "rank": 2,
+    "score_total": 93.3,
     "scores": {
-     "topography": 99.4,
+     "topography": 98.8,
      "geology": 100.0,
-     "climate": 97.7
+     "climate": 84.6
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.596099853515625,
+      "earth": 1.3979051113128662,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 33.48245105493464,
+      "earth": 32.22886630198223,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 75.19800243732618,
+      "earth": 72.43955103773517,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -324,6 +127,13 @@
       "earth": 0.0,
       "target": 0.0,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8850004276305776,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -338,7 +148,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": "1.24°K, 118.53°D konumundaki bölge, Marius Hills çukuru hedefiyle karşılaştırıldığında 99.1 toplam skor elde etmiştir. Topografya (99.4), jeoloji (100.0) ve iklim (97.7) boyut skorlarına sahip olan bu alan; 1.6 ve 1.52 değerlerine sahip ortalama eğim, 33.48 ve 33.1 değerlerine sahip yüzey pürüzlülüğü, 75.2 ve 75.9 değerlerine sahip yıllık ortalama öğlen güneş yüksekliği ile 0.0 değerine sahip donmuş zemin parametrelerinde uyum göstermektedir. Ayrıca yol erişiminin bulunması operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, bazı temel çevresel koşullarda önemli farklılıklar bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve buna bağlı olarak toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve bu durumun Dünya'da karşılığı yoktur. Son olarak, atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
+    "ai_comment": ""
    }
   },
   {
@@ -346,43 +156,493 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     35.1142062235283,
-     -3.730533398448098
+     12.031849835355844,
+     -17.748295259283378
     ]
    },
    "properties": {
-    "id": "g25_-3.731_35.114",
-    "name": "3.73°G, 35.11°D",
+    "id": "g25_-17.748_12.032",
+    "name": "17.75°G, 12.03°D",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": -3.730533398448098,
-    "lon": 35.1142062235283,
+    "lat": -17.748295259283378,
+    "lon": 12.031849835355844,
+    "rank": 3,
+    "score_total": 93.2,
+    "scores": {
+     "topography": 100.0,
+     "geology": 100.0,
+     "climate": 83.1
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.5123810768127441,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.09205716379902,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 70.58684388196052,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.903258377550906,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     47.795031095210646,
+     14.130808327454917
+    ]
+   },
+   "properties": {
+    "id": "g25_14.131_47.795",
+    "name": "14.13°K, 47.80°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": 14.130808327454917,
+    "lon": 47.795031095210646,
+    "rank": 4,
+    "score_total": 93.2,
+    "scores": {
+     "topography": 98.1,
+     "geology": 100.0,
+     "climate": 85.1
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.5288443565368652,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 35.19168926450705,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 72.34534564888546,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8918383617563299,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     51.035372186411365,
+     10.965507262105016
+    ]
+   },
+   "properties": {
+    "id": "g25_10.966_51.035",
+    "name": "10.97°K, 51.04°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": 10.965507262105016,
+    "lon": 51.035372186411365,
+    "rank": 5,
+    "score_total": 93.1,
+    "scores": {
+     "topography": 98.4,
+     "geology": 100.0,
+     "climate": 84.5
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.4931284189224243,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 34.79407713584196,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 73.51067067002352,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8622773996466244,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.87782276177764,
+     -15.48736592689059
+    ]
+   },
+   "properties": {
+    "id": "g25_-15.487_-74.878",
+    "name": "15.49°G, 74.88°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": -15.48736592689059,
+    "lon": -74.87782276177764,
     "rank": 6,
-    "score_total": 99.1,
+    "score_total": 92.6,
+    "scores": {
+     "topography": 94.0,
+     "geology": 100.0,
+     "climate": 88.1
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.6926918029785156,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 39.015196768736196,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 71.74251110469919,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9402562444721354,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.499106139641508,
+     -18.65266699224049
+    ]
+   },
+   "properties": {
+    "id": "g25_-18.653_12.499",
+    "name": "18.65°G, 12.50°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": -18.65266699224049,
+    "lon": 12.499106139641508,
+    "rank": 7,
+    "score_total": 92.6,
+    "scores": {
+     "topography": 99.2,
+     "geology": 100.0,
+     "climate": 82.3
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.5632798671722412,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.76621745221926,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 70.06650780667844,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9042849146719573,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     42.008707718066496,
+     13.45252952773708
+    ]
+   },
+   "properties": {
+    "id": "g25_13.453_42.009",
+    "name": "13.45°K, 42.01°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": 13.45252952773708,
+    "lon": 42.008707718066496,
+    "rank": 8,
+    "score_total": 92.4,
+    "scores": {
+     "topography": 96.7,
+     "geology": 100.0,
+     "climate": 84.7
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.6584702730178833,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 30.040824070669604,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 72.62276717459828,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.881967048939119,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.49353653505733,
+     19.10485285871905
+    ]
+   },
+   "properties": {
+    "id": "g25_19.105_22.494",
+    "name": "19.10°K, 22.49°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": 19.10485285871905,
+    "lon": 22.49353653505733,
+    "rank": 9,
+    "score_total": 92.4,
     "scores": {
      "topography": 99.6,
      "geology": 100.0,
-     "climate": 97.1
+     "climate": 81.3
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.4818586111068726,
+      "earth": 1.5623494386672974,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 32.85101487510961,
+      "earth": 32.87263070250029,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 75.02458185461283,
+      "earth": 69.79304415273374,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -392,12 +652,19 @@
       "earth": 0.0,
       "target": 0.0,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8976305282596866,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": false
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -414,247 +681,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     38.15888917641903,
-     0.339139399858918
+     -71.84065678392082,
+     -16.84392352632626
     ]
    },
    "properties": {
-    "id": "g25_0.339_38.159",
-    "name": "0.34°K, 38.16°D",
+    "id": "g25_-16.844_-71.841",
+    "name": "16.84°G, 71.84°B",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": 0.339139399858918,
-    "lon": 38.15888917641903,
-    "rank": 7,
-    "score_total": 99.0,
-    "scores": {
-     "topography": 99.2,
-     "geology": 100.0,
-     "climate": 97.7
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.3189380168914795,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 33.151853377883135,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 75.21796466229294,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -80.72880208946216,
-     -1.017418199576754
-    ]
-   },
-   "properties": {
-    "id": "g25_-1.017_-80.729",
-    "name": "1.02°G, 80.73°B",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": -1.017418199576754,
-    "lon": -80.72880208946216,
-    "rank": 8,
-    "score_total": 99.0,
-    "scores": {
-     "topography": 99.2,
-     "geology": 100.0,
-     "climate": 97.7
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.6976146697998047,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 33.27007584471488,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 75.20484507029863,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     139.21484332350607,
-     -2.1478828657731475
-    ]
-   },
-   "properties": {
-    "id": "g25_-2.148_139.215",
-    "name": "2.15°G, 139.21°D",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": -2.1478828657731475,
-    "lon": 139.21484332350607,
-    "rank": 9,
-    "score_total": 99.0,
-    "scores": {
-     "topography": 99.2,
-     "geology": 100.0,
-     "climate": 97.5
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.6018470525741577,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 33.61418358432211,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 75.15484484105274,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.45737489844246,
-     2.600068732251705
-    ]
-   },
-   "properties": {
-    "id": "g25_2.600_35.457",
-    "name": "2.60°K, 35.46°D",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": 2.600068732251705,
-    "lon": 35.45737489844246,
+    "lat": -16.84392352632626,
+    "lon": -71.84065678392082,
     "rank": 10,
-    "score_total": 99.0,
+    "score_total": 92.2,
     "scores": {
-     "topography": 99.3,
+     "topography": 95.9,
      "geology": 100.0,
-     "climate": 97.4
+     "climate": 85.0
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.5597898960113525,
+      "earth": 1.7181111574172974,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 32.45621837801465,
+      "earth": 36.7780600436821,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 75.12480003237957,
+      "earth": 71.07269661083838,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -664,6 +727,13 @@
       "earth": 0.0,
       "target": 0.0,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9164407949405238,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -686,43 +756,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     36.24328037862567,
-     -3.5044404652088197
+     47.56357816012488,
+     15.939551793369146
     ]
    },
    "properties": {
-    "id": "g25_-3.504_36.243",
-    "name": "3.50°G, 36.24°D",
+    "id": "g25_15.940_47.564",
+    "name": "15.94°K, 47.56°D",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": -3.5044404652088197,
-    "lon": 36.24328037862567,
+    "lat": 15.939551793369146,
+    "lon": 47.56357816012488,
     "rank": 11,
-    "score_total": 98.9,
+    "score_total": 91.9,
     "scores": {
-     "topography": 99.4,
+     "topography": 98.8,
      "geology": 100.0,
-     "climate": 97.2
+     "climate": 80.9
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.6706935167312622,
+      "earth": 1.5603652000427246,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 33.18732818912724,
+      "earth": 31.952754635302796,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 75.04774436687279,
+      "earth": 71.52677397945975,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -733,11 +803,18 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8587016480855734,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
      "road_access": true,
-     "remote": false
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -754,43 +831,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     143.27951028185663,
-     -3.730533398448098
+     19.29773353007651,
+     19.330945791958328
     ]
    },
    "properties": {
-    "id": "g25_-3.731_143.280",
-    "name": "3.73°G, 143.28°D",
+    "id": "g25_19.331_19.298",
+    "name": "19.33°K, 19.30°D",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": -3.730533398448098,
-    "lon": 143.27951028185663,
+    "lat": 19.330945791958328,
+    "lon": 19.29773353007651,
     "rank": 12,
-    "score_total": 98.9,
+    "score_total": 91.7,
     "scores": {
-     "topography": 99.3,
+     "topography": 97.2,
      "geology": 100.0,
-     "climate": 97.1
+     "climate": 82.4
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.5783398151397705,
+      "earth": 1.57390558719635,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 32.573935558444916,
+      "earth": 30.199386212084455,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 75.02458185461283,
+      "earth": 69.65278212585653,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -800,12 +877,19 @@
       "earth": 0.0,
       "target": 0.0,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9139105065430105,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": false
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -822,315 +906,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     38.049799026781464,
-     -3.9566263316873767
+     13.433618748212835,
+     -20.23531752491544
     ]
    },
    "properties": {
-    "id": "g25_-3.957_38.050",
-    "name": "3.96°G, 38.05°D",
+    "id": "g25_-20.235_13.434",
+    "name": "20.24°G, 13.43°D",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": -3.9566263316873767,
-    "lon": 38.049799026781464,
+    "lat": -20.23531752491544,
+    "lon": 13.433618748212835,
     "rank": 13,
-    "score_total": 98.9,
-    "scores": {
-     "topography": 99.3,
-     "geology": 100.0,
-     "climate": 97.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.6038663387298584,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 32.70819179417507,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 75.00071648943756,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -75.07958430876548,
-     3.730533398448098
-    ]
-   },
-   "properties": {
-    "id": "g25_3.731_-75.080",
-    "name": "3.73°K, 75.08°B",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": 3.730533398448098,
-    "lon": -75.07958430876548,
-    "rank": 14,
-    "score_total": 98.9,
-    "scores": {
-     "topography": 99.3,
-     "geology": 100.0,
-     "climate": 97.1
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.6643153429031372,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 33.29136779531534,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 75.02458185461283,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -79.5997279343648,
-     -2.373975799012426
-    ]
-   },
-   "properties": {
-    "id": "g25_-2.374_-79.600",
-    "name": "2.37°G, 79.60°B",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": -2.373975799012426,
-    "lon": -79.5997279343648,
-    "rank": 15,
-    "score_total": 98.8,
-    "scores": {
-     "topography": 99.1,
-     "geology": 100.0,
-     "climate": 97.5
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.5777969360351562,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 32.286430200413236,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 75.14102805068812,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     121.90583179369266,
-     6.669741530558721
-    ]
-   },
-   "properties": {
-    "id": "g25_6.670_121.906",
-    "name": "6.67°K, 121.91°D",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": 6.669741530558721,
-    "lon": 121.90583179369266,
-    "rank": 16,
-    "score_total": 98.8,
-    "scores": {
-     "topography": 99.9,
-     "geology": 100.0,
-     "climate": 95.6
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 1.556748390197754,
-      "target": 1.52,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 33.09078045003929,
-      "target": 33.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 74.59466781258836,
-      "target": 75.9,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     36.69491004066462,
-     -5.08709099788377
-    ]
-   },
-   "properties": {
-    "id": "g25_-5.087_36.695",
-    "name": "5.09°G, 36.69°D",
-    "is_new": true,
-    "target_id": "moon_marius_hills",
-    "test_id": "base_site",
-    "lat": -5.08709099788377,
-    "lon": 36.69491004066462,
-    "rank": 17,
-    "score_total": 98.8,
+    "score_total": 91.7,
     "scores": {
      "topography": 99.5,
      "geology": 100.0,
-     "climate": 96.5
+     "climate": 79.9
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.37337327003479,
+      "earth": 1.647580862045288,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 33.09069379137863,
+      "earth": 33.175047926175765,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 74.85690844269027,
+      "earth": 69.06669470246356,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -1141,11 +953,18 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8950804729508745,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": false
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -1162,43 +981,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     27.43650196886616,
-     -2.373975799012426
+     36.997565557662604,
+     20.23531752491544
     ]
    },
    "properties": {
-    "id": "g25_-2.374_27.437",
-    "name": "2.37°G, 27.44°D",
+    "id": "g25_20.235_36.998",
+    "name": "20.24°K, 37.00°D",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": -2.373975799012426,
-    "lon": 27.43650196886616,
-    "rank": 18,
-    "score_total": 98.8,
+    "lat": 20.23531752491544,
+    "lon": 36.997565557662604,
+    "rank": 14,
+    "score_total": 91.6,
     "scores": {
-     "topography": 99.0,
+     "topography": 96.7,
      "geology": 100.0,
-     "climate": 97.5
+     "climate": 82.6
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.7739555835723877,
+      "earth": 1.7463340759277344,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 33.175447624512444,
+      "earth": 35.82182436774496,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 75.14102805068812,
+      "earth": 69.06669470246356,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -1208,6 +1027,13 @@
       "earth": 0.0,
       "target": 0.0,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9274226706003831,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -1230,43 +1056,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     41.08552964422698,
-     4.860998064644492
+     29.973155093606675,
+     16.617830593086982
     ]
    },
    "properties": {
-    "id": "g25_4.861_41.086",
-    "name": "4.86°K, 41.09°D",
+    "id": "g25_16.618_29.973",
+    "name": "16.62°K, 29.97°D",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": 4.860998064644492,
-    "lon": 41.08552964422698,
-    "rank": 19,
-    "score_total": 98.8,
+    "lat": 16.617830593086982,
+    "lon": 29.973155093606675,
+    "rank": 15,
+    "score_total": 91.6,
     "scores": {
-     "topography": 99.4,
+     "topography": 99.0,
      "geology": 100.0,
-     "climate": 96.6
+     "climate": 80.0
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.5753859281539917,
+      "earth": 1.3672432899475098,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 32.6507705537011,
+      "earth": 32.632847822000265,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 74.8883102389735,
+      "earth": 71.18940597513406,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -1276,6 +1102,13 @@
       "earth": 0.0,
       "target": 0.0,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.854018463896012,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -1298,43 +1131,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     10.500389642405569,
-     -1.9217899325338688
+     46.40631348469605,
+     14.809087127172754
     ]
    },
    "properties": {
-    "id": "g25_-1.922_10.500",
-    "name": "1.92°G, 10.50°D",
+    "id": "g25_14.809_46.406",
+    "name": "14.81°K, 46.41°D",
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
-    "lat": -1.9217899325338688,
-    "lon": 10.500389642405569,
-    "rank": 20,
-    "score_total": 98.8,
+    "lat": 14.809087127172754,
+    "lon": 46.40631348469605,
+    "rank": 16,
+    "score_total": 91.5,
     "scores": {
-     "topography": 98.9,
+     "topography": 95.0,
      "geology": 100.0,
-     "climate": 97.6
+     "climate": 84.3
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 1.630355715751648,
+      "earth": 1.8175585269927979,
       "target": 1.52,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 33.81705604906919,
+      "earth": 37.41051272940061,
       "target": 33.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 75.16793910613276,
+      "earth": 72.05223338537779,
       "target": 75.9,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
@@ -1345,10 +1178,317 @@
       "target": 0.0,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.88845524931768,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.168634518965442,
+     21.365782191111833
+    ]
+   },
+   "properties": {
+    "id": "g25_21.366_12.169",
+    "name": "21.37°K, 12.17°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": 21.365782191111833,
+    "lon": 12.168634518965442,
+    "rank": 17,
+    "score_total": 91.5,
+    "scores": {
+     "topography": 99.1,
+     "geology": 100.0,
+     "climate": 79.7
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.4699312448501587,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 32.29610304362179,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 68.27205698312488,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9084672224023586,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     41.3143489128092,
+     14.356901260694196
+    ]
+   },
+   "properties": {
+    "id": "g25_14.357_41.314",
+    "name": "14.36°K, 41.31°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": 14.356901260694196,
+    "lon": 41.3143489128092,
+    "rank": 18,
+    "score_total": 91.4,
+    "scores": {
+     "topography": 96.8,
+     "geology": 100.0,
+     "climate": 82.1
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.8858628273010254,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 35.16176042131495,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 72.24913141170437,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8584467320221765,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.168634518965442,
+     22.49624685730823
+    ]
+   },
+   "properties": {
+    "id": "g25_22.496_12.169",
+    "name": "22.50°K, 12.17°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": 22.49624685730823,
+    "lon": 12.168634518965442,
+    "rank": 19,
+    "score_total": 91.4,
+    "scores": {
+     "topography": 99.7,
+     "geology": 100.0,
+     "climate": 78.7
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.5591496229171753,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.25026155299387,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 67.39305245209289,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9148465845146303,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     48.95229577063947,
+     10.739414328865736
+    ]
+   },
+   "properties": {
+    "id": "g25_10.739_48.952",
+    "name": "10.74°K, 48.95°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "base_site",
+    "lat": 10.739414328865736,
+    "lon": 48.95229577063947,
+    "rank": 20,
+    "score_total": 91.4,
+    "scores": {
+     "topography": 98.2,
+     "geology": 100.0,
+     "climate": 80.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 1.7402071952819824,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 34.25048319817108,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 73.58200246680549,
+      "target": 75.9,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8114867927790141,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
      "remote": false
     },
     "breakdown": [

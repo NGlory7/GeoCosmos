@@ -160,7 +160,9 @@ export default function FindingsPage() {
           <Info title="Ne bulduk?">
             {newTotal !== undefined ? (
               <>
-                6 hedef ve 6 test için toplam <b className="text-white">{newTotal.toLocaleString("tr-TR")}</b> yeni aday.{" "}
+                {data?.targets.length} hedef ve {data?.meta.tests.length} test amacının anlamlı{" "}
+                {data?.index?.filter((e) => e.file).length} eşleşmesi için toplam{" "}
+                <b className="text-white">{newTotal.toLocaleString("tr-TR")}</b> yeni aday.{" "}
               </>
             ) : null}
             Bilinen ünlü sahalar (Atacama, Haughton, İzlanda, Hawaii…) listeye bilerek alınmadı; onlar motoru sınamak için kullanıldı.

@@ -24,7 +24,7 @@ from pathlib import Path
 import pandas as pd
 
 from core.profiles import load_known_analogs, load_parameters, load_profiles, load_targets
-from core.scoring import score_grid, usable_weights
+from core.scoring import score_grid, skip_reason
 
 ROOT = Path(__file__).resolve().parent.parent
 GRID_PATH = ROOT / "data" / "processed" / "grid.parquet"
@@ -62,7 +62,7 @@ def run_validation(grid: pd.DataFrame | None = None) -> dict:
         best = None
         for tid in a.targets:
             target, profile = targets[tid], profiles[a.test_id]
-            if not usable_weights(profile.weights, target, params):
+            if skip_reason(target, profile, params):
                 continue
             scored = score_grid(pool, target, profile.weights, params, profile.at_least)
             s = float(scored.loc[i, "score_total"])

@@ -5,7 +5,8 @@ birbirine discovery.min_separation_km'den yakın olmayacak şekilde seçilir (co
 
 - Bilinen sahaya yakın kareler (is_new=False) listede kalır ama "Yeni aday" sayılmaz.
 - Doğrulama yerinin kendi karesi (known_id) gerçek adını ve kaynaklı geçmiş testlerini taşır.
-- Hedefte bu testin hiçbir parametresi yoksa dosya yazılmaz, index.json'da sebebiyle görünür.
+- Hedefte bu testin hiçbir parametresi yoksa ya da test o hedefte anlamsızsa (test_profiles.yaml >
+  applies_to) dosya yazılmaz, index.json'da sebebiyle görünür.
 - Yakın tarama: en iyi adayların çevresi için 5 km'lik Earth Engine export kutuları
   data/processed/fine_scan.json dosyasına yazılır (python -m pipeline.ee_export --cell-km 5 --bbox ...).
 
@@ -21,7 +22,7 @@ import pandas as pd
 
 from core.profiles import (load_grid_config, load_known_analogs, load_parameters, load_profiles,
                            load_targets)
-from core.scoring import top_analogs, usable_weights
+from core.scoring import skip_reason, top_analogs, usable_weights
 
 ROOT = Path(__file__).resolve().parent.parent
 GRID_PATH = ROOT / "data" / "processed" / "grid.parquet"
@@ -78,11 +79,11 @@ def run_discovery(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> 
         for profile in load_profiles().values():
             entry = {"target_id": target.id, "test_id": profile.id,
                      "file": f"{target.id}_{profile.id}.geojson"}
-            used = usable_weights(profile.weights, target, params)
-            if not used:
-                index.append({**entry, "file": None, "count": 0,
-                              "reason": "Hedefte bu testin parametrelerinden hiçbiri yok (config/targets.yaml)"})
+            reason = skip_reason(target, profile, params)
+            if reason:
+                index.append({**entry, "file": None, "count": 0, "reason": reason})
                 continue
+            used = usable_weights(profile.weights, target, params)
             analogs = top_analogs(pool, target, profile, n=cfg["top_n"], params=params,
                                   min_separation_km=cfg["min_separation_km"])
             name_known_cells(analogs, pool)
@@ -111,7 +112,7 @@ def fine_scan_plan(grid: pd.DataFrame | None = None, out: Path = FINE_SCAN_PATH)
     boxes: dict[str, dict] = {}
     for target in load_targets().values():
         for profile in load_profiles().values():
-            if not usable_weights(profile.weights, target, params):
+            if skip_reason(target, profile, params):
                 continue
             for a in top_analogs(pool, target, profile, n=disc["fine_scan_top"], params=params,
                                  min_separation_km=disc["min_separation_km"]):

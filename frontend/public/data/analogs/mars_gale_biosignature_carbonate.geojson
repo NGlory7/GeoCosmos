@@ -6,239 +6,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -82.28362238336965,
-     8.930670862951509
+     48.96494628832531,
+     8.70457792971223
     ]
    },
    "properties": {
-    "id": "g25_8.931_-82.284",
-    "name": "8.93°K, 82.28°B",
+    "id": "g25_8.705_48.965",
+    "name": "8.70°K, 48.96°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 8.930670862951509,
-    "lon": -82.28362238336965,
+    "lat": 8.70457792971223,
+    "lon": 48.96494628832531,
     "rank": 1,
-    "score_total": 100.0,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": null
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.25,
-      "target": 0.25,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": "8.93°K, 82.28°B koordinatlarında yer alan bu saha, Gale Krateri'ndeki \"Biyo-imza: karbonat çökeli\" testi için 100.0 toplam skor ve 100.0 jeoloji skoruna sahiptir. Karbonat izi parametresinde Dünya ve hedef için değer 0.25 (match: true), mafik / bazaltik yüzey parametresinde ise 0.5 (match: true) olarak ölçülmüştür; bu durum, karbonat çökeli testi için neden uygun bir alan olabileceğini göstermektedir. Ayrıca yol erişimi bulunurken, uzaktan (remote) operasyon durumu da sağlanmaktadır.\n\nÖte yandan, hedef ile Dünya sahaları arasında önemli çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın %38'idir (3,71 m/s²). Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -81.38311762404413,
-     8.47848499647295
-    ]
-   },
-   "properties": {
-    "id": "g25_8.478_-81.383",
-    "name": "8.48°K, 81.38°B",
-    "is_new": true,
-    "target_id": "mars_gale",
-    "test_id": "biosignature_carbonate",
-    "lat": 8.47848499647295,
-    "lon": -81.38311762404413,
-    "rank": 2,
-    "score_total": 100.0,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": null
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.25,
-      "target": 0.25,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": "Bu bölge, karbonat izi (0.25) ve mafik/bazaltik yüzey (0.5) parametrelerinde hedef ile tam eşleşme sağladığı için \"Biyo-imza: karbonat çökeli\" testi açısından bazı olumlu özellikler taşımaktadır. Ayrıca yol erişiminin olması operasyonel olarak kolaylık sağlamaktadır.\n\nAncak yerçekimi Dünya'nın %38'i kadardır (3,71 m/s²). Bugün yüzeyde kalıcı sıvı su bulunmazken, Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -79.80723429522446,
-     8.930670862951509
-    ]
-   },
-   "properties": {
-    "id": "g25_8.931_-79.807",
-    "name": "8.93°K, 79.81°B",
-    "is_new": true,
-    "target_id": "mars_gale",
-    "test_id": "biosignature_carbonate",
-    "lat": 8.930670862951509,
-    "lon": -79.80723429522446,
-    "rank": 3,
-    "score_total": 100.0,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": null
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.25,
-      "target": 0.25,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": "8.93°K, 79.81°B konumundaki bu bölge, \"Biyo-imza: karbonat çökeli\" testi için Gale Krateri hedefiyle jeolojik açıdan dikkat çekici benzerlikler göstermektedir. ASTER GED (AG100) TIR verilerine göre, karbonat izi (0.25) ve mafik/bazaltik yüzey (0.5) parametrelerinde Dünya bölgesi ile hedef birebir örtüşmektedir (\"benziyor\": true). Karayolu erişimine sahip olan ve uzak konumda bulunmayan bu saha, toplamda 100.0 jeoloji skoruna sahiptir.\n\nBununla birlikte, iki ortam arasında önemli fiziksel ve çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşam vardır ve bu durum biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan bulunmadığından yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve bu değerler Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -78.45647715623618,
-     8.930670862951509
-    ]
-   },
-   "properties": {
-    "id": "g25_8.931_-78.456",
-    "name": "8.93°K, 78.46°B",
-    "is_new": true,
-    "target_id": "mars_gale",
-    "test_id": "biosignature_carbonate",
-    "lat": 8.930670862951509,
-    "lon": -78.45647715623618,
-    "rank": 4,
-    "score_total": 100.0,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": null
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.75,
-      "target": 0.25,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": "8.93°K, 78.46°B konumundaki bu bölge, Gale Krateri hedefindeki \"Biyo-imza: karbonat çökeli\" testi için bazı jeolojik parametreler açısından uygun özellikler göstermektedir. Motor çıkışına göre, 0-1 sıralı ölçekte mafik / bazaltik yüzey değeri Dünya ve hedef için 0.5 olarak eşleşmektedir; ayrıca 0-1 sıralı ölçekteki karbonat izi parametresinde Dünya 0.75, hedef ise 0.25 değerini alarak test için eşleşme (\"match\": true) sağlamıştır. Bu doğrultuda jeoloji boyutu skoru 100.0 ve toplam skor 100.0 olarak hesaplanmıştır. Yol erişiminin olması (road_access: true) ve bölgenin uzak (remote: false) olmaması operasyonel olarak değerlendirilmektedir.\n\nBuna karşın, hedef ile Dünya sahaları arasında önemli çevresel ve fiziksel farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yoktur, oysa Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşam vardır ve bu durum biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -75.52983668842823,
-     8.930670862951509
-    ]
-   },
-   "properties": {
-    "id": "g25_8.931_-75.530",
-    "name": "8.93°K, 75.53°B",
-    "is_new": true,
-    "target_id": "mars_gale",
-    "test_id": "biosignature_carbonate",
-    "lat": 8.930670862951509,
-    "lon": -75.52983668842823,
-    "rank": 5,
     "score_total": 100.0,
     "scores": {
      "topography": null,
@@ -273,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": "Gale Krateri'ndeki karbonat çökeli testi hedefi için değerlendirilen 8.93°K, 75.53°B koordinatındaki bu saha, toplam 100.0 skoru ve jeoloji alt boyutundaki 100.0 puanıyla dikkat çekmektedir. Motor çıktısına göre, mafik / bazaltik yüzey parametresinde Dünya değeri 0.5 iken hedef değeri de 0.5 olarak ölçülmüştür ve bu durum eşleşmektedir. Karbonat izi parametresinde ise Dünya'da 1.0 olan değer, hedef için 0.25 seviyesindedir ve bu parametre de test motoru tarafından benzer olarak değerlendirilmiştir.\n\nBununla birlikte, saha ile hedef arasında önemli çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir ve bugün yüzeyde kalıcı sıvı su bulunmazken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur. Operasyonel olarak saha yol erişimine sahip olup uzakta değildir ve yeni bir adaydır."
+    "ai_comment": ""
    }
   },
   {
@@ -281,18 +61,238 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -73.72882716977719,
-     8.930670862951509
+     49.86545104765083,
+     8.252392063233671
     ]
    },
    "properties": {
-    "id": "g25_8.931_-73.729",
-    "name": "8.93°K, 73.73°B",
+    "id": "g25_8.252_49.865",
+    "name": "8.25°K, 49.87°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 8.930670862951509,
-    "lon": -73.72882716977719,
+    "lat": 8.252392063233671,
+    "lon": 49.86545104765083,
+    "rank": 2,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 1.0,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     42.661412973046644,
+     7.800206196755115
+    ]
+   },
+   "properties": {
+    "id": "g25_7.800_42.661",
+    "name": "7.80°K, 42.66°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.800206196755115,
+    "lon": 42.661412973046644,
+    "rank": 3,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 1.0,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     41.08552964422698,
+     2.373975799012426
+    ]
+   },
+   "properties": {
+    "id": "g25_2.374_41.086",
+    "name": "2.37°K, 41.09°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 2.373975799012426,
+    "lon": 41.08552964422698,
+    "rank": 4,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 1.0,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     49.87810751098254,
+     15.939551793369146
+    ]
+   },
+   "properties": {
+    "id": "g25_15.940_49.878",
+    "name": "15.94°K, 49.88°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 15.939551793369146,
+    "lon": 49.87810751098254,
+    "rank": 5,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 1.0,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     48.95229577063947,
+     15.48736592689059
+    ]
+   },
+   "properties": {
+    "id": "g25_15.487_48.952",
+    "name": "15.49°K, 48.95°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 15.48736592689059,
+    "lon": 48.95229577063947,
     "rank": 6,
     "score_total": 100.0,
     "scores": {
@@ -303,7 +303,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -336,18 +336,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -71.70269146129476,
-     8.930670862951509
+     49.646654575896775,
+     10.513321395626459
     ]
    },
    "properties": {
-    "id": "g25_8.931_-71.703",
-    "name": "8.93°K, 71.70°B",
+    "id": "g25_10.513_49.647",
+    "name": "10.51°K, 49.65°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 8.930670862951509,
-    "lon": -71.70269146129476,
+    "lat": 10.513321395626459,
+    "lon": 49.646654575896775,
     "rank": 7,
     "score_total": 100.0,
     "scores": {
@@ -358,7 +358,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -391,18 +391,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -77.55597239691066,
-     8.70457792971223
+     56.821695563555515,
+     18.87875992547977
     ]
    },
    "properties": {
-    "id": "g25_8.705_-77.556",
-    "name": "8.70°K, 77.56°B",
+    "id": "g25_18.879_56.822",
+    "name": "18.88°K, 56.82°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 8.70457792971223,
-    "lon": -77.55597239691066,
+    "lat": 18.87875992547977,
+    "lon": 56.821695563555515,
     "rank": 8,
     "score_total": 100.0,
     "scores": {
@@ -413,7 +413,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -446,18 +446,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -72.60319622062028,
-     8.70457792971223
+     54.970072082869386,
+     17.974388192522653
     ]
    },
    "properties": {
-    "id": "g25_8.705_-72.603",
-    "name": "8.70°K, 72.60°B",
+    "id": "g25_17.974_54.970",
+    "name": "17.97°K, 54.97°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 8.70457792971223,
-    "lon": -72.60319622062028,
+    "lat": 17.974388192522653,
+    "lon": 54.970072082869386,
     "rank": 9,
     "score_total": 100.0,
     "scores": {
@@ -468,7 +468,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -483,7 +483,7 @@
     ],
     "ops_tags": {
      "road_access": true,
-     "remote": false
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -501,18 +501,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -70.12680813247509,
-     8.70457792971223
+     52.655542732011725,
+     17.07001645956554
     ]
    },
    "properties": {
-    "id": "g25_8.705_-70.127",
-    "name": "8.70°K, 70.13°B",
+    "id": "g25_17.070_52.656",
+    "name": "17.07°K, 52.66°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 8.70457792971223,
-    "lon": -70.12680813247509,
+    "lat": 17.07001645956554,
+    "lon": 52.655542732011725,
     "rank": 10,
     "score_total": 100.0,
     "scores": {
@@ -523,7 +523,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -537,8 +537,8 @@
      }
     ],
     "ops_tags": {
-     "road_access": true,
-     "remote": false
+     "road_access": false,
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -556,18 +556,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -74.40420573927133,
-     8.252392063233671
+     50.1095604460683,
+     15.035180060412031
     ]
    },
    "properties": {
-    "id": "g25_8.252_-74.404",
-    "name": "8.25°K, 74.40°B",
+    "id": "g25_15.035_50.110",
+    "name": "15.04°K, 50.11°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 8.252392063233671,
-    "lon": -74.40420573927133,
+    "lat": 15.035180060412031,
+    "lon": 50.1095604460683,
     "rank": 11,
     "score_total": 100.0,
     "scores": {
@@ -578,7 +578,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.75,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -592,7 +592,7 @@
      }
     ],
     "ops_tags": {
-     "road_access": false,
+     "road_access": true,
      "remote": false
     },
     "breakdown": [
@@ -611,18 +611,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -75.98008906809099,
-     8.026299129994394
+     50.8039192513256,
+     10.28722846238718
     ]
    },
    "properties": {
-    "id": "g25_8.026_-75.980",
-    "name": "8.03°K, 75.98°B",
+    "id": "g25_10.287_50.804",
+    "name": "10.29°K, 50.80°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 8.026299129994394,
-    "lon": -75.98008906809099,
+    "lat": 10.28722846238718,
+    "lon": 50.8039192513256,
     "rank": 12,
     "score_total": 100.0,
     "scores": {
@@ -633,7 +633,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -647,7 +647,7 @@
      }
     ],
     "ops_tags": {
-     "road_access": true,
+     "road_access": false,
      "remote": false
     },
     "breakdown": [
@@ -666,18 +666,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -72.3780700307889,
-     7.800206196755115
+     50.57246631623983,
+     9.382856729430065
     ]
    },
    "properties": {
-    "id": "g25_7.800_-72.378",
-    "name": "7.80°K, 72.38°B",
+    "id": "g25_9.383_50.572",
+    "name": "9.38°K, 50.57°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 7.800206196755115,
-    "lon": -72.3780700307889,
+    "lat": 9.382856729430065,
+    "lon": 50.57246631623983,
     "rank": 13,
     "score_total": 100.0,
     "scores": {
@@ -688,7 +688,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -702,7 +702,7 @@
      }
     ],
     "ops_tags": {
-     "road_access": true,
+     "road_access": false,
      "remote": false
     },
     "breakdown": [
@@ -721,18 +721,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -70.80218670196923,
-     7.800206196755115
+     -39.63050284391779,
+     -10.513321395626459
     ]
    },
    "properties": {
-    "id": "g25_7.800_-70.802",
-    "name": "7.80°K, 70.80°B",
+    "id": "g25_-10.513_-39.631",
+    "name": "10.51°G, 39.63°B",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 7.800206196755115,
-    "lon": -70.80218670196923,
+    "lat": -10.513321395626459,
+    "lon": -39.63050284391779,
     "rank": 14,
     "score_total": 100.0,
     "scores": {
@@ -743,7 +743,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -776,18 +776,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -77.10572001724789,
-     7.348020330276557
+     -101.40528765804535,
+     26.565919655615243
     ]
    },
    "properties": {
-    "id": "g25_7.348_-77.106",
-    "name": "7.35°K, 77.11°B",
+    "id": "g25_26.566_-101.405",
+    "name": "26.57°K, 101.41°B",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 7.348020330276557,
-    "lon": -77.10572001724789,
+    "lat": 26.565919655615243,
+    "lon": -101.40528765804535,
     "rank": 15,
     "score_total": 100.0,
     "scores": {
@@ -798,7 +798,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.75,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -812,8 +812,8 @@
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": false
+     "road_access": true,
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -831,18 +831,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -73.72882716977719,
-     7.121927397037278
+     55.9265525871644,
+     26.792012588854522
     ]
    },
    "properties": {
-    "id": "g25_7.122_-73.729",
-    "name": "7.12°K, 73.73°B",
+    "id": "g25_26.792_55.927",
+    "name": "26.79°K, 55.93°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 7.121927397037278,
-    "lon": -73.72882716977719,
+    "lat": 26.792012588854522,
+    "lon": 55.9265525871644,
     "rank": 16,
     "score_total": 100.0,
     "scores": {
@@ -853,7 +853,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -886,18 +886,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -71.70269146129476,
-     7.121927397037278
+     -76.04596352249179,
+     -12.548157794779966
     ]
    },
    "properties": {
-    "id": "g25_7.122_-71.703",
-    "name": "7.12°K, 71.70°B",
+    "id": "g25_-12.548_-76.046",
+    "name": "12.55°G, 76.05°B",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 7.121927397037278,
-    "lon": -71.70269146129476,
+    "lat": -12.548157794779966,
+    "lon": -76.04596352249179,
     "rank": 17,
     "score_total": 100.0,
     "scores": {
@@ -908,7 +908,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -941,18 +941,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -75.07958430876548,
-     6.895834463798
+     -75.11145091392046,
+     -13.226436594497802
     ]
    },
    "properties": {
-    "id": "g25_6.896_-75.080",
-    "name": "6.90°K, 75.08°B",
+    "id": "g25_-13.226_-75.111",
+    "name": "13.23°G, 75.11°B",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 6.895834463798,
-    "lon": -75.07958430876548,
+    "lat": -13.226436594497802,
+    "lon": -75.11145091392046,
     "rank": 18,
     "score_total": 100.0,
     "scores": {
@@ -963,7 +963,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -996,18 +996,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -77.33084620707928,
-     6.443648597319442
+     -102.03445372278463,
+     30.86168538716154
     ]
    },
    "properties": {
-    "id": "g25_6.444_-77.331",
-    "name": "6.44°K, 77.33°B",
+    "id": "g25_30.862_-102.034",
+    "name": "30.86°K, 102.03°B",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 6.443648597319442,
-    "lon": -77.33084620707928,
+    "lat": 30.86168538716154,
+    "lon": -102.03445372278463,
     "rank": 19,
     "score_total": 100.0,
     "scores": {
@@ -1018,7 +1018,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -1032,8 +1032,8 @@
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": false
+     "road_access": true,
+     "remote": true
     },
     "breakdown": [
      "gravity",
@@ -1051,18 +1051,18 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -74.17907954943995,
-     6.217555664080163
+     34.190257160722844,
+     37.192287517861345
     ]
    },
    "properties": {
-    "id": "g25_6.218_-74.179",
-    "name": "6.22°K, 74.18°B",
+    "id": "g25_37.192_34.190",
+    "name": "37.19°K, 34.19°D",
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
-    "lat": 6.217555664080163,
-    "lon": -74.17907954943995,
+    "lat": 37.192287517861345,
+    "lon": 34.190257160722844,
     "rank": 20,
     "score_total": 100.0,
     "scores": {
@@ -1073,7 +1073,7 @@
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 1.0,
       "target": 0.25,
       "source": "ASTER GED (AG100) TIR",
       "match": true

@@ -30,52 +30,30 @@
  {
   "target_id": "moon_shackleton",
   "test_id": "lava_tube",
-  "file": "moon_shackleton_lava_tube.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "mafic_index",
-   "roughness_m",
-   "slope_deg"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Hedefte mafic_index = 0.25; bu test en az 0.75 gerektirir (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_shackleton",
   "test_id": "dust",
-  "file": "moon_shackleton_dust.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "roughness_m",
-   "slope_deg"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_shackleton",
   "test_id": "biosignature_arid",
-  "file": "moon_shackleton_biosignature_arid.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity"
-  ],
-  "params_total": 3
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_shackleton",
   "test_id": "biosignature_carbonate",
-  "file": "moon_shackleton_biosignature_carbonate.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "carbonate_index",
-   "mafic_index"
-  ],
-  "params_total": 2
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_shackleton",
@@ -84,12 +62,13 @@
   "count": 20,
   "new_count": 20,
   "params_used": [
+   "aridity",
    "ground_ice",
    "roughness_m",
    "slope_deg",
    "sun_elevation_deg"
   ],
-  "params_total": 4
+  "params_total": 5
  },
  {
   "target_id": "moon_malapert",
@@ -122,52 +101,30 @@
  {
   "target_id": "moon_malapert",
   "test_id": "lava_tube",
-  "file": "moon_malapert_lava_tube.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "mafic_index",
-   "roughness_m",
-   "slope_deg"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Hedefte mafic_index = 0.25; bu test en az 0.75 gerektirir (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_malapert",
   "test_id": "dust",
-  "file": "moon_malapert_dust.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "roughness_m",
-   "slope_deg"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_malapert",
   "test_id": "biosignature_arid",
-  "file": "moon_malapert_biosignature_arid.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity"
-  ],
-  "params_total": 3
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_malapert",
   "test_id": "biosignature_carbonate",
-  "file": "moon_malapert_biosignature_carbonate.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "carbonate_index",
-   "mafic_index"
-  ],
-  "params_total": 2
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_malapert",
@@ -176,12 +133,13 @@
   "count": 20,
   "new_count": 20,
   "params_used": [
+   "aridity",
    "ground_ice",
    "roughness_m",
    "slope_deg",
    "sun_elevation_deg"
   ],
-  "params_total": 4
+  "params_total": 5
  },
  {
   "target_id": "moon_marius_hills",
@@ -200,17 +158,9 @@
  {
   "target_id": "moon_marius_hills",
   "test_id": "ice_drilling",
-  "file": "moon_marius_hills_ice_drilling.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "ground_ice",
-   "slope_deg",
-   "surface_temp_c",
-   "temp_range_c"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Hedefte ground_ice = 0.0; bu test en az 0.25 gerektirir (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_marius_hills",
@@ -230,40 +180,23 @@
  {
   "target_id": "moon_marius_hills",
   "test_id": "dust",
-  "file": "moon_marius_hills_dust.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "roughness_m",
-   "slope_deg",
-   "temp_range_c"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_marius_hills",
   "test_id": "biosignature_arid",
-  "file": "moon_marius_hills_biosignature_arid.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "temp_range_c"
-  ],
-  "params_total": 3
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_marius_hills",
   "test_id": "biosignature_carbonate",
-  "file": "moon_marius_hills_biosignature_carbonate.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "carbonate_index",
-   "mafic_index"
-  ],
-  "params_total": 2
+  "file": null,
+  "count": 0,
+  "reason": "Bu test sadece Mars hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "moon_marius_hills",
@@ -272,12 +205,13 @@
   "count": 20,
   "new_count": 20,
   "params_used": [
+   "aridity",
    "ground_ice",
    "roughness_m",
    "slope_deg",
    "sun_elevation_deg"
   ],
-  "params_total": 4
+  "params_total": 5
  },
  {
   "target_id": "mars_jezero",
@@ -297,17 +231,9 @@
  {
   "target_id": "mars_jezero",
   "test_id": "ice_drilling",
-  "file": "mars_jezero_ice_drilling.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "ground_ice",
-   "slope_deg",
-   "surface_temp_c",
-   "temp_range_c"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Hedefte ground_ice = 0.0; bu test en az 0.25 gerektirir (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "mars_jezero",
@@ -371,12 +297,13 @@
   "count": 20,
   "new_count": 20,
   "params_used": [
+   "aridity",
    "ground_ice",
    "roughness_m",
    "slope_deg",
    "sun_elevation_deg"
   ],
-  "params_total": 4
+  "params_total": 5
  },
  {
   "target_id": "mars_gale",
@@ -396,32 +323,16 @@
  {
   "target_id": "mars_gale",
   "test_id": "ice_drilling",
-  "file": "mars_gale_ice_drilling.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "ground_ice",
-   "slope_deg",
-   "surface_temp_c",
-   "temp_range_c"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Hedefte ground_ice = 0.0; bu test en az 0.25 gerektirir (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "mars_gale",
   "test_id": "lava_tube",
-  "file": "mars_gale_lava_tube.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "mafic_index",
-   "roughness_m",
-   "slope_deg",
-   "temp_range_c"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Hedefte mafic_index = 0.5; bu test en az 0.75 gerektirir (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "mars_gale",
@@ -470,12 +381,13 @@
   "count": 20,
   "new_count": 20,
   "params_used": [
+   "aridity",
    "ground_ice",
    "roughness_m",
    "slope_deg",
    "sun_elevation_deg"
   ],
-  "params_total": 4
+  "params_total": 5
  },
  {
   "target_id": "mars_arcadia",
@@ -510,17 +422,9 @@
  {
   "target_id": "mars_arcadia",
   "test_id": "lava_tube",
-  "file": "mars_arcadia_lava_tube.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "aridity",
-   "mafic_index",
-   "roughness_m",
-   "slope_deg",
-   "temp_range_c"
-  ],
-  "params_total": 5
+  "file": null,
+  "count": 0,
+  "reason": "Hedefte mafic_index = 0.5; bu test en az 0.75 gerektirir (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "mars_arcadia",
@@ -553,14 +457,9 @@
  {
   "target_id": "mars_arcadia",
   "test_id": "biosignature_carbonate",
-  "file": "mars_arcadia_biosignature_carbonate.geojson",
-  "count": 20,
-  "new_count": 20,
-  "params_used": [
-   "carbonate_index",
-   "mafic_index"
-  ],
-  "params_total": 2
+  "file": null,
+  "count": 0,
+  "reason": "Hedefte carbonate_index = 0.0; bu test en az 0.25 gerektirir (test_profiles.yaml > applies_to)"
  },
  {
   "target_id": "mars_arcadia",
@@ -569,11 +468,12 @@
   "count": 20,
   "new_count": 20,
   "params_used": [
+   "aridity",
    "ground_ice",
    "roughness_m",
    "slope_deg",
    "sun_elevation_deg"
   ],
-  "params_total": 4
+  "params_total": 5
  }
 ]

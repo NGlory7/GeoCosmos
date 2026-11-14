@@ -20,7 +20,8 @@ import pandas as pd
 
 from core.breakdown import breakdown_for
 from core.geo import spread_pick
-from core.profiles import Parameter, TestProfile, load_parameters, load_scoring, normalize_weights
+from core.profiles import (Parameter, TestProfile, load_parameters, load_scoring, normalize_weights,
+                           not_applicable)
 from core.schemas import SCORE_KEYS, Analog, AnalogParam, Scores, Target
 
 MATCH_THRESHOLD = 0.5  # parametre benzerliği bunun üstündeyse kartta "benziyor"
@@ -33,6 +34,34 @@ def usable_weights(
     return normalize_weights({k: w for k, w in weights.items() if k in target.params}, params)
 
 
+def skip_reason(target: Target, profile: TestProfile, params: dict[str, Parameter]) -> str | None:
+    """Bu hedef × test hiç puanlanmayacaksa sebebi (index.json > reason). Keşif, ısı haritası,
+    yakın tarama ve doğrulama aynı kuralı kullanır."""
+    if not usable_weights(profile.weights, target, params):
+        return "Hedefte bu testin parametrelerinden hiçbiri yok (config/targets.yaml)"
+    return not_applicable(profile, target)
+
+
+def invalid_cells(grid: pd.DataFrame, key: str, params: dict[str, Parameter]) -> np.ndarray:
+    """Parametrenin geçerlilik koşulu (valid_if) sağlanmayan kareler.
+
+    Ör. kuraklık eşiğin altındaysa yüzey bitki örtülüdür: ASTER mineral indeksi kayacı değil bitkiyi
+    ölçer. Bu "bilinmiyor" (bulut boşluğu gibi eksik veri) DEĞİL, gözlenmiş bir farklılıktır: yüzeyde
+    açık kayaç yok. Bu yüzden benzerlik 0 sayılır (similarity). Koşul sütununun kendisi eksikse
+    kare geçersiz sayılmaz: bilmiyoruz.
+    """
+    rule = params[key].valid_if
+    if not rule or rule[0] not in grid:
+        return np.zeros(len(grid), bool)
+    return grid[rule[0]].to_numpy(dtype=float) < rule[1]  # NaN < eşik False
+
+
+def earth_values(grid: pd.DataFrame, key: str, params: dict[str, Parameter]) -> np.ndarray:
+    """Karelerin Dünya değeri; geçersiz karelerde NaN (kartta "—", sayı olarak gösterilmez)."""
+    earth = grid[key].to_numpy(dtype=float) if key in grid else np.full(len(grid), np.nan)
+    return np.where(invalid_cells(grid, key, params), np.nan, earth)
+
+
 def similarity(grid: pd.DataFrame, target: Target, keys: list[str],
                params: dict[str, Parameter], at_least: tuple[str, ...] = ()) -> pd.DataFrame:
     """Her kare × parametre için 0-1 benzerlik. Eksik Dünya verisi NaN kalır (score_grid ele alır)."""
@@ -42,8 +71,8 @@ def similarity(grid: pd.DataFrame, target: Target, keys: list[str],
         diff = earth - target.params[k].value
         if k in at_least:
             diff = np.minimum(diff, 0.0)  # NaN korunur (np.minimum NaN'ı yayar)
-        s = 1 - np.abs(diff) / params[k].tolerance
-        out[k] = np.clip(s, 0, 1)
+        s = np.clip(1 - np.abs(diff) / params[k].tolerance, 0, 1)
+        out[k] = np.where(invalid_cells(grid, k, params), 0.0, s)  # gözlenmiş farklılık: benzemiyor
     return pd.DataFrame(out, index=grid.index)
 
 
@@ -97,7 +126,16 @@ def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int
     """
     params = params or load_parameters()
     scored = score_grid(grid, target, weights or profile.weights, params, profile.at_least)
-    ranked = scored.sort_values("score_total", ascending=False, kind="stable")
+    # Eşit skorda sıra (sadece liste; skor ve doğrulama sırası değişmez): 0-1 sıralı ASTER ölçeğinde
+    # birçok kare tam puan alabiliyor. Önce at_least parametrelerinde hedefi daha çok aşan (gerekçesi
+    # test_profiles.yaml'da: fazlası daha iyi), sonra ölçülebilen ağırlık payı yüksek olan öne alınır.
+    excess = np.zeros(len(scored))
+    for k in profile.at_least:
+        if f"sim_{k}" in scored:
+            over = (earth_values(scored, k, params) - target.params[k].value) / params[k].tolerance
+            excess += np.nan_to_num(np.clip(over, 0, None))
+    ranked = (scored.assign(_excess=excess)
+              .sort_values(["score_total", "_excess", "coverage"], ascending=False, kind="stable"))
     if min_separation_km > 0:
         # Sadece en iyi kısımda ara: n * 200 kare, seyrek seçim için fazlasıyla yeter.
         head = ranked.head(max(n * 200, 1000))
@@ -109,8 +147,10 @@ def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int
     breakdown = breakdown_for(target.body, profile)
 
     analogs = []
+    # Kartta da geçersiz değer (ör. bitki örtüsü altında ASTER) "—" görünür, sayı olarak değil.
+    valid = {k: earth_values(best, k, params) for k in used}
     for rank, (_, row) in enumerate(best.iterrows(), start=1):
-        earth = {k: (None if pd.isna(row.get(k)) else float(row[k])) for k in used}
+        earth = {k: (None if np.isnan(valid[k][rank - 1]) else float(valid[k][rank - 1])) for k in used}
         analogs.append(Analog(
             id=str(row["id"]),
             name=str(row.get("name", row["id"])),

@@ -14,20 +14,24 @@ function TestPicker({ body, target, meta, index }: { body: Body; target: TargetW
         const keys = Object.keys(test.weights);
         const have = keys.filter((k) => k in target.params).length;
         const entry = index?.find((e) => e.target_id === target.id && e.test_id === test.id);
-        const disabled = have === 0;
-        const status = index === null ? "Dünya verisi bekleniyor" : entry?.file ? `${entry.count} aday · ${entry.new_count ?? 0} yeni` : "sonuç yok";
+        // index.json'da dosyası olmayan kayıt: test bu hedefte anlamsız (test_profiles.yaml > applies_to)
+        const skipped = index !== null && entry !== undefined && !entry.file;
+        const disabled = have === 0 || skipped;
+        const status =
+          index === null ? "Dünya verisi bekleniyor" : entry?.file ? `${entry.count} aday · ${entry.new_count ?? 0} yeni` : "bu hedefte uygulanmaz";
         return (
           <Link
             key={test.id}
             to={disabled ? "#" : `/${body}/${target.id}/${test.id}`}
             aria-disabled={disabled}
+            title={skipped ? entry?.reason : undefined}
             className={`flex items-center justify-between gap-3 rounded-lg border px-3 py-2 text-sm transition-colors ${
               disabled ? "pointer-events-none border-white/5 text-slate-600" : "border-white/10 text-slate-200 hover:border-cyan-400/40 hover:bg-cyan-400/5"
             }`}
           >
             <span>{test.label}</span>
             <span className="shrink-0 font-mono text-[10px] text-slate-500">
-              {have}/{keys.length} PARAM · {status}
+              {skipped ? status : `${have}/${keys.length} PARAM · ${status}`}
             </span>
           </Link>
         );

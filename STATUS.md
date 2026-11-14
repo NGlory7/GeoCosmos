@@ -17,8 +17,9 @@
 | Gerçek Dünya verisi (`grid.parquet`) | ✅ Hazır (14 Kasım) | 470 karo, 250.022 kare (60.144 maskeli), 49 dk (`pipeline.ee_fetch`). Repoda: ekibin Earth Engine'e ihtiyacı yok |
 | **İlk doğrulama** | ❌ 0/4 | Teşhis ve sıradaki karar: aşağıda "Karar bekleyenler" |
 | Hedef değerleri (`config/targets.yaml`) | ✅ Hazır | Mars hedefleri tüm parametreler; Ay'da sadece tanımı gereği olmayanlar boş. Üç betikle yeniden üretilebilir |
-| Gemini yorumları | ✅ Hazır | Her dosyada ilk 5 aday (210 yorum, uydurma sayı kontrolünden geçti). `make data` mevcut yorumları korur, sadece yenilerini üretir |
-| Üs kurulumu ve iniş alanı testi (`base_site`) | ✅ Hazır (14 Kasım) | Eğim, pürüzlülük, **aydınlanma** (yıllık ortalama öğlen güneş yüksekliği) ve buz. Ayar yeri yok, ağırlıklar önceden sabit |
+| Gemini yorumları | 🟡 Eksik var | Sonuç temizliğinden sonra ilk 5 adayın 125 yerinin 85'inde yorum var (korundu); **40 yeni aday yorum bekliyor**: `.env` > `GEMINI_API_KEY` ile `make data`. Mevcut yorumlar korunur, sadece yenileri üretilir |
+| Üs kurulumu ve iniş alanı testi (`base_site`) | ✅ Hazır (14 Kasım) | Eğim, pürüzlülük, **aydınlanma** (yıllık ortalama öğlen güneş yüksekliği), buz ve kuraklık (çıplak yüzey; sonuç temizliğinde eklendi). Ayar yeri yok |
+| Hedef × test uygulanabilirliği | ✅ Hazır (14 Kasım) | 42 kombinasyonun 25'i anlamlı; Ay'da toz ve biyo-imza, buzsuz hedefte buz sondajı, mafik olmayan hedefte lav tüpü çalışmaz (`test_profiles.yaml > applies_to`). Arayüzde "bu hedefte uygulanmaz" |
 | Frontend (`frontend/`) | ✅ Hazır | Giriş (Çağrı) → Ay/Mars küresi (NASA Trek mozaiği) + hedef ve test seçimi → Dünya haritası (NASA GIBS + ısı haritası + pinler) → analog kartı → senaryo kutusu; doğrulama paneli. Veri yokken her ekran "henüz çalıştırılmadı" der |
 | Yayın (GitHub Pages) | ⏳ Repo ayarı bekleniyor | `.github/workflows/pages.yml` hazır; aşağıdaki "Yayın" bölümü |
 
@@ -105,6 +106,27 @@ Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yak�
 
 Öne çıkan yeni aday örneği: Gale × toz testinde ilk adaylar Taklamakan Çölü / Tarım Havzası (dünyanın büyük toz kaynaklarından).
 
+## Sonuç temizliği (14 Kasım akşam)
+
+Uçtan uca testte jürinin göreceği anlamsız 1 numaralar bulundu: Ay hedeflerinde toz ve biyo-imza testleri (Shackleton biyo-imza 1/3 parametreyle 99,6), karbonat testinde Kosta Rika / Panama tropikleri ve her hedefte ilk 20 adayın 20'si 100 puan, üs testinde Serengeti (Marius Hills) ve Amur taygası (Arcadia). Üç kural eklendi; üçü de **ilk sonuçlar görüldükten sonra** eklendi ve sunumda böyle söylenmeli:
+
+1. **Uygulanabilirlik** (`test_profiles.yaml > applies_to`): Ay'da toz ve biyo-imza yok; buz sondajı hedefte buz ≥ 0,25, lav tüpü mafik ≥ 0,75, karbonat testi karbonat ≥ 0,25 ister. 42 kombinasyonun 25'i kalır; doğrulama setinin bütün kombinasyonları korunur.
+2. **Bitki örtüsü altında ASTER** (`parameters > valid_if`): kuraklık < 0,3 olan karede mafik ve karbonat indeksi kayacı değil bitkiyi ölçer. Bu **eksik veri değil, gözlenmiş farklılık**: benzerlik 0 (yüzeyde açık kayaç yok), kartta değer "—". İlk denemede "bilinmiyor" (NaN) uygulandı; bu, bitkili karelerin rover testinde mafik cezasından kurtulup Holuhraun'un ve Hanksville'in önüne geçmesine yol açtı. İlke gereği "benzemiyor"a çevrildi. İki ölçüm de aşağıda; seçim sınav sonucu görüldükten sonra yapıldı.
+3. **Üs testine kuraklık** (ağırlık 0,20; diğerleri oranla küçüldü): ilk sürüm yüzeyin çıplak olduğunu varsayıyordu. Testin doğrulama yeri yok.
+4. Eşit skorda liste sırası: tek yönlü (at_least) parametrede hedefi daha çok aşan öne alınır. Skor ve doğrulama sırası değişmez.
+
+| Yer | Grup | Önce | 2. kural "bilinmiyor" | **2. kural "benzemiyor" (uygulanan)** |
+| --- | --- | --- | --- | --- |
+| Holuhraun | ayar | %12,0 | %23,9 | **%8,2** |
+| Hanksville | **sınav** | %18,1 | %31,4 | **%12,4** |
+| Salda | **sınav** | %49,5 | %29,2 | **%29,2** |
+| Lanzarote | rapor | %56,0 | %68,1 | **%48,7** |
+| Yungay, Haughton, Svalbard, Lut | — | değişmedi | | |
+
+**Sonuç hâlâ 0/4.** Yerlerin kendi skorları değişmedi (hepsinin kuraklığı ≥ 0,39); değişen, rakip karelerdir.
+
+Yeni 1 numaralar (yer adları OpenStreetMap Nominatim): Marius Hills × üs → Abyan kıyı çölü (Yemen); Arcadia × üs → Çakılık, Taklamakan'ın doğusu (Çin); Gale × üs → Caravelí kıyı çölü (Peru); Jezero × karbonat → Kuzey Turkana (Kenya); Gale × karbonat → Garowe, Puntland (Somali). Karbonat testinde 100 puanlık eşitlik sürüyor (0-1 sıralı ölçeğin çözünürlüğü); sıra artık daha çok karbonatı öne alıyor.
+
 ## Karar bekleyenler
 
 | Konu | Not |
@@ -129,7 +151,7 @@ Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yak�
 - **Ay'da Dünya karşılığı olmayan değerler.** Örneğin Marius Hills'in 295 °C'lik gece-gündüz farkı; bu parametre her yerde 0 benzerlik alır ve kartta kopma olarak görünür.
 - **Krater ayrı bir parametre değil.** Challenge kraterleri bir analog boyutu olarak sayıyor, ama Dünya'da tüm karaları kapsayan güvenilir bir krater haritası yok: kraterlerin çoğu aşınmış, gömülmüş ya da bitki altında; doğrulanmış çarpma yapıları ~200 tane ve çoğu 25 km kareden küçük. Krater arazisi motorda eğim ve pürüzlülük (topografya boyutu) üzerinden yakalanır. Bilinen krater analogları zaten tanındığı için keşif dışı listededir: Meteor Krateri ve Ries (`config/known_analogs.yaml > exclude_only`); Haughton Krateri ise buz sondajı testinin ayar yerlerinden biri. Sunumda söylenecek: "Krateri doğrudan aramıyoruz; krater benzeri araziyi eğim ve pürüzlülükle buluyoruz, bilinen kraterleri tekrar önermiyoruz."
 - **Aydınlanma geometrik.** Güneş yüksekliği sadece enlemden hesaplanır; Malapert gibi tepelerin daha uzun güneş alması (yerel ufuk) hesaba katılmaz. Dünya karada en fazla ~84°K'ye çıkar (öğlen güneşi ortalama ~6°); Ay kutbunun 0–4°'si Dünya'da tam karşılanamaz.
-- **Üs testinde Malapert'in ikilemi.** Malapert kadar engebeli (pürüzlülük ~470 m) yerler orta enlem dağları (Karakurum), kutup ışığına yakın yerler ise yüksek Arktik (Ellesmere, 81°K). Dünya'da ikisi bir arada yok; kartta güneş yüksekliği ✗ olarak görünür. Shackleton için ilk aday Ellesmere Adası (81,5°K).
+- **Üs testinde Malapert'in ikilemi.** Malapert kadar engebeli (pürüzlülük ~470 m) yerler orta enlem dağları (Karakurum), kutup ışığına yakın yerler ise yüksek Arktik (Ellesmere, 81°K). Dünya'da ikisi bir arada yok; kartta güneş yüksekliği ✗ olarak görünür. Shackleton için ilk aday Ellesmere Adası çevresi (82,0°K; sonuç temizliğinden önce 81,5°K).
 - **Tuz düzlükleri taranıyor, tuz ölçülmüyor.** Uyuni, Atacama tuzlaları ve Ölüm Vadisi maskeli değil; kurak, düz ve çıplak arazi olarak aday olabilirler. Ama ayrı bir tuz / evaporit parametresi yok, çünkü altı hedefin hiçbiri tuz birikintisi değil. Sunumda söylenecek: "Tuz düzlükleri taramamızda var; hedeflerimiz tuz birikintisi olmadığı için ayrı tuz ölçümü eklemedik. Mars'ta klorür ya da sülfat hedefi seçilirse eklenecek ilk parametre bu (ASTER kısa dalga evaporit indeksi)."
 - **Buzullar ve buz tabakaları bilerek dışarıda.** Grönland iç kesimi, Antarktika buz tabakası ve dağ buzulları (MODIS sınıf 15, kalıcı kar ve buz) tüm testlerde maskeli. `ground_ice` donmuş zemini (permafrost) ölçer, buz kütlesini değil; maskelenmeseydi Ay'ın buzlu regolitine en çok "benzeyen" yer bir buz tabakası çıkardı, bu yanlış olurdu. Buzsuz kutup arazisi (Kanada Arktik adaları, Svalbard'ın buzsuz kıyıları) taramada.
 - **Madenler kapsam dışı.** Maden sahalarını gösteren küresel, tutarlı bir NASA verisi yok; hedeflerin hiçbiri madencilik ya da kaynak çıkarma testi değil (buzdan su elde etme `ice_drilling` testinde).
