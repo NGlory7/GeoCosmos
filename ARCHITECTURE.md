@@ -156,6 +156,47 @@ Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun il
 }
 ```
 
+### Analog listesi (`analogs/index.json`)
+
+Hangi hedef × test dosyasının var olduğunu ve neden olmadığını söyler. Frontend dosya adını tahmin etmek yerine buradan okur.
+
+```json
+[
+  { "target_id": "mars_jezero", "test_id": "rover", "file": "mars_jezero_rover.geojson",
+    "count": 20, "new_count": 17, "params_used": ["aridity", "mafic_index"], "params_total": 6 },
+  { "target_id": "moon_malapert", "test_id": "dust", "file": null, "count": 0,
+    "reason": "Hedefte bu testin parametrelerinden hiçbiri yok (config/targets.yaml)" }
+]
+```
+
+`params_used` / `params_total`: hedefte değeri girilmiş parametre sayısı. Düşükse kartta "bu sonuç X/Y parametreyle hesaplandı" uyarısı gösterilmeli.
+
+### Doğrulama (`validation.json`)
+
+```json
+{
+  "hits": 3, "min_hits": 3, "holdout_total": 4, "top_percent": 1, "passed": true, "denominator": 152340,
+  "analogs": [
+    { "id": "salda", "name": "Salda Gölü kıyısı (Türkiye)", "test_id": "biosignature", "split": "holdout",
+      "targets": ["mars_jezero"], "status": "ok", "target_id": "mars_jezero",
+      "score_total": 71.2, "rank": 840, "percentile": 0.551, "hit": true, "cell_id": "g25_37.550_29.680",
+      "note": "...", "past_tests": [{ "title": "...", "url": "..." }] }
+  ]
+}
+```
+
+`status`: `ok` · `missing_cell` (grid'de karesi yok, ör. bölgesel grid) · `no_target_values` (hedefte bu testin değeri yok). `hit` sadece `ok` kayıtlarda vardır.
+
+### Isı haritaları (`heatmaps/index.json` + `heatmaps/<hedef>_<test>.png`)
+
+```json
+{ "crs": "EPSG:3857", "bounds": [[-85, -180], [84, 180]], "value": "score_total",
+  "vmin": 0, "vmax": 100, "colormap": "magma",
+  "files": [{ "target_id": "mars_jezero", "test_id": "rover", "file": "mars_jezero_rover.png" }] }
+```
+
+PNG satırları Web Mercator'dadır; Leaflet'te `L.imageOverlay(url, bounds)` ile doğrudan oturur. Saydam pikseller: veri yok ya da maskeli.
+
 ### Sabit kimlikler
 
 | Alan | Değerler |
@@ -217,10 +258,11 @@ GeoCosmos/
 │   ├── ee_export.py          # Earth Engine → CSV
 │   ├── features.py           # CSV → normalize edilmiş grid.parquet
 │   ├── target_values.py      # Mars/Ay DEM → hedef eğim/pürüzlülük (Dünya ile aynı kural)
+│   ├── permafrost.py         # ESA CCI Permafrost NetCDF → kare başına ground_ice (yerel)
 │   ├── discovery.py          # global kaba + yakın tarama
 │   ├── validation.py         # ünlü analog testi
 │   ├── commentary.py         # Gemini yorumları
-│   ├── heatmap.py            # PNG ısı haritaları
+│   ├── heatmap.py            # PNG ısı haritaları (Web Mercator)
 │   └── build.py              # hepsini sırayla çalıştırır
 │
 ├── api/                      # Canlı FastAPI sunucusu
@@ -262,6 +304,8 @@ GeoCosmos/
 │   ├── test_ee_export.py     # şerit planı ve kare ızgara
 │   ├── test_target_values.py # hedef DEM hesabı
 │   ├── test_api.py           # CORS
+│   ├── test_permafrost.py    # NetCDF → ground_ice
+│   ├── test_pipeline.py      # discovery → validation → heatmap → commentary → build
 │   └── test_validation.py    # "sınav yerleri en iyi %1'de mi?" otomatik testi
 ├── notebooks/
 ├── docs/
@@ -270,6 +314,7 @@ GeoCosmos/
 ├── .env.example
 ├── ARCHITECTURE.md
 ├── DATA_SOURCES.md
+├── STATUS.md                 # yapılanlar / yapılacaklar
 ├── ROADMAP.md
 └── README.md
 ```
@@ -300,10 +345,13 @@ cd frontend && npm install
 
 | Komut | Ne yapar |
 | --- | --- |
-| `make data` | `pipeline/build.py` çalışır, `frontend/public/data/` dosyalarını üretir |
+| `make preview` | Earth Engine bağlantı denemesi (Salda çevresinden 5 satır) |
+| `make export` | Tüm karaları Drive'a CSV olarak export eder (61 görev) |
+| `make grid` | `data/raw/*.csv` (+ `data/raw/permafrost/*.nc`) → `data/processed/grid.parquet` |
+| `make data` | `pipeline/build.py`: hedefler, analoglar, doğrulama, ısı haritaları, Gemini yorumları |
 | `make api` | FastAPI sunucusunu açar (`localhost:8000`) |
 | `make web` | Frontend'i açar (`localhost:5173`) |
-| `make test` | Doğrulama testini çalıştırır |
+| `make test` | Tüm testler (GitHub Actions her push'ta da çalıştırır) |
 
 ## Ortam değişkenleri
 

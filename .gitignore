@@ -17,3 +17,4 @@ dist/
 
 # Gemini önbelleği (yerel)
 data/processed/gemini_cache.json
+data/processed/commentary_cache.json

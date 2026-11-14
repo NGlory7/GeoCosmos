@@ -182,10 +182,11 @@ def build_image(cell_km: float, lat: float):
     assets = [a.strip() for a in os.getenv("EE_PERMAFROST_ASSETS", "").split(",") if a.strip()]
     if assets:
         pf = ee.ImageCollection([ee.Image(a).select(0) for a in assets]).mosaic()
-        pf = pf.unmask(0).setDefaultProjection(ee.Image(assets[0]).projection()).rename("permafrost")
+        # PFR yüzde (0-100) -> oran (0-1). Tercih edilen yol yerel dosyadır (pipeline/permafrost.py).
+        pf = pf.unmask(0).divide(100).setDefaultProjection(ee.Image(assets[0]).projection()).rename("permafrost")
         permafrost = grid(pf, 1000)
     else:
-        print("UYARI: EE_PERMAFROST_ASSETS yok; permafrost sütunu boş kalacak (ground_ice NaN).")
+        # Normal yol: features.py ground_ice'ı data/raw/permafrost/*.nc dosyasından yerelde hesaplar.
         permafrost = ee.Image.constant(exp["nodata"]).rename("permafrost")
 
     # --- Maskeler: WorldCover sınıf oranları (10 m -> 500 m -> kare)

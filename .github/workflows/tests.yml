@@ -1,0 +1,28 @@
+# Her push ve PR'da: testler + "frontend/public/data, config ile güncel mi?" kontrolü.
+name: testler
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Bağımlılıklar
+        run: pip install -r requirements.txt
+      - name: Testler
+        run: python -m pytest -q
+      - name: make data (grid.parquet yoksa sadece hedefler)
+        run: python -m pipeline.build --skip-commentary
+      - name: Üretilen dosyalar commit'lenmiş mi
+        run: |
+          if ! git diff --exit-code -- frontend/public/data/; then
+            echo "::error::frontend/public/data güncel değil. Yerelde 'python -m pipeline.build' çalıştırıp sonucu commit'leyin."
+            exit 1
+          fi

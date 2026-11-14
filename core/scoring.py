@@ -13,6 +13,7 @@ import numpy as np
 import pandas as pd
 
 from core.breakdown import breakdown_for
+from core.geo import spread_pick
 from core.profiles import Parameter, TestProfile, load_parameters, normalize_weights
 from core.schemas import SCORE_KEYS, Analog, AnalogParam, Scores, Target
 
@@ -63,15 +64,25 @@ def score_grid(grid: pd.DataFrame, target: Target, weights: dict[str, float],
 
 def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int = 20,
                 weights: dict[str, float] | None = None,
-                params: dict[str, Parameter] | None = None) -> list[Analog]:
+                params: dict[str, Parameter] | None = None,
+                min_separation_km: float = 0) -> list[Analog]:
     """En iyi n kareyi veri sözleşmesindeki Analog formatında döndürür.
 
     grid sütunları: id, name, lat, lon, parametre sütunları; opsiyonel is_new ve ops_<etiket>.
     weights verilirse profilin ağırlıkları yerine o kullanılır (/scenario).
+    min_separation_km > 0 ise seçilen kareler birbirine bu mesafeden yakın olmaz
+    (config/grid.yaml > discovery.min_separation_km).
     """
     params = params or load_parameters()
     scored = score_grid(grid, target, weights or profile.weights, params)
-    best = scored.nlargest(n, "score_total")
+    ranked = scored.sort_values("score_total", ascending=False, kind="stable")
+    if min_separation_km > 0:
+        # Sadece en iyi kısımda ara: n * 200 kare, seyrek seçim için fazlasıyla yeter.
+        head = ranked.head(max(n * 200, 1000))
+        best = head.iloc[spread_pick(head["lat"].to_numpy(float), head["lon"].to_numpy(float),
+                                     n, min_separation_km)]
+    else:
+        best = ranked.head(n)
     used = [c[4:] for c in scored.columns if c.startswith("sim_")]
     breakdown = breakdown_for(target.body, profile)
 

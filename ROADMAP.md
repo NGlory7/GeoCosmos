@@ -164,14 +164,14 @@ Teknoloji seçimleri, veri sözleşmesi, API, Gemini kuralları ve klasör yapı
 
 - [ ] Resmi kuralları okuyun: Önceden ne hazırlanabilir (kod, veri, sadece fikir)? Teslim şartları neler (video süresi, demo linki, proje sayfası)?
 - [ ] Herkes Google Earth Engine hesabı açsın (onay gecikebilir, en erken iş bu).
-- [ ] NASA Earthdata Login ve CEDA hesabı açın; ESA CCI Permafrost dosyasını indirin ([DATA_SOURCES.md](DATA_SOURCES.md#hesaplar-ve-erişim)).
+- [ ] NASA Earthdata Login hesabı açın. ESA CCI Permafrost dosyası indirildi, ekipte elden dağıtılıyor (`data/raw/permafrost/`) ([DATA_SOURCES.md](DATA_SOURCES.md#hesaplar-ve-erişim)).
 - [ ] Earth Engine'de **tüm karalar için** 25 km'lik tek bir katmanı (Copernicus DEM eğimi) CSV olarak dışa aktarmayı deneyin. Süreyi not edin.
 - [ ] Gemini API anahtarı alın, ücretsiz kullanım limitlerini not edin.
 - [ ] Moon Trek ve Mars Trek katmanlarını Leaflet'te deneyin. Çalışmazsa B planı statik mozaik görüntü.
-- [ ] 6 hedefin koordinatlarını ve parametre değerlerini kaynaklarıyla `targets.yaml` dosyasına yazın.
-- [ ] Doğrulama setindeki 8 yer için geçmiş test kaynaklarını (link) toplayın.
-- [ ] Her test amacı için ağırlıkların ilk taslağını yazın (`test_profiles.yaml`).
-- [ ] Repo, klasör iskeleti, `.gitignore` ve rol dağılımı hazır olsun.
+- [ ] 6 hedefin koordinatlarını ve parametre değerlerini kaynaklarıyla `targets.yaml` dosyasına yazın. (Mineral, buz, kuraklık girildi; eğim, sıcaklık, toz eksik: [STATUS.md](STATUS.md))
+- [x] Doğrulama setindeki 8 yer için geçmiş test kaynaklarını (link) toplayın.
+- [x] Her test amacı için ağırlıkların ilk taslağını yazın (`test_profiles.yaml`).
+- [x] Repo, klasör iskeleti, `.gitignore` ve rol dağılımı hazır olsun.
 - [ ] Veri sözleşmesini ([ARCHITECTURE.md](ARCHITECTURE.md#veri-sözleşmesi)) birlikte okuyun; hackathonun ilk 2 saatinde dondurulacak.
 
 ## 48 saatlik plan

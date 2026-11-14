@@ -5,6 +5,7 @@ Ay ve Mars'taki bir hedef ve test amacı için Dünya'nın tamamını NASA veris
 - Ne zaman, kim: [ROADMAP.md](ROADMAP.md)
 - Nasıl: [ARCHITECTURE.md](ARCHITECTURE.md)
 - Hangi veri, nereden: [DATA_SOURCES.md](DATA_SOURCES.md)
+- **Şu an ne durumda, sırada ne var: [STATUS.md](STATUS.md)**
 
 ## Yapı
 

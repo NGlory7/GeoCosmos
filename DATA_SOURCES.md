@@ -8,13 +8,13 @@
 
 | Kaynak | Ne için | Nasıl erişiyoruz |
 | --- | --- | --- |
-| **NASA Earthdata Search** | MODIS, GPM IMERG, ASTER GED, EMIT, SEDAC ürünlerinin resmi kaynağı ve atıfı | Hesaplama Earth Engine'deki aynı ürünlerle; DOI ve atıf Earthdata'dan |
+| **NASA Earthdata Search** | MODIS (LST, NDVI, MAIAC AOD, MCD12Q1 buz maskesi), GPM IMERG, ASTER GED, EMIT, SEDAC ürünlerinin resmi kaynağı ve atıfı | Hesaplama Earth Engine'deki aynı ürünlerle; DOI ve atıf Earthdata'dan |
 | **NASA Worldview** | Keşif adaylarının elle kontrolü (aşama 4), sunum görselleri | Tarayıcı; MODIS/VIIRS gerçek renk, AOD, kar örtüsü katmanları |
 | **NASA PDS** | Mars hedef değerleri: MOLA (eğim, pürüzlülük), TES (sıcaklık, toz opaklığı, mineral), THEMIS, CRISM (karbonat/kil) | PDS Geosciences Node ürünleri; gerektiğinde Mars Trek üzerinden görsel |
 | **NASA LRO (LOLA, LEND, Mini-RF, LROC)** | Ay hedef değerleri: LOLA eğim/pürüzlülük, LEND hidrojen (buz), Mini-RF radar (pürüzlülük/buz) | PDS Geosciences Node LRO sayfası |
 | **NASA LRO Diviner** | Ay yüzey sıcaklığı ve gece-gündüz farkı; kutup ürünleri Shackleton ve Malapert için | PDS Geosciences Node Diviner sayfası (polar ve resource ürünleri) |
 | **ESA Copernicus Data Space** | Copernicus DEM GLO-30 (Dünya eğimi, SRTM'nin yerine); Sentinel-2 görüntüsü (aşama 4); Sentinel-1 SAR (opsiyonel) | Earth Engine'deki kopyası (`COPERNICUS/DEM/GLO30`, `COPERNICUS/S2_SR_HARMONIZED`, `COPERNICUS/S1_GRD`) |
-| **ESA Open Science Catalog** | ESA CCI Permafrost (donmuş zemin), ESA WorldCover (maske) | CCI: CEDA'dan NetCDF indirilip yerelde ızgaraya ortalanır; WorldCover: `ESA/WorldCover/v200` |
+| **ESA Open Science Catalog** | ESA CCI Permafrost (donmuş zemin), ESA WorldCover (maske) | CCI: CEDA'dan NetCDF (v5.0, 2023, Kuzey Yarımküre) `data/raw/permafrost/` altına konur, `pipeline/permafrost.py` yerelde ızgaraya ortalar; WorldCover: `ESA/WorldCover/v200` |
 | **JAXA G-Portal** | GSMaP yağış (IMERG ile çapraz kontrol); GCOM-C SGLI yüzey sıcaklığı (opsiyonel kontrol) | GSMaP Earth Engine'de (`JAXA/GPM_L3/GSMaP/v8/operational`); SGLI G-Portal'dan |
 | **CSA RADARSAT-1 / RCM** | Lav akıntısı adaylarında yüzey dokusunun radar ile elle kontrolü; Ay Mini-RF ile görsel karşılaştırma | CSA açık veri portalı; işleme için CSA SAR Python eğitimi |
 
@@ -32,7 +32,7 @@ Tüm Dünya değerleri 25 km'lik (yakın taramada 5 km) karelere ortalanır. Mar
 | `dust_aod` | MODIS MAIAC AOD 550 nm (MCD19A2), yıllık ortalama | TES toz opaklığı, görünür banda çevrilmiş | Değer yok (atmosfer yok) → parametre atılır | Optik derinlik |
 | `mafic_index` | ASTER GED (AG100) TIR emisivite → Ninomiya mafik indeks → 0–1 | TES / CRISM, elle 0–1 | LROC / Lunar Prospector, elle 0–1 (mare bazalt yüksek) | 0–1 sıralı |
 | `carbonate_index` | ASTER GED TIR → Ninomiya karbonat indeks → 0–1 | CRISM tespitleri, elle 0–1 | Sabit 0 | 0–1 sıralı |
-| `ground_ice` | ESA CCI Permafrost fraction (1 km, K. Yarımküre + Antarktika) | SWIM buz tutarlılığı / SHARAD, elle 0–1 | LEND + Diviner (kalıcı gölge), elle 0–1 | 0–1 |
+| `ground_ice` | ESA CCI Permafrost PFR (yüzde → oran, 0,01°, 25°K–85°K; yerelde `pipeline/permafrost.py`) | SWIM buz tutarlılığı / SHARAD, elle 0–1 | LEND + Diviner (kalıcı gölge), elle 0–1 | 0–1 |
 
 ### 0–1 sıralı ölçek
 
@@ -65,7 +65,7 @@ Kartta ✓/✗ olarak gösterilir, skora girmez.
 | EMIT | Sadece ~52°K–52°G ve kurak bölgeler | Skora girmez; aşama 4'te ve kartta ek kanıt olarak gösterilir |
 | ASTER GED | 2000–2008 açık hava pikselleri; bulutlu tropiklerde boşluk | Eksik kare 0 benzerlik alır (`core/scoring.py`) |
 | MODIS AOD | Kar/buz üzerinde yok | Eksik kare 0 benzerlik alır |
-| ESA CCI Permafrost | Permafrost dışı bölgelerde 0 | Doğru davranış: permafrost yoksa `ground_ice = 0` |
+| ESA CCI Permafrost | Sadece Kuzey Yarımküre (25°K–85°K); permafrost olmayan kara NaN | NaN ve kapsam dışı = 0. Güney Yarımküre (And dağları, Antarktika vahaları) 0 sayılır: bilinen sınırlılık |
 | ESA WorldCover | Antarktika kapsamı doğrulanamadı | Buz maskesi `max(WorldCover buz, MODIS MCD12Q1 buz)`; MODIS küresel (`grid.yaml > masks > ice_fallback`) |
 | Kıyı ve ada kareleri | Değerler küçük bir kara parçasından gelir | Kara oranı %50'nin altındaysa kare maskelenir (`min_land_fraction`); doğrulama kareleri hariç |
 | Ay `dust_aod` | Atmosfer yok, değer tanımsız | Hedefte yazılmaz, motor ağırlığı diğerlerine dağıtır |
@@ -75,6 +75,6 @@ Kartta ✓/✗ olarak gösterilir, skora girmez.
 - [ ] NASA Earthdata Login (Earthdata Search, LP DAAC, GES DISC)
 - [ ] Google Earth Engine (proje kimliği `.env` > `EE_PROJECT`)
 - [ ] Copernicus Data Space (Sentinel görüntüleri doğrudan indirilecekse)
-- [ ] CEDA (ESA CCI Permafrost indirmesi)
+- [x] ESA CCI Permafrost dosyası indirildi (CEDA); repoya girmez, ekipte elden dağıtılır
 - [ ] JAXA G-Portal (sadece SGLI kontrolü yapılacaksa)
 - [ ] Gemini API anahtarı

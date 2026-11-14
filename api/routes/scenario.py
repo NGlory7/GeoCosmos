@@ -8,7 +8,7 @@ import pandas as pd
 from fastapi import APIRouter, HTTPException
 
 from api.services import gemini
-from core.profiles import TestProfile, load_parameters, load_targets, normalize_weights
+from core.profiles import TestProfile, load_grid_config, load_parameters, load_targets, normalize_weights
 from core.schemas import BREAKDOWN_KEYS, ScenarioRequest, ScenarioResponse
 from core.scoring import top_analogs, usable_weights
 
@@ -45,5 +45,6 @@ def scenario(req: ScenarioRequest) -> ScenarioResponse:
         raise HTTPException(422, "Bu metinden hedefte karşılığı olan bir parametre çıkarılamadı.")
 
     profile = TestProfile(id="custom", label=req.text, weights=weights, breakdown=BREAKDOWN_KEYS)
-    analogs = top_analogs(load_grid(), target, profile, n=TOP_N, params=params)
+    analogs = top_analogs(load_grid(), target, profile, n=TOP_N, params=params,
+                          min_separation_km=load_grid_config()["discovery"]["min_separation_km"])
     return ScenarioResponse(weights=weights, unsupported=raw.get("unsupported", []), analogs=analogs)

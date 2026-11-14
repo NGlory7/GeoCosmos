@@ -7,7 +7,8 @@ Kurallar config/grid.yaml'dan okunur (core.profiles.load_grid_config):
 - surface_temp_c = (gündüz + gece) / 2, temp_range_c = gündüz - gece (MODIS LST).
 - aridity: indices.aridity formülü (IMERG yağış + MODIS NDVI).
 - mafic_index, carbonate_index: ASTER oranı -> indices.<param>.breaks ile 0-1 sıralı ölçek.
-- ground_ice: ESA CCI Permafrost oranı (0-1; yüzde gelirse 100'e bölünür).
+- ground_ice: ESA CCI Permafrost oranı (0-1). data/raw/permafrost/*.nc varsa yerelde hesaplanır
+  (pipeline/permafrost.py, Earth Engine'e yükleme gerekmez); yoksa Earth Engine asset sütunu kullanılır.
 - masked: (1) masks.worldcover_classes oranı masks.max_masked_fraction'ı geçen kareler; buz oranı
   max(wc_70, modis_ice) alınır (WorldCover'ın kapsamadığı Antarktika için MODIS yedeği);
   (2) kara oranı masks.min_land_fraction'ın altındaki kıyı/ada kareleri. Satırlar
@@ -25,12 +26,13 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from core.geo import haversine_km
 from core.profiles import load_grid_config, load_known_analogs, load_parameters
+from pipeline import permafrost
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = ROOT / "data" / "raw"
 GRID_PATH = ROOT / "data" / "processed" / "grid.parquet"
-EARTH_RADIUS_KM = 6371.0
 LEVELS = np.array([0.0, 0.25, 0.5, 0.75, 1.0])
 
 
@@ -58,18 +60,12 @@ def aridity(precip_mm: pd.Series, ndvi: pd.Series, cfg: dict) -> pd.Series:
     return cfg["w_precip"] * dry_p + cfg["w_ndvi"] * dry_v
 
 
-def haversine_km(lat1, lon1, lat2, lon2):
-    lat1, lon1, lat2, lon2 = map(np.radians, (lat1, lon1, lat2, lon2))
-    a = (np.sin((lat2 - lat1) / 2) ** 2
-         + np.cos(lat1) * np.cos(lat2) * np.sin((lon2 - lon1) / 2) ** 2)
-    return 2 * EARTH_RADIUS_KM * np.arcsin(np.sqrt(a))
-
-
 def cell_name(lat: float, lon: float) -> str:
     return f"{abs(lat):.2f}°{'K' if lat >= 0 else 'G'}, {abs(lon):.2f}°{'D' if lon >= 0 else 'B'}"
 
 
-def compute_features(raw: pd.DataFrame, cell_km: float) -> pd.DataFrame:
+def compute_features(raw: pd.DataFrame, cell_km: float, permafrost_files: list[Path] | None = None) -> pd.DataFrame:
+    """permafrost_files: None ise data/raw/permafrost/*.nc aranır; [] verilirse yerel dosya kullanılmaz."""
     cfg = load_grid_config()
     ind = cfg["indices"]
     vs = load_known_analogs()
@@ -87,8 +83,13 @@ def compute_features(raw: pd.DataFrame, cell_km: float) -> pd.DataFrame:
         "mafic_index": to_levels(raw["aster_mi"], ind["mafic_index"]["breaks"]),
         "carbonate_index": to_levels(raw["aster_ci"], ind["carbonate_index"]["breaks"]),
     })
-    pf = raw["permafrost"]
-    g["ground_ice"] = (pf / 100 if pf.max(skipna=True) > 1 else pf).clip(0, 1)
+    local = permafrost.ground_ice_for(g["lat"].to_numpy(), g["lon"].to_numpy(), cell_km,
+                                      files=permafrost_files)
+    if local is not None:
+        g["ground_ice"] = local
+    else:
+        pf = raw["permafrost"] if "permafrost" in raw else pd.Series(np.nan, index=raw.index)
+        g["ground_ice"] = pf.clip(0, 1)  # ee_export yüzdeyi zaten 100'e böler
 
     # Maske: WorldCover sınıf oranları
     wc = pd.DataFrame({c: raw[f"wc_{c}"] for c in cfg["masks"]["worldcover_classes"] if f"wc_{c}" in raw},
@@ -130,9 +131,10 @@ def compute_features(raw: pd.DataFrame, cell_km: float) -> pd.DataFrame:
     return g
 
 
-def build_grid(raw_dir: Path = RAW_DIR, out: Path = GRID_PATH, cell_km: float | None = None) -> pd.DataFrame:
+def build_grid(raw_dir: Path = RAW_DIR, out: Path = GRID_PATH, cell_km: float | None = None,
+               permafrost_files: list[Path] | None = None) -> pd.DataFrame:
     cell_km = cell_km or load_grid_config()["grid"]["coarse_km"]
-    g = compute_features(read_raw(raw_dir), cell_km)
+    g = compute_features(read_raw(raw_dir), cell_km, permafrost_files)
     out.parent.mkdir(parents=True, exist_ok=True)
     g.to_parquet(out, index=False)
     return g

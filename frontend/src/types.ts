@@ -56,6 +56,57 @@ export interface Analog {
   ai_comment: string;
 }
 
+// analogs/index.json
+export interface AnalogIndexEntry {
+  target_id: string;
+  test_id: TestId;
+  file: string | null; // null: hedefte bu testin değeri yok, bkz. reason
+  count: number;
+  new_count?: number;
+  params_used?: string[];
+  params_total?: number;
+  reason?: string;
+}
+
+// validation.json
+export interface ValidationAnalog {
+  id: string;
+  name: string;
+  test_id: TestId;
+  split: "tune" | "holdout" | "report";
+  targets: string[];
+  status: "ok" | "missing_cell" | "no_target_values";
+  target_id?: string;
+  score_total?: number;
+  rank?: number;
+  percentile?: number;
+  hit?: boolean;
+  cell_id?: string;
+  note: string;
+  past_tests: PastTest[];
+}
+
+export interface ValidationResult {
+  hits: number;
+  min_hits: number;
+  holdout_total: number;
+  top_percent: number;
+  passed: boolean;
+  denominator: number;
+  analogs: ValidationAnalog[];
+}
+
+// heatmaps/index.json (PNG'ler Web Mercator; L.imageOverlay(url, bounds))
+export interface HeatmapIndex {
+  crs: "EPSG:3857";
+  bounds: [[number, number], [number, number]];
+  value: "score_total";
+  vmin: number;
+  vmax: number;
+  colormap: string;
+  files: { target_id: string; test_id: TestId; file: string }[];
+}
+
 export interface ScenarioRequest {
   text: string;
   target_id: string;

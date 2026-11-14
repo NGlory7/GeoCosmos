@@ -73,6 +73,21 @@ ops_tags:
     source: CIESIN/GPWv411/GPW_Population_Density          # kişi/km²
     max_density: 1
 
+# --- Keşif ve çıktı (pipeline/discovery.py, heatmap.py, commentary.py) -------------
+discovery:
+  top_n: 20                  # her hedef x test dosyasında kaç aday (pin)
+  min_separation_km: 100     # adaylar birbirine bundan yakın olmaz: aynı çölün komşu kareleri listeyi doldurmaz
+  fine_scan_top: 10          # yakın tarama (5 km) için her hedef x testten kaç aday kutusu önerilir
+  fine_scan_box_cells: 3     # kutu boyu, kaba kare cinsinden (3 x 25 km)
+heatmap:
+  width_px: 1440             # Web Mercator PNG genişliği (Leaflet ImageOverlay ile birebir oturur)
+  lat_range: [-85, 84]       # Web Mercator ±85,05° ile sınırlı
+  colormap: magma
+  alpha: 0.75                # veri olmayan/maskeli kareler tamamen saydam
+commentary:
+  top_k: 5                   # her dosyada ilk kaç adaya Gemini yorumu yazılır (kota)
+  max_retries: 2             # yorumda motorda olmayan sayı çıkarsa yeniden üret
+
 # --- Earth Engine exportu (pipeline/ee_export.py) -----------------------------------
 # Ham veri laptopa inmez: Earth Engine'de karelere ortalanır, sadece CSV tablo iner.
 export:
