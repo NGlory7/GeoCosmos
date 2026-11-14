@@ -19,6 +19,7 @@
 | Gemini yorumları | ⏳ Bekliyor | `.env` > `GEMINI_API_KEY` |
 | Frontend (`frontend/`) | ✅ Hazır | Giriş (Çağrı) → Ay/Mars küresi (NASA Trek mozaiği) + hedef ve test seçimi → Dünya haritası (NASA GIBS + ısı haritası + pinler) → analog kartı → senaryo kutusu; doğrulama paneli. Veri yokken her ekran "henüz çalıştırılmadı" der |
 | Yayın (GitHub Pages) | ⏳ Repo ayarı bekleniyor | `.github/workflows/pages.yml` hazır; aşağıdaki "Yayın" bölümü |
+| API yayını (Render / HF Spaces) | ⏳ Hesap açılması bekleniyor | `Dockerfile`, `render.yaml` hazır; CI imajı deniyor. Gemini yokken anahtar kelime yedeği. "Yayın > API" |
 
 Şu an `make data` sadece `targets.geojson` üretir; `grid.parquet` gelince analog, doğrulama ve ısı haritası dosyaları da otomatik üretilir.
 
@@ -54,7 +55,20 @@ Frontend her `main` push'unda GitHub Pages'e çıkar (`.github/workflows/pages.y
 2. Settings > Secrets and variables > Actions > **Variables** > `PAGES_ENABLED` = `true`
 3. Actions > "yayin" > Run workflow (ya da bir sonraki push). Adres: `https://<kullanıcı>.github.io/GeoCosmos/`
 
-Yayında canlı API yoktur; senaryo kutusu "çevrimdışı" der, geri kalan her şey statik dosyalardan çalışır. API yayınlanırsa adresi `API_URL` değişkenine yazın.
+API yayınlanmadıysa senaryo kutusu "çevrimdışı" der, geri kalan her şey statik dosyalardan çalışır.
+
+### API (senaryo kutusu)
+
+Tek imaj: `Dockerfile` (sadece `requirements-api.txt`; Earth Engine vb. girmez). CI her push'ta imajı derler ve `/health`, `/scenario` uçlarını dener (`testler > api-imaj`). Bir kerelik kurulum:
+
+1. **Render:** New > Blueprint > bu repo (`render.yaml`). Panelden `GEMINI_API_KEY` girin. Ücretsiz plan 15 dk boşta kalınca uyur: demodan 5 dk önce `/health`'i açın.
+   **Ya da Hugging Face Spaces:** New Space > Docker > bu repo; Space ayarlarında port `8000` (`app_port: 8000`) ve aynı ortam değişkenleri.
+2. `API_ALLOWED_ORIGIN`: Pages adresi (`https://nglory7.github.io`; yol olmadan) + yerel adresler. `render.yaml`'da hazır.
+3. **`grid.parquet`:** 100 MB altındaysa commit'leyin, imaja girer. Üstündeyse GitHub Releases'a yükleyip bağlantısını `GRID_URL`'e yazın; sunucu açılışta indirir (o sırada `/scenario` "indiriliyor" der).
+4. GitHub > Settings > Secrets and variables > Actions > Variables > `API_URL` = API adresi (ör. `https://geocosmos-api.onrender.com`). Sonraki Pages yayını bu adresi kullanır.
+5. Kontrol: `<API_URL>/health` → `{"status":"ok","grid":true,"gemini":true,...}`.
+
+**Gemini yoksa da çalışır.** Anahtar girilmediyse, kota dolduysa ya da ağ kesildiyse `/scenario` metindeki anahtar kelimelerle hazır testlerin ağırlıklarını kullanır (`config/scenario_fallback.yaml`); arayüz bunu açıkça yazar. Hiçbir test tanınmazsa kullanıcıdan bir test amacı yazmasını ister.
 
 ## Yapılacaklar
 

@@ -1,5 +1,5 @@
 # Her push ve PR'da: Python testleri, "frontend/public/data config ile güncel mi?" kontrolü,
-# frontend tip kontrolü ve derlemesi.
+# frontend tip kontrolü ve derlemesi, API Docker imajı.
 name: testler
 
 on:
@@ -44,3 +44,24 @@ jobs:
         run: npm ci
       - name: Tip kontrolü ve derleme
         run: npm run build
+
+  # Yayındaki API ile aynı imaj (Dockerfile): derleniyor mu, açılıyor mu, uçlar cevap veriyor mu?
+  api-imaj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: İmajı derle
+        run: docker build -t geocosmos-api .
+      - name: Çalıştır ve dene
+        run: |
+          docker run -d --name api -p 8000:8000 geocosmos-api
+          for i in $(seq 1 30); do curl -sf localhost:8000/health && break; sleep 1; done
+          curl -sf localhost:8000/health | grep -q '"status":"ok"'
+          # grid.parquet imajda yoksa /scenario 503 ve doğru komutu söyler (çökmez)
+          code=$(curl -s -o out.json -w '%{http_code}' -X POST localhost:8000/scenario \
+            -H 'Content-Type: application/json' -d '{"text":"toz","target_id":"mars_gale"}')
+          cat out.json; echo
+          if [ -f data/processed/grid.parquet ]; then test "$code" = 200; else test "$code" = 503; fi
+      - name: Kayıtlar
+        if: always()
+        run: docker logs api || true

@@ -218,16 +218,18 @@ Hazır sonuçlar statik dosyadır; API sadece canlı senaryo içindir.
 
 | Metot | Yol | Girdi | Çıktı |
 | --- | --- | --- | --- |
-| `GET` | `/health` | — | `{"status": "ok"}` |
-| `POST` | `/scenario` | `{"text": "...", "target_id": "mars_jezero"}` | Ağırlıklar + en iyi 20 analog (veri sözleşmesindeki formatta) |
+| `GET` | `/health` | — | `{"status": "ok", "grid": bool, "grid_downloading": bool, "gemini": bool}` |
+| `POST` | `/scenario` | `{"text": "...", "target_id": "mars_jezero"}` | `{"method", "matched_tests", "weights", "unsupported", "analogs"}`: ağırlıklar + en iyi 20 analog (veri sözleşmesindeki formatta) |
 
 `/scenario` akışı:
 
-1. Gemini metni JSON ağırlıklara çevirir (şemaya zorlanmış çıktı).
+1. Metin ağırlıklara çevrilir. Sıra: Gemini önbelleği (`method: "cache"`) → Gemini (`"gemini"`, şemaya zorlanmış JSON) → **anahtar kelime yedeği** (`"keywords"`). Yedek, Gemini'ye ulaşılamadığında (anahtar yok, kota, ağ) metni `config/scenario_fallback.yaml`'daki kelimelerle hazır testlere eşler ve o testlerin ağırlıklarının ortalamasını alır; yeni ağırlık uydurmaz, eşleşen testleri `matched_tests`'te döner. Hiçbir test tanınmazsa 503 ve kullanıcıya bir test amacı yazması söylenir.
 2. Ağırlıklar kontrol edilir: bilinmeyen anahtarlar atılır, toplam 1'e normalize edilir.
 3. Dünya'da karşılığı olmayan istekler (düşük yerçekimi, vakum gibi) için `unsupported` alanı doldurulur.
 4. `core/scoring.py`, belleğe yüklenmiş `grid.parquet` üzerinde sıralama yapar. Tek yönlü (`at_least`) kurallar hazır testlerden gelir: bir parametre onu kullanan her hazır testte `at_least` ise serbest metinde de öyledir (şu an karbonat; `core/profiles.py > custom_at_least`). Gemini bu kurala karar vermez.
-5. Aynı metin için sonuç önbellekten döner.
+5. Aynı metin için sonuç önbellekten döner (önbellek yazılamazsa, ör. salt okunur disk, önbelleksiz devam eder).
+
+**Yayın:** `Dockerfile` (sadece `requirements-api.txt`) + `render.yaml`; Hugging Face Spaces'te aynı imaj. `grid.parquet` repoda değilse `GRID_URL`'den açılışta arka planda indirilir (`api/grid_source.py`; geçici dosyaya, bitince yerine). Kurulum adımları: STATUS.md > Yayın > API.
 
 ## Gemini kullanımı
 
@@ -282,15 +284,21 @@ GeoCosmos/
 │   └── build.py              # hepsini sırayla çalıştırır
 │
 ├── api/                      # Canlı FastAPI sunucusu
-│   ├── main.py
+│   ├── main.py               # /health, CORS
+│   ├── grid_source.py        # grid.parquet yoksa GRID_URL'den indirir (yayın)
 │   ├── routes/scenario.py
-│   └── services/gemini.py
+│   └── services/
+│       ├── gemini.py         # tercüman + önbellek
+│       └── fallback.py       # Gemini yoksa anahtar kelime -> hazır testler
 │
 ├── config/
 │   ├── targets.yaml          # 6 Ay/Mars hedefi + kaynaklar
 │   ├── test_profiles.yaml    # 5 test amacı = 5 ağırlık seti
 │   ├── known_analogs.yaml    # doğrulama seti (ayar / sınav / rapor) + keşif dışı bilinen sahalar
-│   └── grid.yaml             # ızgara boyutu, eğim ölçeği, maske kuralları
+│   ├── grid.yaml             # ızgara boyutu, eğim ölçeği, maske kuralları
+│   └── scenario_fallback.yaml # /scenario yedeğinin anahtar kelimeleri
+│
+├── Dockerfile, render.yaml   # API yayını (requirements-api.txt)
 │
 ├── data/
 │   ├── raw/                  # gitignore

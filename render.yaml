@@ -1,0 +1,18 @@
+# Render Blueprint: Render > New > Blueprint > bu repo. Gizli değerler panelden girilir.
+services:
+  - type: web
+    name: geocosmos-api
+    runtime: docker
+    plan: free            # ücretsiz plan 15 dk boşta kalınca uyur: demodan önce /health'i açın
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false       # panelden; yoksa /scenario anahtar kelime yedeğiyle çalışır
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: API_ALLOWED_ORIGIN
+        value: https://nglory7.github.io,http://localhost:5173,http://127.0.0.1:5173
+      - key: GRID_URL
+        sync: false       # grid.parquet repoda değilse: GitHub Releases bağlantısı

@@ -72,6 +72,12 @@ export default function ScenarioBox({ targetId, meta, onResult }: Props) {
       )}
       {last && (
         <div className="mt-3 space-y-2 text-xs text-slate-400">
+          {last.method === "keywords" && (
+            <p className="rounded-md border border-amber-400/20 bg-amber-400/5 px-2 py-1.5 text-amber-200/80">
+              Gemini'ye şu an ulaşılamadı. Metindeki anahtar kelimelerle hazır testlerin ağırlıkları kullanıldı:{" "}
+              {last.matched_tests.map((id) => meta.tests.find((t) => t.id === id)?.label ?? id).join(", ")}.
+            </p>
+          )}
           <p>
             Ağırlıklar:{" "}
             {Object.entries(last.weights)

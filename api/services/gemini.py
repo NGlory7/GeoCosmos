@@ -66,7 +66,7 @@ def translate(text: str, params: dict[str, Parameter]) -> dict:
     key = _cache_key(text, params)
     cache = _read_cache()
     if key in cache:
-        return cache[key]
+        return {**cache[key], "method": "cache"}
 
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
@@ -91,6 +91,9 @@ def translate(text: str, params: dict[str, Parameter]) -> dict:
         "unsupported": parsed.unsupported,
     }
     cache[key] = result
-    CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
-    return result
+    try:
+        CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+    except OSError:  # salt okunur dosya sistemi (bazı barındırmalar): önbelleksiz devam
+        pass
+    return {**result, "method": "gemini"}

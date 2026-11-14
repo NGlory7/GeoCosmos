@@ -1,0 +1,19 @@
+# /scenario yedeği: Gemini'ye ulaşılamazsa (anahtar yok, kota, ağ) serbest metin buradaki
+# anahtar kelimelerle hazır testlere eşlenir. Ağırlıklar eşleşen testlerin ağırlıklarının
+# ortalamasıdır (config/test_profiles.yaml); burada yeni ağırlık YAZILMAZ.
+#
+# Eşleşme: küçük harfe çevrilmiş metinde alt dize ("tozlanması" -> "toz"). Türkçe İ/ı korunur.
+# Yanıtta method = "keywords" ve eşleşen testler döner; arayüz bunu açıkça söyler.
+
+tests:
+  rover: [rover, tekerlek, sürüş, sürmek, gezgin, araç, wheel, drive, traverse]
+  ice_drilling: [buz, sondaj, matkap, delme, permafrost, donmuş, isru, ice, drill]
+  lava_tube: [lav, tüp, mağara, yeraltı, yer altı, habitat, sığınak, cave]
+  dust: [toz, fırtına, aşınma, rüzgar, kum, güneş panel, dust, abrasion]
+  biosignature: [biyo, yaşam, karbonat, fosil, mikrop, organik, life, biosignature]
+
+# Dünya'da karşılığı olmayan istekler: yanıtın "unsupported" listesine yazılır (Gemini kuralıyla aynı)
+unsupported:
+  düşük yerçekimi: [yerçekimi, gravity]
+  vakum: [vakum, vacuum, atmosfersiz]
+  yüksek radyasyon: [radyasyon, radiation, kozmik ışın]
