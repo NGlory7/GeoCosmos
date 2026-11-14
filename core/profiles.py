@@ -44,6 +44,16 @@ def normalize_weights(weights: dict[str, float], allowed: set[str] | dict) -> di
 
 
 @lru_cache
+def load_scoring(path: Path | None = None) -> dict:
+    """test_profiles.yaml > missing_data: eksik veri kuralı (core/scoring.py)."""
+    data = yaml.safe_load((path or CONFIG_DIR / "test_profiles.yaml").read_text(encoding="utf-8"))
+    cfg = {"min_weight_coverage": 0.6, **(data.get("missing_data") or {})}
+    if not 0 <= cfg["min_weight_coverage"] <= 1:
+        raise ValueError("missing_data.min_weight_coverage 0-1 arasında olmalı")
+    return cfg
+
+
+@lru_cache
 def load_parameters(path: Path | None = None) -> dict[str, Parameter]:
     data = yaml.safe_load((path or CONFIG_DIR / "test_profiles.yaml").read_text(encoding="utf-8"))
     params: dict[str, Parameter] = {}

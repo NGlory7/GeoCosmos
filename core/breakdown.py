@@ -15,6 +15,7 @@ NOTES: dict[str, dict[str, str]] = {
         "radiation": "Manyetik alan ve atmosfer koruması yok; yüzey doğrudan kozmik ışına açık.",
         "liquid_water": "Yüzeyde sıvı su yok; buz sadece kalıcı gölgelerde.",
         "biology": "Bilinen bir biyolojik süreç yok; Dünya'daki her sahada mikrobiyal yaşam var.",
+        "temperature": "Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C; Dünya'da karşılığı yok.",
     },
     "mars": {
         "gravity": "Yerçekimi Dünya'nın ~%38'i (3,71 m/s²).",
@@ -22,6 +23,7 @@ NOTES: dict[str, dict[str, str]] = {
         "radiation": "Küresel manyetik alan yok; yüzey radyasyonu Dünya'dan çok yüksek.",
         "liquid_water": "Bugün yüzeyde kalıcı sıvı su yok; Dünya sahalarında su döngüsü sürüyor.",
         "biology": "Dünya sahalarında modern yaşam var; biyo-imza testinde kirlilik riski yaratır.",
+        "temperature": "Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C; Dünya'daki çöl analoglarından onlarca derece soğuk.",
     },
 }
 

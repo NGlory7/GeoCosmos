@@ -11,7 +11,7 @@
    "roughness_m",
    "slope_deg"
   ],
-  "params_total": 6
+  "params_total": 5
  },
  {
   "target_id": "moon_shackleton",
@@ -62,10 +62,9 @@
   "new_count": 20,
   "params_used": [
    "aridity",
-   "carbonate_index",
-   "surface_temp_c"
+   "carbonate_index"
   ],
-  "params_total": 5
+  "params_total": 4
  },
  {
   "target_id": "moon_malapert",
@@ -79,7 +78,7 @@
    "roughness_m",
    "slope_deg"
   ],
-  "params_total": 6
+  "params_total": 5
  },
  {
   "target_id": "moon_malapert",
@@ -130,10 +129,9 @@
   "new_count": 20,
   "params_used": [
    "aridity",
-   "carbonate_index",
-   "surface_temp_c"
+   "carbonate_index"
   ],
-  "params_total": 5
+  "params_total": 4
  },
  {
   "target_id": "moon_marius_hills",
@@ -145,10 +143,9 @@
    "aridity",
    "mafic_index",
    "roughness_m",
-   "slope_deg",
-   "temp_range_c"
+   "slope_deg"
   ],
-  "params_total": 6
+  "params_total": 5
  },
  {
   "target_id": "moon_marius_hills",
@@ -199,14 +196,13 @@
   "test_id": "biosignature",
   "file": "moon_marius_hills_biosignature.geojson",
   "count": 20,
-  "new_count": 19,
+  "new_count": 20,
   "params_used": [
    "aridity",
    "carbonate_index",
-   "surface_temp_c",
    "temp_range_c"
   ],
-  "params_total": 5
+  "params_total": 4
  },
  {
   "target_id": "mars_jezero",
@@ -219,10 +215,9 @@
    "dust_aod",
    "mafic_index",
    "roughness_m",
-   "slope_deg",
-   "temp_range_c"
+   "slope_deg"
   ],
-  "params_total": 6
+  "params_total": 5
  },
  {
   "target_id": "mars_jezero",
@@ -244,7 +239,7 @@
   "test_id": "lava_tube",
   "file": "mars_jezero_lava_tube.geojson",
   "count": 20,
-  "new_count": 20,
+  "new_count": 19,
   "params_used": [
    "aridity",
    "mafic_index",
@@ -279,10 +274,9 @@
    "aridity",
    "carbonate_index",
    "dust_aod",
-   "surface_temp_c",
    "temp_range_c"
   ],
-  "params_total": 5
+  "params_total": 4
  },
  {
   "target_id": "mars_gale",
@@ -295,10 +289,9 @@
    "dust_aod",
    "mafic_index",
    "roughness_m",
-   "slope_deg",
-   "temp_range_c"
+   "slope_deg"
   ],
-  "params_total": 6
+  "params_total": 5
  },
  {
   "target_id": "mars_gale",
@@ -350,15 +343,14 @@
   "test_id": "biosignature",
   "file": "mars_gale_biosignature.geojson",
   "count": 20,
-  "new_count": 19,
+  "new_count": 20,
   "params_used": [
    "aridity",
    "carbonate_index",
    "dust_aod",
-   "surface_temp_c",
    "temp_range_c"
   ],
-  "params_total": 5
+  "params_total": 4
  },
  {
   "target_id": "mars_arcadia",
@@ -371,10 +363,9 @@
    "dust_aod",
    "mafic_index",
    "roughness_m",
-   "slope_deg",
-   "temp_range_c"
+   "slope_deg"
   ],
-  "params_total": 6
+  "params_total": 5
  },
  {
   "target_id": "mars_arcadia",
@@ -431,9 +422,8 @@
    "aridity",
    "carbonate_index",
    "dust_aod",
-   "surface_temp_c",
    "temp_range_c"
   ],
-  "params_total": 5
+  "params_total": 4
  }
 ]

@@ -75,18 +75,37 @@ Yayında canlı API yoktur; senaryo kutusu "çevrimdışı" der, geri kalan her 
 
 `make data` her hedef × test için kaç parametrenin kullanıldığını `analogs/index.json` > `params_used` alanına yazar; eksik değerler girildikçe bu sayı artar.
 
-## İlk gerçek sonuç (14 Kasım)
+## Gerçek sonuçlar ve ağırlık ayarı (14 Kasım)
 
-Doğrulama **0/4** (sınav yerleri: Hanksville %20,8 · Svalbard %2,6 · Salda %50,3 · Lut %5,5; gereken: 3'ü en iyi %1'de). Ayar yerleri: Haughton %2,3 · Holuhraun %66,1 · Yungay %74,4.
+Kural: ayar sadece **ayar** yerlerine bakılarak yapıldı; **sınav** yerlerine sadece en sonda, bir kez bakıldı ve sonuç değiştirilmeden kaydedildi.
 
-Teşhis (sadece **ayar** yerlerine bakılarak, kurala uygun):
-1. **Mutlak sıcaklık** (`surface_temp_c`): Mars hedefleri −43 °C; tolerans 60 °C. Sıcak çöllerin hepsi 0 alıyor, kutuplar öne çıkıyor (Yungay +27 °C → 0). Mars sıcaklığı analog sahalarda tutturulamaz; puan yerine kopma noktası olmalı (buz sondajı hariç).
-2. **ASTER mineral eşikleri** ilk tahmindi; Holuhraun'da ASTER verisi bulut yüzünden boş → mafik 0 benzerlik. Eksik veri cezası ve eşikler gözden geçirilmeli.
-3. **Toz**: Mars τ ≈ 0,4-0,5; Dünya'da nadir. Tolerans/ağırlık gözden geçirilmeli.
+| Yer | Grup | İlk çalıştırma | Ayar sonrası |
+| --- | --- | --- | --- |
+| Holuhraun (rover) | ayar | %66,1 | %12,0 |
+| Yungay (biyo-imza) | ayar | %74,4 | %23,5 |
+| Haughton (buz sondajı) | ayar | %2,3 | %2,3 |
+| Hanksville (rover) | **sınav** | %20,8 | %18,1 |
+| Svalbard (buz sondajı) | **sınav** | %2,6 | %2,6 |
+| Salda (biyo-imza) | **sınav** | %50,3 | %83,2 |
+| Lut (toz) | **sınav** | %5,5 | %5,5 |
+| Lanzarote (lav tüpü) | rapor | %22,9 | %56,0 |
 
-Öne çıkan yeni aday örneği: Gale × toz testinde ilk 10 aday Taklamakan Çölü / Tarım Havzası (dünyanın büyük toz kaynaklarından).
+**Sonuç: 0/4** (ölçüt: 4 sınav yerinin 3'ü en iyi %1'de). Yapılan ayarlar (hepsi fiziksel gerekçeli, `config/` içinde gerekçeleriyle):
+1. **ASTER mineral eşikleri** dünya dağılımından (yüzdelikler); eski eşiklerde karbonat %99'luk dilimdeydi, parametre fiilen ölüydü.
+2. **Eksik veri** "benzemiyor" değil "bilinmiyor": ağırlık ölçülebilen parametrelere dağıtılır, kapsam %60'ın altındaysa skor kırpılır.
+3. **Mutlak sıcaklık** biyo-imza puanından çıktı, kopma kutusuna `temperature` olarak girdi (buz sondajında kalıyor).
+4. **Rover** ağırlıkları arazi geometrisi ve kayaç türüne kaydı; iklim ikincil.
+
+Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yakın; rover orta; biyo-imza tutmuyor. Salda'nın kötüleşmesi biyo-imza testinin iki farklı analog türünü (aşırı kuraklık: Yungay; karbonat çökeli: Salda) tek ağırlık setiyle karşılamaya çalışmasından. Bu sonuca bakarak **geri ayar yapılmadı**.
+
+Öne çıkan yeni aday örneği: Gale × toz testinde ilk adaylar Taklamakan Çölü / Tarım Havzası (dünyanın büyük toz kaynaklarından).
 
 ## Karar bekleyenler
+
+| Konu | Not |
+| --- | --- |
+| **Başarı ölçütü** | "En iyi %1" (~1.900 kare) 25 km'de geniş analog türleri için çok sıkı olabilir. Ölçüt değişecekse sunumda **sonuç görüldükten sonra değiştirildiği açıkça söylenmeli**; aksi halde yeni bir sınav seti gerekir |
+| **Biyo-imzayı ikiye bölmek** | "Aşırı kuraklık" (Yungay, Gale) ve "karbonat çökeli" (Salda, Jezero) ayrı testler olabilir. Salda sınav yeri olduğu için bu karar onun sonucuna bakarak değil, yöntem olarak verilmeli |
 
 | Konu | Durum | Seçenekler |
 | --- | --- | --- |

@@ -3,7 +3,7 @@
 
 export type Body = "moon" | "mars";
 export type TestId = "rover" | "ice_drilling" | "lava_tube" | "dust" | "biosignature";
-export type BreakdownKey = "gravity" | "atmosphere" | "radiation" | "liquid_water" | "biology";
+export type BreakdownKey = "gravity" | "atmosphere" | "radiation" | "liquid_water" | "biology" | "temperature";
 // Operasyon bilgisi puan değil: Analog.ops_tags (kartta ✓/✗).
 export type ScoreKey = "topography" | "geology" | "climate";
 

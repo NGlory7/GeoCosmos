@@ -158,3 +158,19 @@ def test_custom_scenario_inherits_at_least():
     base = load_profiles()["biosignature"]
     other = Profile(id="rover", label="x", weights={"carbonate_index": 1.0}, breakdown=())
     assert custom_at_least({"carbonate_index": 1.0}, {"biosignature": base, "rover": other}) == ()
+
+
+def test_missing_data_is_unknown_not_mismatch():
+    # Eksik veri ağırlığı ölçülebilenlere dağıtır; çoğu eksikse skor kırpılır (missing_data).
+    t = Target(id="t", body="mars", name="T", why="", lat=0, lon=0, params={
+        "slope_deg": SourcedValue(value=3, source="t"), "aridity": SourcedValue(value=1.0, source="t")})
+    g = pd.DataFrame({"id": ["tam", "yarim_eksik", "hepsi_eksik"], "name": ["a", "b", "c"],
+                      "lat": [0, 1, 2], "lon": [0, 1, 2],
+                      "slope_deg": [3, 3, None], "aridity": [1.0, None, None]})
+    s = score_grid(g, t, {"slope_deg": 0.5, "aridity": 0.5})
+    assert s.loc[0, "score_total"] == pytest.approx(100)
+    # kapsam 0,5 < 0,6: ölçülen kısım mükemmel (100) ama skor 0,5/0,6 oranında kırpılır
+    assert s.loc[1, "score_total"] == pytest.approx(100 * 0.5 / 0.6)
+    assert s.loc[2, "score_total"] == 0
+    s2 = score_grid(g, t, {"slope_deg": 0.7, "aridity": 0.3})  # kapsam 0,7 >= 0,6: ceza yok
+    assert s2.loc[1, "score_total"] == pytest.approx(100)

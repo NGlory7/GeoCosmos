@@ -6,6 +6,11 @@ Boyut skoru (topography, geology, climate): o boyuttaki
 parametrelerin ağırlıklı ortalaması. Toplam skor: tüm parametrelerin
 ağırlıklı ortalaması. Hepsi 0-100 ölçeğinde.
 
+Eksik Dünya verisi (ör. bulutlu bölgede ASTER boşluğu) "benzemiyor" DEĞİL, "bilinmiyor" demektir:
+o karede ağırlıklar ölçülebilen parametrelere dağıtılır. Ölçülebilen ağırlık payı
+min_weight_coverage'ın altındaysa skor bu oranla kırpılır (test_profiles.yaml > missing_data):
+verisi çoğunlukla eksik bir kare yanlışlıkla üste çıkamaz.
+
 Hem pipeline/ (hazır sonuçlar) hem api/ (/scenario) bu modülü kullanır.
 """
 from __future__ import annotations
@@ -15,7 +20,7 @@ import pandas as pd
 
 from core.breakdown import breakdown_for
 from core.geo import spread_pick
-from core.profiles import Parameter, TestProfile, load_parameters, normalize_weights
+from core.profiles import Parameter, TestProfile, load_parameters, load_scoring, normalize_weights
 from core.schemas import SCORE_KEYS, Analog, AnalogParam, Scores, Target
 
 MATCH_THRESHOLD = 0.5  # parametre benzerliği bunun üstündeyse kartta "benziyor"
@@ -30,7 +35,7 @@ def usable_weights(
 
 def similarity(grid: pd.DataFrame, target: Target, keys: list[str],
                params: dict[str, Parameter], at_least: tuple[str, ...] = ()) -> pd.DataFrame:
-    """Her kare × parametre için 0-1 benzerlik. Eksik Dünya verisi 0 sayılır."""
+    """Her kare × parametre için 0-1 benzerlik. Eksik Dünya verisi NaN kalır (score_grid ele alır)."""
     out = {}
     for k in keys:
         earth = grid[k].to_numpy(dtype=float) if k in grid else np.full(len(grid), np.nan)
@@ -38,7 +43,7 @@ def similarity(grid: pd.DataFrame, target: Target, keys: list[str],
         if k in at_least:
             diff = np.minimum(diff, 0.0)  # NaN korunur (np.minimum NaN'ı yayar)
         s = 1 - np.abs(diff) / params[k].tolerance
-        out[k] = np.nan_to_num(np.clip(s, 0, 1), nan=0.0)
+        out[k] = np.clip(s, 0, 1)
     return pd.DataFrame(out, index=grid.index)
 
 
@@ -54,13 +59,26 @@ def score_grid(grid: pd.DataFrame, target: Target, weights: dict[str, float],
         raise ValueError("Kullanılabilir ağırlık yok: hedefte bu parametrelerin değeri eksik.")
     sim = similarity(grid, target, list(w), params, at_least)
 
+    min_cov = load_scoring()["min_weight_coverage"]
+
+    def weighted(keys: list[str]) -> tuple[np.ndarray, np.ndarray]:
+        """(ölçülebilen parametrelerin ağırlıklı ortalaması, ölçülebilen ağırlık payı)."""
+        wk = np.array([w[k] for k in keys])
+        s = sim[keys].to_numpy(dtype=float)
+        have = ~np.isnan(s)
+        num = np.nansum(s * wk, axis=1)
+        den = (have * wk).sum(axis=1)
+        mean = np.divide(num, den, out=np.full(len(s), np.nan), where=den > 0)
+        return mean, den / wk.sum()
+
     result = grid.copy()
-    result["score_total"] = 100 * sum(sim[k] * wk for k, wk in w.items())
+    mean, coverage = weighted(list(w))
+    penalty = np.minimum(1.0, coverage / min_cov) if min_cov > 0 else 1.0
+    result["score_total"] = np.nan_to_num(100 * mean * penalty, nan=0.0)
+    result["coverage"] = coverage
     for dim in SCORE_KEYS:
-        dim_w = {k: wk for k, wk in w.items() if params[k].dimension == dim}
-        total = sum(dim_w.values())
-        result[dim] = (100 * sum(sim[k] * wk for k, wk in dim_w.items()) / total
-                       if total else np.nan)
+        keys = [k for k in w if params[k].dimension == dim]
+        result[dim] = 100 * weighted(keys)[0] if keys else np.nan
     for k in w:
         result[f"sim_{k}"] = sim[k]
     return result
@@ -112,7 +130,7 @@ def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int
                 earth=earth[k],
                 target=target.params[k].value,
                 source=params[k].earth_source,
-                match=bool(row[f"sim_{k}"] >= MATCH_THRESHOLD),
+                match=bool(not pd.isna(row[f"sim_{k}"]) and row[f"sim_{k}"] >= MATCH_THRESHOLD),
             ) for k in used],
             # grid'de ops_<etiket> sütunları varsa (pipeline/features.py) karta taşınır.
             ops_tags={c[4:]: bool(row[c]) for c in scored.columns

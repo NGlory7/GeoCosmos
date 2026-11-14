@@ -17,8 +17,8 @@ GRID = Path(__file__).resolve().parent.parent / "data" / "processed" / "grid.par
 
 
 @pytest.mark.skipif(not GRID.exists(), reason="grid.parquet henüz yok (make grid)")
-# Bilinen başarısızlık: ilk gerçek doğrulama 0/4 (14 Kasım). Ağırlık ayarı (sadece ayar yerlerine
-# bakılarak) bekleniyor: STATUS.md > İlk gerçek sonuç. Ölçüt sağlanınca bu satır silinmeli
+# Bilinen başarısızlık: gerçek doğrulama ayar sonrası da 0/4 (14 Kasım). Ölçüt ve biyo-imza kararı
+# ekipte: STATUS.md > Gerçek sonuçlar ve ağırlık ayarı. Ölçüt sağlanınca bu satır silinmeli
 # (strict=False: geçerse XPASS olarak görünür, CI kırmızıya düşmez).
 @pytest.mark.xfail(reason="Başarı ölçütü henüz sağlanmıyor (0/4); STATUS.md", strict=False)
 def test_known_analogs_rank_high():

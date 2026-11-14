@@ -207,7 +207,7 @@ PNG satırları Web Mercator'dadır; Leaflet'te `L.imageOverlay(url, bounds)` il
 | --- | --- |
 | `body` | `moon`, `mars` |
 | `test_id` | `rover`, `ice_drilling`, `lava_tube`, `dust`, `biosignature`; `/scenario` sonuçlarında `custom` |
-| `breakdown` | `gravity`, `atmosphere`, `radiation`, `liquid_water`, `biology` |
+| `breakdown` | `gravity`, `atmosphere`, `radiation`, `liquid_water`, `biology`, `temperature` (mutlak sıcaklık; buz sondajı dışında puana girmez) |
 | `scores` anahtarları | `topography`, `geology`, `climate`. Değer `null` olabilir: o test amacında o boyuta ağırlık verilmemiştir (radarda boş). Operasyon bilgisi puan değil, `ops_tags` |
 | `ops_tags` anahtarları | `road_access`, `remote` (`config/grid.yaml > ops_tags`) |
 | Analog `lat`, `lon` | Karenin Dünya'daki merkezi (derece, `lon` -180..180). Statik GeoJSON'da `geometry` ile aynı değerdir; `/scenario` yanıtında `geometry` olmadığı için pin bu alanlardan çizilir |

@@ -45,8 +45,10 @@ masks:
 
 # --- İndeksler -----------------------------------------------------------------
 # Ham uydu değerlerini parametrelere çeviren formüller. Kaynaklar: DATA_SOURCES.md.
-# Eşikler İLK TAHMİN: literatürden (Ninomiya indeksleri) belirlenir; doğrulama "holdout"
-# yerlerine bakılarak DEĞİŞTİRİLMEZ (config/known_analogs.yaml > split).
+# ASTER eşikleri DÜNYA DAĞILIMINDAN (14 Kasım, 207.343 kara karesi, land_frac >= 0,5):
+#   0 = medyanın altı · 0,25 = %50-75 · 0,5 = %75-90 · 0,75 = %90-97,5 · 1 = en üst %2,5
+# Hiçbir sahaya bakılmadan, verinin tamamından. İlk tahmin eşikleri dağılımın dışında kalıyordu
+# (karbonat 1,01 = %99'luk dilim: parametre fiilen ölüydü). Doğrulama yerlerine bakılarak DEĞİŞTİRİLMEZ.
 indices:
   aridity:
     # aridity = w_p * clip(1 - P / precip_wet_mm, 0, 1) + w_v * clip(1 - NDVI / ndvi_dense, 0, 1)
@@ -57,11 +59,11 @@ indices:
   # ASTER GED (AG100) emisivite bantları b10-b14 -> Ninomiya TIR indeksleri -> 0-1 sıralı ölçek.
   # breaks: indeks bu değerleri geçtikçe 0 -> 0.25 -> 0.5 -> 0.75 -> 1 basamağına çıkar.
   mafic_index:
-    formula: b12 / b13
-    breaks: [0.97, 0.99, 1.01, 1.03]
+    formula: b12 / b13       # yüksek = mafik (silika minimumu uzun dalgaya kayar)
+    breaks: [0.9905, 0.9955, 0.9984, 1.0023]
   carbonate_index:
-    formula: b13 / b14
-    breaks: [1.00, 1.01, 1.02, 1.03]
+    formula: b13 / b14       # yüksek = karbonat (11,2 µm soğurması, b14)
+    breaks: [1.0010, 1.0023, 1.0042, 1.0078]
   ground_ice:
     # ESA CCI Permafrost fraction (0-1) doğrudan kullanılır; kare içinde ortalama.
     source_band: PFR

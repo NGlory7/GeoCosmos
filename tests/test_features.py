@@ -13,7 +13,8 @@ NODATA = -9999
 def raw_row(lat, lon, **kw):
     row = dict(lon=lon, lat=lat, land_frac=1.0, slope_deg=3.0, roughness_m=20.0,
                lst_day_c=40.0, lst_night_c=10.0, ndvi=0.05, precip_mm=50.0, aod=0.3,
-               aster_mi=1.02, aster_ci=1.025, permafrost=0.0, access_min=120.0, pop_density=0.5,
+               aster_mi=1.0, aster_ci=1.005,  # yeni eşiklerle ikisi de 'baskın' (0,75)
+               permafrost=0.0, access_min=120.0, pop_density=0.5,
                lc_12=0.0, lc_13=0.0, lc_15=0.0, lc_17=0.0)
     row.update(kw)
     return row

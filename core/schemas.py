@@ -14,13 +14,13 @@ from pydantic import BaseModel, Field
 
 Body = Literal["moon", "mars"]
 TestId = Literal["rover", "ice_drilling", "lava_tube", "dust", "biosignature"]
-BreakdownKey = Literal["gravity", "atmosphere", "radiation", "liquid_water", "biology"]
+BreakdownKey = Literal["gravity", "atmosphere", "radiation", "liquid_water", "biology", "temperature"]
 # Operasyon bilgisi puan değil: Analog.ops_tags (kartta ✓/✗).
 ScoreKey = Literal["topography", "geology", "climate"]
 
 BODIES: tuple[str, ...] = ("moon", "mars")
 TEST_IDS: tuple[str, ...] = ("rover", "ice_drilling", "lava_tube", "dust", "biosignature")
-BREAKDOWN_KEYS: tuple[str, ...] = ("gravity", "atmosphere", "radiation", "liquid_water", "biology")
+BREAKDOWN_KEYS: tuple[str, ...] = ("gravity", "atmosphere", "radiation", "liquid_water", "biology", "temperature")
 SCORE_KEYS: tuple[str, ...] = ("topography", "geology", "climate")
 
 

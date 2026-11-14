@@ -13,6 +13,11 @@
 #   - Ayar yeri olmayan testlerin (dust, lava_tube) ağırlıkları fiziksel gerekçeyle önceden
 #     sabitlenmiştir ve doğrulama sonucuna bakılarak DEĞİŞTİRİLMEZ. Gerekçe her testin "rationale" alanında.
 
+# Eksik Dünya verisi "benzemiyor" değil "bilinmiyor"dur: ağırlıklar o karede ölçülebilen
+# parametrelere dağıtılır; ölçülebilen ağırlık payı bunun altındaysa skor bu oranla kırpılır.
+missing_data:
+  min_weight_coverage: 0.6
+
 parameters:
   slope_deg:
     label: Ortalama eğim (°, 500 m taban; config/grid.yaml > scale)
@@ -66,14 +71,16 @@ parameters:
 tests:
   rover:
     label: Rover sürüşü ve tekerlek aşınması
+    # 14 Kasım (ayar yeri Holuhraun'a bakılarak): sürüş ve tekerlek aşınmasını belirleyen arazi
+    # geometrisi (eğim, pürüzlülük) ve kayaç türüdür; kuraklık ikincil, gece-gündüz farkı ihmal edilebilir.
+    # Toz, güneş paneli ve mekanizma tozlanması için kalır.
     weights:
-      slope_deg: 0.25
-      roughness_m: 0.25
+      slope_deg: 0.30
+      roughness_m: 0.30
       mafic_index: 0.20
-      aridity: 0.15
       dust_aod: 0.10
-      temp_range_c: 0.05
-    breakdown: [gravity, atmosphere, radiation]
+      aridity: 0.10
+    breakdown: [gravity, atmosphere, radiation, temperature]
   ice_drilling:
     label: Donmuş zeminde buz sondajı (ISRU)
     weights:
@@ -94,7 +101,7 @@ tests:
       slope_deg: 0.15
       temp_range_c: 0.10
       aridity: 0.10
-    breakdown: [gravity, radiation, atmosphere]
+    breakdown: [gravity, radiation, atmosphere, temperature]
   dust:
     label: Toz fırtınası ve aşınma
     rationale: >-
@@ -106,7 +113,7 @@ tests:
       slope_deg: 0.10
       roughness_m: 0.10
       temp_range_c: 0.15
-    breakdown: [gravity, atmosphere]
+    breakdown: [gravity, atmosphere, temperature]
   biosignature:
     label: Biyo-imza ve antik yaşam izi
     # Karbonat baskın: Jezero'nun hedefi karbonat/kil çökelleri. Kuraklık ikincil; çok yüksek olsaydı
@@ -117,10 +124,13 @@ tests:
       hedefin altı cezalandırılır, üstü cezalandırılmaz. Karar doğrulama sonucuna bakılmadan, ilke
       olarak verildi (14 Kasım 2026; STATUS.md > Karar bekleyenler).
     at_least: [carbonate_index]
+    # Mutlak sıcaklık puana girmez (14 Kasım, ayar yeri Yungay'a bakılarak): Mars hedefleri yıllık
+    # ortalamada −43 °C; 60 °C toleransla sıcak çöllerin hepsi 0 alıyor, motor biyo-imzada bile kutupları
+    # öne çıkarıyordu. Biyo-imzanın korunması için belirleyici olan kuraklık ve mineraldir; sıcaklık
+    # farkı kartta kopma noktası olarak gösterilir. (Buz sondajında sıcaklık kalır: buz kararlılığını belirler.)
     weights:
       carbonate_index: 0.45
-      aridity: 0.20
-      surface_temp_c: 0.15
-      temp_range_c: 0.10
+      aridity: 0.30
+      temp_range_c: 0.15
       dust_aod: 0.10
-    breakdown: [liquid_water, biology, radiation]
+    breakdown: [liquid_water, biology, radiation, temperature]

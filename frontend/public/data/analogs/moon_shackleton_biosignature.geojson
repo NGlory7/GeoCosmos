@@ -19,11 +19,11 @@
     "lat": 22.948432723786787,
     "lon": 32.81843855114922,
     "rank": 1,
-    "score_total": 81.2,
+    "score_total": 99.8,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 56.9
+     "climate": 99.6
     },
     "params": [
      {
@@ -39,13 +39,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 26.896444857936594,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -56,7 +49,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -80,11 +74,11 @@
     "lat": 22.27015392406895,
     "lon": 31.58928354923352,
     "rank": 2,
-    "score_total": 80.6,
+    "score_total": 98.9,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 55.6
+     "climate": 97.3
     },
     "params": [
      {
@@ -100,13 +94,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 27.528225501585908,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -117,7 +104,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -141,11 +129,11 @@
     "lat": 35.60963698518639,
     "lon": 82.72701438496468,
     "rank": 3,
-    "score_total": 79.5,
+    "score_total": 97.3,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 53.3
+     "climate": 93.2
     },
     "params": [
      {
@@ -161,13 +149,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": -4.030366170052096,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -178,7 +159,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -202,16 +184,16 @@
     "lat": 37.644473384339896,
     "lon": 93.59606343541061,
     "rank": 4,
-    "score_total": 79.5,
+    "score_total": 97.2,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 53.2
+     "climate": 93.0
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 0.75,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -222,13 +204,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 9.769211780558395,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -239,7 +214,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -263,16 +239,16 @@
     "lat": 77.21073670121366,
     "lon": -118.54833278449497,
     "rank": 5,
-    "score_total": 79.5,
+    "score_total": 97.2,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 53.1
+     "climate": 92.9
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 0.75,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -283,13 +259,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": -19.995137617461182,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -300,7 +269,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -324,16 +294,16 @@
     "lat": 77.66292256769222,
     "lon": -111.42525699486868,
     "rank": 6,
-    "score_total": 79.5,
+    "score_total": 97.1,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 53.0
+     "climate": 92.8
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 0.75,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -344,13 +314,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": -20.09515073164191,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -361,7 +324,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -385,11 +349,11 @@
     "lat": 40.583681516450525,
     "lon": 88.5846206687902,
     "rank": 7,
-    "score_total": 79.4,
+    "score_total": 97.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.9
+     "climate": 92.5
     },
     "params": [
      {
@@ -405,13 +369,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 18.158575858070854,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -422,7 +379,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -446,11 +404,11 @@
     "lat": 25.88764085589741,
     "lon": 33.80176255268178,
     "rank": 8,
-    "score_total": 79.3,
+    "score_total": 96.9,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.8
+     "climate": 92.4
     },
     "params": [
      {
@@ -466,13 +424,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 32.53707987052065,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -483,7 +434,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -507,11 +459,11 @@
     "lat": 40.357588583211246,
     "lon": 90.6481559256339,
     "rank": 9,
-    "score_total": 79.3,
+    "score_total": 96.9,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.7
+     "climate": 92.2
     },
     "params": [
      {
@@ -527,13 +479,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 17.34073146730858,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -544,7 +489,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -568,11 +514,11 @@
     "lat": 24.983269122940293,
     "lon": 34.29342455344806,
     "rank": 10,
-    "score_total": 79.3,
+    "score_total": 96.8,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.6
+     "climate": 92.1
     },
     "params": [
      {
@@ -588,13 +534,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 31.250882691952057,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -605,7 +544,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -629,16 +569,16 @@
     "lat": 39.22712391701485,
     "lon": 89.46899292172321,
     "rank": 11,
-    "score_total": 79.3,
+    "score_total": 96.8,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.6
+     "climate": 92.0
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 0.75,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -649,13 +589,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 17.2062928686311,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -666,7 +599,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -690,16 +624,16 @@
     "lat": 36.28791578490423,
     "lon": 83.5314910240405,
     "rank": 12,
-    "score_total": 79.2,
+    "score_total": 96.8,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.5
+     "climate": 92.0
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.25,
+      "earth": 0.75,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
@@ -710,13 +644,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": -2.4599757460488725,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -727,7 +654,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -751,11 +679,11 @@
     "lat": 37.870566317579176,
     "lon": 85.34192240803581,
     "rank": 13,
-    "score_total": 79.2,
+    "score_total": 96.8,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.5
+     "climate": 91.9
     },
     "params": [
      {
@@ -771,13 +699,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 17.228727807666125,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -788,7 +709,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -812,11 +734,11 @@
     "lat": 40.13149564997197,
     "lon": 92.7116911824776,
     "rank": 14,
-    "score_total": 79.2,
+    "score_total": 96.8,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.5
+     "climate": 91.9
     },
     "params": [
      {
@@ -832,13 +754,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 19.27641689743585,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -849,7 +764,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -873,11 +789,11 @@
     "lat": 23.8528044567439,
     "lon": 15.610268524329404,
     "rank": 15,
-    "score_total": 79.2,
+    "score_total": 96.7,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.5
+     "climate": 91.8
     },
     "params": [
      {
@@ -893,13 +809,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 29.00022892987127,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -910,7 +819,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -934,11 +844,11 @@
     "lat": 78.56729430064934,
     "lon": -97.59852601638225,
     "rank": 16,
-    "score_total": 79.2,
+    "score_total": 96.7,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.4
+     "climate": 91.7
     },
     "params": [
      {
@@ -954,13 +864,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": -19.25666503219985,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -971,7 +874,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -995,11 +899,11 @@
     "lat": 38.54884511729701,
     "lon": 87.11066691390184,
     "rank": 17,
-    "score_total": 79.1,
+    "score_total": 96.6,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.3
+     "climate": 91.6
     },
     "params": [
      {
@@ -1015,13 +919,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 18.660983729357863,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -1032,7 +929,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1056,11 +954,11 @@
     "lat": 24.757176189701013,
     "lon": 17.576916527394527,
     "rank": 18,
-    "score_total": 79.1,
+    "score_total": 96.6,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.3
+     "climate": 91.5
     },
     "params": [
      {
@@ -1076,13 +974,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 28.58512540880801,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -1093,7 +984,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1117,11 +1009,11 @@
     "lat": 25.88764085589741,
     "lon": 5.039535507854374,
     "rank": 19,
-    "score_total": 79.1,
+    "score_total": 96.5,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.2
+     "climate": 91.3
     },
     "params": [
      {
@@ -1137,13 +1029,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 31.899288945964315,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -1154,7 +1039,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1178,11 +1064,11 @@
     "lat": 23.174525657026063,
     "lon": 31.34345254885038,
     "rank": 20,
-    "score_total": 79.1,
+    "score_total": 96.5,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 52.2
+     "climate": 91.3
     },
     "params": [
      {
@@ -1198,13 +1084,6 @@
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": 27.67426477937105,
-      "target": -181.3,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
      }
     ],
     "ops_tags": {
@@ -1215,7 +1094,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""

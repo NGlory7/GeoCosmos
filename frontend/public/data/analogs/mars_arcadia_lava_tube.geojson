@@ -6,376 +6,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -68.33826597196465,
-     -23.400618590265342
-    ]
-   },
-   "properties": {
-    "id": "g25_-23.401_-68.338",
-    "name": "23.40°G, 68.34°B",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": -23.400618590265342,
-    "lon": -68.33826597196465,
-    "rank": 1,
-    "score_total": 94.8,
-    "scores": {
-     "topography": 99.4,
-     "geology": 100.0,
-     "climate": 74.8
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 5.069269490971103,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.20975665748119354,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 20.302940481882516,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9091633887031212,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     54.20573558448242,
-     24.07889738998318
-    ]
-   },
-   "properties": {
-    "id": "g25_24.079_54.206",
-    "name": "24.08°K, 54.21°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 24.07889738998318,
-    "lon": 54.20573558448242,
-    "rank": 2,
-    "score_total": 94.0,
-    "scores": {
-     "topography": 97.5,
-     "geology": 100.0,
-     "climate": 74.3
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 2.7798901745073024,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.1293160766363144,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 20.74673210333439,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.8978555391496529,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     54.970072082869386,
-     18.200481125761932
-    ]
-   },
-   "properties": {
-    "id": "g25_18.200_54.970",
-    "name": "18.20°K, 54.97°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 18.200481125761932,
-    "lon": 54.970072082869386,
-    "rank": 3,
-    "score_total": 93.8,
-    "scores": {
-     "topography": 99.2,
-     "geology": 100.0,
-     "climate": 70.5
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 4.100772592297952,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.17864000797271729,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 20.330182254480533,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.8561993781551112,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     54.04426034252632,
-     17.974388192522653
-    ]
-   },
-   "properties": {
-    "id": "g25_17.974_54.044",
-    "name": "17.97°K, 54.04°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 17.974388192522653,
-    "lon": 54.04426034252632,
-    "rank": 4,
-    "score_total": 93.8,
-    "scores": {
-     "topography": 99.6,
-     "geology": 100.0,
-     "climate": 69.6
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 4.9342322653589745,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.21480771899223328,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 20.4572809657638,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.8446979455156542,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     26.145490769964525,
-     29.50512778772587
-    ]
-   },
-   "properties": {
-    "id": "g25_29.505_26.145",
-    "name": "29.51°K, 26.15°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 29.50512778772587,
-    "lon": 26.145490769964525,
-    "rank": 5,
-    "score_total": 93.5,
-    "scores": {
-     "topography": 98.4,
-     "geology": 100.0,
-     "climate": 70.5
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 5.876921320478288,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.320696085691452,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 18.008429036621685,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.8797936778672948,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      56.590242628469746,
      18.42657405900121
     ]
@@ -388,7 +18,7 @@
     "test_id": "lava_tube",
     "lat": 18.42657405900121,
     "lon": 56.590242628469746,
-    "rank": 6,
+    "rank": 1,
     "score_total": 93.5,
     "scores": {
      "topography": 97.8,
@@ -439,229 +69,8 @@
     "breakdown": [
      "gravity",
      "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     36.60368707795033,
-     33.34870765279361
-    ]
-   },
-   "properties": {
-    "id": "g25_33.349_36.604",
-    "name": "33.35°K, 36.60°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 33.34870765279361,
-    "lon": 36.60368707795033,
-    "rank": 7,
-    "score_total": 93.0,
-    "scores": {
-     "topography": 99.9,
-     "geology": 100.0,
-     "climate": 65.4
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 4.749749364904014,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.24781577289104462,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 20.834623518000218,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.7906853776732392,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     27.486285168424246,
-     30.63559245392226
-    ]
-   },
-   "properties": {
-    "id": "g25_30.636_27.486",
-    "name": "30.64°K, 27.49°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 30.63559245392226,
-    "lon": 27.486285168424246,
-    "rank": 8,
-    "score_total": 93.0,
-    "scores": {
-     "topography": 99.8,
-     "geology": 100.0,
-     "climate": 65.5
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 4.449646147817461,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.2550986409187317,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 15.968505438124621,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.8405359752710608,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -68.10260634963551,
-     -20.46141045815472
-    ]
-   },
-   "properties": {
-    "id": "g25_-20.461_-68.103",
-    "name": "20.46°G, 68.10°B",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": -20.46141045815472,
-    "lon": -68.10260634963551,
-    "rank": 9,
-    "score_total": 93.0,
-    "scores": {
-     "topography": 96.4,
-     "geology": 100.0,
-     "climate": 71.2
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 7.7826387593249855,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.25097721815109253,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 16.46073158283938,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9041710210388072,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
+     "atmosphere",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -684,7 +93,7 @@
     "test_id": "lava_tube",
     "lat": 10.513321395626459,
     "lon": 49.646654575896775,
-    "rank": 10,
+    "rank": 2,
     "score_total": 92.8,
     "scores": {
      "topography": 99.0,
@@ -735,7 +144,8 @@
     "breakdown": [
      "gravity",
      "radiation",
-     "atmosphere"
+     "atmosphere",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -758,7 +168,7 @@
     "test_id": "lava_tube",
     "lat": 40.583681516450525,
     "lon": -113.93662525286992,
-    "rank": 11,
+    "rank": 3,
     "score_total": 92.8,
     "scores": {
      "topography": 98.9,
@@ -809,7 +219,8 @@
     "breakdown": [
      "gravity",
      "radiation",
-     "atmosphere"
+     "atmosphere",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -832,7 +243,7 @@
     "test_id": "lava_tube",
     "lat": 76.98464376797439,
     "lon": -118.54833278449497,
-    "rank": 12,
+    "rank": 4,
     "score_total": 92.7,
     "scores": {
      "topography": 99.9,
@@ -883,7 +294,8 @@
     "breakdown": [
      "gravity",
      "radiation",
-     "atmosphere"
+     "atmosphere",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -894,246 +306,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     58.13903159061267,
-     22.27015392406895
+     54.970072082869386,
+     17.974388192522653
     ]
    },
    "properties": {
-    "id": "g25_22.270_58.139",
-    "name": "22.27°K, 58.14°D",
+    "id": "g25_17.974_54.970",
+    "name": "17.97°K, 54.97°D",
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "lava_tube",
-    "lat": 22.27015392406895,
-    "lon": 58.13903159061267,
-    "rank": 13,
-    "score_total": 92.5,
-    "scores": {
-     "topography": 93.6,
-     "geology": 100.0,
-     "climate": 73.7
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 9.854892585671251,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.38946300745010376,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 21.69386155769706,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.8810631355681426,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     57.40153858946324,
-     23.8528044567439
-    ]
-   },
-   "properties": {
-    "id": "g25_23.853_57.402",
-    "name": "23.85°K, 57.40°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 23.8528044567439,
-    "lon": 57.40153858946324,
-    "rank": 14,
-    "score_total": 92.4,
-    "scores": {
-     "topography": 99.1,
-     "geology": 100.0,
-     "climate": 63.7
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 4.078949623747317,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.14555512368679047,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 18.657011497512734,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.7916695946532196,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     48.25793696538218,
-     9.608949662669344
-    ]
-   },
-   "properties": {
-    "id": "g25_9.609_48.258",
-    "name": "9.61°K, 48.26°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 9.608949662669344,
-    "lon": 48.25793696538218,
-    "rank": 15,
-    "score_total": 92.4,
-    "scores": {
-     "topography": 99.3,
-     "geology": 100.0,
-     "climate": 62.9
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 4.282557019051518,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.15704475343227386,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 19.114024657213168,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.7777831260266889,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     56.71560305484613,
-     33.574800586032886
-    ]
-   },
-   "properties": {
-    "id": "g25_33.575_56.716",
-    "name": "33.57°K, 56.72°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 33.574800586032886,
-    "lon": 56.71560305484613,
-    "rank": 16,
+    "lat": 17.974388192522653,
+    "lon": 54.970072082869386,
+    "rank": 5,
     "score_total": 92.2,
     "scores": {
-     "topography": 92.8,
+     "topography": 95.7,
      "geology": 100.0,
-     "climate": 73.8
+     "climate": 68.7
     },
     "params": [
      {
@@ -1145,28 +335,28 @@
      },
      {
       "key": "roughness_m",
-      "earth": 10.537358490064557,
+      "earth": 8.071173348399146,
       "target": 4.63,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "slope_deg",
-      "earth": 0.39042922854423523,
+      "earth": 0.39530450105667114,
       "target": 0.25,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "temp_range_c",
-      "earth": 22.96716252770431,
+      "earth": 19.126123813547615,
       "target": 41.4,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.869470409123715,
+      "earth": 0.8467665348611075,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
@@ -1174,12 +364,13 @@
     ],
     "ops_tags": {
      "road_access": true,
-     "remote": false
+     "remote": true
     },
     "breakdown": [
      "gravity",
      "radiation",
-     "atmosphere"
+     "atmosphere",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1190,24 +381,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     57.40153858946324,
-     19.10485285871905
+     -67.86897819749267,
+     -20.23531752491544
     ]
    },
    "properties": {
-    "id": "g25_19.105_57.402",
-    "name": "19.10°K, 57.40°D",
+    "id": "g25_-20.235_-67.869",
+    "name": "20.24°G, 67.87°B",
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "lava_tube",
-    "lat": 19.10485285871905,
-    "lon": 57.40153858946324,
-    "rank": 17,
-    "score_total": 92.2,
+    "lat": -20.23531752491544,
+    "lon": -67.86897819749267,
+    "rank": 6,
+    "score_total": 92.1,
     "scores": {
-     "topography": 95.9,
+     "topography": 97.9,
      "geology": 100.0,
-     "climate": 68.3
+     "climate": 64.3
     },
     "params": [
      {
@@ -1219,28 +410,28 @@
      },
      {
       "key": "roughness_m",
-      "earth": 7.950635420012411,
+      "earth": 6.242933713001673,
       "target": 4.63,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "slope_deg",
-      "earth": 0.3550897240638733,
+      "earth": 0.32572856545448303,
       "target": 0.25,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "temp_range_c",
-      "earth": 15.313227160002217,
+      "earth": 13.805229157396013,
       "target": 41.4,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.8808158655821514,
+      "earth": 0.8479912353586869,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
@@ -1248,86 +439,13 @@
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": false
+     "remote": true
     },
     "breakdown": [
      "gravity",
      "radiation",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     51.255763579884736,
-     26.11373378913669
-    ]
-   },
-   "properties": {
-    "id": "g25_26.114_51.256",
-    "name": "26.11°K, 51.26°D",
-    "is_new": true,
-    "target_id": "mars_arcadia",
-    "test_id": "lava_tube",
-    "lat": 26.11373378913669,
-    "lon": 51.255763579884736,
-    "rank": 18,
-    "score_total": 92.1,
-    "scores": {
-     "topography": 96.0,
-     "geology": 100.0,
-     "climate": 67.5
-    },
-    "params": [
-     {
-      "key": "mafic_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 1.539454913678447,
-      "target": 4.63,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "slope_deg",
-      "earth": 0.07248122990131378,
-      "target": 0.25,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 15.19569910329395,
-      "target": 41.4,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.871713323221261,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "atmosphere"
+     "atmosphere",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1350,7 +468,7 @@
     "test_id": "lava_tube",
     "lat": 72.23669216994954,
     "lon": -105.75886765047792,
-    "rank": 19,
+    "rank": 7,
     "score_total": 92.0,
     "scores": {
      "topography": 99.2,
@@ -1401,7 +519,8 @@
     "breakdown": [
      "gravity",
      "radiation",
-     "atmosphere"
+     "atmosphere",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1412,24 +531,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -69.39343069705998,
-     -35.38354405194711
+     -99.26173584942468,
+     72.23669216994954
     ]
    },
    "properties": {
-    "id": "g25_-35.384_-69.393",
-    "name": "35.38°G, 69.39°B",
+    "id": "g25_72.237_-99.262",
+    "name": "72.24°K, 99.26°B",
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "lava_tube",
-    "lat": -35.38354405194711,
-    "lon": -69.39343069705998,
-    "rank": 20,
-    "score_total": 92.0,
+    "lat": 72.23669216994954,
+    "lon": -99.26173584942468,
+    "rank": 8,
+    "score_total": 91.7,
     "scores": {
-     "topography": 98.7,
+     "topography": 99.2,
      "geology": 100.0,
-     "climate": 62.1
+     "climate": 60.0
     },
     "params": [
      {
@@ -1441,28 +560,103 @@
      },
      {
       "key": "roughness_m",
-      "earth": 3.73266588576922,
+      "earth": 5.158514043679123,
       "target": 4.63,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "slope_deg",
-      "earth": 0.14173400402069092,
+      "earth": 0.3343409597873688,
       "target": 0.25,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "temp_range_c",
-      "earth": 22.310497139935286,
+      "earth": 2.61619421216386,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9078286229635617,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     56.90987658869697,
+     24.07889738998318
+    ]
+   },
+   "properties": {
+    "id": "g25_24.079_56.910",
+    "name": "24.08°K, 56.91°D",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 24.07889738998318,
+    "lon": 56.90987658869697,
+    "rank": 9,
+    "score_total": 91.6,
+    "scores": {
+     "topography": 95.0,
+     "geology": 100.0,
+     "climate": 67.0
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 8.793602341074692,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.350899338722229,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 18.065540387347234,
       "target": 41.4,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.7359786838266942,
+      "earth": 0.8371294462151344,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
@@ -1470,12 +664,838 @@
     ],
     "ops_tags": {
      "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -101.39944239530996,
+     69.74966990431747
+    ]
+   },
+   "properties": {
+    "id": "g25_69.750_-101.399",
+    "name": "69.75°K, 101.40°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 69.74966990431747,
+    "lon": -101.39944239530996,
+    "rank": 10,
+    "score_total": 91.6,
+    "scores": {
+     "topography": 99.6,
+     "geology": 100.0,
+     "climate": 58.8
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 4.869681438260155,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.2107500582933426,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 3.650680030191717,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.883382530195726,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
      "remote": true
     },
     "breakdown": [
      "gravity",
      "radiation",
-     "atmosphere"
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -98.48376470123164,
+     68.84529817136035
+    ]
+   },
+   "properties": {
+    "id": "g25_68.845_-98.484",
+    "name": "68.85°K, 98.48°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 68.84529817136035,
+    "lon": -98.48376470123164,
+    "rank": 11,
+    "score_total": 91.3,
+    "scores": {
+     "topography": 99.9,
+     "geology": 100.0,
+     "climate": 56.8
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 4.604093014816972,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.21799682080745697,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 4.469710692516003,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8508807870183193,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     129.06904368309185,
+     -31.313871253640098
+    ]
+   },
+   "properties": {
+    "id": "g25_-31.314_129.069",
+    "name": "31.31°G, 129.07°D",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": -31.313871253640098,
+    "lon": 129.06904368309185,
+    "rank": 12,
+    "score_total": 91.2,
+    "scores": {
+     "topography": 96.8,
+     "geology": 100.0,
+     "climate": 61.4
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 2.1545342238984775,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.11168254166841507,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.30668157746934,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7378522919815936,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -102.72614225759239,
+     68.84529817136035
+    ]
+   },
+   "properties": {
+    "id": "g25_68.845_-102.726",
+    "name": "68.85°K, 102.73°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 68.84529817136035,
+    "lon": -102.72614225759239,
+    "rank": 13,
+    "score_total": 91.1,
+    "scores": {
+     "topography": 99.6,
+     "geology": 100.0,
+     "climate": 56.1
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 4.410359497626365,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.20298518240451813,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 3.762183005107218,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8496433953506521,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -108.66585194806832,
+     70.4279487040353
+    ]
+   },
+   "properties": {
+    "id": "g25_70.428_-108.666",
+    "name": "70.43°K, 108.67°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 70.4279487040353,
+    "lon": -108.66585194806832,
+    "rank": 14,
+    "score_total": 91.0,
+    "scores": {
+     "topography": 97.5,
+     "geology": 100.0,
+     "climate": 59.5
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 6.426189532409984,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.40044137835502625,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 3.2012622856805706,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8954253890961479,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -100.70812060777325,
+     66.81046177220685
+    ]
+   },
+   "properties": {
+    "id": "g25_66.810_-100.708",
+    "name": "66.81°K, 100.71°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 66.81046177220685,
+    "lon": -100.70812060777325,
+    "rank": 15,
+    "score_total": 90.7,
+    "scores": {
+     "topography": 99.6,
+     "geology": 100.0,
+     "climate": 54.3
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 4.367139172365996,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.28768494725227356,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 5.084795581417794,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8146987081033386,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -69.03711895820683,
+     -16.84392352632626
+    ]
+   },
+   "properties": {
+    "id": "g25_-16.844_-69.037",
+    "name": "16.84°G, 69.04°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": -16.84392352632626,
+    "lon": -69.03711895820683,
+    "rank": 16,
+    "score_total": 90.6,
+    "scores": {
+     "topography": 98.8,
+     "geology": 100.0,
+     "climate": 55.2
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 5.669916379194981,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.2612057030200958,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 31.7002537709714,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.5596656238763444,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -111.3342746476007,
+     50.30567764573951
+    ]
+   },
+   "properties": {
+    "id": "g25_50.306_-111.334",
+    "name": "50.31°K, 111.33°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 50.30567764573951,
+    "lon": -111.3342746476007,
+    "rank": 17,
+    "score_total": 90.6,
+    "scores": {
+     "topography": 98.9,
+     "geology": 100.0,
+     "climate": 54.9
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 5.452837440358512,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.2942855954170227,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 19.230127894815027,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6800550642594225,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.66582298280494,
+     67.94092643840324
+    ]
+   },
+   "properties": {
+    "id": "g25_67.941_-76.666",
+    "name": "67.94°K, 76.67°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 67.94092643840324,
+    "lon": -76.66582298280494,
+    "rank": 18,
+    "score_total": 90.5,
+    "scores": {
+     "topography": 98.7,
+     "geology": 100.0,
+     "climate": 54.7
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 3.7684449490827023,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.15099312365055084,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 4.954000557266015,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8203844025295732,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -93.02927927162496,
+     68.61920523812108
+    ]
+   },
+   "properties": {
+    "id": "g25_68.619_-93.029",
+    "name": "68.62°K, 93.03°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 68.61920523812108,
+    "lon": -93.02927927162496,
+    "rank": 19,
+    "score_total": 90.4,
+    "scores": {
+     "topography": 99.7,
+     "geology": 100.0,
+     "climate": 52.6
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 4.859816239180301,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.23076565563678741,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 5.275418523037565,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7924405765012117,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -96.11478090239478,
+     69.97576283755674
+    ]
+   },
+   "properties": {
+    "id": "g25_69.976_-96.115",
+    "name": "69.98°K, 96.11°B",
+    "is_new": true,
+    "target_id": "mars_arcadia",
+    "test_id": "lava_tube",
+    "lat": 69.97576283755674,
+    "lon": -96.11478090239478,
+    "rank": 20,
+    "score_total": 90.3,
+    "scores": {
+     "topography": 96.4,
+     "geology": 100.0,
+     "climate": 58.0
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 7.592155184001526,
+      "target": 4.63,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.3254462480545044,
+      "target": 0.25,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 4.100155156925533,
+      "target": 41.4,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8694560026956439,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""

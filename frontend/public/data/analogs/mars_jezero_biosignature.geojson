@@ -6,125 +6,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -106.4807711839283,
-     72.6888780364281
-    ]
-   },
-   "properties": {
-    "id": "g25_72.689_-106.481",
-    "name": "72.69°K, 106.48°B",
-    "is_new": true,
-    "target_id": "mars_jezero",
-    "test_id": "biosignature",
-    "lat": 72.6888780364281,
-    "lon": -106.4807711839283,
-    "rank": 1,
-    "score_total": 82.3,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 67.9
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.5,
-      "target": 0.5,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9357579324717966,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     },
-     {
-      "key": "surface_temp_c",
-      "earth": -17.216146983144014,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
-      "key": "temp_range_c",
-      "earth": 2.1537982620569736,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
-      "key": "dust_aod",
-      "earth": 0.4987,
-      "target": 0.51,
-      "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     83.79964990373246,
+     83.5314910240405,
      36.28791578490423
     ]
    },
    "properties": {
-    "id": "g25_36.288_83.800",
-    "name": "36.29°K, 83.80°D",
+    "id": "g25_36.288_83.531",
+    "name": "36.29°K, 83.53°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
     "lat": 36.28791578490423,
-    "lon": 83.79964990373246,
-    "rank": 2,
-    "score_total": 81.9,
+    "lon": 83.5314910240405,
+    "rank": 1,
+    "score_total": 89.1,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 67.1
+     "climate": 80.2
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 0.75,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.9482311355795094,
+      "earth": 0.951743751486711,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -2.301761376902138,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "temp_range_c",
-      "earth": 27.010368118841882,
+      "earth": 26.655046737307117,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": true
@@ -145,7 +63,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -156,24 +75,93 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -100.0266057409909,
-     72.91497096966738
+     89.46899292172321,
+     39.22712391701485
     ]
    },
    "properties": {
-    "id": "g25_72.915_-100.027",
-    "name": "72.91°K, 100.03°B",
+    "id": "g25_39.227_89.469",
+    "name": "39.23°K, 89.47°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 72.91497096966738,
-    "lon": -100.0266057409909,
+    "lat": 39.22712391701485,
+    "lon": 89.46899292172321,
+    "rank": 2,
+    "score_total": 88.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 78.8
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.75,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9522064452286303,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 25.177404273454563,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "dust_aod",
+      "earth": 0.36033333333333334,
+      "target": 0.51,
+      "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.00648193345526,
+     38.322752184057734
+    ]
+   },
+   "properties": {
+    "id": "g25_38.323_93.006",
+    "name": "38.32°K, 93.01°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature",
+    "lat": 38.322752184057734,
+    "lon": 93.00648193345526,
     "rank": 3,
-    "score_total": 81.8,
+    "score_total": 87.5,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 66.8
+     "climate": 77.3
     },
     "params": [
      {
@@ -185,28 +173,21 @@
      },
      {
       "key": "aridity",
-      "earth": 0.9189178597649885,
+      "earth": 0.9414457719305414,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -17.544094488054874,
-      "target": -43.6,
+      "key": "temp_range_c",
+      "earth": 29.352909507844085,
+      "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
-      "key": "temp_range_c",
-      "earth": 2.459636437931419,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "dust_aod",
-      "earth": 0.4862032718734515,
+      "earth": 0.25440319202364936,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -220,7 +201,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -231,57 +213,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -106.29597672701904,
-     75.17590030206016
+     91.82731892954459,
+     38.096659250818455
     ]
    },
    "properties": {
-    "id": "g25_75.176_-106.296",
-    "name": "75.18°K, 106.30°B",
+    "id": "g25_38.097_91.827",
+    "name": "38.10°K, 91.83°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 75.17590030206016,
-    "lon": -106.29597672701904,
+    "lat": 38.096659250818455,
+    "lon": 91.82731892954459,
     "rank": 4,
-    "score_total": 81.2,
+    "score_total": 87.1,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 65.7
+     "climate": 76.5
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 0.75,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.8984710085188339,
+      "earth": 0.9315754170994908,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -17.689242203666232,
-      "target": -43.6,
+      "key": "temp_range_c",
+      "earth": 30.22593826734026,
+      "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
-      "key": "temp_range_c",
-      "earth": 2.2769712247934883,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "dust_aod",
-      "earth": 0.49173144162669863,
+      "earth": 0.240311879999999,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -289,13 +264,14 @@
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -306,57 +282,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -117.53122760199429,
-     76.53245790149583
+     90.6481559256339,
+     38.77493805053629
     ]
    },
    "properties": {
-    "id": "g25_76.532_-117.531",
-    "name": "76.53°K, 117.53°B",
+    "id": "g25_38.775_90.648",
+    "name": "38.77°K, 90.65°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 76.53245790149583,
-    "lon": -117.53122760199429,
+    "lat": 38.77493805053629,
+    "lon": 90.6481559256339,
     "rank": 5,
-    "score_total": 80.9,
+    "score_total": 86.9,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 65.2
+     "climate": 76.2
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 1.0,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.936002152192168,
+      "earth": 0.9286973721499484,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -18.19894622389424,
-      "target": -43.6,
+      "key": "temp_range_c",
+      "earth": 29.514245722424185,
+      "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
-      "key": "temp_range_c",
-      "earth": 2.041880211859354,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "dust_aod",
-      "earth": 0.36025,
+      "earth": 0.2522166666666667,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -370,7 +339,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -381,57 +351,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -104.77095067732249,
-     73.59324976938521
+     82.19069662558078,
+     36.06182285166495
     ]
    },
    "properties": {
-    "id": "g25_73.593_-104.771",
-    "name": "73.59°K, 104.77°B",
+    "id": "g25_36.062_82.191",
+    "name": "36.06°K, 82.19°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 73.59324976938521,
-    "lon": -104.77095067732249,
+    "lat": 36.06182285166495,
+    "lon": 82.19069662558078,
     "rank": 6,
-    "score_total": 80.4,
+    "score_total": 86.8,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 64.4
+     "climate": 76.1
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 0.75,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.9217589590047526,
+      "earth": 0.8971345267276243,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -17.645712589772913,
-      "target": -43.6,
+      "key": "temp_range_c",
+      "earth": 29.006640847033005,
+      "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
-      "key": "temp_range_c",
-      "earth": 1.763401069589225,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "dust_aod",
-      "earth": 0.3765315380758528,
+      "earth": 0.38454962553191213,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -439,13 +402,14 @@
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -456,57 +420,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -110.09028885118009,
-     72.23669216994954
+     93.89085418638828,
+     37.644473384339896
     ]
    },
    "properties": {
-    "id": "g25_72.237_-110.090",
-    "name": "72.24°K, 110.09°B",
+    "id": "g25_37.644_93.891",
+    "name": "37.64°K, 93.89°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 72.23669216994954,
-    "lon": -110.09028885118009,
+    "lat": 37.644473384339896,
+    "lon": 93.89085418638828,
     "rank": 7,
-    "score_total": 80.0,
+    "score_total": 86.5,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 63.7
+     "climate": 75.5
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 0.75,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.9222047651072565,
+      "earth": 0.9392676391865865,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -15.826467691216523,
-      "target": -43.6,
+      "key": "temp_range_c",
+      "earth": 25.941080420132025,
+      "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
-      "key": "temp_range_c",
-      "earth": 2.662056538499751,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "dust_aod",
-      "earth": 0.37154064525651226,
+      "earth": 0.2507966619510689,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -520,7 +477,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -531,57 +489,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -112.32084990182985,
-     75.40199323529944
+     54.94322858563184,
+     20.009224591676162
     ]
    },
    "properties": {
-    "id": "g25_75.402_-112.321",
-    "name": "75.40°K, 112.32°B",
+    "id": "g25_20.009_54.943",
+    "name": "20.01°K, 54.94°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 75.40199323529944,
-    "lon": -112.32084990182985,
+    "lat": 20.009224591676162,
+    "lon": 54.94322858563184,
     "rank": 8,
-    "score_total": 79.8,
+    "score_total": 86.3,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 63.3
+     "climate": 75.0
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 0.75,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.9332082295214404,
+      "earth": 0.9084796814974312,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -17.00800070041307,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 2.4972486409748775,
+      "earth": 20.054852520893125,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.30434107237684116,
+      "earth": 0.5476092472191413,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -589,13 +540,14 @@
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -606,71 +558,65 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -107.20267471737866,
-     71.78450630347098
+     56.17238358754754,
+     19.783131658436883
     ]
    },
    "properties": {
-    "id": "g25_71.785_-107.203",
-    "name": "71.78°K, 107.20°B",
+    "id": "g25_19.783_56.172",
+    "name": "19.78°K, 56.17°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 71.78450630347098,
-    "lon": -107.20267471737866,
+    "lat": 19.783131658436883,
+    "lon": 56.17238358754754,
     "rank": 9,
-    "score_total": 79.8,
+    "score_total": 86.2,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 63.2
+     "climate": 74.8
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 1.0,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.9006306393608463,
+      "earth": 0.9173016409799539,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -16.584829605829242,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 2.6284315287559554,
+      "earth": 17.997936463968653,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.3938456031148033,
+      "earth": 0.5508500000000001,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -681,24 +627,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -98.54971121654802,
-     75.40199323529944
+     77.09567791143385,
+     36.06182285166495
     ]
    },
    "properties": {
-    "id": "g25_75.402_-98.550",
-    "name": "75.40°K, 98.55°B",
+    "id": "g25_36.062_77.096",
+    "name": "36.06°K, 77.10°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 75.40199323529944,
-    "lon": -98.54971121654802,
+    "lat": 36.06182285166495,
+    "lon": 77.09567791143385,
     "rank": 10,
-    "score_total": 79.7,
+    "score_total": 86.1,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 63.0
+     "climate": 74.7
     },
     "params": [
      {
@@ -710,28 +656,21 @@
      },
      {
       "key": "aridity",
-      "earth": 0.9209108221506452,
+      "earth": 0.9304780941063745,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -18.938053561126544,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 2.1212936371776223,
+      "earth": 22.514439780708006,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.29063636363636364,
+      "earth": 0.31895794784527304,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -745,7 +684,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -756,24 +696,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -94.49153664860405,
-     73.59324976938521
+     86.48123870065189,
+     37.192287517861345
     ]
    },
    "properties": {
-    "id": "g25_73.593_-94.492",
-    "name": "73.59°K, 94.49°B",
+    "id": "g25_37.192_86.481",
+    "name": "37.19°K, 86.48°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 73.59324976938521,
-    "lon": -94.49153664860405,
+    "lat": 37.192287517861345,
+    "lon": 86.48123870065189,
     "rank": 11,
-    "score_total": 79.5,
+    "score_total": 85.9,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 62.7
+     "climate": 74.4
     },
     "params": [
      {
@@ -785,28 +725,21 @@
      },
      {
       "key": "aridity",
-      "earth": 0.9090861702681834,
+      "earth": 0.9063537051682875,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -18.074666391255853,
-      "target": -43.6,
+      "key": "temp_range_c",
+      "earth": 27.349392798671715,
+      "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
-      "key": "temp_range_c",
-      "earth": 2.2861900408037314,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "dust_aod",
-      "earth": 0.3201666666666667,
+      "earth": 0.3081333333333333,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -820,7 +753,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -831,24 +765,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -113.6998065184319,
-     72.01059923671026
+     57.647369589846384,
+     20.46141045815472
     ]
    },
    "properties": {
-    "id": "g25_72.011_-113.700",
-    "name": "72.01°K, 113.70°B",
+    "id": "g25_20.461_57.647",
+    "name": "20.46°K, 57.65°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 72.01059923671026,
-    "lon": -113.6998065184319,
+    "lat": 20.46141045815472,
+    "lon": 57.647369589846384,
     "rank": 12,
-    "score_total": 79.2,
+    "score_total": 85.8,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 62.1
+     "climate": 74.1
     },
     "params": [
      {
@@ -860,28 +794,21 @@
      },
      {
       "key": "aridity",
-      "earth": 0.9153215577108997,
+      "earth": 0.901203519603409,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -15.92820102367497,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 2.8485984323995144,
+      "earth": 20.573773437900343,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.3161659729136348,
+      "earth": 0.4522333333333334,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -889,13 +816,14 @@
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -906,24 +834,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     78.70463118958553,
-     34.931358185468554
+     84.33596766311634,
+     35.60963698518639
     ]
    },
    "properties": {
-    "id": "g25_34.931_78.705",
-    "name": "34.93°K, 78.70°D",
+    "id": "g25_35.610_84.336",
+    "name": "35.61°K, 84.34°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 34.931358185468554,
-    "lon": 78.70463118958553,
+    "lat": 35.60963698518639,
+    "lon": 84.33596766311634,
     "rank": 13,
-    "score_total": 79.2,
+    "score_total": 85.7,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 62.1
+     "climate": 74.0
     },
     "params": [
      {
@@ -935,28 +863,21 @@
      },
      {
       "key": "aridity",
-      "earth": 0.9038141863954536,
+      "earth": 0.9386228210552912,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -4.890531594464937,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "temp_range_c",
-      "earth": 23.326231129325993,
+      "earth": 27.75493567417598,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
-      "match": false
+      "match": true
      },
      {
       "key": "dust_aod",
-      "earth": 0.2939561520000038,
+      "earth": 0.15090625,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -970,7 +891,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -981,24 +903,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -83.95053609202434,
-     76.7585508347351
+     88.28982991781253,
+     38.322752184057734
     ]
    },
    "properties": {
-    "id": "g25_76.759_-83.951",
-    "name": "76.76°K, 83.95°B",
+    "id": "g25_38.323_88.290",
+    "name": "38.32°K, 88.29°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 76.7585508347351,
-    "lon": -83.95053609202434,
+    "lat": 38.322752184057734,
+    "lon": 88.28982991781253,
     "rank": 14,
-    "score_total": 79.0,
+    "score_total": 85.4,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 61.8
+     "climate": 73.5
     },
     "params": [
      {
@@ -1010,28 +932,21 @@
      },
      {
       "key": "aridity",
-      "earth": 0.9093002853393555,
+      "earth": 0.905850113677056,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -17.954585995138366,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 1.7711905498868674,
+      "earth": 24.411730804595315,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.292550397998699,
+      "earth": 0.3271666666666667,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -1045,7 +960,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1056,71 +972,65 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.37501924410668,
-     72.91497096966738
+     56.590242628469746,
+     18.42657405900121
     ]
    },
    "properties": {
-    "id": "g25_72.915_-87.375",
-    "name": "72.91°K, 87.38°B",
+    "id": "g25_18.427_56.590",
+    "name": "18.43°K, 56.59°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 72.91497096966738,
-    "lon": -87.37501924410668,
+    "lat": 18.42657405900121,
+    "lon": 56.590242628469746,
     "rank": 15,
-    "score_total": 78.3,
+    "score_total": 85.4,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 60.6
+     "climate": 73.5
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 1.0,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.9025104509644395,
+      "earth": 0.9222905700509523,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -17.695432502877797,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 2.6828399913438545,
+      "earth": 14.541453267693637,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.2500655918075293,
+      "earth": 0.45781666666666665,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1131,57 +1041,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     79.7772667083533,
-     34.705265252229275
+     55.66443088812668,
+     18.87875992547977
     ]
    },
    "properties": {
-    "id": "g25_34.705_79.777",
-    "name": "34.71°K, 79.78°D",
+    "id": "g25_18.879_55.664",
+    "name": "18.88°K, 55.66°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 34.705265252229275,
-    "lon": 79.7772667083533,
+    "lat": 18.87875992547977,
+    "lon": 55.66443088812668,
     "rank": 16,
-    "score_total": 78.2,
+    "score_total": 85.4,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 60.4
+     "climate": 73.4
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 1.0,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.9093246174397895,
+      "earth": 0.9107051776554151,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -1.3998886633302057,
-      "target": -43.6,
+      "key": "temp_range_c",
+      "earth": 18.818493567972634,
+      "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
-      "key": "temp_range_c",
-      "earth": 25.08659381506881,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "dust_aod",
-      "earth": 0.24875,
+      "earth": 0.603,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -1195,7 +1098,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1206,57 +1110,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -94.24623037739745,
-     75.17590030206016
+     53.959904584099284,
+     19.330945791958328
     ]
    },
    "properties": {
-    "id": "g25_75.176_-94.246",
-    "name": "75.18°K, 94.25°B",
+    "id": "g25_19.331_53.960",
+    "name": "19.33°K, 53.96°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 75.17590030206016,
-    "lon": -94.24623037739745,
+    "lat": 19.330945791958328,
+    "lon": 53.959904584099284,
     "rank": 17,
-    "score_total": 78.1,
+    "score_total": 85.3,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 60.1
+     "climate": 73.3
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 1.0,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.9191525241692534,
+      "earth": 0.8765049133266545,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -19.181021319491926,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 1.9549488539014988,
+      "earth": 21.355672684362098,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.1649333242845163,
+      "earth": 0.49864831649913494,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -1270,7 +1167,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1281,24 +1179,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -99.26173584942468,
-     71.78450630347098
+     58.38486259099581,
+     21.365782191111833
     ]
    },
    "properties": {
-    "id": "g25_71.785_-99.262",
-    "name": "71.78°K, 99.26°B",
+    "id": "g25_21.366_58.385",
+    "name": "21.37°K, 58.38°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 71.78450630347098,
-    "lon": -99.26173584942468,
+    "lat": 21.365782191111833,
+    "lon": 58.38486259099581,
     "rank": 18,
-    "score_total": 78.0,
+    "score_total": 85.3,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 60.0
+     "climate": 73.3
     },
     "params": [
      {
@@ -1310,42 +1208,36 @@
      },
      {
       "key": "aridity",
-      "earth": 0.8938706038729948,
+      "earth": 0.9030072906862487,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -17.230970018937633,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 3.0559171557517484,
+      "earth": 21.09640729649518,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.24816773821494204,
+      "earth": 0.39718333333333333,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1356,57 +1248,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -95.05513626774838,
-     76.53245790149583
+     85.40860318188412,
+     36.06182285166495
     ]
    },
    "properties": {
-    "id": "g25_76.532_-95.055",
-    "name": "76.53°K, 95.06°B",
+    "id": "g25_36.062_85.409",
+    "name": "36.06°K, 85.41°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 76.53245790149583,
-    "lon": -95.05513626774838,
+    "lat": 36.06182285166495,
+    "lon": 85.40860318188412,
     "rank": 19,
-    "score_total": 78.0,
+    "score_total": 85.3,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 59.9
+     "climate": 73.3
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 0.75,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.909057831576644,
+      "earth": 0.934019144411916,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -18.35154096560266,
-      "target": -43.6,
+      "key": "temp_range_c",
+      "earth": 26.803741164252028,
+      "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": true
      },
      {
-      "key": "temp_range_c",
-      "earth": 1.957687555240792,
-      "target": 54.8,
-      "source": "MODIS LST (MOD11A2)",
-      "match": false
-     },
-     {
       "key": "dust_aod",
-      "earth": 0.19959338119183367,
+      "earth": 0.15815142593939438,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -1420,7 +1305,8 @@
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
@@ -1431,57 +1317,50 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -86.98937578076854,
-     71.78450630347098
+     55.9265525871644,
+     20.687503391394
     ]
    },
    "properties": {
-    "id": "g25_71.785_-86.989",
-    "name": "71.78°K, 86.99°B",
+    "id": "g25_20.688_55.927",
+    "name": "20.69°K, 55.93°D",
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature",
-    "lat": 71.78450630347098,
-    "lon": -86.98937578076854,
+    "lat": 20.687503391394,
+    "lon": 55.9265525871644,
     "rank": 20,
-    "score_total": 77.9,
+    "score_total": 85.2,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 59.8
+     "climate": 73.2
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.5,
+      "earth": 1.0,
       "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
       "key": "aridity",
-      "earth": 0.8937379323891599,
+      "earth": 0.9014659390832145,
       "target": 1.0,
       "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      },
      {
-      "key": "surface_temp_c",
-      "earth": -18.550574039294972,
-      "target": -43.6,
-      "source": "MODIS LST (MOD11A2)",
-      "match": true
-     },
-     {
       "key": "temp_range_c",
-      "earth": 2.452270892190075,
+      "earth": 18.9135997907928,
       "target": 54.8,
       "source": "MODIS LST (MOD11A2)",
       "match": false
      },
      {
       "key": "dust_aod",
-      "earth": 0.22173625589749915,
+      "earth": 0.5791726956246419,
       "target": 0.51,
       "source": "MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)",
       "match": true
@@ -1489,13 +1368,14 @@
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
      "liquid_water",
      "biology",
-     "radiation"
+     "radiation",
+     "temperature"
     ],
     "past_tests": [],
     "ai_comment": ""
