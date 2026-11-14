@@ -15,6 +15,9 @@ export default function SpaceLayout({ children }: { children: ReactNode }) {
           <span className="hidden font-mono text-[11px] tracking-[0.2em] text-slate-500 lg:block">
             AY VE MARS İÇİN DÜNYA'DA ANALOG TEST SAHASI
           </span>
+          <Link to="/bulgular" className="font-mono text-[11px] tracking-[0.2em] text-cyan-300/90 hover:text-white">
+            BULGULAR
+          </Link>
           <Link to="/dogrulama" className="font-mono text-[11px] tracking-[0.2em] text-slate-400 hover:text-white">
             DOĞRULAMA
           </Link>
