@@ -15,7 +15,7 @@ npm run build    # dist/
 | Yol | Sayfa |
 | --- | --- |
 | `/` | Giriş: gök cismi seçimi |
-| `/mars`, `/moon` | Ay/Mars haritası (NASA Trek), hedef ve test seçimi |
+| `/mars`, `/moon` | Dönen Ay/Mars küresi (NASA Trek mozaiği) üzerinde hedefler, hedef ve test seçimi |
 | `/:body/:hedef/:test` | Dünya haritası (NASA GIBS), ısı haritası, adaylar, analog kartı, senaryo kutusu |
 | `/dogrulama` | Doğrulama paneli |
 

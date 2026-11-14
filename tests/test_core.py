@@ -4,8 +4,9 @@ import math
 import pandas as pd
 import pytest
 
-from core.profiles import (load_grid_config, load_known_analogs, load_parameters, load_profiles,
-                           load_targets, normalize_weights)
+from core.profiles import TestProfile as Profile  # "Test" önekiyle pytest toplamasın
+from core.profiles import (custom_at_least, load_grid_config, load_known_analogs, load_parameters,
+                           load_profiles, load_targets, normalize_weights)
 from core.schemas import TEST_IDS, SourcedValue, Target
 from core.scoring import score_grid, top_analogs
 
@@ -146,3 +147,14 @@ def test_at_least_no_penalty_above_target():
     assert one_sided.loc[0, "score_total"] == pytest.approx(two_sided.loc[0, "score_total"])  # altı yine cezalı
     assert load_profiles()["biosignature"].at_least == ("carbonate_index",)
     assert load_profiles()["rover"].at_least == ()
+
+
+def test_custom_scenario_inherits_at_least():
+    # /scenario: karbonat her hazır testte tek yönlü -> serbest metinde de; diğerleri iki yönlü.
+    assert custom_at_least({"carbonate_index": 0.6, "aridity": 0.4}) == ("carbonate_index",)
+    assert custom_at_least({"aridity": 1.0}) == ()
+
+    # Hazır testler arasında tutarsızsa tek yönlü sayılmaz (kural Gemini'ye ya da tek teste bırakılmaz).
+    base = load_profiles()["biosignature"]
+    other = Profile(id="rover", label="x", weights={"carbonate_index": 1.0}, breakdown=())
+    assert custom_at_least({"carbonate_index": 1.0}, {"biosignature": base, "rover": other}) == ()
