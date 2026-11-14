@@ -117,13 +117,13 @@ Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yak�
 | --- | --- | --- |
 | ~~Salda'nın "fazla karbonat" cezası~~ | ✅ **Karar verildi (14 Kasım):** biyo-imza testinde karbonat tek yönlü; hedeften fazlası ceza değil (`test_profiles.yaml > biosignature > at_least`). Gerekçe: daha fazla karbonat, biyo-imzayı koruma potansiyelinin daha yüksek olması demek. Doğrulama sonucuna bakılmadan, ilke olarak verildi | Geri almak için `at_least` satırını silmek yeter |
 | ASTER indeks eşikleri, kuraklık formülü | İlk tahmin (`config/grid.yaml > indices`) | Literatürden (Ninomiya indeksleri) doğrulanmalı; sınav yerlerine bakarak değiştirilmez |
-| Koordinatlar | Yaklaşık | NASA kaynaklarından son kontrol |
+| Koordinatlar | ✅ Doğrulandı (14 Kasım) | IAU/USGS Gazetteer, LROC Pits Atlas, NASA Artemis III bölgeleri; kaynaklar `config/targets.yaml` başında |
 | Oxford/MAP erişim verisi | Challenge listesinde yok | Kullanılır, sunumda NASA dışı kaynak olarak atıf yapılır (Burak'ın notu) |
 
 ## Bilinen sınırlılıklar (sunumda dürüstçe söylenecek)
 
 - **Lav tüpleri yörüngeden görülmez.** Motor sadece tüp oluşabilecek araziyi (genç, mafik lav akıntısı) ölçer; Lanzarote bu yüzden sadece raporlanır.
-- **Donmuş zemin verisi Kuzey Yarımküre'de.** ESA CCI dosyası 25°K–85°K; Güney Yarımküre'de (And dağları, Antarktika vahaları) `ground_ice = 0` sayılır.
+- **Donmuş zemin verisi Kuzey Yarımküre'de.** ESA CCI dosyası 25°K–85°K; Güney Yarımküre'de `ground_ice = 0` sayılır. Antarktika için ayrı bir ESA CCI ürünü var (60°G altı, v5.0) ama eklemek sonucu değiştirmez: 60°G altındaki 19.948 karenin hepsi buz tabakası olarak zaten maskeli (25 km'de buzsuz vahalar karede kaybolur). Gerçek boşluk And Dağları ve Patagonya'nın yüksek kesimleri (25°G–60°G arası 13.969 maskesiz kare); dağ permafrostu orada var ama küresel tutarlı bir veri yok.
 - **Ay kutup buzu ısıl kararlılıktır, gözlem değil.** Shackleton 0,56 / Malapert 0,29 = karenin ne kadarında buz 1 m içinde kararlı olabilir (Diviner). Dünya'daki permafrost da ısıl tanım olduğu için aynı tanım seçildi.
 - **Mars sıcaklık ve tozu modelden.** Mars Climate Database ölçümlerle doğrulanmış bir model; rover ölçümü değil.
 - **Ay'da Dünya karşılığı olmayan değerler.** Örneğin Marius Hills'in 295 °C'lik gece-gündüz farkı; bu parametre her yerde 0 benzerlik alır ve kartta kopma olarak görünür.
@@ -149,3 +149,4 @@ Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yak�
 - GitHub Actions: her push'ta testler ve üretilen dosya kontrolü
 - Frontend ekranları: Ay/Mars küresi (NASA Trek mozaiği), test seçimi, Dünya haritası (NASA GIBS), ısı haritası, analog kartı, senaryo kutusu, doğrulama paneli; GitHub Pages yayın iş akışı
 - Halka açık Bulgular sayfası (`/bulgular`): üç yıldız aday (Taklamakan güney kenarı, Amund Ringnes Adası, Peru And Dağları), uydu görüntüsü, benzeyen/benzemeyen parametreler, Dünya'nın taklit edemedikleri, dürüst sınırlar
+- Halka yönelik yazılı açıklama: [docs/halk-icin.md](docs/halk-icin.md) (yöntem, bulgular, sınav sonucu, bilerek yapmadıklarımız)

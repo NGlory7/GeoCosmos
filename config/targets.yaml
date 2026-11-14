@@ -1,5 +1,12 @@
 # 6 Ay/Mars hedefi.
-# Koordinatlar YAKLAŞIK; hackathon öncesi NASA kaynaklarından doğrulanacak (ROADMAP > Veri ve hedefler).
+# Koordinatlar doğrulandı (14 Kasım 2026); her hedef 25 km'lik karenin merkezidir:
+#   Shackleton  -89.9, 0.0    IAU/USGS Gazetteer (Feature 5450) krater merkezi -89.67, 129.78; güney kutbu
+#                              krater kenarındadır, nokta kutba ~3 km (Gazetteer'de de -89.90, 0.00 kaydı var)
+#   Malapert    -86.0, 2.9    NASA Artemis III aday bölgesi "Malapert Massif" ~86°G, 0°D (15×15 km bölge)
+#   Marius      14.1, -56.8   LROC Pits Atlas #1: 14.0917°K, 303.2299°D (= -56.77)
+#   Jezero      18.4, 77.6    Mars 2020 iniş bölgesi 18.38°K, 77.58°D
+#   Gale        -5.4, 137.8   IAU/USGS Gazetteer krater merkezi
+#   Arcadia     47.0, -176.0  IAU/USGS Gazetteer Arcadia Planitia merkezi (~47°K, 184°D) yakını
 # lon: -180..180 (doğu pozitif).
 #
 # params: her değer kaynaklı girilir. Anahtarlar config/test_profiles.yaml > parameters ile aynı.

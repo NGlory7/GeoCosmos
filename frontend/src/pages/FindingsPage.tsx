@@ -66,7 +66,7 @@ const FINDINGS: Finding[] = [
       "Artemis'in üs bölgesi olarak düşünülen Shackleton Krateri'nin kenarı dik ve engebeli. Bu karenin engebesi Shackleton'ınkiyle neredeyse metre metre aynı, eğimi de çok yakın. Üstelik yola erişimi olan bir yer: ekip ve ekipman götürmek kolay.",
     use: "Dik ve engebeli arazide rover sürüşü, eğimde çekiş ve devrilme sınırları, otonom yol planlama algoritmaları.",
     caveat:
-      "Burada yağış ve bitki var, Ay'da yok. Ay kutbunun alçak güneşi ve kilometrelerce uzanan gölgeleri bu benzerlik hesabında yer almıyor.",
+      "Burada yağış ve bitki var, Ay'da yok. Ay kutbunun alçak güneşi ve kilometrelerce uzanan gölgeleri rover testinin hesabında yer almıyor; \"Üs kurulumu ve iniş alanı\" testi güneş yüksekliğini de ölçüyor (Shackleton için ilk aday Ellesmere Adası, Kanada).",
     image: { layer: "Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual", credit: "NASA GIBS · Landsat WELD yıllık mozaik" },
   },
 ];
