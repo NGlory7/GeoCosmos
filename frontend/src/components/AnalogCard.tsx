@@ -21,6 +21,40 @@ function ScoreRadar({ analog, meta }: { analog: Analog; meta: Meta }) {
   );
 }
 
+/** Kare merkezini Google Maps'te açar. Doğrudan panorama bağlantısı (map_action=pano) sadece noktanın
+ *  birkaç metre yakınına bakıyor ve kare merkezi nadiren yolda olduğu için siyah ekran veriyordu.
+ *  Bunun yerine uydu görüntüsü + Sokak Görünümü kapsama katmanı (!5m1!1e5) açılır: mavi çizgiler
+ *  araç çekimi olan yollar, noktalar fotoğraf küreleri; tıklanınca panorama açılır. */
+function GroundLinks({ lat, lon, km }: { lat: number; lon: number; km: number }) {
+  const ll = `${lat.toFixed(5)},${lon.toFixed(5)}`;
+  const links = [
+    { label: "Sokak Görünümü haritası", href: `https://www.google.com/maps/@${ll},11z/data=!3m1!1e3!5m1!1e5` },
+    { label: "Uydu görüntüsü", href: `https://www.google.com/maps/@?api=1&map_action=map&center=${ll}&zoom=11&basemap=satellite` },
+    { label: "Yer fotoğrafları", href: `https://www.google.com/maps/search/?api=1&query=${ll}` },
+  ];
+  return (
+    <div className="mt-3">
+      <div className="flex flex-wrap gap-1.5">
+        {links.map((l) => (
+          <a
+            key={l.label}
+            href={l.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-white/10 px-2.5 py-1 text-[11px] text-slate-300 hover:border-cyan-400/40 hover:text-cyan-200"
+          >
+            {l.label} ↗
+          </a>
+        ))}
+      </div>
+      <p className="mt-1 text-[10px] text-slate-600">
+        Google Maps · {km} km'lik karenin merkezi. Sokak Görünümü haritasında mavi çizgiye ya da noktaya tıkla, panorama açılır;
+        uzak bölgelerde (Arktik, yüksek dağ) çekim olmayabilir.
+      </p>
+    </div>
+  );
+}
+
 interface Props {
   analog: Analog;
   meta: Meta;
@@ -50,6 +84,7 @@ export default function AnalogCard({ analog, meta, body, targetName }: Props) {
           {targetName} için benzerlik: <span className="font-mono text-2xl font-semibold text-cyan-300">{num(analog.score_total, 1)}</span>
           <span className="text-slate-500"> / 100</span>
         </p>
+        <GroundLinks lat={analog.lat} lon={analog.lon} km={meta.grid_km} />
         {used < total && (
           <p className="mt-2 rounded-lg border border-amber-400/20 bg-amber-400/5 px-3 py-2 text-xs text-amber-200/80">
             Bu skor {total} parametreden {used} tanesiyle hesaplandı; hedefte değeri olmayanlar hesaba katılmadı.

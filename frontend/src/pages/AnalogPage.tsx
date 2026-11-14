@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useParams, useSearchParams } from "react-router-dom";
 import AnalogCard from "../components/AnalogCard";
 import EarthMap from "../components/EarthMap";
 import ScenarioBox from "../components/ScenarioBox";
@@ -18,6 +18,10 @@ import type { Analog, AnalogIndexEntry, Body, HeatmapIndex, Meta, ScenarioRespon
 
 export default function AnalogPage() {
   const { body, targetId, testId } = useParams();
+  // "custom": hedef sayfasındaki "Kendi senaryon" kutusu; metin ?q= içinde, sonuç POST /scenario'dan
+  const isCustom = testId === "custom";
+  const [params, setParams] = useSearchParams();
+  const query = params.get("q") ?? "";
   const [meta, setMeta] = useState<Meta | null>(null);
   const [target, setTarget] = useState<TargetWithCoords | null>(null);
   const [entry, setEntry] = useState<AnalogIndexEntry | null | undefined>(undefined);
@@ -37,7 +41,7 @@ export default function AnalogPage() {
         if (!alive) return;
         setMeta(m);
         setTarget(ts.find((t) => t.id === targetId) ?? null);
-        setEntry(idx === null ? null : e);
+        setEntry(idx === null ? null : isCustom ? undefined : e);
         setAnalogs(list);
         setHeat(h);
         setSelectedId(list[0]?.id ?? null);
@@ -55,7 +59,7 @@ export default function AnalogPage() {
 
   if (body !== "mars" && body !== "moon") return <Navigate to="/" replace />;
   const test = meta?.tests.find((t) => t.id === testId);
-  if (meta && !test) return <Navigate to={`/${body}`} replace />;
+  if (meta && !test && !isCustom) return <Navigate to={`/${body}`} replace />;
 
   return (
     <SpaceLayout>
@@ -64,7 +68,7 @@ export default function AnalogPage() {
           ‹ {target?.name ?? "HEDEFLER"}
         </Link>
         <h1 className="mt-3 text-xl font-semibold text-white sm:text-2xl">
-          {test?.label ?? "…"} <span className="font-normal text-slate-400">· {target?.name}</span>
+          {isCustom ? "Kendi senaryon" : test?.label ?? "…"} <span className="font-normal text-slate-400">· {target?.name}</span>
         </h1>
         <p className="mt-1 text-sm text-slate-400">
           Dünya'nın tüm karaları {meta?.grid_km ?? 25} km'lik karelerle tarandı. <span className="text-cyan-300">Mavi</span> pinler yeni aday,{" "}
@@ -91,10 +95,18 @@ export default function AnalogPage() {
           </div>
 
           <aside className="min-w-0 space-y-5 lg:max-h-[calc(100dvh-14rem)] lg:overflow-y-auto lg:pr-1">
-            {targetId && meta && <ScenarioBox targetId={targetId} meta={meta} onResult={(r) => {
-              setScenario(r);
-              setSelectedId(r?.analogs[0]?.id ?? analogs[0]?.id ?? null);
-            }} />}
+            {isCustom && targetId && meta && (
+              <ScenarioBox
+                targetId={targetId}
+                meta={meta}
+                initialText={query}
+                onText={(t) => setParams({ q: t }, { replace: true })}
+                onResult={(r) => {
+                  setScenario(r);
+                  setSelectedId(r?.analogs[0]?.id ?? null);
+                }}
+              />
+            )}
 
             {shown.length > 0 && (
               <ol className="flex gap-1.5 overflow-x-auto pb-1">

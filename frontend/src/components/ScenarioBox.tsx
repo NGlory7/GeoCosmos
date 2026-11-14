@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { shortLabel } from "../format";
 import { postScenario, ScenarioError } from "../services/data";
 import type { Meta, ScenarioResponse } from "../types";
@@ -7,13 +7,17 @@ interface Props {
   targetId: string;
   meta: Meta;
   onResult: (r: ScenarioResponse | null) => void;
+  /** Hedef sayfasında yazılan metin: sayfa açılınca bununla aranır. */
+  initialText?: string;
+  /** Yeni metinle arandığında (adres güncellensin, paylaşılabilsin). */
+  onText?: (t: string) => void;
 }
 
 const EXAMPLES = ["Toz fırtınasında güneş panelinin tozlanmasını test etmek istiyorum", "Donmuş zeminde matkapla buz örneği almak"];
 
 // Serbest metin -> Gemini ağırlıkları -> motor sıralaması (POST /scenario). Gemini sayı üretmez.
-export default function ScenarioBox({ targetId, meta, onResult }: Props) {
-  const [text, setText] = useState("");
+export default function ScenarioBox({ targetId, meta, onResult, initialText = "", onText }: Props) {
+  const [text, setText] = useState(initialText);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<{ msg: string; offline: boolean } | null>(null);
   const [last, setLast] = useState<ScenarioResponse | null>(null);
@@ -21,17 +25,32 @@ export default function ScenarioBox({ targetId, meta, onResult }: Props) {
   async function run(t: string) {
     setBusy(true);
     setError(null);
+    onText?.(t);
     try {
       const r = await postScenario({ text: t, target_id: targetId });
       setLast(r);
       onResult(r);
     } catch (e) {
       const err = e instanceof ScenarioError ? e : new ScenarioError(String(e));
-      setError({ msg: err.message, offline: err.offline });
+      // Ham Gemini hatası (429 JSON'u) kullanıcıya okunur bir cümleyle gösterilir
+      const quota = /429|RESOURCE_EXHAUSTED|quota/i.test(err.message);
+      setError({
+        msg: quota ? "Gemini'nin günlük ücretsiz kotası doldu; senaryo araması kota yenilenince (ertesi gün) çalışır." : err.message,
+        offline: err.offline || quota,
+      });
     } finally {
       setBusy(false);
     }
   }
+
+  // Hedef sayfasından gelen metinle bir kez ara (hedef değişirse yeniden)
+  const ranFor = useRef<string | null>(null); // StrictMode'da efekt iki kez çalışır: Gemini'ye çift istek gitmesin
+  useEffect(() => {
+    if (!initialText.trim() || ranFor.current === targetId) return;
+    ranFor.current = targetId;
+    run(initialText.trim());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [targetId]);
 
   return (
     <section className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
@@ -80,17 +99,9 @@ export default function ScenarioBox({ targetId, meta, onResult }: Props) {
               .join(" · ")}
           </p>
           {last.unsupported.length > 0 && <p className="text-amber-200/80">Dünya'da karşılığı yok: {last.unsupported.join(", ")}</p>}
-          <button
-            onClick={() => {
-              setLast(null);
-              onResult(null);
-            }}
-            className="text-cyan-300 hover:underline"
-          >
-            Hazır teste dön
-          </button>
         </div>
       )}
+      {busy && <p className="mt-2 font-mono text-[11px] text-slate-500">Senaryo ağırlıklara çevriliyor, Dünya taranıyor…</p>}
     </section>
   );
 }

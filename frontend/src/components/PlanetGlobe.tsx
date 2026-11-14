@@ -88,18 +88,32 @@ const wrap180 = (d: number) => ((((d + 180) % 360) + 360) % 360) - 180;
 
 interface Props {
   body: Body;
-  targets: TargetWithCoords[];
-  selected: string | null;
-  onSelect: (id: string | null) => void;
+  targets?: TargetWithCoords[];
+  selected?: string | null;
+  onSelect?: (id: string | null) => void;
+  /** false: sadece kendiliğinden döner, sürüklenmez (ana sayfada bağlantının içinde). */
+  interactive?: boolean;
+  caption?: boolean;
+  className?: string;
 }
 
-export default function PlanetGlobe({ body, targets, selected, onSelect }: Props) {
+const NO_TARGETS: TargetWithCoords[] = [];
+
+export default function PlanetGlobe({
+  body,
+  targets = NO_TARGETS,
+  selected = null,
+  onSelect = () => {},
+  interactive = true,
+  caption = true,
+  className = "w-full",
+}: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const markerRefs = useRef(new Map<string, HTMLButtonElement>());
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
-  // Prosedürel yedek gezegen ağır bir shader çalıştırır (büyük ekranda ~13 ms/kare).
+  // Yükleme diski doku gelip solma geçişi bitince kaldırılır (prosedürel gezegen sadece hata durumunda).
   // Doku gelip solma geçişi bitince tamamen kaldırılır; opacity-0 ile gizlemek yetmez, çizmeye devam eder.
   const [fallback, setFallback] = useState(true);
   useEffect(() => {
@@ -243,7 +257,7 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
     // Sürükleyerek çevirme
     let last: { x: number; y: number } | null = null;
     const down = (e: PointerEvent) => {
-      if ((e.target as HTMLElement).closest("button")) return;
+      if (!interactive || (e.target as HTMLElement).closest("button")) return;
       last = { x: e.clientX, y: e.clientY };
       view.current.dragging = true;
       view.current.auto = false;
@@ -320,17 +334,25 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
       gl.deleteBuffer(buf);
       gl.deleteProgram(prog);
     };
-  }, [body]);
+  }, [body, interactive]);
 
   return (
-    <figure className="w-full">
-      <div ref={wrapRef} className="relative aspect-square w-full cursor-grab touch-none select-none active:cursor-grabbing">
-        {/* Doku yüklenene kadar (ya da yüklenemezse) prosedürel gezegen */}
-        {(fallback || failed) && (
-          <Planet
-            body={body}
-            className={`absolute inset-0 h-full w-full transition-opacity duration-700 ${ready && !failed ? "opacity-0" : "opacity-100"}`}
-          />
+    <figure className={className}>
+      <div
+        ref={wrapRef}
+        className={`relative aspect-square w-full select-none ${interactive ? "cursor-grab touch-none active:cursor-grabbing" : ""}`}
+      >
+        {/* Doku yüklenene kadar soluk bir disk; prosedürel gezegen sadece doku hiç yüklenemezse
+            (her yerde aynı NASA mozaiği görünsün, yüklenirken farklı bir gezegen belirmesin) */}
+        {failed ? (
+          <Planet body={body} className="absolute inset-0 h-full w-full" />
+        ) : (
+          fallback && (
+            <div
+              className={`absolute rounded-full bg-white/[0.04] transition-opacity duration-700 ${ready ? "opacity-0" : "animate-pulse opacity-100"}`}
+              style={{ inset: `${((1 - PLANET_FRACTION) / 2) * 100}%` }}
+            />
+          )
         )}
         <canvas
           ref={canvasRef}
@@ -368,9 +390,11 @@ export default function PlanetGlobe({ body, targets, selected, onSelect }: Props
           );
         })}
       </div>
-      <figcaption className="mt-2 text-center font-mono text-[10px] tracking-wider text-slate-600">
-        Sürükleyerek çevir · {TREK[body].credit}
-      </figcaption>
+      {caption && (
+        <figcaption className="mt-2 text-center font-mono text-[10px] tracking-wider text-slate-600">
+          Sürükleyerek çevir · {TREK[body].credit}
+        </figcaption>
+      )}
     </figure>
   );
 }

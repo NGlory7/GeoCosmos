@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BODIES } from "../bodies";
-import Planet from "../components/Planet";
+import PlanetGlobe from "../components/PlanetGlobe";
 import SpaceLayout from "../components/SpaceLayout";
 import { loadTargets, targetsOf, type TargetWithCoords } from "../services/data";
 import type { Body } from "../types";
@@ -20,7 +20,13 @@ function BodyCard({ body, targets, size }: { body: Body; targets: TargetWithCoor
       className={`group relative block aspect-square shrink-0 rounded-full outline-none ${size}`}
       aria-label={`${meta.name}: ${sub}`}
     >
-      <Planet body={body} className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]" />
+      {/* Hedef sayfasındaki NASA Trek mozaiğiyle aynı küre: sadece döner, tıklama bağlantıya gider */}
+      <PlanetGlobe
+        body={body}
+        interactive={false}
+        caption={false}
+        className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+      />
       <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-3 whitespace-nowrap rounded-full border border-white/10 bg-black/45 px-4 py-2.5 backdrop-blur-md transition-colors group-hover:border-white/25 group-hover:bg-black/60 group-focus-visible:border-white/50">
         <span className={`size-1.5 rounded-full shadow-[0_0_8px] ${meta.dot}`} />
         <span className="flex flex-col gap-0.5 leading-tight">
@@ -55,6 +61,9 @@ export default function Home() {
           <BodyCard body="mars" targets={targets} size="w-[min(92vw,34rem)] md:w-[min(48vw,34rem)]" />
           <BodyCard body="moon" targets={targets} size="w-[min(78vw,28rem)] md:w-[min(40vw,28rem)]" />
         </div>
+        <p className="font-mono text-[10px] tracking-wider text-slate-600">
+          NASA Mars Trek · Viking MDIM 2.1 · NASA Moon Trek · LRO WAC küresel mozaik
+        </p>
       </main>
     </SpaceLayout>
   );

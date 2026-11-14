@@ -1,11 +1,43 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { BODIES } from "../bodies";
 import PlanetGlobe from "../components/PlanetGlobe";
 import SpaceLayout from "../components/SpaceLayout";
 import { coord } from "../format";
 import { loadAnalogIndex, loadMeta, loadTargets, targetsOf, type TargetWithCoords } from "../services/data";
 import type { AnalogIndexEntry, Body, Meta } from "../types";
+
+/** Serbest metin: dünya haritası sayfasında /scenario ile aranır (AnalogPage, testId = "custom"). */
+function CustomScenario({ body, target }: { body: Body; target: TargetWithCoords }) {
+  const [text, setText] = useState("");
+  const navigate = useNavigate();
+  return (
+    <form
+      className="rounded-lg border border-dashed border-cyan-400/25 px-3 py-2.5"
+      onSubmit={(e) => {
+        e.preventDefault();
+        if (text.trim()) navigate(`/${body}/${target.id}/custom?q=${encodeURIComponent(text.trim())}`);
+      }}
+    >
+      <label className="font-mono text-[10px] tracking-[0.2em] text-cyan-200/70" htmlFor={`scn-${target.id}`}>
+        KENDİ SENARYON
+      </label>
+      <div className="mt-1.5 flex gap-2">
+        <input
+          id={`scn-${target.id}`}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          maxLength={1000}
+          placeholder="Ne test etmek istiyorsun? (ör. toz fırtınasında güneş paneli)"
+          className="min-w-0 flex-1 rounded-lg border border-white/10 bg-black/30 px-3 py-1.5 text-sm text-white placeholder:text-slate-600 focus:border-cyan-400/50 focus:outline-none"
+        />
+        <button disabled={!text.trim()} className="rounded-lg bg-cyan-500/80 px-3 py-1.5 text-sm font-medium text-black disabled:opacity-40">
+          Ara
+        </button>
+      </div>
+    </form>
+  );
+}
 
 function TestPicker({ body, target, meta, index }: { body: Body; target: TargetWithCoords; meta: Meta; index: AnalogIndexEntry[] | null }) {
   return (
@@ -35,6 +67,7 @@ function TestPicker({ body, target, meta, index }: { body: Body; target: TargetW
           </Link>
         );
       })}
+      <CustomScenario body={body} target={target} />
     </div>
   );
 }
