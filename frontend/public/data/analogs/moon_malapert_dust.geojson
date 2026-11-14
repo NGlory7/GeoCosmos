@@ -1,0 +1,1185 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     78.16831343020164,
+     34.253079385750716
+    ]
+   },
+   "properties": {
+    "id": "g25_34.253_78.168",
+    "name": "34.25°K, 78.17°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 34.253079385750716,
+    "lon": 78.16831343020164,
+    "rank": 1,
+    "score_total": 79.1,
+    "scores": {
+     "topography": 77.8,
+     "geology": null,
+     "climate": 80.0
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.8802484366757506,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 22.44258689880371,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 464.2224312845002,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     74.9504068738983,
+     36.74010165138279
+    ]
+   },
+   "properties": {
+    "id": "g25_36.740_74.950",
+    "name": "36.74°K, 74.95°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 36.74010165138279,
+    "lon": 74.9504068738983,
+    "rank": 2,
+    "score_total": 77.5,
+    "scores": {
+     "topography": 70.2,
+     "geology": null,
+     "climate": 83.3
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9000689143429244,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 25.135820388793945,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "roughness_m",
+      "earth": 469.47618312970434,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     75.31903687479499,
+     38.54884511729701
+    ]
+   },
+   "properties": {
+    "id": "g25_38.549_75.319",
+    "name": "38.55°K, 75.32°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 38.54884511729701,
+    "lon": 75.31903687479499,
+    "rank": 3,
+    "score_total": 75.5,
+    "scores": {
+     "topography": 65.8,
+     "geology": null,
+     "climate": 83.3
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.8995164489746094,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 22.822532653808594,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 481.59429117864994,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.26881807697887,
+     36.51400871814351
+    ]
+   },
+   "properties": {
+    "id": "g25_36.514_72.269",
+    "name": "36.51°K, 72.27°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 36.51400871814351,
+    "lon": 72.26881807697887,
+    "rank": 4,
+    "score_total": 74.9,
+    "scores": {
+     "topography": 64.9,
+     "geology": null,
+     "climate": 82.9
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.8975414252119776,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 24.613906860351562,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "roughness_m",
+      "earth": 476.4947122544747,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.29120127235802,
+     35.60963698518639
+    ]
+   },
+   "properties": {
+    "id": "g25_35.610_76.291",
+    "name": "35.61°K, 76.29°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 35.60963698518639,
+    "lon": 76.29120127235802,
+    "rank": 5,
+    "score_total": 74.9,
+    "scores": {
+     "topography": 65.2,
+     "geology": null,
+     "climate": 82.7
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.8959338073730468,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 25.09584617614746,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "roughness_m",
+      "earth": 474.57057699320535,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.34145359574664,
+     37.192287517861345
+    ]
+   },
+   "properties": {
+    "id": "g25_37.192_73.341",
+    "name": "37.19°K, 73.34°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 37.192287517861345,
+    "lon": 73.34145359574664,
+    "rank": 6,
+    "score_total": 72.2,
+    "scores": {
+     "topography": 49.8,
+     "geology": null,
+     "climate": 90.1
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.940516788482666,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.826526641845703,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 273.4945265317116,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.33719148485575,
+     -29.957313654204423
+    ]
+   },
+   "properties": {
+    "id": "g25_-29.957_-70.337",
+    "name": "29.96°G, 70.34°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": -29.957313654204423,
+    "lon": -70.33719148485575,
+    "rank": 7,
+    "score_total": 72.0,
+    "scores": {
+     "topography": 62.6,
+     "geology": null,
+     "climate": 79.6
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.8778270793486538,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 22.344024658203125,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 448.605439664763,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.2409489489694,
+     36.06182285166495
+    ]
+   },
+   "properties": {
+    "id": "g25_36.062_79.241",
+    "name": "36.06°K, 79.24°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 36.06182285166495,
+    "lon": 79.2409489489694,
+    "rank": 8,
+    "score_total": 70.1,
+    "scores": {
+     "topography": 47.9,
+     "geology": null,
+     "climate": 87.9
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9276110047025596,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 17.41353988647461,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 322.1478479531826,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     77.63199567081774,
+     36.51400871814351
+    ]
+   },
+   "properties": {
+    "id": "g25_36.514_77.632",
+    "name": "36.51°K, 77.63°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 36.51400871814351,
+    "lon": 77.63199567081774,
+    "rank": 9,
+    "score_total": 70.1,
+    "scores": {
+     "topography": 47.3,
+     "geology": null,
+     "climate": 88.4
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9302155936649956,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 15.961627960205078,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 265.1643429536761,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.66592011599596,
+     38.322752184057734
+    ]
+   },
+   "properties": {
+    "id": "g25_38.323_72.666",
+    "name": "38.32°K, 72.67°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 38.322752184057734,
+    "lon": 72.66592011599596,
+    "rank": 10,
+    "score_total": 69.7,
+    "scores": {
+     "topography": 66.5,
+     "geology": null,
+     "climate": 72.3
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.8338783142604227,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 22.4781551361084,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 452.9896849555973,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -69.83746010663297,
+     -29.05294192124731
+    ]
+   },
+   "properties": {
+    "id": "g25_-29.053_-69.837",
+    "name": "29.05°G, 69.84°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": -29.05294192124731,
+    "lon": -69.83746010663297,
+    "rank": 11,
+    "score_total": 69.4,
+    "scores": {
+     "topography": 49.9,
+     "geology": null,
+     "climate": 84.9
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9095391107904907,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.8024959564209,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 324.9632828298696,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     77.90015455050968,
+     35.15745111870783
+    ]
+   },
+   "properties": {
+    "id": "g25_35.157_77.900",
+    "name": "35.16°K, 77.90°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 35.15745111870783,
+    "lon": 77.90015455050968,
+    "rank": 12,
+    "score_total": 68.9,
+    "scores": {
+     "topography": 47.8,
+     "geology": null,
+     "climate": 85.8
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.914519415790188,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.115314483642578,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 266.55797379537836,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.84508311990663,
+     39.00103098377557
+    ]
+   },
+   "properties": {
+    "id": "g25_39.001_73.845",
+    "name": "39.00°K, 73.85°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 39.00103098377557,
+    "lon": 73.84508311990663,
+    "rank": 13,
+    "score_total": 68.8,
+    "scores": {
+     "topography": 49.1,
+     "geology": null,
+     "climate": 84.6
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9076014703138,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 17.044845581054688,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 287.90673390111976,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.67676206157606,
+     37.192287517861345
+    ]
+   },
+   "properties": {
+    "id": "g25_37.192_85.677",
+    "name": "37.19°K, 85.68°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 37.192287517861345,
+    "lon": 85.67676206157606,
+    "rank": 14,
+    "score_total": 68.5,
+    "scores": {
+     "topography": 49.8,
+     "geology": null,
+     "climate": 83.5
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9010741896235295,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.835697174072266,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 280.9984386729699,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     80.33047964141541,
+     41.94023911588619
+    ]
+   },
+   "properties": {
+    "id": "g25_41.940_80.330",
+    "name": "41.94°K, 80.33°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 41.94023911588619,
+    "lon": 80.33047964141541,
+    "rank": 15,
+    "score_total": 68.0,
+    "scores": {
+     "topography": 63.1,
+     "geology": null,
+     "climate": 71.9
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.831593890387271,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 23.997913360595703,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 454.6552347757435,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.21465472897786,
+     -31.313871253640098
+    ]
+   },
+   "properties": {
+    "id": "g25_-31.314_-70.215",
+    "name": "31.31°G, 70.21°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": -31.313871253640098,
+    "lon": -70.21465472897786,
+    "rank": 16,
+    "score_total": 68.0,
+    "scores": {
+     "topography": 49.4,
+     "geology": null,
+     "climate": 82.9
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.8971342058544459,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.95936393737793,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 299.2871741364352,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.87941141976788,
+     38.77493805053629
+    ]
+   },
+   "properties": {
+    "id": "g25_38.775_88.879",
+    "name": "38.77°K, 88.88°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 38.77493805053629,
+    "lon": 88.87941141976788,
+    "rank": 17,
+    "score_total": 67.9,
+    "scores": {
+     "topography": 48.5,
+     "geology": null,
+     "climate": 83.5
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9009320611350438,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.318199157714844,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 284.99525065130865,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     87.70024841585719,
+     38.322752184057734
+    ]
+   },
+   "properties": {
+    "id": "g25_38.323_87.700",
+    "name": "38.32°K, 87.70°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 38.322752184057734,
+    "lon": 87.70024841585719,
+    "rank": 18,
+    "score_total": 67.7,
+    "scores": {
+     "topography": 45.5,
+     "geology": null,
+     "climate": 85.5
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9130533536720917,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 15.415534019470215,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 241.68753849154416,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     82.72701438496468,
+     36.28791578490423
+    ]
+   },
+   "properties": {
+    "id": "g25_36.288_82.727",
+    "name": "36.29°K, 82.73°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 36.28791578490423,
+    "lon": 82.72701438496468,
+    "rank": 19,
+    "score_total": 67.5,
+    "scores": {
+     "topography": 47.0,
+     "geology": null,
+     "climate": 84.0
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9039698358244012,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 17.688024520874023,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 297.62117992191617,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.49089952052068,
+     81.95868829923852
+    ]
+   },
+   "properties": {
+    "id": "g25_81.959_-82.491",
+    "name": "81.96°K, 82.49°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "dust",
+    "lat": 81.95868829923852,
+    "lon": -82.49089952052068,
+    "rank": 20,
+    "score_total": 67.0,
+    "scores": {
+     "topography": 39.5,
+     "geology": null,
+     "climate": 89.0
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9341662216186524,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.632959365844727,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 238.66171615452458,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

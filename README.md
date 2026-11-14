@@ -30,6 +30,7 @@ cp .env.example .env
 
 | Komut | `make` yoksa | Ne yapar |
 | --- | --- | --- |
+| — | `python -m pipeline.ee_fetch` | **Hızlı yol:** Dünya karolarını paralel çekip `data/raw/`'a yazar (~50 dk) |
 | `make preview` | `python -m pipeline.ee_export --preview` | Earth Engine'de küçük bir bölgeden 5 satır çeker (deneme) |
 | — | `python -m pipeline.ee_export --plan` | Export şerit planını yazdırır (Earth Engine gerekmez) |
 | `make export` | `python -m pipeline.ee_export` | Tüm karaları Drive'a CSV olarak export eder |

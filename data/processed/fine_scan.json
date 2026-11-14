@@ -1,0 +1,2906 @@
+[
+ {
+  "cell": "g25_-30.183_-70.587",
+  "bbox": [
+   -70.977,
+   -30.523,
+   -70.197,
+   -29.844
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -70.977 -30.523 -70.197 -29.844"
+ },
+ {
+  "cell": "g25_36.288_76.559",
+  "bbox": [
+   76.141,
+   35.949,
+   76.977,
+   36.627
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube",
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 76.141 35.949 76.977 36.627"
+ },
+ {
+  "cell": "g25_36.514_72.537",
+  "bbox": [
+   72.118,
+   36.175,
+   72.956,
+   36.853
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 72.118 36.175 72.956 36.853"
+ },
+ {
+  "cell": "g25_-33.123_-70.215",
+  "bbox": [
+   -70.617,
+   -33.462,
+   -69.812,
+   -32.783
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -70.617 -33.462 -69.812 -32.783"
+ },
+ {
+  "cell": "g25_42.166_79.741",
+  "bbox": [
+   79.286,
+   41.827,
+   80.195,
+   42.505
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube",
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 79.286 41.827 80.195 42.505"
+ },
+ {
+  "cell": "g25_36.514_71.196",
+  "bbox": [
+   70.777,
+   36.175,
+   71.615,
+   36.853
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 70.777 36.175 71.615 36.853"
+ },
+ {
+  "cell": "g25_36.740_73.878",
+  "bbox": [
+   73.457,
+   36.401,
+   74.298,
+   37.079
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 73.457 36.401 74.298 37.079"
+ },
+ {
+  "cell": "g25_37.871_75.614",
+  "bbox": [
+   75.187,
+   37.531,
+   76.041,
+   38.21
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 75.187 37.531 76.041 38.21"
+ },
+ {
+  "cell": "g25_38.775_75.024",
+  "bbox": [
+   74.592,
+   38.436,
+   75.456,
+   39.114
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/dust",
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 74.592 38.436 75.456 39.114"
+ },
+ {
+  "cell": "g25_36.062_69.855",
+  "bbox": [
+   69.439,
+   35.723,
+   70.272,
+   36.401
+  ],
+  "for": [
+   "moon_shackleton/rover",
+   "moon_shackleton/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 69.439 35.723 70.272 36.401"
+ },
+ {
+  "cell": "g25_35.610_82.191",
+  "bbox": [
+   81.776,
+   35.27,
+   82.605,
+   35.949
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 81.776 35.27 82.605 35.949"
+ },
+ {
+  "cell": "g25_35.836_77.364",
+  "bbox": [
+   76.948,
+   35.497,
+   77.779,
+   36.175
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 76.948 35.497 77.779 36.175"
+ },
+ {
+  "cell": "g25_35.610_80.582",
+  "bbox": [
+   80.167,
+   35.27,
+   80.996,
+   35.949
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 80.167 35.27 80.996 35.949"
+ },
+ {
+  "cell": "g25_33.123_79.777",
+  "bbox": [
+   79.375,
+   32.783,
+   80.179,
+   33.462
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 79.375 32.783 80.179 33.462"
+ },
+ {
+  "cell": "g25_37.192_85.409",
+  "bbox": [
+   84.986,
+   36.853,
+   85.831,
+   37.531
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 84.986 36.853 85.831 37.531"
+ },
+ {
+  "cell": "g25_72.011_-54.504",
+  "bbox": [
+   -55.594,
+   71.671,
+   -53.413,
+   72.35
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -55.594 71.671 -53.413 72.35"
+ },
+ {
+  "cell": "g25_71.785_-76.161",
+  "bbox": [
+   -77.238,
+   71.445,
+   -75.083,
+   72.124
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -77.238 71.445 -75.083 72.124"
+ },
+ {
+  "cell": "g25_81.507_-76.323",
+  "bbox": [
+   -78.604,
+   81.167,
+   -74.043,
+   81.846
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -78.604 81.167 -74.043 81.846"
+ },
+ {
+  "cell": "g25_38.323_75.024",
+  "bbox": [
+   74.595,
+   37.984,
+   75.454,
+   38.662
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 74.595 37.984 75.454 38.662"
+ },
+ {
+  "cell": "g25_40.131_74.729",
+  "bbox": [
+   74.289,
+   39.792,
+   75.17,
+   40.471
+  ],
+  "for": [
+   "moon_shackleton/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 74.289 39.792 75.17 40.471"
+ },
+ {
+  "cell": "g25_43.975_84.541",
+  "bbox": [
+   84.073,
+   43.636,
+   85.009,
+   44.314
+  ],
+  "for": [
+   "moon_shackleton/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 84.073 43.636 85.009 44.314"
+ },
+ {
+  "cell": "g25_36.740_72.805",
+  "bbox": [
+   72.385,
+   36.401,
+   73.226,
+   37.079
+  ],
+  "for": [
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 72.385 36.401 73.226 37.079"
+ },
+ {
+  "cell": "g25_38.323_73.256",
+  "bbox": [
+   72.826,
+   37.984,
+   73.685,
+   38.662
+  ],
+  "for": [
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 72.826 37.984 73.685 38.662"
+ },
+ {
+  "cell": "g25_-32.670_-69.941",
+  "bbox": [
+   -70.341,
+   -33.01,
+   -69.541,
+   -32.331
+  ],
+  "for": [
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -70.341 -33.01 -69.541 -32.331"
+ },
+ {
+  "cell": "g25_34.931_77.096",
+  "bbox": [
+   76.685,
+   34.592,
+   77.507,
+   35.27
+  ],
+  "for": [
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 76.685 34.592 77.507 35.27"
+ },
+ {
+  "cell": "g25_-29.957_-70.587",
+  "bbox": [
+   -70.976,
+   -30.296,
+   -70.198,
+   -29.618
+  ],
+  "for": [
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -70.976 -30.296 -70.198 -29.618"
+ },
+ {
+  "cell": "g25_-29.053_-70.087",
+  "bbox": [
+   -70.473,
+   -29.392,
+   -69.702,
+   -28.714
+  ],
+  "for": [
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -70.473 -29.392 -69.702 -28.714"
+ },
+ {
+  "cell": "g25_37.871_72.076",
+  "bbox": [
+   71.65,
+   37.531,
+   72.503,
+   38.21
+  ],
+  "for": [
+   "moon_shackleton/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 71.65 37.531 72.503 38.21"
+ },
+ {
+  "cell": "g25_22.948_32.818",
+  "bbox": [
+   32.453,
+   22.609,
+   33.184,
+   23.288
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 32.453 22.609 33.184 23.288"
+ },
+ {
+  "cell": "g25_22.270_31.589",
+  "bbox": [
+   31.225,
+   21.931,
+   31.953,
+   22.609
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 31.225 21.931 31.953 22.609"
+ },
+ {
+  "cell": "g25_35.610_82.727",
+  "bbox": [
+   82.313,
+   35.27,
+   83.141,
+   35.949
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 82.313 35.27 83.141 35.949"
+ },
+ {
+  "cell": "g25_37.644_93.596",
+  "bbox": [
+   93.171,
+   37.305,
+   94.021,
+   37.984
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 93.171 37.305 94.021 37.984"
+ },
+ {
+  "cell": "g25_77.211_-118.548",
+  "bbox": [
+   -120.07,
+   76.872,
+   -117.027,
+   77.55
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature",
+   "moon_marius_hills/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -120.07 76.872 -117.027 77.55"
+ },
+ {
+  "cell": "g25_77.663_-111.425",
+  "bbox": [
+   -113.002,
+   77.324,
+   -109.849,
+   78.002
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature",
+   "moon_marius_hills/biosignature",
+   "mars_gale/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -113.002 77.324 -109.849 78.002"
+ },
+ {
+  "cell": "g25_40.584_88.585",
+  "bbox": [
+   88.141,
+   40.245,
+   89.028,
+   40.923
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature",
+   "mars_arcadia/dust",
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 88.141 40.245 89.028 40.923"
+ },
+ {
+  "cell": "g25_25.888_33.802",
+  "bbox": [
+   33.427,
+   25.549,
+   34.176,
+   26.227
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature",
+   "moon_marius_hills/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 33.427 25.549 34.176 26.227"
+ },
+ {
+  "cell": "g25_40.358_90.648",
+  "bbox": [
+   90.206,
+   40.018,
+   91.09,
+   40.697
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 90.206 40.018 91.09 40.697"
+ },
+ {
+  "cell": "g25_24.983_34.293",
+  "bbox": [
+   33.922,
+   24.644,
+   34.665,
+   25.322
+  ],
+  "for": [
+   "moon_shackleton/biosignature",
+   "moon_malapert/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 33.922 24.644 34.665 25.322"
+ },
+ {
+  "cell": "g25_36.740_74.950",
+  "bbox": [
+   74.53,
+   36.401,
+   75.371,
+   37.079
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/lava_tube",
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 74.53 36.401 75.371 37.079"
+ },
+ {
+  "cell": "g25_35.157_74.682",
+  "bbox": [
+   74.27,
+   34.818,
+   75.094,
+   35.497
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 74.27 34.818 75.094 35.497"
+ },
+ {
+  "cell": "g25_-15.713_-72.308",
+  "bbox": [
+   -72.658,
+   -16.053,
+   -71.958,
+   -15.374
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -72.658 -16.053 -71.958 -15.374"
+ },
+ {
+  "cell": "g25_35.157_76.023",
+  "bbox": [
+   75.611,
+   34.818,
+   76.435,
+   35.497
+  ],
+  "for": [
+   "moon_malapert/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 75.611 34.818 76.435 35.497"
+ },
+ {
+  "cell": "g25_38.549_75.319",
+  "bbox": [
+   74.888,
+   38.21,
+   75.75,
+   38.888
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/lava_tube",
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 74.888 38.21 75.75 38.888"
+ },
+ {
+  "cell": "g25_36.514_72.269",
+  "bbox": [
+   71.85,
+   36.175,
+   72.688,
+   36.853
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/lava_tube",
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 71.85 36.175 72.688 36.853"
+ },
+ {
+  "cell": "g25_38.097_71.487",
+  "bbox": [
+   71.059,
+   37.758,
+   71.915,
+   38.436
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 71.059 37.758 71.915 38.436"
+ },
+ {
+  "cell": "g25_34.253_78.168",
+  "bbox": [
+   77.761,
+   33.914,
+   78.576,
+   34.592
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 77.761 33.914 78.576 34.592"
+ },
+ {
+  "cell": "g25_41.940_80.330",
+  "bbox": [
+   79.878,
+   41.601,
+   80.783,
+   42.279
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 79.878 41.601 80.783 42.279"
+ },
+ {
+  "cell": "g25_39.227_72.076",
+  "bbox": [
+   71.641,
+   38.888,
+   72.511,
+   39.566
+  ],
+  "for": [
+   "moon_malapert/rover",
+   "moon_malapert/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 71.641 38.888 72.511 39.566"
+ },
+ {
+  "cell": "g25_35.157_77.364",
+  "bbox": [
+   76.952,
+   34.818,
+   77.776,
+   35.497
+  ],
+  "for": [
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 76.952 34.818 77.776 35.497"
+ },
+ {
+  "cell": "g25_34.479_78.436",
+  "bbox": [
+   78.028,
+   34.14,
+   78.845,
+   34.818
+  ],
+  "for": [
+   "moon_malapert/ice_drilling",
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 78.028 34.14 78.845 34.818"
+ },
+ {
+  "cell": "g25_36.288_76.023",
+  "bbox": [
+   75.605,
+   35.949,
+   76.441,
+   36.627
+  ],
+  "for": [
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 75.605 35.949 76.441 36.627"
+ },
+ {
+  "cell": "g25_34.253_77.364",
+  "bbox": [
+   76.956,
+   33.914,
+   77.771,
+   34.592
+  ],
+  "for": [
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 76.956 33.914 77.771 34.592"
+ },
+ {
+  "cell": "g25_36.740_71.464",
+  "bbox": [
+   71.044,
+   36.401,
+   71.885,
+   37.079
+  ],
+  "for": [
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 71.044 36.401 71.885 37.079"
+ },
+ {
+  "cell": "g25_36.062_79.509",
+  "bbox": [
+   79.092,
+   35.723,
+   79.926,
+   36.401
+  ],
+  "for": [
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 79.092 35.723 79.926 36.401"
+ },
+ {
+  "cell": "g25_37.871_75.319",
+  "bbox": [
+   74.892,
+   37.531,
+   75.746,
+   38.21
+  ],
+  "for": [
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 74.892 37.531 75.746 38.21"
+ },
+ {
+  "cell": "g25_37.871_72.371",
+  "bbox": [
+   71.944,
+   37.531,
+   72.798,
+   38.21
+  ],
+  "for": [
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 71.944 37.531 72.798 38.21"
+ },
+ {
+  "cell": "g25_36.740_73.341",
+  "bbox": [
+   72.921,
+   36.401,
+   73.762,
+   37.079
+  ],
+  "for": [
+   "moon_malapert/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 72.921 36.401 73.762 37.079"
+ },
+ {
+  "cell": "g25_35.610_76.023",
+  "bbox": [
+   75.609,
+   35.27,
+   76.437,
+   35.949
+  ],
+  "for": [
+   "moon_malapert/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 75.609 35.27 76.437 35.949"
+ },
+ {
+  "cell": "g25_33.575_76.023",
+  "bbox": [
+   75.619,
+   33.236,
+   76.427,
+   33.914
+  ],
+  "for": [
+   "moon_malapert/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 75.619 33.236 76.427 33.914"
+ },
+ {
+  "cell": "g25_35.610_76.291",
+  "bbox": [
+   75.877,
+   35.27,
+   76.706,
+   35.949
+  ],
+  "for": [
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 75.877 35.27 76.706 35.949"
+ },
+ {
+  "cell": "g25_37.192_73.341",
+  "bbox": [
+   72.919,
+   36.853,
+   73.764,
+   37.531
+  ],
+  "for": [
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 72.919 36.853 73.764 37.531"
+ },
+ {
+  "cell": "g25_-29.957_-70.337",
+  "bbox": [
+   -70.726,
+   -30.296,
+   -69.948,
+   -29.618
+  ],
+  "for": [
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -70.726 -30.296 -69.948 -29.618"
+ },
+ {
+  "cell": "g25_36.062_79.241",
+  "bbox": [
+   78.824,
+   35.723,
+   79.658,
+   36.401
+  ],
+  "for": [
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 78.824 35.723 79.658 36.401"
+ },
+ {
+  "cell": "g25_36.514_77.632",
+  "bbox": [
+   77.213,
+   36.175,
+   78.051,
+   36.853
+  ],
+  "for": [
+   "moon_malapert/dust",
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 77.213 36.175 78.051 36.853"
+ },
+ {
+  "cell": "g25_38.323_72.666",
+  "bbox": [
+   72.237,
+   37.984,
+   73.095,
+   38.662
+  ],
+  "for": [
+   "moon_malapert/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 72.237 37.984 73.095 38.662"
+ },
+ {
+  "cell": "g25_57.315_122.269",
+  "bbox": [
+   121.645,
+   56.975,
+   122.892,
+   57.654
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 121.645 56.975 122.892 57.654"
+ },
+ {
+  "cell": "g25_57.541_102.280",
+  "bbox": [
+   101.653,
+   57.202,
+   102.908,
+   57.88
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 101.653 57.202 102.908 57.88"
+ },
+ {
+  "cell": "g25_34.931_83.263",
+  "bbox": [
+   82.852,
+   34.592,
+   83.674,
+   35.27
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 82.852 34.592 83.674 35.27"
+ },
+ {
+  "cell": "g25_-6.218_149.828",
+  "bbox": [
+   149.489,
+   -6.557,
+   150.167,
+   -5.878
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 149.489 -6.557 150.167 -5.878"
+ },
+ {
+  "cell": "g25_0.339_109.299",
+  "bbox": [
+   108.962,
+   0.0,
+   109.636,
+   0.678
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 108.962 0.0 109.636 0.678"
+ },
+ {
+  "cell": "g25_-9.157_-57.244",
+  "bbox": [
+   -57.585,
+   -9.496,
+   -56.903,
+   -8.818
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -57.585 -9.496 -56.903 -8.818"
+ },
+ {
+  "cell": "g25_-1.244_116.408",
+  "bbox": [
+   116.071,
+   -1.583,
+   116.744,
+   -0.904
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 116.071 -1.583 116.744 -0.904"
+ },
+ {
+  "cell": "g25_-3.278_115.956",
+  "bbox": [
+   115.618,
+   -3.617,
+   116.293,
+   -2.939
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 115.618 -3.617 116.293 -2.939"
+ },
+ {
+  "cell": "g25_12.548_75.106",
+  "bbox": [
+   74.761,
+   12.209,
+   75.452,
+   12.887
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 74.761 12.209 75.452 12.887"
+ },
+ {
+  "cell": "g25_-3.504_102.181",
+  "bbox": [
+   101.844,
+   -3.844,
+   102.519,
+   -3.165
+  ],
+  "for": [
+   "moon_marius_hills/rover",
+   "moon_marius_hills/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 101.844 -3.844 102.519 -3.165"
+ },
+ {
+  "cell": "g25_81.959_-22.357",
+  "bbox": [
+   -24.765,
+   81.62,
+   -19.949,
+   82.298
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling",
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -24.765 81.62 -19.949 82.298"
+ },
+ {
+  "cell": "g25_76.306_-68.833",
+  "bbox": [
+   -70.256,
+   75.967,
+   -67.41,
+   76.646
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling",
+   "mars_jezero/ice_drilling",
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -70.256 75.967 -67.41 76.646"
+ },
+ {
+  "cell": "g25_46.462_96.826",
+  "bbox": [
+   96.337,
+   46.123,
+   97.315,
+   46.801
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling",
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 96.337 46.123 97.315 46.801"
+ },
+ {
+  "cell": "g25_38.097_90.943",
+  "bbox": [
+   90.515,
+   37.758,
+   91.371,
+   38.436
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 90.515 37.758 91.371 38.436"
+ },
+ {
+  "cell": "g25_45.558_95.856",
+  "bbox": [
+   95.375,
+   45.219,
+   96.337,
+   45.897
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling",
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 95.375 45.219 96.337 45.897"
+ },
+ {
+  "cell": "g25_48.497_94.240",
+  "bbox": [
+   93.731,
+   48.158,
+   94.748,
+   48.836
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 93.731 48.158 94.748 48.836"
+ },
+ {
+  "cell": "g25_45.332_93.916",
+  "bbox": [
+   93.437,
+   44.992,
+   94.396,
+   45.671
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 93.437 44.992 94.396 45.671"
+ },
+ {
+  "cell": "g25_49.175_92.926",
+  "bbox": [
+   92.411,
+   48.836,
+   93.441,
+   49.514
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 92.411 48.836 93.441 49.514"
+ },
+ {
+  "cell": "g25_38.549_89.764",
+  "bbox": [
+   89.333,
+   38.21,
+   90.195,
+   38.888
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling",
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 89.333 38.21 90.195 38.888"
+ },
+ {
+  "cell": "g25_45.558_99.089",
+  "bbox": [
+   98.608,
+   45.219,
+   99.57,
+   45.897
+  ],
+  "for": [
+   "moon_marius_hills/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 98.608 45.219 99.57 45.897"
+ },
+ {
+  "cell": "g25_39.227_89.174",
+  "bbox": [
+   88.739,
+   38.888,
+   89.609,
+   39.566
+  ],
+  "for": [
+   "moon_marius_hills/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 88.739 38.888 89.609 39.566"
+ },
+ {
+  "cell": "g25_35.610_84.604",
+  "bbox": [
+   84.19,
+   35.27,
+   85.018,
+   35.949
+  ],
+  "for": [
+   "moon_marius_hills/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 84.19 35.27 85.018 35.949"
+ },
+ {
+  "cell": "g25_70.654_-75.637",
+  "bbox": [
+   -76.654,
+   70.315,
+   -74.62,
+   70.993
+  ],
+  "for": [
+   "moon_marius_hills/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -76.654 70.315 -74.62 70.993"
+ },
+ {
+  "cell": "g25_39.905_92.712",
+  "bbox": [
+   92.273,
+   39.566,
+   93.151,
+   40.245
+  ],
+  "for": [
+   "moon_marius_hills/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 92.273 39.566 93.151 40.245"
+ },
+ {
+  "cell": "g25_42.392_92.417",
+  "bbox": [
+   91.961,
+   42.053,
+   92.873,
+   42.732
+  ],
+  "for": [
+   "moon_marius_hills/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 91.961 42.053 92.873 42.732"
+ },
+ {
+  "cell": "g25_78.567_-97.599",
+  "bbox": [
+   -99.298,
+   78.228,
+   -95.899,
+   78.906
+  ],
+  "for": [
+   "moon_marius_hills/dust",
+   "moon_marius_hills/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -99.298 78.228 -95.899 78.906"
+ },
+ {
+  "cell": "g25_35.384_83.263",
+  "bbox": [
+   82.85,
+   35.044,
+   83.677,
+   35.723
+  ],
+  "for": [
+   "moon_marius_hills/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 82.85 35.044 83.677 35.723"
+ },
+ {
+  "cell": "g25_75.854_-106.293",
+  "bbox": [
+   -107.672,
+   75.515,
+   -104.915,
+   76.193
+  ],
+  "for": [
+   "moon_marius_hills/dust",
+   "moon_marius_hills/biosignature",
+   "mars_jezero/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -107.672 75.515 -104.915 76.193"
+ },
+ {
+  "cell": "g25_27.018_33.064",
+  "bbox": [
+   32.686,
+   26.679,
+   33.442,
+   27.357
+  ],
+  "for": [
+   "moon_marius_hills/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 32.686 26.679 33.442 27.357"
+ },
+ {
+  "cell": "g25_78.567_-110.832",
+  "bbox": [
+   -112.532,
+   78.228,
+   -109.133,
+   78.906
+  ],
+  "for": [
+   "moon_marius_hills/biosignature",
+   "mars_arcadia/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -112.532 78.228 -109.133 78.906"
+ },
+ {
+  "cell": "g25_74.950_-86.500",
+  "bbox": [
+   -87.797,
+   74.611,
+   -85.203,
+   75.289
+  ],
+  "for": [
+   "moon_marius_hills/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -87.797 74.611 -85.203 75.289"
+ },
+ {
+  "cell": "g25_75.402_-109.739",
+  "bbox": [
+   -111.075,
+   75.063,
+   -108.402,
+   75.741
+  ],
+  "for": [
+   "moon_marius_hills/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -111.075 75.063 -108.402 75.741"
+ },
+ {
+  "cell": "g25_78.341_-102.010",
+  "bbox": [
+   -103.677,
+   78.002,
+   -100.343,
+   78.68
+  ],
+  "for": [
+   "moon_marius_hills/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -103.677 78.002 -100.343 78.68"
+ },
+ {
+  "cell": "g25_75.402_-90.803",
+  "bbox": [
+   -92.14,
+   75.063,
+   -89.467,
+   75.741
+  ],
+  "for": [
+   "moon_marius_hills/biosignature",
+   "mars_gale/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -92.14 75.063 -89.467 75.741"
+ },
+ {
+  "cell": "g25_76.306_-92.246",
+  "bbox": [
+   -93.669,
+   75.967,
+   -90.823,
+   76.646
+  ],
+  "for": [
+   "moon_marius_hills/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -93.669 75.967 -90.823 76.646"
+ },
+ {
+  "cell": "g25_-24.757_-67.839",
+  "bbox": [
+   -68.209,
+   -25.096,
+   -67.468,
+   -24.418
+  ],
+  "for": [
+   "mars_jezero/rover",
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -68.209 -25.096 -67.468 -24.418"
+ },
+ {
+  "cell": "g25_24.079_46.831",
+  "bbox": [
+   46.462,
+   23.74,
+   47.2,
+   24.418
+  ],
+  "for": [
+   "mars_jezero/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 46.462 23.74 47.2 24.418"
+ },
+ {
+  "cell": "g25_68.619_-136.059",
+  "bbox": [
+   -136.983,
+   68.28,
+   -135.135,
+   68.958
+  ],
+  "for": [
+   "mars_jezero/rover",
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -136.983 68.28 -135.135 68.958"
+ },
+ {
+  "cell": "g25_72.011_-110.812",
+  "bbox": [
+   -111.903,
+   71.671,
+   -109.721,
+   72.35
+  ],
+  "for": [
+   "mars_jezero/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -111.903 71.671 -109.721 72.35"
+ },
+ {
+  "cell": "g25_24.305_55.927",
+  "bbox": [
+   55.557,
+   23.966,
+   56.296,
+   24.644
+  ],
+  "for": [
+   "mars_jezero/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 55.557 23.966 56.296 24.644"
+ },
+ {
+  "cell": "g25_76.080_-120.341",
+  "bbox": [
+   -121.741,
+   75.741,
+   -118.94,
+   76.419
+  ],
+  "for": [
+   "mars_jezero/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -121.741 75.741 -118.94 76.419"
+ },
+ {
+  "cell": "g25_22.044_46.093",
+  "bbox": [
+   45.73,
+   21.705,
+   46.457,
+   22.383
+  ],
+  "for": [
+   "mars_jezero/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 45.73 21.705 46.457 22.383"
+ },
+ {
+  "cell": "g25_61.610_129.054",
+  "bbox": [
+   128.346,
+   61.271,
+   129.763,
+   61.949
+  ],
+  "for": [
+   "mars_jezero/rover",
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 128.346 61.271 129.763 61.949"
+ },
+ {
+  "cell": "g25_75.628_-90.373",
+  "bbox": [
+   -91.73,
+   75.289,
+   -89.015,
+   75.967
+  ],
+  "for": [
+   "mars_jezero/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -91.73 75.289 -89.015 75.967"
+ },
+ {
+  "cell": "g25_38.775_95.070",
+  "bbox": [
+   94.638,
+   38.436,
+   95.502,
+   39.114
+  ],
+  "for": [
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 94.638 38.436 95.502 39.114"
+ },
+ {
+  "cell": "g25_38.323_93.006",
+  "bbox": [
+   92.577,
+   37.984,
+   93.436,
+   38.662
+  ],
+  "for": [
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 92.577 37.984 93.436 38.662"
+ },
+ {
+  "cell": "g25_37.644_94.480",
+  "bbox": [
+   94.055,
+   37.305,
+   94.906,
+   37.984
+  ],
+  "for": [
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 94.055 37.305 94.906 37.984"
+ },
+ {
+  "cell": "g25_37.871_91.533",
+  "bbox": [
+   91.106,
+   37.531,
+   91.959,
+   38.21
+  ],
+  "for": [
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 91.106 37.531 91.959 38.21"
+ },
+ {
+  "cell": "g25_46.236_98.119",
+  "bbox": [
+   97.632,
+   45.897,
+   98.606,
+   46.575
+  ],
+  "for": [
+   "mars_jezero/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 97.632 45.897 98.606 46.575"
+ },
+ {
+  "cell": "g25_69.524_121.878",
+  "bbox": [
+   120.915,
+   69.184,
+   122.84,
+   69.863
+  ],
+  "for": [
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 120.915 69.184 122.84 69.863"
+ },
+ {
+  "cell": "g25_59.802_-72.782",
+  "bbox": [
+   -73.452,
+   59.462,
+   -72.112,
+   60.141
+  ],
+  "for": [
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -73.452 59.462 -72.112 60.141"
+ },
+ {
+  "cell": "g25_58.897_105.683",
+  "bbox": [
+   105.03,
+   58.558,
+   106.335,
+   59.236
+  ],
+  "for": [
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 105.03 58.558 106.335 59.236"
+ },
+ {
+  "cell": "g25_70.202_150.943",
+  "bbox": [
+   149.949,
+   69.863,
+   151.938,
+   70.541
+  ],
+  "for": [
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 149.949 69.863 151.938 70.541"
+ },
+ {
+  "cell": "g25_58.445_127.797",
+  "bbox": [
+   127.154,
+   58.106,
+   128.441,
+   58.784
+  ],
+  "for": [
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 127.154 58.106 128.441 58.784"
+ },
+ {
+  "cell": "g25_61.384_122.543",
+  "bbox": [
+   121.84,
+   61.045,
+   123.247,
+   61.723
+  ],
+  "for": [
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 121.84 61.045 123.247 61.723"
+ },
+ {
+  "cell": "g25_63.193_112.977",
+  "bbox": [
+   112.23,
+   62.854,
+   113.724,
+   63.532
+  ],
+  "for": [
+   "mars_jezero/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 112.23 62.854 113.724 63.532"
+ },
+ {
+  "cell": "g25_37.192_83.800",
+  "bbox": [
+   83.377,
+   36.853,
+   84.223,
+   37.531
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 83.377 36.853 84.223 37.531"
+ },
+ {
+  "cell": "g25_37.644_85.047",
+  "bbox": [
+   84.622,
+   37.305,
+   85.473,
+   37.984
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 84.622 37.305 85.473 37.984"
+ },
+ {
+  "cell": "g25_21.140_44.127",
+  "bbox": [
+   43.765,
+   20.801,
+   44.488,
+   21.479
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 43.765 20.801 44.488 21.479"
+ },
+ {
+  "cell": "g25_17.974_55.664",
+  "bbox": [
+   55.31,
+   17.635,
+   56.019,
+   18.314
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 55.31 17.635 56.019 18.314"
+ },
+ {
+  "cell": "g25_39.679_87.995",
+  "bbox": [
+   87.557,
+   39.34,
+   88.433,
+   40.018
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 87.557 39.34 88.433 40.018"
+ },
+ {
+  "cell": "g25_38.549_87.405",
+  "bbox": [
+   86.975,
+   38.21,
+   87.836,
+   38.888
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 86.975 38.21 87.836 38.888"
+ },
+ {
+  "cell": "g25_15.940_11.457",
+  "bbox": [
+   11.107,
+   15.6,
+   11.807,
+   16.279
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 11.107 15.6 11.807 16.279"
+ },
+ {
+  "cell": "g25_22.722_44.127",
+  "bbox": [
+   43.761,
+   22.383,
+   44.492,
+   23.061
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 43.761 22.383 44.492 23.061"
+ },
+ {
+  "cell": "g25_36.966_82.459",
+  "bbox": [
+   82.037,
+   36.627,
+   82.88,
+   37.305
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 82.037 36.627 82.88 37.305"
+ },
+ {
+  "cell": "g25_18.200_11.688",
+  "bbox": [
+   11.334,
+   17.861,
+   12.043,
+   18.54
+  ],
+  "for": [
+   "mars_jezero/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 11.334 17.861 12.043 18.54"
+ },
+ {
+  "cell": "g25_72.689_-106.481",
+  "bbox": [
+   -107.613,
+   72.35,
+   -105.349,
+   73.028
+  ],
+  "for": [
+   "mars_jezero/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -107.613 72.35 -105.349 73.028"
+ },
+ {
+  "cell": "g25_36.288_83.800",
+  "bbox": [
+   83.382,
+   35.949,
+   84.218,
+   36.627
+  ],
+  "for": [
+   "mars_jezero/biosignature",
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 83.382 35.949 84.218 36.627"
+ },
+ {
+  "cell": "g25_72.915_-100.027",
+  "bbox": [
+   -101.173,
+   72.576,
+   -98.88,
+   73.254
+  ],
+  "for": [
+   "mars_jezero/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -101.173 72.576 -98.88 73.254"
+ },
+ {
+  "cell": "g25_75.176_-106.296",
+  "bbox": [
+   -107.613,
+   74.837,
+   -104.979,
+   75.515
+  ],
+  "for": [
+   "mars_jezero/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -107.613 74.837 -104.979 75.515"
+ },
+ {
+  "cell": "g25_76.532_-117.531",
+  "bbox": [
+   -118.978,
+   76.193,
+   -116.085,
+   76.872
+  ],
+  "for": [
+   "mars_jezero/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -118.978 76.193 -116.085 76.872"
+ },
+ {
+  "cell": "g25_73.593_-104.771",
+  "bbox": [
+   -105.964,
+   73.254,
+   -103.578,
+   73.932
+  ],
+  "for": [
+   "mars_jezero/biosignature",
+   "mars_gale/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -105.964 73.254 -103.578 73.932"
+ },
+ {
+  "cell": "g25_72.237_-110.090",
+  "bbox": [
+   -111.194,
+   71.898,
+   -108.986,
+   72.576
+  ],
+  "for": [
+   "mars_jezero/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -111.194 71.898 -108.986 72.576"
+ },
+ {
+  "cell": "g25_75.402_-112.321",
+  "bbox": [
+   -113.657,
+   75.063,
+   -110.984,
+   75.741
+  ],
+  "for": [
+   "mars_jezero/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -113.657 75.063 -110.984 75.741"
+ },
+ {
+  "cell": "g25_71.785_-107.203",
+  "bbox": [
+   -108.28,
+   71.445,
+   -106.125,
+   72.124
+  ],
+  "for": [
+   "mars_jezero/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -108.28 71.445 -106.125 72.124"
+ },
+ {
+  "cell": "g25_75.402_-98.550",
+  "bbox": [
+   -99.886,
+   75.063,
+   -97.213,
+   75.741
+  ],
+  "for": [
+   "mars_jezero/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -99.886 75.063 -97.213 75.741"
+ },
+ {
+  "cell": "g25_39.679_44.366",
+  "bbox": [
+   43.928,
+   39.34,
+   44.804,
+   40.018
+  ],
+  "for": [
+   "mars_gale/rover",
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 43.928 39.34 44.804 40.018"
+ },
+ {
+  "cell": "g25_23.175_57.647",
+  "bbox": [
+   57.281,
+   22.835,
+   58.014,
+   23.514
+  ],
+  "for": [
+   "mars_gale/rover",
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 57.281 22.835 58.014 23.514"
+ },
+ {
+  "cell": "g25_39.453_72.961",
+  "bbox": [
+   72.524,
+   39.114,
+   73.397,
+   39.792
+  ],
+  "for": [
+   "mars_gale/rover",
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 72.524 39.114 73.397 39.792"
+ },
+ {
+  "cell": "g25_62.289_-143.936",
+  "bbox": [
+   -144.661,
+   61.949,
+   -143.212,
+   62.628
+  ],
+  "for": [
+   "mars_gale/rover",
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -144.661 61.949 -143.212 62.628"
+ },
+ {
+  "cell": "g25_71.332_-73.995",
+  "bbox": [
+   -75.048,
+   70.993,
+   -72.943,
+   71.671
+  ],
+  "for": [
+   "mars_gale/rover",
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -75.048 70.993 -72.943 71.671"
+ },
+ {
+  "cell": "g25_65.906_141.213",
+  "bbox": [
+   140.388,
+   65.567,
+   142.038,
+   66.245
+  ],
+  "for": [
+   "mars_gale/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 140.388 65.567 142.038 66.245"
+ },
+ {
+  "cell": "g25_32.444_-4.961",
+  "bbox": [
+   -5.36,
+   32.105,
+   -4.562,
+   32.783
+  ],
+  "for": [
+   "mars_gale/rover",
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -5.36 32.105 -4.562 32.783"
+ },
+ {
+  "cell": "g25_34.479_47.330",
+  "bbox": [
+   46.921,
+   34.14,
+   47.739,
+   34.818
+  ],
+  "for": [
+   "mars_gale/rover",
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 46.921 34.14 47.739 34.818"
+ },
+ {
+  "cell": "g25_60.028_-135.100",
+  "bbox": [
+   -135.774,
+   59.689,
+   -134.426,
+   60.367
+  ],
+  "for": [
+   "mars_gale/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -135.774 59.689 -134.426 60.367"
+ },
+ {
+  "cell": "g25_57.088_116.740",
+  "bbox": [
+   116.12,
+   56.749,
+   117.36,
+   57.428
+  ],
+  "for": [
+   "mars_gale/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 116.12 56.749 117.36 57.428"
+ },
+ {
+  "cell": "g25_-27.922_-68.838",
+  "bbox": [
+   -69.219,
+   -28.262,
+   -68.457,
+   -27.583
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -69.219 -28.262 -68.457 -27.583"
+ },
+ {
+  "cell": "g25_-27.018_-68.588",
+  "bbox": [
+   -68.966,
+   -27.357,
+   -68.21,
+   -26.679
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -68.966 -27.357 -68.21 -26.679"
+ },
+ {
+  "cell": "g25_-29.505_-69.837",
+  "bbox": [
+   -70.225,
+   -29.844,
+   -69.45,
+   -29.166
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -70.225 -29.844 -69.45 -29.166"
+ },
+ {
+  "cell": "g25_-28.601_-69.588",
+  "bbox": [
+   -69.971,
+   -28.94,
+   -69.204,
+   -28.262
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -69.971 -28.94 -69.204 -28.262"
+ },
+ {
+  "cell": "g25_-25.209_-68.338",
+  "bbox": [
+   -68.711,
+   -25.549,
+   -67.966,
+   -24.87
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -68.711 -25.549 -67.966 -24.87"
+ },
+ {
+  "cell": "g25_-26.114_-68.838",
+  "bbox": [
+   -69.213,
+   -26.453,
+   -68.463,
+   -25.775
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -69.213 -26.453 -68.463 -25.775"
+ },
+ {
+  "cell": "g25_-22.722_-67.839",
+  "bbox": [
+   -68.204,
+   -23.061,
+   -67.473,
+   -22.383
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -68.204 -23.061 -67.473 -22.383"
+ },
+ {
+  "cell": "g25_-24.305_-68.088",
+  "bbox": [
+   -68.458,
+   -24.644,
+   -67.719,
+   -23.966
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -68.458 -24.644 -67.719 -23.966"
+ },
+ {
+  "cell": "g25_-21.818_-68.338",
+  "bbox": [
+   -68.701,
+   -22.157,
+   -67.975,
+   -21.479
+  ],
+  "for": [
+   "mars_gale/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -68.701 -22.157 -67.975 -21.479"
+ },
+ {
+  "cell": "g25_-14.131_-75.111",
+  "bbox": [
+   -75.459,
+   -14.47,
+   -74.764,
+   -13.792
+  ],
+  "for": [
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -75.459 -14.47 -74.764 -13.792"
+ },
+ {
+  "cell": "g25_43.297_85.932",
+  "bbox": [
+   85.469,
+   42.958,
+   86.394,
+   43.636
+  ],
+  "for": [
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 85.469 42.958 86.394 43.636"
+ },
+ {
+  "cell": "g25_-15.035_-72.775",
+  "bbox": [
+   -73.124,
+   -15.374,
+   -72.426,
+   -14.696
+  ],
+  "for": [
+   "mars_gale/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -73.124 -15.374 -72.426 -14.696"
+ },
+ {
+  "cell": "g25_36.288_82.459",
+  "bbox": [
+   82.041,
+   35.949,
+   82.877,
+   36.627
+  ],
+  "for": [
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 82.041 35.949 82.877 36.627"
+ },
+ {
+  "cell": "g25_37.192_85.677",
+  "bbox": [
+   85.254,
+   36.853,
+   86.1,
+   37.531
+  ],
+  "for": [
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 85.254 36.853 86.1 37.531"
+ },
+ {
+  "cell": "g25_38.097_87.405",
+  "bbox": [
+   86.977,
+   37.758,
+   87.834,
+   38.436
+  ],
+  "for": [
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 86.977 37.758 87.834 38.436"
+ },
+ {
+  "cell": "g25_38.775_88.879",
+  "bbox": [
+   88.447,
+   38.436,
+   89.312,
+   39.114
+  ],
+  "for": [
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 88.447 38.436 89.312 39.114"
+ },
+ {
+  "cell": "g25_39.905_88.585",
+  "bbox": [
+   88.145,
+   39.566,
+   89.024,
+   40.245
+  ],
+  "for": [
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 88.145 39.566 89.024 40.245"
+ },
+ {
+  "cell": "g25_37.644_84.458",
+  "bbox": [
+   84.032,
+   37.305,
+   84.883,
+   37.984
+  ],
+  "for": [
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 84.032 37.305 84.883 37.984"
+ },
+ {
+  "cell": "g25_33.801_77.632",
+  "bbox": [
+   77.227,
+   33.462,
+   78.037,
+   34.14
+  ],
+  "for": [
+   "mars_gale/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 77.227 33.462 78.037 34.14"
+ },
+ {
+  "cell": "g25_76.759_-119.566",
+  "bbox": [
+   -121.037,
+   76.419,
+   -118.095,
+   77.098
+  ],
+  "for": [
+   "mars_gale/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -121.037 76.419 -118.095 77.098"
+ },
+ {
+  "cell": "g25_36.288_83.531",
+  "bbox": [
+   83.114,
+   35.949,
+   83.949,
+   36.627
+  ],
+  "for": [
+   "mars_gale/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 83.114 35.949 83.949 36.627"
+ },
+ {
+  "cell": "g25_75.628_-108.166",
+  "bbox": [
+   -109.523,
+   75.289,
+   -106.809,
+   75.967
+  ],
+  "for": [
+   "mars_gale/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -109.523 75.289 -106.809 75.967"
+ },
+ {
+  "cell": "g25_72.915_-107.143",
+  "bbox": [
+   -108.29,
+   72.576,
+   -105.997,
+   73.254
+  ],
+  "for": [
+   "mars_gale/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -108.29 72.576 -105.997 73.254"
+ },
+ {
+  "cell": "g25_72.689_-101.427",
+  "bbox": [
+   -102.56,
+   72.35,
+   -100.295,
+   73.028
+  ],
+  "for": [
+   "mars_gale/biosignature",
+   "mars_arcadia/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -102.56 72.35 -100.295 73.028"
+ },
+ {
+  "cell": "g25_78.341_-99.804",
+  "bbox": [
+   -101.471,
+   78.002,
+   -98.137,
+   78.68
+  ],
+  "for": [
+   "mars_gale/biosignature",
+   "mars_arcadia/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -101.471 78.002 -98.137 78.68"
+ },
+ {
+  "cell": "g25_72.011_-110.090",
+  "bbox": [
+   -111.181,
+   71.671,
+   -109.0,
+   72.35
+  ],
+  "for": [
+   "mars_gale/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -111.181 71.671 -109.0 72.35"
+ },
+ {
+  "cell": "g25_76.985_-118.548",
+  "bbox": [
+   -120.044,
+   76.646,
+   -117.053,
+   77.324
+  ],
+  "for": [
+   "mars_arcadia/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -120.044 76.646 -117.053 77.324"
+ },
+ {
+  "cell": "g25_29.505_26.145",
+  "bbox": [
+   25.758,
+   29.166,
+   26.533,
+   29.844
+  ],
+  "for": [
+   "mars_arcadia/rover",
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 25.758 29.166 26.533 29.844"
+ },
+ {
+  "cell": "g25_70.428_-104.042",
+  "bbox": [
+   -105.047,
+   70.089,
+   -103.036,
+   70.767
+  ],
+  "for": [
+   "mars_arcadia/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -105.047 70.089 -103.036 70.767"
+ },
+ {
+  "cell": "g25_71.332_-110.090",
+  "bbox": [
+   -111.143,
+   70.993,
+   -109.038,
+   71.671
+  ],
+  "for": [
+   "mars_arcadia/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -111.143 70.993 -109.038 71.671"
+ },
+ {
+  "cell": "g25_72.011_-105.037",
+  "bbox": [
+   -106.128,
+   71.671,
+   -103.946,
+   72.35
+  ],
+  "for": [
+   "mars_arcadia/rover"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -106.128 71.671 -103.946 72.35"
+ },
+ {
+  "cell": "g25_18.427_56.590",
+  "bbox": [
+   56.235,
+   18.087,
+   56.945,
+   18.766
+  ],
+  "for": [
+   "mars_arcadia/rover",
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 56.235 18.087 56.945 18.766"
+ },
+ {
+  "cell": "g25_24.079_54.206",
+  "bbox": [
+   53.837,
+   23.74,
+   54.575,
+   24.418
+  ],
+  "for": [
+   "mars_arcadia/rover",
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 53.837 23.74 54.575 24.418"
+ },
+ {
+  "cell": "g25_77.889_-96.496",
+  "bbox": [
+   -98.101,
+   77.55,
+   -94.89,
+   78.228
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -98.101 77.55 -94.89 78.228"
+ },
+ {
+  "cell": "g25_76.306_-97.865",
+  "bbox": [
+   -99.288,
+   75.967,
+   -96.442,
+   76.646
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -99.288 75.967 -96.442 76.646"
+ },
+ {
+  "cell": "g25_72.689_-100.706",
+  "bbox": [
+   -101.838,
+   72.35,
+   -99.573,
+   73.028
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -101.838 72.35 -99.573 73.028"
+ },
+ {
+  "cell": "g25_73.819_-100.027",
+  "bbox": [
+   -101.235,
+   73.48,
+   -98.818,
+   74.158
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -101.235 73.48 -98.818 74.158"
+ },
+ {
+  "cell": "g25_71.558_-99.262",
+  "bbox": [
+   -100.327,
+   71.219,
+   -98.197,
+   71.898
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -100.327 71.219 -98.197 71.898"
+ },
+ {
+  "cell": "g25_75.628_-101.611",
+  "bbox": [
+   -102.968,
+   75.289,
+   -100.254,
+   75.967
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -102.968 75.289 -100.254 75.967"
+ },
+ {
+  "cell": "g25_76.759_-120.583",
+  "bbox": [
+   -122.054,
+   76.419,
+   -119.113,
+   77.098
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -122.054 76.419 -119.113 77.098"
+ },
+ {
+  "cell": "g25_38.775_96.544",
+  "bbox": [
+   96.112,
+   38.436,
+   96.976,
+   39.114
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 96.112 38.436 96.976 39.114"
+ },
+ {
+  "cell": "g25_33.801_84.336",
+  "bbox": [
+   83.931,
+   33.462,
+   84.741,
+   34.14
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 83.931 33.462 84.741 34.14"
+ },
+ {
+  "cell": "g25_80.150_-88.391",
+  "bbox": [
+   -90.36,
+   79.811,
+   -86.422,
+   80.489
+  ],
+  "for": [
+   "mars_arcadia/ice_drilling"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -90.36 79.811 -86.422 80.489"
+ },
+ {
+  "cell": "g25_-23.401_-68.338",
+  "bbox": [
+   -68.705,
+   -23.74,
+   -67.971,
+   -23.061
+  ],
+  "for": [
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -68.705 -23.74 -67.971 -23.061"
+ },
+ {
+  "cell": "g25_18.200_54.970",
+  "bbox": [
+   54.615,
+   17.861,
+   55.325,
+   18.54
+  ],
+  "for": [
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 54.615 17.861 55.325 18.54"
+ },
+ {
+  "cell": "g25_17.974_54.044",
+  "bbox": [
+   53.69,
+   17.635,
+   54.398,
+   18.314
+  ],
+  "for": [
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 53.69 17.635 54.398 18.314"
+ },
+ {
+  "cell": "g25_33.349_36.604",
+  "bbox": [
+   36.2,
+   33.01,
+   37.007,
+   33.688
+  ],
+  "for": [
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 36.2 33.01 37.007 33.688"
+ },
+ {
+  "cell": "g25_30.636_27.486",
+  "bbox": [
+   27.095,
+   30.296,
+   27.878,
+   30.975
+  ],
+  "for": [
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 27.095 30.296 27.878 30.975"
+ },
+ {
+  "cell": "g25_-20.461_-68.103",
+  "bbox": [
+   -68.462,
+   -20.801,
+   -67.743,
+   -20.122
+  ],
+  "for": [
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox -68.462 -20.801 -67.743 -20.122"
+ },
+ {
+  "cell": "g25_10.513_49.647",
+  "bbox": [
+   49.304,
+   10.174,
+   49.989,
+   10.852
+  ],
+  "for": [
+   "mars_arcadia/lava_tube"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 49.304 10.174 49.989 10.852"
+ },
+ {
+  "cell": "g25_38.097_83.868",
+  "bbox": [
+   83.44,
+   37.758,
+   84.296,
+   38.436
+  ],
+  "for": [
+   "mars_arcadia/dust",
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 83.44 37.758 84.296 38.436"
+ },
+ {
+  "cell": "g25_38.323_85.047",
+  "bbox": [
+   84.618,
+   37.984,
+   85.477,
+   38.662
+  ],
+  "for": [
+   "mars_arcadia/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 84.618 37.984 85.477 38.662"
+ },
+ {
+  "cell": "g25_38.323_82.689",
+  "bbox": [
+   82.259,
+   37.984,
+   83.118,
+   38.662
+  ],
+  "for": [
+   "mars_arcadia/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 82.259 37.984 83.118 38.662"
+ },
+ {
+  "cell": "g25_39.453_81.215",
+  "bbox": [
+   80.779,
+   39.114,
+   81.651,
+   39.792
+  ],
+  "for": [
+   "mars_arcadia/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 80.779 39.114 81.651 39.792"
+ },
+ {
+  "cell": "g25_40.358_83.868",
+  "bbox": [
+   83.426,
+   40.018,
+   84.31,
+   40.697
+  ],
+  "for": [
+   "mars_arcadia/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 83.426 40.018 84.31 40.697"
+ },
+ {
+  "cell": "g25_39.227_82.394",
+  "bbox": [
+   81.959,
+   38.888,
+   82.829,
+   39.566
+  ],
+  "for": [
+   "mars_arcadia/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 81.959 38.888 82.829 39.566"
+ },
+ {
+  "cell": "g25_40.358_89.764",
+  "bbox": [
+   89.322,
+   40.018,
+   90.206,
+   40.697
+  ],
+  "for": [
+   "mars_arcadia/dust",
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 89.322 40.018 90.206 40.697"
+ },
+ {
+  "cell": "g25_37.644_81.215",
+  "bbox": [
+   80.789,
+   37.305,
+   81.64,
+   37.984
+  ],
+  "for": [
+   "mars_arcadia/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 80.789 37.305 81.64 37.984"
+ },
+ {
+  "cell": "g25_39.001_86.816",
+  "bbox": [
+   86.382,
+   38.662,
+   87.249,
+   39.34
+  ],
+  "for": [
+   "mars_arcadia/dust"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 86.382 38.662 87.249 39.34"
+ },
+ {
+  "cell": "g25_39.001_86.521",
+  "bbox": [
+   86.088,
+   38.662,
+   86.955,
+   39.34
+  ],
+  "for": [
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 86.088 38.662 86.955 39.34"
+ },
+ {
+  "cell": "g25_36.062_82.995",
+  "bbox": [
+   82.578,
+   35.723,
+   83.412,
+   36.401
+  ],
+  "for": [
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 82.578 35.723 83.412 36.401"
+ },
+ {
+  "cell": "g25_38.549_82.689",
+  "bbox": [
+   82.258,
+   38.21,
+   83.12,
+   38.888
+  ],
+  "for": [
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 82.258 38.21 83.12 38.888"
+ },
+ {
+  "cell": "g25_38.775_85.047",
+  "bbox": [
+   84.615,
+   38.436,
+   85.479,
+   39.114
+  ],
+  "for": [
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 84.615 38.436 85.479 39.114"
+ },
+ {
+  "cell": "g25_39.227_81.215",
+  "bbox": [
+   80.78,
+   38.888,
+   81.65,
+   39.566
+  ],
+  "for": [
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 80.78 38.888 81.65 39.566"
+ },
+ {
+  "cell": "g25_39.227_89.469",
+  "bbox": [
+   89.034,
+   38.888,
+   89.904,
+   39.566
+  ],
+  "for": [
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 89.034 38.888 89.904 39.566"
+ },
+ {
+  "cell": "g25_40.584_83.573",
+  "bbox": [
+   83.13,
+   40.245,
+   84.017,
+   40.923
+  ],
+  "for": [
+   "mars_arcadia/biosignature"
+  ],
+  "command": "python -m pipeline.ee_export --cell-km 5 --bbox 83.13 40.245 84.017 40.923"
+ }
+]

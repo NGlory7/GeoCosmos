@@ -1,0 +1,1345 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     82.19069662558078,
+     35.60963698518639
+    ]
+   },
+   "properties": {
+    "id": "g25_35.610_82.191",
+    "name": "35.61°K, 82.19°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 35.60963698518639,
+    "lon": 82.19069662558078,
+    "rank": 1,
+    "score_total": 68.3,
+    "scores": {
+     "topography": 90.7,
+     "geology": 98.1,
+     "climate": 32.9
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5716959635416666,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -5.90955372326864,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 12.55219554901123,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9257928859528675,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     77.3638367911258,
+     35.83572991842567
+    ]
+   },
+   "properties": {
+    "id": "g25_35.836_77.364",
+    "name": "35.84°K, 77.36°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 35.83572991842567,
+    "lon": 77.3638367911258,
+    "rank": 2,
+    "score_total": 67.7,
+    "scores": {
+     "topography": 96.2,
+     "geology": 94.9,
+     "climate": 33.4
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5295947265625,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -8.228899859017378,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.508402824401855,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9348179577175261,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     80.58174334742912,
+     35.60963698518639
+    ]
+   },
+   "properties": {
+    "id": "g25_35.610_80.582",
+    "name": "35.61°K, 80.58°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 35.60963698518639,
+    "lon": 80.58174334742912,
+    "rank": 3,
+    "score_total": 67.1,
+    "scores": {
+     "topography": 89.9,
+     "geology": 97.0,
+     "climate": 31.6
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5420166015625,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -7.827104910262824,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 12.430533409118652,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9052459137024278,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.7772667083533,
+     33.12261471955433
+    ]
+   },
+   "properties": {
+    "id": "g25_33.123_79.777",
+    "name": "33.12°K, 79.78°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 33.12261471955433,
+    "lon": 79.7772667083533,
+    "rank": 4,
+    "score_total": 66.5,
+    "scores": {
+     "topography": 86.2,
+     "geology": 98.5,
+     "climate": 29.4
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5512939453125,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 3.3002393310558604,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.006418228149414,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8711665270940849,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.40860318188412,
+     37.192287517861345
+    ]
+   },
+   "properties": {
+    "id": "g25_37.192_85.409",
+    "name": "37.19°K, 85.41°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 37.192287517861345,
+    "lon": 85.40860318188412,
+    "rank": 5,
+    "score_total": 66.5,
+    "scores": {
+     "topography": 96.6,
+     "geology": 96.5,
+     "climate": 28.9
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5808919270833334,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 2.0826758582242464,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.431940078735352,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8616252629239877,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.50371677550228,
+     72.01059923671026
+    ]
+   },
+   "properties": {
+    "id": "g25_72.011_-54.504",
+    "name": "72.01°K, 54.50°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 72.01059923671026,
+    "lon": -54.50371677550228,
+    "rank": 6,
+    "score_total": 66.4,
+    "scores": {
+     "topography": 91.0,
+     "geology": 99.1,
+     "climate": 27.6
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5546875,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -11.16373907209174,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 12.590033531188965,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8411003065664,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.16082277901312,
+     71.78450630347098
+    ]
+   },
+   "properties": {
+    "id": "g25_71.785_-76.161",
+    "name": "71.78°K, 76.16°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 71.78450630347098,
+    "lon": -76.16082277901312,
+    "rank": 7,
+    "score_total": 66.3,
+    "scores": {
+     "topography": 80.7,
+     "geology": 97.7,
+     "climate": 31.3
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5736607142857143,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -17.222427526618166,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 11.045831680297852,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.901102424621582,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.32335563113597,
+     81.50650243275996
+    ]
+   },
+   "properties": {
+    "id": "g25_81.507_-76.323",
+    "name": "81.51°K, 76.32°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 81.50650243275996,
+    "lon": -76.32335563113597,
+    "rank": 8,
+    "score_total": 66.3,
+    "scores": {
+     "topography": 87.0,
+     "geology": 95.0,
+     "climate": 32.3
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5899697580645161,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -18.029237465808926,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 11.995589256286621,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9174476089477539,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     75.02424612381732,
+     38.322752184057734
+    ]
+   },
+   "properties": {
+    "id": "g25_38.323_75.024",
+    "name": "38.32°K, 75.02°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 38.322752184057734,
+    "lon": 75.02424612381732,
+    "rank": 9,
+    "score_total": 66.2,
+    "scores": {
+     "topography": 93.5,
+     "geology": 95.4,
+     "climate": 30.2
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.587373046875,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -2.4460463405015553,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 12.96887493133545,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8832200917932536,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     74.72945537283965,
+     40.13149564997197
+    ]
+   },
+   "properties": {
+    "id": "g25_40.131_74.729",
+    "name": "40.13°K, 74.73°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 40.13149564997197,
+    "lon": 74.72945537283965,
+    "rank": 10,
+    "score_total": 66.0,
+    "scores": {
+     "topography": 94.5,
+     "geology": 99.2,
+     "climate": 25.6
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5649332682291667,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -2.1614155574475573,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.11790943145752,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8093653538359034,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     96.838761696165,
+     39.45321685025413
+    ]
+   },
+   "properties": {
+    "id": "g25_39.453_96.839",
+    "name": "39.45°K, 96.84°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 39.45321685025413,
+    "lon": 96.838761696165,
+    "rank": 11,
+    "score_total": 65.9,
+    "scores": {
+     "topography": 96.7,
+     "geology": 96.2,
+     "climate": 27.9
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.537109375,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 2.4063002159207274,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.4479398727417,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8470771186306858,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.96071086697363,
+     38.54884511729701
+    ]
+   },
+   "properties": {
+    "id": "g25_38.549_72.961",
+    "name": "38.55°K, 72.96°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 38.54884511729701,
+    "lon": 72.96071086697363,
+    "rank": 12,
+    "score_total": 65.8,
+    "scores": {
+     "topography": 95.9,
+     "geology": 96.8,
+     "climate": 27.3
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5409647623697916,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 0.7079477147957194,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.322516441345215,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8375778694246858,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -140.680750140088,
+     61.38423137446416
+    ]
+   },
+   "properties": {
+    "id": "g25_61.384_-140.681",
+    "name": "61.38°K, 140.68°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 61.38423137446416,
+    "lon": -140.680750140088,
+    "rank": 13,
+    "score_total": 65.8,
+    "scores": {
+     "topography": 93.6,
+     "geology": 99.8,
+     "climate": 24.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5613247341579861,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -11.733748573682355,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.89566707611084,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7970302276611329,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.80513583636275,
+     37.192287517861345
+    ]
+   },
+   "properties": {
+    "id": "g25_37.192_72.805",
+    "name": "37.19°K, 72.81°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 37.192287517861345,
+    "lon": 72.80513583636275,
+    "rank": 14,
+    "score_total": 65.7,
+    "scores": {
+     "topography": 81.5,
+     "geology": 95.8,
+     "climate": 31.7
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5849380493164062,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -1.7502560688054838,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.715890884399414,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9064850100515327,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     78.16831343020164,
+     34.479172318989995
+    ]
+   },
+   "properties": {
+    "id": "g25_34.479_78.168",
+    "name": "34.48°K, 78.17°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 34.479172318989995,
+    "lon": 78.16831343020164,
+    "rank": 15,
+    "score_total": 65.7,
+    "scores": {
+     "topography": 67.0,
+     "geology": 99.3,
+     "climate": 31.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5644482421875,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -7.523071586458523,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 18.883255004882812,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9092342608212229,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -53.19506604594325,
+     81.73259536599925
+    ]
+   },
+   "properties": {
+    "id": "g25_81.733_-53.195",
+    "name": "81.73°K, 53.20°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 81.73259536599925,
+    "lon": -53.19506604594325,
+    "rank": 16,
+    "score_total": 65.7,
+    "scores": {
+     "topography": 62.8,
+     "geology": 98.4,
+     "climate": 33.7
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.550390625,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.657488186086805,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 8.363911628723145,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9387021636962891,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     91.33011193951396,
+     46.68819071391105
+    ]
+   },
+   "properties": {
+    "id": "g25_46.688_91.330",
+    "name": "46.69°K, 91.33°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 46.68819071391105,
+    "lon": 91.33011193951396,
+    "rank": 17,
+    "score_total": 65.5,
+    "scores": {
+     "topography": 88.8,
+     "geology": 98.0,
+     "climate": 27.2
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5478515625,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 0.44875937287574796,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 12.253518104553223,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8357818363852029,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -65.19671719786973,
+     66.35827590572829
+    ]
+   },
+   "properties": {
+    "id": "g25_66.358_-65.197",
+    "name": "66.36°K, 65.20°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 66.35827590572829,
+    "lon": -65.19671719786973,
+    "rank": 18,
+    "score_total": 65.5,
+    "scores": {
+     "topography": 97.6,
+     "geology": 98.1,
+     "climate": 24.9
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.5716145833333334,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -14.009625076168415,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.307300567626953,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7988245544433594,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     78.97279006927747,
+     33.800893519272165
+    ]
+   },
+   "properties": {
+    "id": "g25_33.801_78.973",
+    "name": "33.80°K, 78.97°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 33.800893519272165,
+    "lon": 78.97279006927747,
+    "rank": 19,
+    "score_total": 65.5,
+    "scores": {
+     "topography": 90.7,
+     "geology": 94.1,
+     "climate": 30.5
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.524822998046875,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 1.9812425940143346,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 15.329851150512695,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8875797943937973,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     82.19069662558078,
+     30.183406587443702
+    ]
+   },
+   "properties": {
+    "id": "g25_30.183_82.191",
+    "name": "30.18°K, 82.19°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "ice_drilling",
+    "lat": 30.183406587443702,
+    "lon": 82.19069662558078,
+    "rank": 20,
+    "score_total": 65.4,
+    "scores": {
+     "topography": 98.1,
+     "geology": 98.7,
+     "climate": 23.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.552255859375,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -7.019386873337059,
+      "target": -181.3,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.653518676757812,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7815347015845532,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

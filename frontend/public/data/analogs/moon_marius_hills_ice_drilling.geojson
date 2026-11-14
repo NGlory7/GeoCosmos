@@ -1,0 +1,1485 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -22.357346599019625,
+     81.95868829923852
+    ]
+   },
+   "properties": {
+    "id": "g25_81.959_-22.357",
+    "name": "81.96°K, 22.36°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 81.95868829923852,
+    "lon": -22.357346599019625,
+    "rank": 1,
+    "score_total": 79.1,
+    "scores": {
+     "topography": 98.1,
+     "geology": 95.8,
+     "climate": 61.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.02490234375,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.04960681612662,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.4765000549484775,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.238720417022705,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8303539578560349,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -68.83302971112813,
+     76.30636496825656
+    ]
+   },
+   "properties": {
+    "id": "g25_76.306_-68.833",
+    "name": "76.31°K, 68.83°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 76.30636496825656,
+    "lon": -68.83302971112813,
+    "rank": 2,
+    "score_total": 77.1,
+    "scores": {
+     "topography": 83.4,
+     "geology": 96.6,
+     "climate": 60.2
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.02055921052631579,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -12.789677075192643,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.2387397583468314,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 4.007472515106201,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9034811096191406,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     96.826083277467,
+     46.46209778067177
+    ]
+   },
+   "properties": {
+    "id": "g25_46.462_96.826",
+    "name": "46.46°K, 96.83°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 46.46209778067177,
+    "lon": 96.826083277467,
+    "rank": 3,
+    "score_total": 72.3,
+    "scores": {
+     "topography": 98.4,
+     "geology": 100.0,
+     "climate": 44.9
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 3.295298936977242,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.986963622649988,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.2790024280548096,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8641337694814555,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     90.94294667661157,
+     38.096659250818455
+    ]
+   },
+   "properties": {
+    "id": "g25_38.097_90.943",
+    "name": "38.10°K, 90.94°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 38.096659250818455,
+    "lon": 90.94294667661157,
+    "rank": 4,
+    "score_total": 72.2,
+    "scores": {
+     "topography": 100.0,
+     "geology": 100.0,
+     "climate": 44.4
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 8.317184125424962,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 20.919187022347238,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.5153048038482666,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9391055492278834,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     95.8562059825341,
+     45.55772604771465
+    ]
+   },
+   "properties": {
+    "id": "g25_45.558_95.856",
+    "name": "45.56°K, 95.86°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 45.55772604771465,
+    "lon": 95.8562059825341,
+    "rank": 5,
+    "score_total": 72.2,
+    "scores": {
+     "topography": 98.1,
+     "geology": 100.0,
+     "climate": 44.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.9537148718863575,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.367449166686626,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.2288649082183838,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8901410939690262,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     94.23974382431263,
+     48.496934179825274
+    ]
+   },
+   "properties": {
+    "id": "g25_48.497_94.240",
+    "name": "48.50°K, 94.24°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 48.496934179825274,
+    "lon": 94.23974382431263,
+    "rank": 6,
+    "score_total": 72.2,
+    "scores": {
+     "topography": 99.9,
+     "geology": 99.9,
+     "climate": 44.4
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0004185267857142857,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.0061995574066405,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.644146165077295,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.505133867263794,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8667308402245157,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.91645139266832,
+     45.33163311447537
+    ]
+   },
+   "properties": {
+    "id": "g25_45.332_93.916",
+    "name": "45.33°K, 93.92°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 45.33163311447537,
+    "lon": 93.91645139266832,
+    "rank": 7,
+    "score_total": 72.1,
+    "scores": {
+     "topography": 97.6,
+     "geology": 99.2,
+     "climate": 45.2
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.004575892857142857,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 5.3400828930956665,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 19.740729943158115,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.8751100301742554,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9045111404631625,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.92606389505623,
+     49.17521297954311
+    ]
+   },
+   "properties": {
+    "id": "g25_49.175_92.926",
+    "name": "49.18°K, 92.93°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 49.17521297954311,
+    "lon": 92.92606389505623,
+    "rank": 8,
+    "score_total": 72.0,
+    "scores": {
+     "topography": 94.8,
+     "geology": 100.0,
+     "climate": 45.1
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.230067699986379,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 13.554208960786307,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.7462809085845947,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8839431855820877,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     89.76378367270088,
+     38.54884511729701
+    ]
+   },
+   "properties": {
+    "id": "g25_38.549_89.764",
+    "name": "38.55°K, 89.76°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 38.54884511729701,
+    "lon": 89.76378367270088,
+    "rank": 9,
+    "score_total": 72.0,
+    "scores": {
+     "topography": 96.9,
+     "geology": 100.0,
+     "climate": 44.6
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 7.222257791895152,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 30.51618549924372,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.055751085281372,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9240268438205776,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     99.08913029897708,
+     45.55772604771465
+    ]
+   },
+   "properties": {
+    "id": "g25_45.558_99.089",
+    "name": "45.56°K, 99.09°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 45.55772604771465,
+    "lon": 99.08913029897708,
+    "rank": 10,
+    "score_total": 71.9,
+    "scores": {
+     "topography": 95.2,
+     "geology": 100.0,
+     "climate": 44.7
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 7.608460623467173,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 13.898292162059361,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.7989862561225891,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9333476181030274,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.28006794798978,
+     50.30567764573951
+    ]
+   },
+   "properties": {
+    "id": "g25_50.306_93.280",
+    "name": "50.31°K, 93.28°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 50.30567764573951,
+    "lon": 93.28006794798978,
+    "rank": 11,
+    "score_total": 71.8,
+    "scores": {
+     "topography": 91.7,
+     "geology": 99.4,
+     "climate": 45.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0037667410714285715,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 0.4739250334975593,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 14.60683660107712,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.2724539041519165,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8355437375709447,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     95.07001719029897,
+     38.77493805053629
+    ]
+   },
+   "properties": {
+    "id": "g25_38.775_95.070",
+    "name": "38.77°K, 95.07°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 38.77493805053629,
+    "lon": 95.07001719029897,
+    "rank": 12,
+    "score_total": 71.7,
+    "scores": {
+     "topography": 94.7,
+     "geology": 100.0,
+     "climate": 44.6
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 7.025088533355667,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 28.56053941468877,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.7203958034515381,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.919969676560519,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.59315896102403,
+     47.592562446868165
+    ]
+   },
+   "properties": {
+    "id": "g25_47.593_93.593",
+    "name": "47.59°K, 93.59°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 47.592562446868165,
+    "lon": 93.59315896102403,
+    "rank": 13,
+    "score_total": 71.6,
+    "scores": {
+     "topography": 93.0,
+     "geology": 100.0,
+     "climate": 44.6
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 5.682716343200762,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 16.40521060268991,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.4646899402141571,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8992445868417267,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     94.88632868760122,
+     47.366469513628886
+    ]
+   },
+   "properties": {
+    "id": "g25_47.366_94.886",
+    "name": "47.37°K, 94.89°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 47.366469513628886,
+    "lon": 94.88632868760122,
+    "rank": 14,
+    "score_total": 71.6,
+    "scores": {
+     "topography": 97.0,
+     "geology": 99.9,
+     "climate": 43.9
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0005580357142857143,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.999284354003779,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 22.246801838876852,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.9764622449874878,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8721566662070583,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     98.11925300404418,
+     46.23600484743249
+    ]
+   },
+   "properties": {
+    "id": "g25_46.236_98.119",
+    "name": "46.24°K, 98.12°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 46.23600484743249,
+    "lon": 98.11925300404418,
+    "rank": 15,
+    "score_total": 71.5,
+    "scores": {
+     "topography": 97.2,
+     "geology": 99.8,
+     "climate": 43.7
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0010044642857142856,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.596433826435041,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.081269887266632,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.1019030809402466,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8622427097062796,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.59606343541061,
+     37.644473384339896
+    ]
+   },
+   "properties": {
+    "id": "g25_37.644_93.596",
+    "name": "37.64°K, 93.60°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 37.644473384339896,
+    "lon": 93.59606343541061,
+    "rank": 16,
+    "score_total": 71.4,
+    "scores": {
+     "topography": 92.7,
+     "geology": 100.0,
+     "climate": 44.2
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 9.769211780558395,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 15.810106214903247,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.4298593997955322,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9582642211914063,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.62328166609113,
+     45.78381898095393
+    ]
+   },
+   "properties": {
+    "id": "g25_45.784_92.623",
+    "name": "45.78°K, 92.62°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 45.78381898095393,
+    "lon": 92.62328166609113,
+    "rank": 17,
+    "score_total": 71.1,
+    "scores": {
+     "topography": 95.0,
+     "geology": 100.0,
+     "climate": 43.3
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 7.712169655622409,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 20.652854074133717,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 2.2712161540985107,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.905690300916968,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.7116911824776,
+     38.77493805053629
+    ]
+   },
+   "properties": {
+    "id": "g25_38.775_92.712",
+    "name": "38.77°K, 92.71°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 38.77493805053629,
+    "lon": 92.7116911824776,
+    "rank": 18,
+    "score_total": 71.1,
+    "scores": {
+     "topography": 95.0,
+     "geology": 100.0,
+     "climate": 43.3
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 9.34993355137379,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 26.13829519985914,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 2.2706665992736816,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9327214470913405,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -18.033134544091627,
+     65.00171830629262
+    ]
+   },
+   "properties": {
+    "id": "g25_65.002_-18.033",
+    "name": "65.00°K, 18.03°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 65.00171830629262,
+    "lon": -18.033134544091627,
+    "rank": 19,
+    "score_total": 71.1,
+    "scores": {
+     "topography": 99.9,
+     "geology": 99.1,
+     "climate": 42.9
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.005326704545454545,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -3.7706741418936223,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 6.113429638659361,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.5088251829147339,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7067191467285157,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     95.07001719029897,
+     37.644473384339896
+    ]
+   },
+   "properties": {
+    "id": "g25_37.644_95.070",
+    "name": "37.64°K, 95.07°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "ice_drilling",
+    "lat": 37.644473384339896,
+    "lon": 95.07001719029897,
+    "rank": 20,
+    "score_total": 71.0,
+    "scores": {
+     "topography": 97.7,
+     "geology": 100.0,
+     "climate": 42.5
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 8.052775865167153,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 29.507583970212764,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.8690515756607056,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8957228130010343,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

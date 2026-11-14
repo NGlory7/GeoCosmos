@@ -1,0 +1,1345 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.58705717396714,
+     -30.183406587443702
+    ]
+   },
+   "properties": {
+    "id": "g25_-30.183_-70.587",
+    "name": "30.18°G, 70.59°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": -30.183406587443702,
+    "lon": -70.58705717396714,
+    "rank": 1,
+    "score_total": 90.9,
+    "scores": {
+     "topography": 85.0,
+     "geology": 100.0,
+     "climate": 70.5
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 378.39779313177456,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 19.067073822021484,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.823176623036803,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.55936015204998,
+     36.28791578490423
+    ]
+   },
+   "properties": {
+    "id": "g25_36.288_76.559",
+    "name": "36.29°K, 76.56°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 36.28791578490423,
+    "lon": 76.55936015204998,
+    "rank": 2,
+    "score_total": 90.5,
+    "scores": {
+     "topography": 79.6,
+     "geology": 100.0,
+     "climate": 86.4
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 377.2056559964883,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.736431121826172,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9185525756312425,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.53697695667081,
+     36.51400871814351
+    ]
+   },
+   "properties": {
+    "id": "g25_36.514_72.537",
+    "name": "36.51°K, 72.54°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 36.51400871814351,
+    "lon": 72.53697695667081,
+    "rank": 3,
+    "score_total": 90.2,
+    "scores": {
+     "topography": 82.0,
+     "geology": 100.0,
+     "climate": 74.7
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 378.584072778095,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.056543350219727,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.848129221308432,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.21465472897786,
+     -33.12261471955433
+    ]
+   },
+   "properties": {
+    "id": "g25_-33.123_-70.215",
+    "name": "33.12°G, 70.21°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": -33.12261471955433,
+    "lon": -70.21465472897786,
+    "rank": 4,
+    "score_total": 89.7,
+    "scores": {
+     "topography": 81.7,
+     "geology": 100.0,
+     "climate": 71.6
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 378.60893616441695,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.147274017333984,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.829502341576896,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.74089813946006,
+     42.16633204912547
+    ]
+   },
+   "properties": {
+    "id": "g25_42.166_79.741",
+    "name": "42.17°K, 79.74°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 42.16633204912547,
+    "lon": 79.74089813946006,
+    "rank": 5,
+    "score_total": 89.1,
+    "scores": {
+     "topography": 79.5,
+     "geology": 100.0,
+     "climate": 73.5
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 376.5980309624457,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.52600860595703,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8412944488525391,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.19618255821109,
+     36.51400871814351
+    ]
+   },
+   "properties": {
+    "id": "g25_36.514_71.196",
+    "name": "36.51°K, 71.20°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 36.51400871814351,
+    "lon": 71.19618255821109,
+    "rank": 6,
+    "score_total": 88.7,
+    "scores": {
+     "topography": 78.9,
+     "geology": 100.0,
+     "climate": 72.3
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 381.4519618254755,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 19.97589683532715,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.833506048366268,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.87777135513053,
+     36.74010165138279
+    ]
+   },
+   "properties": {
+    "id": "g25_36.740_73.878",
+    "name": "36.74°K, 73.88°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 36.74010165138279,
+    "lon": 73.87777135513053,
+    "rank": 7,
+    "score_total": 87.6,
+    "scores": {
+     "topography": 72.2,
+     "geology": 100.0,
+     "climate": 86.1
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 385.6104323063403,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.673358917236328,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9164328384399414,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     75.61382762577267,
+     37.870566317579176
+    ]
+   },
+   "properties": {
+    "id": "g25_37.871_75.614",
+    "name": "37.87°K, 75.61°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 37.870566317579176,
+    "lon": 75.61382762577267,
+    "rank": 8,
+    "score_total": 87.2,
+    "scores": {
+     "topography": 74.3,
+     "geology": 100.0,
+     "climate": 74.4
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 372.06370790103705,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.507287979125977,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8465028352266306,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.85538815975137,
+     36.06182285166495
+    ]
+   },
+   "properties": {
+    "id": "g25_36.062_69.855",
+    "name": "36.06°K, 69.86°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 36.06182285166495,
+    "lon": 69.85538815975137,
+    "rank": 9,
+    "score_total": 87.2,
+    "scores": {
+     "topography": 79.5,
+     "geology": 100.0,
+     "climate": 56.1
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 378.4815626316508,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.953182220458984,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7363418923320902,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.54097087498371,
+     43.975075515039705
+    ]
+   },
+   "properties": {
+    "id": "g25_43.975_84.541",
+    "name": "43.98°K, 84.54°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 43.975075515039705,
+    "lon": 84.54097087498371,
+    "rank": 10,
+    "score_total": 86.7,
+    "scores": {
+     "topography": 80.2,
+     "geology": 100.0,
+     "climate": 49.8
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 378.14735020290163,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.851110458374023,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6990905725246478,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.07633861404061,
+     37.870566317579176
+    ]
+   },
+   "properties": {
+    "id": "g25_37.871_72.076",
+    "name": "37.87°K, 72.08°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 37.870566317579176,
+    "lon": 72.07633861404061,
+    "rank": 11,
+    "score_total": 86.6,
+    "scores": {
+     "topography": 71.0,
+     "geology": 100.0,
+     "climate": 80.9
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 383.69063633787056,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 21.857988357543945,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8852605209350586,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.29120127235802,
+     34.705265252229275
+    ]
+   },
+   "properties": {
+    "id": "g25_34.705_76.291",
+    "name": "34.71°K, 76.29°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 34.705265252229275,
+    "lon": 76.29120127235802,
+    "rank": 12,
+    "score_total": 86.4,
+    "scores": {
+     "topography": 77.2,
+     "geology": 100.0,
+     "climate": 57.4
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 376.91104057692155,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 21.441505432128906,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7446689723851756,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.66592011599596,
+     39.22712391701485
+    ]
+   },
+   "properties": {
+    "id": "g25_39.227_72.666",
+    "name": "39.23°K, 72.67°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 39.22712391701485,
+    "lon": 72.66592011599596,
+    "rank": 13,
+    "score_total": 86.3,
+    "scores": {
+     "topography": 71.6,
+     "geology": 100.0,
+     "climate": 76.1
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 383.7683019114928,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 21.60511016845703,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8566221618652343,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.55936015204998,
+     33.34870765279361
+    ]
+   },
+   "properties": {
+    "id": "g25_33.349_76.559",
+    "name": "33.35°K, 76.56°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 33.34870765279361,
+    "lon": 76.55936015204998,
+    "rank": 14,
+    "score_total": 86.0,
+    "scores": {
+     "topography": 77.9,
+     "geology": 100.0,
+     "climate": 51.1
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 377.7478301066529,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 21.52260971069336,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7066920913961203,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     81.38621998650495,
+     30.183406587443702
+    ]
+   },
+   "properties": {
+    "id": "g25_30.183_81.386",
+    "name": "30.18°K, 81.39°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 30.183406587443702,
+    "lon": 81.38621998650495,
+    "rank": 15,
+    "score_total": 85.9,
+    "scores": {
+     "topography": 80.4,
+     "geology": 100.0,
+     "climate": 41.3
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 377.9604692370922,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.746864318847656,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6478077974155161,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     80.92006114337075,
+     41.94023911588619
+    ]
+   },
+   "properties": {
+    "id": "g25_41.940_80.920",
+    "name": "41.94°K, 80.92°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 41.94023911588619,
+    "lon": 80.92006114337075,
+    "rank": 16,
+    "score_total": 84.9,
+    "scores": {
+     "topography": 73.7,
+     "geology": 100.0,
+     "climate": 56.2
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 369.34493974883,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 19.647804260253906,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7373860780222008,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     70.01280335719692,
+     39.67930978349341
+    ]
+   },
+   "properties": {
+    "id": "g25_39.679_70.013",
+    "name": "39.68°K, 70.01°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 39.67930978349341,
+    "lon": 70.01280335719692,
+    "rank": 17,
+    "score_total": 84.7,
+    "scores": {
+     "topography": 77.8,
+     "geology": 100.0,
+     "climate": 40.0
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 379.78609889154234,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 21.03172492980957,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.639780824350148,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     75.02424612381732,
+     39.00103098377557
+    ]
+   },
+   "properties": {
+    "id": "g25_39.001_75.024",
+    "name": "39.00°K, 75.02°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 39.00103098377557,
+    "lon": 75.02424612381732,
+    "rank": 18,
+    "score_total": 84.3,
+    "scores": {
+     "topography": 68.0,
+     "geology": 100.0,
+     "climate": 70.4
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 365.6359184974739,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.16905403137207,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8224824679131166,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     75.21856575359025,
+     35.38354405194711
+    ]
+   },
+   "properties": {
+    "id": "g25_35.384_75.219",
+    "name": "35.38°K, 75.22°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 35.38354405194711,
+    "lon": 75.21856575359025,
+    "rank": 19,
+    "score_total": 83.7,
+    "scores": {
+     "topography": 67.9,
+     "geology": 100.0,
+     "climate": 66.1
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 364.38581655370984,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 19.703479766845703,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7964684867734606,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     70.60238485915225,
+     38.096659250818455
+    ]
+   },
+   "properties": {
+    "id": "g25_38.097_70.602",
+    "name": "38.10°K, 70.60°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "lava_tube",
+    "lat": 38.096659250818455,
+    "lon": 70.60238485915225,
+    "rank": 20,
+    "score_total": 83.6,
+    "scores": {
+     "topography": 74.9,
+     "geology": 100.0,
+     "climate": 40.4
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 384.5742513520003,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 20.136587142944336,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6423904030922789,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

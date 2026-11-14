@@ -1,0 +1,1485 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -22.357346599019625,
+     81.95868829923852
+    ]
+   },
+   "properties": {
+    "id": "g25_81.959_-22.357",
+    "name": "81.96°K, 22.36°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 81.95868829923852,
+    "lon": -22.357346599019625,
+    "rank": 1,
+    "score_total": 74.9,
+    "scores": {
+     "topography": 99.1,
+     "geology": 95.8,
+     "climate": 53.3
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.02490234375,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.04960681612662,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.4765000549484775,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.238720417022705,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8303539578560349,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     89.76378367270088,
+     38.54884511729701
+    ]
+   },
+   "properties": {
+    "id": "g25_38.549_89.764",
+    "name": "38.55°K, 89.76°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 38.54884511729701,
+    "lon": 89.76378367270088,
+    "rank": 2,
+    "score_total": 72.8,
+    "scores": {
+     "topography": 99.6,
+     "geology": 100.0,
+     "climate": 45.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 7.222257791895152,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 30.51618549924372,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.055751085281372,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9240268438205776,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -68.83302971112813,
+     76.30636496825656
+    ]
+   },
+   "properties": {
+    "id": "g25_76.306_-68.833",
+    "name": "76.31°K, 68.83°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 76.30636496825656,
+    "lon": -68.83302971112813,
+    "rank": 3,
+    "score_total": 72.7,
+    "scores": {
+     "topography": 80.7,
+     "geology": 96.6,
+     "climate": 52.0
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.02055921052631579,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -12.789677075192643,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.2387397583468314,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 4.007472515106201,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9034811096191406,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     95.07001719029897,
+     38.77493805053629
+    ]
+   },
+   "properties": {
+    "id": "g25_38.775_95.070",
+    "name": "38.77°K, 95.07°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 38.77493805053629,
+    "lon": 95.07001719029897,
+    "rank": 4,
+    "score_total": 72.3,
+    "scores": {
+     "topography": 97.4,
+     "geology": 100.0,
+     "climate": 45.1
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 7.025088533355667,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 28.56053941468877,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.7203958034515381,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.919969676560519,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.00648193345526,
+     38.322752184057734
+    ]
+   },
+   "properties": {
+    "id": "g25_38.323_93.006",
+    "name": "38.32°K, 93.01°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 38.322752184057734,
+    "lon": 93.00648193345526,
+    "rank": 5,
+    "score_total": 71.8,
+    "scores": {
+     "topography": 99.5,
+     "geology": 100.0,
+     "climate": 43.7
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 10.25522275948291,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 29.352909507844085,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.0322513580322266,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9414457719305414,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     95.8562059825341,
+     45.55772604771465
+    ]
+   },
+   "properties": {
+    "id": "g25_45.558_95.856",
+    "name": "45.56°K, 95.86°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 45.55772604771465,
+    "lon": 95.8562059825341,
+    "rank": 6,
+    "score_total": 71.7,
+    "scores": {
+     "topography": 99.2,
+     "geology": 100.0,
+     "climate": 43.6
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.9537148718863575,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.367449166686626,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.2288649082183838,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8901410939690262,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     94.48043568834362,
+     37.644473384339896
+    ]
+   },
+   "properties": {
+    "id": "g25_37.644_94.480",
+    "name": "37.64°K, 94.48°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 37.644473384339896,
+    "lon": 94.48043568834362,
+    "rank": 7,
+    "score_total": 71.5,
+    "scores": {
+     "topography": 99.5,
+     "geology": 100.0,
+     "climate": 43.2
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 10.793233996232491,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 32.145863107024205,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.0282883644104004,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9207866777270747,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     91.5325281785669,
+     37.870566317579176
+    ]
+   },
+   "properties": {
+    "id": "g25_37.871_91.533",
+    "name": "37.87°K, 91.53°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 37.870566317579176,
+    "lon": 91.5325281785669,
+    "rank": 8,
+    "score_total": 71.5,
+    "scores": {
+     "topography": 92.7,
+     "geology": 100.0,
+     "climate": 44.4
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 8.11397767858323,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 30.25551398228342,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 2.206209182739258,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9142840606271503,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     96.826083277467,
+     46.46209778067177
+    ]
+   },
+   "properties": {
+    "id": "g25_46.462_96.826",
+    "name": "46.46°K, 96.83°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 46.46209778067177,
+    "lon": 96.826083277467,
+    "rank": 9,
+    "score_total": 71.5,
+    "scores": {
+     "topography": 98.9,
+     "geology": 100.0,
+     "climate": 43.2
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 3.295298936977242,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.986963622649988,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.2790024280548096,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8641337694814555,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     98.11925300404418,
+     46.23600484743249
+    ]
+   },
+   "properties": {
+    "id": "g25_46.236_98.119",
+    "name": "46.24°K, 98.12°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 46.23600484743249,
+    "lon": 98.11925300404418,
+    "rank": 10,
+    "score_total": 71.1,
+    "scores": {
+     "topography": 99.9,
+     "geology": 99.8,
+     "climate": 42.4
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0010044642857142856,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.596433826435041,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.081269887266632,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.1019030809402466,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8622427097062796,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     95.8562059825341,
+     47.366469513628886
+    ]
+   },
+   "properties": {
+    "id": "g25_47.366_95.856",
+    "name": "47.37°K, 95.86°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 47.366469513628886,
+    "lon": 95.8562059825341,
+    "rank": 11,
+    "score_total": 71.1,
+    "scores": {
+     "topography": 99.8,
+     "geology": 99.9,
+     "climate": 42.3
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.00078125,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.449979486602944,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.574151209220457,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.0828405618667603,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.854888189047021,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.59315896102403,
+     48.496934179825274
+    ]
+   },
+   "properties": {
+    "id": "g25_48.497_93.593",
+    "name": "48.50°K, 93.59°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 48.496934179825274,
+    "lon": 93.59315896102403,
+    "rank": 12,
+    "score_total": 71.0,
+    "scores": {
+     "topography": 98.8,
+     "geology": 100.0,
+     "climate": 42.3
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 5.309631553719065,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.14517952319836,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.9353657364845276,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8860925144877106,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     94.23974382431263,
+     47.592562446868165
+    ]
+   },
+   "properties": {
+    "id": "g25_47.593_94.240",
+    "name": "47.59°K, 94.24°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 47.592562446868165,
+    "lon": 94.23974382431263,
+    "rank": 13,
+    "score_total": 71.0,
+    "scores": {
+     "topography": 98.6,
+     "geology": 100.0,
+     "climate": 42.2
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 6.061045211176664,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.754935719203512,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.3132121562957764,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8784461776373557,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.59315896102403,
+     45.33163311447537
+    ]
+   },
+   "properties": {
+    "id": "g25_45.332_93.593",
+    "name": "45.33°K, 93.59°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 45.33163311447537,
+    "lon": 93.59315896102403,
+    "rank": 14,
+    "score_total": 70.8,
+    "scores": {
+     "topography": 98.7,
+     "geology": 100.0,
+     "climate": 41.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 7.312931941592995,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.177634203848232,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.9147288203239441,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9092873173963527,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     87.11066691390184,
+     37.644473384339896
+    ]
+   },
+   "properties": {
+    "id": "g25_37.644_87.111",
+    "name": "37.64°K, 87.11°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 37.644473384339896,
+    "lon": 87.11066691390184,
+    "rank": 15,
+    "score_total": 70.7,
+    "scores": {
+     "topography": 86.9,
+     "geology": 99.2,
+     "climate": 44.8
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.004964192708333333,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 7.368642284654164,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 28.307748631931474,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 3.07991099357605,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9215960361473517,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.38073405387466,
+     37.192287517861345
+    ]
+   },
+   "properties": {
+    "id": "g25_37.192_92.381",
+    "name": "37.19°K, 92.38°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 37.192287517861345,
+    "lon": 92.38073405387466,
+    "rank": 16,
+    "score_total": 70.7,
+    "scores": {
+     "topography": 99.0,
+     "geology": 100.0,
+     "climate": 41.6
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 11.429286130000738,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 33.26860022856445,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.2596769332885742,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8934757724616021,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -69.08786303929881,
+     -26.339826722375967
+    ]
+   },
+   "properties": {
+    "id": "g25_-26.340_-69.088",
+    "name": "26.34°G, 69.09°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": -26.339826722375967,
+    "lon": -69.08786303929881,
+    "rank": 17,
+    "score_total": 70.7,
+    "scores": {
+     "topography": 93.4,
+     "geology": 100.0,
+     "climate": 42.7
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 12.935430792652312,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 35.376020600231804,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 2.107163190841675,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9258617449646243,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     96.24918019420966,
+     41.714146182646914
+    ]
+   },
+   "properties": {
+    "id": "g25_41.714_96.249",
+    "name": "41.71°K, 96.25°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 41.714146182646914,
+    "lon": 96.24918019420966,
+    "rank": 18,
+    "score_total": 70.7,
+    "scores": {
+     "topography": 98.5,
+     "geology": 100.0,
+     "climate": 41.7
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 9.180873711893177,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.634524473915725,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.8775324821472168,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9207762122795436,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     94.56303625595692,
+     46.68819071391105
+    ]
+   },
+   "properties": {
+    "id": "g25_46.688_94.563",
+    "name": "46.69°K, 94.56°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 46.68819071391105,
+    "lon": 94.56303625595692,
+    "rank": 19,
+    "score_total": 70.3,
+    "scores": {
+     "topography": 98.3,
+     "geology": 99.9,
+     "climate": 41.1
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.0004185267857142857,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 4.873643571899575,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 20.272206921986452,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.3653119802474976,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8594086346100192,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.57205984212268,
+     49.17521297954311
+    ]
+   },
+   "properties": {
+    "id": "g25_49.175_92.572",
+    "name": "49.18°K, 92.57°D",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "ice_drilling",
+    "lat": 49.17521297954311,
+    "lon": 92.57205984212268,
+    "rank": 20,
+    "score_total": 70.3,
+    "scores": {
+     "topography": 97.8,
+     "geology": 100.0,
+     "climate": 41.0
+    },
+    "params": [
+     {
+      "key": "ground_ice",
+      "earth": 0.00011160714285714285,
+      "target": 0.0,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 5.475313098666833,
+      "target": -43.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.979005440931875,
+      "target": 54.8,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "slope_deg",
+      "earth": 0.7775200009346008,
+      "target": 1.11,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8575489563263199,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "liquid_water"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

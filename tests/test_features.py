@@ -105,3 +105,12 @@ def test_old_csv_without_new_columns(tmp_path):
 
 def test_raw_columns_have_no_worldcover():
     assert not [c for c in RAW_COLUMNS if c.startswith("wc_")]  # maskeler MODIS lc_<sınıf> sütunlarından
+
+
+def test_empty_tile_csv_is_skipped(tmp_path):
+    raw = tmp_path / "raw"
+    raw.mkdir()
+    pd.DataFrame([raw_row(0.0, 0.0)]).to_csv(raw / "dolu.csv", index=False)
+    pd.DataFrame(columns=list(raw_row(0.0, 0.0))).to_csv(raw / "bos.csv", index=False)  # sadece başlık
+    g = build_grid(raw, tmp_path / "g.parquet", cell_km=25, permafrost_files=[])
+    assert len(g) == 1 and g["lat"].dtype.kind == "f"

@@ -1,0 +1,1325 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     89.17420217074555,
+     39.22712391701485
+    ]
+   },
+   "properties": {
+    "id": "g25_39.227_89.174",
+    "name": "39.23°K, 89.17°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 39.22712391701485,
+    "lon": 89.17420217074555,
+    "rank": 1,
+    "score_total": 70.8,
+    "scores": {
+     "topography": 98.7,
+     "geology": null,
+     "climate": 56.9
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9459459478440628,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.1926591396331787,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 32.85386548685406,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 25.892164846110674,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.60412654280829,
+     35.60963698518639
+    ]
+   },
+   "properties": {
+    "id": "g25_35.610_84.604",
+    "name": "35.61°K, 84.60°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 35.60963698518639,
+    "lon": 84.60412654280829,
+    "rank": 2,
+    "score_total": 70.7,
+    "scores": {
+     "topography": 99.0,
+     "geology": null,
+     "climate": 56.5
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9428031081728774,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.716411828994751,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 32.801387200698535,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 27.124614724857032,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.80176255268178,
+     25.88764085589741
+    ]
+   },
+   "properties": {
+    "id": "g25_25.888_33.802",
+    "name": "25.89°K, 33.80°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 25.88764085589741,
+    "lon": 33.80176255268178,
+    "rank": 3,
+    "score_total": 70.7,
+    "scores": {
+     "topography": 96.6,
+     "geology": null,
+     "climate": 57.7
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9542220779078904,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.8780696392059326,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 30.88453927655286,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 20.53843933753066,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.63671761734847,
+     70.65404163727459
+    ]
+   },
+   "properties": {
+    "id": "g25_70.654_-75.637",
+    "name": "70.65°K, 75.64°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 70.65404163727459,
+    "lon": -75.63671761734847,
+    "rank": 4,
+    "score_total": 70.5,
+    "scores": {
+     "topography": 98.3,
+     "geology": null,
+     "climate": 56.6
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9432864837646484,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.8515729904174805,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 32.48939623029354,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 4.07870684196055,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.7116911824776,
+     39.90540271673269
+    ]
+   },
+   "properties": {
+    "id": "g25_39.905_92.712",
+    "name": "39.91°K, 92.71°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 39.90540271673269,
+    "lon": 92.7116911824776,
+    "rank": 5,
+    "score_total": 70.5,
+    "scores": {
+     "topography": 97.3,
+     "geology": null,
+     "climate": 57.1
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9481673999196,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 2.138376474380493,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.784410951839185,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 26.850202929384828,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.41690043149993,
+     42.39242498236475
+    ]
+   },
+   "properties": {
+    "id": "g25_42.392_92.417",
+    "name": "42.39°K, 92.42°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 42.39242498236475,
+    "lon": 92.41690043149993,
+    "rank": 6,
+    "score_total": 70.3,
+    "scores": {
+     "topography": 99.3,
+     "geology": null,
+     "climate": 55.8
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9357390221060724,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.3584717512130737,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.215811653805204,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 22.864999514970187,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.59852601638225,
+     78.56729430064934
+    ]
+   },
+   "properties": {
+    "id": "g25_78.567_-97.599",
+    "name": "78.57°K, 97.60°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 78.56729430064934,
+    "lon": -97.59852601638225,
+    "rank": 7,
+    "score_total": 70.2,
+    "scores": {
+     "topography": 95.9,
+     "geology": null,
+     "climate": 57.3
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9500317802429199,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.820172667503357,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 29.962299827859002,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.4865341056829635,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     83.26333214434857,
+     35.38354405194711
+    ]
+   },
+   "properties": {
+    "id": "g25_35.384_83.263",
+    "name": "35.38°K, 83.26°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 35.38354405194711,
+    "lon": 83.26333214434857,
+    "rank": 8,
+    "score_total": 70.1,
+    "scores": {
+     "topography": 98.2,
+     "geology": null,
+     "climate": 56.1
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9381312350021698,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.4388946294784546,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 31.54809470179235,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 24.390402039223655,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -106.29318193487133,
+     75.854179101778
+    ]
+   },
+   "properties": {
+    "id": "g25_75.854_-106.293",
+    "name": "75.85°K, 106.29°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 75.854179101778,
+    "lon": -106.29318193487133,
+    "rank": 9,
+    "score_total": 70.1,
+    "scores": {
+     "topography": 98.1,
+     "geology": null,
+     "climate": 56.1
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9383531299697958,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.8087929487228394,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 32.14183799947006,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.7627594599904235,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.06426955153236,
+     27.0181055220938
+    ]
+   },
+   "properties": {
+    "id": "g25_27.018_33.064",
+    "name": "27.02°K, 33.06°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 27.0181055220938,
+    "lon": 33.06426955153236,
+    "rank": 10,
+    "score_total": 69.9,
+    "scores": {
+     "topography": 97.6,
+     "geology": null,
+     "climate": 56.1
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9388750745200998,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.8296862840652466,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 31.692049413041044,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 20.810455382798036,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     91.5325281785669,
+     38.322752184057734
+    ]
+   },
+   "properties": {
+    "id": "g25_38.323_91.533",
+    "name": "38.32°K, 91.53°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 38.322752184057734,
+    "lon": 91.5325281785669,
+    "rank": 11,
+    "score_total": 69.9,
+    "scores": {
+     "topography": 99.2,
+     "geology": null,
+     "climate": 55.3
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9311210161655894,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.4860585927963257,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.816269928871975,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 28.040736647379127,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.89085418638828,
+     40.583681516450525
+    ]
+   },
+   "properties": {
+    "id": "g25_40.584_93.891",
+    "name": "40.58°K, 93.89°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 40.583681516450525,
+    "lon": 93.89085418638828,
+    "rank": 12,
+    "score_total": 69.9,
+    "scores": {
+     "topography": 98.8,
+     "geology": null,
+     "climate": 55.4
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9322606458207293,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.5018390417099,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 34.25890339040209,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.518219007742974,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     87.99503916683486,
+     38.77493805053629
+    ]
+   },
+   "properties": {
+    "id": "g25_38.775_87.995",
+    "name": "38.77°K, 88.00°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 38.77493805053629,
+    "lon": 87.99503916683486,
+    "rank": 13,
+    "score_total": 69.9,
+    "scores": {
+     "topography": 96.3,
+     "geology": null,
+     "climate": 56.7
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9438743871620954,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.3612374067306519,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 36.231306996692034,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 23.906762806694502,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.27674855498062,
+     23.174525657026063
+    ]
+   },
+   "properties": {
+    "id": "g25_23.175_35.277",
+    "name": "23.17°K, 35.28°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 23.174525657026063,
+    "lon": 35.27674855498062,
+    "rank": 14,
+    "score_total": 69.9,
+    "scores": {
+     "topography": 97.9,
+     "geology": null,
+     "climate": 55.8
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9359931591516925,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.871186375617981,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 34.03816010118508,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.577628094199675,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.94492094126801,
+     36.74010165138279
+    ]
+   },
+   "properties": {
+    "id": "g25_36.740_85.945",
+    "name": "36.74°K, 85.94°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 36.74010165138279,
+    "lon": 85.94492094126801,
+    "rank": 15,
+    "score_total": 69.8,
+    "scores": {
+     "topography": 99.1,
+     "geology": null,
+     "climate": 55.2
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9299267856268694,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.6728458404541016,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.443734851250404,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 27.45327979801627,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     89.76378367270088,
+     41.714146182646914
+    ]
+   },
+   "properties": {
+    "id": "g25_41.714_89.764",
+    "name": "41.71°K, 89.76°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 41.714146182646914,
+    "lon": 89.76378367270088,
+    "rank": 16,
+    "score_total": 69.8,
+    "scores": {
+     "topography": 99.5,
+     "geology": null,
+     "climate": 55.0
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9283761970326129,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.4666364192962646,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.469657274377475,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 25.1729858536627,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     90.05857442367855,
+     38.096659250818455
+    ]
+   },
+   "properties": {
+    "id": "g25_38.097_90.059",
+    "name": "38.10°K, 90.06°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 38.096659250818455,
+    "lon": 90.05857442367855,
+    "rank": 17,
+    "score_total": 69.7,
+    "scores": {
+     "topography": 98.8,
+     "geology": null,
+     "climate": 55.2
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9295350741617048,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.3181407451629639,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 32.61391393324621,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 28.927286664074916,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.11429754693468,
+     25.43545498941885
+    ]
+   },
+   "properties": {
+    "id": "g25_25.435_30.114",
+    "name": "25.44°K, 30.11°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 25.43545498941885,
+    "lon": 30.11429754693468,
+    "rank": 18,
+    "score_total": 69.7,
+    "scores": {
+     "topography": 99.2,
+     "geology": null,
+     "climate": 55.0
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9277548411460532,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.3790515661239624,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 32.766613453779094,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 18.726260786544387,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -69.3377287284102,
+     -22.948432723786787
+    ]
+   },
+   "properties": {
+    "id": "g25_-22.948_-69.338",
+    "name": "22.95°G, 69.34°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": -22.948432723786787,
+    "lon": -69.3377287284102,
+    "rank": 19,
+    "score_total": 69.6,
+    "scores": {
+     "topography": 97.0,
+     "geology": null,
+     "climate": 55.9
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.936680429322555,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.5630277395248413,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 36.001103756325946,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 32.27280381692531,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.12210968052226,
+     41.03586738292908
+    ]
+   },
+   "properties": {
+    "id": "g25_41.036_92.122",
+    "name": "41.04°K, 92.12°D",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "dust",
+    "lat": 41.03586738292908,
+    "lon": 92.12210968052226,
+    "rank": 20,
+    "score_total": 69.6,
+    "scores": {
+     "topography": 98.9,
+     "geology": null,
+     "climate": 54.9
+    },
+    "params": [
+     {
+      "key": "aridity",
+      "earth": 0.9271256175432119,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 1.367790699005127,
+      "target": 1.52,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 33.6672976366794,
+      "target": 33.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 25.110392438553138,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

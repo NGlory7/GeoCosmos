@@ -19,11 +19,13 @@ jobs:
         run: pip install -r requirements.txt
       - name: Testler
         run: python -m pytest -q
-      - name: make data (grid.parquet yoksa sadece hedefler)
+      - name: make data (grid.parquet repoda; Gemini yorumları atlanır)
         run: python -m pipeline.build --skip-commentary
-      - name: Üretilen dosyalar commit'lenmiş mi
+      # Sadece config'ten türeyen dosyalar karşılaştırılır. Izgaradan türeyenler (PNG, analoglar)
+      # platformlar arasında bayt bayt aynı çıkmayabilir (kütüphane sürümü, toplama sırası).
+      - name: Config'ten üretilen dosyalar commit'lenmiş mi
         run: |
-          if ! git diff --exit-code -- frontend/public/data/; then
+          if ! git diff --exit-code -- frontend/public/data/targets.geojson frontend/public/data/meta.json; then
             echo "::error::frontend/public/data güncel değil. Yerelde 'python -m pipeline.build' çalıştırıp sonucu commit'leyin."
             exit 1
           fi

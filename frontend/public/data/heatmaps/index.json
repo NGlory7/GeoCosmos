@@ -1,0 +1,169 @@
+{
+ "crs": "EPSG:3857",
+ "bounds": [
+  [
+   -85,
+   -180
+  ],
+  [
+   84,
+   180
+  ]
+ ],
+ "value": "score_total",
+ "vmin": 0,
+ "vmax": 100,
+ "colormap": "magma",
+ "files": [
+  {
+   "target_id": "moon_shackleton",
+   "test_id": "rover",
+   "file": "moon_shackleton_rover.png"
+  },
+  {
+   "target_id": "moon_shackleton",
+   "test_id": "ice_drilling",
+   "file": "moon_shackleton_ice_drilling.png"
+  },
+  {
+   "target_id": "moon_shackleton",
+   "test_id": "lava_tube",
+   "file": "moon_shackleton_lava_tube.png"
+  },
+  {
+   "target_id": "moon_shackleton",
+   "test_id": "dust",
+   "file": "moon_shackleton_dust.png"
+  },
+  {
+   "target_id": "moon_shackleton",
+   "test_id": "biosignature",
+   "file": "moon_shackleton_biosignature.png"
+  },
+  {
+   "target_id": "moon_malapert",
+   "test_id": "rover",
+   "file": "moon_malapert_rover.png"
+  },
+  {
+   "target_id": "moon_malapert",
+   "test_id": "ice_drilling",
+   "file": "moon_malapert_ice_drilling.png"
+  },
+  {
+   "target_id": "moon_malapert",
+   "test_id": "lava_tube",
+   "file": "moon_malapert_lava_tube.png"
+  },
+  {
+   "target_id": "moon_malapert",
+   "test_id": "dust",
+   "file": "moon_malapert_dust.png"
+  },
+  {
+   "target_id": "moon_malapert",
+   "test_id": "biosignature",
+   "file": "moon_malapert_biosignature.png"
+  },
+  {
+   "target_id": "moon_marius_hills",
+   "test_id": "rover",
+   "file": "moon_marius_hills_rover.png"
+  },
+  {
+   "target_id": "moon_marius_hills",
+   "test_id": "ice_drilling",
+   "file": "moon_marius_hills_ice_drilling.png"
+  },
+  {
+   "target_id": "moon_marius_hills",
+   "test_id": "lava_tube",
+   "file": "moon_marius_hills_lava_tube.png"
+  },
+  {
+   "target_id": "moon_marius_hills",
+   "test_id": "dust",
+   "file": "moon_marius_hills_dust.png"
+  },
+  {
+   "target_id": "moon_marius_hills",
+   "test_id": "biosignature",
+   "file": "moon_marius_hills_biosignature.png"
+  },
+  {
+   "target_id": "mars_jezero",
+   "test_id": "rover",
+   "file": "mars_jezero_rover.png"
+  },
+  {
+   "target_id": "mars_jezero",
+   "test_id": "ice_drilling",
+   "file": "mars_jezero_ice_drilling.png"
+  },
+  {
+   "target_id": "mars_jezero",
+   "test_id": "lava_tube",
+   "file": "mars_jezero_lava_tube.png"
+  },
+  {
+   "target_id": "mars_jezero",
+   "test_id": "dust",
+   "file": "mars_jezero_dust.png"
+  },
+  {
+   "target_id": "mars_jezero",
+   "test_id": "biosignature",
+   "file": "mars_jezero_biosignature.png"
+  },
+  {
+   "target_id": "mars_gale",
+   "test_id": "rover",
+   "file": "mars_gale_rover.png"
+  },
+  {
+   "target_id": "mars_gale",
+   "test_id": "ice_drilling",
+   "file": "mars_gale_ice_drilling.png"
+  },
+  {
+   "target_id": "mars_gale",
+   "test_id": "lava_tube",
+   "file": "mars_gale_lava_tube.png"
+  },
+  {
+   "target_id": "mars_gale",
+   "test_id": "dust",
+   "file": "mars_gale_dust.png"
+  },
+  {
+   "target_id": "mars_gale",
+   "test_id": "biosignature",
+   "file": "mars_gale_biosignature.png"
+  },
+  {
+   "target_id": "mars_arcadia",
+   "test_id": "rover",
+   "file": "mars_arcadia_rover.png"
+  },
+  {
+   "target_id": "mars_arcadia",
+   "test_id": "ice_drilling",
+   "file": "mars_arcadia_ice_drilling.png"
+  },
+  {
+   "target_id": "mars_arcadia",
+   "test_id": "lava_tube",
+   "file": "mars_arcadia_lava_tube.png"
+  },
+  {
+   "target_id": "mars_arcadia",
+   "test_id": "dust",
+   "file": "mars_arcadia_dust.png"
+  },
+  {
+   "target_id": "mars_arcadia",
+   "test_id": "biosignature",
+   "file": "mars_arcadia_biosignature.png"
+  }
+ ]
+}

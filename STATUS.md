@@ -8,13 +8,14 @@
 | --- | --- | --- |
 | Veri sözleşmesi (`core/schemas.py`, `frontend/src/types.ts`) | ✅ Hazır | Hedef, analog, `analogs/index.json`, `validation.json`, `heatmaps/index.json` |
 | Skor motoru, kopma kuralları (`core/`) | ✅ Hazır | Adaylar birbirine 100 km'den yakın seçilmez |
-| Earth Engine exportu (`pipeline/ee_export.py`) | 🟡 Yazıldı, **gerçek Earth Engine'de hiç çalışmadı** | İlk `make preview` küçük düzeltme gerektirebilir |
+| Earth Engine (`pipeline/ee_fetch.py`, `ee_export.py`) | ✅ Çalıştı | Hızlı yol `ee_fetch` (paralel interaktif, ~50 dk); toplu export yedek (proje başına 2 paralel görev: 6-12 saat) |
 | Ham CSV → `grid.parquet` (`pipeline/features.py`) | ✅ Hazır | Maskeler, `is_new`, doğrulama kareleri, operasyon etiketleri |
 | ESA CCI Permafrost (`pipeline/permafrost.py`) | ✅ Hazır | Yerel NetCDF; Earth Engine'e yükleme gerekmez |
 | Keşif, doğrulama, ısı haritası, Gemini yorumu, `make data` | ✅ Hazır | Test ızgarasıyla uçtan uca denendi |
 | API (`/health`, `/scenario`) | ✅ Hazır | `grid.parquet` ve Gemini anahtarı gelince canlı çalışır |
 | Testler ve GitHub Actions | ✅ Hazır | Her push'ta Python testleri, "üretilen dosyalar güncel mi" kontrolü, frontend tip kontrolü ve derlemesi |
-| **Gerçek Dünya verisi (`grid.parquet`)** | ❌ Yok | Earth Engine hesabı bekleniyor; **asıl engel bu** |
+| Gerçek Dünya verisi (`grid.parquet`) | ✅ Hazır (14 Kasım) | 470 karo, 250.022 kare (60.144 maskeli), 49 dk (`pipeline.ee_fetch`). Repoda: ekibin Earth Engine'e ihtiyacı yok |
+| **İlk doğrulama** | ❌ 0/4 | Teşhis ve sıradaki karar: aşağıda "Karar bekleyenler" |
 | Hedef değerleri (`config/targets.yaml`) | ✅ Hazır | Mars hedefleri tüm parametreler; Ay'da sadece tanımı gereği olmayanlar boş. Üç betikle yeniden üretilebilir |
 | Gemini yorumları | ⏳ Bekliyor | `.env` > `GEMINI_API_KEY` |
 | Frontend (`frontend/`) | ✅ Hazır | Giriş (Çağrı) → Ay/Mars küresi (NASA Trek mozaiği) + hedef ve test seçimi → Dünya haritası (NASA GIBS + ısı haritası + pinler) → analog kartı → senaryo kutusu; doğrulama paneli. Veri yokken her ekran "henüz çalıştırılmadı" der |
@@ -73,6 +74,17 @@ Yayında canlı API yoktur; senaryo kutusu "çevrimdışı" der, geri kalan her 
 | 11 | Hackathon resmi kurallarını oku: önceden ne hazırlanabilir, teslim şartları | Ekip | Hayır |
 
 `make data` her hedef × test için kaç parametrenin kullanıldığını `analogs/index.json` > `params_used` alanına yazar; eksik değerler girildikçe bu sayı artar.
+
+## İlk gerçek sonuç (14 Kasım)
+
+Doğrulama **0/4** (sınav yerleri: Hanksville %20,8 · Svalbard %2,6 · Salda %50,3 · Lut %5,5; gereken: 3'ü en iyi %1'de). Ayar yerleri: Haughton %2,3 · Holuhraun %66,1 · Yungay %74,4.
+
+Teşhis (sadece **ayar** yerlerine bakılarak, kurala uygun):
+1. **Mutlak sıcaklık** (`surface_temp_c`): Mars hedefleri −43 °C; tolerans 60 °C. Sıcak çöllerin hepsi 0 alıyor, kutuplar öne çıkıyor (Yungay +27 °C → 0). Mars sıcaklığı analog sahalarda tutturulamaz; puan yerine kopma noktası olmalı (buz sondajı hariç).
+2. **ASTER mineral eşikleri** ilk tahmindi; Holuhraun'da ASTER verisi bulut yüzünden boş → mafik 0 benzerlik. Eksik veri cezası ve eşikler gözden geçirilmeli.
+3. **Toz**: Mars τ ≈ 0,4-0,5; Dünya'da nadir. Tolerans/ağırlık gözden geçirilmeli.
+
+Öne çıkan yeni aday örneği: Gale × toz testinde ilk 10 aday Taklamakan Çölü / Tarım Havzası (dünyanın büyük toz kaynaklarından).
 
 ## Karar bekleyenler
 

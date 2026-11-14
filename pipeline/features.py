@@ -39,8 +39,11 @@ LEVELS = np.array([0.0, 0.25, 0.5, 0.75, 1.0])
 def read_raw(raw_dir: Path = RAW_DIR, nodata: float | None = None) -> pd.DataFrame:
     files = sorted(raw_dir.glob("*.csv"))
     if not files:
-        raise FileNotFoundError(f"{raw_dir} içinde CSV yok. Önce: python -m pipeline.ee_export")
-    df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
+        raise FileNotFoundError(f"{raw_dir} içinde CSV yok. Önce: python -m pipeline.ee_fetch")
+    # Boş karolar (5 km'de minik ada görülüp 25 km'de kara oranı 0 kalan) atlanır: başlık-satırı
+    # tek başına sütunları metin tipine çevirip birleştirmeyi bozar.
+    frames = [d for d in (pd.read_csv(f) for f in files) if len(d)]
+    df = pd.concat(frames, ignore_index=True).apply(pd.to_numeric, errors="coerce")
     nodata = load_grid_config()["export"]["nodata"] if nodata is None else nodata
     df = df.replace(nodata, np.nan)
     # Şerit sınırında aynı kare iki dosyada çıkabilir.

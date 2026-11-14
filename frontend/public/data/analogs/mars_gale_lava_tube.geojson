@@ -1,0 +1,1485 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.36600802213952,
+     39.67930978349341
+    ]
+   },
+   "properties": {
+    "id": "g25_39.679_44.366",
+    "name": "39.68°K, 44.37°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 39.67930978349341,
+    "lon": 44.36600802213952,
+    "rank": 1,
+    "score_total": 84.5,
+    "scores": {
+     "topography": 94.8,
+     "geology": 100.0,
+     "climate": 31.5
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 289.26546852006527,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 11.395709991455078,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 17.29731068538115,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6502819311130967,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.96071086697363,
+     39.45321685025413
+    ]
+   },
+   "properties": {
+    "id": "g25_39.453_72.961",
+    "name": "39.45°K, 72.96°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 39.45321685025413,
+    "lon": 72.96071086697363,
+    "rank": 2,
+    "score_total": 82.9,
+    "scores": {
+     "topography": 82.1,
+     "geology": 100.0,
+     "climate": 46.0
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 291.534376833894,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.92976188659668,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 14.201609109065862,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8545237343933093,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     57.647369589846384,
+     23.174525657026063
+    ]
+   },
+   "properties": {
+    "id": "g25_23.175_57.647",
+    "name": "23.17°K, 57.65°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 23.174525657026063,
+    "lon": 57.647369589846384,
+    "rank": 3,
+    "score_total": 82.6,
+    "scores": {
+     "topography": 83.3,
+     "geology": 100.0,
+     "climate": 42.3
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 279.4915756022596,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.394123077392578,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 13.422730198411859,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8180148821315407,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.11145091392046,
+     -14.130808327454917
+    ]
+   },
+   "properties": {
+    "id": "g25_-14.131_-75.111",
+    "name": "14.13°G, 75.11°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": -14.130808327454917,
+    "lon": -75.11145091392046,
+    "rank": 4,
+    "score_total": 81.3,
+    "scores": {
+     "topography": 86.1,
+     "geology": 100.0,
+     "climate": 30.9
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 284.1246705338501,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.26401138305664,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 20.894054874432747,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6069509564381479,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -143.9361724573793,
+     62.288603107421274
+    ]
+   },
+   "properties": {
+    "id": "g25_62.289_-143.936",
+    "name": "62.29°K, 143.94°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 62.288603107421274,
+    "lon": -143.9361724573793,
+    "rank": 5,
+    "score_total": 81.3,
+    "scores": {
+     "topography": 89.5,
+     "geology": 100.0,
+     "climate": 24.8
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 285.5817457284063,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.643160820007324,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 6.449533944561038,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6775966144758495,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.93150390999116,
+     43.29679671532187
+    ]
+   },
+   "properties": {
+    "id": "g25_43.297_85.932",
+    "name": "43.30°K, 85.93°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 43.29679671532187,
+    "lon": 85.93150390999116,
+    "rank": 6,
+    "score_total": 80.9,
+    "scores": {
+     "topography": 77.8,
+     "geology": 100.0,
+     "climate": 43.5
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 286.7371145416043,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 18.210824966430664,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 16.72097286377617,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8000296292119,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.77516939249215,
+     -15.035180060412031
+    ]
+   },
+   "properties": {
+    "id": "g25_-15.035_-72.775",
+    "name": "15.04°G, 72.78°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": -15.035180060412031,
+    "lon": -72.77516939249215,
+    "rank": 7,
+    "score_total": 80.3,
+    "scores": {
+     "topography": 84.6,
+     "geology": 100.0,
+     "climate": 28.2
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 282.3359153700026,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.076858520507812,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 25.13033603373801,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.53269180476998,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.960939274300961,
+     32.44433591983649
+    ]
+   },
+   "properties": {
+    "id": "g25_32.444_-4.961",
+    "name": "32.44°K, 4.96°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 32.44433591983649,
+    "lon": -4.960939274300961,
+    "rank": 8,
+    "score_total": 80.2,
+    "scores": {
+     "topography": 76.4,
+     "geology": 100.0,
+     "climate": 42.4
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 272.99560093675035,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.207322120666504,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 18.5807588840956,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7680197758754237,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.99511217866203,
+     71.33232043699242
+    ]
+   },
+   "properties": {
+    "id": "g25_71.332_-73.995",
+    "name": "71.33°K, 74.00°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 71.33232043699242,
+    "lon": -73.99511217866203,
+    "rank": 9,
+    "score_total": 80.2,
+    "scores": {
+     "topography": 78.8,
+     "geology": 100.0,
+     "climate": 37.9
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 274.3154375283328,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 12.88619613647461,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.886403957774295,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8553673706054687,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     47.33004226562809,
+     34.479172318989995
+    ]
+   },
+   "properties": {
+    "id": "g25_34.479_47.330",
+    "name": "34.48°K, 47.33°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 34.479172318989995,
+    "lon": 47.33004226562809,
+    "rank": 10,
+    "score_total": 80.0,
+    "scores": {
+     "topography": 86.5,
+     "geology": 100.0,
+     "climate": 23.6
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 288.03647928566505,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.780235290527344,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 14.41992002923457,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.5841513450837932,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     141.21331512219444,
+     65.90609003924973
+    ]
+   },
+   "properties": {
+    "id": "g25_65.906_141.213",
+    "name": "65.91°K, 141.21°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 65.90609003924973,
+    "lon": 141.21331512219444,
+    "rank": 11,
+    "score_total": 79.7,
+    "scores": {
+     "topography": 78.7,
+     "geology": 100.0,
+     "climate": 36.0
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 290.8742483662504,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.382375717163086,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 4.809668521032158,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8284700199880528,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.60961247543858,
+     36.06182285166495
+    ]
+   },
+   "properties": {
+    "id": "g25_36.062_73.610",
+    "name": "36.06°K, 73.61°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 36.06182285166495,
+    "lon": 73.60961247543858,
+    "rank": 12,
+    "score_total": 79.7,
+    "scores": {
+     "topography": 75.8,
+     "geology": 100.0,
+     "climate": 40.9
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 282.5621013175672,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 17.24202537536621,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 10.955271407399037,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8264243842095547,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     51.62058434069919,
+     30.86168538716154
+    ]
+   },
+   "properties": {
+    "id": "g25_30.862_51.621",
+    "name": "30.86°K, 51.62°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 30.86168538716154,
+    "lon": 51.62058434069919,
+    "rank": 13,
+    "score_total": 79.5,
+    "scores": {
+     "topography": 83.8,
+     "geology": 100.0,
+     "climate": 25.8
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 279.82958263190477,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.362866401672363,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 16.470577103883812,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.5896015732859428,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.11257517418271,
+     29.27903485448659
+    ]
+   },
+   "properties": {
+    "id": "g25_29.279_92.113",
+    "name": "29.28°K, 92.11°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 29.27903485448659,
+    "lon": 92.11257517418271,
+    "rank": 14,
+    "score_total": 78.8,
+    "scores": {
+     "topography": 82.4,
+     "geology": 100.0,
+     "climate": 25.0
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 289.0948532248835,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 15.809362411499023,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.339992990041896,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.5313909170775082,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.47065377926742,
+     -8.47848499647295
+    ]
+   },
+   "properties": {
+    "id": "g25_-8.478_-78.471",
+    "name": "8.48°G, 78.47°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": -8.47848499647295,
+    "lon": -78.47065377926742,
+    "rank": 15,
+    "score_total": 78.8,
+    "scores": {
+     "topography": 77.3,
+     "geology": 100.0,
+     "climate": 33.9
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 274.8336966360711,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 13.635839462280273,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 16.189955366560934,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6893156662135982,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     81.80443339630376,
+     42.61851791560403
+    ]
+   },
+   "properties": {
+    "id": "g25_42.619_81.804",
+    "name": "42.62°K, 81.80°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 42.61851791560403,
+    "lon": 81.80443339630376,
+    "rank": 16,
+    "score_total": 78.8,
+    "scores": {
+     "topography": 78.1,
+     "geology": 100.0,
+     "climate": 32.2
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 287.98629974798365,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 17.74131202697754,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 11.984630441793975,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7118368397966656,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.73993087788739,
+     57.08846564291787
+    ]
+   },
+   "properties": {
+    "id": "g25_57.088_116.740",
+    "name": "57.09°K, 116.74°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 57.08846564291787,
+    "lon": 116.73993087788739,
+    "rank": 17,
+    "score_total": 78.7,
+    "scores": {
+     "topography": 85.2,
+     "geology": 100.0,
+     "climate": 19.2
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 286.6219465174998,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 15.582818031311035,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 5.348102908498998,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6217246736184538,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.48675711208527,
+     39.90540271673269
+    ]
+   },
+   "properties": {
+    "id": "g25_39.905_71.487",
+    "name": "39.91°K, 71.49°D",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": 39.90540271673269,
+    "lon": 71.48675711208527,
+    "rank": 18,
+    "score_total": 78.6,
+    "scores": {
+     "topography": 80.2,
+     "geology": 100.0,
+     "climate": 27.9
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 290.3942578027945,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 16.04871368408203,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 12.953869940864532,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6505797839722143,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.79320928620899,
+     -9.156763796190786
+    ]
+   },
+   "properties": {
+    "id": "g25_-9.157_-77.793",
+    "name": "9.16°G, 77.79°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": -9.156763796190786,
+    "lon": -77.79320928620899,
+    "rank": 19,
+    "score_total": 78.5,
+    "scores": {
+     "topography": 84.6,
+     "geology": 100.0,
+     "climate": 19.6
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 290.41122658699965,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.504557609558105,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 21.094887863604235,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.4687234752862262,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.76213741692311,
+     -32.21824298659721
+    ]
+   },
+   "properties": {
+    "id": "g25_-32.218_-70.762",
+    "name": "32.22°G, 70.76°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "lava_tube",
+    "lat": -32.21824298659721,
+    "lon": -70.76213741692311,
+    "rank": 20,
+    "score_total": 78.4,
+    "scores": {
+     "topography": 72.2,
+     "geology": 100.0,
+     "climate": 40.9
+    },
+    "params": [
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 301.2765352406768,
+      "target": 286.9,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "slope_deg",
+      "earth": 14.487879753112793,
+      "target": 10.51,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 19.07495587703841,
+      "target": 64.5,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7449163816350872,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

@@ -1,0 +1,1225 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.81843855114922,
+     22.948432723786787
+    ]
+   },
+   "properties": {
+    "id": "g25_22.948_32.818",
+    "name": "22.95°K, 32.82°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 22.948432723786787,
+    "lon": 32.81843855114922,
+    "rank": 1,
+    "score_total": 81.2,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 56.9
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9976160550803471,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 26.896444857936594,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.58928354923352,
+     22.27015392406895
+    ]
+   },
+   "properties": {
+    "id": "g25_22.270_31.589",
+    "name": "22.27°K, 31.59°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 22.27015392406895,
+    "lon": 31.58928354923352,
+    "rank": 2,
+    "score_total": 80.6,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 55.6
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.983839901119095,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 27.528225501585908,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     82.72701438496468,
+     35.60963698518639
+    ]
+   },
+   "properties": {
+    "id": "g25_35.610_82.727",
+    "name": "35.61°K, 82.73°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 35.60963698518639,
+    "lon": 82.72701438496468,
+    "rank": 3,
+    "score_total": 79.5,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 53.3
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9591569271561834,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -4.030366170052096,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.59606343541061,
+     37.644473384339896
+    ]
+   },
+   "properties": {
+    "id": "g25_37.644_93.596",
+    "name": "37.64°K, 93.60°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 37.644473384339896,
+    "lon": 93.59606343541061,
+    "rank": 4,
+    "score_total": 79.5,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 53.2
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9582642211914063,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 9.769211780558395,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.54833278449497,
+     77.21073670121366
+    ]
+   },
+   "properties": {
+    "id": "g25_77.211_-118.548",
+    "name": "77.21°K, 118.55°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 77.21073670121366,
+    "lon": -118.54833278449497,
+    "rank": 5,
+    "score_total": 79.5,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 53.1
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.957635668499601,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.995137617461182,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -111.42525699486868,
+     77.66292256769222
+    ]
+   },
+   "properties": {
+    "id": "g25_77.663_-111.425",
+    "name": "77.66°K, 111.43°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 77.66292256769222,
+    "lon": -111.42525699486868,
+    "rank": 6,
+    "score_total": 79.5,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 53.0
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9568640650803968,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -20.09515073164191,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.5846206687902,
+     40.583681516450525
+    ]
+   },
+   "properties": {
+    "id": "g25_40.584_88.585",
+    "name": "40.58°K, 88.58°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 40.583681516450525,
+    "lon": 88.5846206687902,
+    "rank": 7,
+    "score_total": 79.4,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.9
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9552804912945605,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 18.158575858070854,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.80176255268178,
+     25.88764085589741
+    ]
+   },
+   "properties": {
+    "id": "g25_25.888_33.802",
+    "name": "25.89°K, 33.80°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 25.88764085589741,
+    "lon": 33.80176255268178,
+    "rank": 8,
+    "score_total": 79.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.8
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9542220779078904,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 32.53707987052065,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     90.6481559256339,
+     40.357588583211246
+    ]
+   },
+   "properties": {
+    "id": "g25_40.358_90.648",
+    "name": "40.36°K, 90.65°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 40.357588583211246,
+    "lon": 90.6481559256339,
+    "rank": 9,
+    "score_total": 79.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.7
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9529031007438238,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 17.34073146730858,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34.29342455344806,
+     24.983269122940293
+    ]
+   },
+   "properties": {
+    "id": "g25_24.983_34.293",
+    "name": "24.98°K, 34.29°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 24.983269122940293,
+    "lon": 34.29342455344806,
+    "rank": 10,
+    "score_total": 79.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.6
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9525026404269035,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 31.250882691952057,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     89.46899292172321,
+     39.22712391701485
+    ]
+   },
+   "properties": {
+    "id": "g25_39.227_89.469",
+    "name": "39.23°K, 89.47°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 39.22712391701485,
+    "lon": 89.46899292172321,
+    "rank": 11,
+    "score_total": 79.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.6
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9522064452286303,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 17.2062928686311,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     83.5314910240405,
+     36.28791578490423
+    ]
+   },
+   "properties": {
+    "id": "g25_36.288_83.531",
+    "name": "36.29°K, 83.53°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 36.28791578490423,
+    "lon": 83.5314910240405,
+    "rank": 12,
+    "score_total": 79.2,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.5
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.951743751486711,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -2.4599757460488725,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.34192240803581,
+     37.870566317579176
+    ]
+   },
+   "properties": {
+    "id": "g25_37.871_85.342",
+    "name": "37.87°K, 85.34°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 37.870566317579176,
+    "lon": 85.34192240803581,
+    "rank": 13,
+    "score_total": 79.2,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.5
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9516718559942111,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 17.228727807666125,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     92.7116911824776,
+     40.13149564997197
+    ]
+   },
+   "properties": {
+    "id": "g25_40.131_92.712",
+    "name": "40.13°K, 92.71°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 40.13149564997197,
+    "lon": 92.7116911824776,
+    "rank": 14,
+    "score_total": 79.2,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.5
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9515054335248476,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 19.27641689743585,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.610268524329404,
+     23.8528044567439
+    ]
+   },
+   "properties": {
+    "id": "g25_23.853_15.610",
+    "name": "23.85°K, 15.61°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 23.8528044567439,
+    "lon": 15.610268524329404,
+    "rank": 15,
+    "score_total": 79.2,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.5
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.950886738177249,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 29.00022892987127,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.59852601638225,
+     78.56729430064934
+    ]
+   },
+   "properties": {
+    "id": "g25_78.567_-97.599",
+    "name": "78.57°K, 97.60°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 78.56729430064934,
+    "lon": -97.59852601638225,
+    "rank": 16,
+    "score_total": 79.2,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.4
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9500317802429199,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.25666503219985,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     87.11066691390184,
+     38.54884511729701
+    ]
+   },
+   "properties": {
+    "id": "g25_38.549_87.111",
+    "name": "38.55°K, 87.11°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 38.54884511729701,
+    "lon": 87.11066691390184,
+    "rank": 17,
+    "score_total": 79.1,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.3
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9495771505273889,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 18.660983729357863,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.576916527394527,
+     24.757176189701013
+    ]
+   },
+   "properties": {
+    "id": "g25_24.757_17.577",
+    "name": "24.76°K, 17.58°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 24.757176189701013,
+    "lon": 17.576916527394527,
+    "rank": 18,
+    "score_total": 79.1,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.3
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9489330076447231,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 28.58512540880801,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     5.039535507854374,
+     25.88764085589741
+    ]
+   },
+   "properties": {
+    "id": "g25_25.888_5.040",
+    "name": "25.89°K, 5.04°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 25.88764085589741,
+    "lon": 5.039535507854374,
+    "rank": 19,
+    "score_total": 79.1,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.2
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9480567555557364,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 31.899288945964315,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.34345254885038,
+     23.174525657026063
+    ]
+   },
+   "properties": {
+    "id": "g25_23.175_31.343",
+    "name": "23.17°K, 31.34°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature",
+    "lat": 23.174525657026063,
+    "lon": 31.34345254885038,
+    "rank": 20,
+    "score_total": 79.1,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 52.2
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9480418936486572,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": 27.67426477937105,
+      "target": -136.6,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

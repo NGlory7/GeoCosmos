@@ -1,0 +1,1365 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.54833278449497,
+     77.21073670121366
+    ]
+   },
+   "properties": {
+    "id": "g25_77.211_-118.548",
+    "name": "77.21°K, 118.55°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 77.21073670121366,
+    "lon": -118.54833278449497,
+    "rank": 1,
+    "score_total": 84.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 68.7
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.957635668499601,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.995137617461182,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.142528434547021,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -111.42525699486868,
+     77.66292256769222
+    ]
+   },
+   "properties": {
+    "id": "g25_77.663_-111.425",
+    "name": "77.66°K, 111.43°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 77.66292256769222,
+    "lon": -111.42525699486868,
+    "rank": 2,
+    "score_total": 84.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 68.7
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9568640650803968,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -20.09515073164191,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.4435278359801949,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -110.83222445928153,
+     78.56729430064934
+    ]
+   },
+   "properties": {
+    "id": "g25_78.567_-110.832",
+    "name": "78.57°K, 110.83°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 78.56729430064934,
+    "lon": -110.83222445928153,
+    "rank": 3,
+    "score_total": 84.1,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 68.3
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9445726203918456,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -20.98845895655301,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.5111092203242045,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.59852601638225,
+     78.56729430064934
+    ]
+   },
+   "properties": {
+    "id": "g25_78.567_-97.599",
+    "name": "78.57°K, 97.60°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 78.56729430064934,
+    "lon": -97.59852601638225,
+    "rank": 4,
+    "score_total": 83.9,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 67.7
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9500317802429199,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.25666503219985,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.4865341056829635,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.49996486692643,
+     74.94980736882088
+    ]
+   },
+   "properties": {
+    "id": "g25_74.950_-86.500",
+    "name": "74.95°K, 86.50°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 74.94980736882088,
+    "lon": -86.49996486692643,
+    "rank": 5,
+    "score_total": 83.6,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 67.1
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9293695775857947,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -20.920454616945342,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.9335244824044082,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -109.73876139833949,
+     75.40199323529944
+    ]
+   },
+   "properties": {
+    "id": "g25_75.402_-109.739",
+    "name": "75.40°K, 109.74°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 75.40199323529944,
+    "lon": -109.73876139833949,
+    "rank": 6,
+    "score_total": 83.5,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 66.9
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9416616249084473,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -18.95679362891273,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.3110962960050188,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -102.00975883068202,
+     78.34120136741006
+    ]
+   },
+   "properties": {
+    "id": "g25_78.341_-102.010",
+    "name": "78.34°K, 102.01°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 78.34120136741006,
+    "lon": -102.00975883068202,
+    "rank": 7,
+    "score_total": 83.5,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 66.9
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9429076545232599,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -18.746014420684322,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.9529022634660933,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -106.29318193487133,
+     75.854179101778
+    ]
+   },
+   "properties": {
+    "id": "g25_75.854_-106.293",
+    "name": "75.85°K, 106.29°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 75.854179101778,
+    "lon": -106.29318193487133,
+    "rank": 8,
+    "score_total": 83.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 66.6
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9383531299697958,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -18.85471888962688,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.7627594599904235,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.803445706077,
+     75.40199323529944
+    ]
+   },
+   "properties": {
+    "id": "g25_75.402_-90.803",
+    "name": "75.40°K, 90.80°B",
+    "is_new": false,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 75.40199323529944,
+    "lon": -90.803445706077,
+    "rank": 9,
+    "score_total": 83.3,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 66.6
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9318651772111193,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.709259041203065,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.181514246075352,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -92.24562485096763,
+     76.30636496825656
+    ]
+   },
+   "properties": {
+    "id": "g25_76.306_-92.246",
+    "name": "76.31°K, 92.25°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 76.30636496825656,
+    "lon": -92.24562485096763,
+    "rank": 10,
+    "score_total": 83.2,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 66.3
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9313287506103516,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.26362580299059,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.5723408053145178,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -107.14312314548827,
+     72.91497096966738
+    ]
+   },
+   "properties": {
+    "id": "g25_72.915_-107.143",
+    "name": "72.91°K, 107.14°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 72.91497096966738,
+    "lon": -107.14312314548827,
+    "rank": 11,
+    "score_total": 83.2,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 66.3
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9414657905498165,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -17.86088602744139,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.007892853980131,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.34073901877504,
+     76.08027203501727
+    ]
+   },
+   "properties": {
+    "id": "g25_76.080_-120.341",
+    "name": "76.08°K, 120.34°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 76.08027203501727,
+    "lon": -120.34073901877504,
+    "rank": 12,
+    "score_total": 83.1,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 66.2
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.936893570055592,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -18.270086341444845,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.8171263572492364,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.63671761734847,
+     70.88013457051386
+    ]
+   },
+   "properties": {
+    "id": "g25_70.880_-75.637",
+    "name": "70.88°K, 75.64°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 70.88013457051386,
+    "lon": -75.63671761734847,
+    "rank": 13,
+    "score_total": 83.1,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 66.1
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9408161697387696,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -17.629252601032956,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 3.8130134152093706,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.65821999080714,
+     76.08027203501727
+    ]
+   },
+   "properties": {
+    "id": "g25_76.080_-115.658",
+    "name": "76.08°K, 115.66°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 76.08027203501727,
+    "lon": -115.65821999080714,
+    "rank": 14,
+    "score_total": 83.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 65.9
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.0,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9406333045959473,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -17.28745790750914,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.200191947528616,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -96.16152315995515,
+     76.7585508347351
+    ]
+   },
+   "properties": {
+    "id": "g25_76.759_-96.162",
+    "name": "76.76°K, 96.16°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 76.7585508347351,
+    "lon": -96.16152315995515,
+    "rank": 15,
+    "score_total": 82.9,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 65.9
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9271525726318359,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.004889612069263,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.751829694085746,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -102.14934998322612,
+     72.6888780364281
+    ]
+   },
+   "properties": {
+    "id": "g25_72.689_-102.149",
+    "name": "72.69°K, 102.15°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 72.6888780364281,
+    "lon": -102.14934998322612,
+    "rank": 16,
+    "score_total": 82.9,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 65.7
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9337365260138408,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -17.846145978817468,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.3786327951464123,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -94.24623037739745,
+     74.94980736882088
+    ]
+   },
+   "properties": {
+    "id": "g25_74.950_-94.246",
+    "name": "74.95°K, 94.25°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 74.94980736882088,
+    "lon": -94.24623037739745,
+    "rank": 17,
+    "score_total": 82.8,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 65.5
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9193102956080951,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.42150516167311,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.9964706937243086,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -88.02086511466794,
+     76.98464376797439
+    ]
+   },
+   "properties": {
+    "id": "g25_76.985_-88.021",
+    "name": "76.98°K, 88.02°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 76.98464376797439,
+    "lon": -88.02086511466794,
+    "rank": 18,
+    "score_total": 82.7,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 65.5
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9196839872875091,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -19.286256037785584,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 1.9664326194539008,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -98.54971121654802,
+     75.40199323529944
+    ]
+   },
+   "properties": {
+    "id": "g25_75.402_-98.550",
+    "name": "75.40°K, 98.55°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 75.40199323529944,
+    "lon": -98.54971121654802,
+    "rank": 19,
+    "score_total": 82.7,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 65.4
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9209108221506452,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -18.938053561126544,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.1212936371776223,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -110.09028885118009,
+     72.01059923671026
+    ]
+   },
+   "properties": {
+    "id": "g25_72.011_-110.090",
+    "name": "72.01°K, 110.09°B",
+    "is_new": true,
+    "target_id": "moon_marius_hills",
+    "test_id": "biosignature",
+    "lat": 72.01059923671026,
+    "lon": -110.09028885118009,
+    "rank": 20,
+    "score_total": 82.7,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": 65.4
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.0,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9395489684973736,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     },
+     {
+      "key": "surface_temp_c",
+      "earth": -16.395231437612658,
+      "target": -30.7,
+      "source": "MODIS LST (MOD11A2)",
+      "match": true
+     },
+     {
+      "key": "temp_range_c",
+      "earth": 2.616080393148305,
+      "target": 295.0,
+      "source": "MODIS LST (MOD11A2)",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

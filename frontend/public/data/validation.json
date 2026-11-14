@@ -1,0 +1,204 @@
+{
+ "hits": 0,
+ "min_hits": 3,
+ "holdout_total": 4,
+ "top_percent": 1.0,
+ "passed": false,
+ "denominator": 189878,
+ "analogs": [
+  {
+   "id": "holuhraun",
+   "name": "Holuhraun (İzlanda)",
+   "test_id": "rover",
+   "split": "tune",
+   "targets": [
+    "mars_jezero",
+    "mars_gale"
+   ],
+   "note": "",
+   "past_tests": [
+    {
+     "title": "RAVEN: rover + drone ağı, Holuhraun lav sahası (NASA PSTAR, 2021-2023)",
+     "url": "https://news.arizona.edu/story/3m-nasa-grant-uarizona-scientists-will-test-mars-exploration-drones-iceland"
+    }
+   ],
+   "status": "ok",
+   "target_id": "mars_jezero",
+   "score_total": 49.6,
+   "rank": 125505,
+   "percentile": 66.098,
+   "cell_id": "g25_64.776_-17.010",
+   "hit": false
+  },
+  {
+   "id": "yungay",
+   "name": "Yungay (Atacama, Şili)",
+   "test_id": "biosignature",
+   "split": "tune",
+   "targets": [
+    "mars_gale"
+   ],
+   "note": "",
+   "past_tests": [
+    {
+     "title": "Mars benzeri topraklar ve mikrobiyal yaşamın kuraklık sınırı (Navarro-González et al. 2003, Science)",
+     "url": "https://doi.org/10.1126/science.1089143"
+    }
+   ],
+   "status": "ok",
+   "target_id": "mars_gale",
+   "score_total": 52.0,
+   "rank": 141233,
+   "percentile": 74.381,
+   "cell_id": "g25_-24.079_-70.087",
+   "hit": false
+  },
+  {
+   "id": "haughton",
+   "name": "Haughton Krateri (Devon Adası, Kanada)",
+   "test_id": "ice_drilling",
+   "split": "tune",
+   "targets": [
+    "mars_arcadia"
+   ],
+   "note": "",
+   "past_tests": [
+    {
+     "title": "Buzlu zeminde Mars matkabı testi (NASA Astrobiology)",
+     "url": "https://astrobiology.nasa.gov/news/drilling-into-arctic-ice/"
+    },
+    {
+     "title": "Drill Hill'de Mars matkabı ve örnek aktarım kolu testi (NASA Ames, 2014)",
+     "url": "https://blogs.nasa.gov/mission-ames/2014/08"
+    }
+   ],
+   "status": "ok",
+   "target_id": "mars_arcadia",
+   "score_total": 51.6,
+   "rank": 4404,
+   "percentile": 2.319,
+   "cell_id": "g25_75.402_-89.943",
+   "hit": false
+  },
+  {
+   "id": "hanksville",
+   "name": "Hanksville / MDRS çevresi (Utah, ABD)",
+   "test_id": "rover",
+   "split": "holdout",
+   "targets": [
+    "mars_jezero",
+    "mars_gale"
+   ],
+   "note": "Dumont Dunes'un yerine. Dumont Dunes ~30 km² ile 25 km'lik karede ortalamaya karışıp kayboluyordu; Hanksville çevresindeki Mars benzeri arazi kareyi dolduracak kadar geniş.",
+   "past_tests": [
+    {
+     "title": "University Rover Challenge, Mars Desert Research Station yakını (Space.com)",
+     "url": "https://space.com/37057-mars-rovers-compete-utah-desert.html"
+    }
+   ],
+   "status": "ok",
+   "target_id": "mars_jezero",
+   "score_total": 62.2,
+   "rank": 39477,
+   "percentile": 20.791,
+   "cell_id": "g25_38.323_-110.694",
+   "hit": false
+  },
+  {
+   "id": "svalbard",
+   "name": "Svalbard / Bockfjorden (Norveç)",
+   "test_id": "ice_drilling",
+   "split": "holdout",
+   "targets": [
+    "mars_arcadia"
+   ],
+   "note": "",
+   "past_tests": [
+    {
+     "title": "AMASE: ExoMars ve MSL cihaz testleri, Svalbard (ESA, 2008)",
+     "url": "https://www.esa.int/Space_in_Member_States/Norway/AMASE_2008_-_Til_Mars_paa_Svalbard"
+    },
+    {
+     "title": "AMASE Bockfjorden saha günlüğü (The Planetary Society, 2009)",
+     "url": "https://www.planetary.org/articles/svalbard"
+    }
+   ],
+   "status": "ok",
+   "target_id": "mars_arcadia",
+   "score_total": 51.1,
+   "rank": 4952,
+   "percentile": 2.608,
+   "cell_id": "g25_79.472_13.846",
+   "hit": false
+  },
+  {
+   "id": "salda",
+   "name": "Salda Gölü kıyısı (Türkiye)",
+   "test_id": "biosignature",
+   "split": "holdout",
+   "targets": [
+    "mars_jezero"
+   ],
+   "note": "Göl ~45 km², 25 km'lik karenin küçük bir kısmı; max_masked_fraction kuralı (config/grid.yaml) kareyi elemez. Asıl hedef göl suyu değil, kıyıdaki hidromagnezit çökelleri.",
+   "past_tests": [
+    {
+     "title": "Perseverance ekibinin Jezero hazırlık saha çalışması (NASA Earth Observatory, 2021)",
+     "url": "https://science.nasa.gov/blogs/earth-matters/2021/02/17/what-a-lake-in-turkey-can-tell-us-about-mars"
+    }
+   ],
+   "status": "ok",
+   "target_id": "mars_jezero",
+   "score_total": 35.7,
+   "rank": 95479,
+   "percentile": 50.284,
+   "cell_id": "g25_37.644_29.626",
+   "hit": false
+  },
+  {
+   "id": "lut",
+   "name": "Lut Çölü (İran)",
+   "test_id": "dust",
+   "split": "holdout",
+   "targets": [
+    "mars_gale"
+   ],
+   "note": "",
+   "past_tests": [
+    {
+     "title": "Lut ve Mars rüzgar şekilli yer şekillerinin karşılaştırması (Foroutan & Zimbelman, GSA 2016)",
+     "url": "https://gsa.confex.com/gsa/2016AM/webprogram/Paper280656.html"
+    }
+   ],
+   "status": "ok",
+   "target_id": "mars_gale",
+   "score_total": 61.0,
+   "rank": 10498,
+   "percentile": 5.529,
+   "cell_id": "g25_30.409_59.129",
+   "hit": false
+  },
+  {
+   "id": "lanzarote",
+   "name": "Lanzarote lav tüpleri (İspanya)",
+   "test_id": "lava_tube",
+   "split": "report",
+   "targets": [
+    "moon_marius_hills"
+   ],
+   "note": "Lav tüpleri yer altında; Copernicus DEM, MODIS ve ASTER onları göremez. Motor lav_tube testinde sadece \"genç bazaltik volkanik arazi\"yi ölçebiliyor. Ayrıca ada küçük, 25 km'lik karelerin çoğu deniz. Bu yüzden sırası raporlanır ama başarı sayılmaz; kartta bu sınır açıkça yazılmalı.",
+   "past_tests": [
+    {
+     "title": "ESA PANGAEA astronot jeoloji eğitimi, Corona lav tüpü (ESA, 2021)",
+     "url": "https://www.esa.int/ESA_Multimedia/Images/2021/11/Rocky_roads_through_Lanzarote"
+    }
+   ],
+   "status": "ok",
+   "target_id": "moon_marius_hills",
+   "score_total": 35.2,
+   "rank": 43425,
+   "percentile": 22.87,
+   "cell_id": "g25_29.053_-13.542",
+   "hit": false
+  }
+ ]
+}
