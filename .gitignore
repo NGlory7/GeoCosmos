@@ -1,0 +1,16 @@
+# Ortam
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ham veri
+analysis/data/raw/*
+!analysis/data/raw/.gitkeep
+
+# Frontend
+node_modules/
+dist/
+.DS_Store

@@ -1,0 +1,4 @@
+# Benzerlik skoru için özellik ağırlık profilleri
+profiles:
+  default:
+    weights: {}
