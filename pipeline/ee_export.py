@@ -1,4 +1,4 @@
-"""Earth Engine -> data/raw/*.csv. Tüm karalar 25 km ızgara; SRTM, MODIS, ASTER, WorldCover.
+"""Earth Engine -> data/raw/*.csv. Tüm karalar 25 km ızgara; Copernicus DEM, MODIS, IMERG, ASTER GED, WorldCover.
 
 Ham uydu verisi indirilmez; Earth Engine'de karelere küçültülür, sadece tablo iner."""
 

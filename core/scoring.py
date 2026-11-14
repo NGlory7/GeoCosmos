@@ -1,7 +1,7 @@
 """Ağırlıklı benzerlik motoru.
 
 Her parametre için benzerlik:  s = max(0, 1 - |Dünya - hedef| / tolerans)
-Boyut skoru (topography, geology, climate, operations): o boyuttaki
+Boyut skoru (topography, geology, climate): o boyuttaki
 parametrelerin ağırlıklı ortalaması. Toplam skor: tüm parametrelerin
 ağırlıklı ortalaması. Hepsi 0-100 ölçeğinde.
 
@@ -66,7 +66,7 @@ def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int
                 params: dict[str, Parameter] | None = None) -> list[Analog]:
     """En iyi n kareyi veri sözleşmesindeki Analog formatında döndürür.
 
-    grid sütunları: id, name, lat, lon, parametre sütunları; opsiyonel is_new.
+    grid sütunları: id, name, lat, lon, parametre sütunları; opsiyonel is_new ve ops_<etiket>.
     weights verilirse profilin ağırlıkları yerine o kullanılır (/scenario).
     """
     params = params or load_parameters()
@@ -97,6 +97,9 @@ def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int
                 source=params[k].earth_source,
                 match=bool(row[f"sim_{k}"] >= MATCH_THRESHOLD),
             ) for k in used],
+            # grid'de ops_<etiket> sütunları varsa (pipeline/features.py) karta taşınır.
+            ops_tags={c[4:]: bool(row[c]) for c in scored.columns
+                      if c.startswith("ops_") and not pd.isna(row[c])},
             breakdown=breakdown,
         ))
     return analogs

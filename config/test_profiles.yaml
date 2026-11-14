@@ -1,58 +1,64 @@
 # Parametreler ve 5 test amacı (= 5 ağırlık seti).
-# TASLAK: Ağırlıklar ve toleranslar ekipçe gözden geçirilecek (ROADMAP > Hackathon öncesi hazırlık).
+# Kaynaklar ve hesaplama: DATA_SOURCES.md, config/grid.yaml.
 #
 # parameters:
 #   key:       veri sözleşmesindeki parametre adı (grid.parquet sütunu)
-#   dimension: hangi skora katkı verir (topography, geology, climate, operations)
+#   dimension: hangi skora katkı verir (topography, geology, climate)
+#              Operasyon bilgisi puan değil, ops_tags olarak kartta gösterilir.
 #   tolerance: |Dünya - hedef| bu kadar olunca benzerlik 0'a düşer (parametrenin biriminde)
-#   earth_source: Dünya verisinin kaynağı
+#   earth_source: Dünya verisinin kaynağı (kartta gösterilir)
+#
+# AĞIRLIK AYARI KURALI (config/known_analogs.yaml > split):
+#   - Ağırlıklar sadece "tune" yerlerine bakılarak değiştirilir.
+#   - Ayar yeri olmayan testlerin (dust, lava_tube) ağırlıkları fiziksel gerekçeyle önceden
+#     sabitlenmiştir ve doğrulama sonucuna bakılarak DEĞİŞTİRİLMEZ. Gerekçe her testin "rationale" alanında.
 
 parameters:
   slope_deg:
     label: Ortalama eğim (°, 500 m taban; config/grid.yaml > scale)
     dimension: topography
     tolerance: 15
-    earth_source: SRTM
+    earth_source: Copernicus DEM GLO-30
   roughness_m:
     label: Yüzey pürüzlülüğü (m, 500 m yüksekliğin 5 km pencerede std'si)
     dimension: topography
     tolerance: 50
-    earth_source: SRTM
+    earth_source: Copernicus DEM GLO-30
   surface_temp_c:
     label: Ortalama yüzey sıcaklığı (°C)
     dimension: climate
     tolerance: 60
-    earth_source: MODIS LST
+    earth_source: MODIS LST (MOD11A2)
   temp_range_c:
     label: Gece-gündüz sıcaklık farkı (°C)
     dimension: climate
     tolerance: 60
-    earth_source: MODIS LST
+    earth_source: MODIS LST (MOD11A2)
   aridity:
     label: Kuraklık (0 = nemli, 1 = tamamen kuru)
     dimension: climate
     tolerance: 0.6
-    earth_source: MODIS NDVI + GPM
+    earth_source: GPM IMERG V07 + MODIS NDVI
   dust_aod:
-    label: Toz / aerosol optik derinliği
+    label: Toz / aerosol optik derinliği (550 nm)
     dimension: climate
     tolerance: 0.8
-    earth_source: MODIS AOD
-  basalt_index:
-    label: Bazaltik / volkanik yüzey oranı (0-1)
+    earth_source: MODIS MAIAC AOD (MCD19A2)
+  mafic_index:
+    label: Mafik / bazaltik yüzey (0-1 sıralı ölçek)
     dimension: geology
     tolerance: 0.6
-    earth_source: ASTER
-  clay_carbonate_index:
-    label: Kil / karbonat / sülfat izi (0-1)
+    earth_source: ASTER GED (AG100) TIR
+  carbonate_index:
+    label: Karbonat izi (0-1 sıralı ölçek)
     dimension: geology
     tolerance: 0.6
-    earth_source: EMIT
+    earth_source: ASTER GED (AG100) TIR
   ground_ice:
     label: Donmuş zemin / yüzeye yakın buz (0-1)
     dimension: geology
     tolerance: 0.6
-    earth_source: Permafrost haritaları
+    earth_source: ESA CCI Permafrost
 
 # Her testte ağırlık toplamı 1 olmalı (yükleyici yine de normalize eder).
 # breakdown: bu test için kartta vurgulanacak kopma noktaları.
@@ -62,7 +68,7 @@ tests:
     weights:
       slope_deg: 0.25
       roughness_m: 0.25
-      basalt_index: 0.20
+      mafic_index: 0.20
       aridity: 0.15
       dust_aod: 0.10
       temp_range_c: 0.05
@@ -78,8 +84,11 @@ tests:
     breakdown: [gravity, atmosphere, liquid_water]
   lava_tube:
     label: Lav tüpü ve yeraltı habitatı
+    rationale: >-
+      Lav tüpleri yörüngeden görülmez; motor sadece tüp oluşabilecek araziyi (genç, mafik,
+      düşük eğimli lav akıntısı) ölçer. Bu yüzden mafik yüzey baskın, eğim düşük tutulur.
     weights:
-      basalt_index: 0.45
+      mafic_index: 0.45
       roughness_m: 0.20
       slope_deg: 0.15
       temp_range_c: 0.10
@@ -87,6 +96,9 @@ tests:
     breakdown: [gravity, radiation, atmosphere]
   dust:
     label: Toz fırtınası ve aşınma
+    rationale: >-
+      Toz testinin belirleyicisi havadaki toz (AOD) ve onu besleyen kuru, bitkisiz yüzeydir;
+      büyük gece-gündüz farkı termal rüzgarları ve fiziksel aşınmayı artırır.
     weights:
       dust_aod: 0.40
       aridity: 0.25
@@ -96,10 +108,12 @@ tests:
     breakdown: [gravity, atmosphere]
   biosignature:
     label: Biyo-imza ve antik yaşam izi
+    # Karbonat baskın: Jezero'nun hedefi karbonat/kil çökelleri. Kuraklık ikincil; çok yüksek olsaydı
+    # Salda (karbonat analoğu, kurak değil) yapısal olarak kaybederdi.
     weights:
-      clay_carbonate_index: 0.40
-      aridity: 0.30
-      surface_temp_c: 0.10
+      carbonate_index: 0.45
+      aridity: 0.20
+      surface_temp_c: 0.15
       temp_range_c: 0.10
       dust_aod: 0.10
     breakdown: [liquid_water, biology, radiation]

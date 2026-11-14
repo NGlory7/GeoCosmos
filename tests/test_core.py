@@ -89,3 +89,35 @@ def test_grid_config():
     cfg = load_grid_config()
     assert cfg["scale"]["slope_baseline_m"] > 0
     assert 70 in cfg["masks"]["worldcover_classes"]  # buz tabakaları maskede
+
+
+def test_every_test_has_tune_site_or_rationale():
+    # Ayar yeri olmayan testin ağırlıkları önceden gerekçelendirilmiş olmalı (test_profiles.yaml).
+    import yaml
+    from core.profiles import CONFIG_DIR
+    tests = yaml.safe_load((CONFIG_DIR / "test_profiles.yaml").read_text(encoding="utf-8"))["tests"]
+    tuned = {a.test_id for a in load_known_analogs().by_split("tune")}
+    for test_id, t in tests.items():
+        assert test_id in tuned or t.get("rationale"), test_id
+
+
+def test_known_analogs_have_targets_and_exclusions():
+    vs = load_known_analogs()
+    targets = load_targets()
+    for a in vs.analogs:
+        assert a.targets and all(t in targets for t in a.targets)
+    known = {s.id for s in vs.all_known_sites()}
+    assert {"dumont_dunes", "holuhraun", "dry_valleys"} <= known
+
+
+def test_grid_config_indices_match_parameters():
+    cfg = load_grid_config()
+    assert set(cfg["indices"]) <= set(load_parameters())
+    assert {"road_access", "remote"} == set(cfg["ops_tags"])
+
+
+def test_ops_tags_reach_card(grid, target):
+    grid = grid.assign(ops_road_access=[True, False, True, None])
+    analogs = top_analogs(grid, target, load_profiles()["rover"], n=2)
+    assert analogs[0].ops_tags == {"road_access": True}
+    assert "operations" not in analogs[0].scores.model_dump()

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import yaml
 
-from core.schemas import BREAKDOWN_KEYS, SCORE_KEYS, TEST_IDS, Target
+from core.schemas import BREAKDOWN_KEYS, SCORE_KEYS, TEST_IDS, PastTest, Target
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 
@@ -105,6 +105,18 @@ class KnownAnalog:
     name: str
     test_id: str
     split: str  # tune: ayar için, holdout: başarı ölçütü için, report: sadece raporlanır
+    targets: tuple[str, ...]  # hangi hedef(ler)e göre puanlanır; birden fazlaysa en iyisi
+    lat: float
+    lon: float
+    past_tests: tuple[PastTest, ...] = ()
+    note: str = ""
+
+
+@dataclass(frozen=True)
+class KnownSite:
+    """Doğrulamada kullanılmayan ama bilinen analog saha: sadece keşiften çıkarılır."""
+    id: str
+    name: str
     lat: float
     lon: float
 
@@ -112,6 +124,7 @@ class KnownAnalog:
 @dataclass(frozen=True)
 class ValidationSet:
     analogs: tuple[KnownAnalog, ...]
+    exclude_only: tuple[KnownSite, ...]
     exclude_radius_km: float
     top_percent: float
     min_hits: int
@@ -119,18 +132,35 @@ class ValidationSet:
     def by_split(self, split: str) -> list[KnownAnalog]:
         return [a for a in self.analogs if a.split == split]
 
+    def all_known_sites(self) -> list[KnownSite]:
+        """is_new=False yapılacak tüm yerler: doğrulama seti + exclude_only."""
+        return [KnownSite(a.id, a.name, a.lat, a.lon) for a in self.analogs] + list(self.exclude_only)
+
 
 def load_known_analogs(path: Path | None = None) -> ValidationSet:
     data = yaml.safe_load((path or CONFIG_DIR / "known_analogs.yaml").read_text(encoding="utf-8"))
+    target_ids = set(load_targets())
     analogs = []
     for a in data["analogs"]:
         if a["test_id"] not in TEST_IDS:
             raise ValueError(f"{a['id']}: bilinmeyen test_id '{a['test_id']}'")
         if a.get("split") not in SPLITS:
             raise ValueError(f"{a['id']}: split {SPLITS} değerlerinden biri olmalı")
-        analogs.append(KnownAnalog(a["id"], a["name"], a["test_id"], a["split"],
-                                   float(a["lat"]), float(a["lon"])))
-    vs = ValidationSet(tuple(analogs), float(data["exclude_radius_km"]),
+        targets = tuple(a.get("targets") or ())
+        if not targets or set(targets) - target_ids:
+            raise ValueError(f"{a['id']}: targets boş ya da tanımsız hedef içeriyor {targets}")
+        analogs.append(KnownAnalog(
+            a["id"], a["name"], a["test_id"], a["split"], targets,
+            float(a["lat"]), float(a["lon"]),
+            tuple(PastTest(**t) for t in a.get("past_tests") or ()),
+            a.get("note", ""),
+        ))
+    exclude_only = tuple(KnownSite(s["id"], s["name"], float(s["lat"]), float(s["lon"]))
+                         for s in data.get("exclude_only") or ())
+    ids = [a.id for a in analogs] + [s.id for s in exclude_only]
+    if len(ids) != len(set(ids)):
+        raise ValueError("known_analogs.yaml: tekrarlanan id var")
+    vs = ValidationSet(tuple(analogs), exclude_only, float(data["exclude_radius_km"]),
                        float(data["top_percent"]), int(data["min_hits"]))
     holdout = len(vs.by_split("holdout"))
     if not 0 < vs.min_hits <= holdout:
@@ -146,6 +176,17 @@ def load_grid_config(path: Path | None = None) -> dict:
     for section in ("grid", "scale", "masks"):
         if section not in data:
             raise ValueError(f"grid.yaml: '{section}' bölümü eksik")
+    for section in ("indices", "ops_tags"):
+        if section not in data:
+            raise ValueError(f"grid.yaml: '{section}' bölümü eksik")
+    params = load_parameters()
+    for key in data["indices"]:
+        if key not in params:
+            raise ValueError(f"grid.yaml > indices: tanımsız parametre '{key}'")
+    for key, spec in data["indices"].items():
+        breaks = spec.get("breaks")
+        if breaks is not None and (len(breaks) != 4 or breaks != sorted(breaks)):
+            raise ValueError(f"grid.yaml > indices > {key}: breaks artan 4 değer olmalı")
     if not 0 < data["masks"]["max_masked_fraction"] <= 1:
         raise ValueError("grid.yaml: max_masked_fraction 0-1 arasında olmalı")
     return data

@@ -15,12 +15,13 @@ from pydantic import BaseModel, Field
 Body = Literal["moon", "mars"]
 TestId = Literal["rover", "ice_drilling", "lava_tube", "dust", "biosignature"]
 BreakdownKey = Literal["gravity", "atmosphere", "radiation", "liquid_water", "biology"]
-ScoreKey = Literal["topography", "geology", "climate", "operations"]
+# Operasyon bilgisi puan değil: Analog.ops_tags (kartta ✓/✗).
+ScoreKey = Literal["topography", "geology", "climate"]
 
 BODIES: tuple[str, ...] = ("moon", "mars")
 TEST_IDS: tuple[str, ...] = ("rover", "ice_drilling", "lava_tube", "dust", "biosignature")
 BREAKDOWN_KEYS: tuple[str, ...] = ("gravity", "atmosphere", "radiation", "liquid_water", "biology")
-SCORE_KEYS: tuple[str, ...] = ("topography", "geology", "climate", "operations")
+SCORE_KEYS: tuple[str, ...] = ("topography", "geology", "climate")
 
 
 # --- Hedef (targets.geojson -> feature.properties) ---------------------------
@@ -60,7 +61,6 @@ class Scores(BaseModel):
     topography: float | None = Field(default=None, ge=0, le=100)
     geology: float | None = Field(default=None, ge=0, le=100)
     climate: float | None = Field(default=None, ge=0, le=100)
-    operations: float | None = Field(default=None, ge=0, le=100)
 
 
 class Analog(BaseModel):
@@ -73,7 +73,7 @@ class Analog(BaseModel):
     score_total: float = Field(ge=0, le=100)
     scores: Scores
     params: list[AnalogParam]
-    ops_tags: dict[str, bool] = {}
+    ops_tags: dict[str, bool] = {}  # road_access, remote (config/grid.yaml > ops_tags)
     breakdown: list[BreakdownKey]
     past_tests: list[PastTest] = []
     ai_comment: str = ""

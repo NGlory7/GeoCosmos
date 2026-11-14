@@ -37,14 +37,14 @@ Jüriye vaadimiz: Tek bir "benzerlik yüzdesi" değil, test amacına göre veriy
 | Challenge ne istiyor | GeoCosmos'ta nasıl karşılanıyor |
 | --- | --- |
 | Dünya genelinde sistematik arama | Tüm karalar iki aşamalı ızgarayla taranıyor (25 km → 5 km) |
-| Görsel benzerliğin ötesine geç | 4 boyutlu skor (topoğrafya, jeoloji, iklim, operasyon), her sayı NASA verisinden |
+| Görsel benzerliğin ötesine geç | 3 boyutlu skor (topoğrafya, jeoloji, iklim) + operasyon etiketleri, her sayı NASA/ajans verisinden |
 | Analojinin koptuğu yeri göster | Her kartta kopma kutusu ve parametre bazında "benzemiyor" işareti |
 | Bilinen yerleri tekrarlama | Ünlü analoglar sadece doğrulama seti; keşif modu yeni aday buluyor |
 | Ay üssü adayları / Mars iniş alanları | Artemis güney kutbu bölgeleri, Arcadia Planitia gibi gelecek görev hedefleri |
 | Süreçleri düşün | Test amaçları süreç bazlı: toz ve rüzgar aşınması, donmuş zemin, suyla oluşan karbonat |
 | Keşifle bağlantı kur | 5 test amacı gerçek görev ihtiyaçlarından geliyor |
 | Yaratıcı yöntem | Amaca göre ağırlıklı benzerlik + Gemini ile serbest metinden parametre çıkarma |
-| NASA ve diğer ajans verisi | SRTM, MODIS, ASTER, EMIT, MOLA, THEMIS, LOLA, Diviner, ESA WorldCover |
+| NASA ve diğer ajans verisi | NASA: Earthdata (MODIS, GPM IMERG, ASTER GED, EMIT, SEDAC), Worldview, PDS (MOLA, TES, THEMIS, CRISM), LRO (LOLA, Diviner, LEND, Mini-RF) · ESA: Copernicus DEM, Sentinel, WorldCover, CCI Permafrost · JAXA: GSMaP · CSA: RADARSAT ([DATA_SOURCES.md](DATA_SOURCES.md)) |
 
 ## Ürün ve kullanıcı akışı
 
@@ -83,17 +83,21 @@ Her sayının bir kaynağı var. Elle girilen her değer `"kaynak": "elle — <m
 
 ### Parametreler ve kaynaklar
 
+Ayrıntılı kaynak haritası, formüller ve kapsam boşlukları: **[DATA_SOURCES.md](DATA_SOURCES.md)**.
+
 | Parametre | Dünya verisi | Mars verisi | Ay verisi | Skor |
 | --- | --- | --- | --- | --- |
-| Eğim ve pürüzlülük | SRTM | MOLA | LOLA | Topoğrafya |
-| Yüzey sıcaklığı, gece-gündüz farkı | MODIS LST | THEMIS, TES | Diviner | İklim |
-| Yüzey malzemesi ve mineral | ASTER, EMIT | CRISM, TES | LROC, Lunar Prospector | Jeoloji |
-| Kuraklık ve bitki yokluğu | MODIS NDVI, GPM yağış | Hep kuru (sabit) | Hep kuru (sabit) | İklim |
-| Toz ve aerosol | MODIS AOD, MERRA-2 | TES toz opaklığı | Yok | İklim |
-| Buz ve donmuş zemin | Permafrost ve kar örtüsü haritaları | SHARAD, SWIM buz haritaları | Diviner, LRO LEND | Jeoloji |
+| Eğim ve pürüzlülük | Copernicus DEM GLO-30 (ESA) | MOLA (PDS) | LOLA (LRO) | Topoğrafya |
+| Yüzey sıcaklığı, gece-gündüz farkı | MODIS LST | THEMIS, TES (PDS) | Diviner (LRO) | İklim |
+| Mafik yüzey, karbonat | ASTER GED (TIR indeksleri); EMIT sadece ek kanıt | CRISM, TES (PDS) | LROC, Lunar Prospector | Jeoloji |
+| Kuraklık ve bitki yokluğu | GPM IMERG yağış + MODIS NDVI (JAXA GSMaP ile kontrol) | Sabit 1 | Sabit 1 | İklim |
+| Toz ve aerosol | MODIS MAIAC AOD | TES toz opaklığı | Yok (parametre atılır) | İklim |
+| Donmuş zemin | ESA CCI Permafrost | SWIM, SHARAD | LEND, Diviner, Mini-RF (LRO) | Jeoloji |
 | Arazi örtüsü (sadece filtre) | ESA WorldCover | — | — | — |
 
-Mars ve Ay hedefleri için her parametre tek değerdir (Mars Trek / Moon Trek veya makaleden). Operasyonel bilgiler (GPS yokluğu, ulaşım) puan değil, kartta ✓/✗ etiketi olarak gösterilir.
+Mars ve Ay hedefleri için her parametre tek değerdir (PDS ürünleri veya makaleden). Mineral ve buz parametreleri, Dünya indeksleri ile makale bulguları aynı birimde olmadığı için ortak bir 0–1 sıralı ölçeğe çevrilir.
+
+Operasyonel bilgiler puan değil, kartta ✓/✗ etiketi olarak gösterilir: yola erişim (şehre < 6 saat) ve ıssızlık (NASA SEDAC nüfus yoğunluğu < 1 kişi/km²).
 
 ### Doğrulama seti
 
@@ -114,7 +118,10 @@ Mars ve Ay hedefleri için her parametre tek değerdir (Mars Trek / Moon Trek ve
 | Lut Çölü (İran) | Toz ve aşınma | Sınav |
 | Lanzarote lav tüpleri (İspanya) | Lav tüpü ve habitat | Rapor |
 
-**Başarı ölçütü:** 4 sınav yerinden en az 3'ü, kendi test amacında Dünya karelerinin en iyi %1'ine girmeli. Ayrıntılar `config/known_analogs.yaml` dosyasında.
+**Başarı ölçütü:** 4 sınav yerinden en az 3'ü, kendi test amacında ve kendi hedefine göre Dünya karelerinin en iyi %1'ine girmeli. Her yerin hangi hedefe göre puanlanacağı (ör. Salda → Jezero) ve yüzdelik paydası `config/known_analogs.yaml` dosyasında.
+
+- **Ayar yeri olmayan testler** (toz, lav tüpü): Ağırlıkları fiziksel gerekçeyle önceden sabitlendi (`test_profiles.yaml > rationale`), doğrulama sonucuna bakılarak değiştirilmez.
+- **Keşif dışı liste:** Doğrulamada kullanılmayan ama zaten bilinen analoglar (Kuru Vadiler, Rio Tinto, Mauna Kea, Ries…) da "Yeni aday" sayılmaz (`known_analogs.yaml > exclude_only`).
 
 Önceki listeden yapılan değişiklikler:
 
@@ -132,12 +139,13 @@ Tüm Dünya iki aşamada taranır. Ağır işlem Earth Engine'de, puanlama lokal
 | 1. Kaba tarama | Tüm karalar 25 km'lik karelerle puanlanır | ~240 bin kare |
 | 2. Filtre | Yarısından fazlası şehir, tarım, su ya da kalıcı buz olan kareler (ESA WorldCover) çıkarılır; bilinen analoglara 50 km'den yakın kareler doğrulama setine ayrılır | — |
 | 3. Yakın tarama | Her test amacı için en iyi 50–100 karenin çevresi 5 km'lik karelerle yeniden puanlanır | Birkaç bin kare |
-| 4. Elle kontrol | En iyi 3–5 aday Landsat görüntüsüyle incelenir, en ilginç 1–2'si sunuma taşınır | — |
+| 4. Elle kontrol | En iyi 3–5 aday NASA Worldview ve Sentinel-2 görüntüsüyle, lav akıntısı adayları RADARSAT/Sentinel-1 radarıyla, kurak bölgedekiler EMIT mineral haritalarıyla incelenir; en ilginç 1–2'si sunuma taşınır | — |
 
 - 25 km ızgarada 6 parametrelik tablo ~10–20 MB tutar; 8 GB RAM'li laptopta rahat çalışır.
 - Ham uydu verisi laptopa indirilmez. Earth Engine'de karelere küçültülür, sadece sonuç tablosu (CSV) indirilir.
 - Sonucu biz seçmeyiz, motor söyler. Beklenmedik bir aday çıkarsa sunumun en güçlü anı o olur.
-- **Ölçek kuralı:** Eğim ve pürüzlülük çözünürlüğe bağlıdır. SRTM (30 m), MOLA (~463 m) ve LOLA verileri önce 500 m'ye indirilir, eğim ondan sonra hesaplanır. Hem Dünya kareleri hem Ay/Mars hedefleri için aynı kural geçerli (`config/grid.yaml`).
+- **Dünya DEM'i Copernicus:** SRTM 60°K'nin kuzeyini kapsamadığı için Haughton ve Svalbard'da eğim hesaplanamıyordu.
+- **Ölçek kuralı:** Eğim ve pürüzlülük çözünürlüğe bağlıdır. Copernicus DEM (30 m), MOLA (~463 m) ve LOLA verileri önce 500 m'ye indirilir, eğim ondan sonra hesaplanır. Hem Dünya kareleri hem Ay/Mars hedefleri için aynı kural geçerli (`config/grid.yaml`).
 
 ## Mimari ve klasör yapısı
 
@@ -156,7 +164,8 @@ Teknoloji seçimleri, veri sözleşmesi, API, Gemini kuralları ve klasör yapı
 
 - [ ] Resmi kuralları okuyun: Önceden ne hazırlanabilir (kod, veri, sadece fikir)? Teslim şartları neler (video süresi, demo linki, proje sayfası)?
 - [ ] Herkes Google Earth Engine hesabı açsın (onay gecikebilir, en erken iş bu).
-- [ ] Earth Engine'de **tüm karalar için** 25 km'lik tek bir katmanı (SRTM eğim) CSV olarak dışa aktarmayı deneyin. Süreyi not edin.
+- [ ] NASA Earthdata Login ve CEDA hesabı açın; ESA CCI Permafrost dosyasını indirin ([DATA_SOURCES.md](DATA_SOURCES.md#hesaplar-ve-erişim)).
+- [ ] Earth Engine'de **tüm karalar için** 25 km'lik tek bir katmanı (Copernicus DEM eğimi) CSV olarak dışa aktarmayı deneyin. Süreyi not edin.
 - [ ] Gemini API anahtarı alın, ücretsiz kullanım limitlerini not edin.
 - [ ] Moon Trek ve Mars Trek katmanlarını Leaflet'te deneyin. Çalışmazsa B planı statik mozaik görüntü.
 - [ ] 6 hedefin koordinatlarını ve parametre değerlerini kaynaklarıyla `targets.yaml` dosyasına yazın.

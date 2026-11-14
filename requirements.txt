@@ -5,7 +5,8 @@ numpy
 pyarrow
 geopandas
 shapely
-scikit-learn
+xarray
+netCDF4          # ESA CCI Permafrost NetCDF
 matplotlib
 pyyaml
 

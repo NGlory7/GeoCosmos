@@ -33,7 +33,7 @@
 ```mermaid
 flowchart LR
   subgraph Offline["make data (bir kere çalışır)"]
-    EE["Earth Engine<br/>SRTM, MODIS, ASTER, WorldCover"] --> FEAT["pipeline/features.py<br/>grid.parquet"]
+    EE["Earth Engine<br/>Copernicus DEM, MODIS, IMERG, ASTER GED, WorldCover"] --> FEAT["pipeline/features.py<br/>grid.parquet"]
     TREK["Mars Trek / Moon Trek<br/>config/targets.yaml"] --> FEAT
     FEAT --> CORE1["core/scoring.py"]
     CORE1 --> OUT["frontend/public/data<br/>GeoJSON, PNG, JSON"]
@@ -56,8 +56,9 @@ flowchart LR
 | Uydu verisini karelere indirmek | `earthengine-api` | Ağır işlem Google sunucusunda; laptopa sadece tablo iner |
 | Tablo işleri | `pandas`, `numpy` | 240 bin satırı saniyeler içinde puanlar |
 | Coğrafi işler | `geopandas`, `shapely` | Mesafe filtresi, GeoJSON yazma |
-| Normalizasyon | `scikit-learn` | Farklı birimleri (derece, metre, °C) aynı ölçeğe getirir |
+| Normalizasyon | Tolerans formülü (`core/scoring.py`) | Her parametre kendi biriminde, `test_profiles.yaml > tolerance` ile 0–1 benzerliğe çevrilir; ek kütüphane gerekmez |
 | Ölçek eşitleme | Earth Engine `reduceResolution` | Eğim/pürüzlülük öncesi tüm yükseklik verileri 500 m'ye indirilir (`config/grid.yaml`) |
+| NetCDF okuma | `xarray`, `netCDF4` | ESA CCI Permafrost dosyası Earth Engine'de yok; yerelde ızgaraya ortalanır |
 | Ayar dosyaları | `pyyaml` | Hedefler ve ağırlıklar kodda değil, dosyada |
 | Isı haritası | `matplotlib` | Dünya geneli benzerliği PNG olarak çizer |
 | Gemini | `google-genai` | Google'ın resmi Python kütüphanesi |
@@ -129,11 +130,11 @@ Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun il
   "test_id": "biosignature",
   "rank": 1,
   "score_total": 82,
-  "scores": { "topography": 75, "geology": 90, "climate": 80, "operations": 70 },
+  "scores": { "topography": 75, "geology": 90, "climate": null },
   "params": [
-    { "key": "slope_deg", "earth": 4.1, "target": 3.5, "source": "SRTM", "match": true }
+    { "key": "slope_deg", "earth": 4.1, "target": 3.5, "source": "Copernicus DEM GLO-30", "match": true }
   ],
-  "ops_tags": { "road_access": true, "gps_free": false },
+  "ops_tags": { "road_access": true, "remote": true },
   "breakdown": ["gravity", "atmosphere", "liquid_water"],
   "past_tests": [{ "title": "...", "url": "..." }],
   "ai_comment": "..."
@@ -145,9 +146,10 @@ Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun il
 | Alan | Değerler |
 | --- | --- |
 | `body` | `moon`, `mars` |
-| `test_id` | `rover`, `ice_drilling`, `lava_tube`, `dust`, `biosignature` |
+| `test_id` | `rover`, `ice_drilling`, `lava_tube`, `dust`, `biosignature`; `/scenario` sonuçlarında `custom` |
 | `breakdown` | `gravity`, `atmosphere`, `radiation`, `liquid_water`, `biology` |
-| `scores` anahtarları | `topography`, `geology`, `climate`, `operations` |
+| `scores` anahtarları | `topography`, `geology`, `climate`. Değer `null` olabilir: o test amacında o boyuta ağırlık verilmemiştir (radarda boş). Operasyon bilgisi puan değil, `ops_tags` |
+| `ops_tags` anahtarları | `road_access`, `remote` (`config/grid.yaml > ops_tags`) |
 
 ## API
 
@@ -211,7 +213,7 @@ GeoCosmos/
 ├── config/
 │   ├── targets.yaml          # 6 Ay/Mars hedefi + kaynaklar
 │   ├── test_profiles.yaml    # 5 test amacı = 5 ağırlık seti
-│   ├── known_analogs.yaml    # doğrulama seti (ayar / sınav / rapor grupları)
+│   ├── known_analogs.yaml    # doğrulama seti (ayar / sınav / rapor) + keşif dışı bilinen sahalar
 │   └── grid.yaml             # ızgara boyutu, eğim ölçeği, maske kuralları
 │
 ├── data/
@@ -244,6 +246,7 @@ GeoCosmos/
 ├── Makefile
 ├── .env.example
 ├── ARCHITECTURE.md
+├── DATA_SOURCES.md
 ├── ROADMAP.md
 └── README.md
 ```

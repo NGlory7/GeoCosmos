@@ -7,11 +7,13 @@ grid:
   fine_km: 5      # 3. aşama: en iyi karelerin çevresi
 
 # --- Ölçek ---------------------------------------------------------------------
-# Eğim ve pürüzlülük çözünürlüğe bağlıdır: 30 m SRTM ile ~460 m MOLA'dan hesaplanan eğim
-# aynı arazide bile farklı çıkar. Bu yüzden her gök cisminde yükseklik verisi önce
+# Eğim ve pürüzlülük çözünürlüğe bağlıdır: 30 m'lik Dünya DEM'i ile ~460 m MOLA'dan hesaplanan eğim
+# aynı arazide bile farklı çıkar.
+# Dünya DEM'i: Copernicus DEM GLO-30 (küresel). SRTM kullanılmaz: 60°K'nin kuzeyini kapsamıyor
+# (Haughton 75°K, Svalbard 79°K doğrulama yerleri dışarıda kalıyordu). Bu yüzden her gök cisminde yükseklik verisi önce
 # ortak bir taban uzunluğuna indirilir, eğim ve pürüzlülük ondan sonra hesaplanır.
 scale:
-  dem_resample_m: 500        # SRTM, MOLA ve LOLA önce bu çözünürlüğe ortalanır (MOLA ~463 m'ye en yakın)
+  dem_resample_m: 500        # Copernicus DEM, MOLA ve LOLA önce bu çözünürlüğe ortalanır (MOLA ~463 m'ye en yakın)
   slope_baseline_m: 500      # slope_deg: 500 m'lik yükseklik modelinden hesaplanan eğim; kare içinde ortalaması
   roughness_window_km: 5     # roughness_m: 500 m'lik yüksekliğin 5 km pencerede standart sapması; kare içinde ortalaması
 
@@ -29,3 +31,35 @@ masks:
     80: Kalıcı su
   # Doğrulama setindeki yerlerin kareleri maskelenmez: keşif listesine girmezler ama puanlanmaları gerekir.
   never_mask_known_analogs: true
+
+# --- İndeksler -----------------------------------------------------------------
+# Ham uydu değerlerini parametrelere çeviren formüller. Kaynaklar: DATA_SOURCES.md.
+# Eşikler İLK TAHMİN: literatürden (Ninomiya indeksleri) belirlenir; doğrulama "holdout"
+# yerlerine bakılarak DEĞİŞTİRİLMEZ (config/known_analogs.yaml > split).
+indices:
+  aridity:
+    # aridity = w_p * clip(1 - P / precip_wet_mm, 0, 1) + w_v * clip(1 - NDVI / ndvi_dense, 0, 1)
+    precip_wet_mm: 1000      # GPM IMERG V07 yıllık toplam yağış; bunun üstü "kuru değil"
+    ndvi_dense: 0.6          # MODIS NDVI (MOD13A2) yıllık ortalama; bunun üstü "bitkili"
+    w_precip: 0.5
+    w_ndvi: 0.5
+  # ASTER GED (AG100) emisivite bantları b10-b14 -> Ninomiya TIR indeksleri -> 0-1 sıralı ölçek.
+  # breaks: indeks bu değerleri geçtikçe 0 -> 0.25 -> 0.5 -> 0.75 -> 1 basamağına çıkar.
+  mafic_index:
+    formula: b12 / b13
+    breaks: [0.97, 0.99, 1.01, 1.03]
+  carbonate_index:
+    formula: b13 / b14
+    breaks: [1.00, 1.01, 1.02, 1.03]
+  ground_ice:
+    # ESA CCI Permafrost fraction (0-1) doğrudan kullanılır; kare içinde ortalama.
+    source_band: PFR
+
+# --- Operasyon etiketleri (puan değil, kartta ✓/✗) --------------------------------
+ops_tags:
+  road_access:
+    source: Oxford/MAP/accessibility_to_cities_2015_v1_0   # dakika
+    max_minutes: 360
+  remote:
+    source: CIESIN/GPWv411/GPW_Population_Density          # kişi/km²
+    max_density: 1

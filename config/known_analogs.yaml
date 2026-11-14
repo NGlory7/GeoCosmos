@@ -8,8 +8,12 @@
 #            değiştirilirse doğrulama kanıt olmaktan çıkar.
 #   report   Sırası raporlanır ama başarı ölçütüne girmez (yöntemin ölçemediği bir özellik).
 #
-# Başarı ölçütü: holdout yerlerinden en az min_hits tanesi, kendi test amacında
-# Dünya karelerinin en iyi top_percent yüzdesine girmeli.
+# targets: Yerin hangi hedef(ler)e göre puanlanacağı. Birden fazla hedef varsa en iyi sırası alınır.
+#
+# Başarı ölçütü: holdout yerlerinden en az min_hits tanesi, kendi test amacında ve kendi
+# hedef(ler)inde, Dünya karelerinin en iyi top_percent yüzdesine girmeli.
+# Yüzdelik paydası: maske sonrası kalan kareler + doğrulama yerlerinin kendi kareleri
+# (config/grid.yaml > masks). Yerin karesi: koordinatını içeren 25 km'lik kare.
 # (Eski ölçüt "8 yerden 6'sı ilk 3'te" idi: ~240 bin kare arasında ilk 3, 25 km çözünürlükte
 # gerçekçi değil ve ağırlık ayarıyla aynı yerler kullanıldığı için kanıt değeri yoktu.)
 
@@ -23,6 +27,7 @@ analogs:
     name: Holuhraun (İzlanda)
     test_id: rover
     split: tune
+    targets: [mars_jezero, mars_gale]
     lat: 64.85
     lon: -16.83
     past_tests: []
@@ -31,6 +36,7 @@ analogs:
     name: Yungay (Atacama, Şili)
     test_id: biosignature
     split: tune
+    targets: [mars_gale]
     lat: -24.08
     lon: -70.02
     past_tests: []
@@ -39,6 +45,7 @@ analogs:
     name: Haughton Krateri (Devon Adası, Kanada)
     test_id: ice_drilling
     split: tune
+    targets: [mars_arcadia]
     lat: 75.38
     lon: -89.68
     past_tests: []
@@ -48,6 +55,7 @@ analogs:
     name: Hanksville / MDRS çevresi (Utah, ABD)
     test_id: rover
     split: holdout
+    targets: [mars_jezero, mars_gale]
     lat: 38.41
     lon: -110.79
     past_tests: []
@@ -59,6 +67,7 @@ analogs:
     name: Svalbard / Bockfjorden (Norveç)
     test_id: ice_drilling
     split: holdout
+    targets: [mars_arcadia]
     lat: 79.4
     lon: 13.3
     past_tests: []
@@ -67,6 +76,7 @@ analogs:
     name: Salda Gölü kıyısı (Türkiye)
     test_id: biosignature
     split: holdout
+    targets: [mars_jezero]
     lat: 37.55
     lon: 29.68
     past_tests: []
@@ -78,6 +88,7 @@ analogs:
     name: Lut Çölü (İran)
     test_id: dust
     split: holdout
+    targets: [mars_gale]
     lat: 30.5
     lon: 59.0
     past_tests: []
@@ -87,10 +98,31 @@ analogs:
     name: Lanzarote lav tüpleri (İspanya)
     test_id: lava_tube
     split: report
+    targets: [moon_marius_hills]
     lat: 29.16
     lon: -13.44
     past_tests: []
     note: >-
-      Lav tüpleri yer altında; SRTM, MODIS ve ASTER onları göremez. Motor lav_tube testinde sadece
+      Lav tüpleri yer altında; Copernicus DEM, MODIS ve ASTER onları göremez. Motor lav_tube testinde sadece
       "genç bazaltik volkanik arazi"yi ölçebiliyor. Ayrıca ada küçük, 25 km'lik karelerin çoğu deniz.
       Bu yüzden sırası raporlanır ama başarı sayılmaz; kartta bu sınır açıkça yazılmalı.
+
+# --- Sadece keşif dışı bırakılanlar --------------------------------------------
+# Doğrulamada kullanılmayan ama literatürde zaten bilinen analog sahalar. Bunlara
+# exclude_radius_km'den yakın kareler is_new=False olur; yoksa motor bilinen bir yeri
+# "Yeni aday" diye sunardı. Koordinatlar YAKLAŞIK; liste ESA/NASA analog kataloglarından genişletilecek.
+exclude_only:
+  - { id: dry_valleys,      name: "McMurdo Kuru Vadileri (Antarktika)",        lat: -77.5,  lon: 162.0 }
+  - { id: rio_tinto,        name: "Rio Tinto (İspanya)",                        lat: 37.7,   lon: -6.6 }
+  - { id: mauna_kea,        name: "Mauna Kea (Hawaii, ABD)",                    lat: 19.8,   lon: -155.5 }
+  - { id: kilauea,          name: "Kīlauea (Hawaii, ABD)",                      lat: 19.4,   lon: -155.3 }
+  - { id: black_point,      name: "Black Point lav akıntısı (Arizona, ABD)",    lat: 35.7,   lon: -111.5 }
+  - { id: meteor_crater,    name: "Meteor Krateri (Arizona, ABD)",              lat: 35.03,  lon: -111.02 }
+  - { id: craters_moon,     name: "Craters of the Moon (Idaho, ABD)",           lat: 43.4,   lon: -113.5 }
+  - { id: dumont_dunes,     name: "Dumont Dunes (Mojave, ABD)",                 lat: 35.68,  lon: -116.22 }
+  - { id: death_valley,     name: "Death Valley (Kaliforniya, ABD)",            lat: 36.5,   lon: -117.1 }
+  - { id: ries,             name: "Ries Krateri (Almanya)",                     lat: 48.88,  lon: 10.56 }
+  - { id: pilbara,          name: "Pilbara (Avustralya)",                       lat: -21.2,  lon: 119.4 }
+  - { id: pavilion_lake,    name: "Pavilion Gölü (Kanada)",                     lat: 50.87,  lon: -121.74 }
+  - { id: iceland_highlands,name: "İzlanda iç yaylaları (Askja)",               lat: 65.05,  lon: -16.75 }
+  - { id: atacama_core,     name: "Atacama hiper-kurak çekirdek (Şili)",        lat: -24.5,  lon: -69.5 }

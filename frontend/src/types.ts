@@ -4,7 +4,8 @@
 export type Body = "moon" | "mars";
 export type TestId = "rover" | "ice_drilling" | "lava_tube" | "dust" | "biosignature";
 export type BreakdownKey = "gravity" | "atmosphere" | "radiation" | "liquid_water" | "biology";
-export type ScoreKey = "topography" | "geology" | "climate" | "operations";
+// Operasyon bilgisi puan değil: Analog.ops_tags (kartta ✓/✗).
+export type ScoreKey = "topography" | "geology" | "climate";
 
 export interface SourcedValue {
   value: number;
@@ -47,7 +48,7 @@ export interface Analog {
   score_total: number;
   scores: Scores;
   params: AnalogParam[];
-  ops_tags: Record<string, boolean>;
+  ops_tags: Record<string, boolean>; // road_access, remote
   breakdown: BreakdownKey[];
   past_tests: PastTest[];
   ai_comment: string;
