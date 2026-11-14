@@ -11,8 +11,7 @@
 - [Ürün ve kullanıcı akışı](#ürün-ve-kullanıcı-akışı)
 - [Veri ve hedefler](#veri-ve-hedefler)
 - [Global keşif modu](#global-keşif-modu)
-- [Mimari](#mimari)
-- [Klasör yapısı](#klasör-yapısı)
+- [Mimari ve klasör yapısı](#mimari-ve-klasör-yapısı)
 - [Hackathon öncesi hazırlık](#hackathon-öncesi-hazırlık)
 - [48 saatlik plan](#48-saatlik-plan)
 - [Görev dağılımı](#görev-dağılımı)
@@ -128,66 +127,18 @@ Tüm Dünya iki aşamada taranır. Ağır işlem Earth Engine'de, puanlama lokal
 - Ham uydu verisi laptopa indirilmez. Earth Engine'de karelere küçültülür, sadece sonuç tablosu (CSV) indirilir.
 - Sonucu biz seçmeyiz, motor söyler. Beklenmedik bir aday çıkarsa sunumun en güçlü anı o olur.
 
-## Mimari
+## Mimari ve klasör yapısı
 
-Ağır iş önceden yapılır: Python hattı puanları ve Gemini yorumlarını hesaplayıp GeoJSON'a yazar, harita sadece bu dosyaları okur. Canlı çalışan tek parça, serbest metin senaryosu için ince FastAPI backend'idir. Gemini API anahtarı orada durur, tarayıcıya gitmez.
+Teknoloji seçimleri, veri sözleşmesi, API, Gemini kuralları ve klasör yapısı **[ARCHITECTURE.md](ARCHITECTURE.md)** dosyasında. Kısaca:
 
-```mermaid
-flowchart LR
-  subgraph Veri
-    EE["Google Earth Engine<br/>SRTM, MODIS, ASTER, WorldCover"]
-    TREK["Mars Trek / Moon Trek<br/>MOLA, THEMIS, LOLA, Diviner"]
-  end
-  subgraph Analiz["analysis/ (Python, lokal)"]
-    FEAT["Özellik çıkarma"] --> SCORE["Ağırlıklı skor<br/>+ kopma kuralları"]
-    SCORE --> DISC["Global keşif"]
-    SCORE --> VAL["Doğrulama"]
-    SCORE --> LLM["Gemini yorumları<br/>(önceden üretilir)"]
-  end
-  EE --> FEAT
-  TREK --> FEAT
-  DISC --> OUT["frontend/public/data/*.geojson"]
-  VAL --> OUT
-  LLM --> OUT
-  OUT --> UI["Frontend (Leaflet)"]
-  UI -- "serbest metin" --> API["api/ (FastAPI)"]
-  API -- "metin → ağırlık" --> GEM["Gemini"]
-  API --> SCORE
-```
-
-Gemini'nin iki görevi var, ikisinde de **sayı üretmez**:
-
-- **Yorumcu:** Motorun verdiği JSON'u okuyup açıklama yazar. Kural: "Sadece verilen değerleri kullan, yeni sayı ekleme."
-- **Tercüman:** Serbest metni parametre ağırlıklarına çevirir, örneğin `{"toz": 0.5, "egim": 0.3}`. Sıralamayı yine bizim motorumuz yapar.
-
-Benzerlik motoru baştan ağırlık alacak şekilde yazılır. 5 hazır test amacı, aslında 5 hazır ağırlık setidir (`config/test_profiles.yaml`).
-
-## Klasör yapısı
-
-```
-GeoCosmos/
-├── analysis/
-│   ├── config/          # targets.yaml, test_profiles.yaml (ağırlıklar)
-│   ├── data/
-│   │   ├── raw/         # gitignore
-│   │   └── processed/
-│   ├── notebooks/
-│   ├── processing/      # Earth Engine export, özellik çıkarma
-│   ├── similarity/      # ağırlıklı skor, kopma kuralları
-│   ├── discovery/       # global kaba + yakın tarama, filtreler
-│   ├── validation/      # ünlü analog testi
-│   ├── llm/             # Gemini yorum üretimi (önceden)
-│   ├── main.py          # çıktıları frontend/public/data'ya yazar
-│   └── requirements.txt
-├── api/                 # FastAPI: /scenario (Gemini tercüman + motor)
-├── frontend/
-│   ├── public/data/     # targets.geojson, analogs_*.geojson, discovery.geojson, validation.json
-│   └── src/             # components, pages, services
-├── docs/                # rapor, sunum, video
-├── .env.example
-├── ROADMAP.md
-└── README.md
-```
+| Katman | Seçim |
+| --- | --- |
+| Veri işleme | Python + Earth Engine + pandas/geopandas |
+| Backend | FastAPI (tek canlı endpoint: `/scenario`) |
+| AI | Gemini (`google-genai`), JSON şemalı çıktı; sayı üretmez |
+| Veri saklama | Parquet + GeoJSON + PNG (veritabanı sunucusu yok) |
+| Frontend | React + Vite + Leaflet + Recharts + Tailwind |
+| Yayınlama | Frontend: GitHub Pages / Vercel · Backend: Render / HF Spaces |
 
 ## Hackathon öncesi hazırlık
 
@@ -200,6 +151,7 @@ GeoCosmos/
 - [ ] Doğrulama setindeki 8 yer için geçmiş test kaynaklarını (link) toplayın.
 - [ ] Her test amacı için ağırlıkların ilk taslağını yazın (`test_profiles.yaml`).
 - [ ] Repo, klasör iskeleti, `.gitignore` ve rol dağılımı hazır olsun.
+- [ ] Veri sözleşmesini ([ARCHITECTURE.md](ARCHITECTURE.md#veri-sözleşmesi)) birlikte okuyun; hackathonun ilk 2 saatinde dondurulacak.
 
 ## 48 saatlik plan
 
