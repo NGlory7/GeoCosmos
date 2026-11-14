@@ -16,6 +16,7 @@ scale:
   dem_resample_m: 500        # Copernicus DEM, MOLA ve LOLA önce bu çözünürlüğe ortalanır (MOLA ~463 m'ye en yakın)
   slope_baseline_m: 500      # slope_deg: 500 m'lik yükseklik modelinden hesaplanan eğim; kare içinde ortalaması
   roughness_window_km: 5     # roughness_m: 500 m'lik yüksekliğin 5 km pencerede standart sapması; kare içinde ortalaması
+                             # (pencere piksel cinsinden kurulur: 11 x 11 piksel = 5,5 km)
 
 # --- Maskeler ------------------------------------------------------------------
 # ESA WorldCover sınıfları. Bir karenin max_masked_fraction'dan fazlası bu sınıflardansa
@@ -67,9 +68,13 @@ ops_tags:
 # --- Earth Engine exportu (pipeline/ee_export.py) -----------------------------------
 # Ham veri laptopa inmez: Earth Engine'de karelere ortalanır, sadece CSV tablo iner.
 export:
-  projection: EPSG:6933        # EASE-Grid 2.0, eşit alanlı: her kare aynı km²
-  lat_range: [-86, 84]         # EPSG:6933 ±86°'ye kadar geçerli
-  stripe_deg: 10               # export enlem şeritlerine bölünür (B planı: zaman aşımına karşı)
+  # Izgara: her enlem şeridi kendi orta enleminde gerçekten kare olan coğrafi bir projeksiyon
+  # kullanır (pipeline/ee_export.py > local_projection). Tek bir küresel projeksiyon her enlemde
+  # kare veremez: eşit alanlı EPSG:6933'te 79°K'de 25 km'lik "kare" ~5 x 117 km olur, 500 m'lik
+  # DEM pikseli de ~0,1 x 2,3 km'lik bir şeride döner ve eğim enleme göre değişirdi.
+  lat_range: [-86, 84]         # güneyi Antarktika buz tabakası, kuzeyi Grönland buzu (ikisi de maskeli)
+  max_stretch: 1.1             # şeridin iki kenarı arası doğu-batı uzama sınırı: kare boyu şerit içinde ±%5
+  max_stripe_deg: 10           # şerit en fazla bu kadar geniş (B planı: zaman aşımına karşı küçük görevler)
   date_range: ["2019-01-01", "2024-01-01"]       # MODIS LST, NDVI, IMERG için 5 yıl
   aod_date_range: ["2022-01-01", "2024-01-01"]   # MAIAC granülleri ağır: 2 yıl yeter
   nodata: -9999                # Kara üzerinde verisi olmayan hücre (features.py NaN'a çevirir)
