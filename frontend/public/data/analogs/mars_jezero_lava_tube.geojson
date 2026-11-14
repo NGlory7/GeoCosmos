@@ -73,7 +73,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.29°K, 56.98°D koordinatlarında bulunan bölge, 91.1 toplam skor ile Jezero Krateri hedefindeki \"Lav tüpü ve yeraltı habitatı\" testi için potansiyel sunmaktadır. Topografi skorunun 98.8, jeoloji skorunun ise 100.0 olduğu bu sahada; mafik / bazaltik yüzey (0.75), yüzey pürüzlülüğü (Dünya'da 30.43 m, hedefte 29.6 m), ortalama eğim (Dünya'da 1.19°, hedefte 1.11°) ve kuraklık (Dünya'da 0.81, hedefte 1.0) parametreleri hedefe benzerlik göstermektedir. Ayrıca bölgede yol erişimi (road_access: true) bulunmakta ve alan uzak (remote: false) bir konumda yer almamaktadır.\n\nBuna karşın, iklim skorunun 57.7'de kalması ve gece-gündüz sıcaklık farkının Dünya'da 22.74 °C iken hedefte 54.8 °C olması önemli bir uyumsuzluk yaratmaktadır. Bunların yanı sıra yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir, küresel manyetik alan bulunmamaktadır, yüzey radyasyonu Dünya'dan çok yüksektir, atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, toz taşınımı farklı işler ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -148,7 +148,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "15.26°K, 48.72°D koordinatlarında yer alan bu bölge, Jezero Krateri hedefindeki \"Lav tüpü ve yeraltı habitatı\" testi için 89.4 toplam skorla değerlendirilmiştir. Bölgenin iyi bir test sahası olabileceğini gösteren başlıca parametreler arasında jeoloji skoru (100.0) ve topoğrafya skorları (topografi için 96.1) yer almaktadır. Ayrıca mafik / bazaltik yüzey değeri Dünya'da 0.75 olarak hedefle birebir uyuşmakta; yüzey pürüzlülüğü (30.51 m - hedef 29.6 m), ortalama eğim (2.12° - hedef 1.11°) ve kuraklık (0.82 - hedef 1.0) parametreleri de benzerlik göstererek (\"benziyor\": true) uyum sağlamaktadır. Operasyonel açıdan yol erişimi bulunmakta (road_access: true) ve bölge uzakta yer almamaktadır (remote: false).\n\nBuna karşın, iklim skoru (54.0) düşük kalmış olup gece-gündüz sıcaklık farkı Dünya'da 18.02 °C iken hedefte 54.8 °C ölçülerek uyuşmamıştır (\"benziyor\": false). Kopma noktaları olarak; yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Atmosfer çok ince olup ~%0,6 oranında ve çoğunlukla CO₂'den oluşmaktadır, ayrıca toz taşınımı farklı işlemektedir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -223,7 +223,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "9.61°K, 50.80°D koordinatlarında yer alan bu bölge, Jezero Krateri hedefi için yürütülen lav tüpü ve yeraltı habitatı testlerine toplam 89.4 skorla uyum göstermektedir. Jeoloji boyutu 100.0, topografya boyutu ise 99.1 skoruna ulaşmıştır. Mafik / bazaltik yüzey verisi Dünya'da 0.75 iken hedefte de 0.75 olarak eşleşmektedir. Yüzey pürüzlülüğü Dünya'da 29.2 m, hedefte 29.6 m; ortalama eğim ise Dünya'da 1.28°, hedefte 1.11° ölçülerek uyumlu bulunmuştur. Ayrıca kuraklık derecesi Dünya'da 0.8, hedefte 1.0 olarak benzerlik göstermektedir.\n\nBuna karşın iklim boyutu 48.5 skorunda kalmıştır ve gece-gündüz sıcaklık farkı Dünya'da 13.01 °C iken hedefte 54.8 °C olarak eşleşmemektedir. Bölge, karayolu erişimi barındırmayan (road_access: false) ve uzak konumda yer almayan (remote: false) özellikler taşımaktadır. Ayrıca bu test sahası, Jezero Krateri hedefiyle kıyaslandığında yerçekiminin Dünya'nın yaklaşık %38'i (3,71 m/s²) olması, küresel manyetik alanın bulunmaması, yüzey radyasyonunun Dünya'dan çok yüksek olması, atmosferin çok ince (~%0,6) ve çoğunlukla CO₂ içermesi, toz taşınımının farklı işlemesi ile yıllık ortalama yüzey sıcaklığının hedefe göre yaklaşık −40 ile −75 °C arasında değişmesi ve Dünya'daki çöl analoglarından onlarca derece soğuk olması gibi çevresel farklılıklar barındırmaktadır."
    }
   },
   {
@@ -298,7 +298,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "17.75°K, 55.20°D koordinatlarında bulunan 17.75°K, 55.20°D bölgesi, 89.1 toplam skor ile Jezero Krateri hedefindeki lav tüpü ve yeraltı habitatı testleri için uygun bir test sahası potansiyeli taşımaktadır. Jeoloji alt skorunun 100.0, topografya alt skorunun ise 94.8 olması bu durumu desteklemektedir. Parametre bazında incelendiğinde; mafik / bazaltik yüzey değerinin Dünya'da 0.75 olup hedefle birebir uyuştuğu, yüzey pürüzlülüğünün Dünya'da 32.04 m iken hedefte 29.6 m olduğu, ortalama eğimin Dünya'da 1.97° ve hedefte 1.11° ölçüldüğü ve kuraklık değerinin Dünya'da 0.83 iken hedefte 1.0 olduğu görülmektedir; ayrıca bu parametrelerin tümü eşleşmektedir (benziyor: true). Yol erişimi (road_access: true) ve uzak konum (remote: true) özellikleri de operasyonel olarak bu sahanın kullanılabilirliğini göstermektedir.\n\nBuna karşın, iklim alt skorunun 54.7'de kalması bazı belirgin uyumsuzlukları ortaya koymaktadır. Gece-gündüz sıcaklık farkı Dünya'da 17.6 °C ik엄ken hedefte 54.8 °C'dir ve bu parametre eşleşmemektedir (benziyor: false). Ayrıca, yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur. Kopma noktaları olarak; yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, küresel manyetik alan bulunmamaktadır, yüzey radyasyonu Dünya'dan çok yüksektir, atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir ve toz taşınımı farklı işlemektedir."
    }
   },
   {
@@ -373,7 +373,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "24.08°K, 55.93°D koordinatlarında yer alan bu bölge, 89.0 toplam skor ile Jezero Krateri hedefindeki lav tüpü ve yeraltı habitatı testleri için bazı avantajlar sunmaktadır. Jeoloji alanında 100.0 tam puan alan bölge, bazaltik/mafik yüzey özellikleri açısından hedefle tam uyum göstermektedir (0.75 değer). Ayrıca yüzey pürüzlülüğü (22.66 metreye karşılık 29.6 metre), ortalama eğim (0.85 dereceye karşılık 1.11 derece) ve kuraklık (0.87 değere karşılık 1.0 değer) gibi topografya ve iklim parametrelerinde (topografya skoru 91.3) hedefle benzerlik göstererek (\"benziyor\": true) test sahası olmaya elverişli yönler barındırmaktadır. Öte yandan, operasyonel olarak yol erişimine sahip olması ve uzak bir konumda olmaması da dikkat çekmektedir.\n\nBuna karşın, iklim skorunun 60.0'da kalması ve gece-gündüz sıcaklık farkı parametresinin (Dünya'da 19.59 °C iken hedefte 54.8 °C) eşleşmemesi (\"benziyor\": false) önemli farklılıklar arasındadır. Bununla birlikte, Jezero Krateri hedefi ile bu Dünya sahası arasında çevresel ve fiziksel koşullardan kaynaklanan temel kopma noktaları bulunmaktadır: Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır; küresel manyetik alan yoktur; yüzey radyasyonu Dünya'dan çok yüksektir; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir; toz taşınımı farklı işler; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {

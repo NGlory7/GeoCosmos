@@ -73,7 +73,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "10.74°K, 48.95°D konumundaki bölge, toplam 86.2 skorla Marius Hills çukuru hedefindeki lav tüpü ve yeraltı habitatı testleri için bazı kategorilerde yüksek uyum göstermektedir. Özellikle jeoloji boyutu 100.0, topografi boyutu ise 98.1 skor almıştır. Mafik / bazaltik yüzey değeri Dünya'da ve hedefte 1.0 olarak eşleşirken; yüzey pürüzlülüğü Dünya'da 34.25 m, hedefte 33.1 m; ortalama eğim Dünya'da 1.74°, hedefte 1.52° ve kuraklık derecesi Dünya'da 0.81 iken hedefte 1.0 ölçülmüş ve bu parametrelerin tamamı benzer bulunmuştur. Ayrıca yol erişimi mevcuttur ve uzaktan değildir.\n\nBuna karşın, iklim boyutu 34.3 gibi düşük bir skor almıştır ve gece-gündüz sıcaklık farkı Dünya'da 15.61 °C iken hedefte 295.0 °C olarak büyük bir uyumsuzluk göstermiştir. Bu durumun yanı sıra, kopma noktaları olarak şu fiziksel farklılıklar dikkat çekmektedir: Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ve atmosfer koruması bulunmamakta olup, yüzey doğrudan kozmik ışına açıktır. Atmosfer yok denecek kadar incedir; rüzgar aşınması ve ısı taşınımı yoktur. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve Dünya'da bunun karşılığı yoktur."
    }
   },
   {
@@ -148,7 +148,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya üzerindeki bu bölge, 84.4 toplam skoru ve 100.0 jeoloji ile 90.0 topografya boyut skorlarıyla Ay'daki Marius Hills çukuru hedefi için bazı benzerlikler göstermektedir. ASTER GED TIR verilerine göre 1.0 olan mafik ve bazaltik yüzey yapısı, Copernicus DEM GLO-30 verisine dayanarak 24.88 m olan ve hedefteki 33.1 m değere yakın yüzey pürüzlülüğü, 1.32° ortalama eğimin hedefteki 1.52° ile uyumu ve GPM IMERG V07 ile MODIS NDVI verilerine göre 0.87 olan kuraklık derecesinin hedefteki 1.0 değerine yakınsaması (`match`: true) bölgenin test sahası olabilmesini destekleyen parametrelerdir. Ayrıca `road_access` durumunun true ve `remote` durumunun false olması operasyonel olarak benzerlik sunmaktadır.\n\nBuna karşın, 39.5 gibi düşük bir iklim boyut skoruna sahip olan bölge MODIS LST verilerine göre 20.32 °C gece-gündüz sıcaklık farkı barındırırken, hedefte bu değer 295.0 °C olarak ölçülmüştür ve bu parametre eşleşmemektedir (`match`: false). Bu durumun yanı sıra, kopma noktaları olarak belirtilen hususlar da mevcuttur: Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ve atmosfer koruması bulunmamakta olup yüzey doğrudan kozmik ışına açıktır. Atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı yoktur. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyelerindedir ve Dünya'da bunun bir karşılığı bulunmamaktadır."
    }
   },
   {
@@ -223,7 +223,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "71.33°K, 124.53°D koordinatlarındaki bölge, toplam 84.1 skorla Marius Hills çukuru hedefindeki lav tüpü ve yeraltı habitatı testleri için uygun bir saha adayı olarak öne çıkmaktadır. Jeoloji skorunun 100.0, topografya skorunun ise 97.5 olması; mafik / bazaltik yüzey yapısının hedef ile tam uyumlu (1.0) olmasından, ayrıca yüzey pürüzlülüğü (Dünya'da 31.77, hedefte 33.1) ve ortalama eğim (Dünya'da 1.88°, hedefte 1.52°) değerlerinin yakınlık göstermesinden kaynaklanmaktadır. Kuraklık parametresinde de Dünya için 0.7 ve hedef için 1.0 değerleriyle benzerlik sağlanmaktadır.\n\nBuna karşın, iklim skorunun 25.1'de kalması önemli farklılıklara işaret etmektedir. Gece-gündüz sıcaklık farkı Dünya'da 4.11 °C iken hedefte 295.0 °C olarak ölçülmekte ve bu durum eşleşmemektedir. Ayrıca yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) düzeyinde olduğundan toz ve tekerlek davranışı farklılık gösterir; manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ve ısı taşınımı yoktur; yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesine ulaşmakta olup bunların Dünya'da karşılığı bulunmamaktadır."
    }
   },
   {
@@ -298,7 +298,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "72.91°K, 92.12°B konumundaki bu bölge, 84.1 toplam skor ve 100.0 jeoloji boyutu skoruyla Marius Hills çukuru hedefi için bazı önemli alanlarda benzerlik göstermektedir. ASTER GED (AG100) TIR veri kaynağına göre mafik / bazaltik yüzey parametresinde tam uyum sağlanırken; Copernicus DEM GLO-30 verilerine dayanan yüzey pürüzlülüğü (24.79 - 33.1 m) ve ortalama eğim (1.08° - 1.52°) değerleri ile GPM IMERG V07 ve MODIS NDVI kaynaklı kuraklık parametresi (\"benziyor\": true) test sahası için olumlu eşleşmeler sunmaktadır.\n\nBuna karşın, MODIS LST (MOD11A2) verilerine göre Dünya'da 2.82 °C olan gece-gündüz sıcaklık farkı hedefte 295.0 °C olarak ölçülmüş ve bu parametre eşleşmemiştir (\"benziyor\": false). Ayrıca, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ile atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır; atmosfer yok denecek kadar ince olduğu için rüzgar aşınımı ve ısı taşınımı yoktur. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve bu koşulların Dünya'da karşılığı bulunmamaktadır. Bölge karayolu erişimine kapalı olup uzaktan erişim gerektirmektedir."
    }
   },
   {
@@ -373,7 +373,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "69.98°K, 150.94°D koordinatlarında yer alan bu bölge, 83.9 toplam skoruyla Ay'daki Marius Hills çukuru hedefindeki lav tüpü ve yeraltı habitatı testleri için belirli alanlarda uyumluluk göstermektedir. Jeoloji boyutu 100.0, topografya boyutu ise 98.1 skoru almıştır. Mafik / bazaltik yüzey (dünya ve hedef 1.0), yüzey pürüzlülüğü (dünya 32.35 m, hedef 33.1 m) ve ortalama eğim (dünya 1.89°, hedef 1.52°) parametrelerinde sağlanan eşleşmeler, bu sahanın yapısal ve yüzey morfolojisi özellikleri bakımından potansiyel taşıdığını göstermektedir. Ayrıca bölge yol erişimine kapalı ve uzaktır.\n\nBuna karşın iklim boyutu 23.1 gibi düşük bir skorla sınırlı kalmış olup, gece-gündüz sıcaklık farkı (dünya 5.69 °C, hedef 295.0 °C) ve kuraklık (dünya 0.68, hedef 1.0) parametrelerinde uyumsuzluk yaşanmaktadır. Kopma noktaları arasında yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması ve buna bağlı olarak toz ile tekerlek davranışının farklılaşması yer almaktadır. Ayrıca manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır; atmosfer yok denecek kadar ince olduğu için rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyelerindedir ve Dünya'da birebir karşılığı bulunmamaktadır."
    }
   },
   {

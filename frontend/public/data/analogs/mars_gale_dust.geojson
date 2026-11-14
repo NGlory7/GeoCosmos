@@ -72,7 +72,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.29°K, 82.46°D koordinatlarındaki bu saha, toplam 78.6 skoru ile toz fırtınası ve aşınma testleri için belirli alanlarda yüksek bir benzerlik sunmaktadır. Topografya skoru 77.0 ve iklim skoru 79.0 olarak gerçekleşmiştir. Parametre detaylarına bakıldığında; toz/aerosol optik derinliği (Dünya'da 0.44, hedefte 0.43), kuraklık indeksi (Dünya'da 0.89, hedefte 1.0), ortalama eğim (Dünya'da 17.28°, hedefte 10.51°) ve yüzey pürüzlülüğü (Dünya'da 287.36 m, hedefte 286.9 m) değerlerinin tümü \"benziyor: true\" eşleşmesine sahip olup, sahanın bu özellikler bakımından hedefe yakın koşullar barındırdığını göstermektedir.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde Dünya'da 18.03 °C olan değer hedefte 64.5 °C olarak ölçülmüş ve bu durum \"benziyor: false\" olarak değerlendirilmiştir. Bu kopma noktasının yanı sıra, yerçekiminin Dünya'nın yaklaşık %38'i (3,71 m/s²) seviyesinde kalması, atmosferin çok ince (~%0,6) ve çoğunlukla CO₂'den oluşması nedeniyle toz taşınımı farklı işlemektedir. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, sahanın bulunduğu Dünya'daki çöl analoglarından onlarca derece soğuk kalması temel farklılıkları oluşturmaktadır. Sahanın yol erişimi bulunmamakta olup uzaktan erişilebilirdir ve yeni bir adaydır."
    }
   },
   {
@@ -146,7 +146,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "37.19°K, 85.68°D koordinatlarındaki bu saha, Gale Krateri hedefiyle yapılan toz fırtınası ve aşınma testleri için 76.5 toplam skor sunmaktadır. Topografi (73.0) ve iklim (77.4) alt skorlarıyla öne çıkan bu alan; toz / aerosol optik derinliği (Dünya'da 0.4, hedef 0.43), kuraklık (Dünya'da 0.9, hedef 1.0), ortalama eğim (Dünya'da 16.84°, hedef 10.51°) ve yüzey pürüzlülüğü (Dünya'da 281.0 m, hedef 286.9 m) parametrelerinde hedefe uyum göstermektedir. Yol erişimi bulunmayan ve uzaktan işletilen bu yeni aday saha, bu yönleriyle test süreçleri için elverişli koşullar barındırmaktadır.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde (Dünya'da 15.05 °C, hedef 64.5 °C) uyum sağlanamamıştır. Ayrıca yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, bu nedenle toz taşınımı farklı işler. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Bu temel fiziksel ve çevresel farklar, test sürecindeki belirgin kopma noktalarını oluşturmaktadır."
    }
   },
   {
@@ -220,7 +220,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Gale Krateri hedefi için değerlendirilen 38.10°K, 87.41°D konumundaki saha, toplam 75.2 skoruyla (topografya 76.5, iklim 74.8) test için uygun koşullar sunmaktadır. Toz ve aerosol optik derinliği (550 nm) değerlerinde Dünya'da 0.37, hedefte ise 0.43 ölçülerek eşleşme sağlanmıştır. Kuraklık derecesi Dünya'da 0.87 iken hedefte 1.0 olarak benzerlik göstermiştir. Ortalama eğim Dünya'da 17.42°, hedefte 10.51° bulunurken; yüzey pürüzlülüğü değerleri sırasıyla 286.48 m ve 286.9 m ile oldukça yakın seyretmiş ve bu parametrelerin tamamı eşleşmiştir. Ayrıca yol erişimi bulunmayıp uzaktan operasyon gerektirmektedir.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde Dünya'da 17.07 °C olan değer, hedefte 64.5 °C olarak ölçülmüş ve bu durum eşleşmemiştir. Ek olarak, yerçekimi Dünya'nın %38'i (3,71 m/s²) kadardır; atmosfer çok ince (%0,6 civarı) ve çoğunlukla CO₂'dir; toz taşınımı farklı işlemektedir. Yıllık ortalama yüzey sıcaklığı ise hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuk kalmaktadır."
    }
   },
   {
@@ -294,7 +294,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "34.48°K, 78.44°D konumundaki bu bölge, toz fırtınası ve aşınma testleri için 75.0 toplam skorla değerlendirilmiştir. Topografya skoru 76.0 ve iklim skoru 74.8 olarak hesaplanan bu saha; 0.33 Dünya ve 0.43 hedef optik derinlik değerleri, 0.93 Dünya ve 1.0 hedef kuraklık oranları, 17.39° Dünya ve 10.51° hedef ortalama eğimleri ile 288.01 m Dünya ve 286.9 m hedef yüzey pürüzlülüğü parametrelerinde benzerlik göstermektedir.\n\nÖte yandan, 15.98 °C Dünya ve 64.5 °C hedef gece-gündüz sıcaklık farkı parametresinde benzerlik görülmemektedir. Ayrıca yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, toz taşınımı farklı işler ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında olup Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {
@@ -368,7 +368,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.77°K, 88.88°D koordinatlarındaki bu saha, toplam 74.6 skorla \"Toz fırtınası ve aşınma\" testi için belirli parametrelerde Gale Krateri'ne benzerlik göstermektedir. 550 nm'deki toz / aerosol optik derinliği (Dünya'da 0.32, hedefte 0.43), kuraklık seviyesi (Dünya'da 0.9, hedefte 1.0), ortalama eğim (Dünya'da 16.32°, hedefte 10.51°) ve yüzey pürüzlülüğü (Dünya'da 285.0 m, hedefte 286.9 m) gibi değerler eşleşmektedir (`match: true`). Ayrıca yol erişimi bulunmamakta ve bölge uzaktan erişim gerektirmektedir.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde (Dünya'da 19.25 °C, hedefte 64.5 °C) belirgin bir uyumsuzluk vardır (`match: false`). Bu saha testleri sırasında dikkate alınması gereken temel kopma noktaları şunlardır: Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir; toz taşınımı farklı işler; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {

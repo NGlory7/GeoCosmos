@@ -60,7 +60,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "40.58°K, 88.58°D koordinatlarında yer alan bu saha, Arcadia Planitia hedefi için 89.5 toplam skorla değerlendirilmiştir. Motor çıktısına göre kuraklık derecesi Dünya'da 0.96 iken hedefte 1.0 olarak tam eşleşme sağlamaktadır. Ayrıca gece-gündüz sıcaklık farkı Dünya'da 27.08 °C, hedefte 41.4 °C; toz ve aerosol optik derinliği ise her iki alanda da 0.33 olarak ölçülmüş ve bu parametreler \"match: true\" (benziyor) olarak doğrulanmıştır. Uzaktan erişime uygun olan bu yeni aday bölgeye karayolu erişimi bulunmamaktadır.\n\nÖte yandan, saha ile hedef arasında belirgin kopma noktaları mevcuttur. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir. Bugün yüzeyde kalıcı sıvı su yokken Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratmaktadır; küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -122,7 +122,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.10°K, 83.87°D koordinatlarındaki bölge, \"Biyo-imza: aşırı kuraklıkta korunma\" testi için toplam 88.6 (iklim boyutu: 88.6) skorla değerlendirilmiştir. Kuraklık parametresinde Dünya değeri 0.94 iken hedef 1.0 olarak belirlenmiş ve bu parametre eşleşmiştir (\"match\": true). Ayrıca gece-gündüz sıcaklık farkı Dünya'da 27.79 °C iken hedefte 41.4 °C, toz/aerosol optik derinliği (550 nm) ise Dünya'da 0.32 iken hedefte 0.33 olarak ölçülmüş ve bu parametreler de benzerlik göstermiştir. Yol erişimi ve uzaktan operasyon imkanları bulunmamaktadır.\n\nBuna karşın, bazı temel çevresel ve fiziksel kopma noktaları mevcuttur. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yoktur, ancak Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşam vardır ve bu durum biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çokseviyelidir. Yıllık ortalama yüzey sıcaklığı hedef bölgeye göre yaklaşık −40 ile −75 °C arasındadır ve bu değerler Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {
@@ -184,7 +184,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.06°K, 83.00°D konumundaki Dünya sahası, Arcadia Planitia hedefi için \"Biyo-imza: aşırı kuraklıkta korunma\" testinde toplam 88.6 (iklim alt skoru da 88.6) puan almıştır. Bu bölge, 0.95 olan Dünya kuru değerinin hedefin 1.0 tam kuru seviyesine yakınlığı (kuraklık parametresi), 28.83 °C olan gece-gündüz sıcaklık farkının hedefin 41.4 °C değerine yakınlığı ve 0.37 olan toz/aerosol optik derinliğinin hedefin 0.33 değerine olan uyumu (\"benziyor\": true) nedeniyle test için uygun parametreler sunmaktadır. Saha, uzaktan operasyona uygun olup yol erişimi bulunmamaktadır.\n\nÖte yandan, motor çıktısına göre bu saha her parametrede hedefi tam olarak karşılamamaktadır. Kopma noktaları arasında yerçekiminin Dünya'nın ~%38'i (3,71 m/s²) olması, bugün yüzeyde kalıcı sıvı su bulunmazken Dünya sahalarında su döngüsünün sürmesi ve modern yaşamın biyo-imza testinde kirlilik riski yaratması yer almaktadır. Ayrıca küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, bu değer Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {
@@ -246,7 +246,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "40.36°K, 89.76°D koordinatlarındaki bölge, \"Biyo-imza: aşırı kuraklıkta korunma\" testi için toplam 88.6 skorla değerlendirilmiştir. Kuraklık derecesi (Dünya'da 0.95, hedefte 1.0), gece-gündüz sıcaklık farkı (Dünya'da 25.91 °C, hedefte 41.4 °C) ve toz/aerosol optik derinliği (Dünya'da 0.32, hedefte 0.33) parametrelerinde hedefe uyum sağlanarak \"benziyor\" (`true`) çıktısı alınmıştır. Yol erişiminin bulunmaması (`road_access: false`) ve uzaktan operasyon (`remote: true`) gerektirmesi bu alanın teknik özellikleridir.\n\nBuna karşın, sistemin kısıtları ve kopma noktaları bulunmaktadır: Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yoktur, oysa Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşam vardır ve bu durum biyo-imza testinde kirlilik riski yaratır. Ayrıca küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -308,7 +308,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "39.00°K, 86.52°D koordinatlarında bulunan bu test sahası, Arcadia Planitia hedefiyle karşılaştırıldığında kuraklık derecesi (Dünya 0.95, hedef 1.0), gece-gündüz sıcaklık farkı (Dünya 26.61 °C, hedef 41.4 °C) ve toz / aerosol optik derinliği parametrelerinde uyum sağlayarak \"match\": true çıktısı vermiştir. Toplam 88.5 skoruna sahip olan bu alan, uzaktan operasyon imkanı sunması ve kara erişiminin olmaması özellikleri ile iklim boyutunda (88.5 skor) benzerlikler göstermektedir.\n\nBununla birlikte, saha ile hedef arasında belirgin kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir ve modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratır. Ayrıca küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir; yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {

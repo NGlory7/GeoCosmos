@@ -72,7 +72,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "40.58°K, 88.58°D konumundaki bölge, Arcadia Planitia hedefi için \"Toz fırtınası ve aşınma\" testlerinde toplam 93.9 puanlık bir uyum göstermektedir. Topografya bileşeni 97.1 ve iklim bileşeni 93.1 skoruna sahiptir. Toz/aerosol optik derinliği (0.33), kuraklık (Dünya 0.96, hedef 1.0), ortalama eğim (Dünya 0.15°, hedef 0.25°), yüzey pürüzlülüğü (Dünya 2.0 m, hedef 4.63 m) ve gece-gündüz sıcaklık farkı (Dünya 27.08 °C, hedef 41.4 °C) parametrelerinde eşleşme (`match: true`) sağlanmıştır. Bölge karayolu erişimine kapalı olup uzaktan operasyon gerektirmektedir.\n\nBununla birlikte, temel fiziksel ve çevresel koşullarda belirgin farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşur; bu durum toz taşınımının farklı işlemesine neden olur. Ayrıca yıllık ortalama yüzey sıcaklığı hedef sahaya göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {
@@ -146,7 +146,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.10°K, 83.87°D koordinatlarındaki bu saha, Arcadia Planitia hedefi için \"Toz fırtınası ve aşınma\" testlerinde toplam 93.7 skorla değerlendirilmiştir. Topografya skoru 99.0 ve iklim skoru 92.4 olarak hesaplanmıştır. Toz / aerosol optik derinliği (550 nm) Dünya'da 0.32 iken hedefte 0.33, kuraklık değeri Dünya'da 0.94 iken hedefte 1.0, ortalama eğim Dünya'da 0.4 derece iken hedefte 0.25 derece, yüzey pürüzlülüğü Dünya'da 5.16 m iken hedefte 4.63 m ve gece-gündüz sıcaklık farkı Dünya'da 27.79 °C iken hedefte 41.4 °C ölçülmüş olup tüm bu parametrelerde uyum (\"benziyor\": true) sağlanmıştır.\n\nBuna karşın, bazı temel çevresel koşullarda farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın %38'i kadardır (3,71 m/s²). Atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşmaktadır; bu nedenle toz taşınımı farklı işler. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Saha operasyonel olarak yol erişimine sahip değildir ve uzaktır (\"road_access\": false, \"remote\": false)."
    }
   },
   {
@@ -220,7 +220,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.32°K, 85.05°D koordinatlarında yer alan bu saha, \"Toz fırtınası ve aşınma\" testleri için toplam 93.6 skorla (topografya skoru 99.3, iklim skoru 92.2) değerlendirilmiştir. Bölgenin uygun bir test sahası olabilmesindeki temel etkenler, hedef ile tam uyuşum gösteren parametrelerdir; bunlara göre toz veya aerosol optik derinliği (550 nm) değeri Dünya'da ve hedefte 0.33 olarak eşleşirken, kuraklık derecesi Dünya'da 0.94, hedefte ise 1.0 olarak kaydedilmiştir. Ayrıca ortalama eğim her iki tarafta da 0.25° ölçülmüş, yüzey pürüzlülüğü Dünya'da 3.97 m iken hedefte 4.63 m civarındadır ve gece-gündüz sıcaklık farkı Dünya'da 26.9 °C, hedefte 41.4 °C seviyesindedir; tüm bu parametreler \"benziyor: true\" olarak sonuçlanmıştır. \n\nÖte yandan, sahanın Arcadia Planitia hedefinden ayrıldığı kritik fiziksel kopma noktaları da mevcuttur. Yerçekimi Dünya'nın yaklaşık %38'i kadardır (3,71 m/s²), atmosfer çok incedir (yaklaşık %0,6) ve çoğunlukla CO₂'den oluşur; bu nedenle toz taşınımı farklı işler. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Operasyonel olarak yol erişimi bulunmamakla birlikte saha uzaktan (remote: true) yönetilebilir durumdadır."
    }
   },
   {
@@ -294,7 +294,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.32°K, 82.69°D koordinatlarında yer alan bu saha, Arcadia Planitia hedefi için \"Toz fırtınası ve aşınma\" testlerinde toplam 93.6 skorla değerlendirilmiştir. Topografya bileşeni 99.4 ve iklim bileşeni 92.1 puan almıştır. Toz/aerosol optik derinliği (Dünya 0.34, hedef 0.33), kuraklık indeksi (Dünya 0.94, hedef 1.0), ortalama eğim (Dünya 0.35°, hedef 0.25°), yüzey pürüzlülüğü (Dünya 4.39 m, hedef 4.63 m) ve gece-gündüz sıcaklık farkı (Dünya 27.79 °C, hedef 41.4 °C) gibi parametrelerin tamamında \"benziyor: true\" eşleşmesi sağlanmıştır. Ayrıca saha yol erişimine kapalıdır (road_access: false) ve uzaktan operasyona uygundur (remote: true).\n\nBununla birlikte, hedef ile bazı temel fiziksel koşullarda farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i kadardır (3,71 m/s²). Atmosfer oldukça incedir (~%0,6) ve çoğunlukla CO₂'den oluşur; bu nedenle toz taşınımı farklı işler. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve bu durum, Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {
@@ -368,7 +368,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "39.45°K, 81.21°D koordinatlarındaki bölge, 93.2 toplam skor ile \"Toz fırtınası ve aşınma\" testleri için değerlendirilmiştir. Topografya bileşeni 99.1, iklim bileşeni ise 91.7 skoruna sahiptir. 550 nm'deki toz ve aerosol optik derinliği Dünya'da 0.33 iken hedefte de 0.33 olarak tam eşleşme göstermektedir. Ayrıca 0 ile 1 arasında ölçülen kuraklık değeri Dünya'da 0.94, hedefte 1.0; 500 m tabandaki ortalama eğim Dünya'da 0.42°, hedefte 0.25°; 5 km pencerede yüzey pürüzlülüğü Dünya'da 4.23 m, hedefte 4.63 m; gece-gündüz sıcaklık farkı ise Dünya'da 26.53 °C iken hedefte 41.4 °C olarak belirlenmiş olup tüm bu parametreler için \"benziyor: true\" çıktısı alınmıştır. Bölgeye kara yolu erişimi bulunmamakta olup operasyonlar uzaktan yürütülmektedir.\n\nBununla birlikte, bazı temel fiziksel ve çevresel koşullarda farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'i kadardır (3,71 m/s²). Atmosfer çok ince olup yaklaşık %0.6 oranındadır ve çoğunlukla CO₂'den oluşur; bu nedenle toz taşınımı farklı işlemektedir. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {

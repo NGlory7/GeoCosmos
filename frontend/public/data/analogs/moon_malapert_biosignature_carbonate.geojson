@@ -53,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki 0.11°G, 91.29°B koordinatlarında bulunan bölge, Malapert Masifi (Ay) hedefindeki \"Biyo-imza: karbonat çökeli\" testi için bazı jeolojik parametreler açısından benzerlik göstermektedir. ASTER GED (AG100) TIR kaynaklı verilere göre, mafik / bazaltik yüzey parametresinde her iki saha da 0.25 değerini alarak eşleşmektedir. Karbonat izi parametresinde ise Dünya'daki sahada 0.25 oranında bir iz görülürken hedef bölgede bu oran 0.0'dır; ancak motor çıktısı bu durumu da benzerlik (\"benziyor\": true) kapsamında değerlendirmiştir.\n\nBununla birlikte, iki saha arasında operasyonel ve çevresel koşullar açısından temel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Dünya'daki sahada her noktada mikrobiyal yaşam ve bilinen biyolojik süreçler mevcutken, hedef bölgede bilinen bir biyolojik süreç yoktur. Ayrıca manyetik alan ve atmosfer koruması bulunmayan yüzey, doğrudan kozmik ışınlara açıktır; yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da bunun bir karşılığı yoktur. Operasyonel olarak yol erişimi bulunmamakta, süreç tamamen uzaktan (remote) yürütülmektedir."
    }
   },
   {
@@ -108,7 +108,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki 8.93°K, 82.06°B bölgesinde bulunan bu saha, \"Biyo-imza: karbonat çökeli\" testi için Malapert Masifi (Ay) hedefiyle karşılaştırıldığında karbonat izi (0-1 sıralı ölçekte 0.0) ve mafik/bazaltik yüzey (0-1 sıralı ölçekte 0.25) parametrelerinde eşleşme sağlamaktadır (\"match\": true). Bu jeolojik benzerlikler, sahanın test için potansiyel barındırabileceğini göstermektedir.\n\nBununla birlikte, iki ortam arasında belirgin fiziksel ve çevresel farklılıklar bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve bu durum toz ile tekerlek davranışını değiştirir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Dünya'daki sahada mikrobiyal yaşam mevcutken, hedef bölgede bilinen bir biyolojik süreç yoktur. Ayrıca manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışınlara açıktır; yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da bu koşulların bir karşılığı yoktur."
    }
   },
   {
@@ -163,7 +163,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya'daki 8.93°K, 80.71°B bölgesindeki saha, Malapert Masifi (Ay) hedefindeki \"Biyo-imza: karbonat çökeli\" testi için jeolojik açıdan uygun özellikler göstermektedir. Motor çıkışına göre, 0-1 sıralı ölçekte karbonat izi hedef ile birebir uyuşmaktadır (her ikisinde de 0.0) ve mafik / bazaltik yüzey parametresi 0.25 değeriyle tam olarak örtüşmektedir (\"benziyor\": true). Bu durum, jeoloji boyut skorunun 100.0 olmasını sağlamıştır.\n\nBununla birlikte, iki ortam arasında önemli fiziksel ve çevresel kopma noktaları bulunmaktadır. Yerçekimi Ay'da Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve bu durum toz ile tekerlek davranışını değiştirir. Ay yüzeyinde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde mevcuttur. Dünyadaki sahanın aksine Ay'da bilinen bir biyolojik süreç yoktur ve manyetik alan ile atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C iken ekvatorda öğlen +120 °C'ye ulaşır; bu aşırı sıcaklık aralığının Dünya'da karşılığı yoktur."
    }
   },
   {
@@ -218,7 +218,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya üzerindeki **8.70°K, 83.41°B** koordinatlarında yer alan bu bölge, Malapert Masifi (Ay) hedefindeki \"Biyo-imza: karbonat çökeli\" testi için **100.0** toplam skorla değerlendirilmiştir. Bölgenin bu test sahası olarak uygun görünmesinin temel nedeni, karbonat izi (hedef ve Dünya'da 0.0) ile mafik/bazaltik yüzey (hedef ve Dünya'da 0.25) parametrelerinde eşleşme sağlamasıdır. Ayrıca yol erişiminin bulunması operasyonel olarak avantaj sunmaktadır.\n\nBununla birlikte, iki ortam arasında önemli fiziksel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve toz ile tekerlek davranışı farklılık gösterir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır; yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarındadır ve Dünya'da bunun bir karşılığı yoktur. Ayrıca manyetik alan ve atmosfer koruması olmadığından yüzey doğrudan kozmik ışına açıktır. Bilinen bir biyolojik süreç barındırmayan bu hedefe karşılık, Dünya'daki bu sahada mikrobiyal yaşam mevcuttur."
    }
   },
   {
@@ -273,7 +273,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.25°K, 81.38°B koordinatlarındaki bölge, \"Biyo-imza: karbonat çökeli\" testi için bazı jeolojik parametreler açısından uygun bir profil sunmaktadır. Motor çıktısına göre, karbonat izi (0-1 sıralı ölçek) Dünya'da 0.25 iken hedef bölgede 0.0 olarak ölçülmüş ve mafik / bazaltik yüzey (0-1 sıralı ölçek) her iki ortamda da 0.25 değerini alarak eşleşme sağlamıştır (\"match\": true).\n\nBununla birlikte, iki ortam arasında önemli fiziksel ve çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) kadardır ve bu durum toz ile tekerlek davranışını değiştirir. Yüzeyde sıvı su bulunmazken, buz yalnızca kalıcı gölgelerde yer alır. Bilinen bir biyolojik süreç mevcut değildir; oysa Dünya'daki her sahada mikrobiyal yaşam vardır. Manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarındadır ve Dünya'da bunun bir karşılığı yoktur."
    }
   },
   {

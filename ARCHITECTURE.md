@@ -376,7 +376,7 @@ cd frontend && npm install
 
 ```
 GEMINI_API_KEY=
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.5-flash-lite
 EE_PROJECT=
 EE_PERMAFROST_ASSETS=
 API_ALLOWED_ORIGIN=http://localhost:5173,http://127.0.0.1:5173

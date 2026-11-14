@@ -66,7 +66,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "10.51°G, 77.12°B koordinatlarında bulunan bu Dünya bölgesi, Malapert Masifi hedefindeki lav tüpü ve yeraltı habitatı testleri için 84.8 toplam skorla değerlendirilmiştir. Jeoloji alt skorunun 100.0, topografya skorunun ise 80.6 olması, bazı temel yüzey özelliklerinin hedefi desteklediğini göstermektedir. ASTER GED verilerine göre 0.25 hedef değerine sahip mafik ve bazaltik yüzey yapısı ile Copernicus DEM GLO-30 verilerine dayanan 467.5 m yüzey pürüzlülüğü ve 16.78° ortalama eğim parametreleri hedefle uyumludur. Ayrıca bölgenin yol erişimine sahip olması operasyonel olarak avantaj sağlamaktadır.\n\nBuna karşın, iklim alt skorunun 31.2'de kalması önemli farklılıkları işaret eder. GPM IMERG V07 ve MODIS NDVI verilerine göre Dünya'daki bölgenin kuraklık değeri 0.59 iken hedefte bu değer 1.0'dir. Bunun ötesinde, yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ile atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır; atmosfer yok denecek kadar ince olduğu için rüzgar aşınması ve ısı taşınımı yoktur. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C seviyesindedir ve bu koşulların Dünya'da karşılığı yoktur."
    }
   },
   {
@@ -134,7 +134,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "30.41°K, 95.06°D koordinatlarındaki Dünya bölgesi, Malapert Masifi hedefi için 80.5 toplam skor sunmaktadır. Jeoloji kategorisinde 100.0 tam puan alarak öne çıkan bu alan; 0.25 değerindeki mafik ve bazaltik yüzey yapısı ile 462.46 (hedef: 467.5) metrelik yüzey pürüzlülüğü parametrelerinde hedeflenen koşullarla eşleşmektedir (benziyor: true). Topografya skoru 71.9 olarak hesaplanmıştır.\n\nBununla birlikte, iklim kategorisinde skor 22.7'ye düşmektedir; Dünya bölgesindeki 0.54'lük kuraklık derecesi hedefim 1.0 değerine uymamakta ve ortalama eğim parametresi de eşleşmemektedir (benziyor: false). Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ve atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır. Atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı yoktur; yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve Dünya'da tam bir karşılığı bulunmamaktadır. Bölge yol erişimine kapalı ve uzaktır."
    }
   },
   {
@@ -202,7 +202,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya üzerindeki 38.32°K, 70.60°D koordinatlarında yer alan bu bölge, Malapert Masifi hedefindeki \"Lav tüpü ve yeraltı habitatı\" testi için 80.5 toplam skor ile değerlendirilmiştir. Jeoloji kategorisinde 100.0 puan alarak hedefi tam olarak karşılayan bölge, mafik / bazaltik yüzey yapısında hedefe birebir uyum sağlamıştır (0.25). Topografya alanında 69.6 skor elde eden sahada, yüzey pürüzlülüğü Dünya'da 456.63 m iken hedefte 467.5 m olarak ölçülmüş ve ortalama eğim sırasıyla 23.07° ile 16.78° değerleriyle eşleşme göstermiştir.\n\nBuna karşın, iklim kategorisinde skor 30.8'de kalmış ve kuraklık parametresinde (Dünya 0.58, hedef 1.0) uyumsuzluk yaşanmıştır. Bölgenin operasyonel kısıtları arasında yol erişimi bulunmamakta ve konum uzak özellik göstermektedir. Ayrıca, yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) düzeyindedir ve bu durum toz ile tekerlek davranışını farklılaştırır; manyetik alan ile atmosfer koruması olmadığından yüzey doğrudan kozmik ışına açıktır. Atmosferin yok denecek kadar ince olması rüzgar aşınması ile ısı taşınımını engellerken, yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyelerindedir ve bu koşulların Dünya'da karşılığı bulunmamaktadır."
    }
   },
   {
@@ -270,7 +270,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.06°K, 74.15°D koordinatlarındaki bölge, Malapert Masifi (Ay) hedefindeki \"Lav tüpü ve yeraltı habitatı\" testi için 80.2 toplam skor sunmaktadır. Jeoloji kategorisinde 100.0 puan alarak dikkat çeken bu sahada; 0.25 değerindeki mafik / bazaltik yüzey, 481.01 m (hedef: 467.5 m) yüzey pürüzlülüğü ve 23.49° (hedef: 16.78°) ortalama eğim parametreleri hedefe benzerlik göstermektedir. Ayrıca kuraklık parametresinde Dünya için 0.66, hedef için 1.0 ölçülmüş olup bu parametre benzer kabul edilmemiştir; bununla birlikte 43.4 iklim skoru ve 65.4 topografya skoru elde edilmiştir.\n\nBununla birlikte, motor çıktısında yer alan bazı fiziksel ve çevresel kopma noktaları bu bölgenin bazı koşullarda ayrıştığını göstermektedir. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) seviyesindedir ve bu durum toz ile tekerlek davranışının farklı olmasına yol açar. Bölgede manyetik alan ile atmosfer koruması bulunmamakta ve yüzey doğrudan kozmik ışına açık durumdadır. Ayrıca atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda ise öğlen +120 °C seviyesindedir ve bu koşulların Dünya'da birebir karşılığı yoktur. Operasyonel olarak yol erişimi bulunmamakta ve bölge uzaktır."
    }
   },
   {
@@ -338,7 +338,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "32.90°K, 76.29°D koordinatlarındaki Dünya bölgesi, toplam 79.6 skorla Malapert Masifi (Ay) hedefindeki lav tüpü ve yeraltı habitatı testleri için bazı ortak özellikler sunmaktadır. Jeoloji kategorisinde 100.0 tam skor alarak mafik / bazaltik yüzey değerinin hedefle birebir uyuşması (0.25) ve topoğrafya skorunun 76.2 olması, yüzey pürüzlülüğünün Dünya'da 467.57 m iken hedefte 467.5 m ile yakın benzerlik göstermesi bu alanı test için elverişli kılmaktadır.\n\nBuna karşın, 0.0 iklim skoru ve bazı parametreler önemli farklılıkları ve kopma noktalarını göstermektedir. Ortalama eğim Dünya'da 25.09° iken hedefte 16.78° olarak uyuşmamaktadır; benzer şekilde kuraklık oranı Dünya için 0.23 iken hedefte 1.0 seviyesindedir. Ayrıca Dünya'daki bu bölge yol erişimine sahip değildir ve uzaktır; yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olduğundan toz ve tekerlek davranışı farklıdır, manyetik alan ve atmosfer koruması yoktur, yüzey doğrudan kozmik ışına açıktır, atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı yoktur ve yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur."
    }
   },
   {

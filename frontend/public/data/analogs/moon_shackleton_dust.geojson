@@ -58,7 +58,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Gezegen bilimi editörü olarak incelenen 38.77°K, 75.02°D koordinatlarındaki bölge, 82.5 toplam skor ve \"match\": true veren parametreler doğrultusunda \"Toz fırtınası ve aşınma\" testleri için bazı ortak özellikler sunmaktadır. GPM IMERG V07 ve MODIS NDVI verilerine göre hedef 1.0 tam kuruluk değerine kıyasla Dünya'da 0.88 kuraklık oranıyla benzerlik göstermektedir. Ayrıca Copernicus DEM GLO-30 verilerine dayanan ortalama eğim (Dünya'da 16.93°, hedefte 13.94°) ve yüzey pürüzlülüğü (Dünya'da 374.23 m, hedefte 378.1 m) değerleri de eşleşen parametreler arasında yer almaktadır. Topoğrafya skoru 86.2 ve iklim skoru 79.7 olarak hesaplanmıştır.\n\nBununla birlikte, bu saha her yönüyle hedefi temsil etmemekte olup bazı temel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Atmosfer yok denecek kadar ince olup rüzgar aşınması ve ısı taşınımı bulunmaz. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve Dünya'da bunun tam bir karşılığı yoktur. Operasyonel açıdan bölgede yol erişimi bulunmamaktadır (road_access: false) ve saha uzaktan işletim koşullarındadır (remote: false)."
    }
   },
   {
@@ -118,7 +118,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.29°K, 76.56°D koordinatlarındaki bölge, Shackleton Krateri kenarı hedefi için toplam 82.0 skorla \"Toz fırtınası ve aşınma\" testine uygun bir aday olarak öne çıkmaktadır. 86.4 iklim ve 76.5 topografi alt skorlarına sahip bu sahanın iyi bir test alanı olmasını sağlayan temel etkenler, \"match\": true olarak eşleşen parametreleridir. Bu kapsamda bölgenin kuraklık değeri 0.92 (hedef 1.0), ortalama eğimi 20.74° (hedef 13.94°) ve yüzey pürüzlülüğü 377.21 m (hedef 378.1 m) olarak hedef koşullarla uyumluluk göstermektedir.\n\nBununla birlikte, Dünya ve Ay arasındaki fiziksel ve çevresel farklar nedeniyle bazı önemli kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) seviyesindedir ve bu durum toz ile tekerlek davranışlarının farklı olmasına yol açar. Ayrıca Ay'da atmosfer yok denecek kadar incedir; rüzgar aşınması ve ısı taşınımı bulunmaz. Yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve Dünya'da birebir karşılığı yoktur."
    }
   },
   {
@@ -178,7 +178,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.74°K, 72.81°D koordinatlarındaki bölge, Shackleton Krateri kenarı hedefi için toplam 80.0 skorla değerlendirilmiştir. İklim kategorisinde 87.4, topografya kategorisinde ise 70.7 skor elde eden saha; 0.92 Dünya ve 1.0 hedef değerine sahip kuraklık, 21.35° Dünya ve 13.94° hedef değerine sahip ortalama eğim ile 382.74 m Dünya ve 378.1 m hedef değerine sahip yüzey pürüzlülüğü parametrelerinde benzerlik göstermektedir.\n\nBuna karşın, yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması nedeniyle toz ve tekerlek davranışı farklılık gösterir; atmosferin yok denecek kadar ince olması rüzgar aşınması ve ısı taşınımını engeller. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve Dünya'da tam bir karşılığı bulunmamaktadır. Operasyonel açıdan yol erişimi bulunmamaktadır (road_access: false) ve uzaktan operasyon imkanı yoktur (remote: false)."
    }
   },
   {
@@ -238,7 +238,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.32°K, 73.26°D bölgesindeki 78.5 toplam skorlu bu alan, Shackleton Krateri kenarı hedefi için belirli parametrelerde benzerlik göstermektedir. Özellikle 0.91 Dünya değeri ile 1.0 hedef değerine sahip olan kuraklık ve 381.59 m Dünya değeri ile 378.1 m hedef değerine sahip olan yüzey pürüzlülüğü parametrelerinde eşleşme sağlanmıştır (\"match\": true). Bu durum, kuraklık ve pürüzlülük koşullarının toz fırtınası ve aşınma testleri için uygun bir zemin oluşturabileceğini göstermektedir.\n\nBuna karşın, 21.86° olan ortalama eğim değeri, hedef değer olan 13.94° ile uyuşmamaktadır (\"match\": false) ve bu durum bir kopma noktası oluşturmaktadır. Ayrıca yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması nedeniyle toz ve tekerlek davranışı farklılık gösterir; atmosferin yok denecek kadar ince olması rüzgar aşınması ve ısı taşınımını engeller; yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarındadır ve Dünya'da tam bir karşılığı bulunmamaktadır. Bölge için karayolu erişimi bulunmamakta olup, operasyonlar uzaktan yürütülmektedir."
    }
   },
   {
@@ -298,7 +298,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "32.67°G, 69.94°B koordinatlarındaki bu saha, 77.6 toplam skorla Ay'daki Shackleton Krateri kenarı hedefi için toz fırtınası ve aşınma testlerine kısmen uyum sağlamaktadır. 74.9 topography ve 79.7 climate boyut skorlarına sahip olan bölge; 0.88 Dünya ve 1.0 hedef değerleriyle kuraklık, 20.4° Dünya ve 13.94° hedef değerleriyle ortalama eğim, ayrıca 381.71 m Dünya ve 378.1 m hedef değerleriyle yüzey pürüzlülüğü parametrelerinde hedefe benzemektedir (`match: true`).\n\nBununla birlikte, bazı temel fiziksel koşullarda önemli farklılıklar bulunmaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir. Atmosfer yok denecek kadar incedir; rüzgar aşınması ve ısı taşınımı yoktur. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C civarındadır ve Dünya'da bunun tam bir karşılığı bulunmamaktadır."
    }
   },
   {

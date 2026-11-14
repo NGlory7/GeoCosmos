@@ -58,7 +58,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "34.25°K, 78.17°D koordinatlarındaki bölge, toplam 79.1 skoru ile Malapert Masifi (Ay) hedefindeki toz fırtınası ve aşınma testleri için elverişli parametreler sunmaktadır. Topografya skoru 77.8 ve iklim skoru 80.0 olarak hesaplanan bu sahada, kuraklık (Dünya'da 0.88, hedefte 1.0), ortalama eğim (Dünya'da 22.44°, hedefte 16.78°) ve yüzey pürüzlülüğü (Dünya'da 464.22 m, hedefte 467.5 m) parametreleri eşleşmektedir (`match`: true). \n\nAncak, bu test sahası ile hedef arasında temel fiziksel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) kadardır ve bu durum toz ile tekerlek davranışını farklılaştırır. Ayrıca atmosfer yok denecek kadar incedir, bu nedenle rüzgar aşınması ve ısı taşınımı yoktur. Yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyelerindedir ve bu koşulların Dünya'da karşılığı bulunmamaktadır. Bölge yol erişimine kapalıdır (`road_access`: false) ve uzaktır (`remote`: false)."
    }
   },
   {
@@ -118,7 +118,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.74°K, 74.95°D koordinatlarında bulunan bu bölge, 77.5 toplam skorla Malapert Masifi hedefi için toz fırtınası ve aşınma testlerinde değerlendirilebilir bir alan sunmaktadır. 83.3 iklim skoru ve 70.2 topografya skoru ile öne çıkan bölge, kuraklık parametresinde Dünya'da 0.9 değerindeyken hedefte 1.0 olarak eşleşmektedir (\"benziyor\": true). Ayrıca yüzey pürüzlülüğü Dünya'da 469.48 m, hedefte ise 467.5 m ölçülerek uyumlu bulunmuştur (\"benziyor\": true).\n\nBununla birlikte, ortalama eğim parametresi Dünya'da 25.14°, hedefte ise 16.78° olduğundan uyuşmamaktadır (\"benziyor\": false). Ayrıca sistemin temel kopma noktaları şu fiziksel farklardan kaynaklanmaktadır: Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) olup toz ve tekerlek davranışı farklıdır. Atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı yoktur. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve Dünya'da tam bir karşılığı bulunmamaktadır. Bölgenin karayolu erişimi bulunmamaktadır (\"road_access\": false) ve uzak konumdadır (\"remote\": false)."
    }
   },
   {
@@ -178,7 +178,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.55°K, 75.32°D koordinatlarındaki Dünya bölgesi, toplam 75.5 skorla Malapert Masifi hedefindeki toz fırtınası ve aşınma testleri için uygun bir test sahası olma potansiyeli taşımaktadır. Kuraklık parametresinde Dünya değeri 0.9, hedef değeri ise 1.0 olarak kaydedilmiş ve bu durum eşleşmiştir. Ayrıca ortalama eğim parametresinde Dünya'da 22.82° olan değer hedeflenen 16.78° ile uyum gösterirken, yüzey pürüzlülüğü ise Dünya için 481.59 m, hedef için 467.5 m olarak benzerlik (\"match\": true) sağlamıştır. Bölgenin iklim boyutu skoru 83.3, topografi boyutu skoru ise 65.8 seviyesindedir.\n\nBununla birlikte, bazı temel fiziksel parametrelerde önemli farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık 1/6'sı kadardır (1,62 m/s²) ve bu durum toz ile tekerlek davranışlarının farklı olmasına yol açar. Atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ve ısı taşınımı Dünya'dakinden farklıdır. Ayrıca yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C civarındadır ve bu aşırı koşulların Dünya'da birebir karşılığı bulunmamaktadır."
    }
   },
   {
@@ -238,7 +238,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "36.51°K, 72.27°D konumundaki bu Dünya bölgesi, Malapert Masifi hedefi için 74.9 toplam skorla değerlendirilmiştir. İklim kategorisinde 82.9, topografya kategorisinde ise 64.9 skor elde edilmiştir. Kuraklık parametresinde Dünya'da 0.9, hedefte ise 1.0 değerleri görülmüş olup, bu parametrede iki alan birbiriyle uyuşmaktadır. Ayrıca yüzey pürüzlülüğü parametresinde de Dünya'daki 476.49 m değeri, hedefteki 467.5 m değeri ile benzerlik göstermektedir. Yol erişimi bulunmamakta ve bölge uzaktan erişime uygun değildir.\n\nBununla birlikte, ortalama eğim parametresinde Dünya'da 24.61° olan değer hedefte 16.78° olarak ölçülmüş ve bu parametrede benzerlik sağlanamamıştır. Bu coğrafi koşulların ötesinde, yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması nedeniyle toz ve tekerlek davranışı farklılık gösterir. Atmosferin yok denecek kadar ince olması rüzgar aşınması ve ısı taşınımını engellerken, yüzey sıcaklığının kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C olması Dünya'da karşılığı olmayan koşullar yaratmaktadır."
    }
   },
   {
@@ -298,7 +298,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "35.61°K, 76.29°D bölgesinin Malapert Masifi hedefi için toplam benzerlik skoru 74.9 olarak hesaplanmıştır; topografya boyutu 65.2 ve iklim boyutu 82.7 puan almıştır. Bu sahanın toz fırtınası ve aşınma testleri için uygun olmasının temel nedenleri, kuraklık parametresinin Dünya'da 0.9, hedefte 1.0 olması ve her iki değerin de \"match\": true ile eşleşmesidir. Ayrıca, yüzey pürüzlülüğü parametresinde Dünya için 474.57 m ve hedef için 467.5 m değerleri ölçülmüş olup, bu parametre de benzer bulunmuştur.\n\nBuna karşın, ortalama eğim parametresinde Dünya'da 25.1° olan değer hedefte 16.78°'dir ve bu parametre \"match\": false vermiştir. Kopma noktaları arasında yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması nedeniyle toz ve tekerlek davranışının farklılaşması yer alır; ayrıca atmosferin yok denecek kadar ince olması rüzgar aşınması ve ısı taşınımını engeller. Yüzey sıcaklığı ise kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C seviyesindedir ve Dünya'da birebir karşılığı bulunmamaktadır."
    }
   },
   {

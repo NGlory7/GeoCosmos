@@ -72,7 +72,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "81.96°K, 22.36°B koordinatlarında yer alan bu saha, Jezero Krateri hedefiyle \"Donmuş zeminde buz sondajı (ISRU)\" testi için 74.9 toplam skorla değerlendirilmiştir. Saha, topografya (99.1) ve jeoloji (95.8) boyut skorları ile donmuş zemin/yüzeye yakın buz, ortalama yüzey sıcaklığı, ortalama eğim ve kuraklık parametrelerinde hedefle benzerlik göstermektedir. Özellikle 0.02 Dünya ve 0.0 olan hedef donmuş zemin değerleri ile 1.24° Dünya ve 1.11° olan hedef ortalama eğim değerleri bu uyumu desteklemektedir.\n\nBununla birlikte, iklim boyut skorunun (53.3) düşük kalmasına neden olan bazı belirgin farklar ve kopma noktaları bulunmaktadır. Gece-gündüz sıcaklık farkı Dünya'da 1.48 °C iken hedefte 54.8 °C olarak ölçülmüş ve bu parametre benzer bulunmamıştır. Ayrıca yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşur; toz taşınımı farklı işler. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Saha operasyonel olarak karayolu erişimine kapalıdır (road_access: false) ve uzaktır (remote: true)."
    }
   },
   {
@@ -146,7 +146,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.55°K, 89.76°D koordinatlarındaki bu saha, Jezero Krateri hedefiyle \"Donmuş zeminde buz sondajı (ISRU)\" testleri için 72.8 toplam skorla değerlendirilmiştir. Topografya boyut skorunun 99.6 ve jeoloji boyut skorunun 100.0 olması, ortalama eğimin Dünya'da 1.06°, hedefte ise 1.11° gibi birbirine çok yakın değerler sunması bu sahanın test için uygun yönlerini göstermektedir. Ayrıca donmuş zemin/yüzeye yakın buz parametresinde her iki taraf da 0.0 değerini alarak eşleşmiş, kuraklık değeri Dünya'da 0.92 iken hedefte 1.0 ölçülmüş ve gece-gündüz sıcaklık farkı parametresi de (Dünya'da 30.52 °C, hedefte 54.8 °C) uyumlu bulunmuştur.\n\nBuna karşın, iklim boyut skorunun 45.8'de kalması bazı kritik uyumsuzlukları göstermektedir. Ortalama yüzey sıcaklığı Dünya'da 7.22 °C iken hedefte -43.6 °C'dir. Ayrıca saha operasyonlarında yol erişimi bulunmamaktadır (road_access: false) ve bölge uzaktır (remote: true). Bu faktörlerin yanı sıra, yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, toz taşınımı farklı işler, bugün yüzeyde kalıcı sıvı su yoktur ve Dünya sahalarında su döngüsü sürmektedir."
    }
   },
   {
@@ -220,7 +220,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "76.31°K, 68.83°B koordinatlarında bulunan yeni aday bölge, Jezero Krateri hedefiyle \"Donmuş zeminde buz sondajı (ISRU)\" testleri için 72.7 toplam skorla değerlendirilmiştir. Bu sahanın uygun görülmesindeki temel etkenler, 80.7 topography ve 96.6 geology skorları ile jeolojik ve topoğrafik uyumluluktur. Özellikle 4.01° ortalama eğim değeri, hedefteki 1.11° eğimle benzerlik göstererek (\"benziyor\": true) yüzey yapısının test koşullarını desteklediğini göstermektedir. Ayrıca 0.9 dünya ve 1.0 hedef değerleriyle kuraklık parametresi de uyumlu (\"benziyor\": true) bulunmuş, donmuş zemin oranı ise dünyada 0.02, hedefte 0.0 olarak kaydedilmiştir.\n\nBuna karşın, 52.0 climate skoru ile iklimsel parametrelerde önemli uyumsuzluklar ve kopma noktaları mevcuttur. Ortalama yüzey sıcaklığı dünyada -12.79°C iken hedefte -43.6°C'dir; gece-gündüz sıcaklık farkı ise dünyada 2.24°C ölçülürken hedefte 54.8°C'ye ulaşmaktadır ve bu parametreler benzememektedir (\"benziyor\": false). Ayrıca motor çıktısı dışında kalan fiziksel ve çevresel farklar da mevcuttur: Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, toz taşınımı farklı işler, bugün yüzeyde kalıcı sıvı su yoktur ve Dünya sahalarında su döngüsü sürmektedir. Operasyonel olarak yol erişimi bulunmamaktadır (\"road_access\": false) ve saha uzaktır (\"remote\": true)."
    }
   },
   {
@@ -294,7 +294,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.77°K, 95.07°D konumundaki bu saha, Jezero Krateri hedefiyle yürütülen \"Donmuş zeminde buz sondajı (ISRU)\" testi için toplam 72.3 skorla değerlendirilmiştir. Jeoloji alt skorunun 100.0, topografya skorunun ise 97.4 olması, yüzeye yakın buz durumu (dünya ve hedef 0.0), ortalama eğim (dünya 0.72°, hedef 1.11°), kuraklık (dünya 0.92, hedef 1.0) ve gece-gündüz sıcaklık farkı (dünya 28.56°C, hedef 54.8°C) parametrelerinin eşleşmesi (`match: true`) sayesinde saha iyi bir test sahası potansiyeli sunmaktadır.\n\nBuna karşın, iklim alt skorunun 45.1'de kalması ve ortalama yüzey sıcaklığının dünyada 7.03°C iken hedefte -43.6°C olması (`match: false`) önemli bir uyumsuzluk yaratmaktadır. Ayrıca yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşur, toz taşınımı farklı işler, bugün yüzeyde kalıcı sıvı su yoktur ve Dünya sahalarında su döngüsü sürmektedir."
    }
   },
   {
@@ -368,7 +368,7 @@
      "liquid_water"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "38.32°K, 93.01°D koordinatlarındaki 71.8 toplam skora sahip bölge, Jezero Krateri hedefindeki \"Donmuş zeminde buz sondajı (ISRU)\" testi için jeoloji (100.0) ve topografya (99.5) boyut skorlarıyla öne çıkmaktadır. Donmuş zemin / yüzeye yakın buz parametresinde Dünya değeri 0.0 ile hedef değeri 0.0 eşleşirken; ortalama eğim (Dünya 1.03, hedef 1.11), gece-gündüz sıcaklık farkı (°C) (Dünya 29.35, hedef 54.8) ve kuraklık (Dünya 0.94, hedef 1.0) parametrelerinde benzerlik göstermektedir.\n\nBuna karşın, iklim boyut skorunun 43.7'de kalması ve ortalama yüzey sıcaklığının (°C) Dünya'da 10.26 iken hedefte -43.6 olması belirgin uyumsuzluk yaratmaktadır. Ayrıca yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır; atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, toz taşınımı farklı işler, bugün yüzeyde kalıcı sıvı su yoktur ve Dünya sahalarında su döngüsü sürmektedir."
    }
   },
   {

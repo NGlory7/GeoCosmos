@@ -73,7 +73,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "18.43°K, 56.59°D koordinatlarında yer alan bu bölge, Arcadia Planitia hedefindeki \"Lav tüpü ve yeraltı habitatı\" testleri için genel olarak 93.5 toplam skor sunmaktadır. Jeoloji kategorisinde 100.0, topografyada ise 97.8 puan almıştır. Mafik / bazaltik yüzey verisi hedefle birebir uyuşurken (her ikisi de 0.5), yüzey pürüzlülüğü (Dünya 3.11 m, hedef 4.63 m) ve ortalama eğim (Dünya 0.09°, hedef 0.25°) gibi parametrelerde uyumluluk sağlanmıştır (\"match\": true). Ayrıca kuraklık derecesi Dünya'da 0.92 iken hedefte 1.0 olarak kaydedilmiş, gece-gündüz sıcaklık farkı ise Dünya'da 14.54 °C, hedefte 41.4 °C olarak gerçekleşmiştir. Yol erişiminin olması (\"road_access\": true) ve uzak bir konumda yer almaması (\"remote\": false) operasyonel olarak öne çıkmaktadır.\n\nBuna karşın, iklim kategorisi 71.1 skor ile diğerlerine göre geride kalmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir; atmosfer ise çok ince (~%0,6) ve çoğunlukla CO₂ içerir. Toz taşınımı farklı işlerken, yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve bu durum bölgenin Dünya'daki çöl analoglarından onlarca derece soğuk olmasına neden olmaktadır."
    }
   },
   {
@@ -148,7 +148,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "10.51°K, 49.65°D koordinatlarında yer alan Dünya'daki bu test sahası, Arcadia Planitia hedefi için toplam 92.8 skor almıştır. Topoğrafya (99.0) ve jeoloji (100.0) kategorilerinde yüksek uyum gösteren saha; mafik / bazaltik yüzey bileşimi, yüzey pürüzlülüğü, ortalama eğim, gece-gündüz sıcaklık farkı ve kuraklık derecesi parametrelerinde hedefin koşullarını başarıyla sağlamaktadır (\"benziyor\": true). Ayrıca karayolu erişimine sahip olup uzakta değildir (\"road_access\": true, \"remote\": false).\n\nBuna karşın, iklim skoru 65.8 seviyesinde kalmıştır ve saha temel bazı çevresel parametrelerde hedeften ayrılmaktadır. Kopma noktaları olarak; yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Atmosfer çok ince (~%0,6) olup çoğunlukla CO₂'den oluşmaktadır ve toz taşınımı farklı işler. Ayrıca, yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, bu değer Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {
@@ -223,7 +223,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "40.58°K, 113.94°B konumundaki bölge, Arcadia Planitia hedefi için 92.8 toplam skorla değerlendirilmiştir. Jeoloji alt skorunun 100.0, topografya skorunun ise 98.9 olduğu bu saha; mafik/bazaltik yüzey, yüzey pürüzlülüğü, ortalama eğim, gece-gündüz sıcaklık farkı ve kuraklık parametrelerinde hedefi başarıyla temsil etmektedir (benziyor: true). Ayrıca karayolu erişimi ve uzak operasyon kabiliyetine sahip olması test sahası olarak kullanılmasını desteklemektedir. \n\nBununla birlikte, iklim skorunun 65.9 kalması bazı temel farklılıkları göstermektedir. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir ve küresel manyetik alan bulunmamaktadır; yüzey radyasyonu Dünya'dan çok yüksektir. Atmosfer çok ince (~%0,6) ve çoğunlukla CO₂ içermekte, toz taşınımı farklı işlemektedir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -298,7 +298,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "76.98°K, 118.55°B konumundaki bu bölge, Arcadia Planitia hedefi için 92.7 toplam skorla değerlendirilmiştir. Topografya (99.9) ve jeoloji (100.0) boyut skorlarının yüksek olması, mafik / bazaltik yüzey (0.5), yüzey pürüzlülüğü (Dünya 4.66 m, hedef 4.63 m), ortalama eğim (Dünya 0.26°, hedef 0.25°) ve kuraklık (Dünya 0.96, hedef 1.0) parametrelerinde sağlanan eşleşmeler sayesinde bu sahanın bazı temel özellikler açısından uygun bir test alanı olabileceğini göstermektedir. Ayrıca bölgenin yol erişiminin olmaması (road_access: false) ve uzak yapısı (remote: true) test koşullarını desteklemektedir.\n\nBuna karşın, iklim boyut skorunun 63.8 kalması ve gece-gündüz sıcaklık farkının benzememesi (Dünya 2.22 °C, hedef 41.4 °C) önemli bir kopma noktası oluşturmaktadır. Hedefe kıyasla yerçekimi Dünya'nın %38'i (3,71 m/s²) kadardır ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksek olup, atmosfer çok incedir (~%0,6) ve çoğunlukla CO₂ içerir; toz taşınımı farklı işler. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -373,7 +373,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "17.97°K, 54.97°D koordinatlarındaki bölge, 92.2 toplam skorla Arcadia Planitia hedefindeki lav tüpü ve yeraltı habitatı testleri için uygun özellikler göstermektedir. Jeoloji kategorisinde 100.0, topografyada 95.7 ve iklimde 68.7 skor elde eden saha; 0.5 değerindeki mafik/bazaltik yüzey yapısı, 8.07 m Dünya ve 4.63 m hedef yüzey pürüzlülüğü, 0.4° Dünya ve 0.25° hedef ortalama eğimi, 19.13 °C Dünya ve 41.4 °C hedef gece-gündüz sıcaklık farkı ile 0.85 Dünya ve 1.0 hedef kuraklık parametrelerinde eşleşme sağlamaktadır. Ayrıca yol erişimine sahip olması ve uzak operasyonları desteklemesi avantaj oluşturmaktadır.\n\nBununla birlikte, bazı kritik çevresel parametrelerde belirgin kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksek, atmosfer ise çok ince (~%0,6) olup çoğunlukla CO₂'den oluşmaktadır ve toz taşınımı farklı işler. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuk kalmaktadır."
    }
   },
   {

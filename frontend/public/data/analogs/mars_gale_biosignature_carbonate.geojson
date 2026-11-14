@@ -53,7 +53,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.93°K, 82.28°B koordinatlarında yer alan bu saha, Gale Krateri'ndeki \"Biyo-imza: karbonat çökeli\" testi için 100.0 toplam skor ve 100.0 jeoloji skoruna sahiptir. Karbonat izi parametresinde Dünya ve hedef için değer 0.25 (match: true), mafik / bazaltik yüzey parametresinde ise 0.5 (match: true) olarak ölçülmüştür; bu durum, karbonat çökeli testi için neden uygun bir alan olabileceğini göstermektedir. Ayrıca yol erişimi bulunurken, uzaktan (remote) operasyon durumu da sağlanmaktadır.\n\nÖte yandan, hedef ile Dünya sahaları arasında önemli çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın %38'idir (3,71 m/s²). Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -108,7 +108,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Bu bölge, karbonat izi (0.25) ve mafik/bazaltik yüzey (0.5) parametrelerinde hedef ile tam eşleşme sağladığı için \"Biyo-imza: karbonat çökeli\" testi açısından bazı olumlu özellikler taşımaktadır. Ayrıca yol erişiminin olması operasyonel olarak kolaylık sağlamaktadır.\n\nAncak yerçekimi Dünya'nın %38'i kadardır (3,71 m/s²). Bugün yüzeyde kalıcı sıvı su bulunmazken, Dünya sahalarında su döngüsü sürmektedir. Dünya sahalarında modern yaşamın var olması biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -163,7 +163,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.93°K, 79.81°B konumundaki bu bölge, \"Biyo-imza: karbonat çökeli\" testi için Gale Krateri hedefiyle jeolojik açıdan dikkat çekici benzerlikler göstermektedir. ASTER GED (AG100) TIR verilerine göre, karbonat izi (0.25) ve mafik/bazaltik yüzey (0.5) parametrelerinde Dünya bölgesi ile hedef birebir örtüşmektedir (\"benziyor\": true). Karayolu erişimine sahip olan ve uzak konumda bulunmayan bu saha, toplamda 100.0 jeoloji skoruna sahiptir.\n\nBununla birlikte, iki ortam arasında önemli fiziksel ve çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yokken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşam vardır ve bu durum biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan bulunmadığından yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve bu değerler Dünya'daki çöl analoglarından onlarca derece daha soğuktur."
    }
   },
   {
@@ -218,7 +218,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "8.93°K, 78.46°B konumundaki bu bölge, Gale Krateri hedefindeki \"Biyo-imza: karbonat çökeli\" testi için bazı jeolojik parametreler açısından uygun özellikler göstermektedir. Motor çıkışına göre, 0-1 sıralı ölçekte mafik / bazaltik yüzey değeri Dünya ve hedef için 0.5 olarak eşleşmektedir; ayrıca 0-1 sıralı ölçekteki karbonat izi parametresinde Dünya 0.75, hedef ise 0.25 değerini alarak test için eşleşme (\"match\": true) sağlamıştır. Bu doğrultuda jeoloji boyutu skoru 100.0 ve toplam skor 100.0 olarak hesaplanmıştır. Yol erişiminin olması (road_access: true) ve bölgenin uzak (remote: false) olmaması operasyonel olarak değerlendirilmektedir.\n\nBuna karşın, hedef ile Dünya sahaları arasında önemli çevresel ve fiziksel farklılıklar ve kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır. Bugün yüzeyde kalıcı sıvı su yoktur, oysa Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşam vardır ve bu durum biyo-imza testinde kirlilik riski yaratır. Küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -273,7 +273,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Gale Krateri'ndeki karbonat çökeli testi hedefi için değerlendirilen 8.93°K, 75.53°B koordinatındaki bu saha, toplam 100.0 skoru ve jeoloji alt boyutundaki 100.0 puanıyla dikkat çekmektedir. Motor çıktısına göre, mafik / bazaltik yüzey parametresinde Dünya değeri 0.5 iken hedef değeri de 0.5 olarak ölçülmüştür ve bu durum eşleşmektedir. Karbonat izi parametresinde ise Dünya'da 1.0 olan değer, hedef için 0.25 seviyesindedir ve bu parametre de test motoru tarafından benzer olarak değerlendirilmiştir.\n\nBununla birlikte, saha ile hedef arasında önemli çevresel kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir ve bugün yüzeyde kalıcı sıvı su bulunmazken, Dünya sahalarında su döngüsü sürmektedir. Ayrıca Dünya sahalarında modern yaşamın varlığı biyo-imza testinde kirlilik riski yaratmaktadır. Küresel manyetik alanın olmaması nedeniyle yüzey radyasyonu Dünya'dan çok yüksektir ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur. Operasyonel olarak saha yol erişimine sahip olup uzakta değildir ve yeni bir adaydır."
    }
   },
   {

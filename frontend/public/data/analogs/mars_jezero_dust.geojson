@@ -72,7 +72,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Jezero Krateri hedefi için \"Toz fırtınası ve aşınma\" testi kapsamında değerlendirilen 37.19°K, 83.80°D koordinatlarındaki bölge, toplam 85.0 skorla belirli alanlarda yüksek bir benzerlik sergilemektedir. Topografya bileşeni 99.0 puan alırken; toz ve aerosol optik derinliği (Dünya'da 0.41, hedefte 0.51), kuraklık indeksi (Dünya'da 0.93, hedefte 1.0), ortalama eğim (Dünya'da 1.17°, hedefte 1.11°) ve yüzey pürüzlülüğü (Dünya'da 30.36 m, hedefte 29.6 m) parametrelerinde eşleşme sağlanmıştır. Ayrıca iklim alt skoru 81.5 olarak hesaplanmıştır. Yol erişiminin bulunmadığı ve uzak operasyon gerektiren bu yeni aday bölge, gece-gündüz sıcaklık farkı parametresinde ise Dünya'daki 26.21 °C değerinden hedefteki 54.8 °C değerine ulaşamayarak uyumsuzluk göstermiştir.\n\nBununla birlikte, iki ortam arasında fiziksel ve atmosferik açıdan belirgin kopma noktaları bulunmaktadır. Yerçekimi Dünya'nın yaklaşık %38'i (3,71 m/s²) seviyesindedir ve atmosfer çok ince (%0,6 civarında) olup çoğunlukla CO₂'den oluştuğu için toz taşınımı farklı işlemektedir. Ayrıca yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup, bu durum bölgeyi Dünya'daki çöl analoglarından onlarca derece soğuk kılmaktadır."
    }
   },
   {
@@ -146,7 +146,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "37.64°K, 85.05°D konumundaki bu saha, Jezero Krateri hedefiyle yapılan toz fırtınası ve aşınma testleri için 84.5 toplam skorla değerlendirilmiştir. Topografya alt skoru 97.3, iklim alt skoru ise 81.3 olarak hesaplanmıştır. 0.4 Dünya ve 0.51 hedef değerlerine sahip toz / aerosol optik derinliği (550 nm), 0.94 Dünya ve 1.0 hedef değerlerine sahip kuraklık, 1.05° Dünya ve 1.11° hedef değerlerine sahip ortalama eğim, ile 27.04 m Dünya ve 29.6 m hedef değerlerine sahip yüzey pürüzlülüğü parametrelerinde eşleşme sağlanmıştır (`benziyor`: true).\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde Dünya'da 26.93 °C ölçülürken hedefte 54.8 °C olarak görülmekte ve bu parametre eşleşmemektedir (`benziyor`: false). Ayrıca yerçekimi Dünya'nın ~%38'idir (3,71 m/s²), atmosfer çok incedir (~%0,6) ve çoğunlukla CO₂'den oluşur; toz taşınımı farklı işler. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Saha yol erişimine kapalıdır (`road_access`: false) ve uzaktır (`remote`: true)."
    }
   },
   {
@@ -220,7 +220,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "21.14°K, 44.13°D konumundaki bu saha, 84.2 toplam skor ile toz fırtınası ve aşınma testleri için uygun özellikler göstermektedir. 97.5 topografya boyutu skoru altında; 0.46 Dünya ve 0.51 hedef değerleriyle toz/aerosol optik derinliği, 0.9 Dünya ve 1.0 hedef değerleriyle kuraklık, 1.65° Dünya ve 1.11° hedef değerleriyle ortalama eğim, 30.29 m Dünya ve 29.6 m hedef değerleriyle yüzey pürüzlülüğü parametreleri hedefe benzerlik göstermektedir (benziyor: true).\n\nBuna karşın, 80.9 iklim boyutu skoru içinde yer alan gece-gündüz sıcaklık farkı parametresi hedefe benzememektedir (benziyor: false); bu parametrede Dünya değeri 19.03 °C iken hedef değeri 54.8 °C'dir. Ayrıca yerçekimi Dünya'nın ~%38'i (3,71 m/s²) seviyesindedir, atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, toz taşınımı farklı işler ve yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır, bu da Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
@@ -294,7 +294,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "17.97°K, 55.66°D koordinatlarındaki bölge, Jezero Krateri hedefiyle yapılan toz fırtınası ve aşınma testleri için 83.5 toplam skorla değerlendirilmiştir. Topografya boyut skorunun 99.1, iklim boyut skorunun ise 79.6 olduğu bu sahada; toz/aerosol optik derinliği (0.52 ve 0.51), kuraklık (0.85 ve 1.0), ortalama eğim (1.28° ve 1.11°) ile yüzey pürüzlülüğü (29.26 m ve 29.6 m) parametreleri hedefle uyumluluk göstermektedir (\"benziyor\": true). Ayrıca yol erişiminin bulunması ve uzak konum özellikleri operasyonel olarak desteklenmektedir.\n\nBuna karşın, gece-gündüz sıcaklık farkı parametresinde (Dünya'da 16.32 °C, hedefte 54.8 °C) uyumsuzluk görülmektedir (\"benziyor\": false). Bununla birlikte, yerçekiminin Dünya'nın ~%38'i (3,71 m/s²) seviyesinde kalması, atmosferin çok ince (~%0,6) ve çoğunlukla CO₂ olması, toz taşınımının farklı işlemesi ve yıllık ortalama yüzey sıcaklığının hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuk olması temel kopma noktalarını oluşturmaktadır."
    }
   },
   {
@@ -368,7 +368,7 @@
      "temperature"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "39.68°K, 88.00°D koordinatlarındaki bölge, Jezero Krateri hedefiyle toz fırtınası ve aşınma testleri için 83.4 toplam skor sunmaktadır. Topografya alt skoru 93.4 ve iklim alt skoru 80.9 olarak hesaplanmıştır. Toz ve aerosol optik derinliği Dünya'da 0.4 iken hedefte 0.51'dir; kuraklık derecesi sırasıyla 0.95 ve 1.0 ölçülmüştür. Ortalama eğim Dünya'da 2.42 derece, hedefte 1.11 derecedir; yüzey pürüzlülüğü ise 27.39 m ile 29.6 m değerlerindedir ve bu parametreler \"benziyor: true\" olarak eşleşmiştir. Ayrıca bölge yol erişimine sahip olmayıp uzaktan operasyon gerektirmektedir.\n\nBuna karşın, gece-gündüz sıcaklık farkı Dünya'da 24.21 °C iken hedefte 54.8 °C'dir ve bu parametre \"benziyor: false\" durumundadır. Kopma noktaları olarak belirtildiği üzere yerçekimi Dünya'nın yaklaşık %38'i kadardır (3,71 m/s²); atmosfer çok ince (yaklaşık %0,6) ve çoğunlukla CO₂'dir, bu nedenle toz taşınımı farklı işler. Ek olarak, yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur."
    }
   },
   {
