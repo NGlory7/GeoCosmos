@@ -15,7 +15,24 @@
         "body": "moon",
         "name": "Shackleton Krateri kenarı",
         "why": "Artemis güney kutbu üs bölgesi",
-        "params": {}
+        "params": {
+          "aridity": {
+            "value": 1.0,
+            "source": "sabit — yüzeyde sıvı su ve bitki yok (DATA_SOURCES.md)"
+          },
+          "carbonate_index": {
+            "value": 0.0,
+            "source": "sabit — Ay'da karbonat yok (DATA_SOURCES.md)"
+          },
+          "mafic_index": {
+            "value": 0.25,
+            "source": "elle — feldspatik yayla, düşük FeO; Lawrence et al. 2002, JGR 107(E12), Lunar Prospector demir haritası"
+          },
+          "ground_ice": {
+            "value": 0.25,
+            "source": "elle — 25 km'lik kare krater içindeki kalıcı gölgeyi kapsıyor; tabanda yamalı yüzey buzu: Zuber et al. 2012, Nature 486, LOLA albedo"
+          }
+        }
       }
     },
     {
@@ -32,7 +49,20 @@
         "body": "moon",
         "name": "Malapert Masifi",
         "why": "Artemis aday bölgelerinden biri",
-        "params": {}
+        "params": {
+          "aridity": {
+            "value": 1.0,
+            "source": "sabit — yüzeyde sıvı su ve bitki yok (DATA_SOURCES.md)"
+          },
+          "carbonate_index": {
+            "value": 0.0,
+            "source": "sabit — Ay'da karbonat yok (DATA_SOURCES.md)"
+          },
+          "mafic_index": {
+            "value": 0.25,
+            "source": "elle — feldspatik yayla, düşük FeO; Lawrence et al. 2002, JGR 107(E12), Lunar Prospector demir haritası"
+          }
+        }
       }
     },
     {
@@ -49,7 +79,32 @@
         "body": "moon",
         "name": "Marius Hills çukuru",
         "why": "Lav tüpü girişi",
-        "params": {}
+        "params": {
+          "aridity": {
+            "value": 1.0,
+            "source": "sabit — yüzeyde sıvı su ve bitki yok (DATA_SOURCES.md)"
+          },
+          "carbonate_index": {
+            "value": 0.0,
+            "source": "sabit — Ay'da karbonat yok (DATA_SOURCES.md)"
+          },
+          "mafic_index": {
+            "value": 1.0,
+            "source": "elle — mare bazaltı platosu ve volkanik kubbeler; Lawrence et al. 2002 (yüksek FeO), Heather et al. 2003, JGR 108(E3)"
+          },
+          "ground_ice": {
+            "value": 0.0,
+            "source": "elle — ekvatoral, gün ışığı alan yüzey; buz kararlı değil (Lunar Prospector nötron verisinde H artışı yok, Feldman et al. 1998, Science 281)"
+          },
+          "surface_temp_c": {
+            "value": -30.7,
+            "source": "Diviner — Williams et al. 2017, Icarus 283; ekvatoral en yüksek/en düşük ortalaması (yaklaşık)"
+          },
+          "temp_range_c": {
+            "value": 295.0,
+            "source": "Diviner — Williams et al. 2017, Icarus 283; ekvatoral gündüz-gece farkı (yaklaşık)"
+          }
+        }
       }
     },
     {
@@ -66,7 +121,24 @@
         "body": "mars",
         "name": "Jezero Krateri",
         "why": "Perseverance, antik delta",
-        "params": {}
+        "params": {
+          "aridity": {
+            "value": 1.0,
+            "source": "sabit — bugün yüzeyde kalıcı sıvı su ve bitki yok (DATA_SOURCES.md)"
+          },
+          "carbonate_index": {
+            "value": 0.5,
+            "source": "elle — kenar karbonatları ve bölgesel olivin-karbonat birimi, kare içinde baskın değil; Horgan et al. 2020, Icarus 339; Ehlmann et al. 2008, Science 322 (CRISM)"
+          },
+          "mafic_index": {
+            "value": 0.75,
+            "source": "elle — olivince zengin Séítah ve bazaltik Máaz krater tabanı; Farley et al. 2022, Science 377"
+          },
+          "ground_ice": {
+            "value": 0.0,
+            "source": "elle — 18°K, yüzeye yakın buz kararlılık bölgesi dışında; Feldman et al. 2004, JGR 109 (Odyssey GRS/NS hidrojen haritası)"
+          }
+        }
       }
     },
     {
@@ -83,7 +155,24 @@
         "body": "mars",
         "name": "Gale Krateri",
         "why": "Curiosity, katmanlı çökeller",
-        "params": {}
+        "params": {
+          "aridity": {
+            "value": 1.0,
+            "source": "sabit — bugün yüzeyde kalıcı sıvı su ve bitki yok (DATA_SOURCES.md)"
+          },
+          "carbonate_index": {
+            "value": 0.25,
+            "source": "elle — yörüngeden tespit yok; sülfatlı birimde rover ile siderit (iz düzeyi); Tutolo et al. 2025, Science 388 (CheMin)"
+          },
+          "mafic_index": {
+            "value": 0.5,
+            "source": "elle — Aeolis Mons'ta kil/sülfatlı katmanlar, çevresinde bazaltik kum; Milliken et al. 2010, GRL 37; Ehlmann et al. 2017, JGR Planets 122 (Bagnold kumulları)"
+          },
+          "ground_ice": {
+            "value": 0.0,
+            "source": "elle — ekvatoral; Odyssey ve DAN'ın gördüğü hidrojen buz değil hidratlı mineral; Feldman et al. 2004, JGR 109"
+          }
+        }
       }
     },
     {
@@ -100,7 +189,24 @@
         "body": "mars",
         "name": "Arcadia Planitia",
         "why": "İnsanlı iniş adayı",
-        "params": {}
+        "params": {
+          "aridity": {
+            "value": 1.0,
+            "source": "sabit — bugün yüzeyde kalıcı sıvı su ve bitki yok (DATA_SOURCES.md)"
+          },
+          "carbonate_index": {
+            "value": 0.0,
+            "source": "elle — bölgede karbonat tespiti yok; Ehlmann & Edwards 2014, Annu. Rev. Earth Planet. Sci. 42 (küresel mineral haritaları)"
+          },
+          "mafic_index": {
+            "value": 0.5,
+            "source": "elle — kuzey ovalarında TES yüzey tipi 2 (andezit ya da ayrışmış bazalt); Bandfield et al. 2000, Science 287"
+          },
+          "ground_ice": {
+            "value": 0.75,
+            "source": "elle — yaygın, yüzeye yakın fazla buz; Bramson et al. 2015, GRL 42 (SHARAD); Morgan et al. 2021, Nature Astronomy 5 (SWIM)"
+          }
+        }
       }
     }
   ]

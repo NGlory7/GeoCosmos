@@ -216,6 +216,7 @@ GeoCosmos/
 ├── pipeline/                 # Bir kere çalışan işler (offline)
 │   ├── ee_export.py          # Earth Engine → CSV
 │   ├── features.py           # CSV → normalize edilmiş grid.parquet
+│   ├── target_values.py      # Mars/Ay DEM → hedef eğim/pürüzlülük (Dünya ile aynı kural)
 │   ├── discovery.py          # global kaba + yakın tarama
 │   ├── validation.py         # ünlü analog testi
 │   ├── commentary.py         # Gemini yorumları
@@ -256,6 +257,11 @@ GeoCosmos/
 │       └── App.tsx
 │
 ├── tests/
+│   ├── test_core.py          # motor, config tutarlılığı
+│   ├── test_features.py      # CSV → grid.parquet (Earth Engine'siz)
+│   ├── test_ee_export.py     # şerit planı ve kare ızgara
+│   ├── test_target_values.py # hedef DEM hesabı
+│   ├── test_api.py           # CORS
 │   └── test_validation.py    # "sınav yerleri en iyi %1'de mi?" otomatik testi
 ├── notebooks/
 ├── docs/
