@@ -77,6 +77,29 @@ ops_tags:
     source: CIESIN/GPWv411/GPW_Population_Density          # kişi/km²
     max_density: 1
 
+# --- Kurulum kolaylığı (pipeline/logistics.py -> core/logistics.py) -----------------
+# Benzerliğe KATILMAZ: aday kartında ayrı bir 0-100 puan. Sadece aday karelerin (hazır testlerin
+# ilk 20'si) değerleri Earth Engine'den çekilir. Her kalem good'da 100, bad'de 0; arası logaritmik.
+logistics:
+  cell_radius_km: 12.5        # karenin merkezinden bu yarıçap "kare" sayılır (25 km'lik kare)
+  region_radius_km: 100       # nüfus ve santral kapasitesi bu yarıçapta toplanır
+  plant_search_km: 500        # en yakın santral bu mesafeye kadar aranır
+  water_search_km: 100        # en yakın kalıcı su bu mesafeye kadar aranır
+  water_min_occurrence: 50    # JRC: yılların en az %50'sinde su olan piksel = kalıcı su
+  sources:
+    access: projects/malariaatlasproject/assets/accessibility/accessibility_to_cities/2015_v1_0
+    plants: WRI/GPPD/power_plants
+    water: JRC/GSW1_4/GlobalSurfaceWater
+    population: CIESIN/GPWv411/GPW_Population_Count
+    dem: COPERNICUS/DEM/GLO30_2024_1
+  scores:
+    access:   {label: Ulaşım, unit: dk, good: 60, bad: 2880}               # karenin en erişilebilir noktasından 50 bin+ nüfuslu şehre
+    power:    {label: Enerji, unit: km, good: 10, bad: 300}                # en yakın santral (GPPD)
+    water:    {label: Su, unit: km, good: 1, bad: 100}                     # en yakın kalıcı yüzey suyu
+    supply:   {label: İşgücü ve malzeme, unit: kişi, good: 1000000, bad: 1000}  # 100 km içindeki nüfus
+    altitude: {label: Yükseklik, unit: m, good: 1500, bad: 5000}           # karenin ortalama yüksekliği
+  levels: [[70, Kolay], [40, Orta], [0, Zor]]
+
 # --- Keşif ve çıktı (pipeline/discovery.py, heatmap.py, commentary.py) -------------
 discovery:
   top_n: 20                  # her hedef x test dosyasında kaç aday (pin)

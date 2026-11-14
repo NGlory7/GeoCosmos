@@ -10,6 +10,7 @@ const BodyPage = lazy(() => import("./pages/BodyPage"));
 const AnalogPage = lazy(() => import("./pages/AnalogPage"));
 const ValidationPage = lazy(() => import("./pages/ValidationPage"));
 const FindingsPage = lazy(() => import("./pages/FindingsPage"));
+const ReportPage = lazy(() => import("./pages/ReportPage"));
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/bulgular" element={<FindingsPage />} />
         <Route path="/:body" element={<BodyPage />} />
         <Route path="/:body/:targetId/:testId" element={<AnalogPage />} />
+        <Route path="/:body/:targetId/:testId/rapor/:analogId" element={<ReportPage />} />
       </Routes>
       </Suspense>
     </BrowserRouter>

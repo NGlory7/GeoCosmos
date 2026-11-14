@@ -20,3 +20,16 @@ body {
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 }
+
+/* Saha raporu (ReportPage): tarayıcının "PDF olarak kaydet"i için açık tema, A4 */
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 14mm;
+  }
+  html,
+  body {
+    background: white;
+    color-scheme: light;
+  }
+}

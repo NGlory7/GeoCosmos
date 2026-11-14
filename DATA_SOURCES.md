@@ -71,6 +71,20 @@ Komutlar `config/targets.yaml`'a yapıştırılacak satırları yazdırır; dosy
 
 Kartta ✓/✗ olarak gösterilir, skora girmez.
 
+## Kurulum kolaylığı (puan, benzerliğe katılmaz)
+
+`pipeline/logistics.py` sadece aday kareler (hazır testlerin ilk 20'si, ~400 kare) için Earth Engine'den çeker; puan ve yorum `core/logistics.py`'de kurallarla üretilir, eşikler `config/grid.yaml > logistics`. Her kalem iyi eşikte 100, kötü eşikte 0, arası logaritmik; toplam = verisi olan kalemlerin ortalaması. Çıktı: `frontend/public/data/logistics.json` (ham değerler + puan).
+
+| Kalem | Kaynak | Ölçü | 100 / 0 |
+| --- | --- | --- | --- |
+| Ulaşım | MAP şehirlere erişim süresi 2015 | Karenin (12,5 km yarıçap) **en erişilebilir** noktasından 50 bin+ nüfuslu şehre dakika | 60 dk / 2 gün |
+| Enerji | WRI Global Power Plant Database (`WRI/GPPD/power_plants`, 28.664 santral) | En yakın santrale jeodezik mesafe; adı, yakıtı, MW'ı | 10 km / 300 km (500 km'de yoksa 0) |
+| Su | JRC Global Surface Water 1.4, `occurrence ≥ 50` | En yakın kalıcı göl/nehire jeodezik mesafe (1 km piksel); deniz sayılmaz | 1 km / 100 km (100 km'de yoksa 0) |
+| İşgücü ve malzeme | SEDAC GPWv4.11 nüfus sayısı 2020 | 100 km yarıçaptaki nüfus | 1 milyon / 1.000 kişi |
+| Yükseklik | Copernicus DEM GLO-30 | Kare ortalaması | 1.500 m / 5.000 m |
+
+Sınırlar: GPPD küçük ve şebeke dışı üreticileri içermez, bazı ülkelerde eksiktir; MAP 2015 yolları baz alır, buz yolu ve sezonluk ulaşımı bilmez. Kendi senaryon sonuçlarında, kare hazır testlerin adaylarından biri değilse altyapı verisi yoktur. Aday saha raporu (arayüzde "Saha raporu ve yol haritası", tarayıcıdan PDF) bu değerlerden ve motorun çıktısından kurallarla üretilir (`frontend/src/roadmap.ts`).
+
 ## Bilinen kapsam boşlukları
 
 | Veri | Boşluk | Çözüm |

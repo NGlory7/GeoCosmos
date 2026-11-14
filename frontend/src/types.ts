@@ -56,6 +56,35 @@ export interface Analog {
   ai_comment: string;
 }
 
+// logistics.json (pipeline/logistics.py -> core/logistics.py): kurulum kolaylığı, benzerliğe katılmaz
+export type LogisticsKey = "access" | "power" | "water" | "supply" | "altitude";
+export interface LogisticsRaw {
+  lat: number;
+  lon: number;
+  access_min: number | null;
+  elev_m: number | null;
+  pop_region: number | null;
+  water_km: number | null;
+  water_none: boolean;
+  plant_km: number | null;
+  plant_none: boolean;
+  plant: { name: string; fuel: string; mw: number; country: string } | null;
+  plant_mw_region: number | null;
+}
+export interface Logistics {
+  raw: LogisticsRaw;
+  score: number | null;
+  level: string | null;
+  parts: Partial<Record<LogisticsKey, { label: string; score: number; text: string }>>;
+  comment: string;
+}
+export interface LogisticsFile {
+  labels: Record<LogisticsKey, string>;
+  sources: Record<string, string>;
+  note: string;
+  cells: Record<string, Logistics>;
+}
+
 // meta.json (pipeline/build.py > write_meta): arayüz etiketleri, tek kaynak config/
 export interface TestMeta {
   id: TestId;

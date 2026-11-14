@@ -10,11 +10,12 @@ import {
   loadAnalogIndex,
   loadAnalogs,
   loadHeatmapIndex,
+  loadLogistics,
   loadMeta,
   loadTargets,
   type TargetWithCoords,
 } from "../services/data";
-import type { Analog, AnalogIndexEntry, Body, HeatmapIndex, Meta, ScenarioResponse } from "../types";
+import type { Analog, AnalogIndexEntry, Body, HeatmapIndex, LogisticsFile, Meta, ScenarioResponse } from "../types";
 
 export default function AnalogPage() {
   const { body, targetId, testId } = useParams();
@@ -27,6 +28,7 @@ export default function AnalogPage() {
   const [entry, setEntry] = useState<AnalogIndexEntry | null | undefined>(undefined);
   const [analogs, setAnalogs] = useState<Analog[]>([]);
   const [heat, setHeat] = useState<HeatmapIndex | null>(null);
+  const [logi, setLogi] = useState<LogisticsFile | null>(null);
   const [scenario, setScenario] = useState<ScenarioResponse | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [showHeat, setShowHeat] = useState(true);
@@ -34,8 +36,8 @@ export default function AnalogPage() {
 
   useEffect(() => {
     let alive = true;
-    Promise.all([loadMeta(), loadTargets(), loadAnalogIndex(), loadHeatmapIndex()])
-      .then(async ([m, ts, idx, h]) => {
+    Promise.all([loadMeta(), loadTargets(), loadAnalogIndex(), loadHeatmapIndex(), loadLogistics()])
+      .then(async ([m, ts, idx, h, lg]) => {
         const e = idx?.find((x) => x.target_id === targetId && x.test_id === testId) ?? null;
         const list = e?.file ? await loadAnalogs(e.file) : [];
         if (!alive) return;
@@ -44,6 +46,7 @@ export default function AnalogPage() {
         setEntry(idx === null ? null : isCustom ? undefined : e);
         setAnalogs(list);
         setHeat(h);
+        setLogi(lg);
         setSelectedId(list[0]?.id ?? null);
       })
       .catch((e) => setError(String(e)));
@@ -126,7 +129,17 @@ export default function AnalogPage() {
             )}
 
             {selected && meta && target ? (
-              <AnalogCard analog={selected} meta={meta} body={body as Body} targetName={target.name} />
+              <>
+                <Link
+                  to={`/${body}/${targetId}/${testId}/rapor/${selected.id}`}
+                  state={isCustom ? { analog: selected, query } : undefined}
+                  className="flex items-center justify-between rounded-lg border border-cyan-400/25 bg-cyan-400/5 px-3 py-2 text-sm text-cyan-100 hover:border-cyan-400/50"
+                >
+                  <span>Saha raporu ve yol haritası (PDF)</span>
+                  <span aria-hidden>→</span>
+                </Link>
+                <AnalogCard analog={selected} meta={meta} body={body as Body} targetName={target.name} logistics={logi?.cells[selected.id]} />
+              </>
             ) : (
               entry !== undefined && <p className="text-sm text-slate-500">Gösterilecek aday yok.</p>
             )}

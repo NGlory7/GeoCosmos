@@ -3,6 +3,7 @@ import type {
   AnalogIndexEntry,
   Body,
   HeatmapIndex,
+  LogisticsFile,
   Meta,
   ScenarioRequest,
   ScenarioResponse,
@@ -79,6 +80,11 @@ export function loadHeatmapIndex(): Promise<HeatmapIndex | null> {
 
 export function heatmapUrl(file: string) {
   return `${DATA}heatmaps/${file}`;
+}
+
+/** null: logistics.json henüz üretilmedi (pipeline/logistics.py). */
+export function loadLogistics(): Promise<LogisticsFile | null> {
+  return cached("logistics", () => getJson<LogisticsFile>("logistics.json"));
 }
 
 export function loadValidation(): Promise<ValidationResult | null> {

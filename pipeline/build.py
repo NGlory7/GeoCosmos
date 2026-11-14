@@ -6,11 +6,13 @@ Sıra:
   3. validation.json                      (pipeline/validation.py)   } data/processed/grid.parquet gerekir
   4. heatmaps/<hedef>_<test>.png          (pipeline/heatmap.py)      /
   5. ai_comment alanları                  (pipeline/commentary.py; GEMINI_API_KEY gerekir)
+  6. logistics.json                       (pipeline/logistics.py; yeni aday kareleri için Earth Engine gerekir,
+                                           yoksa mevcut değerlerle puanlar yeniden hesaplanır)
 
 grid.parquet yoksa 2-5 atlanır ve nasıl üretileceği yazdırılır; komut hata vermez.
 grid.parquet: python -m pipeline.ee_export (Earth Engine) -> CSV'ler data/raw/ -> python -m pipeline.features
 
-Kullanım:  python -m pipeline.build [--skip-commentary] [--skip-heatmaps]
+Kullanım:  python -m pipeline.build [--skip-commentary] [--skip-heatmaps] [--skip-logistics]
 """
 from __future__ import annotations
 
@@ -77,8 +79,8 @@ def write_meta(out_dir: Path = OUT_DIR) -> Path:
 
 def build(grid_path: Path = GRID_PATH, out_dir: Path = OUT_DIR,
           commentary: bool = True, heatmaps: bool = True, fine_scan_path: Path | None = None,
-          generate=None) -> dict:
-    from pipeline import discovery, heatmap, validation
+          generate=None, logistics_online: bool = False) -> dict:
+    from pipeline import discovery, heatmap, logistics, validation
     from pipeline import commentary as comm
 
     load_profiles()  # config hatalarını en başta yakala
@@ -103,6 +105,7 @@ def build(grid_path: Path = GRID_PATH, out_dir: Path = OUT_DIR,
     kw = {"cache_path": fine_scan_path.parent / "commentary_cache.json"} if fine_scan_path else {}
     report["commentary"] = comm.add_comments(out_dir / "analogs", generate=generate, kept=kept,
                                              allow_generate=commentary, **kw)
+    report["logistics"] = logistics.run(out_dir / "analogs", out_dir / "logistics.json", online=logistics_online)
     return report
 
 
@@ -110,8 +113,10 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--skip-commentary", action="store_true", help="Gemini yorumlarını üretme")
     ap.add_argument("--skip-heatmaps", action="store_true", help="PNG ısı haritalarını üretme")
+    ap.add_argument("--skip-logistics", action="store_true", help="yeni aday kareleri için Earth Engine'e bağlanma")
     args = ap.parse_args()
-    report = build(commentary=not args.skip_commentary, heatmaps=not args.skip_heatmaps)
+    report = build(commentary=not args.skip_commentary, heatmaps=not args.skip_heatmaps,
+                   logistics_online=not args.skip_logistics)
     for k, v in report.items():
         print(f"{k}: {v}")
     if report["grid"] == "yok":

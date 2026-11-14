@@ -1,6 +1,6 @@
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from "recharts";
 import { num, shortLabel } from "../format";
-import type { Analog, Body, Meta } from "../types";
+import type { Analog, Body, Logistics, Meta } from "../types";
 
 function ScoreRadar({ analog, meta }: { analog: Analog; meta: Meta }) {
   const data = meta.score_keys.map((k) => ({
@@ -55,14 +55,70 @@ function GroundLinks({ lat, lon, km }: { lat: number; lon: number; km: number })
   );
 }
 
+const LEVEL_STYLE: Record<string, string> = {
+  Kolay: "bg-emerald-400/15 text-emerald-300",
+  Orta: "bg-amber-400/15 text-amber-300",
+  Zor: "bg-rose-400/15 text-rose-300",
+};
+
+function barColor(s: number) {
+  return s >= 70 ? "bg-emerald-400/70" : s >= 40 ? "bg-amber-400/70" : "bg-rose-400/70";
+}
+
+/** Kurulum kolaylığı (logistics.json): benzerlikten ayrı; kalemler ve kural tabanlı yorum. */
+export function LogisticsSection({ logistics }: { logistics: Logistics | null | undefined }) {
+  return (
+    <section className="rounded-xl border border-white/10 bg-white/[0.02] p-3">
+      <div className="flex items-baseline justify-between gap-2">
+        <h3 className="font-mono text-[11px] tracking-[0.2em] text-slate-500">KURULUM KOLAYLIĞI</h3>
+        {logistics?.score != null && (
+          <span className="flex shrink-0 items-baseline gap-2 whitespace-nowrap">
+            <span className={`rounded-full px-2 py-0.5 font-mono text-[10px] tracking-wider ${LEVEL_STYLE[logistics.level ?? ""] ?? ""}`}>
+              {logistics.level?.toUpperCase()}
+            </span>
+            <span className="font-mono text-lg font-semibold text-white">{num(logistics.score, 0)}</span>
+            <span className="text-xs text-slate-500">/ 100</span>
+          </span>
+        )}
+      </div>
+      {!logistics || logistics.score == null ? (
+        <p className="mt-2 text-xs text-slate-500">Bu kare için altyapı verisi çekilmedi (sadece hazır testlerin adaylarında var).</p>
+      ) : (
+        <>
+          <ul className="mt-3 space-y-2">
+            {Object.entries(logistics.parts).map(([k, p]) => (
+              <li key={k} className="text-xs">
+                <div className="flex justify-between gap-2">
+                  <span className="text-slate-300">{p.label}</span>
+                  <span className="font-mono text-slate-400">{num(p.score, 0)}</span>
+                </div>
+                <div className="mt-1 h-1.5 rounded-full bg-white/5">
+                  <div className={`h-1.5 rounded-full ${barColor(p.score)}`} style={{ width: `${Math.max(2, p.score)}%` }} />
+                </div>
+                <div className="mt-0.5 text-[11px] text-slate-500">{p.text}</div>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 text-xs leading-relaxed text-slate-300">{logistics.comment}</p>
+          <p className="mt-2 text-[10px] leading-snug text-slate-600">
+            Benzerlik puanına katılmaz: ıssızlık bazı testlerde istenen bir özelliktir. Kaynak: MAP erişim süresi 2015, WRI Küresel Santral
+            Veritabanı, JRC Küresel Yüzey Suyu, GPW nüfus 2020, Copernicus DEM. Kurallar: config/grid.yaml &gt; logistics.
+          </p>
+        </>
+      )}
+    </section>
+  );
+}
+
 interface Props {
   analog: Analog;
   meta: Meta;
   body: Body;
   targetName: string;
+  logistics?: Logistics | null;
 }
 
-export default function AnalogCard({ analog, meta, body, targetName }: Props) {
+export default function AnalogCard({ analog, meta, body, targetName, logistics }: Props) {
   const test = meta.tests.find((t) => t.id === analog.test_id);
   const used = analog.params.length;
   const total = test ? Object.keys(test.weights).length : used;
@@ -125,6 +181,8 @@ export default function AnalogCard({ analog, meta, body, targetName }: Props) {
           ))}
         </ul>
       </section>
+
+      <LogisticsSection logistics={logistics} />
 
       {Object.keys(analog.ops_tags).length > 0 && (
         <section className="flex flex-wrap gap-2">

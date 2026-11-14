@@ -1,6 +1,6 @@
 # GeoCosmos — Durum
 
-> Son güncelleme: 14 Kasım 2026. Ne hazır, ne eksik, sırada kim var. Planın kendisi [ROADMAP.md](ROADMAP.md), teknik ayrıntı [ARCHITECTURE.md](ARCHITECTURE.md), veri kaynakları [DATA_SOURCES.md](DATA_SOURCES.md).
+> Son güncelleme: 15 Kasım 2026. Ne hazır, ne eksik, sırada kim var. Planın kendisi [ROADMAP.md](ROADMAP.md), teknik ayrıntı [ARCHITECTURE.md](ARCHITECTURE.md), veri kaynakları [DATA_SOURCES.md](DATA_SOURCES.md).
 
 ## Tek bakışta
 
@@ -17,9 +17,11 @@
 | Gerçek Dünya verisi (`grid.parquet`) | ✅ Hazır (14 Kasım) | 470 karo, 250.022 kare (60.144 maskeli), 49 dk (`pipeline.ee_fetch`). Repoda: ekibin Earth Engine'e ihtiyacı yok |
 | **İlk doğrulama** | ❌ 0/4 | Teşhis ve sıradaki karar: aşağıda "Karar bekleyenler" |
 | Hedef değerleri (`config/targets.yaml`) | ✅ Hazır | Mars hedefleri tüm parametreler; Ay'da sadece tanımı gereği olmayanlar boş. Üç betikle yeniden üretilebilir |
-| Gemini yorumları | ✅ 125/125 | İlk 5 adayın tamamında yorum var. 120'si Gemini'nin. **Shackleton / üs kurulumunun 5 yorumu Gemini kotası (500 istek/gün) dolunca Claude'la elle yazıldı**: aynı kurallar, aynı uydurma sayı kontrolünden geçti. Kartta başlık yine "GEMINI" diyor; Gemini'ye yazdırmak için o 5 yorumu `moon_shackleton_base_site.geojson` içinde boşaltıp `python -m pipeline.commentary`. Mevcut yorumlar korunur, sadece boşlar üretilir; kota dolunca program beklemeden durur |
+| Gemini yorumları | ✅ 125/125 | İlk 5 adayın tamamında yorum var, 125'i de Gemini'nin (Shackleton / üs kurulumunun 5 yorumu önce kota yüzünden elle yazılmıştı, sonra Gemini'ye yeniden yazdırıldı). Bir yorumu yenilemek için ilgili `.geojson`'da boşaltıp `python -m pipeline.commentary`: mevcut yorumlar korunur, sadece boşlar üretilir; kota (500 istek/gün) dolunca program beklemeden durur |
 | Üs kurulumu ve iniş alanı testi (`base_site`) | ✅ Hazır (14 Kasım) | Eğim, pürüzlülük, **aydınlanma** (yıllık ortalama öğlen güneş yüksekliği), buz ve kuraklık (çıplak yüzey; sonuç temizliğinde eklendi). Ayar yeri yok |
 | Hedef × test uygulanabilirliği | ✅ Hazır (14 Kasım) | 42 kombinasyonun 25'i anlamlı; Ay'da toz ve biyo-imza, buzsuz hedefte buz sondajı, mafik olmayan hedefte lav tüpü çalışmaz (`test_profiles.yaml > applies_to`). Arayüzde hedefin test listesinde sadece uygulanan testler görünür; adres elle açılırsa sebep yazar |
+| Kurulum kolaylığı (`pipeline/logistics.py`, `core/logistics.py`) | ✅ Hazır (15 Kasım) | Aday karelerde ayrı 0-100 puan: ulaşım, enerji (en yakın santral), su, işgücü/malzeme (100 km nüfus), yükseklik; kural tabanlı yorum. Benzerliğe katılmaz. Yeni aday kareleri `python -m pipeline.logistics` (Earth Engine) ya da `make data` ile çekilir; CI'da Earth Engine yoksa mevcut değerlerle puanlar yeniden hesaplanır. Kaynaklar DATA_SOURCES.md |
+| Saha raporu ve yol haritası (`ReportPage`, `roadmap.ts`) | ✅ Hazır (15 Kasım) | Aday kartındaki "Saha raporu ve yol haritası (PDF)": benzerlik, parametreler, altyapı, riskler, 5 aşamalı yol haritası (masa başı → keşif → lojistik → test kampanyası → değerlendirme), Gemini yorumu. "Yazdır / PDF olarak kaydet" ile A4 PDF. Kendi senaryon sonuçlarında da çalışır |
 | Frontend (`frontend/`) | ✅ Hazır | Giriş (Çağrı) → Ay/Mars küresi (NASA Trek mozaiği) + hedef ve test seçimi → Dünya haritası (NASA GIBS + ısı haritası + pinler) → analog kartı → senaryo kutusu; doğrulama paneli. Veri yokken her ekran "henüz çalıştırılmadı" der |
 | Yayın (GitHub Pages) | ⏳ Repo ayarı bekleniyor | `.github/workflows/pages.yml` hazır; aşağıdaki "Yayın" bölümü |
 
