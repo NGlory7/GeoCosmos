@@ -175,3 +175,28 @@ def test_stale_outputs_removed(grid, tmp_path):
     assert not (tmp_path / "a" / "mars_gale_biosignature.geojson").exists()
     assert not (tmp_path / "h" / "mars_gale_biosignature.png").exists()
     assert (tmp_path / "a" / "mars_gale_biosignature_arid.geojson").exists()
+
+
+def test_rebuild_keeps_comments_without_key_or_cache(grid, tmp_path):
+    """Önbelleği olmayan bilgisayarda make data, GitHub'daki yorumları silmemeli."""
+    tmp, out = tmp_path, tmp_path / "out"
+    grid.to_parquet(tmp / "grid.parquet")
+    build_mod.build(tmp / "grid.parquet", out, fine_scan_path=tmp / "a" / "fs.json", heatmaps=False,
+                    generate=fake_gemini)
+    first = json.loads(next((out / "analogs").glob("*.geojson")).read_text(encoding="utf-8"))
+    before = [f["properties"]["ai_comment"] for f in first["features"]]
+    assert any(before)
+
+    def must_not_call(prompt):
+        raise AssertionError("korunan yorum için Gemini çağrılmamalı")
+
+    report = build_mod.build(tmp / "grid.parquet", out, fine_scan_path=tmp / "b" / "fs.json",
+                             heatmaps=False, generate=must_not_call)
+    after = json.loads(next((out / "analogs").glob("*.geojson")).read_text(encoding="utf-8"))
+    assert [f["properties"]["ai_comment"] for f in after["features"]] == before
+    assert report["commentary"]["kept"] > 0
+
+    report = build_mod.build(tmp / "grid.parquet", out, fine_scan_path=tmp / "c" / "fs.json",
+                             heatmaps=False, commentary=False)
+    after = json.loads(next((out / "analogs").glob("*.geojson")).read_text(encoding="utf-8"))
+    assert [f["properties"]["ai_comment"] for f in after["features"]] == before

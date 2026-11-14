@@ -6,7 +6,10 @@ Kurallar (ARCHITECTURE.md > Gemini kullanımı):
   yine olmazsa ai_comment boş bırakılır. Boş yorum, uydurma yorumdan iyidir.
 - Geçmiş testler Gemini'ye yazdırılmaz (elle ve kaynaklı girilir).
 - Aynı analog JSON'u için sonuç data/processed/commentary_cache.json'dan döner (kota korunur).
-- GEMINI_API_KEY yoksa adım atlanır, dosyalar değişmez.
+- Yeniden üretimde (make data) mevcut yorumlar korunur: keşif dosyaları yeniden yazılmadan önce
+  existing_comments() ile toplanır; istem (prompt) birebir aynıysa yorum yeniden kullanılır, Gemini
+  çağrılmaz. Önbellek dosyası olmayan bilgisayarda da GitHub'daki yorumlar silinmez.
+- GEMINI_API_KEY yoksa yeni yorum üretilmez; korunan yorumlar yine yazılır.
 
 Kullanım:  python -m pipeline.commentary
 """
@@ -141,7 +144,8 @@ def gemini_generate(prompt: str) -> str:
     raise RuntimeError("ulaşılamaz")
 
 
-def comment_for(props: dict, generate: Callable[[str], str], cache: dict, max_retries: int) -> str:
+def prompt_for(props: dict) -> tuple[str, set[str]]:
+    """Analog için Gemini istemi ve yorumda izin verilen sayılar."""
     targets, profiles = load_targets(), load_profiles()
     labels = {k: p.label for k, p in load_parameters().items()}
     target, profile = targets[props["target_id"]], profiles.get(props["test_id"])
@@ -150,10 +154,46 @@ def comment_for(props: dict, generate: Callable[[str], str], cache: dict, max_re
     prompt = PROMPT.format(target_name=target.name, body="Ay" if target.body == "moon" else "Mars",
                            test_label=profile.label if profile else props["test_id"],
                            breakdown=breakdown, payload=json.dumps(payload, ensure_ascii=False))
+    return prompt, allowed_numbers(payload) | allowed_numbers({"b": breakdown})
+
+
+def _prompt_key(prompt: str) -> str:
+    return hashlib.sha256(prompt.encode()).hexdigest()
+
+
+def existing_comments(analog_dir: Path = ANALOG_DIR) -> dict[str, str]:
+    """Diskteki dolu yorumlar, istem özetine göre. Keşif dosyaları yeniden yazılmadan ÖNCE çağrılır.
+    Uydurma sayı içeren eski yorum alınmaz (kurallar değiştiyse yeniden üretilsin)."""
+    kept: dict[str, str] = {}
+    for path in sorted(analog_dir.glob("*.geojson")):
+        try:
+            feats = json.loads(path.read_text(encoding="utf-8"))["features"]
+        except (json.JSONDecodeError, KeyError):
+            continue
+        for feat in feats:
+            props = feat.get("properties", {})
+            text = props.get("ai_comment") or ""
+            if not text:
+                continue
+            try:
+                prompt, allowed = prompt_for(props)
+            except KeyError:  # hedef ya da test artık yok
+                continue
+            if not invented_numbers(text, allowed):
+                kept[_prompt_key(prompt)] = text
+    return kept
+
+
+def comment_for(props: dict, generate: Callable[[str], str] | None, cache: dict, max_retries: int,
+                kept: dict[str, str] | None = None) -> str:
+    prompt, allowed = prompt_for(props)
+    if kept and _prompt_key(prompt) in kept:
+        return kept[_prompt_key(prompt)]
     key = hashlib.sha256((os.getenv("GEMINI_MODEL", "") + prompt).encode()).hexdigest()
     if key in cache:
         return cache[key]
-    allowed = allowed_numbers(payload) | allowed_numbers({"b": breakdown})
+    if generate is None:
+        return ""
     text = ""
     for _ in range(max_retries + 1):
         candidate = generate(prompt)
@@ -165,30 +205,40 @@ def comment_for(props: dict, generate: Callable[[str], str], cache: dict, max_re
 
 
 def add_comments(analog_dir: Path = ANALOG_DIR, generate: Callable[[str], str] | None = None,
-                 cache_path: Path = CACHE_PATH) -> dict:
-    """Dönüş: {"written": n, "empty": n, "skipped": sebep|None}."""
-    load_dotenv()
-    if generate is None:
-        if not os.getenv("GEMINI_API_KEY"):
-            return {"written": 0, "empty": 0, "skipped": "GEMINI_API_KEY yok"}
-        generate = gemini_generate
+                 cache_path: Path = CACHE_PATH, kept: dict[str, str] | None = None,
+                 allow_generate: bool = True) -> dict:
+    """Dönüş: {"written": n, "empty": n, "kept": n, "skipped": sebep|None}.
+    kept: existing_comments() çıktısı; allow_generate=False ya da anahtar yoksa sadece korunanlar yazılır."""
+    load_dotenv(ROOT / ".env")
+    skipped = None
+    if not allow_generate:
+        generate, skipped = None, "yeni yorum üretimi kapalı (--skip-commentary)"
+    elif generate is None:
+        if os.getenv("GEMINI_API_KEY"):
+            generate = gemini_generate
+        else:
+            skipped = "GEMINI_API_KEY yok"
+    if generate is None and not kept:
+        return {"written": 0, "empty": 0, "kept": 0, "skipped": skipped}
     cfg = load_grid_config()["commentary"]
     try:
         cache = json.loads(cache_path.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
         cache = {}
-    written = empty = 0
+    written = empty = reused = 0
     for path in sorted(analog_dir.glob("*.geojson")):
         fc = json.loads(path.read_text(encoding="utf-8"))
         for feat in fc["features"][: cfg["top_k"]]:
-            text = comment_for(feat["properties"], generate, cache, cfg["max_retries"])
+            if kept and _prompt_key(prompt_for(feat["properties"])[0]) in kept:
+                reused += 1
+            text = comment_for(feat["properties"], generate, cache, cfg["max_retries"], kept)
             feat["properties"]["ai_comment"] = text
             written += bool(text)
             empty += not text
         path.write_text(json.dumps(fc, ensure_ascii=False, indent=1), encoding="utf-8")
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
-    return {"written": written, "empty": empty, "skipped": None}
+    return {"written": written, "empty": empty, "kept": reused, "skipped": skipped}
 
 
 if __name__ == "__main__":

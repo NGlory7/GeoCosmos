@@ -90,6 +90,7 @@ def build(grid_path: Path = GRID_PATH, out_dir: Path = OUT_DIR,
         return report
     grid = pd.read_parquet(grid_path)
     report["grid"] = f"{len(grid)} kare"
+    kept = comm.existing_comments(out_dir / "analogs")  # yeniden yazmadan önce: yorumlar silinmesin
     idx = discovery.run_discovery(grid, out_dir / "analogs")
     report["analogs"] = sum(1 for e in idx if e["file"])
     report["analogs_skipped"] = [f"{e['target_id']}/{e['test_id']}" for e in idx if not e["file"]]
@@ -99,9 +100,9 @@ def build(grid_path: Path = GRID_PATH, out_dir: Path = OUT_DIR,
     report["validation"] = f"{res['hits']}/{res['holdout_total']} (gereken {res['min_hits']})"
     if heatmaps:
         report["heatmaps"] = len(heatmap.run_heatmaps(grid, out_dir / "heatmaps"))
-    if commentary:
-        kw = {"cache_path": fine_scan_path.parent / "commentary_cache.json"} if fine_scan_path else {}
-        report["commentary"] = comm.add_comments(out_dir / "analogs", generate=generate, **kw)
+    kw = {"cache_path": fine_scan_path.parent / "commentary_cache.json"} if fine_scan_path else {}
+    report["commentary"] = comm.add_comments(out_dir / "analogs", generate=generate, kept=kept,
+                                             allow_generate=commentary, **kw)
     return report
 
 
