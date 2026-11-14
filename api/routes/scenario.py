@@ -32,7 +32,7 @@ def scenario(req: ScenarioRequest) -> ScenarioResponse:
     if target is None:
         raise HTTPException(404, f"Bilinmeyen hedef: {req.target_id}")
     if not GRID_PATH.exists():
-        raise HTTPException(503, "grid.parquet henüz üretilmedi (make data).")
+        raise HTTPException(503, "grid.parquet henüz üretilmedi (make grid; bkz. STATUS.md).")
 
     params = load_parameters()
     try:

@@ -13,11 +13,11 @@
 | ESA CCI Permafrost (`pipeline/permafrost.py`) | ✅ Hazır | Yerel NetCDF; Earth Engine'e yükleme gerekmez |
 | Keşif, doğrulama, ısı haritası, Gemini yorumu, `make data` | ✅ Hazır | Test ızgarasıyla uçtan uca denendi |
 | API (`/health`, `/scenario`) | ✅ Hazır | `grid.parquet` ve Gemini anahtarı gelince canlı çalışır |
-| Testler ve GitHub Actions | ✅ Hazır | Her push'ta testler + "üretilen dosyalar güncel mi" kontrolü |
+| Testler ve GitHub Actions | ✅ Hazır | Her push'ta Python testleri, "üretilen dosyalar güncel mi" kontrolü, frontend tip kontrolü ve derlemesi |
 | **Gerçek Dünya verisi (`grid.parquet`)** | ❌ Yok | Earth Engine hesabı bekleniyor; **asıl engel bu** |
 | Hedef değerleri (`config/targets.yaml`) | ✅ Hazır | Mars hedefleri tüm parametreler; Ay'da sadece tanımı gereği olmayanlar boş. Üç betikle yeniden üretilebilir |
 | Gemini yorumları | ⏳ Bekliyor | `.env` > `GEMINI_API_KEY` |
-| Frontend | 👤 Çağrı | Bu belgenin kapsamı dışında; sözleşme yukarıda |
+| Frontend (`frontend/`) | 🟡 Çağrı: giriş sayfası ve hedef listesi hazır | Mars/Ay shader'lı giriş, gök cismine göre hedef listesi; `targets.geojson`'u okuyor. Sırada: test amacı seçimi, Dünya haritası, analog kartı, doğrulama paneli, senaryo kutusu |
 
 Şu an `make data` sadece `targets.geojson` üretir; `grid.parquet` gelince analog, doğrulama ve ısı haritası dosyaları da otomatik üretilir.
 
@@ -41,6 +41,7 @@ cp .env.example .env                   # EE_PROJECT, GEMINI_API_KEY doldurun
 7. **Frontend dosyaları:** `make data` (`python -m pipeline.build`). Doğrulama sonucunu ekrana yazar.
 8. `grid.parquet` 100 MB altındaysa commit'leyin, ekibin geri kalanı Earth Engine'siz çalışır.
 9. **API:** `make api` (`uvicorn api.main:app --reload`).
+10. **Frontend:** `cd frontend && npm ci && npm run dev` → <http://localhost:5173> (`make web`). API'yi ayrıca açın; frontend 5173, API 8000.
 
 Tüm Dünya exportu beklenirken bölgesel deneme: `python -m pipeline.ee_export --bbox -112 37 -109 40` (Hanksville). Bölgesel sonuçlar sunumda kullanılmaz.
 
@@ -55,7 +56,7 @@ Tüm Dünya exportu beklenirken bölgesel deneme: `python -m pipeline.ee_export 
 | 5 | İlk gerçek doğrulama sonucu; ağırlık ayarı **sadece ayar (tune) yerlerine bakarak** | A + B | — |
 | 6 | 5 km yakın tarama: `data/processed/fine_scan.json` içindeki komutlar | A | Hayır (olursa iyi) |
 | 7 | Burak'ın veri seti listesine eklenmeli: **MODIS MCD12Q1** (buz maskesi yedeği, NASA Earthdata), **Diviner Polar Resource Product** (`dlre_prp_south`, Ay kutup sıcaklığı ve buz), **Mars Climate Database v6.2** (Mars sıcaklık ve toz; NASA dışı, atıf gerekir). Listeden çıkabilecekler: Mars için TES/THEMIS sıcaklıkları ve SWIM (kullanılmadı) | Burak | Hayır |
-| 8 | Frontend: [ARCHITECTURE.md > Veri sözleşmesi](ARCHITECTURE.md#veri-sözleşmesi) ve `frontend/src/types.ts` | Çağrı | — |
+| 8 | Frontend sıradaki ekranlar: test amacı seçimi → Dünya haritası (`analogs/index.json` + `heatmaps/index.json`) → analog kartı (radar, kopma kutusu, geçmiş testler) → doğrulama paneli (`validation.json`) → senaryo kutusu (`POST /scenario`). Formatlar: [ARCHITECTURE.md > Veri sözleşmesi](ARCHITECTURE.md#veri-sözleşmesi), tipler: `frontend/src/types.ts` | Çağrı | Hayır: `grid.parquet` gelene kadar `analogs/` boş; ekranlar "veri yok" durumunu göstermeli |
 
 `make data` her hedef × test için kaç parametrenin kullanıldığını `analogs/index.json` > `params_used` alanına yazar; eksik değerler girildikçe bu sayı artar.
 
