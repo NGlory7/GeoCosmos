@@ -63,3 +63,16 @@ ops_tags:
   remote:
     source: CIESIN/GPWv411/GPW_Population_Density          # kişi/km²
     max_density: 1
+
+# --- Earth Engine exportu (pipeline/ee_export.py) -----------------------------------
+# Ham veri laptopa inmez: Earth Engine'de karelere ortalanır, sadece CSV tablo iner.
+export:
+  projection: EPSG:6933        # EASE-Grid 2.0, eşit alanlı: her kare aynı km²
+  lat_range: [-86, 84]         # EPSG:6933 ±86°'ye kadar geçerli
+  stripe_deg: 10               # export enlem şeritlerine bölünür (B planı: zaman aşımına karşı)
+  date_range: ["2019-01-01", "2024-01-01"]       # MODIS LST, NDVI, IMERG için 5 yıl
+  aod_date_range: ["2022-01-01", "2024-01-01"]   # MAIAC granülleri ağır: 2 yıl yeter
+  nodata: -9999                # Kara üzerinde verisi olmayan hücre (features.py NaN'a çevirir)
+  drive_folder: GeoCosmos
+  # Earth Engine kataloğunda olmayan ESA CCI Permafrost: GeoTIFF'e çevirip asset olarak yükleyin,
+  # asset kimliklerini .env > EE_PERMAFROST_ASSETS (virgülle) yazın. Yoksa ground_ice boş kalır.

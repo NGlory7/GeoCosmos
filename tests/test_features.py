@@ -1,0 +1,80 @@
+"""pipeline/features.py: ee_export CSV'si -> grid.parquet dönüşümü (Earth Engine gerekmez)."""
+import numpy as np
+import pandas as pd
+import pytest
+
+from core.profiles import load_parameters
+from pipeline.ee_export import RAW_COLUMNS
+from pipeline.features import build_grid, haversine_km, to_levels
+
+NODATA = -9999
+
+
+def raw_row(lat, lon, **kw):
+    row = dict(lon=lon, lat=lat, land_frac=1.0, slope_deg=3.0, roughness_m=20.0,
+               lst_day_c=40.0, lst_night_c=10.0, ndvi=0.05, precip_mm=50.0, aod=0.3,
+               aster_mi=1.02, aster_ci=1.025, permafrost=0.0, access_min=120.0, pop_density=0.5,
+               wc_40=0.0, wc_50=0.0, wc_70=0.0, wc_80=0.0)
+    row.update(kw)
+    return row
+
+
+@pytest.fixture
+def grid(tmp_path):
+    raw = tmp_path / "raw"
+    raw.mkdir()
+    rows = [
+        raw_row(37.55, 29.68, wc_80=0.6),                    # Salda karesi: suyla maskelenmeli ama korunur
+        raw_row(10.0, 10.0, wc_40=0.7),                      # tarım: maskeli
+        raw_row(-20.0, 20.0, aod=NODATA, permafrost=NODATA), # veri boşluğu
+        raw_row(78.0, -60.0, permafrost=80.0, ndvi=0.0, precip_mm=150),  # yüzde gelen permafrost
+        raw_row(0.0, 0.0),                                   # sıradan, uzak kare
+    ]
+    df = pd.DataFrame(rows)
+    df.iloc[:3].to_csv(raw / "a.csv", index=False)
+    df.iloc[2:].to_csv(raw / "b.csv", index=False)           # şerit sınırı tekrarı (satır 2)
+    return build_grid(raw, tmp_path / "grid.parquet", cell_km=25)
+
+
+def test_columns_and_dedup(grid):
+    assert len(grid) == 5
+    assert set(load_parameters()) <= set(grid.columns)
+    assert {"id", "name", "lat", "lon", "is_new", "masked", "known_id",
+            "ops_road_access", "ops_remote"} <= set(grid.columns)
+
+
+def test_masks_and_known_cells(grid):
+    salda = grid[grid["known_id"] == "salda"].iloc[0]
+    assert not salda["masked"] and not salda["is_new"]
+    farm = grid[(grid["lat"] == 10.0)].iloc[0]
+    assert farm["masked"] and farm["is_new"]
+
+
+def test_nodata_and_percent(grid):
+    gap = grid[grid["lat"] == -20.0].iloc[0]
+    assert np.isnan(gap["dust_aod"])
+    arctic = grid[grid["lat"] == 78.0].iloc[0]
+    assert arctic["ground_ice"] == pytest.approx(0.8)
+    assert arctic["aridity"] == pytest.approx(0.5 * (1 - 150 / 1000) + 0.5 * 1.0)
+
+
+def test_derived_values(grid):
+    row = grid[grid["lat"] == 0.0].iloc[0]
+    assert row["surface_temp_c"] == pytest.approx(25)
+    assert row["temp_range_c"] == pytest.approx(30)
+    assert row["mafic_index"] == 0.75 and row["carbonate_index"] == 0.75
+    assert bool(row["ops_road_access"]) and bool(row["ops_remote"])
+
+
+def test_to_levels_edges():
+    s = pd.Series([0.5, 1.00, 1.015, 2.0, np.nan])
+    out = to_levels(s, [1.00, 1.01, 1.02, 1.03])
+    assert list(out[:4]) == [0.0, 0.25, 0.5, 1.0] and np.isnan(out[4])
+
+
+def test_haversine():
+    assert haversine_km(0, 0, 0, 1) == pytest.approx(111.2, abs=0.2)
+
+
+def test_raw_columns_cover_features():
+    assert {"slope_deg", "aster_ci", "permafrost", "access_min"} <= set(RAW_COLUMNS)

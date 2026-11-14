@@ -20,7 +20,9 @@ router = APIRouter()
 
 @lru_cache
 def load_grid() -> pd.DataFrame:
-    return pd.read_parquet(GRID_PATH)
+    grid = pd.read_parquet(GRID_PATH)
+    # Maskeli kareler (şehir, tarım, su, buz tabakası) öneri olarak dönmez.
+    return grid[~grid["masked"]] if "masked" in grid else grid
 
 
 @router.post("/scenario", response_model=ScenarioResponse)

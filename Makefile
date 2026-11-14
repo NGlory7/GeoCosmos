@@ -1,4 +1,13 @@
-.PHONY: data api web test
+.PHONY: export preview grid data api web test
+
+export:
+	python -m pipeline.ee_export
+
+preview:
+	python -m pipeline.ee_export --preview
+
+grid:
+	python -m pipeline.features
 
 data:
 	python -m pipeline.build
