@@ -1,4 +1,5 @@
-"""Başarı ölçütü: ünlü analoglardan en az min_hits tanesi kendi test amacında ilk top_n'de.
+"""Başarı ölçütü: holdout analoglarından en az min_hits tanesi kendi test amacında
+Dünya karelerinin en iyi top_percent yüzdesinde (config/known_analogs.yaml).
 
 grid.parquet ve validation adımı hazır olana kadar atlanır.
 """

@@ -6,6 +6,10 @@
 #   örnek:  slope_deg: { value: 3.5, source: "MOLA" }
 #           aridity:   { value: 1.0, source: "sabit — yüzeyde sıvı su yok" }
 # Değeri bilinmeyen parametre yazılmaz; motor o parametreyi atıp ağırlıkları yeniden dağıtır.
+#
+# ÖLÇEK: slope_deg ve roughness_m, Dünya karelerindeki gibi config/grid.yaml > scale kurallarıyla
+# hesaplanmalı (MOLA/LOLA önce 500 m'ye indirilir). Makaledeki başka çözünürlükte bir eğim
+# değeri doğrudan yazılmaz.
 
 targets:
   - id: moon_shackleton

@@ -1,0 +1,31 @@
+# Izgara, ölçek ve maske kuralları.
+# pipeline/features.py (özellik çıkarma) ve pipeline/discovery.py (keşif) bu dosyayı okur.
+# Hedef değerleri (config/targets.yaml) de AYNI kurallarla hesaplanmalıdır; yoksa karşılaştırma anlamsızdır.
+
+grid:
+  coarse_km: 25   # 1. aşama: tüm karalar
+  fine_km: 5      # 3. aşama: en iyi karelerin çevresi
+
+# --- Ölçek ---------------------------------------------------------------------
+# Eğim ve pürüzlülük çözünürlüğe bağlıdır: 30 m SRTM ile ~460 m MOLA'dan hesaplanan eğim
+# aynı arazide bile farklı çıkar. Bu yüzden her gök cisminde yükseklik verisi önce
+# ortak bir taban uzunluğuna indirilir, eğim ve pürüzlülük ondan sonra hesaplanır.
+scale:
+  dem_resample_m: 500        # SRTM, MOLA ve LOLA önce bu çözünürlüğe ortalanır (MOLA ~463 m'ye en yakın)
+  slope_baseline_m: 500      # slope_deg: 500 m'lik yükseklik modelinden hesaplanan eğim; kare içinde ortalaması
+  roughness_window_km: 5     # roughness_m: 500 m'lik yüksekliğin 5 km pencerede standart sapması; kare içinde ortalaması
+
+# --- Maskeler ------------------------------------------------------------------
+# ESA WorldCover sınıfları. Bir karenin max_masked_fraction'dan fazlası bu sınıflardansa
+# kare keşiften çıkarılır. Küçük bir göl ya da kasaba kareyi tek başına elemez.
+masks:
+  max_masked_fraction: 0.5
+  worldcover_classes:
+    40: Tarım
+    50: Yerleşim
+    70: Kalıcı kar ve buz   # Buz tabakaları (Antarktika, Grönland iç kesimi) TÜM testlerde dışarıda.
+                            # ground_ice donmuş zemini (permafrost) ölçer, buzulu değil; aksi halde
+                            # Mars'a sıcaklıkça en yakın yer olan buz tabakaları buz sondajını domine eder.
+    80: Kalıcı su
+  # Doğrulama setindeki yerlerin kareleri maskelenmez: keşif listesine girmezler ama puanlanmaları gerekir.
+  never_mask_known_analogs: true

@@ -1,16 +1,28 @@
 # Doğrulama seti: ünlü analoglar keşif listesine girmez, motoru test etmek için kullanılır.
-# Başarı ölçütü: 8 yerden en az 6'sı kendi test amacında ilk 3'e girmeli.
 # Bu yerlere 50 km'den yakın ızgara kareleri keşiften çıkarılır (exclude_radius_km).
 # Koordinatlar YAKLAŞIK; past_tests kaynaklı ve elle girilecek.
+#
+# split:
+#   tune     Ağırlık ve tolerans ayarı SADECE bu yerlere bakılarak yapılır.
+#   holdout  Başarı ölçütü SADECE bu yerlerle hesaplanır. Bunlara bakarak ağırlık değiştirilmez;
+#            değiştirilirse doğrulama kanıt olmaktan çıkar.
+#   report   Sırası raporlanır ama başarı ölçütüne girmez (yöntemin ölçemediği bir özellik).
+#
+# Başarı ölçütü: holdout yerlerinden en az min_hits tanesi, kendi test amacında
+# Dünya karelerinin en iyi top_percent yüzdesine girmeli.
+# (Eski ölçüt "8 yerden 6'sı ilk 3'te" idi: ~240 bin kare arasında ilk 3, 25 km çözünürlükte
+# gerçekçi değil ve ağırlık ayarıyla aynı yerler kullanıldığı için kanıt değeri yoktu.)
 
 exclude_radius_km: 50
-top_n: 3
-min_hits: 6
+top_percent: 1
+min_hits: 3
 
 analogs:
+  # --- tune ---------------------------------------------------------------------
   - id: holuhraun
     name: Holuhraun (İzlanda)
     test_id: rover
+    split: tune
     lat: 64.85
     lon: -16.83
     past_tests: []
@@ -18,6 +30,7 @@ analogs:
   - id: yungay
     name: Yungay (Atacama, Şili)
     test_id: biosignature
+    split: tune
     lat: -24.08
     lon: -70.02
     past_tests: []
@@ -25,41 +38,59 @@ analogs:
   - id: haughton
     name: Haughton Krateri (Devon Adası, Kanada)
     test_id: ice_drilling
+    split: tune
     lat: 75.38
     lon: -89.68
     past_tests: []
 
+  # --- holdout ------------------------------------------------------------------
+  - id: hanksville
+    name: Hanksville / MDRS çevresi (Utah, ABD)
+    test_id: rover
+    split: holdout
+    lat: 38.41
+    lon: -110.79
+    past_tests: []
+    note: >-
+      Dumont Dunes'un yerine. Dumont Dunes ~30 km² ile 25 km'lik karede ortalamaya karışıp
+      kayboluyordu; Hanksville çevresindeki Mars benzeri arazi kareyi dolduracak kadar geniş.
+
   - id: svalbard
-    name: Svalbard (Norveç)
+    name: Svalbard / Bockfjorden (Norveç)
     test_id: ice_drilling
+    split: holdout
     lat: 79.4
     lon: 13.3
     past_tests: []
 
-  - id: lanzarote
-    name: Lanzarote lav tüpleri (İspanya)
-    test_id: lava_tube
-    lat: 29.16
-    lon: -13.44
+  - id: salda
+    name: Salda Gölü kıyısı (Türkiye)
+    test_id: biosignature
+    split: holdout
+    lat: 37.55
+    lon: 29.68
     past_tests: []
-
-  - id: dumont_dunes
-    name: Dumont Dunes (Mojave, ABD)
-    test_id: rover
-    lat: 35.68
-    lon: -116.22
-    past_tests: []
+    note: >-
+      Göl ~45 km², 25 km'lik karenin küçük bir kısmı; max_masked_fraction kuralı (config/grid.yaml)
+      kareyi elemez. Asıl hedef göl suyu değil, kıyıdaki hidromagnezit çökelleri.
 
   - id: lut
     name: Lut Çölü (İran)
     test_id: dust
+    split: holdout
     lat: 30.5
     lon: 59.0
     past_tests: []
 
-  - id: salda
-    name: Salda Gölü (Türkiye)
-    test_id: biosignature
-    lat: 37.55
-    lon: 29.68
+  # --- report -------------------------------------------------------------------
+  - id: lanzarote
+    name: Lanzarote lav tüpleri (İspanya)
+    test_id: lava_tube
+    split: report
+    lat: 29.16
+    lon: -13.44
     past_tests: []
+    note: >-
+      Lav tüpleri yer altında; SRTM, MODIS ve ASTER onları göremez. Motor lav_tube testinde sadece
+      "genç bazaltik volkanik arazi"yi ölçebiliyor. Ayrıca ada küçük, 25 km'lik karelerin çoğu deniz.
+      Bu yüzden sırası raporlanır ama başarı sayılmaz; kartta bu sınır açıkça yazılmalı.

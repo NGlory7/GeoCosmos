@@ -9,12 +9,12 @@
 
 parameters:
   slope_deg:
-    label: Ortalama eğim (°)
+    label: Ortalama eğim (°, 500 m taban; config/grid.yaml > scale)
     dimension: topography
     tolerance: 15
     earth_source: SRTM
   roughness_m:
-    label: Yüzey pürüzlülüğü (m, yükseklik std)
+    label: Yüzey pürüzlülüğü (m, 500 m yüksekliğin 5 km pencerede std'si)
     dimension: topography
     tolerance: 50
     earth_source: SRTM

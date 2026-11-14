@@ -92,3 +92,60 @@ def load_profiles(path: Path | None = None) -> dict[str, TestProfile]:
     if missing:
         raise ValueError(f"Eksik test profilleri: {sorted(missing)}")
     return profiles
+
+
+# --- Doğrulama seti ve ızgara ayarları -----------------------------------------
+
+SPLITS: tuple[str, ...] = ("tune", "holdout", "report")
+
+
+@dataclass(frozen=True)
+class KnownAnalog:
+    id: str
+    name: str
+    test_id: str
+    split: str  # tune: ayar için, holdout: başarı ölçütü için, report: sadece raporlanır
+    lat: float
+    lon: float
+
+
+@dataclass(frozen=True)
+class ValidationSet:
+    analogs: tuple[KnownAnalog, ...]
+    exclude_radius_km: float
+    top_percent: float
+    min_hits: int
+
+    def by_split(self, split: str) -> list[KnownAnalog]:
+        return [a for a in self.analogs if a.split == split]
+
+
+def load_known_analogs(path: Path | None = None) -> ValidationSet:
+    data = yaml.safe_load((path or CONFIG_DIR / "known_analogs.yaml").read_text(encoding="utf-8"))
+    analogs = []
+    for a in data["analogs"]:
+        if a["test_id"] not in TEST_IDS:
+            raise ValueError(f"{a['id']}: bilinmeyen test_id '{a['test_id']}'")
+        if a.get("split") not in SPLITS:
+            raise ValueError(f"{a['id']}: split {SPLITS} değerlerinden biri olmalı")
+        analogs.append(KnownAnalog(a["id"], a["name"], a["test_id"], a["split"],
+                                   float(a["lat"]), float(a["lon"])))
+    vs = ValidationSet(tuple(analogs), float(data["exclude_radius_km"]),
+                       float(data["top_percent"]), int(data["min_hits"]))
+    holdout = len(vs.by_split("holdout"))
+    if not 0 < vs.min_hits <= holdout:
+        raise ValueError(f"min_hits ({vs.min_hits}) 1 ile holdout sayısı ({holdout}) arasında olmalı")
+    if not 0 < vs.top_percent <= 100:
+        raise ValueError("top_percent 0-100 arasında olmalı")
+    return vs
+
+
+def load_grid_config(path: Path | None = None) -> dict:
+    """config/grid.yaml: ızgara boyutu, eğim/pürüzlülük ölçeği ve maske kuralları."""
+    data = yaml.safe_load((path or CONFIG_DIR / "grid.yaml").read_text(encoding="utf-8"))
+    for section in ("grid", "scale", "masks"):
+        if section not in data:
+            raise ValueError(f"grid.yaml: '{section}' bölümü eksik")
+    if not 0 < data["masks"]["max_masked_fraction"] <= 1:
+        raise ValueError("grid.yaml: max_masked_fraction 0-1 arasında olmalı")
+    return data

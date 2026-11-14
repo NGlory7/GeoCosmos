@@ -57,6 +57,7 @@ flowchart LR
 | Tablo işleri | `pandas`, `numpy` | 240 bin satırı saniyeler içinde puanlar |
 | Coğrafi işler | `geopandas`, `shapely` | Mesafe filtresi, GeoJSON yazma |
 | Normalizasyon | `scikit-learn` | Farklı birimleri (derece, metre, °C) aynı ölçeğe getirir |
+| Ölçek eşitleme | Earth Engine `reduceResolution` | Eğim/pürüzlülük öncesi tüm yükseklik verileri 500 m'ye indirilir (`config/grid.yaml`) |
 | Ayar dosyaları | `pyyaml` | Hedefler ve ağırlıklar kodda değil, dosyada |
 | Isı haritası | `matplotlib` | Dünya geneli benzerliği PNG olarak çizer |
 | Gemini | `google-genai` | Google'ın resmi Python kütüphanesi |
@@ -210,7 +211,8 @@ GeoCosmos/
 ├── config/
 │   ├── targets.yaml          # 6 Ay/Mars hedefi + kaynaklar
 │   ├── test_profiles.yaml    # 5 test amacı = 5 ağırlık seti
-│   └── known_analogs.yaml    # doğrulama seti
+│   ├── known_analogs.yaml    # doğrulama seti (ayar / sınav / rapor grupları)
+│   └── grid.yaml             # ızgara boyutu, eğim ölçeği, maske kuralları
 │
 ├── data/
 │   ├── raw/                  # gitignore
@@ -235,7 +237,7 @@ GeoCosmos/
 │       └── App.tsx
 │
 ├── tests/
-│   └── test_validation.py    # "ünlüler ilk 3'te mi?" otomatik testi
+│   └── test_validation.py    # "sınav yerleri en iyi %1'de mi?" otomatik testi
 ├── notebooks/
 ├── docs/
 ├── requirements.txt

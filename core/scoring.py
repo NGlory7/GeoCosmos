@@ -81,7 +81,9 @@ def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int
         analogs.append(Analog(
             id=str(row["id"]),
             name=str(row.get("name", row["id"])),
-            is_new=bool(row.get("is_new", True)),
+            # Varsayılan False: is_new sütunu yoksa hiçbir kare "Yeni aday" diye işaretlenmez.
+            # (True olsaydı ünlü analogların yanındaki kareler de yeni aday görünürdü.)
+            is_new=bool(row.get("is_new", False)),
             target_id=target.id,
             test_id=profile.id,
             rank=rank,

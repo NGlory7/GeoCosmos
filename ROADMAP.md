@@ -97,20 +97,31 @@ Mars ve Ay hedefleri için her parametre tek değerdir (Mars Trek / Moon Trek ve
 
 ### Doğrulama seti
 
-Ünlü analoglar motoru test etmek için kullanılır, keşif listesine girmez:
+Ünlü analoglar motoru test etmek için kullanılır, keşif listesine girmez. Yerler iki gruba ayrılır ki doğrulama gerçek bir kanıt olsun:
 
-| Yer | Beklenen test amacı |
-| --- | --- |
-| Holuhraun (İzlanda) | Rover sürüşü |
-| Yungay (Atacama, Şili) | Biyo-imza / aşırı kuraklık |
-| Haughton Krateri (Devon Adası, Kanada) | Buz sondajı |
-| Svalbard (Norveç) | Buz sondajı |
-| Lanzarote lav tüpleri (İspanya) | Lav tüpü ve habitat |
-| Dumont Dunes (Mojave, ABD) | Rover sürüşü |
-| Lut Çölü (İran) | Toz ve aşınma |
-| Salda Gölü (Türkiye) | Biyo-imza |
+- **Ayar (tune):** Ağırlıklar ve toleranslar sadece bu yerlere bakılarak ayarlanır.
+- **Sınav (holdout):** Başarı ölçütü sadece bu yerlerle hesaplanır. Bunlara bakarak ağırlık değiştirilmez.
+- **Rapor (report):** Sırası gösterilir ama ölçüte girmez, çünkü yöntem o özelliği ölçemiyor.
 
-**Başarı ölçütü:** 8 yerden en az 6'sı kendi test amacında ilk 3'e girmeli.
+| Yer | Beklenen test amacı | Grup |
+| --- | --- | --- |
+| Holuhraun (İzlanda) | Rover sürüşü | Ayar |
+| Yungay (Atacama, Şili) | Biyo-imza / aşırı kuraklık | Ayar |
+| Haughton Krateri (Devon Adası, Kanada) | Buz sondajı | Ayar |
+| Hanksville / MDRS çevresi (Utah, ABD) | Rover sürüşü | Sınav |
+| Svalbard / Bockfjorden (Norveç) | Buz sondajı | Sınav |
+| Salda Gölü kıyısı (Türkiye) | Biyo-imza | Sınav |
+| Lut Çölü (İran) | Toz ve aşınma | Sınav |
+| Lanzarote lav tüpleri (İspanya) | Lav tüpü ve habitat | Rapor |
+
+**Başarı ölçütü:** 4 sınav yerinden en az 3'ü, kendi test amacında Dünya karelerinin en iyi %1'ine girmeli. Ayrıntılar `config/known_analogs.yaml` dosyasında.
+
+Önceki listeden yapılan değişiklikler:
+
+- **Dumont Dunes çıkarıldı, yerine Hanksville geldi.** Dumont Dunes yaklaşık 30 km² büyüklüğünde ve 25 km'lik karede kayboluyordu.
+- **Lanzarote rapora alındı.** Lav tüpleri yer altında, kullandığımız veriler onları göremiyor. Motor sadece "genç bazaltik arazi"yi ölçebiliyor ve kart bu sınırı açıkça söylüyor.
+- **Salda kalıyor.** Su maskesi kareyi ancak yarısından fazlası suysa eler (`config/grid.yaml`), göl ise karenin küçük bir kısmı.
+- **Ölçüt değişti.** Eski ölçüt "8 yerden 6'sı ilk 3'te" idi. Yaklaşık 240 bin kare arasında ilk 3, 25 km çözünürlükte gerçekçi değildi.
 
 ## Global keşif modu
 
@@ -119,13 +130,14 @@ Tüm Dünya iki aşamada taranır. Ağır işlem Earth Engine'de, puanlama lokal
 | Aşama | Ne yapılır | Boyut |
 | --- | --- | --- |
 | 1. Kaba tarama | Tüm karalar 25 km'lik karelerle puanlanır | ~240 bin kare |
-| 2. Filtre | Şehir, tarım, su (ESA WorldCover) çıkarılır; bilinen analoglara 50 km'den yakın kareler doğrulama setine ayrılır | — |
+| 2. Filtre | Yarısından fazlası şehir, tarım, su ya da kalıcı buz olan kareler (ESA WorldCover) çıkarılır; bilinen analoglara 50 km'den yakın kareler doğrulama setine ayrılır | — |
 | 3. Yakın tarama | Her test amacı için en iyi 50–100 karenin çevresi 5 km'lik karelerle yeniden puanlanır | Birkaç bin kare |
 | 4. Elle kontrol | En iyi 3–5 aday Landsat görüntüsüyle incelenir, en ilginç 1–2'si sunuma taşınır | — |
 
 - 25 km ızgarada 6 parametrelik tablo ~10–20 MB tutar; 8 GB RAM'li laptopta rahat çalışır.
 - Ham uydu verisi laptopa indirilmez. Earth Engine'de karelere küçültülür, sadece sonuç tablosu (CSV) indirilir.
 - Sonucu biz seçmeyiz, motor söyler. Beklenmedik bir aday çıkarsa sunumun en güçlü anı o olur.
+- **Ölçek kuralı:** Eğim ve pürüzlülük çözünürlüğe bağlıdır. SRTM (30 m), MOLA (~463 m) ve LOLA verileri önce 500 m'ye indirilir, eğim ondan sonra hesaplanır. Hem Dünya kareleri hem Ay/Mars hedefleri için aynı kural geçerli (`config/grid.yaml`).
 
 ## Mimari ve klasör yapısı
 
@@ -211,8 +223,8 @@ Her kapıda 10 dakikalık ekip kontrolü yapılır. Kapı geçilemiyorsa [MVP ta
 | Laptop belleği yetmez | Script kilitleniyor | Daha kaba ızgara; tabloyu kıta kıta işle |
 | Gemini limiti dolar / internet kesilir | Canlı çağrı hata veriyor | Kayıtlı yorumlar; senaryo çözücü için 3 hazır örnek cevap |
 | Gemini sayı uydurur | Yorumda motorda olmayan sayı var | Prompt'ta yasak, çıktıda sayı kontrolü; geçmiş testler elle girilir |
-| Keşif anlamsız yer bulur | Tarla, şehir, deniz, buz tabakası çıkıyor | WorldCover maskesi; buz tabakalarını sadece buz testinde tut |
-| Doğrulama tutmaz | Ünlüler alt sırada | Ağırlıkları ayarla ama sonucu dürüstçe raporla |
+| Keşif anlamsız yer bulur | Tarla, şehir, deniz, buz tabakası çıkıyor | WorldCover maskesi; buz tabakaları tüm testlerde dışarıda (buz sondajı donmuş zemini ölçer, buzulu değil) |
+| Doğrulama tutmaz | Ünlüler alt sırada | Ağırlıkları sadece ayar yerlerine bakarak düzelt; sınav yerlerine bakarak ayar yapma, sonucu dürüstçe raporla |
 | Ay/Mars harita katmanı yüklenmez | Boş harita | Statik mozaik görüntü |
 | Canlı demo çöker | Sunum anı | Demo videosu hazır, yerel sunucu yedekte |
 
@@ -224,7 +236,7 @@ Toplam 3 dakika (resmi süre farklıysa oranlar korunur):
 
 1. **Problem (30 sn):** Test sahası seçimi bugün çoğunlukla uzman deneyimine dayanıyor. Tek bir "benzerlik yüzdesi" yanıltıcı: Bir yer rover testi için mükemmel, buz sondajı için işe yaramaz olabilir.
 2. **Yöntem (40 sn):** Test amacına göre ağırlıklı skor, her sayı NASA verisinden, kopma kutusu benzerliğin bittiği yeri söylüyor.
-3. **Kanıt (25 sn):** Doğrulama tablosu: ünlü analogların kaçı kendi test amacında ilk 3'te.
+3. **Kanıt (25 sn):** Doğrulama tablosu: ayarda hiç kullanmadığımız ünlü analogların kaçı kendi test amacında Dünya'nın en iyi %1'inde.
 4. **Canlı demo (70 sn):**
    - Bir Mars hedefi + test amacı → Dünya haritası → kart ve kopma kutusu.
    - Bir Ay hedefi ile aynısı.
