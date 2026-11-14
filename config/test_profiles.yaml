@@ -7,6 +7,13 @@
 #              Operasyon bilgisi puan değil, ops_tags olarak kartta gösterilir.
 #   tolerance: |Dünya - hedef| bu kadar olunca benzerlik 0'a düşer (parametrenin biriminde)
 #   earth_source: Dünya verisinin kaynağı (kartta gösterilir)
+#   valid_if:  {parametre: eşik} Dünya değeri sadece o parametre eşiğin üstündeyse geçerli; değilse
+#              o karede "bilinmiyor" sayılır ve eksik veri kuralı uygulanır (core/scoring.py).
+#
+# tests > applies_to: testin anlamlı olduğu hedefler. bodies: sadece bu gök cisimleri;
+#   target_min: hedefte bu parametre en az bu değerde olmalı. Uymayan hedef × test hiç puanlanmaz,
+#   index.json'da sebebiyle görünür. Aksi halde motor kalan birkaç parametreyle (ör. Ay'da toz testi
+#   AOD'siz) yine "en benzer" yeri bulur ve anlamsız bir sonuç üretir.
 #
 # AĞIRLIK AYARI KURALI (config/known_analogs.yaml > split):
 #   - Ağırlıklar sadece "tune" yerlerine bakılarak değiştirilir.
@@ -49,16 +56,24 @@ parameters:
     dimension: climate
     tolerance: 0.8
     earth_source: MODIS aylık AOD (MOD08_M3, Dark Target + Deep Blue)
+  # ASTER TIR emisivitesi bitki örtüsü altında kayacı değil bitkiyi ve nemli toprağı ölçer. Kuraklık
+  # 0,3'ün altındaki karelerde (yaklaşık: yıllık yağış > 700 mm ve yoğun yeşil örtü) mineral indeksi
+  # "bilinmiyor" sayılır. Eklenme sebebi (14 Kasım, sonuç temizliği): ilk taramada karbonat testinin
+  # ilk 20 adayının 19-20'si kuraklığı 0,3'ün altındaki tropik kareler çıktı. Eşik bu dağılımdan
+  # seçildi, doğrulama sonucuna göre ayarlanmadı. Doğrulama yerlerinin hepsinin kuraklığı 0,39'un
+  # üstünde: kendi değerleri değişmez, ama rakip kareler değiştiği için sıraları değişebilir (STATUS.md).
   mafic_index:
     label: Mafik / bazaltik yüzey (0-1 sıralı ölçek)
     dimension: geology
     tolerance: 0.6
     earth_source: ASTER GED (AG100) TIR
+    valid_if: { aridity: 0.3 }
   carbonate_index:
     label: Karbonat izi (0-1 sıralı ölçek)
     dimension: geology
     tolerance: 0.6
     earth_source: ASTER GED (AG100) TIR
+    valid_if: { aridity: 0.3 }
   ground_ice:
     label: Donmuş zemin / yüzeye yakın buz (0-1)
     dimension: geology
@@ -91,6 +106,9 @@ tests:
     breakdown: [gravity, atmosphere, radiation, temperature]
   ice_drilling:
     label: Donmuş zeminde buz sondajı (ISRU)
+    # Hedefte buz yoksa (Gale, Jezero, Marius Hills) buz sondajı provasının anlamı yok.
+    applies_to:
+      target_min: { ground_ice: 0.25 }
     weights:
       ground_ice: 0.40
       surface_temp_c: 0.25
@@ -103,6 +121,10 @@ tests:
     rationale: >-
       Lav tüpleri yörüngeden görülmez; motor sadece tüp oluşabilecek araziyi (genç, mafik,
       düşük eğimli lav akıntısı) ölçer. Bu yüzden mafik yüzey baskın, eğim düşük tutulur.
+    # Lav tüpü bazaltik lav akıntısında oluşur: hedef baskın biçimde mafik değilse (feldspatik Ay
+    # kutup yaylaları, Gale, Arcadia) lav tüpü hedefi değildir. Kalanlar: Marius Hills, Jezero.
+    applies_to:
+      target_min: { mafic_index: 0.75 }
     weights:
       mafic_index: 0.45
       roughness_m: 0.20
@@ -115,6 +137,10 @@ tests:
     rationale: >-
       Toz testinin belirleyicisi havadaki toz (AOD) ve onu besleyen kuru, bitkisiz yüzeydir;
       büyük gece-gündüz farkı termal rüzgarları ve fiziksel aşınmayı artırır.
+    # Atmosferi olmayan Ay'da toz fırtınası ve rüzgar aşınması yok (Ay tozu ayrı bir sorun:
+    # elektrostatik, rüzgarsız; AOD bunu ölçmez).
+    applies_to:
+      bodies: [mars]
     weights:
       dust_aod: 0.40
       aridity: 0.25
@@ -131,6 +157,9 @@ tests:
       Hiperkurak ortamda organik madde ve biyo-imzalar suyun yokluğu sayesinde korunur (Atacama;
       Gale'in bugünkü yüzeyi). Belirleyici kuraklıktır; büyük gece-gündüz farkı ve tozlu yüzey Mars
       yüzey koşullarına yakınlığı artırır. Mutlak sıcaklık puana girmez, kopma kutusunda gösterilir.
+    # Ay'da biyo-imza hedefi yok (sıvı su geçmişi ve biyolojik süreç beklenmiyor).
+    applies_to:
+      bodies: [mars]
     weights:
       aridity: 0.60
       temp_range_c: 0.25
@@ -148,12 +177,22 @@ tests:
       Karbonat, biyo-imzayı koruyabilecek mineralin varlığını ölçer; Dünya'daki sahanın hedeften
       DAHA FAZLA karbonat içermesi test için kusur değildir (Salda kararı, 14 Kasım).
     at_least: [carbonate_index]
+    # Sadece karbonat tespit edilmiş Mars hedefleri (Jezero, Gale). Karbonatı 0 olan hedefte
+    # tek yönlü kural yüzünden her kare tam puan alıyordu.
+    applies_to:
+      bodies: [mars]
+      target_min: { carbonate_index: 0.25 }
     weights:
       carbonate_index: 0.60
       mafic_index: 0.40
     breakdown: [liquid_water, biology, radiation, temperature]
   # 14 Kasım: challenge'daki "kalıcı Ay üssü ve iniş alanı" ile "aydınlanma" maddeleri için eklendi.
-  # Ayar yeri yok: ağırlıklar fiziksel gerekçeyle önceden sabitlendi, sonuca bakılarak değiştirilmez.
+  # Ayar yeri yok: ağırlıklar fiziksel gerekçeyle önceden sabitlendi.
+  # İSTİSNA (14 Kasım, sonuç temizliği; ilk sonuç görüldükten SONRA): kuraklık eklendi. İlk taramada
+  # Marius Hills'in 1 numarası Serengeti, Arcadia'nınki Amur taygası çıktı: ilk sürüm yüzeyin çıplak
+  # olduğunu varsaymış, bitki örtüsünü hiç ölçmüyordu. Ay ve Mars yüzeyi çıplak regolittir; iniş
+  # motoru tozu, tehlike algılama ve inşaat bitkili, nemli zeminde prova edilemez. Testin doğrulama
+  # yeri yok, bu değişiklik sınav sonucunu etkilemez. Diğer ağırlıklar oranları korunarak küçültüldü.
   base_site:
     label: Üs kurulumu ve iniş alanı
     rationale: >-
@@ -161,10 +200,11 @@ tests:
       inşaat, yol). Güneş yüksekliği enerji ve görüş koşulunu temsil eder: kutup üssünde güneş ufka
       yakın, gölgeler uzun, paneller dikey. Yakındaki buz yerinde kaynak kullanımı (ISRU) içindir.
       Güneş yüksekliği geometriktir; Malapert gibi tepelerin daha uzun güneş alması (yerel ufuk)
-      Dünya'da da hedefte de hesaba katılmaz.
+      Dünya'da da hedefte de hesaba katılmaz. Kuraklık yüzeyin çıplak, bitkisiz olmasını temsil eder.
     weights:
-      slope_deg: 0.30
-      roughness_m: 0.25
-      sun_elevation_deg: 0.25
-      ground_ice: 0.20
+      slope_deg: 0.24
+      roughness_m: 0.20
+      sun_elevation_deg: 0.20
+      ground_ice: 0.16
+      aridity: 0.20
     breakdown: [gravity, radiation, temperature, atmosphere]

@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 from core.profiles import load_grid_config, load_parameters, load_profiles, load_targets
-from core.scoring import score_grid, usable_weights
+from core.scoring import score_grid, skip_reason
 
 ROOT = Path(__file__).resolve().parent.parent
 GRID_PATH = ROOT / "data" / "processed" / "grid.parquet"
@@ -84,7 +84,7 @@ def run_heatmaps(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> l
     index = []
     for target in load_targets().values():
         for profile in load_profiles().values():
-            if not usable_weights(profile.weights, target, params):
+            if skip_reason(target, profile, params):
                 continue
             scores = score_grid(grid, target, profile.weights, params,
                                 profile.at_least)["score_total"].to_numpy(float)

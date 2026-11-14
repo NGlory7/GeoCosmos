@@ -123,10 +123,11 @@
    "id": "base_site",
    "label": "Üs kurulumu ve iniş alanı",
    "weights": {
-    "slope_deg": 0.3,
-    "roughness_m": 0.25,
-    "sun_elevation_deg": 0.25,
-    "ground_ice": 0.2
+    "slope_deg": 0.24,
+    "roughness_m": 0.2,
+    "sun_elevation_deg": 0.2,
+    "ground_ice": 0.16,
+    "aridity": 0.2
    },
    "breakdown": [
     "gravity",
@@ -135,7 +136,7 @@
     "atmosphere"
    ],
    "at_least": [],
-   "rationale": "İniş ve üs kurulumunu belirleyen arazi geometrisidir (eğim, pürüzlülük: iniş tehlikesi algılama, inşaat, yol). Güneş yüksekliği enerji ve görüş koşulunu temsil eder: kutup üssünde güneş ufka yakın, gölgeler uzun, paneller dikey. Yakındaki buz yerinde kaynak kullanımı (ISRU) içindir. Güneş yüksekliği geometriktir; Malapert gibi tepelerin daha uzun güneş alması (yerel ufuk) Dünya'da da hedefte de hesaba katılmaz."
+   "rationale": "İniş ve üs kurulumunu belirleyen arazi geometrisidir (eğim, pürüzlülük: iniş tehlikesi algılama, inşaat, yol). Güneş yüksekliği enerji ve görüş koşulunu temsil eder: kutup üssünde güneş ufka yakın, gölgeler uzun, paneller dikey. Yakındaki buz yerinde kaynak kullanımı (ISRU) içindir. Güneş yüksekliği geometriktir; Malapert gibi tepelerin daha uzun güneş alması (yerel ufuk) Dünya'da da hedefte de hesaba katılmaz. Kuraklık yüzeyin çıplak, bitkisiz olmasını temsil eder."
   }
  ],
  "parameters": {

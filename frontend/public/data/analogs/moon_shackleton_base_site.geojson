@@ -6,74 +6,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -76.32335563113597,
-     81.50650243275996
-    ]
-   },
-   "properties": {
-    "id": "g25_81.507_-76.323",
-    "name": "81.51°K, 76.32°B",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 81.50650243275996,
-    "lon": -76.32335563113597,
-    "rank": 1,
-    "score_total": 63.1,
-    "scores": {
-     "topography": 47.5,
-     "geology": 95.0,
-     "climate": 72.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 11.995589256286621,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 257.72446511198564,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 8.493497567240041,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.5899697580645161,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "81.51°K, 76.32°B konumundaki bölge, Shackleton Krateri kenarı hedefi için 63.1 toplam skorla değerlendirilmiştir. Jeoloji alt skorunun 95.0, iklim alt skorunun ise 72.0 olması bu alanı belirli parametrelerde avantajlı kılmaktadır. Özellikle 12.0° Dünya ve 13.94 hedef ortalama eğim ile 8.49° Dünya ve 0.1 hedef yıllık ortalama öğlen güneş yüksekliği değerleri hedefe benzemektedir. Ayrıca 0.59 Dünya ve 0.56 hedef donmuş zemin oranları da uyum göstermektedir.\n\nBuna karşın, 257.72 Dünya ve 378.1 hedef yüzey pürüzlülüğü değerleri benzememektedir ve 47.5 topoğrafya skoru bunu yansıtmaktadır. Toplam skorun sınırlayıcı unsurları arasında yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması ve toz ile tekerlek davranışının farklılaşması yer alır. Manyetik alan ve atmosfer koruması bulunmadığı için yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur; ayrıca atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -82.49089952052068,
      81.95868829923852
     ]
@@ -86,12 +18,12 @@
     "test_id": "base_site",
     "lat": 81.95868829923852,
     "lon": -82.49089952052068,
-    "rank": 2,
-    "score_total": 62.6,
+    "rank": 1,
+    "score_total": 67.9,
     "scores": {
      "topography": 53.4,
      "geology": 73.9,
-     "climate": 73.5
+     "climate": 81.3
     },
     "params": [
      {
@@ -121,209 +53,12 @@
       "target": 0.56,
       "source": "ESA CCI Permafrost",
       "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "81.96°K, 82.49°B koordinatlarındaki bölge, Shackleton Krateri kenarı hedefi için toplam 62.6 skorla değerlendirilmiştir. Jeoloji ve iklim boyut skorları sırasıyla 73.9 ve 73.5 seviyesindedir. Ortalama eğim (Dünya'da 13.63°, hedefte 13.94°) ile yıllık ortalama öğlen güneş yüksekliği (Dünya'da 8.04°, hedefte 0.1°) parametrelerinde uyum sağlanmış olup, donmuş zemin / yüzeye yakın buz oranları da Dünya'da 0.72, hedefte 0.56 olarak benzerlik göstermektedir. Bu yönleriyle belirli test koşullarını karşılarken, topografi boyutu 53.4 skorunda kalmış ve 500 m yüksekliğin 5 km penceredeki standart sapması olarak ölçülen yüzey pürüzlülüğü (Dünya'da 238.66 m, hedefte 378.1 m) açısından benzerlik sağlamamıştır.\n\nBölgenin test sahası olarak uyuşmadığı ve kritik kopma noktaları oluşturduğu alanlar bulunmaktadır. Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ile atmosfer koruması bulunmamakta ve yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur. Ayrıca atmosfer yok denecek kadar incedir; rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir. Operasyonel açıdan yol erişimi bulunmamakta ve bölge uzaktır."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     72.80513583636275,
-     36.06182285166495
-    ]
-   },
-   "properties": {
-    "id": "g25_36.062_72.805",
-    "name": "36.06°K, 72.81°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 36.06182285166495,
-    "lon": 72.80513583636275,
-    "rank": 3,
-    "score_total": 61.5,
-    "scores": {
-     "topography": 75.6,
-     "geology": 99.6,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 20.611684799194336,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
      },
      {
-      "key": "roughness_m",
-      "earth": 377.9779322769124,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 53.93817714833506,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.5622660319010416,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "36.06°K, 72.81°D koordinatlarındaki bu Dünya bölgesi, 61.5 toplam skor ile Shackleton Krateri kenarı hedefi için bazı alanlarda benzerlik göstermektedir. Jeoloji boyutu 99.6 skor alırken, topografya 75.6 skoruna sahiptir. Ortalama eğim (Dünya'da 20.61°, hedefte 13.94°), yüzey pürüzlülüğü (Dünya'da 377.98 m, hedefte 378.1 m) ve donmuş zemin / yüzeye yakın buz oranı (her ikisinde de 0.56) parametrelerinde eşleşme (\"match\": true) sağlanmıştır.\n\nBuna karşın, iklim boyutu 0.0 skor alarak iki ortamın ayrıldığı temel noktayı oluşturur. Yıllık ortalama öğlen güneş yüksekliği Dünya'da 53.94° iken hedefte 0.1° olarak ölçülmüş ve bu parametre eşleşmemiştir (\"match\": false). Ayrıca bu test sahası, yerçekiminin Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) olması, toz ve tekerlek davranışının farklılaşması, manyetik alan ile atmosfer korumasının bulunmaması ve yüzeyin doğrudan kozmik ışına açık olması bakımından hedefi tam olarak karşılamaz. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da bunun karşılığı yoktur; atmosfer ise rüzgar aşınması ve ısı taşınımı olmayacak kadar incedir."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     72.66592011599596,
-     38.54884511729701
-    ]
-   },
-   "properties": {
-    "id": "g25_38.549_72.666",
-    "name": "38.55°K, 72.67°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 38.54884511729701,
-    "lon": 72.66592011599596,
-    "rank": 4,
-    "score_total": 61.2,
-    "scores": {
-     "topography": 77.0,
-     "geology": 94.4,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 19.672853469848633,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 375.7107743359482,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 51.451154882702994,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.5933202107747396,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "38.55°K, 72.67°D koordinatlarındaki bu bölge, 61.2 toplam skorla Shackleton Krateri kenarı hedefi için belirli alanlarda benzerlik göstermektedir. Topoğrafya ve jeoloji boyut skorlarının yüksek olması, ortalama eğim (Dünya'da 19.67°, hedefte 13.94°), yüzey pürüzlülüğü (Dünya'da 375.71 m, hedefte 378.1 m) ve donmuş zemin/yüzeye yakın buz parametrelerinde (`match`: true) hedefe uyum sağlandığını göstermektedir.\n\nBuna karşın, yıllık ortalama öğlen güneş yüksekliği parametresinde (Dünya'da 51.45°, hedefte 0.1°) benzerlik bulunmamaktadır (`match`: false) ve iklim boyutu skoru sıfırdır. Ayrıca, yerçekiminin Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) olması nedeniyle toz ve tekerlek davranışı farklılık gösterir; manyetik alan ile atmosfer koruması bulunmaz ve yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da birebir karşılığı yoktur; atmosfer neredeyse yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir. Bölgede yol erişimi bulunmamaktadır ve uzaktır (`road_access`: false, `remote`: false)."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     15.050191288566536,
-     79.0194801671279
-    ]
-   },
-   "properties": {
-    "id": "g25_79.019_15.050",
-    "name": "79.02°K, 15.05°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 79.0194801671279,
-    "lon": 15.050191288566536,
-    "rank": 5,
-    "score_total": 60.7,
-    "scores": {
-     "topography": 49.4,
-     "geology": 87.8,
-     "climate": 63.7
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 12.525936126708984,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 202.60235183911493,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 10.980519832872103,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.6330729166666667,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
+      "key": "aridity",
+      "earth": 0.9341662216186524,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -338,7 +73,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": "79.02°K, 15.05°D koordinatlarında bulunan bu Dünya bölgesi, 60.7 toplam skorla Shackleton Krateri kenarı hedefi için belirli alanlarda benzerlik göstermektedir. Özellikle jeoloji boyutu 87.8 skorla öne çıkarken; 12.53° olan dünya ortalama eğimi hedefteki 13.94° değerine uyum sağlamakta ve bu parametre \"match\": true olarak eşleşmektedir. Ayrıca yıllık ortalama öğlen güneş yüksekliği (dünya 10.98°, hedef 0.1°) ile donmuş zemin/yüzeye yakın buz oranları (dünya 0.63, hedef 0.56) benzerlik gösteren diğer parametreler arasında yer almaktadır.\n\nBuna karşın, 49.4 skor alan topografya boyutu ve 63.7 skor alan iklim boyutu kapsamında bazı belirgin uyumsuzluklar ve kopma noktaları bulunmaktadır. Yüzey pürüzlülüğü Dünya'da 202.6 m iken hedefte 378.1 m ölçülmüş ve bu parametre eşleşmemiştir (\"match\": false). Ayrıca yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ve atmosfer koruması bulunmadığı için yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da bunun karşılığı yoktur. Atmosfer ise yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
+    "ai_comment": ""
    }
   },
   {
@@ -346,52 +81,59 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -66.7332492746151,
-     82.63696709895636
+     -76.32335563113597,
+     81.50650243275996
     ]
    },
    "properties": {
-    "id": "g25_82.637_-66.733",
-    "name": "82.64°K, 66.73°B",
+    "id": "g25_81.507_-76.323",
+    "name": "81.51°K, 76.32°B",
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
-    "lat": 82.63696709895636,
-    "lon": -66.7332492746151,
-    "rank": 6,
-    "score_total": 59.4,
+    "lat": 81.50650243275996,
+    "lon": -76.32335563113597,
+    "rank": 2,
+    "score_total": 67.7,
     "scores": {
-     "topography": 40.8,
-     "geology": 89.9,
-     "climate": 75.8
+     "topography": 47.5,
+     "geology": 95.0,
+     "climate": 79.1
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 10.156310081481934,
+      "earth": 11.995589256286621,
       "target": 13.94,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 173.37908597720727,
+      "earth": 257.72446511198564,
       "target": 378.1,
       "source": "Copernicus DEM GLO-30",
       "match": false
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 7.3630329010436375,
+      "earth": 8.493497567240041,
       "target": 0.1,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
      },
      {
       "key": "ground_ice",
-      "earth": 0.6208928571428571,
+      "earth": 0.5899697580645161,
       "target": 0.56,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9174476089477539,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -426,12 +168,12 @@
     "test_id": "base_site",
     "lat": 36.28791578490423,
     "lon": 76.55936015204998,
-    "rank": 7,
-    "score_total": 59.3,
+    "rank": 3,
+    "score_total": 64.8,
     "scores": {
      "topography": 74.5,
      "geology": 91.9,
-     "climate": 0.0
+     "climate": 43.2
     },
     "params": [
      {
@@ -461,277 +203,12 @@
       "target": 0.56,
       "source": "ESA CCI Permafrost",
       "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     77.63199567081774,
-     34.479172318989995
-    ]
-   },
-   "properties": {
-    "id": "g25_34.479_77.632",
-    "name": "34.48°K, 77.63°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 34.479172318989995,
-    "lon": 77.63199567081774,
-    "rank": 8,
-    "score_total": 59.2,
-    "scores": {
-     "topography": 77.8,
-     "geology": 82.1,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 18.373706817626953,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
      },
      {
-      "key": "roughness_m",
-      "earth": 384.78877237941856,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 55.520827681010005,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.45272216796875,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     75.61382762577267,
-     37.870566317579176
-    ]
-   },
-   "properties": {
-    "id": "g25_37.871_75.614",
-    "name": "37.87°K, 75.61°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 37.870566317579176,
-    "lon": 75.61382762577267,
-    "rank": 9,
-    "score_total": 58.3,
-    "scores": {
-     "topography": 70.6,
-     "geology": 97.5,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 20.507287979125977,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 372.06370790103705,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 52.12943368242082,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.5448160807291667,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     81.38621998650495,
-     30.183406587443702
-    ]
-   },
-   "properties": {
-    "id": "g25_30.183_81.386",
-    "name": "30.18°K, 81.39°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 30.183406587443702,
-    "lon": 81.38621998650495,
-    "rank": 10,
-    "score_total": 57.8,
-    "scores": {
-     "topography": 75.1,
-     "geology": 82.5,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 20.746864318847656,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 377.9604692370922,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 59.816593412556294,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.45473556518554686,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     15.772524962743967,
-     77.66292256769222
-    ]
-   },
-   "properties": {
-    "id": "g25_77.663_15.773",
-    "name": "77.66°K, 15.77°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 77.66292256769222,
-    "lon": 15.772524962743967,
-    "rank": 11,
-    "score_total": 57.5,
-    "scores": {
-     "topography": 41.6,
-     "geology": 99.1,
-     "climate": 59.2
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 10.372208595275879,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 174.90020708792144,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 12.33707743230778,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.5651785714285714,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
+      "key": "aridity",
+      "earth": 0.9185525756312425,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -754,52 +231,59 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -68.68086918883046,
-     80.82822363304213
+     -66.7332492746151,
+     82.63696709895636
     ]
    },
    "properties": {
-    "id": "g25_80.828_-68.681",
-    "name": "80.83°K, 68.68°B",
+    "id": "g25_82.637_-66.733",
+    "name": "82.64°K, 66.73°B",
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
-    "lat": 80.82822363304213,
-    "lon": -68.68086918883046,
-    "rank": 12,
-    "score_total": 57.4,
+    "lat": 82.63696709895636,
+    "lon": -66.7332492746151,
+    "rank": 4,
+    "score_total": 63.6,
     "scores": {
-     "topography": 51.2,
-     "geology": 58.8,
-     "climate": 69.8
+     "topography": 40.8,
+     "geology": 89.9,
+     "climate": 78.1
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 13.029806137084961,
+      "earth": 10.156310081481934,
       "target": 13.94,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 206.7431720335677,
+      "earth": 173.37908597720727,
       "target": 378.1,
       "source": "Copernicus DEM GLO-30",
       "match": false
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 9.171776366957873,
+      "earth": 7.3630329010436375,
       "target": 0.1,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": true
      },
      {
       "key": "ground_ice",
-      "earth": 0.8071428571428572,
+      "earth": 0.6208928571428571,
       "target": 0.56,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8826205673217773,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -822,120 +306,59 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.50371677550228,
-     72.01059923671026
+     72.80513583636275,
+     36.06182285166495
     ]
    },
    "properties": {
-    "id": "g25_72.011_-54.504",
-    "name": "72.01°K, 54.50°B",
+    "id": "g25_36.062_72.805",
+    "name": "36.06°K, 72.81°D",
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
-    "lat": 72.01059923671026,
-    "lon": -54.50371677550228,
-    "rank": 13,
-    "score_total": 57.2,
+    "lat": 36.06182285166495,
+    "lon": 72.80513583636275,
+    "rank": 5,
+    "score_total": 63.4,
     "scores": {
-     "topography": 49.6,
-     "geology": 99.1,
-     "climate": 40.4
+     "topography": 75.6,
+     "geology": 99.6,
+     "climate": 35.5
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 12.590033531188965,
+      "earth": 20.611684799194336,
       "target": 13.94,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 243.31546600021377,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 17.989400763289737,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.5546875,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     75.02424612381732,
-     38.77493805053629
-    ]
-   },
-   "properties": {
-    "id": "g25_38.775_75.024",
-    "name": "38.77°K, 75.02°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 38.77493805053629,
-    "lon": 75.02424612381732,
-    "rank": 14,
-    "score_total": 57.1,
-    "scores": {
-     "topography": 85.6,
-     "geology": 50.2,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 16.931995391845703,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 374.2280812301033,
+      "earth": 377.9779322769124,
       "target": 378.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 51.225061949463715,
+      "earth": 53.93817714833506,
       "target": 0.1,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": false
      },
      {
       "key": "ground_ice",
-      "earth": 0.26138671875,
+      "earth": 0.5622660319010416,
       "target": 0.56,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8256809331592212,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -958,52 +381,59 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     73.34145359574664,
-     36.966194584622066
+     72.66592011599596,
+     38.54884511729701
     ]
    },
    "properties": {
-    "id": "g25_36.966_73.341",
-    "name": "36.97°K, 73.34°D",
+    "id": "g25_38.549_72.666",
+    "name": "38.55°K, 72.67°D",
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
-    "lat": 36.966194584622066,
-    "lon": 73.34145359574664,
-    "rank": 15,
-    "score_total": 57.0,
+    "lat": 38.54884511729701,
+    "lon": 72.66592011599596,
+    "rank": 6,
+    "score_total": 63.3,
     "scores": {
-     "topography": 72.3,
-     "geology": 86.1,
-     "climate": 0.0
+     "topography": 77.0,
+     "geology": 94.4,
+     "climate": 35.9
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 18.29930877685547,
+      "earth": 19.672853469848633,
       "target": 13.94,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 365.09549846511186,
+      "earth": 375.7107743359482,
       "target": 378.1,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 53.033805415377934,
+      "earth": 51.451154882702994,
       "target": 0.1,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": false
      },
      {
       "key": "ground_ice",
-      "earth": 0.476361083984375,
+      "earth": 0.5933202107747396,
       "target": 0.56,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8305279059389287,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -1038,12 +468,12 @@
     "test_id": "base_site",
     "lat": 81.73259536599925,
     "lon": -53.19506604594325,
-    "rank": 16,
-    "score_total": 56.7,
+    "rank": 7,
+    "score_total": 63.3,
     "scores": {
      "topography": 34.3,
      "geology": 98.4,
-     "climate": 72.8
+     "climate": 81.3
     },
     "params": [
      {
@@ -1072,6 +502,763 @@
       "earth": 0.550390625,
       "target": 0.56,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9387021636962891,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -29.615729787949896,
+     83.31524589867419
+    ]
+   },
+   "properties": {
+    "id": "g25_83.315_-29.616",
+    "name": "83.32°K, 29.62°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 83.31524589867419,
+    "lon": -29.615729787949896,
+    "rank": 8,
+    "score_total": 62.9,
+    "scores": {
+     "topography": 31.7,
+     "geology": 95.6,
+     "climate": 84.3
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 7.654847145080566,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 144.93860525496655,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 6.684754101325807,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.5338141025641026,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9427471081533565,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.34145359574664,
+     36.966194584622066
+    ]
+   },
+   "properties": {
+    "id": "g25_36.966_73.341",
+    "name": "36.97°K, 73.34°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 36.966194584622066,
+    "lon": 73.34145359574664,
+    "rank": 9,
+    "score_total": 62.7,
+    "scores": {
+     "topography": 72.3,
+     "geology": 86.1,
+     "climate": 42.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 18.29930877685547,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 365.09549846511186,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 53.033805415377934,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.476361083984375,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.914147744095706,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -68.68086918883046,
+     80.82822363304213
+    ]
+   },
+   "properties": {
+    "id": "g25_80.828_-68.681",
+    "name": "80.83°K, 68.68°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 80.82822363304213,
+    "lon": -68.68086918883046,
+    "rank": 10,
+    "score_total": 62.4,
+    "scores": {
+     "topography": 51.2,
+     "geology": 58.8,
+     "climate": 76.0
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.029806137084961,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 206.7431720335677,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 9.171776366957873,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.8071428571428572,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8934688339233399,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     77.63199567081774,
+     34.479172318989995
+    ]
+   },
+   "properties": {
+    "id": "g25_34.479_77.632",
+    "name": "34.48°K, 77.63°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 34.479172318989995,
+    "lon": 77.63199567081774,
+    "rank": 11,
+    "score_total": 61.7,
+    "scores": {
+     "topography": 77.8,
+     "geology": 82.1,
+     "climate": 35.7
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 18.373706817626953,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 384.78877237941856,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 55.520827681010005,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.45272216796875,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8286314261903671,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     75.02424612381732,
+     38.77493805053629
+    ]
+   },
+   "properties": {
+    "id": "g25_38.775_75.024",
+    "name": "38.77°K, 75.02°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 38.77493805053629,
+    "lon": 75.02424612381732,
+    "rank": 12,
+    "score_total": 61.6,
+    "scores": {
+     "topography": 85.6,
+     "geology": 50.2,
+     "climate": 39.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 16.931995391845703,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 374.2280812301033,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 51.225061949463715,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.26138671875,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8779837137207522,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     75.61382762577267,
+     37.870566317579176
+    ]
+   },
+   "properties": {
+    "id": "g25_37.871_75.614",
+    "name": "37.87°K, 75.61°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 37.870566317579176,
+    "lon": 75.61382762577267,
+    "rank": 13,
+    "score_total": 61.6,
+    "scores": {
+     "topography": 70.6,
+     "geology": 97.5,
+     "climate": 37.2
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 20.507287979125977,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 372.06370790103705,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 52.12943368242082,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.5448160807291667,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8465028352266306,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.63101584456379,
+     82.86306003219563
+    ]
+   },
+   "properties": {
+    "id": "g25_82.863_-75.631",
+    "name": "82.86°K, 75.63°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 82.86306003219563,
+    "lon": -75.63101584456379,
+    "rank": 14,
+    "score_total": 61.1,
+    "scores": {
+     "topography": 44.0,
+     "geology": 57.4,
+     "climate": 81.5
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 11.035008430480957,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 172.7167022823838,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 7.136939967804366,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.815625,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9188757171630859,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -53.78181324205192,
+     72.23669216994954
+    ]
+   },
+   "properties": {
+    "id": "g25_72.237_-53.782",
+    "name": "72.24°K, 53.78°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 72.23669216994954,
+    "lon": -53.78181324205192,
+    "rank": 15,
+    "score_total": 60.7,
+    "scores": {
+     "topography": 49.4,
+     "geology": 94.3,
+     "climate": 59.6
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 12.518301963806152,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 288.0698578261945,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 17.763307830050465,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.5258333333333334,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8685983209902416,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.050191288566536,
+     79.0194801671279
+    ]
+   },
+   "properties": {
+    "id": "g25_79.019_15.050",
+    "name": "79.02°K, 15.05°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 79.0194801671279,
+    "lon": 15.050191288566536,
+    "rank": 16,
+    "score_total": 60.6,
+    "scores": {
+     "topography": 49.4,
+     "geology": 87.8,
+     "climate": 62.0
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 12.525936126708984,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 202.60235183911493,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 10.980519832872103,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.6330729166666667,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.7621406555175781,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -88.49512477677123,
+     78.79338723388862
+    ]
+   },
+   "properties": {
+    "id": "g25_78.793_-88.495",
+    "name": "78.79°K, 88.50°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "base_site",
+    "lat": 78.79338723388862,
+    "lon": -88.49512477677123,
+    "rank": 17,
+    "score_total": 59.7,
+    "scores": {
+     "topography": 34.1,
+     "geology": 90.8,
+     "climate": 75.5
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 8.322988510131836,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 174.0681457401764,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 11.20661276611138,
+      "target": 0.1,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.6154891304347826,
+      "target": 0.56,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9280912857055664,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -1106,12 +1293,12 @@
     "test_id": "base_site",
     "lat": 42.16633204912547,
     "lon": 79.74089813946006,
-    "rank": 17,
-    "score_total": 56.2,
+    "rank": 18,
+    "score_total": 59.7,
     "scores": {
      "topography": 74.7,
      "geology": 75.6,
-     "climate": 0.0
+     "climate": 36.8
     },
     "params": [
      {
@@ -1141,6 +1328,13 @@
       "target": 0.56,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8412944488525391,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
@@ -1162,125 +1356,64 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -29.615729787949896,
-     83.31524589867419
+     -76.16082277901312,
+     71.78450630347098
     ]
    },
    "properties": {
-    "id": "g25_83.315_-29.616",
-    "name": "83.32°K, 29.62°B",
+    "id": "g25_71.785_-76.161",
+    "name": "71.78°K, 76.16°B",
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
-    "lat": 83.31524589867419,
-    "lon": -29.615729787949896,
-    "rank": 18,
-    "score_total": 56.1,
-    "scores": {
-     "topography": 31.7,
-     "geology": 95.6,
-     "climate": 78.1
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 7.654847145080566,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 144.93860525496655,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 6.684754101325807,
-      "target": 0.1,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": true
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.5338141025641026,
-      "target": 0.56,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     84.54097087498371,
-     43.975075515039705
-    ]
-   },
-   "properties": {
-    "id": "g25_43.975_84.541",
-    "name": "43.98°K, 84.54°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "base_site",
-    "lat": 43.975075515039705,
-    "lon": 84.54097087498371,
+    "lat": 71.78450630347098,
+    "lon": -76.16082277901312,
     "rank": 19,
-    "score_total": 55.9,
+    "score_total": 59.6,
     "scores": {
-     "topography": 74.8,
-     "geology": 74.0,
-     "climate": 0.0
+     "topography": 44.0,
+     "geology": 97.7,
+     "climate": 61.6
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 20.851110458374023,
+      "earth": 11.045831680297852,
       "target": 13.94,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 378.14735020290163,
+      "earth": 226.87632370754935,
       "target": 378.1,
       "source": "Copernicus DEM GLO-30",
-      "match": true
+      "match": false
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 46.0249244849603,
+      "earth": 18.215493696529023,
       "target": 0.1,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": false
      },
      {
       "key": "ground_ice",
-      "earth": 0.40377604166666664,
+      "earth": 0.5736607142857143,
       "target": 0.56,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.901102424621582,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": true,
+     "road_access": false,
      "remote": true
     },
     "breakdown": [
@@ -1298,58 +1431,65 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.49807164568776,
-     69.74966990431747
+     71.19618255821109,
+     36.51400871814351
     ]
    },
    "properties": {
-    "id": "g25_69.750_-54.498",
-    "name": "69.75°K, 54.50°B",
+    "id": "g25_36.514_71.196",
+    "name": "36.51°K, 71.20°D",
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
-    "lat": 69.74966990431747,
-    "lon": -54.49807164568776,
+    "lat": 36.51400871814351,
+    "lon": 71.19618255821109,
     "rank": 20,
-    "score_total": 55.7,
+    "score_total": 58.9,
     "scores": {
-     "topography": 52.8,
-     "geology": 92.6,
-     "climate": 32.8
+     "topography": 75.0,
+     "geology": 71.6,
+     "climate": 36.1
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 13.446269989013672,
+      "earth": 19.97589683532715,
       "target": 13.94,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 230.46124113010788,
+      "earth": 381.4519618254755,
       "target": 378.1,
       "source": "Copernicus DEM GLO-30",
-      "match": false
+      "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 20.25033009568253,
+      "earth": 53.48599128185649,
       "target": 0.1,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": false
      },
      {
       "key": "ground_ice",
-      "earth": 0.6042668269230769,
+      "earth": 0.38988037109375,
       "target": 0.56,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.833506048366268,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",

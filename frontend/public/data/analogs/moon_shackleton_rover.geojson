@@ -346,74 +346,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.66240434147421,
-     50.30567764573951
-    ]
-   },
-   "properties": {
-    "id": "g25_50.306_-122.662",
-    "name": "50.31°K, 122.66°B",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "rover",
-    "lat": 50.30567764573951,
-    "lon": -122.66240434147421,
-    "rank": 6,
-    "score_total": 78.5,
-    "scores": {
-     "topography": 84.5,
-     "geology": 100.0,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 18.32008171081543,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 377.1679852024498,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "mafic_index",
-      "earth": 0.25,
-      "target": 0.25,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.16339849392936534,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": false
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "atmosphere",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      80.62527039239308,
      41.94023911588619
     ]
@@ -426,7 +358,7 @@
     "test_id": "rover",
     "lat": 41.94023911588619,
     "lon": 80.62527039239308,
-    "rank": 7,
+    "rank": 6,
     "score_total": 77.5,
     "scores": {
      "topography": 71.5,
@@ -482,74 +414,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.274079711996686,
-     46.23600484743249
-    ]
-   },
-   "properties": {
-    "id": "g25_46.236_7.274",
-    "name": "46.24°K, 7.27°D",
-    "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "rover",
-    "lat": 46.23600484743249,
-    "lon": 7.274079711996686,
-    "rank": 8,
-    "score_total": 76.6,
-    "scores": {
-     "topography": 81.6,
-     "geology": 100.0,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 18.372268676757812,
-      "target": 13.94,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 381.69364184980543,
-      "target": 378.1,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "mafic_index",
-      "earth": 0.25,
-      "target": 0.25,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.18361651272763613,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": false
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "atmosphere",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      72.26881807697887,
      35.83572991842567
     ]
@@ -562,7 +426,7 @@
     "test_id": "rover",
     "lat": 35.83572991842567,
     "lon": 72.26881807697887,
-    "rank": 9,
+    "rank": 7,
     "score_total": 76.1,
     "scores": {
      "topography": 70.4,
@@ -630,7 +494,7 @@
     "test_id": "rover",
     "lat": -30.183406587443702,
     "lon": -70.58705717396714,
-    "rank": 10,
+    "rank": 8,
     "score_total": 75.9,
     "scores": {
      "topography": 82.6,
@@ -698,7 +562,7 @@
     "test_id": "rover",
     "lat": -10.28722846238718,
     "lon": -77.11576479315057,
-    "rank": 11,
+    "rank": 9,
     "score_total": 75.7,
     "scores": {
      "topography": 77.1,
@@ -766,7 +630,7 @@
     "test_id": "rover",
     "lat": -9.156763796190786,
     "lon": -77.56739445518951,
-    "rank": 12,
+    "rank": 10,
     "score_total": 74.9,
     "scores": {
      "topography": 76.1,
@@ -834,7 +698,7 @@
     "test_id": "rover",
     "lat": 28.148570188290194,
     "lon": 85.9179346339075,
-    "rank": 13,
+    "rank": 11,
     "score_total": 73.9,
     "scores": {
      "topography": 77.5,
@@ -902,7 +766,7 @@
     "test_id": "rover",
     "lat": 51.888328178414454,
     "lon": -118.0603516533381,
-    "rank": 14,
+    "rank": 12,
     "score_total": 73.6,
     "scores": {
      "topography": 77.1,
@@ -970,7 +834,7 @@
     "test_id": "rover",
     "lat": 36.28791578490423,
     "lon": 76.55936015204998,
-    "rank": 15,
+    "rank": 13,
     "score_total": 73.5,
     "scores": {
      "topography": 76.5,
@@ -1038,7 +902,7 @@
     "test_id": "rover",
     "lat": 38.54884511729701,
     "lon": 72.66592011599596,
-    "rank": 16,
+    "rank": 14,
     "score_total": 73.3,
     "scores": {
      "topography": 78.5,
@@ -1106,7 +970,7 @@
     "test_id": "rover",
     "lat": 52.11442111165373,
     "lon": -125.84844081787615,
-    "rank": 17,
+    "rank": 15,
     "score_total": 73.0,
     "scores": {
      "topography": 76.2,
@@ -1174,7 +1038,7 @@
     "test_id": "rover",
     "lat": 39.45321685025413,
     "lon": 70.60238485915225,
-    "rank": 18,
+    "rank": 16,
     "score_total": 72.5,
     "scores": {
      "topography": 66.6,
@@ -1242,7 +1106,7 @@
     "test_id": "rover",
     "lat": 39.00103098377557,
     "lon": 68.83364035328623,
-    "rank": 19,
+    "rank": 17,
     "score_total": 72.5,
     "scores": {
      "topography": 69.4,
@@ -1310,7 +1174,7 @@
     "test_id": "rover",
     "lat": 29.957313654204423,
     "lon": 82.19069662558078,
-    "rank": 20,
+    "rank": 18,
     "score_total": 72.2,
     "scores": {
      "topography": 70.0,
@@ -1350,6 +1214,142 @@
     "ops_tags": {
      "road_access": false,
      "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.19618255821109,
+     36.51400871814351
+    ]
+   },
+   "properties": {
+    "id": "g25_36.514_71.196",
+    "name": "36.51°K, 71.20°D",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "rover",
+    "lat": 36.51400871814351,
+    "lon": 71.19618255821109,
+    "rank": 19,
+    "score_total": 72.0,
+    "scores": {
+     "topography": 76.5,
+     "geology": 58.3,
+     "climate": 72.3
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 19.97589683532715,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 381.4519618254755,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.0,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.833506048366268,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "atmosphere",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -116.99833949453746,
+     50.53177057897879
+    ]
+   },
+   "properties": {
+    "id": "g25_50.532_-116.998",
+    "name": "50.53°K, 117.00°B",
+    "is_new": true,
+    "target_id": "moon_shackleton",
+    "test_id": "rover",
+    "lat": 50.53177057897879,
+    "lon": -116.99833949453746,
+    "rank": 20,
+    "score_total": 72.0,
+    "scores": {
+     "topography": 74.6,
+     "geology": 100.0,
+     "climate": 0.6
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 19.297903060913086,
+      "target": 13.94,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 370.5099631325452,
+      "target": 378.1,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.4036080092499968,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
     },
     "breakdown": [
      "gravity",

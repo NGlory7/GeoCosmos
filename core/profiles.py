@@ -19,6 +19,10 @@ class Parameter:
     dimension: str
     tolerance: float
     earth_source: str
+    # Dünya değeri sadece başka bir parametre bu eşiğin üstündeyse geçerli (test_profiles.yaml >
+    # parameters > valid_if). Ör. ASTER mineral indeksi bitki örtüsü altında kayacı değil bitkiyi ölçer:
+    # o karede değer "bilinmiyor" (NaN) sayılır, eksik veri kuralı uygulanır (core/scoring.py).
+    valid_if: tuple[str, float] | None = None
 
 
 @dataclass(frozen=True)
@@ -29,6 +33,27 @@ class TestProfile:
     breakdown: tuple[str, ...]
     # Bu parametrelerde Dünya değeri hedefi aşarsa ceza yok (benzerlik 1). test_profiles.yaml > at_least
     at_least: tuple[str, ...] = ()
+    # Testin anlamlı olduğu hedefler (test_profiles.yaml > applies_to). Boşsa her hedefte çalışır.
+    bodies: tuple[str, ...] = ()
+    target_min: tuple[tuple[str, float], ...] = ()  # (parametre, hedefte en az bu değer)
+
+
+def not_applicable(profile: TestProfile, target: Target) -> str | None:
+    """Test bu hedefte anlamsızsa sebebini döndürür (index.json > reason), değilse None.
+
+    Ör. toz testi atmosferi olmayan Ay'da, buz sondajı buzu olmayan hedefte çalışmaz: aksi halde
+    motor kalan birkaç parametreyle "en benzer" yeri yine bulur ve anlamsız bir sonuç üretir.
+    """
+    if profile.bodies and target.body not in profile.bodies:
+        names = {"moon": "Ay", "mars": "Mars"}
+        allowed = ", ".join(names.get(b, b) for b in profile.bodies)
+        return f"Bu test sadece {allowed} hedeflerinde anlamlı (test_profiles.yaml > applies_to)"
+    for key, minimum in profile.target_min:
+        p = target.params.get(key)
+        if p is None or p.value < minimum:
+            return (f"Hedefte {key} = {'yok' if p is None else p.value}; bu test en az {minimum} gerektirir "
+                    f"(test_profiles.yaml > applies_to)")
+    return None
 
 
 def normalize_weights(weights: dict[str, float], allowed: set[str] | dict) -> dict[str, float]:
@@ -62,7 +87,14 @@ def load_parameters(path: Path | None = None) -> dict[str, Parameter]:
             raise ValueError(f"{key}: bilinmeyen dimension '{p['dimension']}'")
         if p["tolerance"] <= 0:
             raise ValueError(f"{key}: tolerance pozitif olmalı")
-        params[key] = Parameter(key, p["label"], p["dimension"], float(p["tolerance"]), p["earth_source"])
+        valid_if = None
+        if p.get("valid_if"):
+            (other, minimum), = p["valid_if"].items()
+            if other not in data["parameters"]:
+                raise ValueError(f"{key}: valid_if tanımsız parametreye bakıyor ({other})")
+            valid_if = (other, float(minimum))
+        params[key] = Parameter(key, p["label"], p["dimension"], float(p["tolerance"]), p["earth_source"],
+                                valid_if)
     return params
 
 
@@ -97,12 +129,21 @@ def load_profiles(path: Path | None = None) -> dict[str, TestProfile]:
         at_least = tuple(t.get("at_least", []))
         if set(at_least) - set(t["weights"]):
             raise ValueError(f"{test_id}: at_least sadece ağırlığı olan parametreleri içerebilir")
+        applies = t.get("applies_to") or {}
+        bodies = tuple(applies.get("bodies", []))
+        if set(bodies) - {"moon", "mars"}:
+            raise ValueError(f"{test_id}: applies_to.bodies sadece moon/mars olabilir")
+        target_min = tuple((k, float(v)) for k, v in (applies.get("target_min") or {}).items())
+        if {k for k, _ in target_min} - set(params):
+            raise ValueError(f"{test_id}: applies_to.target_min tanımsız parametre içeriyor")
         profiles[test_id] = TestProfile(
             id=test_id,
             label=t["label"],
             weights=normalize_weights(t["weights"], params),
             breakdown=tuple(t.get("breakdown", [])),
             at_least=at_least,
+            bodies=bodies,
+            target_min=target_min,
         )
     missing = set(TEST_IDS) - set(profiles)
     if missing:

@@ -22,7 +22,7 @@ GeoCosmos soruyu tersine çeviriyor: **Önce hedefi ölç, sonra Dünya'nın tü
    - Biyo-imza: karbonat çökeli
    - Üs kurulumu ve iniş alanı (aydınlanma dahil)
 5. **Benzerlik hesaplanır.** Her özellik için Dünya değeri hedefe ne kadar yakınsa o kadar puan alır; test amacına göre ağırlıklandırılır ve 0–100 arası bir skor çıkar. Ölçülemeyen bir özellik "benzemiyor" sayılmaz, "bilinmiyor" sayılır.
-6. **Adaylar listelenir.** Her hedef ve test için en iyi 20 yer, birbirine 100 km'den yakın olmayacak şekilde seçilir. Toplam **840 adayın 838'i, bilinen analog sahaların 50 km dışında**: yani yeni.
+6. **Adaylar listelenir.** Her hedef ve test için en iyi 20 yer, birbirine 100 km'den yakın olmayacak şekilde seçilir. Toplam **500 adayın 498'i, bilinen analog sahaların 50 km dışında**: yani yeni. Her test her hedefte çalışmaz: atmosferi olmayan Ay'da toz ve biyo-imza testi, buzu olmayan hedefte buz sondajı yapılmaz (42 kombinasyonun 25'i).
 
 ## Benzerliğin bittiği yer
 
@@ -41,7 +41,7 @@ Uygulamadaki **Bulgular** sayfası üç yıldız adayı (Taklamakan, Amund Ringn
 
 - **Taklamakan Çölü'nün güney kenarı (Çin):** Havasındaki toz miktarı, Curiosity'nin gezdiği Gale Krateri için hesaplanan değere çok yakın. Toz fırtınasında güneş paneli ve mekanizma testi için aday.
 - **Amund Ringnes Adası (Kanada Arktiği):** Mars'ta insanlı iniş için konuşulan Arcadia Planitia gibi düz ve yüzeye yakın buzla dolu. Buz sondajı için aday.
-- **Ellesmere Adası (81,5°K, Kanada):** Ay'ın güney kutbundaki Shackleton için "üs kurulumu" testinin ilk adayı. Güneş ufka yakın, gölgeler uzun, donmuş zemin oranı hedefe yakın.
+- **Ellesmere Adası çevresi (82°K, Kanada):** Ay'ın güney kutbundaki Shackleton için "üs kurulumu" testinin ilk adayı. Güneş ufka yakın, gölgeler uzun, donmuş zemin oranı hedefe yakın.
 - **Malapert'in ikilemi:** Malapert kadar engebeli yerler (Karakurum gibi) orta enlemlerde, güneşin tepede olduğu yerlerde. Kutup ışığına benzeyen yerler ise o kadar engebeli değil. Dünya'da ikisi bir arada yok. Bu da bir bulgu: o testin bir kısmı Dünya'da yapılamaz.
 
 ## Kendimizi nasıl sınadık?

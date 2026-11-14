@@ -6,346 +6,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     74.68224799420636,
-     35.15745111870783
-    ]
-   },
-   "properties": {
-    "id": "g25_35.157_74.682",
-    "name": "35.16°K, 74.68°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 35.15745111870783,
-    "lon": 74.68224799420636,
-    "rank": 1,
-    "score_total": 60.4,
-    "scores": {
-     "topography": 76.5,
-     "geology": 91.8,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 23.14896011352539,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 467.92029551465964,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 54.84254888129217,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.24103965759277343,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "35.16°K, 74.68°D koordinatlarındaki bölge, Malapert Masifi hedefi için toplam 60.4 skorla bir üs kurulumu ve iniş alanı testi sunmaktadır. Özellikle jeoloji boyutu 91.8 skorla öne çıkarken; 467.92 m Dünya ve 467.5 m hedef değerine sahip yüzey pürüzlülüğü, 23.15° Dünya ve 16.78° hedef ortalama eğim ile 0.24 Dünya ve 0.29 hedef donmuş zemin parametreleri eşleşmektedir (\"benziyor\": true). \n\nBuna karşın, iklim boyutu 0.0 skor almıştır ve yıllık ortalama öğlen güneş yüksekliği (Dünya'da 54.84°, hedefte 4.0°) eşleşmemektedir (\"benziyor\": false). Ayrıca kopma noktaları olarak; yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklıdır. Manyetik alan ve atmosfer koruması bulunmayıp yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur; ayrıca atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı yoktur."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     86.65542763505694,
-     27.69638432181164
-    ]
-   },
-   "properties": {
-    "id": "g25_27.696_86.655",
-    "name": "27.70°K, 86.66°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 27.69638432181164,
-    "lon": 86.65542763505694,
-    "rank": 2,
-    "score_total": 59.0,
-    "scores": {
-     "topography": 73.9,
-     "geology": 91.6,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 23.812633514404297,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 466.9281969212281,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 62.303615678188365,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.2394399881362915,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "27.70°K, 86.66°D konumundaki Dünya bölgesi, Malapert Masifi (Ay) hedefi için 59.0 toplam skorla değerlendirilmiştir. Toplam 73.9 topoğrafya ve 91.6 jeoloji boyit skorlarına sahip olan bu sahanın iyi bir test alanı olabilmesini sağlayan başlıca etkenler, eşleşen parametreleridir. Dünya'daki 23.81° olan ortalama eğim, hedefteki 16.78° değerine; 466.93 m olan yüzey pürüzlülüğü, hedefteki 467.5 m değerine ve 0.24 olan donmuş zemin/yüzeye yakın buz oranı ise hedefteki 0.29 değerine yakın seyrederek \"match\": true çıktısı vermiştir. Ayrıca jeoloji alt skorunun yüksekliği bu uyumu desteklemektedir.\n\nBuna karşın, iklim boyit skorunun 0.0 olması ve yıllık ortalama öğlen güneş yüksekliğinin Dünya'da 62.3° iken hedefte 4.0° kalması (\"match\": false) önemli bir kopma noktası oluşturur. Bölge, yol erişiminin olmaması (\"road_access\": false) ve uzak/izole yapısı (\"remote\": false) gibi operasyonel kısıtlamalar da barındırır. Ayrıca Ay ortamındaki fiziksel koşullar Dünya'dan kökten ayrılmaktadır: Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) kadardır ve toz ile tekerlek davranışı farklılık gösterir; manyetik alan ile atmosfer koruması bulunmadığından yüzey doğrudan kozmik ışına açıktır; yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da bunun karşılığı yoktur; son olarak atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı gerçekleşmemektedir."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     72.80513583636275,
-     35.60963698518639
-    ]
-   },
-   "properties": {
-    "id": "g25_35.610_72.805",
-    "name": "35.61°K, 72.81°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 35.60963698518639,
-    "lon": 72.80513583636275,
-    "rank": 3,
-    "score_total": 55.0,
-    "scores": {
-     "topography": 67.5,
-     "geology": 89.5,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 25.237197875976562,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "roughness_m",
-      "earth": 469.39498825703976,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 54.390363014813616,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.22676595052083334,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "35.61°K, 72.81°D koordinatlarındaki Dünya bölgesi, Malapert Masifi (Ay) hedefi için 55.0 toplam skorla değerlendirilmiştir. Bu sahanın iyi bir test adayı olabileceğini gösteren benzer parametreler arasında, 5 km pencerede 469.39 m olan Dünya yüzey pürüzlülüğünün hedefteki 467.5 m değerine yakın olması (\"benziyor\": true) ve donmuş zemin/yüzeye yakın buz oranının Dünya'da 0.23 iken hedefte 0.29 olması yer almaktadır. Ayrıca jeoloji alt skoru 89.5 ve topografi alt skoru 67.5 olarak hesaplanmıştır.\n\nBuna karşın, bazı parametreler hedefle uyuşmamaktadır (\"benziyor\": false). Ortalama eğim Dünya'da 500 m tabanda 25.24° iken hedefte 16.78°'dir; yıllık ortalama öğlen güneş yüksekliği ise Dünya'da 54.39° iken hedefte 4.0°'dir. İklim alt skoru 0.0 çıkmıştır. Bu durum, yerçekiminin Dünya'nın ~1/6'sı (1,62 m/s²) olması, toz ve tekerlek davranışının farklılık göstermesi, manyetik alan ve atmosfer koruması bulunmayarak yüzeyin doğrudan kozmik ışına açık olması, yüzey sıcaklığının kalıcı gölgelerde yaklaşık −180 °C ve ekvatorda öğlen +120 °C olmasının Dünya'da karşılığının bulunmaması ve atmosferin yok denecek kadar ince olması nedeniyle rüzgar aşınması ile ısı taşınımının olmaması gibi kopma noktalarıyla desteklenmektedir. Bölge için yol erişimi bulunmamakta olup uzaktır (\"road_access\": false, \"remote\": false)."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     75.75488351297413,
-     35.38354405194711
-    ]
-   },
-   "properties": {
-    "id": "g25_35.384_75.755",
-    "name": "35.38°K, 75.75°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 35.38354405194711,
-    "lon": 75.75488351297413,
-    "rank": 4,
-    "score_total": 55.0,
-    "scores": {
-     "topography": 72.2,
-     "geology": 76.4,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 19.95827293395996,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 449.60823435701644,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 54.616455948052895,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.1482274373372396,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "Bu bölge, Malapert Masifi hedefiyle yapılan üs kurulumu ve iniş alanı testleri için topografya ve jeoloji kategorilerinde sırasıyla 72.2 ve 76.4 puan alarak toplamda 55.0 skor üretmiştir. Ortalama eğim parametresinde Dünya'da 19.96°, hedefte ise 16.78° ölçülmüş olup bu durum eşleşmektedir. Benzer şekilde, yüzey pürüzlülüğü Dünya'da 449.61 m, hedefte 467.5 m değerleriyle uyum göstermekte; donmuş zemin veya yüzeye yakın buz parametresi ise Dünya'da 0.15, hedefte 0.29 değerleriyle eşleşme sağlamaktadır.\n\nBuna karşın, iklim kategorisinde 0.0 puan alınmış ve yıllık ortalama öğlen güneş yüksekliği parametresinde Dünya'daki 54.62° değeri ile hedefteki 4.0° değeri uyuşmamıştır. Ayrıca yerçekimi Dünya'nın yaklaşık 1/6'sı (1,62 m/s²) düzeyindedir ve toz ile tekerlek davranışı farklılık gösterir. Manyetik alan ile atmosfer koruması bulunmamakta ve yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen ise +120 °C olmakta olup, Dünya'da bunun bir karşılığı yoktur. Atmosfer neredeyse yok denecek kadar ince olduğundan rüzgar aşınması ve ısı taşınımı da gerçekleşmemektedir."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     74.14593023482247,
-     36.51400871814351
-    ]
-   },
-   "properties": {
-    "id": "g25_36.514_74.146",
-    "name": "36.51°K, 74.15°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 36.51400871814351,
-    "lon": 74.14593023482247,
-    "rank": 5,
-    "score_total": 55.0,
-    "scores": {
-     "topography": 65.3,
-     "geology": 95.2,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 24.853670120239258,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "roughness_m",
-      "earth": 473.35470097962724,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 53.48599128185649,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.31865030924479165,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": "36.51°K, 74.15°D konumundaki bölge, Malapert Masifi hedefi için 55.0 toplam skorla değerlendirilmiştir. Jeoloji alt skorunun 95.2 olduğu bu sahada, 467.5 m olan yüzey pürüzlülüğü hedef değerle (473.35 m) uyuşmakta ve donmuş zemin/yüzeye yakın buz parametresi (0.29) hedef değere (0.32) yakınlık göstermektedir. Bu yönleriyle belirli yüzey özellikleri açısından bazı benzerlikler sunmaktadır.\n\nBununla birlikte, iklim skorunun 0.0 olması ve ortalama eğim (Dünya'da 24.85°, hedefte 16.78°) ile yıllık ortalama öğlen güneş yüksekliği (Dünya'da 53.49°, hedefte 4.0°) parametrelerinin eşleşmemesi önemli farklılıklar oluşturmaktadır. Ayrıca, yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²) seviyesindedir ve toz ile tekerlek davranışı farklılık gösterir; manyetik alan ile atmosfer koruması yoktur ve yüzey doğrudan kozmik ışına açıktır. Yüzey sıcaklığı kalıcı gölgelerde yaklaşık −180 °C, ekvatorda öğlen +120 °C olup Dünya'da karşılığı yoktur ve atmosfer yok denecek kadar ince olduğundan rüzgar aşınması ile ısı taşınımı bulunmamaktadır."
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      75.31903687479499,
      38.54884511729701
     ]
@@ -358,12 +18,12 @@
     "test_id": "base_site",
     "lat": 38.54884511729701,
     "lon": 75.31903687479499,
-    "rank": 6,
-    "score_total": 54.7,
+    "rank": 1,
+    "score_total": 60.4,
     "scores": {
      "topography": 65.2,
      "geology": 94.2,
-     "climate": 0.0
+     "climate": 41.6
     },
     "params": [
      {
@@ -393,759 +53,93 @@
       "target": 0.29,
       "source": "ESA CCI Permafrost",
       "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     77.09567791143385,
-     32.44433591983649
-    ]
-   },
-   "properties": {
-    "id": "g25_32.444_77.096",
-    "name": "32.44°K, 77.10°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 32.44433591983649,
-    "lon": 77.09567791143385,
-    "rank": 7,
-    "score_total": 54.6,
-    "scores": {
-     "topography": 63.5,
-     "geology": 98.6,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 24.446226119995117,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
      },
      {
-      "key": "roughness_m",
-      "earth": 458.02465354802,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 57.55566408016352,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.2984999418258667,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     71.48675711208527,
-     38.096659250818455
-    ]
-   },
-   "properties": {
-    "id": "g25_38.097_71.487",
-    "name": "38.10°K, 71.49°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 38.096659250818455,
-    "lon": 71.48675711208527,
-    "rank": 8,
-    "score_total": 54.4,
-    "scores": {
-     "topography": 64.9,
-     "geology": 93.7,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 24.366714477539062,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "roughness_m",
-      "earth": 459.22432524398977,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 51.90334074918155,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.32781728108723956,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     88.37624463773892,
-     27.69638432181164
-    ]
-   },
-   "properties": {
-    "id": "g25_27.696_88.376",
-    "name": "27.70°K, 88.38°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 27.69638432181164,
-    "lon": 88.37624463773892,
-    "rank": 9,
-    "score_total": 54.2,
-    "scores": {
-     "topography": 67.7,
-     "geology": 85.2,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 24.069957733154297,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 461.08156524830406,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 62.303615678188365,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.20102016925811766,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     102.03445372278463,
-     29.731220720965148
-    ]
-   },
-   "properties": {
-    "id": "g25_29.731_102.034",
-    "name": "29.73°K, 102.03°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 29.731220720965148,
-    "lon": 102.03445372278463,
-    "rank": 10,
-    "score_total": 53.8,
-    "scores": {
-     "topography": 73.6,
-     "geology": 66.4,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 23.099714279174805,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 471.24110024500044,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 60.26877927903485,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.08859375,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     20.80835462835351,
-     69.5235769710782
-    ]
-   },
-   "properties": {
-    "id": "g25_69.524_20.808",
-    "name": "69.52°K, 20.81°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 69.5235769710782,
-    "lon": 20.80835462835351,
-    "rank": 11,
-    "score_total": 53.7,
-    "scores": {
-     "topography": 43.7,
-     "geology": 92.1,
-     "climate": 45.1
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 13.79969596862793,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 245.5854136433406,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 20.4764230289218,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.2423076923076923,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     82.72701438496468,
-     29.05294192124731
-    ]
-   },
-   "properties": {
-    "id": "g25_29.053_82.727",
-    "name": "29.05°K, 82.73°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 29.05294192124731,
-    "lon": 82.72701438496468,
-    "rank": 12,
-    "score_total": 53.4,
-    "scores": {
-     "topography": 70.5,
-     "geology": 73.2,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 23.524389266967773,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 462.04616740459244,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 60.94705807875269,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.12934000678360463,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     94.79416397110215,
-     30.183406587443702
-    ]
-   },
-   "properties": {
-    "id": "g25_30.183_94.794",
-    "name": "30.18°K, 94.79°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 30.183406587443702,
-    "lon": 94.79416397110215,
-    "rank": 13,
-    "score_total": 53.4,
-    "scores": {
-     "topography": 70.3,
-     "geology": 73.6,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 24.021224975585938,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 471.20148058643764,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 59.816593412556294,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.131708984375,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     76.02304239266608,
-     33.574800586032886
-    ]
-   },
-   "properties": {
-    "id": "g25_33.575_76.023",
-    "name": "33.57°K, 76.02°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 33.574800586032886,
-    "lon": 76.02304239266608,
-    "rank": 14,
-    "score_total": 53.4,
-    "scores": {
-     "topography": 62.6,
-     "geology": 94.7,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 24.938438415527344,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "roughness_m",
-      "earth": 475.99764755421245,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 56.42519941396711,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.2579999494552612,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     19.090699003623364,
-     68.84529817136035
-    ]
-   },
-   "properties": {
-    "id": "g25_68.845_19.091",
-    "name": "68.85°K, 19.09°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 68.84529817136035,
-    "lon": 19.090699003623364,
-    "rank": 15,
-    "score_total": 53.0,
-    "scores": {
-     "topography": 45.0,
-     "geology": 88.0,
-     "climate": 42.8
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 14.149436950683594,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 227.48803343246712,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 21.15470182863965,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.21809895833333334,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     72.66592011599596,
-     38.322752184057734
-    ]
-   },
-   "properties": {
-    "id": "g25_38.323_72.666",
-    "name": "38.32°K, 72.67°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 38.322752184057734,
-    "lon": 72.66592011599596,
-    "rank": 16,
-    "score_total": 53.0,
-    "scores": {
-     "topography": 66.1,
-     "geology": 83.4,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 22.4781551361084,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "roughness_m",
-      "earth": 452.9896849555973,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 51.677247815942266,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.38979899088541664,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": false
-    },
-    "breakdown": [
-     "gravity",
-     "radiation",
-     "temperature",
-     "atmosphere"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     96.73449865076569,
-     28.82684898800803
-    ]
-   },
-   "properties": {
-    "id": "g25_28.827_96.734",
-    "name": "28.83°K, 96.73°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "base_site",
-    "lat": 28.82684898800803,
-    "lon": 96.73449865076569,
-    "rank": 17,
-    "score_total": 53.0,
-    "scores": {
-     "topography": 69.8,
-     "geology": 72.8,
-     "climate": 0.0
-    },
-    "params": [
-     {
-      "key": "slope_deg",
-      "earth": 24.31709861755371,
-      "target": 16.78,
-      "source": "Copernicus DEM GLO-30",
-      "match": false
-     },
-     {
-      "key": "roughness_m",
-      "earth": 470.5549169412522,
-      "target": 467.5,
-      "source": "Copernicus DEM GLO-30",
-      "match": true
-     },
-     {
-      "key": "sun_elevation_deg",
-      "earth": 61.173151011991976,
-      "target": 4.0,
-      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
-      "match": false
-     },
-     {
-      "key": "ground_ice",
-      "earth": 0.1270361328125,
-      "target": 0.29,
-      "source": "ESA CCI Permafrost",
+      "key": "aridity",
+      "earth": 0.8995164489746094,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
      "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     74.14593023482247,
+     36.51400871814351
+    ]
+   },
+   "properties": {
+    "id": "g25_36.514_74.146",
+    "name": "36.51°K, 74.15°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 36.51400871814351,
+    "lon": 74.14593023482247,
+    "rank": 2,
+    "score_total": 59.7,
+    "scores": {
+     "topography": 65.3,
+     "geology": 95.2,
+     "climate": 39.4
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 24.853670120239258,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "roughness_m",
+      "earth": 473.35470097962724,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 53.48599128185649,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.31865030924479165,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8730138908494436,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -1174,12 +168,12 @@
     "test_id": "base_site",
     "lat": 36.51400871814351,
     "lon": 72.26881807697887,
-    "rank": 18,
-    "score_total": 52.8,
+    "rank": 3,
+    "score_total": 58.8,
     "scores": {
      "topography": 63.3,
      "geology": 89.7,
-     "climate": 0.0
+     "climate": 41.5
     },
     "params": [
      {
@@ -1208,6 +202,238 @@
       "earth": 0.35179443359375,
       "target": 0.29,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8975414252119776,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.49089952052068,
+     81.95868829923852
+    ]
+   },
+   "properties": {
+    "id": "g25_81.959_-82.491",
+    "name": "81.96°K, 82.49°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 81.95868829923852,
+    "lon": -82.49089952052068,
+    "rank": 4,
+    "score_total": 58.7,
+    "scores": {
+     "topography": 43.1,
+     "geology": 28.9,
+     "climate": 87.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.632959365844727,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 238.66171615452458,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 8.041311700761485,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.71630859375,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9341662216186524,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.32335563113597,
+     81.50650243275996
+    ]
+   },
+   "properties": {
+    "id": "g25_81.507_-76.323",
+    "name": "81.51°K, 76.32°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 81.50650243275996,
+    "lon": -76.32335563113597,
+    "rank": 5,
+    "score_total": 58.6,
+    "scores": {
+     "topography": 37.1,
+     "geology": 50.0,
+     "climate": 85.6
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 11.995589256286621,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 257.72446511198564,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 8.493497567240041,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.5899697580645161,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9174476089477539,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.29120127235802,
+     35.60963698518639
+    ]
+   },
+   "properties": {
+    "id": "g25_35.610_76.291",
+    "name": "35.61°K, 76.29°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 35.60963698518639,
+    "lon": 76.29120127235802,
+    "rank": 6,
+    "score_total": 58.4,
+    "scores": {
+     "topography": 63.3,
+     "geology": 87.5,
+     "climate": 41.3
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 25.09584617614746,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "roughness_m",
+      "earth": 474.57057699320535,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 54.390363014813616,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.36503346761067706,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8959338073730468,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -1242,12 +468,12 @@
     "test_id": "base_site",
     "lat": 34.253079385750716,
     "lon": 78.16831343020164,
-    "rank": 19,
-    "score_total": 52.7,
+    "rank": 7,
+    "score_total": 58.2,
     "scores": {
      "topography": 76.4,
      "geology": 53.5,
-     "climate": 0.0
+     "climate": 40.0
     },
     "params": [
      {
@@ -1277,6 +503,13 @@
       "target": 0.29,
       "source": "ESA CCI Permafrost",
       "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8802484366757506,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
      }
     ],
     "ops_tags": {
@@ -1298,58 +531,965 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     79.2409489489694,
-     30.63559245392226
+     74.68224799420636,
+     35.15745111870783
     ]
    },
    "properties": {
-    "id": "g25_30.636_79.241",
-    "name": "30.64°K, 79.24°D",
+    "id": "g25_35.157_74.682",
+    "name": "35.16°K, 74.68°D",
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
-    "lat": 30.63559245392226,
-    "lon": 79.2409489489694,
-    "rank": 20,
-    "score_total": 52.6,
+    "lat": 35.15745111870783,
+    "lon": 74.68224799420636,
+    "rank": 8,
+    "score_total": 57.9,
     "scores": {
-     "topography": 66.5,
-     "geology": 80.4,
-     "climate": 0.0
+     "topography": 76.5,
+     "geology": 91.8,
+     "climate": 24.0
     },
     "params": [
      {
       "key": "slope_deg",
-      "earth": 23.104934692382812,
+      "earth": 23.14896011352539,
       "target": 16.78,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "roughness_m",
-      "earth": 455.91809849899346,
+      "earth": 467.92029551465964,
       "target": 467.5,
       "source": "Copernicus DEM GLO-30",
       "match": true
      },
      {
       "key": "sun_elevation_deg",
-      "earth": 59.36440754607774,
+      "earth": 54.84254888129217,
       "target": 4.0,
       "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
       "match": false
      },
      {
       "key": "ground_ice",
-      "earth": 0.1721920108795166,
+      "earth": 0.24103965759277343,
       "target": 0.29,
       "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.6881569647293132,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": false
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.07633861404061,
+     38.096659250818455
+    ]
+   },
+   "properties": {
+    "id": "g25_38.097_72.076",
+    "name": "38.10°K, 72.08°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 38.096659250818455,
+    "lon": 72.07633861404061,
+    "rank": 9,
+    "score_total": 56.9,
+    "scores": {
+     "topography": 67.5,
+     "geology": 83.0,
+     "climate": 34.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 24.10964012145996,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 461.1115849977822,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 51.90334074918155,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.187921142578125,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8180224709757995,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
      "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -29.615729787949896,
+     83.31524589867419
+    ]
+   },
+   "properties": {
+    "id": "g25_83.315_-29.616",
+    "name": "83.32°K, 29.62°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 83.31524589867419,
+    "lon": -29.615729787949896,
+    "rank": 10,
+    "score_total": 55.2,
+    "scores": {
+     "topography": 21.4,
+     "geology": 59.4,
+     "climate": 90.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 7.654847145080566,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "roughness_m",
+      "earth": 144.93860525496655,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 6.684754101325807,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.5338141025641026,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9427471081533565,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.50910782866136,
+     36.06182285166495
+    ]
+   },
+   "properties": {
+    "id": "g25_36.062_79.509",
+    "name": "36.06°K, 79.51°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 36.06182285166495,
+    "lon": 79.50910782866136,
+    "rank": 11,
+    "score_total": 55.1,
+    "scores": {
+     "topography": 53.2,
+     "geology": 90.0,
+     "climate": 43.1
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 16.419214248657227,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 279.41668283269615,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 53.93817714833506,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.3499552408854167,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.917758071899414,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -53.19506604594325,
+     81.73259536599925
+    ]
+   },
+   "properties": {
+    "id": "g25_81.733_-53.195",
+    "name": "81.73°K, 53.20°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 81.73259536599925,
+    "lon": -53.19506604594325,
+    "rank": 12,
+    "score_total": 54.7,
+    "scores": {
+     "topography": 23.9,
+     "geology": 56.6,
+     "climate": 87.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 8.363911628723145,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "roughness_m",
+      "earth": 172.41951662381663,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 8.267404634000757,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.550390625,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9387021636962891,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     80.33047964141541,
+     41.94023911588619
+    ]
+   },
+   "properties": {
+    "id": "g25_41.940_80.330",
+    "name": "41.94°K, 80.33°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 41.94023911588619,
+    "lon": 80.33047964141541,
+    "rank": 13,
+    "score_total": 54.6,
+    "scores": {
+     "topography": 62.1,
+     "geology": 80.4,
+     "climate": 36.0
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 23.997913360595703,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 454.6552347757435,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 48.059760884113814,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.4078776041666667,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.831593890387271,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -66.7332492746151,
+     82.63696709895636
+    ]
+   },
+   "properties": {
+    "id": "g25_82.637_-66.733",
+    "name": "82.64°K, 66.73°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 82.63696709895636,
+    "lon": -66.7332492746151,
+    "rank": 14,
+    "score_total": 54.4,
+    "scores": {
+     "topography": 30.5,
+     "geology": 44.9,
+     "climate": 84.6
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 10.156310081481934,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 173.37908597720727,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 7.3630329010436375,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.6208928571428571,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8826205673217773,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     82.72701438496468,
+     36.51400871814351
+    ]
+   },
+   "properties": {
+    "id": "g25_36.514_82.727",
+    "name": "36.51°K, 82.73°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 36.51400871814351,
+    "lon": 82.72701438496468,
+    "rank": 15,
+    "score_total": 53.7,
+    "scores": {
+     "topography": 54.3,
+     "geology": 90.7,
+     "climate": 38.3
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 16.843921661376953,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 277.5786082980761,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 53.48599128185649,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.3458203125,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8599408589455404,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     77.3638367911258,
+     35.15745111870783
+    ]
+   },
+   "properties": {
+    "id": "g25_35.157_77.364",
+    "name": "35.16°K, 77.36°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 35.15745111870783,
+    "lon": 77.3638367911258,
+    "rank": 16,
+    "score_total": 53.7,
+    "scores": {
+     "topography": 46.6,
+     "geology": 99.5,
+     "climate": 43.2
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 18.97207260131836,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 356.2193460028101,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 54.84254888129217,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.2931396484375,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.9178548202514648,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     87.70024841585719,
+     38.096659250818455
+    ]
+   },
+   "properties": {
+    "id": "g25_38.097_87.700",
+    "name": "38.10°K, 87.70°D",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 38.096659250818455,
+    "lon": 87.70024841585719,
+    "rank": 17,
+    "score_total": 53.4,
+    "scores": {
+     "topography": 52.6,
+     "geology": 86.2,
+     "climate": 41.2
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 16.237668991088867,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 255.75456210622875,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 51.90334074918155,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.373046875,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8947935719917589,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -53.78181324205192,
+     72.23669216994954
+    ]
+   },
+   "properties": {
+    "id": "g25_72.237_-53.782",
+    "name": "72.24°K, 53.78°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 72.23669216994954,
+    "lon": -53.78181324205192,
+    "rank": 18,
+    "score_total": 53.3,
+    "scores": {
+     "topography": 39.0,
+     "geology": 60.7,
+     "climate": 66.1
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 12.518301963806152,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 288.0698578261945,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 17.763307830050465,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.5258333333333334,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8685983209902416,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -53.83748895907337,
+     69.74966990431747
+    ]
+   },
+   "properties": {
+    "id": "g25_69.750_-53.837",
+    "name": "69.75°K, 53.84°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 69.74966990431747,
+    "lon": -53.83748895907337,
+    "rank": 19,
+    "score_total": 53.3,
+    "scores": {
+     "topography": 39.8,
+     "geology": 81.6,
+     "climate": 56.8
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 12.711645126342773,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 217.24537155809287,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 20.25033009568253,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": false
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.40054086538461536,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": true
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8062527465820313,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
+    },
+    "breakdown": [
+     "gravity",
+     "radiation",
+     "temperature",
+     "atmosphere"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -68.68086918883046,
+     80.82822363304213
+    ]
+   },
+   "properties": {
+    "id": "g25_80.828_-68.681",
+    "name": "80.83°K, 68.68°B",
+    "is_new": true,
+    "target_id": "moon_malapert",
+    "test_id": "base_site",
+    "lat": 80.82822363304213,
+    "lon": -68.68086918883046,
+    "rank": 20,
+    "score_total": 53.2,
+    "scores": {
+     "topography": 40.9,
+     "geology": 13.8,
+     "climate": 82.5
+    },
+    "params": [
+     {
+      "key": "slope_deg",
+      "earth": 13.029806137084961,
+      "target": 16.78,
+      "source": "Copernicus DEM GLO-30",
+      "match": true
+     },
+     {
+      "key": "roughness_m",
+      "earth": 206.7431720335677,
+      "target": 467.5,
+      "source": "Copernicus DEM GLO-30",
+      "match": false
+     },
+     {
+      "key": "sun_elevation_deg",
+      "earth": 9.171776366957873,
+      "target": 4.0,
+      "source": "Hesap — kare enlemi ve Dünya eğikliği 23,44° (core/geo.py)",
+      "match": true
+     },
+     {
+      "key": "ground_ice",
+      "earth": 0.8071428571428572,
+      "target": 0.29,
+      "source": "ESA CCI Permafrost",
+      "match": false
+     },
+     {
+      "key": "aridity",
+      "earth": 0.8934688339233399,
+      "target": 1.0,
+      "source": "GPM IMERG V07 + MODIS NDVI",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": true
     },
     "breakdown": [
      "gravity",

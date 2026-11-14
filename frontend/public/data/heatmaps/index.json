@@ -27,26 +27,6 @@
   },
   {
    "target_id": "moon_shackleton",
-   "test_id": "lava_tube",
-   "file": "moon_shackleton_lava_tube.png"
-  },
-  {
-   "target_id": "moon_shackleton",
-   "test_id": "dust",
-   "file": "moon_shackleton_dust.png"
-  },
-  {
-   "target_id": "moon_shackleton",
-   "test_id": "biosignature_arid",
-   "file": "moon_shackleton_biosignature_arid.png"
-  },
-  {
-   "target_id": "moon_shackleton",
-   "test_id": "biosignature_carbonate",
-   "file": "moon_shackleton_biosignature_carbonate.png"
-  },
-  {
-   "target_id": "moon_shackleton",
    "test_id": "base_site",
    "file": "moon_shackleton_base_site.png"
   },
@@ -62,26 +42,6 @@
   },
   {
    "target_id": "moon_malapert",
-   "test_id": "lava_tube",
-   "file": "moon_malapert_lava_tube.png"
-  },
-  {
-   "target_id": "moon_malapert",
-   "test_id": "dust",
-   "file": "moon_malapert_dust.png"
-  },
-  {
-   "target_id": "moon_malapert",
-   "test_id": "biosignature_arid",
-   "file": "moon_malapert_biosignature_arid.png"
-  },
-  {
-   "target_id": "moon_malapert",
-   "test_id": "biosignature_carbonate",
-   "file": "moon_malapert_biosignature_carbonate.png"
-  },
-  {
-   "target_id": "moon_malapert",
    "test_id": "base_site",
    "file": "moon_malapert_base_site.png"
   },
@@ -92,28 +52,8 @@
   },
   {
    "target_id": "moon_marius_hills",
-   "test_id": "ice_drilling",
-   "file": "moon_marius_hills_ice_drilling.png"
-  },
-  {
-   "target_id": "moon_marius_hills",
    "test_id": "lava_tube",
    "file": "moon_marius_hills_lava_tube.png"
-  },
-  {
-   "target_id": "moon_marius_hills",
-   "test_id": "dust",
-   "file": "moon_marius_hills_dust.png"
-  },
-  {
-   "target_id": "moon_marius_hills",
-   "test_id": "biosignature_arid",
-   "file": "moon_marius_hills_biosignature_arid.png"
-  },
-  {
-   "target_id": "moon_marius_hills",
-   "test_id": "biosignature_carbonate",
-   "file": "moon_marius_hills_biosignature_carbonate.png"
   },
   {
    "target_id": "moon_marius_hills",
@@ -124,11 +64,6 @@
    "target_id": "mars_jezero",
    "test_id": "rover",
    "file": "mars_jezero_rover.png"
-  },
-  {
-   "target_id": "mars_jezero",
-   "test_id": "ice_drilling",
-   "file": "mars_jezero_ice_drilling.png"
   },
   {
    "target_id": "mars_jezero",
@@ -162,16 +97,6 @@
   },
   {
    "target_id": "mars_gale",
-   "test_id": "ice_drilling",
-   "file": "mars_gale_ice_drilling.png"
-  },
-  {
-   "target_id": "mars_gale",
-   "test_id": "lava_tube",
-   "file": "mars_gale_lava_tube.png"
-  },
-  {
-   "target_id": "mars_gale",
    "test_id": "dust",
    "file": "mars_gale_dust.png"
   },
@@ -202,11 +127,6 @@
   },
   {
    "target_id": "mars_arcadia",
-   "test_id": "lava_tube",
-   "file": "mars_arcadia_lava_tube.png"
-  },
-  {
-   "target_id": "mars_arcadia",
    "test_id": "dust",
    "file": "mars_arcadia_dust.png"
   },
@@ -214,11 +134,6 @@
    "target_id": "mars_arcadia",
    "test_id": "biosignature_arid",
    "file": "mars_arcadia_biosignature_arid.png"
-  },
-  {
-   "target_id": "mars_arcadia",
-   "test_id": "biosignature_carbonate",
-   "file": "mars_arcadia_biosignature_carbonate.png"
   },
   {
    "target_id": "mars_arcadia",
