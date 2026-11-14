@@ -96,6 +96,10 @@ def run_heatmaps(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> l
             "value": "score_total", "vmin": 0, "vmax": 100, "colormap": hm["colormap"],
             "files": index}
     (out_dir / "index.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
+    keep = {e["file"] for e in index}
+    for old in out_dir.glob("*.png"):
+        if old.name not in keep:
+            old.unlink()
     return index
 
 

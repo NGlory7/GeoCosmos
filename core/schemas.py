@@ -13,13 +13,14 @@ from pydantic import BaseModel, Field
 # --- Sabit kimlikler ---------------------------------------------------------
 
 Body = Literal["moon", "mars"]
-TestId = Literal["rover", "ice_drilling", "lava_tube", "dust", "biosignature"]
+TestId = Literal["rover", "ice_drilling", "lava_tube", "dust", "biosignature_arid", "biosignature_carbonate"]
 BreakdownKey = Literal["gravity", "atmosphere", "radiation", "liquid_water", "biology", "temperature"]
 # Operasyon bilgisi puan değil: Analog.ops_tags (kartta ✓/✗).
 ScoreKey = Literal["topography", "geology", "climate"]
 
 BODIES: tuple[str, ...] = ("moon", "mars")
-TEST_IDS: tuple[str, ...] = ("rover", "ice_drilling", "lava_tube", "dust", "biosignature")
+TEST_IDS: tuple[str, ...] = ("rover", "ice_drilling", "lava_tube", "dust", "biosignature_arid",
+                             "biosignature_carbonate")
 BREAKDOWN_KEYS: tuple[str, ...] = ("gravity", "atmosphere", "radiation", "liquid_water", "biology", "temperature")
 SCORE_KEYS: tuple[str, ...] = ("topography", "geology", "climate")
 

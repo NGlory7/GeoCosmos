@@ -42,19 +42,20 @@ Jüriye vaadimiz: Tek bir "benzerlik yüzdesi" değil, test amacına göre veriy
 | Bilinen yerleri tekrarlama | Ünlü analoglar sadece doğrulama seti; keşif modu yeni aday buluyor |
 | Ay üssü adayları / Mars iniş alanları | Artemis güney kutbu bölgeleri, Arcadia Planitia gibi gelecek görev hedefleri |
 | Süreçleri düşün | Test amaçları süreç bazlı: toz ve rüzgar aşınması, donmuş zemin, suyla oluşan karbonat |
-| Keşifle bağlantı kur | 5 test amacı gerçek görev ihtiyaçlarından geliyor |
+| Keşifle bağlantı kur | 6 test amacı gerçek görev ihtiyaçlarından geliyor |
 | Yaratıcı yöntem | Amaca göre ağırlıklı benzerlik + Gemini ile serbest metinden parametre çıkarma |
 | NASA ve diğer ajans verisi | NASA: Earthdata (MODIS, GPM IMERG, ASTER GED, EMIT, SEDAC), Worldview, PDS (MOLA, TES, THEMIS, CRISM), LRO (LOLA, Diviner, LEND, Mini-RF) · ESA: Copernicus DEM, Sentinel, WorldCover, CCI Permafrost · JAXA: GSMaP · CSA: RADARSAT ([DATA_SOURCES.md](DATA_SOURCES.md)) |
 
 ## Ürün ve kullanıcı akışı
 
 1. **Gezegen seçimi:** Ay veya Mars haritasında hedef bölgeler işaretli. Üstüne gelince açılan popup, hedefin parametrelerini gösterir.
-2. **Test amacı:** Hedefe tıklayınca 5 hazır testten biri seçilir ya da serbest metin yazılır (Gemini metni parametre ağırlıklarına çevirir).
+2. **Test amacı:** Hedefe tıklayınca 6 hazır testten biri seçilir ya da serbest metin yazılır (Gemini metni parametre ağırlıklarına çevirir).
    - Rover sürüşü ve tekerlek aşınması
    - Donmuş zeminde buz sondajı (ISRU)
    - Lav tüpü ve yeraltı habitatı
    - Toz fırtınası ve aşınma
-   - Biyo-imza ve antik yaşam izi
+   - Biyo-imza: aşırı kuraklıkta korunma
+   - Biyo-imza: karbonat çökeli
 3. **Dünya haritası:** Puanlanmış analoglar pin olarak çıkar. Keşif modunun bulduğu yeni adaylar ayrı renkte, "Yeni aday" etiketiyle gösterilir.
 4. **Analog kartı:** Pine tıklayınca açılır:
    - Radar grafik (4 skor)
@@ -110,11 +111,11 @@ Operasyonel bilgiler puan değil, kartta ✓/✗ etiketi olarak gösterilir: yol
 | Yer | Beklenen test amacı | Grup |
 | --- | --- | --- |
 | Holuhraun (İzlanda) | Rover sürüşü | Ayar |
-| Yungay (Atacama, Şili) | Biyo-imza / aşırı kuraklık | Ayar |
+| Yungay (Atacama, Şili) | Biyo-imza: aşırı kuraklıkta korunma | Ayar |
 | Haughton Krateri (Devon Adası, Kanada) | Buz sondajı | Ayar |
 | Hanksville / MDRS çevresi (Utah, ABD) | Rover sürüşü | Sınav |
 | Svalbard / Bockfjorden (Norveç) | Buz sondajı | Sınav |
-| Salda Gölü kıyısı (Türkiye) | Biyo-imza | Sınav |
+| Salda Gölü kıyısı (Türkiye) | Biyo-imza: karbonat çökeli | Sınav |
 | Lut Çölü (İran) | Toz ve aşınma | Sınav |
 | Lanzarote lav tüpleri (İspanya) | Lav tüpü ve habitat | Rapor |
 
@@ -211,7 +212,7 @@ Her kapıda 10 dakikalık ekip kontrolü yapılır. Kapı geçilemiyorsa [MVP ta
 
 | Öncelik | Özellik |
 | --- | --- |
-| Olmazsa olmaz | 6 hedef, 5 test amacı, en az 5 parametre NASA verisinden |
+| Olmazsa olmaz | 6 hedef, 6 test amacı, en az 5 parametre NASA verisinden |
 | Olmazsa olmaz | Ağırlıklı skor motoru ve kopma kuralları |
 | Olmazsa olmaz | Ay/Mars haritası, Dünya haritası, analog kartı ve kopma kutusu |
 | Olmazsa olmaz | Doğrulama tablosu |

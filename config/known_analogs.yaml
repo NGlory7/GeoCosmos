@@ -37,7 +37,7 @@ analogs:
 
   - id: yungay
     name: Yungay (Atacama, Şili)
-    test_id: biosignature
+    test_id: biosignature_arid
     split: tune
     targets: [mars_gale]
     lat: -24.08
@@ -89,7 +89,7 @@ analogs:
 
   - id: salda
     name: Salda Gölü kıyısı (Türkiye)
-    test_id: biosignature
+    test_id: biosignature_carbonate
     split: holdout
     targets: [mars_jezero]
     lat: 37.55

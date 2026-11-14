@@ -114,23 +114,33 @@ tests:
       roughness_m: 0.10
       temp_range_c: 0.15
     breakdown: [gravity, atmosphere, temperature]
-  biosignature:
-    label: Biyo-imza ve antik yaşam izi
-    # Karbonat baskın: Jezero'nun hedefi karbonat/kil çökelleri. Kuraklık ikincil; çok yüksek olsaydı
-    # Salda (karbonat analoğu, kurak değil) yapısal olarak kaybederdi.
-    rationale_at_least: >-
-      Biyo-imza testinde karbonat, biyo-imzayı koruyabilecek mineralin varlığını ölçer; Dünya'daki
-      sahanın hedeften DAHA FAZLA karbonat içermesi test için kusur değildir. Bu yüzden karbonatta
-      hedefin altı cezalandırılır, üstü cezalandırılmaz. Karar doğrulama sonucuna bakılmadan, ilke
-      olarak verildi (14 Kasım 2026; STATUS.md > Karar bekleyenler).
-    at_least: [carbonate_index]
-    # Mutlak sıcaklık puana girmez (14 Kasım, ayar yeri Yungay'a bakılarak): Mars hedefleri yıllık
-    # ortalamada −43 °C; 60 °C toleransla sıcak çöllerin hepsi 0 alıyor, motor biyo-imzada bile kutupları
-    # öne çıkarıyordu. Biyo-imzanın korunması için belirleyici olan kuraklık ve mineraldir; sıcaklık
-    # farkı kartta kopma noktası olarak gösterilir. (Buz sondajında sıcaklık kalır: buz kararlılığını belirler.)
+  # Biyo-imza ikiye bölündü (14 Kasım): tek ağırlık seti iki farklı analog türünü karşılayamıyordu
+  # (aşırı kuraklıkla korunma: Yungay/Gale; karbonat çökeli: Salda/Jezero). Gerilim veri gelmeden
+  # önce işaretlenmişti; bölme kararı ilk sınav sonucu görüldükten sonra verildi (STATUS.md).
+  biosignature_arid:
+    label: "Biyo-imza: aşırı kuraklıkta korunma"
+    rationale: >-
+      Hiperkurak ortamda organik madde ve biyo-imzalar suyun yokluğu sayesinde korunur (Atacama;
+      Gale'in bugünkü yüzeyi). Belirleyici kuraklıktır; büyük gece-gündüz farkı ve tozlu yüzey Mars
+      yüzey koşullarına yakınlığı artırır. Mutlak sıcaklık puana girmez, kopma kutusunda gösterilir.
     weights:
-      carbonate_index: 0.45
-      aridity: 0.30
-      temp_range_c: 0.15
-      dust_aod: 0.10
+      aridity: 0.60
+      temp_range_c: 0.25
+      dust_aod: 0.15
+    breakdown: [liquid_water, biology, radiation, temperature]
+  biosignature_carbonate:
+    label: "Biyo-imza: karbonat çökeli"
+    rationale: >-
+      Jezero'nun hedefi kenar karbonatları ve olivin-karbonat birimidir: ultramafik kayacın suyla
+      etkileşiminden (serpantinleşme) çökelen karbonat mikrobiyal izleri koruyabilir; Salda'nın
+      hidromanyeziti de aynı süreçle oluşur. Belirleyici karbonat (hedeften fazlası ceza değil) ve
+      mafik/ultramafik ana kayadır. Bugünkü iklim karbonat çökelinin varlığını belirlemez; kuraklığın
+      ağırlığı yok. Ayar yeri yok: ağırlıklar önceden sabitlendi, sınav sonucuna bakılarak değiştirilmez.
+    rationale_at_least: >-
+      Karbonat, biyo-imzayı koruyabilecek mineralin varlığını ölçer; Dünya'daki sahanın hedeften
+      DAHA FAZLA karbonat içermesi test için kusur değildir (Salda kararı, 14 Kasım).
+    at_least: [carbonate_index]
+    weights:
+      carbonate_index: 0.60
+      mafic_index: 0.40
     breakdown: [liquid_water, biology, radiation, temperature]

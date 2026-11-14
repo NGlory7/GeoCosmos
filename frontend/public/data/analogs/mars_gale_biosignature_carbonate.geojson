@@ -1,0 +1,1105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.28362238336965,
+     8.930670862951509
+    ]
+   },
+   "properties": {
+    "id": "g25_8.931_-82.284",
+    "name": "8.93°K, 82.28°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -82.28362238336965,
+    "rank": 1,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.38311762404413,
+     8.47848499647295
+    ]
+   },
+   "properties": {
+    "id": "g25_8.478_-81.383",
+    "name": "8.48°K, 81.38°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.47848499647295,
+    "lon": -81.38311762404413,
+    "rank": 2,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.80723429522446,
+     8.930670862951509
+    ]
+   },
+   "properties": {
+    "id": "g25_8.931_-79.807",
+    "name": "8.93°K, 79.81°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -79.80723429522446,
+    "rank": 3,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.45647715623618,
+     8.930670862951509
+    ]
+   },
+   "properties": {
+    "id": "g25_8.931_-78.456",
+    "name": "8.93°K, 78.46°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -78.45647715623618,
+    "rank": 4,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.75,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.52983668842823,
+     8.930670862951509
+    ]
+   },
+   "properties": {
+    "id": "g25_8.931_-75.530",
+    "name": "8.93°K, 75.53°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -75.52983668842823,
+    "rank": 5,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 1.0,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.72882716977719,
+     8.930670862951509
+    ]
+   },
+   "properties": {
+    "id": "g25_8.931_-73.729",
+    "name": "8.93°K, 73.73°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -73.72882716977719,
+    "rank": 6,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.70269146129476,
+     8.930670862951509
+    ]
+   },
+   "properties": {
+    "id": "g25_8.931_-71.703",
+    "name": "8.93°K, 71.70°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -71.70269146129476,
+    "rank": 7,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.55597239691066,
+     8.70457792971223
+    ]
+   },
+   "properties": {
+    "id": "g25_8.705_-77.556",
+    "name": "8.70°K, 77.56°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -77.55597239691066,
+    "rank": 8,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.60319622062028,
+     8.70457792971223
+    ]
+   },
+   "properties": {
+    "id": "g25_8.705_-72.603",
+    "name": "8.70°K, 72.60°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -72.60319622062028,
+    "rank": 9,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.12680813247509,
+     8.70457792971223
+    ]
+   },
+   "properties": {
+    "id": "g25_8.705_-70.127",
+    "name": "8.70°K, 70.13°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -70.12680813247509,
+    "rank": 10,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.40420573927133,
+     8.252392063233671
+    ]
+   },
+   "properties": {
+    "id": "g25_8.252_-74.404",
+    "name": "8.25°K, 74.40°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.252392063233671,
+    "lon": -74.40420573927133,
+    "rank": 11,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.75,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.98008906809099,
+     8.026299129994394
+    ]
+   },
+   "properties": {
+    "id": "g25_8.026_-75.980",
+    "name": "8.03°K, 75.98°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.026299129994394,
+    "lon": -75.98008906809099,
+    "rank": 12,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.3780700307889,
+     7.800206196755115
+    ]
+   },
+   "properties": {
+    "id": "g25_7.800_-72.378",
+    "name": "7.80°K, 72.38°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.800206196755115,
+    "lon": -72.3780700307889,
+    "rank": 13,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.80218670196923,
+     7.800206196755115
+    ]
+   },
+   "properties": {
+    "id": "g25_7.800_-70.802",
+    "name": "7.80°K, 70.80°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.800206196755115,
+    "lon": -70.80218670196923,
+    "rank": 14,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.10572001724789,
+     7.348020330276557
+    ]
+   },
+   "properties": {
+    "id": "g25_7.348_-77.106",
+    "name": "7.35°K, 77.11°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.348020330276557,
+    "lon": -77.10572001724789,
+    "rank": 15,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.75,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.72882716977719,
+     7.121927397037278
+    ]
+   },
+   "properties": {
+    "id": "g25_7.122_-73.729",
+    "name": "7.12°K, 73.73°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.121927397037278,
+    "lon": -73.72882716977719,
+    "rank": 16,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.70269146129476,
+     7.121927397037278
+    ]
+   },
+   "properties": {
+    "id": "g25_7.122_-71.703",
+    "name": "7.12°K, 71.70°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.121927397037278,
+    "lon": -71.70269146129476,
+    "rank": 17,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.07958430876548,
+     6.895834463798
+    ]
+   },
+   "properties": {
+    "id": "g25_6.896_-75.080",
+    "name": "6.90°K, 75.08°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 6.895834463798,
+    "lon": -75.07958430876548,
+    "rank": 18,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.33084620707928,
+     6.443648597319442
+    ]
+   },
+   "properties": {
+    "id": "g25_6.444_-77.331",
+    "name": "6.44°K, 77.33°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 6.443648597319442,
+    "lon": -77.33084620707928,
+    "rank": 19,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.17907954943995,
+     6.217555664080163
+    ]
+   },
+   "properties": {
+    "id": "g25_6.218_-74.179",
+    "name": "6.22°K, 74.18°B",
+    "is_new": true,
+    "target_id": "mars_gale",
+    "test_id": "biosignature_carbonate",
+    "lat": 6.217555664080163,
+    "lon": -74.17907954943995,
+    "rank": 20,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  }
+ ]
+}

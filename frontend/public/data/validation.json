@@ -33,7 +33,7 @@
   {
    "id": "yungay",
    "name": "Yungay (Atacama, Şili)",
-   "test_id": "biosignature",
+   "test_id": "biosignature_arid",
    "split": "tune",
    "targets": [
     "mars_gale"
@@ -47,9 +47,9 @@
    ],
    "status": "ok",
    "target_id": "mars_gale",
-   "score_total": 61.9,
-   "rank": 44615,
-   "percentile": 23.497,
+   "score_total": 66.1,
+   "rank": 16002,
+   "percentile": 8.428,
    "cell_id": "g25_-24.079_-70.087",
    "hit": false
   },
@@ -134,7 +134,7 @@
   {
    "id": "salda",
    "name": "Salda Gölü kıyısı (Türkiye)",
-   "test_id": "biosignature",
+   "test_id": "biosignature_carbonate",
    "split": "holdout",
    "targets": [
     "mars_jezero"
@@ -148,9 +148,9 @@
    ],
    "status": "ok",
    "target_id": "mars_jezero",
-   "score_total": 18.0,
-   "rank": 158018,
-   "percentile": 83.221,
+   "score_total": 33.3,
+   "rank": 93970,
+   "percentile": 49.49,
    "cell_id": "g25_37.644_29.626",
    "hit": false
   },

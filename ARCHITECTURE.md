@@ -140,7 +140,7 @@ Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun il
   "name": "Aday bölge adı",
   "is_new": true,
   "target_id": "mars_jezero",
-  "test_id": "biosignature",
+  "test_id": "biosignature_carbonate",
   "lat": 64.85,
   "lon": -16.82,
   "rank": 1,
@@ -181,7 +181,7 @@ Hangi hedef × test dosyasının var olduğunu ve neden olmadığını söyler. 
 {
   "hits": 3, "min_hits": 3, "holdout_total": 4, "top_percent": 1, "passed": true, "denominator": 152340,
   "analogs": [
-    { "id": "salda", "name": "Salda Gölü kıyısı (Türkiye)", "test_id": "biosignature", "split": "holdout",
+    { "id": "salda", "name": "Salda Gölü kıyısı (Türkiye)", "test_id": "biosignature_carbonate", "split": "holdout",
       "targets": ["mars_jezero"], "status": "ok", "target_id": "mars_jezero",
       "score_total": 71.2, "rank": 840, "percentile": 0.551, "hit": true, "cell_id": "g25_37.550_29.680",
       "note": "...", "past_tests": [{ "title": "...", "url": "..." }] }
@@ -206,7 +206,7 @@ PNG satırları Web Mercator'dadır; Leaflet'te `L.imageOverlay(url, bounds)` il
 | Alan | Değerler |
 | --- | --- |
 | `body` | `moon`, `mars` |
-| `test_id` | `rover`, `ice_drilling`, `lava_tube`, `dust`, `biosignature`; `/scenario` sonuçlarında `custom` |
+| `test_id` | `rover`, `ice_drilling`, `lava_tube`, `dust`, `biosignature_arid`, `biosignature_carbonate`; `/scenario` sonuçlarında `custom` |
 | `breakdown` | `gravity`, `atmosphere`, `radiation`, `liquid_water`, `biology`, `temperature` (mutlak sıcaklık; buz sondajı dışında puana girmez) |
 | `scores` anahtarları | `topography`, `geology`, `climate`. Değer `null` olabilir: o test amacında o boyuta ağırlık verilmemiştir (radarda boş). Operasyon bilgisi puan değil, `ops_tags` |
 | `ops_tags` anahtarları | `road_access`, `remote` (`config/grid.yaml > ops_tags`) |
@@ -288,7 +288,7 @@ GeoCosmos/
 │
 ├── config/
 │   ├── targets.yaml          # 6 Ay/Mars hedefi + kaynaklar
-│   ├── test_profiles.yaml    # 5 test amacı = 5 ağırlık seti
+│   ├── test_profiles.yaml    # 6 test amacı = 6 ağırlık seti
 │   ├── known_analogs.yaml    # doğrulama seti (ayar / sınav / rapor) + keşif dışı bilinen sahalar
 │   └── grid.yaml             # ızgara boyutu, eğim ölçeği, maske kuralları
 │

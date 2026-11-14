@@ -6,43 +6,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     32.81843855114922,
-     22.948432723786787
+     -91.28866997662489,
+     -0.11304646661963934
     ]
    },
    "properties": {
-    "id": "g25_22.948_32.818",
-    "name": "22.95°K, 32.82°D",
+    "id": "g25_-0.113_-91.289",
+    "name": "0.11°G, 91.29°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 22.948432723786787,
-    "lon": 32.81843855114922,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": -0.11304646661963934,
+    "lon": -91.28866997662489,
     "rank": 1,
-    "score_total": 99.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 99.6
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
+      "earth": 0.25,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9976160550803471,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": true,
+     "road_access": false,
      "remote": true
     },
     "breakdown": [
@@ -61,24 +61,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     31.58928354923352,
-     22.27015392406895
+     -82.05849619353828,
+     8.930670862951509
     ]
    },
    "properties": {
-    "id": "g25_22.270_31.589",
-    "name": "22.27°K, 31.59°D",
+    "id": "g25_8.931_-82.058",
+    "name": "8.93°K, 82.06°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 22.27015392406895,
-    "lon": 31.58928354923352,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -82.05849619353828,
     "rank": 2,
-    "score_total": 98.9,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 97.3
+     "climate": null
     },
     "params": [
      {
@@ -89,10 +89,10 @@
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.983839901119095,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
@@ -116,24 +116,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     82.72701438496468,
-     35.60963698518639
+     -80.70773905454999,
+     8.930670862951509
     ]
    },
    "properties": {
-    "id": "g25_35.610_82.727",
-    "name": "35.61°K, 82.73°D",
+    "id": "g25_8.931_-80.708",
+    "name": "8.93°K, 80.71°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 35.60963698518639,
-    "lon": 82.72701438496468,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -80.70773905454999,
     "rank": 3,
-    "score_total": 97.3,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 93.2
+     "climate": null
     },
     "params": [
      {
@@ -144,16 +144,16 @@
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9591569271561834,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -171,44 +171,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     93.59606343541061,
-     37.644473384339896
+     -83.40925333252656,
+     8.70457792971223
     ]
    },
    "properties": {
-    "id": "g25_37.644_93.596",
-    "name": "37.64°K, 93.60°D",
+    "id": "g25_8.705_-83.409",
+    "name": "8.70°K, 83.41°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 37.644473384339896,
-    "lon": 93.59606343541061,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -83.40925333252656,
     "rank": 4,
-    "score_total": 97.2,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 93.0
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.75,
+      "earth": 0.0,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9582642211914063,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -226,44 +226,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -118.54833278449497,
-     77.21073670121366
+     -81.38311762404413,
+     8.252392063233671
     ]
    },
    "properties": {
-    "id": "g25_77.211_-118.548",
-    "name": "77.21°K, 118.55°B",
+    "id": "g25_8.252_-81.383",
+    "name": "8.25°K, 81.38°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 77.21073670121366,
-    "lon": -118.54833278449497,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.252392063233671,
+    "lon": -81.38311762404413,
     "rank": 5,
-    "score_total": 97.2,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.9
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.75,
+      "earth": 0.25,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.957635668499601,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -281,44 +281,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -111.42525699486868,
-     77.66292256769222
+     -80.4826128647186,
+     8.026299129994394
     ]
    },
    "properties": {
-    "id": "g25_77.663_-111.425",
-    "name": "77.66°K, 111.43°B",
+    "id": "g25_8.026_-80.483",
+    "name": "8.03°K, 80.48°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 77.66292256769222,
-    "lon": -111.42525699486868,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.026299129994394,
+    "lon": -80.4826128647186,
     "rank": 6,
-    "score_total": 97.1,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.8
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.75,
+      "earth": 0.25,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9568640650803968,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -336,44 +336,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     88.5846206687902,
-     40.583681516450525
+     -80.03236048505585,
+     0.5652323330981966
     ]
    },
    "properties": {
-    "id": "g25_40.584_88.585",
-    "name": "40.58°K, 88.58°D",
+    "id": "g25_0.565_-80.032",
+    "name": "0.57°K, 80.03°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 40.583681516450525,
-    "lon": 88.5846206687902,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 0.5652323330981966,
+    "lon": -80.03236048505585,
     "rank": 7,
-    "score_total": 97.0,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.5
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
+      "earth": 0.25,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9552804912945605,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -391,44 +391,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     33.80176255268178,
-     25.88764085589741
+     -78.90672953589895,
+     8.930670862951509
     ]
    },
    "properties": {
-    "id": "g25_25.888_33.802",
-    "name": "25.89°K, 33.80°D",
+    "id": "g25_8.931_-78.907",
+    "name": "8.93°K, 78.91°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 25.88764085589741,
-    "lon": 33.80176255268178,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -78.90672953589895,
     "rank": 8,
-    "score_total": 96.9,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.4
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
+      "earth": 0.5,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9542220779078904,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": true,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -446,44 +446,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     90.6481559256339,
-     40.357588583211246
+     -77.78109858674203,
+     8.930670862951509
     ]
    },
    "properties": {
-    "id": "g25_40.358_90.648",
-    "name": "40.36°K, 90.65°D",
+    "id": "g25_8.931_-77.781",
+    "name": "8.93°K, 77.78°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 40.357588583211246,
-    "lon": 90.6481559256339,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -77.78109858674203,
     "rank": 9,
-    "score_total": 96.9,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.2
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
+      "earth": 0.25,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9529031007438238,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -501,44 +501,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     34.29342455344806,
-     24.983269122940293
+     -76.20521525792238,
+     8.930670862951509
     ]
    },
    "properties": {
-    "id": "g25_24.983_34.293",
-    "name": "24.98°K, 34.29°D",
+    "id": "g25_8.931_-76.205",
+    "name": "8.93°K, 76.21°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 24.983269122940293,
-    "lon": 34.29342455344806,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -76.20521525792238,
     "rank": 10,
-    "score_total": 96.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.1
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
+      "earth": 0.5,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9525026404269035,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": true,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -556,24 +556,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     89.46899292172321,
-     39.22712391701485
+     -75.07958430876548,
+     8.930670862951509
     ]
    },
    "properties": {
-    "id": "g25_39.227_89.469",
-    "name": "39.23°K, 89.47°D",
+    "id": "g25_8.931_-75.080",
+    "name": "8.93°K, 75.08°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 39.22712391701485,
-    "lon": 89.46899292172321,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -75.07958430876548,
     "rank": 11,
-    "score_total": 96.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.0
+     "climate": null
     },
     "params": [
      {
@@ -584,16 +584,16 @@
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9522064452286303,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -611,44 +611,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     83.5314910240405,
-     36.28791578490423
+     -73.95395335960856,
+     8.930670862951509
     ]
    },
    "properties": {
-    "id": "g25_36.288_83.531",
-    "name": "36.29°K, 83.53°D",
+    "id": "g25_8.931_-73.954",
+    "name": "8.93°K, 73.95°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 36.28791578490423,
-    "lon": 83.5314910240405,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -73.95395335960856,
     "rank": 12,
-    "score_total": 96.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.0
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.75,
+      "earth": 0.25,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.951743751486711,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -666,24 +666,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     85.34192240803581,
-     37.870566317579176
+     -72.60319622062028,
+     8.930670862951509
     ]
    },
    "properties": {
-    "id": "g25_37.871_85.342",
-    "name": "37.87°K, 85.34°D",
+    "id": "g25_8.931_-72.603",
+    "name": "8.93°K, 72.60°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 37.870566317579176,
-    "lon": 85.34192240803581,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.930670862951509,
+    "lon": -72.60319622062028,
     "rank": 13,
-    "score_total": 96.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 91.9
+     "climate": null
     },
     "params": [
      {
@@ -694,16 +694,16 @@
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9516718559942111,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -721,44 +721,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     92.7116911824776,
-     40.13149564997197
+     -79.80723429522446,
+     8.70457792971223
     ]
    },
    "properties": {
-    "id": "g25_40.131_92.712",
-    "name": "40.13°K, 92.71°D",
+    "id": "g25_8.705_-79.807",
+    "name": "8.70°K, 79.81°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 40.13149564997197,
-    "lon": 92.7116911824776,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -79.80723429522446,
     "rank": 14,
-    "score_total": 96.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 91.9
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
+      "earth": 0.25,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9515054335248476,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -776,44 +776,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.610268524329404,
-     23.8528044567439
+     -71.70269146129476,
+     8.70457792971223
     ]
    },
    "properties": {
-    "id": "g25_23.853_15.610",
-    "name": "23.85°K, 15.61°D",
+    "id": "g25_8.705_-71.703",
+    "name": "8.70°K, 71.70°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 23.8528044567439,
-    "lon": 15.610268524329404,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -71.70269146129476,
     "rank": 15,
-    "score_total": 96.7,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 91.8
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
+      "earth": 0.25,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.950886738177249,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -831,24 +831,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -97.59852601638225,
-     78.56729430064934
+     -77.10572001724789,
+     8.252392063233671
     ]
    },
    "properties": {
-    "id": "g25_78.567_-97.599",
-    "name": "78.57°K, 97.60°B",
+    "id": "g25_8.252_-77.106",
+    "name": "8.25°K, 77.11°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 78.56729430064934,
-    "lon": -97.59852601638225,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.252392063233671,
+    "lon": -77.10572001724789,
     "rank": 16,
-    "score_total": 96.7,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 91.7
+     "climate": null
     },
     "params": [
      {
@@ -859,16 +859,16 @@
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9500317802429199,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -886,24 +886,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     87.11066691390184,
-     38.54884511729701
+     -78.2313509664048,
+     8.026299129994394
     ]
    },
    "properties": {
-    "id": "g25_38.549_87.111",
-    "name": "38.55°K, 87.11°D",
+    "id": "g25_8.026_-78.231",
+    "name": "8.03°K, 78.23°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 38.54884511729701,
-    "lon": 87.11066691390184,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.026299129994394,
+    "lon": -78.2313509664048,
     "rank": 17,
-    "score_total": 96.6,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 91.6
+     "climate": null
     },
     "params": [
      {
@@ -914,16 +914,16 @@
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9495771505273889,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -941,44 +941,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     17.576916527394527,
-     24.757176189701013
+     -75.75496287825962,
+     8.026299129994394
     ]
    },
    "properties": {
-    "id": "g25_24.757_17.577",
-    "name": "24.76°K, 17.58°D",
+    "id": "g25_8.026_-75.755",
+    "name": "8.03°K, 75.75°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 24.757176189701013,
-    "lon": 17.576916527394527,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.026299129994394,
+    "lon": -75.75496287825962,
     "rank": 18,
-    "score_total": 96.6,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 91.5
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
+      "earth": 0.5,
       "target": 0.0,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9489330076447231,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -996,24 +996,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     5.039535507854374,
-     25.88764085589741
+     -74.6293319291027,
+     8.026299129994394
     ]
    },
    "properties": {
-    "id": "g25_25.888_5.040",
-    "name": "25.89°K, 5.04°D",
+    "id": "g25_8.026_-74.629",
+    "name": "8.03°K, 74.63°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 25.88764085589741,
-    "lon": 5.039535507854374,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.026299129994394,
+    "lon": -74.6293319291027,
     "rank": 19,
-    "score_total": 96.5,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 91.3
+     "climate": null
     },
     "params": [
      {
@@ -1024,16 +1024,16 @@
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9480567555557364,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": false,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -1051,24 +1051,24 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     31.34345254885038,
-     23.174525657026063
+     -70.57706051213786,
+     7.800206196755115
     ]
    },
    "properties": {
-    "id": "g25_23.175_31.343",
-    "name": "23.17°K, 31.34°D",
+    "id": "g25_7.800_-70.577",
+    "name": "7.80°K, 70.58°B",
     "is_new": true,
-    "target_id": "moon_shackleton",
-    "test_id": "biosignature",
-    "lat": 23.174525657026063,
-    "lon": 31.34345254885038,
+    "target_id": "moon_malapert",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.800206196755115,
+    "lon": -70.57706051213786,
     "rank": 20,
-    "score_total": 96.5,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 91.3
+     "climate": null
     },
     "params": [
      {
@@ -1079,16 +1079,16 @@
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9480418936486572,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.25,
+      "target": 0.25,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",

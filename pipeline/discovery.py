@@ -91,6 +91,11 @@ def run_discovery(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> 
                           "new_count": sum(a.is_new for a in analogs),
                           "params_used": sorted(used), "params_total": len(profile.weights)})
     (out_dir / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
+    # Artık üretilmeyen dosyalar (ör. kaldırılmış test ya da hedef) sitede eski sonuç göstermesin.
+    keep = {e["file"] for e in index if e["file"]}
+    for old in out_dir.glob("*.geojson"):
+        if old.name not in keep:
+            old.unlink()
     return index
 
 

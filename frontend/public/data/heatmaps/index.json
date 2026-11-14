@@ -37,8 +37,13 @@
   },
   {
    "target_id": "moon_shackleton",
-   "test_id": "biosignature",
-   "file": "moon_shackleton_biosignature.png"
+   "test_id": "biosignature_arid",
+   "file": "moon_shackleton_biosignature_arid.png"
+  },
+  {
+   "target_id": "moon_shackleton",
+   "test_id": "biosignature_carbonate",
+   "file": "moon_shackleton_biosignature_carbonate.png"
   },
   {
    "target_id": "moon_malapert",
@@ -62,8 +67,13 @@
   },
   {
    "target_id": "moon_malapert",
-   "test_id": "biosignature",
-   "file": "moon_malapert_biosignature.png"
+   "test_id": "biosignature_arid",
+   "file": "moon_malapert_biosignature_arid.png"
+  },
+  {
+   "target_id": "moon_malapert",
+   "test_id": "biosignature_carbonate",
+   "file": "moon_malapert_biosignature_carbonate.png"
   },
   {
    "target_id": "moon_marius_hills",
@@ -87,8 +97,13 @@
   },
   {
    "target_id": "moon_marius_hills",
-   "test_id": "biosignature",
-   "file": "moon_marius_hills_biosignature.png"
+   "test_id": "biosignature_arid",
+   "file": "moon_marius_hills_biosignature_arid.png"
+  },
+  {
+   "target_id": "moon_marius_hills",
+   "test_id": "biosignature_carbonate",
+   "file": "moon_marius_hills_biosignature_carbonate.png"
   },
   {
    "target_id": "mars_jezero",
@@ -112,8 +127,13 @@
   },
   {
    "target_id": "mars_jezero",
-   "test_id": "biosignature",
-   "file": "mars_jezero_biosignature.png"
+   "test_id": "biosignature_arid",
+   "file": "mars_jezero_biosignature_arid.png"
+  },
+  {
+   "target_id": "mars_jezero",
+   "test_id": "biosignature_carbonate",
+   "file": "mars_jezero_biosignature_carbonate.png"
   },
   {
    "target_id": "mars_gale",
@@ -137,8 +157,13 @@
   },
   {
    "target_id": "mars_gale",
-   "test_id": "biosignature",
-   "file": "mars_gale_biosignature.png"
+   "test_id": "biosignature_arid",
+   "file": "mars_gale_biosignature_arid.png"
+  },
+  {
+   "target_id": "mars_gale",
+   "test_id": "biosignature_carbonate",
+   "file": "mars_gale_biosignature_carbonate.png"
   },
   {
    "target_id": "mars_arcadia",
@@ -162,8 +187,13 @@
   },
   {
    "target_id": "mars_arcadia",
-   "test_id": "biosignature",
-   "file": "mars_arcadia_biosignature.png"
+   "test_id": "biosignature_arid",
+   "file": "mars_arcadia_biosignature_arid.png"
+  },
+  {
+   "target_id": "mars_arcadia",
+   "test_id": "biosignature_carbonate",
+   "file": "mars_arcadia_biosignature_carbonate.png"
   }
  ]
 }

@@ -85,13 +85,28 @@
    "rationale": "Toz testinin belirleyicisi havadaki toz (AOD) ve onu besleyen kuru, bitkisiz yüzeydir; büyük gece-gündüz farkı termal rüzgarları ve fiziksel aşınmayı artırır."
   },
   {
-   "id": "biosignature",
-   "label": "Biyo-imza ve antik yaşam izi",
+   "id": "biosignature_arid",
+   "label": "Biyo-imza: aşırı kuraklıkta korunma",
    "weights": {
-    "carbonate_index": 0.45,
-    "aridity": 0.3,
-    "temp_range_c": 0.15,
-    "dust_aod": 0.1
+    "aridity": 0.6,
+    "temp_range_c": 0.25,
+    "dust_aod": 0.15
+   },
+   "breakdown": [
+    "liquid_water",
+    "biology",
+    "radiation",
+    "temperature"
+   ],
+   "at_least": [],
+   "rationale": "Hiperkurak ortamda organik madde ve biyo-imzalar suyun yokluğu sayesinde korunur (Atacama; Gale'in bugünkü yüzeyi). Belirleyici kuraklıktır; büyük gece-gündüz farkı ve tozlu yüzey Mars yüzey koşullarına yakınlığı artırır. Mutlak sıcaklık puana girmez, kopma kutusunda gösterilir."
+  },
+  {
+   "id": "biosignature_carbonate",
+   "label": "Biyo-imza: karbonat çökeli",
+   "weights": {
+    "carbonate_index": 0.6,
+    "mafic_index": 0.4
    },
    "breakdown": [
     "liquid_water",
@@ -102,7 +117,7 @@
    "at_least": [
     "carbonate_index"
    ],
-   "rationale": ""
+   "rationale": "Jezero'nun hedefi kenar karbonatları ve olivin-karbonat birimidir: ultramafik kayacın suyla etkileşiminden (serpantinleşme) çökelen karbonat mikrobiyal izleri koruyabilir; Salda'nın hidromanyeziti de aynı süreçle oluşur. Belirleyici karbonat (hedeften fazlası ceza değil) ve mafik/ultramafik ana kayadır. Bugünkü iklim karbonat çökelinin varlığını belirlemez; kuraklığın ağırlığı yok. Ayar yeri yok: ağırlıklar önceden sabitlendi, sınav sonucuna bakılarak değiştirilmez."
   }
  ],
  "parameters": {

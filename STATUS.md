@@ -82,11 +82,11 @@ Kural: ayar sadece **ayar** yerlerine bakılarak yapıldı; **sınav** yerlerine
 | Yer | Grup | İlk çalıştırma | Ayar sonrası |
 | --- | --- | --- | --- |
 | Holuhraun (rover) | ayar | %66,1 | %12,0 |
-| Yungay (biyo-imza) | ayar | %74,4 | %23,5 |
+| Yungay (biyo-imza → kuraklıkta korunma) | ayar | %74,4 | %23,5 → **%8,4** (bölme sonrası) |
 | Haughton (buz sondajı) | ayar | %2,3 | %2,3 |
 | Hanksville (rover) | **sınav** | %20,8 | %18,1 |
 | Svalbard (buz sondajı) | **sınav** | %2,6 | %2,6 |
-| Salda (biyo-imza) | **sınav** | %50,3 | %83,2 |
+| Salda (biyo-imza → karbonat çökeli) | **sınav** | %50,3 | %83,2 → **%49,5** (bölme sonrası) |
 | Lut (toz) | **sınav** | %5,5 | %5,5 |
 | Lanzarote (lav tüpü) | rapor | %22,9 | %56,0 |
 
@@ -96,7 +96,11 @@ Kural: ayar sadece **ayar** yerlerine bakılarak yapıldı; **sınav** yerlerine
 3. **Mutlak sıcaklık** biyo-imza puanından çıktı, kopma kutusuna `temperature` olarak girdi (buz sondajında kalıyor).
 4. **Rover** ağırlıkları arazi geometrisi ve kayaç türüne kaydı; iklim ikincil.
 
-Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yakın; rover orta; biyo-imza tutmuyor. Salda'nın kötüleşmesi biyo-imza testinin iki farklı analog türünü (aşırı kuraklık: Yungay; karbonat çökeli: Salda) tek ağırlık setiyle karşılamaya çalışmasından. Bu sonuca bakarak **geri ayar yapılmadı**.
+5. **Biyo-imza ikiye bölündü** (14 Kasım, ekip kararı): "aşırı kuraklıkta korunma" (Yungay → Gale) ve "karbonat çökeli" (Salda → Jezero; karbonat + mafik/ultramafik ana kaya, serpantinleşme bağı). Gerilim veri gelmeden önce işaretlenmişti, ama bölme kararı ilk sınav sonucu görüldükten **sonra** verildi; sunumda bu açıkça söylenmeli.
+
+Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yakın; rover orta; kuraklık testi (Yungay %8,4) iyileşti.
+
+**Salda neden düşük kalıyor (ağırlık değil, çözünürlük):** Salda'nın 25 km'lik karesinde ASTER karbonat oranı 1,0003, dünya medyanının altında. Hidromanyezit kıyıda birkaç km²'lik bir şerit; karede çevre kayaç ve göl suyuyla ortalanınca sinyal kayboluyor. Doğru çözüm 5 km yakın tarama (`data/processed/fine_scan.json`), ağırlık değil. Bu sonuca bakarak **geri ayar yapılmadı**.
 
 Öne çıkan yeni aday örneği: Gale × toz testinde ilk adaylar Taklamakan Çölü / Tarım Havzası (dünyanın büyük toz kaynaklarından).
 
@@ -105,7 +109,8 @@ Okuma: buz sondajı (Haughton, Svalbard %2-3) ve toz (Lut %5,5) en iyi %1'e yak�
 | Konu | Not |
 | --- | --- |
 | **Başarı ölçütü** | "En iyi %1" (~1.900 kare) 25 km'de geniş analog türleri için çok sıkı olabilir. Ölçüt değişecekse sunumda **sonuç görüldükten sonra değiştirildiği açıkça söylenmeli**; aksi halde yeni bir sınav seti gerekir |
-| **Biyo-imzayı ikiye bölmek** | "Aşırı kuraklık" (Yungay, Gale) ve "karbonat çökeli" (Salda, Jezero) ayrı testler olabilir. Salda sınav yeri olduğu için bu karar onun sonucuna bakarak değil, yöntem olarak verilmeli |
+| ~~Biyo-imzayı ikiye bölmek~~ | ✅ Bölündü (14 Kasım) |
+| **Salda için 5 km yakın tarama** | Karbonat sinyali 25 km'de kayboluyor; Salda çevresinde 5 km tarama (`python -m pipeline.ee_fetch --cell-km 5 --bbox ...`) ve 5 km'lik doğrulama gerekir |
 
 | Konu | Durum | Seçenekler |
 | --- | --- | --- |

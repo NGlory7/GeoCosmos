@@ -161,3 +161,17 @@ def test_scenario_names_known_cells(grid, tmp_path, monkeypatch):
     for a in analogs:
         if a["past_tests"]:
             assert "(" in a["name"]  # bilinen saha gerçek adıyla
+
+
+def test_stale_outputs_removed(grid, tmp_path):
+    from pipeline.discovery import run_discovery
+    from pipeline.heatmap import run_heatmaps
+    (tmp_path / "a").mkdir()
+    (tmp_path / "h").mkdir()
+    (tmp_path / "a" / "mars_gale_biosignature.geojson").write_text("{}")  # kaldırılmış test
+    (tmp_path / "h" / "mars_gale_biosignature.png").write_bytes(b"x")
+    run_discovery(grid, tmp_path / "a")
+    run_heatmaps(grid, tmp_path / "h")
+    assert not (tmp_path / "a" / "mars_gale_biosignature.geojson").exists()
+    assert not (tmp_path / "h" / "mars_gale_biosignature.png").exists()
+    assert (tmp_path / "a" / "mars_gale_biosignature_arid.geojson").exists()

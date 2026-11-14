@@ -145,7 +145,8 @@ def test_at_least_no_penalty_above_target():
     assert two_sided.loc[2, "score_total"] < 100
     assert one_sided.loc[2, "score_total"] == pytest.approx(100)
     assert one_sided.loc[0, "score_total"] == pytest.approx(two_sided.loc[0, "score_total"])  # altı yine cezalı
-    assert load_profiles()["biosignature"].at_least == ("carbonate_index",)
+    assert load_profiles()["biosignature_carbonate"].at_least == ("carbonate_index",)
+    assert load_profiles()["biosignature_arid"].at_least == ()
     assert load_profiles()["rover"].at_least == ()
 
 
@@ -155,9 +156,9 @@ def test_custom_scenario_inherits_at_least():
     assert custom_at_least({"aridity": 1.0}) == ()
 
     # Hazır testler arasında tutarsızsa tek yönlü sayılmaz (kural Gemini'ye ya da tek teste bırakılmaz).
-    base = load_profiles()["biosignature"]
+    base = load_profiles()["biosignature_carbonate"]
     other = Profile(id="rover", label="x", weights={"carbonate_index": 1.0}, breakdown=())
-    assert custom_at_least({"carbonate_index": 1.0}, {"biosignature": base, "rover": other}) == ()
+    assert custom_at_least({"carbonate_index": 1.0}, {"biosignature_carbonate": base, "rover": other}) == ()
 
 
 def test_missing_data_is_unknown_not_mismatch():

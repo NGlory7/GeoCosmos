@@ -6,93 +6,38 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     32.81843855114922,
-     22.948432723786787
+     -82.95900095286379,
+     8.47848499647295
     ]
    },
    "properties": {
-    "id": "g25_22.948_32.818",
-    "name": "22.95°K, 32.82°D",
+    "id": "g25_8.478_-82.959",
+    "name": "8.48°K, 82.96°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 22.948432723786787,
-    "lon": 32.81843855114922,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.47848499647295,
+    "lon": -82.95900095286379,
     "rank": 1,
-    "score_total": 99.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 99.6
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
+      "earth": 0.5,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9976160550803471,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": true,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     31.58928354923352,
-     22.27015392406895
-    ]
-   },
-   "properties": {
-    "id": "g25_22.270_31.589",
-    "name": "22.27°K, 31.59°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 22.27015392406895,
-    "lon": 31.58928354923352,
-    "rank": 2,
-    "score_total": 98.9,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 97.3
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
       "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.983839901119095,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
@@ -116,44 +61,99 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     82.72701438496468,
-     35.60963698518639
+     -78.45647715623618,
+     8.70457792971223
     ]
    },
    "properties": {
-    "id": "g25_35.610_82.727",
-    "name": "35.61°K, 82.73°D",
+    "id": "g25_8.705_-78.456",
+    "name": "8.70°K, 78.46°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 35.60963698518639,
-    "lon": 82.72701438496468,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -78.45647715623618,
+    "rank": 2,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.47756527146338,
+     8.70457792971223
+    ]
+   },
+   "properties": {
+    "id": "g25_8.705_-71.478",
+    "name": "8.70°K, 71.48°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -71.47756527146338,
     "rank": 3,
-    "score_total": 97.3,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 93.2
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
+      "earth": 0.75,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9591569271561834,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -171,44 +171,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     93.59606343541061,
-     37.644473384339896
+     -70.35193432230648,
+     8.70457792971223
     ]
    },
    "properties": {
-    "id": "g25_37.644_93.596",
-    "name": "37.64°K, 93.60°D",
+    "id": "g25_8.705_-70.352",
+    "name": "8.70°K, 70.35°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 37.644473384339896,
-    "lon": 93.59606343541061,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.70457792971223,
+    "lon": -70.35193432230648,
     "rank": 4,
-    "score_total": 97.2,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 93.0
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.75,
-      "target": 0.0,
+      "earth": 0.5,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9582642211914063,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -226,44 +226,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -118.54833278449497,
-     77.21073670121366
+     -76.65546763758513,
+     8.47848499647295
     ]
    },
    "properties": {
-    "id": "g25_77.211_-118.548",
-    "name": "77.21°K, 118.55°B",
+    "id": "g25_8.478_-76.655",
+    "name": "8.48°K, 76.66°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 77.21073670121366,
-    "lon": -118.54833278449497,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.47848499647295,
+    "lon": -76.65546763758513,
     "rank": 5,
-    "score_total": 97.2,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.9
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
       "earth": 0.75,
-      "target": 0.0,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.957635668499601,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -281,44 +281,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -111.42525699486868,
-     77.66292256769222
+     -73.27857479011442,
+     8.47848499647295
     ]
    },
    "properties": {
-    "id": "g25_77.663_-111.425",
-    "name": "77.66°K, 111.43°B",
+    "id": "g25_8.478_-73.279",
+    "name": "8.48°K, 73.28°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 77.66292256769222,
-    "lon": -111.42525699486868,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 8.47848499647295,
+    "lon": -73.27857479011442,
     "rank": 6,
-    "score_total": 97.1,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.8
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.75,
-      "target": 0.0,
+      "earth": 0.5,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9568640650803968,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -336,44 +336,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     88.5846206687902,
-     40.583681516450525
+     -72.60319622062028,
+     7.800206196755115
     ]
    },
    "properties": {
-    "id": "g25_40.584_88.585",
-    "name": "40.58°K, 88.58°D",
+    "id": "g25_7.800_-72.603",
+    "name": "7.80°K, 72.60°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 40.583681516450525,
-    "lon": 88.5846206687902,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.800206196755115,
+    "lon": -72.60319622062028,
     "rank": 7,
-    "score_total": 97.0,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.5
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
+      "earth": 0.5,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9552804912945605,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -391,44 +391,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     33.80176255268178,
-     25.88764085589741
+     -71.47756527146338,
+     7.800206196755115
     ]
    },
    "properties": {
-    "id": "g25_25.888_33.802",
-    "name": "25.89°K, 33.80°D",
+    "id": "g25_7.800_-71.478",
+    "name": "7.80°K, 71.48°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 25.88764085589741,
-    "lon": 33.80176255268178,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.800206196755115,
+    "lon": -71.47756527146338,
     "rank": 8,
-    "score_total": 96.9,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.4
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
+      "earth": 0.5,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9542220779078904,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": true,
-     "remote": true
+     "road_access": false,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -446,99 +446,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     90.6481559256339,
-     40.357588583211246
+     -75.52983668842823,
+     7.348020330276557
     ]
    },
    "properties": {
-    "id": "g25_40.358_90.648",
-    "name": "40.36°K, 90.65°D",
+    "id": "g25_7.348_-75.530",
+    "name": "7.35°K, 75.53°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 40.357588583211246,
-    "lon": 90.6481559256339,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.348020330276557,
+    "lon": -75.52983668842823,
     "rank": 9,
-    "score_total": 96.9,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.2
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
+      "earth": 0.75,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9529031007438238,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     34.29342455344806,
-     24.983269122940293
-    ]
-   },
-   "properties": {
-    "id": "g25_24.983_34.293",
-    "name": "24.98°K, 34.29°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 24.983269122940293,
-    "lon": 34.29342455344806,
-    "rank": 10,
-    "score_total": 96.8,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 92.1
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
       "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9525026404269035,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
       "match": true
      }
     ],
     "ops_tags": {
      "road_access": true,
-     "remote": true
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -556,44 +501,99 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     89.46899292172321,
-     39.22712391701485
+     -73.5037009799458,
+     7.348020330276557
     ]
    },
    "properties": {
-    "id": "g25_39.227_89.469",
-    "name": "39.23°K, 89.47°D",
+    "id": "g25_7.348_-73.504",
+    "name": "7.35°K, 73.50°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 39.22712391701485,
-    "lon": 89.46899292172321,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 7.348020330276557,
+    "lon": -73.5037009799458,
+    "rank": 10,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.60319622062028,
+     6.895834463798
+    ]
+   },
+   "properties": {
+    "id": "g25_6.896_-72.603",
+    "name": "6.90°K, 72.60°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 6.895834463798,
+    "lon": -72.60319622062028,
     "rank": 11,
-    "score_total": 96.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.0
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
       "earth": 0.75,
-      "target": 0.0,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.9522064452286303,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
       "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
@@ -611,484 +611,484 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     83.5314910240405,
-     36.28791578490423
+     -76.20521525792238,
+     6.669741530558721
     ]
    },
    "properties": {
-    "id": "g25_36.288_83.531",
-    "name": "36.29°K, 83.53°D",
+    "id": "g25_6.670_-76.205",
+    "name": "6.67°K, 76.21°B",
     "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 36.28791578490423,
-    "lon": 83.5314910240405,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 6.669741530558721,
+    "lon": -76.20521525792238,
     "rank": 12,
-    "score_total": 96.8,
+    "score_total": 100.0,
     "scores": {
      "topography": null,
      "geology": 100.0,
-     "climate": 92.0
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": false,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.6293319291027,
+     6.443648597319442
+    ]
+   },
+   "properties": {
+    "id": "g25_6.444_-74.629",
+    "name": "6.44°K, 74.63°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 6.443648597319442,
+    "lon": -74.6293319291027,
+    "rank": 13,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.92781765112613,
+     6.217555664080163
+    ]
+   },
+   "properties": {
+    "id": "g25_6.218_-71.928",
+    "name": "6.22°K, 71.93°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 6.217555664080163,
+    "lon": -71.92781765112613,
+    "rank": 14,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 1.0,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.82832241045166,
+     5.991462730840885
+    ]
+   },
+   "properties": {
+    "id": "g25_5.991_-72.828",
+    "name": "5.99°K, 72.83°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 5.991462730840885,
+    "lon": -72.82832241045166,
+    "rank": 15,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.20521525792238,
+     5.765369797601606
+    ]
+   },
+   "properties": {
+    "id": "g25_5.765_-76.205",
+    "name": "5.77°K, 76.21°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 5.765369797601606,
+    "lon": -76.20521525792238,
+    "rank": 16,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.72882716977719,
+     5.765369797601606
+    ]
+   },
+   "properties": {
+    "id": "g25_5.765_-73.729",
+    "name": "5.77°K, 73.73°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 5.765369797601606,
+    "lon": -73.72882716977719,
+    "rank": 17,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.30471049859685,
+     5.539276864362328
+    ]
+   },
+   "properties": {
+    "id": "g25_5.539_-75.305",
+    "name": "5.54°K, 75.30°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 5.539276864362328,
+    "lon": -75.30471049859685,
+    "rank": 18,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.70269146129476,
+     5.313183931123049
+    ]
+   },
+   "properties": {
+    "id": "g25_5.313_-71.703",
+    "name": "5.31°K, 71.70°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 5.313183931123049,
+    "lon": -71.70269146129476,
+    "rank": 19,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
+    },
+    "params": [
+     {
+      "key": "carbonate_index",
+      "earth": 0.5,
+      "target": 0.5,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     },
+     {
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
+      "source": "ASTER GED (AG100) TIR",
+      "match": true
+     }
+    ],
+    "ops_tags": {
+     "road_access": true,
+     "remote": false
+    },
+    "breakdown": [
+     "gravity",
+     "liquid_water",
+     "biology",
+     "radiation",
+     "temperature"
+    ],
+    "past_tests": [],
+    "ai_comment": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.82832241045166,
+     5.08709099788377
+    ]
+   },
+   "properties": {
+    "id": "g25_5.087_-72.828",
+    "name": "5.09°K, 72.83°B",
+    "is_new": true,
+    "target_id": "mars_jezero",
+    "test_id": "biosignature_carbonate",
+    "lat": 5.08709099788377,
+    "lon": -72.82832241045166,
+    "rank": 20,
+    "score_total": 100.0,
+    "scores": {
+     "topography": null,
+     "geology": 100.0,
+     "climate": null
     },
     "params": [
      {
       "key": "carbonate_index",
       "earth": 0.75,
-      "target": 0.0,
+      "target": 0.5,
       "source": "ASTER GED (AG100) TIR",
       "match": true
      },
      {
-      "key": "aridity",
-      "earth": 0.951743751486711,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     85.34192240803581,
-     37.870566317579176
-    ]
-   },
-   "properties": {
-    "id": "g25_37.871_85.342",
-    "name": "37.87°K, 85.34°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 37.870566317579176,
-    "lon": 85.34192240803581,
-    "rank": 13,
-    "score_total": 96.8,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 91.9
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
+      "key": "mafic_index",
+      "earth": 0.75,
+      "target": 0.75,
       "source": "ASTER GED (AG100) TIR",
       "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9516718559942111,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
      }
     ],
     "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     92.7116911824776,
-     40.13149564997197
-    ]
-   },
-   "properties": {
-    "id": "g25_40.131_92.712",
-    "name": "40.13°K, 92.71°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 40.13149564997197,
-    "lon": 92.7116911824776,
-    "rank": 14,
-    "score_total": 96.8,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 91.9
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9515054335248476,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     15.610268524329404,
-     23.8528044567439
-    ]
-   },
-   "properties": {
-    "id": "g25_23.853_15.610",
-    "name": "23.85°K, 15.61°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 23.8528044567439,
-    "lon": 15.610268524329404,
-    "rank": 15,
-    "score_total": 96.7,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 91.8
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.950886738177249,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -97.59852601638225,
-     78.56729430064934
-    ]
-   },
-   "properties": {
-    "id": "g25_78.567_-97.599",
-    "name": "78.57°K, 97.60°B",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 78.56729430064934,
-    "lon": -97.59852601638225,
-    "rank": 16,
-    "score_total": 96.7,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 91.7
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9500317802429199,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     87.11066691390184,
-     38.54884511729701
-    ]
-   },
-   "properties": {
-    "id": "g25_38.549_87.111",
-    "name": "38.55°K, 87.11°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 38.54884511729701,
-    "lon": 87.11066691390184,
-    "rank": 17,
-    "score_total": 96.6,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 91.6
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9495771505273889,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     17.576916527394527,
-     24.757176189701013
-    ]
-   },
-   "properties": {
-    "id": "g25_24.757_17.577",
-    "name": "24.76°K, 17.58°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 24.757176189701013,
-    "lon": 17.576916527394527,
-    "rank": 18,
-    "score_total": 96.6,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 91.5
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9489330076447231,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     5.039535507854374,
-     25.88764085589741
-    ]
-   },
-   "properties": {
-    "id": "g25_25.888_5.040",
-    "name": "25.89°K, 5.04°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 25.88764085589741,
-    "lon": 5.039535507854374,
-    "rank": 19,
-    "score_total": 96.5,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 91.3
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9480567555557364,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
-    },
-    "breakdown": [
-     "gravity",
-     "liquid_water",
-     "biology",
-     "radiation",
-     "temperature"
-    ],
-    "past_tests": [],
-    "ai_comment": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     31.34345254885038,
-     23.174525657026063
-    ]
-   },
-   "properties": {
-    "id": "g25_23.175_31.343",
-    "name": "23.17°K, 31.34°D",
-    "is_new": true,
-    "target_id": "moon_malapert",
-    "test_id": "biosignature",
-    "lat": 23.174525657026063,
-    "lon": 31.34345254885038,
-    "rank": 20,
-    "score_total": 96.5,
-    "scores": {
-     "topography": null,
-     "geology": 100.0,
-     "climate": 91.3
-    },
-    "params": [
-     {
-      "key": "carbonate_index",
-      "earth": 0.0,
-      "target": 0.0,
-      "source": "ASTER GED (AG100) TIR",
-      "match": true
-     },
-     {
-      "key": "aridity",
-      "earth": 0.9480418936486572,
-      "target": 1.0,
-      "source": "GPM IMERG V07 + MODIS NDVI",
-      "match": true
-     }
-    ],
-    "ops_tags": {
-     "road_access": false,
-     "remote": true
+     "road_access": true,
+     "remote": false
     },
     "breakdown": [
      "gravity",
