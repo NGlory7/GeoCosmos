@@ -8,7 +8,8 @@ import pandas as pd
 from fastapi import APIRouter, HTTPException
 
 from api.services import gemini
-from core.profiles import TestProfile, load_grid_config, load_parameters, load_targets, normalize_weights
+from core.profiles import (TestProfile, custom_at_least, load_grid_config, load_parameters,
+                           load_targets, normalize_weights)
 from core.schemas import BREAKDOWN_KEYS, ScenarioRequest, ScenarioResponse
 from core.scoring import top_analogs, usable_weights
 from pipeline.discovery import name_known_cells
@@ -45,7 +46,9 @@ def scenario(req: ScenarioRequest) -> ScenarioResponse:
     if not usable_weights(weights, target, params):
         raise HTTPException(422, "Bu metinden hedefte karşılığı olan bir parametre çıkarılamadı.")
 
-    profile = TestProfile(id="custom", label=req.text, weights=weights, breakdown=BREAKDOWN_KEYS)
+    # Tek yönlü kurallar (ör. biyo-imzada karbonat) serbest metinde de aynı: hazır testlerden gelir.
+    profile = TestProfile(id="custom", label=req.text, weights=weights, breakdown=BREAKDOWN_KEYS,
+                          at_least=custom_at_least(weights))
     grid = load_grid()
     analogs = top_analogs(grid, target, profile, n=TOP_N, params=params,
                           min_separation_km=load_grid_config()["discovery"]["min_separation_km"])

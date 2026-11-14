@@ -100,6 +100,23 @@ def load_profiles(path: Path | None = None) -> dict[str, TestProfile]:
     return profiles
 
 
+def custom_at_least(weights: dict[str, float],
+                    profiles: dict[str, TestProfile] | None = None) -> tuple[str, ...]:
+    """/scenario (serbest metin) için tek yönlü parametreler.
+
+    Bir parametre, onu ağırlıklandıran HER hazır testte at_least ise serbest metinde de
+    tek yönlü sayılır (şu an: carbonate_index, Salda kararı). Hazır testler arasında tutarsız
+    ya da hiç tanımlanmamış bir parametre iki yönlü kalır: kural Gemini'ye bırakılmaz.
+    """
+    profiles = profiles or load_profiles()
+    out = []
+    for k in weights:
+        using = [p for p in profiles.values() if k in p.weights]
+        if using and all(k in p.at_least for p in using):
+            out.append(k)
+    return tuple(out)
+
+
 # --- Doğrulama seti ve ızgara ayarları -----------------------------------------
 
 SPLITS: tuple[str, ...] = ("tune", "holdout", "report")

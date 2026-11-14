@@ -17,7 +17,7 @@
 | **Gerçek Dünya verisi (`grid.parquet`)** | ❌ Yok | Earth Engine hesabı bekleniyor; **asıl engel bu** |
 | Hedef değerleri (`config/targets.yaml`) | ✅ Hazır | Mars hedefleri tüm parametreler; Ay'da sadece tanımı gereği olmayanlar boş. Üç betikle yeniden üretilebilir |
 | Gemini yorumları | ⏳ Bekliyor | `.env` > `GEMINI_API_KEY` |
-| Frontend (`frontend/`) | ✅ Hazır | Giriş (Çağrı) → Ay/Mars haritası (NASA Trek) + hedef ve test seçimi → Dünya haritası (NASA GIBS + ısı haritası + pinler) → analog kartı → senaryo kutusu; doğrulama paneli. Veri yokken her ekran "henüz çalıştırılmadı" der |
+| Frontend (`frontend/`) | ✅ Hazır | Giriş (Çağrı) → Ay/Mars küresi (NASA Trek mozaiği) + hedef ve test seçimi → Dünya haritası (NASA GIBS + ısı haritası + pinler) → analog kartı → senaryo kutusu; doğrulama paneli. Veri yokken her ekran "henüz çalıştırılmadı" der |
 | Yayın (GitHub Pages) | ⏳ Repo ayarı bekleniyor | `.github/workflows/pages.yml` hazır; aşağıdaki "Yayın" bölümü |
 
 Şu an `make data` sadece `targets.geojson` üretir; `grid.parquet` gelince analog, doğrulama ve ısı haritası dosyaları da otomatik üretilir.
@@ -104,4 +104,4 @@ Yayında canlı API yoktur; senaryo kutusu "çevrimdışı" der, geri kalan her 
 - Keşif, doğrulama, ısı haritası, Gemini yorumcu (uydurma sayı kontrolüyle), `make data` uçtan uca
 - `/scenario` API (Gemini tercüman, önbellek, maskeli kare filtresi, seyrek aday seçimi)
 - GitHub Actions: her push'ta testler ve üretilen dosya kontrolü
-- Frontend ekranları: Ay/Mars haritası (NASA Trek), test seçimi, Dünya haritası (NASA GIBS), ısı haritası, analog kartı, senaryo kutusu, doğrulama paneli; GitHub Pages yayın iş akışı
+- Frontend ekranları: Ay/Mars küresi (NASA Trek mozaiği), test seçimi, Dünya haritası (NASA GIBS), ısı haritası, analog kartı, senaryo kutusu, doğrulama paneli; GitHub Pages yayın iş akışı

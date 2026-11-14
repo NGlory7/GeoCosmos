@@ -226,7 +226,7 @@ Hazır sonuçlar statik dosyadır; API sadece canlı senaryo içindir.
 1. Gemini metni JSON ağırlıklara çevirir (şemaya zorlanmış çıktı).
 2. Ağırlıklar kontrol edilir: bilinmeyen anahtarlar atılır, toplam 1'e normalize edilir.
 3. Dünya'da karşılığı olmayan istekler (düşük yerçekimi, vakum gibi) için `unsupported` alanı doldurulur.
-4. `core/scoring.py`, belleğe yüklenmiş `grid.parquet` üzerinde sıralama yapar.
+4. `core/scoring.py`, belleğe yüklenmiş `grid.parquet` üzerinde sıralama yapar. Tek yönlü (`at_least`) kurallar hazır testlerden gelir: bir parametre onu kullanan her hazır testte `at_least` ise serbest metinde de öyledir (şu an karbonat; `core/profiles.py > custom_at_least`). Gemini bu kurala karar vermez.
 5. Aynı metin için sonuç önbellekten döner.
 
 ## Gemini kullanımı
@@ -245,11 +245,11 @@ Hazır sonuçlar statik dosyadır; API sadece canlı senaryo içindir.
 | Yol | Sayfa | Okuduğu |
 | --- | --- | --- |
 | `/` | Giriş: gök cismi seçimi | `targets.geojson` |
-| `/mars`, `/moon` | Ay/Mars haritası (NASA Trek), hedef ve test seçimi | `targets.geojson`, `meta.json`, `analogs/index.json` |
+| `/mars`, `/moon` | Dönen Ay/Mars küresi (NASA Trek mozaiği) üzerinde hedefler, hedef ve test seçimi | `targets.geojson`, `meta.json`, `analogs/index.json` |
 | `/:body/:hedef/:test` | Dünya haritası (NASA GIBS), ısı haritası, adaylar, analog kartı, senaryo kutusu | `analogs/<hedef>_<test>.geojson`, `heatmaps/index.json`, `POST /scenario` |
 | `/dogrulama` | Doğrulama paneli | `validation.json` |
 
-- **Taban haritalar challenge kaynaklarından:** Ay/Mars için NASA Trek WMTS (MOLA renkli kabartma, LRO WAC mozaik; Leaflet `CRS.EPSG4326`), Dünya için NASA GIBS (Worldview) Blue Marble (Web Mercator).
+- **Taban haritalar challenge kaynaklarından:** Ay/Mars için NASA Trek WMTS karoları (Viking MDIM 2.1 renkli mozaik, LRO WAC mozaik) birleştirilip WebGL küresine sarılır (`PlanetGlobe.tsx`), Dünya için NASA GIBS (Worldview) Blue Marble (Web Mercator).
 - Harita ve grafik kütüphaneleri ayrı parçada yüklenir (`React.lazy`); giriş sayfası onları beklemez.
 
 - **Büyük veri tarayıcıya gitmez.** Haritaya sadece en iyi adaylar pin olarak gelir; Dünya geneli görünüm hazır PNG ısı haritasıdır (Leaflet `ImageOverlay`).
@@ -304,7 +304,7 @@ GeoCosmos/
 │   │   └── validation.json
 │   └── src/
 │       ├── components/
-│       │   ├── PlanetMap.tsx
+│       │   ├── PlanetGlobe.tsx
 │       │   ├── EarthMap.tsx
 │       │   ├── AnalogCard.tsx
 │       │   ├── ScoreRadar.tsx

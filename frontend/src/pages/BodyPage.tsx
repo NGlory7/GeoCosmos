@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { BODIES } from "../bodies";
-import PlanetMap from "../components/PlanetMap";
+import PlanetGlobe from "../components/PlanetGlobe";
 import SpaceLayout from "../components/SpaceLayout";
 import { coord } from "../format";
 import { loadAnalogIndex, loadMeta, loadTargets, targetsOf, type TargetWithCoords } from "../services/data";
@@ -54,10 +54,14 @@ export default function BodyPage() {
       .catch((e) => setError(String(e)));
   }, []);
 
+  const own = useMemo(() => (targets && (body === "mars" || body === "moon") ? targetsOf(targets, body) : []), [targets, body]);
+
+  // Başka gök cismine geçince seçim sıfırlanır
+  useEffect(() => setSelected(null), [body]);
+
   if (body !== "mars" && body !== "moon") return <Navigate to="/" replace />;
   const b = body as Body;
   const meta_ = BODIES[b];
-  const own = targets ? targetsOf(targets, b) : [];
 
   return (
     <SpaceLayout>
@@ -76,22 +80,28 @@ export default function BodyPage() {
           </p>
         )}
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
-          <div className="h-[22rem] min-w-0 overflow-hidden rounded-xl border border-white/10 lg:h-[34rem]">
-            {targets && <PlanetMap body={b} targets={own} selected={selected} onSelect={setSelected} />}
+        <div className="mt-6 grid items-start gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+          {/* Kutu yok: gezegenin kendisi; hedefler üzerinde, seçilince oraya döner */}
+          <div className="mx-auto w-full max-w-[36rem] lg:sticky lg:top-6">
+            <PlanetGlobe key={b} body={b} targets={own} selected={selected} onSelect={setSelected} />
           </div>
-          <ul className="grid content-start gap-3">
+          <ul className="grid content-start gap-4">
             {targets === null && !error && <li className="font-mono text-xs text-slate-500">Yükleniyor…</li>}
             {own.map((t) => {
               const on = t.id === selected;
               return (
-                <li key={t.id} className={`rounded-xl border px-4 py-3 backdrop-blur-sm ${on ? "border-cyan-400/40 bg-cyan-400/[0.04]" : "border-white/10 bg-white/[0.03]"}`}>
-                  <button className="w-full text-left" onClick={() => setSelected(on ? null : t.id)}>
+                <li
+                  key={t.id}
+                  className={`rounded-2xl border px-6 py-5 backdrop-blur-sm transition-colors ${
+                    on ? "border-cyan-400/40 bg-cyan-400/[0.04]" : "border-white/10 bg-white/[0.03] hover:border-white/20"
+                  }`}
+                >
+                  <button className="w-full text-left" onClick={() => setSelected(on ? null : t.id)} aria-expanded={on}>
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <span className="font-medium text-white">{t.name}</span>
-                      <span className="font-mono text-[11px] text-slate-500">{coord(t.lat, t.lon)}</span>
+                      <span className="text-lg font-medium text-white">{t.name}</span>
+                      <span className="font-mono text-xs text-slate-500">{coord(t.lat, t.lon)}</span>
                     </div>
-                    <p className="mt-1 text-sm text-slate-400">{t.why}</p>
+                    <p className="mt-1 text-slate-400">{t.why}</p>
                   </button>
                   {on && meta && <TestPicker body={b} target={t} meta={meta} index={index} />}
                 </li>
