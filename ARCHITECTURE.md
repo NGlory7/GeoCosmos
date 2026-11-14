@@ -97,6 +97,19 @@ flowchart LR
 - SQL istenirse **DuckDB** sunucusuz olarak doğrudan Parquet'e sorgu atabilir (opsiyonel).
 - Gerçek bir veritabanı ancak kullanıcı hesabı veya kayıtlı senaryo gibi özellikler eklenirse gerekir; hackathon kapsamında yok.
 
+### Earth Engine'e bağımlılık
+
+`grid.parquet` olmadan API `/scenario` için 503 döner, doğrulama testi atlanır ve analog dosyaları üretilmez. Bu riski **sahte veri üretmeden** şöyle küçültürüz:
+
+1. **Tek kişi export eder, herkes kullanır.** `grid.parquet` commit'lenir (100 MB altındaysa). Ekipte sadece bir kişinin Earth Engine hesabı yeterlidir.
+2. **Önce küçük ama gerçek bir bölge.** Tüm Dünya exportu beklenirken bir kutu export edilir; API, `make data` ve frontend bu gerçek verilerle geliştirilir:
+   ```bash
+   python -m pipeline.ee_export --bbox -112 37 -109 40      # Hanksville çevresi, birkaç dakika
+   python -m pipeline.features                                # data/raw/*.csv -> grid.parquet
+   ```
+   Bu dosya bölgesel olduğu için doğrulama ve keşif sonuçları **sunumda kullanılmaz**; tüm Dünya exportu gelince üzerine yazılır.
+3. **Sentetik ızgara yok.** Motorun birim testleri `tests/` içindeki küçük, elle yazılmış tablolarla çalışır; bunlar uygulamaya veri olarak hiç girmez.
+
 ## Veri sözleşmesi
 
 Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun ilk 2 saatinde dondurulur**; frontend o andan itibaren sahte veriyle çalışmaya başlar. Değişiklik gerekirse önce bu bölüm güncellenir, sonra kod.
@@ -187,6 +200,7 @@ Hazır sonuçlar statik dosyadır; API sadece canlı senaryo içindir.
 - **Büyük veri tarayıcıya gitmez.** Haritaya sadece en iyi adaylar pin olarak gelir; Dünya geneli görünüm hazır PNG ısı haritasıdır (Leaflet `ImageOverlay`).
 - **Ay ve Mars haritaları Dünya projeksiyonunda değildir.** Moon Trek / Mars Trek katmanları hackathon öncesi denenir. B planı: tek büyük görsel + `CRS.Simple` + `ImageOverlay`.
 - Backend'e ulaşılamazsa senaryo kutusu "şu an çevrimdışı" der; geri kalan her şey çalışmaya devam eder.
+- **Port sabit:** `vite.config.ts` içinde `server: { port: 5173, strictPort: true }`. 5173 doluysa Vite 5174'e kaymaz, hata verir; böylece API'nin CORS listesiyle uyuşmayan bir adresten sessizce çalışmaz.
 
 ## Klasör yapısı
 
@@ -294,11 +308,11 @@ GEMINI_API_KEY=
 GEMINI_MODEL=gemini-2.5-flash
 EE_PROJECT=
 EE_PERMAFROST_ASSETS=
-API_ALLOWED_ORIGIN=http://localhost:5173
+API_ALLOWED_ORIGIN=http://localhost:5173,http://127.0.0.1:5173
 VITE_API_URL=http://localhost:8000
 ```
 
-`API_ALLOWED_ORIGIN` virgülle ayrılmış liste alır; sondaki `/` temizlenir. Yayında frontend adresini buraya ekleyin, örn. `http://localhost:5173,https://geocosmos.vercel.app`.
+`API_ALLOWED_ORIGIN` virgülle ayrılmış liste alır; sondaki `/` temizlenir. Boşsa `localhost:5173` ve `127.0.0.1:5173` kullanılır. Yayında frontend adresini buraya ekleyin, örn. `http://localhost:5173,https://geocosmos.vercel.app`.
 
 ## Yayınlama
 

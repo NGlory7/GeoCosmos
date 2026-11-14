@@ -106,6 +106,9 @@ def test_known_analogs_have_targets_and_exclusions():
     targets = load_targets()
     for a in vs.analogs:
         assert a.targets and all(t in targets for t in a.targets)
+    for a in vs.analogs:  # geçmiş testler gerçek ve kaynaklı olmalı
+        assert a.past_tests, a.id
+        assert all(t.title.strip() and t.url.startswith("https://") for t in a.past_tests), a.id
     known = {s.id for s in vs.all_known_sites()}
     assert {"dumont_dunes", "holuhraun", "dry_valleys"} <= known
 

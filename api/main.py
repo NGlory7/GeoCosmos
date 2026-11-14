@@ -14,7 +14,9 @@ from api.routes import scenario
 
 load_dotenv()
 
-DEFAULT_ORIGIN = "http://localhost:5173"
+# Vite geliştirme sunucusu: tarayıcı localhost ya da 127.0.0.1 ile açılabilir, ikisi ayrı origin sayılır.
+# Port kayması (5173 doluysa 5174) frontend tarafında server.strictPort ile engellenir.
+DEFAULT_ORIGINS = ("http://localhost:5173", "http://127.0.0.1:5173")
 
 
 def parse_origins(raw: str | None) -> list[str]:
@@ -23,7 +25,7 @@ def parse_origins(raw: str | None) -> list[str]:
     Tarayıcı Origin başlığını '/' olmadan gönderir; 'https://x.app/' yazılırsa eşleşmez.
     """
     origins = [o.strip().rstrip("/") for o in (raw or "").split(",")]
-    return [o for o in origins if o] or [DEFAULT_ORIGIN]
+    return [o for o in origins if o] or list(DEFAULT_ORIGINS)
 
 
 app = FastAPI(title="GeoCosmos API")

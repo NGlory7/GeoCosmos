@@ -1,6 +1,7 @@
 # Doğrulama seti: ünlü analoglar keşif listesine girmez, motoru test etmek için kullanılır.
 # Bu yerlere 50 km'den yakın ızgara kareleri keşiften çıkarılır (exclude_radius_km).
-# Koordinatlar YAKLAŞIK; past_tests kaynaklı ve elle girilecek.
+# Koordinatlar YAKLAŞIK. past_tests: o sahada yapılmış gerçek test/saha çalışmaları, her biri
+# kaynak linkli ve elle girilir (Gemini'ye yazdırılmaz). Link yoksa kayıt eklenmez.
 #
 # split:
 #   tune     Ağırlık ve tolerans ayarı SADECE bu yerlere bakılarak yapılır.
@@ -30,7 +31,9 @@ analogs:
     targets: [mars_jezero, mars_gale]
     lat: 64.85
     lon: -16.83
-    past_tests: []
+    past_tests:
+      - title: "RAVEN: rover + drone ağı, Holuhraun lav sahası (NASA PSTAR, 2021-2023)"
+        url: https://news.arizona.edu/story/3m-nasa-grant-uarizona-scientists-will-test-mars-exploration-drones-iceland
 
   - id: yungay
     name: Yungay (Atacama, Şili)
@@ -39,7 +42,9 @@ analogs:
     targets: [mars_gale]
     lat: -24.08
     lon: -70.02
-    past_tests: []
+    past_tests:
+      - title: "Mars benzeri topraklar ve mikrobiyal yaşamın kuraklık sınırı (Navarro-González et al. 2003, Science)"
+        url: https://doi.org/10.1126/science.1089143
 
   - id: haughton
     name: Haughton Krateri (Devon Adası, Kanada)
@@ -48,7 +53,11 @@ analogs:
     targets: [mars_arcadia]
     lat: 75.38
     lon: -89.68
-    past_tests: []
+    past_tests:
+      - title: "Buzlu zeminde Mars matkabı testi (NASA Astrobiology)"
+        url: https://astrobiology.nasa.gov/news/drilling-into-arctic-ice/
+      - title: "Drill Hill'de Mars matkabı ve örnek aktarım kolu testi (NASA Ames, 2014)"
+        url: https://blogs.nasa.gov/mission-ames/2014/08
 
   # --- holdout ------------------------------------------------------------------
   - id: hanksville
@@ -58,7 +67,9 @@ analogs:
     targets: [mars_jezero, mars_gale]
     lat: 38.41
     lon: -110.79
-    past_tests: []
+    past_tests:
+      - title: "University Rover Challenge, Mars Desert Research Station yakını (Space.com)"
+        url: https://space.com/37057-mars-rovers-compete-utah-desert.html
     note: >-
       Dumont Dunes'un yerine. Dumont Dunes ~30 km² ile 25 km'lik karede ortalamaya karışıp
       kayboluyordu; Hanksville çevresindeki Mars benzeri arazi kareyi dolduracak kadar geniş.
@@ -70,7 +81,11 @@ analogs:
     targets: [mars_arcadia]
     lat: 79.4
     lon: 13.3
-    past_tests: []
+    past_tests:
+      - title: "AMASE: ExoMars ve MSL cihaz testleri, Svalbard (ESA, 2008)"
+        url: https://www.esa.int/Space_in_Member_States/Norway/AMASE_2008_-_Til_Mars_paa_Svalbard
+      - title: "AMASE Bockfjorden saha günlüğü (The Planetary Society, 2009)"
+        url: https://www.planetary.org/articles/svalbard
 
   - id: salda
     name: Salda Gölü kıyısı (Türkiye)
@@ -79,7 +94,9 @@ analogs:
     targets: [mars_jezero]
     lat: 37.55
     lon: 29.68
-    past_tests: []
+    past_tests:
+      - title: "Perseverance ekibinin Jezero hazırlık saha çalışması (NASA Earth Observatory, 2021)"
+        url: https://science.nasa.gov/blogs/earth-matters/2021/02/17/what-a-lake-in-turkey-can-tell-us-about-mars
     note: >-
       Göl ~45 km², 25 km'lik karenin küçük bir kısmı; max_masked_fraction kuralı (config/grid.yaml)
       kareyi elemez. Asıl hedef göl suyu değil, kıyıdaki hidromagnezit çökelleri.
@@ -91,7 +108,9 @@ analogs:
     targets: [mars_gale]
     lat: 30.5
     lon: 59.0
-    past_tests: []
+    past_tests:
+      - title: "Lut ve Mars rüzgar şekilli yer şekillerinin karşılaştırması (Foroutan & Zimbelman, GSA 2016)"
+        url: https://gsa.confex.com/gsa/2016AM/webprogram/Paper280656.html
 
   # --- report -------------------------------------------------------------------
   - id: lanzarote
@@ -101,7 +120,9 @@ analogs:
     targets: [moon_marius_hills]
     lat: 29.16
     lon: -13.44
-    past_tests: []
+    past_tests:
+      - title: "ESA PANGAEA astronot jeoloji eğitimi, Corona lav tüpü (ESA, 2021)"
+        url: https://www.esa.int/ESA_Multimedia/Images/2021/11/Rocky_roads_through_Lanzarote
     note: >-
       Lav tüpleri yer altında; Copernicus DEM, MODIS ve ASTER onları göremez. Motor lav_tube testinde sadece
       "genç bazaltik volkanik arazi"yi ölçebiliyor. Ayrıca ada küçük, 25 km'lik karelerin çoğu deniz.
