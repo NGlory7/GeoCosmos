@@ -9,16 +9,17 @@
 #
 # ÖLÇEK: slope_deg ve roughness_m, Dünya karelerindeki gibi config/grid.yaml > scale kurallarıyla
 # hesaplanmalı (MOLA/LOLA önce 500 m'ye indirilir). Makaledeki başka çözünürlükte bir eğim
-# değeri doğrudan yazılmaz. Hesap: python -m pipeline.target_values --target <id> --dem <dosya>
+# değeri doğrudan yazılmaz. Hesap: python -m pipeline.target_values --all (PDS'ten uzaktan okur)
 #
 # DURUM (TASLAK): Aşağıdaki değerler 25 km'lik hedef karesinin ORTALAMASINI temsil eder, nokta
 # bulgusunu değil. 0-1 sıralı ölçek: DATA_SOURCES.md > 0-1 sıralı ölçek.
-# Henüz boş olanlar (kaynaklı değer bulunana kadar bilerek yazılmadı):
-#   - slope_deg, roughness_m: tüm hedefler -> pipeline.target_values ile DEM'den hesaplanacak.
-#   - surface_temp_c, temp_range_c: Mars hedefleri (Mars Climate Database / REMS / MEDA) ve
-#     Ay kutup hedefleri (Diviner kutup ürünleri).
-#   - dust_aod: Mars hedefleri (MSL Mastcam / TES toz opaklığı, 550 nm'ye çevrilmiş).
-#   - ground_ice: Malapert (yüzey altı buz kararlılığı belirsiz).
+# Kaynak betikleri (yeniden üretmek için):
+#   slope_deg, roughness_m           -> python -m pipeline.target_values --all   (PDS MOLA / LOLA)
+#   Mars surface_temp_c, temp_range_c, dust_aod -> python -m pipeline.mars_climate (Mars Climate Database)
+#   Ay kutup surface_temp_c, ground_ice -> python -m pipeline.diviner_polar      (PDS Diviner PRP)
+# Bilerek boş bırakılanlar:
+#   - temp_range_c: Shackleton, Malapert (Diviner PRP'de en düşük sıcaklık yok)
+#   - dust_aod: Ay hedefleri (atmosfer yok, tanımsız)
 # Sıcaklık tanımı Dünya ile aynıdır: surface_temp_c = (gündüz + gece) / 2, temp_range_c = gündüz - gece.
 
 targets:
@@ -29,10 +30,15 @@ targets:
     lat: -89.9
     lon: 0.0
     params:
+      slope_deg:       { value: 13.94,  source: "LOLA LDEM 80S 80 m (PDS, ldem_80s_80m) → 500 m, 25 km kare (pipeline.target_values)" }
+      roughness_m:     { value: 378.1,  source: "LOLA LDEM 80S 80 m (PDS, ldem_80s_80m) → 500 m, 25 km kare (pipeline.target_values)" }
       aridity:         { value: 1.0,  source: "sabit — yüzeyde sıvı su ve bitki yok (DATA_SOURCES.md)" }
       carbonate_index: { value: 0.0,  source: "sabit — Ay'da karbonat yok (DATA_SOURCES.md)" }
       mafic_index:     { value: 0.25, source: "elle — feldspatik yayla, düşük FeO; Lawrence et al. 2002, JGR 107(E12), Lunar Prospector demir haritası" }
-      ground_ice:      { value: 0.25, source: "elle — 25 km'lik kare krater içindeki kalıcı gölgeyi kapsıyor; tabanda yamalı yüzey buzu: Zuber et al. 2012, Nature 486, LOLA albedo" }
+      # Önceki elle değer 0,25 (gözlenen yamalı yüzey buzu, Zuber et al. 2012, Nature 486). Dünya tarafındaki
+      # permafrost ısıl bir tanım olduğu için aynı tanım kullanıldı: buzun 1 m içinde kararlı olduğu alan oranı.
+      ground_ice:      { value: 0.56, source: "Diviner PRP (PDS, LRO-L-DLRE-5-PRP-V2.0, dlre_prp_south), ice_depth ≤ 1 m alan oranı → 25 km kare ortalaması (pipeline.diviner_polar)" }
+      surface_temp_c:  { value: -181.3, source: "Diviner PRP (PDS, LRO-L-DLRE-5-PRP-V2.0, dlre_prp_south), temp_avg (yıllık ortalama) → 25 km kare ortalaması (pipeline.diviner_polar)" }
 
   - id: moon_malapert
     body: moon
@@ -41,9 +47,13 @@ targets:
     lat: -86.0
     lon: 2.9
     params:
+      slope_deg:       { value: 16.78,  source: "LOLA LDEM 80S 80 m (PDS, ldem_80s_80m) → 500 m, 25 km kare (pipeline.target_values)" }
+      roughness_m:     { value: 467.5,  source: "LOLA LDEM 80S 80 m (PDS, ldem_80s_80m) → 500 m, 25 km kare (pipeline.target_values)" }
       aridity:         { value: 1.0,  source: "sabit — yüzeyde sıvı su ve bitki yok (DATA_SOURCES.md)" }
       carbonate_index: { value: 0.0,  source: "sabit — Ay'da karbonat yok (DATA_SOURCES.md)" }
       mafic_index:     { value: 0.25, source: "elle — feldspatik yayla, düşük FeO; Lawrence et al. 2002, JGR 107(E12), Lunar Prospector demir haritası" }
+      ground_ice:      { value: 0.29, source: "Diviner PRP (PDS, LRO-L-DLRE-5-PRP-V2.0, dlre_prp_south), ice_depth ≤ 1 m alan oranı → 25 km kare ortalaması (pipeline.diviner_polar)" }
+      surface_temp_c:  { value: -136.6, source: "Diviner PRP (PDS, LRO-L-DLRE-5-PRP-V2.0, dlre_prp_south), temp_avg (yıllık ortalama) → 25 km kare ortalaması (pipeline.diviner_polar)" }
 
   - id: moon_marius_hills
     body: moon
@@ -52,6 +62,8 @@ targets:
     lat: 14.1
     lon: -56.8
     params:
+      slope_deg:       { value: 1.52,  source: "LOLA LDEM 128 piksel/derece (PDS, ldem_128) → 500 m, 25 km kare (pipeline.target_values)" }
+      roughness_m:     { value: 33.1,  source: "LOLA LDEM 128 piksel/derece (PDS, ldem_128) → 500 m, 25 km kare (pipeline.target_values)" }
       aridity:         { value: 1.0,  source: "sabit — yüzeyde sıvı su ve bitki yok (DATA_SOURCES.md)" }
       carbonate_index: { value: 0.0,  source: "sabit — Ay'da karbonat yok (DATA_SOURCES.md)" }
       mafic_index:     { value: 1.0,  source: "elle — mare bazaltı platosu ve volkanik kubbeler; Lawrence et al. 2002 (yüksek FeO), Heather et al. 2003, JGR 108(E3)" }
@@ -68,10 +80,15 @@ targets:
     lat: 18.4
     lon: 77.6
     params:
+      slope_deg:       { value: 1.11,  source: "MOLA MEGDR 128 piksel/derece (PDS, megt44n000hb) → 500 m, 25 km kare (pipeline.target_values)" }
+      roughness_m:     { value: 29.6,  source: "MOLA MEGDR 128 piksel/derece (PDS, megt44n000hb) → 500 m, 25 km kare (pipeline.target_values)" }
       aridity:         { value: 1.0,  source: "sabit — bugün yüzeyde kalıcı sıvı su ve bitki yok (DATA_SOURCES.md)" }
       carbonate_index: { value: 0.5,  source: "elle — kenar karbonatları ve bölgesel olivin-karbonat birimi, kare içinde baskın değil; Horgan et al. 2020, Icarus 339; Ehlmann et al. 2008, Science 322 (CRISM)" }
       mafic_index:     { value: 0.75, source: "elle — olivince zengin Séítah ve bazaltik Máaz krater tabanı; Farley et al. 2022, Science 377" }
       ground_ice:      { value: 0.0,  source: "elle — 18°K, yüzeye yakın buz kararlılık bölgesi dışında; Feldman et al. 2004, JGR 109 (Odyssey GRS/NS hidrojen haritası)" }
+      surface_temp_c:  { value: -43.6, source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
+      temp_range_c:    { value: 54.8,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
+      dust_aod:        { value: 0.51,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate); görünür toz optik derinliği (MODIS 550 nm AOD karşılığı)" }
 
   - id: mars_gale
     body: mars
@@ -80,10 +97,15 @@ targets:
     lat: -5.4
     lon: 137.8
     params:
+      slope_deg:       { value: 10.51,  source: "MOLA MEGDR 128 piksel/derece (PDS, megt00n090hb) → 500 m, 25 km kare (pipeline.target_values)" }
+      roughness_m:     { value: 286.9,  source: "MOLA MEGDR 128 piksel/derece (PDS, megt00n090hb) → 500 m, 25 km kare (pipeline.target_values)" }
       aridity:         { value: 1.0,  source: "sabit — bugün yüzeyde kalıcı sıvı su ve bitki yok (DATA_SOURCES.md)" }
       carbonate_index: { value: 0.25, source: "elle — yörüngeden tespit yok; sülfatlı birimde rover ile siderit (iz düzeyi); Tutolo et al. 2025, Science 388 (CheMin)" }
       mafic_index:     { value: 0.5,  source: "elle — Aeolis Mons'ta kil/sülfatlı katmanlar, çevresinde bazaltik kum; Milliken et al. 2010, GRL 37; Ehlmann et al. 2017, JGR Planets 122 (Bagnold kumulları)" }
       ground_ice:      { value: 0.0,  source: "elle — ekvatoral; Odyssey ve DAN'ın gördüğü hidrojen buz değil hidratlı mineral; Feldman et al. 2004, JGR 109" }
+      surface_temp_c:  { value: -43.6, source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
+      temp_range_c:    { value: 64.5,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
+      dust_aod:        { value: 0.43,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate); görünür toz optik derinliği (MODIS 550 nm AOD karşılığı)" }
 
   - id: mars_arcadia
     body: mars
@@ -92,7 +114,12 @@ targets:
     lat: 47.0
     lon: -176.0
     params:
+      slope_deg:       { value: 0.25,  source: "MOLA MEGDR 128 piksel/derece (PDS, megt88n180hb) → 500 m, 25 km kare (pipeline.target_values)" }
+      roughness_m:     { value: 4.63,  source: "MOLA MEGDR 128 piksel/derece (PDS, megt88n180hb) → 500 m, 25 km kare (pipeline.target_values)" }
       aridity:         { value: 1.0,  source: "sabit — bugün yüzeyde kalıcı sıvı su ve bitki yok (DATA_SOURCES.md)" }
       carbonate_index: { value: 0.0,  source: "elle — bölgede karbonat tespiti yok; Ehlmann & Edwards 2014, Annu. Rev. Earth Planet. Sci. 42 (küresel mineral haritaları)" }
       mafic_index:     { value: 0.5,  source: "elle — kuzey ovalarında TES yüzey tipi 2 (andezit ya da ayrışmış bazalt); Bandfield et al. 2000, Science 287" }
       ground_ice:      { value: 0.75, source: "elle — yaygın, yüzeye yakın fazla buz; Bramson et al. 2015, GRL 42 (SHARAD); Morgan et al. 2021, Nature Astronomy 5 (SWIM)" }
+      surface_temp_c:  { value: -72.3, source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
+      temp_range_c:    { value: 41.4,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate)" }
+      dust_aod:        { value: 0.33,  source: "Mars Climate Database v6.2 (LMD/ESA/CNES), iklim ortalaması; yerel saat 10.5/22.5, Ls 0-330 (12 mevsim) ortalaması (pipeline.mars_climate); görünür toz optik derinliği (MODIS 550 nm AOD karşılığı)" }

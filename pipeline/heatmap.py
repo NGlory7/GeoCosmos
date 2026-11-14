@@ -86,7 +86,8 @@ def run_heatmaps(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> l
         for profile in load_profiles().values():
             if not usable_weights(profile.weights, target, params):
                 continue
-            scores = score_grid(grid, target, profile.weights, params)["score_total"].to_numpy(float)
+            scores = score_grid(grid, target, profile.weights, params,
+                                profile.at_least)["score_total"].to_numpy(float)
             img = rasterize(grid, np.where(visible, scores, np.nan), cell_km, hm["width_px"], (south, north))
             name = f"{target.id}_{profile.id}.png"
             plt.imsave(out_dir / name, to_rgba(img, hm["colormap"], hm["alpha"]))

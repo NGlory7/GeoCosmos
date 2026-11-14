@@ -64,7 +64,7 @@ def run_validation(grid: pd.DataFrame | None = None) -> dict:
             target, profile = targets[tid], profiles[a.test_id]
             if not usable_weights(profile.weights, target, params):
                 continue
-            scored = score_grid(pool, target, profile.weights, params)
+            scored = score_grid(pool, target, profile.weights, params, profile.at_least)
             s = float(scored.loc[i, "score_total"])
             r = rank_of(scored["score_total"], s)
             cand = {"target_id": tid, "score_total": round(s, 1), "rank": r,

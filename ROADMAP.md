@@ -88,11 +88,11 @@ Ayrıntılı kaynak haritası, formüller ve kapsam boşlukları: **[DATA_SOURCE
 | Parametre | Dünya verisi | Mars verisi | Ay verisi | Skor |
 | --- | --- | --- | --- | --- |
 | Eğim ve pürüzlülük | Copernicus DEM GLO-30 (ESA) | MOLA (PDS) | LOLA (LRO) | Topoğrafya |
-| Yüzey sıcaklığı, gece-gündüz farkı | MODIS LST | THEMIS, TES (PDS) | Diviner (LRO) | İklim |
+| Yüzey sıcaklığı, gece-gündüz farkı | MODIS LST | Mars Climate Database (MODIS saatleriyle) | Diviner (LRO) | İklim |
 | Mafik yüzey, karbonat | ASTER GED (TIR indeksleri); EMIT sadece ek kanıt | CRISM, TES (PDS) | LROC, Lunar Prospector | Jeoloji |
 | Kuraklık ve bitki yokluğu | GPM IMERG yağış + MODIS NDVI (JAXA GSMaP ile kontrol) | Sabit 1 | Sabit 1 | İklim |
 | Toz ve aerosol | MODIS MAIAC AOD | TES toz opaklığı | Yok (parametre atılır) | İklim |
-| Donmuş zemin | ESA CCI Permafrost | SWIM, SHARAD | LEND, Diviner, Mini-RF (LRO) | Jeoloji |
+| Donmuş zemin | ESA CCI Permafrost | SHARAD, SWIM | Diviner PRP buz kararlılığı (LRO) | Jeoloji |
 | Arazi örtüsü (sadece filtre) | ESA WorldCover | — | — | — |
 
 Mars ve Ay hedefleri için her parametre tek değerdir (PDS ürünleri veya makaleden). Mineral ve buz parametreleri, Dünya indeksleri ile makale bulguları aynı birimde olmadığı için ortak bir 0–1 sıralı ölçeğe çevrilir.
@@ -168,7 +168,7 @@ Teknoloji seçimleri, veri sözleşmesi, API, Gemini kuralları ve klasör yapı
 - [ ] Earth Engine'de **tüm karalar için** 25 km'lik tek bir katmanı (Copernicus DEM eğimi) CSV olarak dışa aktarmayı deneyin. Süreyi not edin.
 - [ ] Gemini API anahtarı alın, ücretsiz kullanım limitlerini not edin.
 - [ ] Moon Trek ve Mars Trek katmanlarını Leaflet'te deneyin. Çalışmazsa B planı statik mozaik görüntü.
-- [ ] 6 hedefin koordinatlarını ve parametre değerlerini kaynaklarıyla `targets.yaml` dosyasına yazın. (Mineral, buz, kuraklık girildi; eğim, sıcaklık, toz eksik: [STATUS.md](STATUS.md))
+- [x] 6 hedefin parametre değerlerini kaynaklarıyla `targets.yaml` dosyasına yazın (koordinatların son kontrolü hâlâ açık).
 - [x] Doğrulama setindeki 8 yer için geçmiş test kaynaklarını (link) toplayın.
 - [x] Her test amacı için ağırlıkların ilk taslağını yazın (`test_profiles.yaml`).
 - [x] Repo, klasör iskeleti, `.gitignore` ve rol dağılımı hazır olsun.

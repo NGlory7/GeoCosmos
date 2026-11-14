@@ -130,3 +130,19 @@ def test_analogs_carry_coordinates(grid, target):
     # /scenario yanıtında geometry yok: pin çizilebilmesi için koordinat Analog'da olmalı.
     analogs = top_analogs(grid, target, load_profiles()["rover"], n=2)
     assert [(a.id, a.lat, a.lon) for a in analogs] == [("benzer", 0, 0), ("orta", 1, 1)]
+
+
+def test_at_least_no_penalty_above_target():
+    # Biyo-imza: karbonatta hedeften fazlası ceza değil (Salda kararı, test_profiles.yaml > at_least).
+    t = Target(id="t", body="mars", name="T", why="", lat=0, lon=0,
+               params={"carbonate_index": SourcedValue(value=0.5, source="test")})
+    g = pd.DataFrame({"id": ["az", "esit", "fazla"], "name": ["a", "b", "c"], "lat": [0, 1, 2],
+                      "lon": [0, 1, 2], "carbonate_index": [0.25, 0.5, 1.0]})
+    w = {"carbonate_index": 1}
+    two_sided = score_grid(g, t, w)
+    one_sided = score_grid(g, t, w, at_least=("carbonate_index",))
+    assert two_sided.loc[2, "score_total"] < 100
+    assert one_sided.loc[2, "score_total"] == pytest.approx(100)
+    assert one_sided.loc[0, "score_total"] == pytest.approx(two_sided.loc[0, "score_total"])  # altı yine cezalı
+    assert load_profiles()["biosignature"].at_least == ("carbonate_index",)
+    assert load_profiles()["rover"].at_least == ()

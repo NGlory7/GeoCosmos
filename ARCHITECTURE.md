@@ -257,7 +257,9 @@ GeoCosmos/
 ├── pipeline/                 # Bir kere çalışan işler (offline)
 │   ├── ee_export.py          # Earth Engine → CSV
 │   ├── features.py           # CSV → normalize edilmiş grid.parquet
-│   ├── target_values.py      # Mars/Ay DEM → hedef eğim/pürüzlülük (Dünya ile aynı kural)
+│   ├── target_values.py      # Mars/Ay DEM → hedef eğim/pürüzlülük (Dünya ile aynı kural; PDS'ten uzaktan)
+│   ├── mars_climate.py       # Mars hedefleri: sıcaklık, toz (Mars Climate Database)
+│   ├── diviner_polar.py      # Ay kutup hedefleri: sıcaklık, buz kararlılığı (Diviner PRP)
 │   ├── permafrost.py         # ESA CCI Permafrost NetCDF → kare başına ground_ice (yerel)
 │   ├── discovery.py          # global kaba + yakın tarama
 │   ├── validation.py         # ünlü analog testi
@@ -306,6 +308,7 @@ GeoCosmos/
 │   ├── test_api.py           # CORS
 │   ├── test_permafrost.py    # NetCDF → ground_ice
 │   ├── test_pipeline.py      # discovery → validation → heatmap → commentary → build
+│   ├── test_target_sources.py # Diviner PRP ve Mars Climate Database (ağsız)
 │   └── test_validation.py    # "sınav yerleri en iyi %1'de mi?" otomatik testi
 ├── notebooks/
 ├── docs/

@@ -62,6 +62,7 @@ parameters:
 
 # Her testte ağırlık toplamı 1 olmalı (yükleyici yine de normalize eder).
 # breakdown: bu test için kartta vurgulanacak kopma noktaları.
+# at_least: bu parametrelerde Dünya değeri hedefi aşarsa ceza yok (tek yönlü benzerlik); gerekçe yazılmalı.
 tests:
   rover:
     label: Rover sürüşü ve tekerlek aşınması
@@ -110,6 +111,12 @@ tests:
     label: Biyo-imza ve antik yaşam izi
     # Karbonat baskın: Jezero'nun hedefi karbonat/kil çökelleri. Kuraklık ikincil; çok yüksek olsaydı
     # Salda (karbonat analoğu, kurak değil) yapısal olarak kaybederdi.
+    rationale_at_least: >-
+      Biyo-imza testinde karbonat, biyo-imzayı koruyabilecek mineralin varlığını ölçer; Dünya'daki
+      sahanın hedeften DAHA FAZLA karbonat içermesi test için kusur değildir. Bu yüzden karbonatta
+      hedefin altı cezalandırılır, üstü cezalandırılmaz. Karar doğrulama sonucuna bakılmadan, ilke
+      olarak verildi (14 Kasım 2026; STATUS.md > Karar bekleyenler).
+    at_least: [carbonate_index]
     weights:
       carbonate_index: 0.45
       aridity: 0.20

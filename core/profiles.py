@@ -27,6 +27,8 @@ class TestProfile:
     label: str
     weights: dict[str, float]
     breakdown: tuple[str, ...]
+    # Bu parametrelerde Dünya değeri hedefi aşarsa ceza yok (benzerlik 1). test_profiles.yaml > at_least
+    at_least: tuple[str, ...] = ()
 
 
 def normalize_weights(weights: dict[str, float], allowed: set[str] | dict) -> dict[str, float]:
@@ -82,11 +84,15 @@ def load_profiles(path: Path | None = None) -> dict[str, TestProfile]:
         bad = set(t.get("breakdown", [])) - set(BREAKDOWN_KEYS)
         if bad:
             raise ValueError(f"{test_id}: bilinmeyen breakdown {sorted(bad)}")
+        at_least = tuple(t.get("at_least", []))
+        if set(at_least) - set(t["weights"]):
+            raise ValueError(f"{test_id}: at_least sadece ağırlığı olan parametreleri içerebilir")
         profiles[test_id] = TestProfile(
             id=test_id,
             label=t["label"],
             weights=normalize_weights(t["weights"], params),
             breakdown=tuple(t.get("breakdown", [])),
+            at_least=at_least,
         )
     missing = set(TEST_IDS) - set(profiles)
     if missing:

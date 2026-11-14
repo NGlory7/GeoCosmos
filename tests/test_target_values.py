@@ -40,7 +40,10 @@ def test_body_radius_parsing():
         _body_radius("+proj=longlat +datum=WGS84")
 
 
-ORDINAL = {"mafic_index", "carbonate_index", "ground_ice"}
+# Basamaklı (0/0,25/0,5/0,75/1) sadece mineral indeksleri. ground_ice Dünya'da sürekli bir alan oranı
+# (ESA CCI permafrost); hedefte de 0-1 arası herhangi bir değer olabilir (ör. Diviner ısıl kararlılık oranı).
+ORDINAL = {"mafic_index", "carbonate_index"}
+FRACTION = {"ground_ice", "aridity"}
 
 
 def test_target_values_are_sane():
@@ -49,6 +52,8 @@ def test_target_values_are_sane():
             assert v.source.strip(), (t.id, key)
             if key in ORDINAL:
                 assert v.value in LEVELS, (t.id, key, v.value)
+            if key in FRACTION:
+                assert 0 <= v.value <= 1, (t.id, key, v.value)
         assert t.params["aridity"].value == 1.0, t.id
         if t.body == "moon":
             assert t.params["carbonate_index"].value == 0.0

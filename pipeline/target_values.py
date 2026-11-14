@@ -12,13 +12,23 @@ Girdi: GDAL'ın okuyabildiği herhangi bir DEM (PDS .IMG etiketi, GeoTIFF). Öne
 DEM dosyaları büyük olduğu için repoya girmez: data/raw/dem/ altına koyun (gitignore).
 
 Kullanım:
-  python -m pipeline.target_values --target mars_jezero --dem data/raw/dem/megt00n090hb.lbl
+  python -m pipeline.target_values --all                      # 6 hedef, PDS'ten uzaktan (indirme yok)
+  python -m pipeline.target_values --target mars_jezero       # tek hedef, PDS'ten uzaktan
+  python -m pipeline.target_values --target mars_jezero --dem data/raw/dem/megt44n000hb.lbl
 Çıktı targets.yaml'a yapıştırılacak satırlardır; dosya otomatik değiştirilmez (yorumlar korunur).
+
+Uzaktan okuma: --dem verilmezse PDS_DEMS'teki ürün GDAL /vsicurl/ ile açılır; GDAL sadece hedefin
+çevresindeki baytları HTTP aralık isteğiyle çeker (hedef başına birkaç MB, 5-30 sn).
+Windows notu: curl, ASCII dışı yoldaki ("Masaüstü") sertifika dosyasını açamaz; sertifika
+paketi geçici bir ASCII yola kopyalanır (_ascii_ca_bundle).
 """
 from __future__ import annotations
 
 import argparse
+import os
 import re
+import shutil
+import tempfile
 
 import numpy as np
 
@@ -60,6 +70,43 @@ def cell_means(dem: np.ndarray, pixel_m: float, cell_m: float, window_m: float) 
     }
 
 
+# --- Hedef başına PDS ürünü --------------------------------------------------------------
+# Hepsi PDS Geosciences Node (challenge kaynak listesi: NASA PDS, NASA LRO).
+_MOLA = "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/"
+_LOLA = "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/"
+PDS_DEMS: dict[str, tuple[str, str]] = {
+    "mars_jezero": (_MOLA + "megt44n000hb.lbl", "MOLA MEGDR 128 piksel/derece (PDS, megt44n000hb)"),
+    "mars_gale": (_MOLA + "megt00n090hb.lbl", "MOLA MEGDR 128 piksel/derece (PDS, megt00n090hb)"),
+    "mars_arcadia": (_MOLA + "megt88n180hb.lbl", "MOLA MEGDR 128 piksel/derece (PDS, megt88n180hb)"),
+    "moon_shackleton": (_LOLA + "polar/img/ldem_80s_80m.lbl", "LOLA LDEM 80S 80 m (PDS, ldem_80s_80m)"),
+    "moon_malapert": (_LOLA + "polar/img/ldem_80s_80m.lbl", "LOLA LDEM 80S 80 m (PDS, ldem_80s_80m)"),
+    "moon_marius_hills": (_LOLA + "cylindrical/img/ldem_128.lbl", "LOLA LDEM 128 piksel/derece (PDS, ldem_128)"),
+}
+
+
+def _ascii_ca_bundle() -> None:
+    """rasterio import edilmeden ÖNCE çağrılır: sertifika paketi ASCII dışı yoldaysa kopyalanır."""
+    if os.environ.get("GDAL_CURL_CA_BUNDLE"):
+        return
+    try:
+        import certifi
+    except ImportError:
+        return
+    ca = certifi.where()
+    if not ca.isascii():
+        dst = os.path.join(tempfile.gettempdir(), "geocosmos_cacert.pem")
+        shutil.copyfile(ca, dst)
+        ca = dst
+    os.environ.setdefault("GDAL_CURL_CA_BUNDLE", ca)
+    os.environ.setdefault("CURL_CA_BUNDLE", ca)
+    os.environ.setdefault("GDAL_DISABLE_READDIR_ON_OPEN", "EMPTY_DIR")
+    os.environ.setdefault("GDAL_HTTP_TIMEOUT", "120")
+
+
+def remote(url: str) -> str:
+    return "/vsicurl/" + url
+
+
 # --- DEM okuma (rasterio/GDAL) -----------------------------------------------------------
 
 def _body_radius(proj4: str) -> str:
@@ -75,6 +122,7 @@ def _body_radius(proj4: str) -> str:
 
 
 def read_local_dem(path: str, lat: float, lon: float, pixel_m: float, half_m: float) -> np.ndarray:
+    _ascii_ca_bundle()
     import rasterio
     from rasterio.crs import CRS
     from rasterio.transform import from_origin
@@ -99,27 +147,40 @@ def read_local_dem(path: str, lat: float, lon: float, pixel_m: float, half_m: fl
     return dst * scale + offset
 
 
-def main() -> None:
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--target", required=True, help="config/targets.yaml içindeki id")
-    ap.add_argument("--dem", required=True, help="DEM dosyası (GDAL'ın açabildiği)")
-    ap.add_argument("--source", default=None, help="kartta görünecek kaynak adı (varsayılan: dosya adı)")
-    args = ap.parse_args()
-
-    target = load_targets()[args.target]
+def values_for(target_id: str, dem: str | None = None) -> tuple[dict[str, float], str]:
+    """(değerler, kaynak) — dem verilmezse PDS_DEMS'teki ürün uzaktan okunur."""
+    target = load_targets()[target_id]
     cfg = load_grid_config()
     pixel_m = cfg["scale"]["dem_resample_m"]
     cell_m = cfg["grid"]["coarse_km"] * 1000
     window_m = cfg["scale"]["roughness_window_km"] * 1000
     half_m = cell_m / 2 + window_m / 2 + 2 * pixel_m
-    dem = read_local_dem(args.dem, target.lat, target.lon, pixel_m, half_m)
-    vals = cell_means(dem, pixel_m, cell_m, window_m)
-
-    src = args.source or args.dem.replace("\\", "/").rsplit("/", 1)[-1]
+    if dem is None:
+        if target_id not in PDS_DEMS:
+            raise SystemExit(f"{target_id} için PDS ürünü tanımlı değil; --dem verin")
+        url, src = PDS_DEMS[target_id]
+        dem = remote(url)
+    else:
+        src = dem.replace("\\", "/").rsplit("/", 1)[-1]
+    vals = cell_means(read_local_dem(dem, target.lat, target.lon, pixel_m, half_m), pixel_m, cell_m, window_m)
     rule = f"{pixel_m:g} m, {cell_m / 1000:g} km kare (pipeline.target_values)"
-    print(f"# {target.id} — config/targets.yaml > params içine yapıştırın")
-    for key, v in vals.items():
-        print(f'      {key}: {{ value: {v:.2f}, source: "{src} → {rule}" }}')
+    return vals, f"{src} → {rule}"
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--target", help="config/targets.yaml içindeki id")
+    ap.add_argument("--all", action="store_true", help="PDS_DEMS'teki tüm hedefler")
+    ap.add_argument("--dem", default=None, help="yerel DEM dosyası (verilmezse PDS'ten uzaktan)")
+    ap.add_argument("--source", default=None, help="kartta görünecek kaynak adı")
+    args = ap.parse_args()
+    if not args.all and not args.target:
+        ap.error("--target ya da --all gerekli")
+    for tid in (PDS_DEMS if args.all else [args.target]):
+        vals, src = values_for(tid, args.dem if not args.all else None)
+        print(f"# {tid} — config/targets.yaml > params içine yapıştırın")
+        for key, v in vals.items():
+            print(f'      {key}: {{ value: {v:.2f}, source: "{args.source or src}" }}')
 
 
 if __name__ == "__main__":

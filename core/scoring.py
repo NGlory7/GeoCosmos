@@ -1,6 +1,7 @@
 """Ağırlıklı benzerlik motoru.
 
 Her parametre için benzerlik:  s = max(0, 1 - |Dünya - hedef| / tolerans)
+  at_least parametrelerinde (test_profiles.yaml) Dünya >= hedef ise s = 1: hedeften fazlası ceza değil.
 Boyut skoru (topography, geology, climate): o boyuttaki
 parametrelerin ağırlıklı ortalaması. Toplam skor: tüm parametrelerin
 ağırlıklı ortalaması. Hepsi 0-100 ölçeğinde.
@@ -28,18 +29,21 @@ def usable_weights(
 
 
 def similarity(grid: pd.DataFrame, target: Target, keys: list[str],
-               params: dict[str, Parameter]) -> pd.DataFrame:
+               params: dict[str, Parameter], at_least: tuple[str, ...] = ()) -> pd.DataFrame:
     """Her kare × parametre için 0-1 benzerlik. Eksik Dünya verisi 0 sayılır."""
     out = {}
     for k in keys:
         earth = grid[k].to_numpy(dtype=float) if k in grid else np.full(len(grid), np.nan)
-        s = 1 - np.abs(earth - target.params[k].value) / params[k].tolerance
+        diff = earth - target.params[k].value
+        if k in at_least:
+            diff = np.minimum(diff, 0.0)  # NaN korunur (np.minimum NaN'ı yayar)
+        s = 1 - np.abs(diff) / params[k].tolerance
         out[k] = np.nan_to_num(np.clip(s, 0, 1), nan=0.0)
     return pd.DataFrame(out, index=grid.index)
 
 
 def score_grid(grid: pd.DataFrame, target: Target, weights: dict[str, float],
-               params: dict[str, Parameter] | None = None) -> pd.DataFrame:
+               params: dict[str, Parameter] | None = None, at_least: tuple[str, ...] = ()) -> pd.DataFrame:
     """Izgaraya skor sütunlarını ekler: score_total, topography, ... ve sim_<param>.
 
     Ağırlığı olmayan boyutların skoru NaN kalır.
@@ -48,7 +52,7 @@ def score_grid(grid: pd.DataFrame, target: Target, weights: dict[str, float],
     w = usable_weights(weights, target, params)
     if not w:
         raise ValueError("Kullanılabilir ağırlık yok: hedefte bu parametrelerin değeri eksik.")
-    sim = similarity(grid, target, list(w), params)
+    sim = similarity(grid, target, list(w), params, at_least)
 
     result = grid.copy()
     result["score_total"] = 100 * sum(sim[k] * wk for k, wk in w.items())
@@ -74,7 +78,7 @@ def top_analogs(grid: pd.DataFrame, target: Target, profile: TestProfile, n: int
     (config/grid.yaml > discovery.min_separation_km).
     """
     params = params or load_parameters()
-    scored = score_grid(grid, target, weights or profile.weights, params)
+    scored = score_grid(grid, target, weights or profile.weights, params, profile.at_least)
     ranked = scored.sort_values("score_total", ascending=False, kind="stable")
     if min_separation_km > 0:
         # Sadece en iyi kısımda ara: n * 200 kare, seyrek seçim için fazlasıyla yeter.
