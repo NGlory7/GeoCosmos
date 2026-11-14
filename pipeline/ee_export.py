@@ -1,7 +1,7 @@
 """Earth Engine -> data/raw/*.csv. Tüm karalar 25 km ızgara.
 
 Kaynaklar (DATA_SOURCES.md): Copernicus DEM GLO-30, MODIS LST/NDVI/MAIAC AOD, GPM IMERG V07,
-ASTER GED, ESA WorldCover, MAP erişim süresi, SEDAC GPW nüfus; opsiyonel ESA CCI Permafrost asset'i.
+ASTER GED, ESA WorldCover, MODIS arazi örtüsü (MCD12Q1, buz yedeği), MAP erişim süresi, SEDAC GPW nüfus; opsiyonel ESA CCI Permafrost asset'i.
 
 Ham uydu verisi indirilmez; her şey Earth Engine'de karelere ortalanır, sadece tablo iner.
 Burada sadece HAM ölçümler çıkarılır (ör. ASTER oranı, gündüz/gece LST). Parametrelere çeviri
@@ -41,7 +41,7 @@ RAW_COLUMNS = [
     "slope_deg", "roughness_m",
     "lst_day_c", "lst_night_c", "ndvi", "precip_mm", "aod",
     "aster_mi", "aster_ci", "permafrost",
-    "access_min", "pop_density",
+    "access_min", "pop_density", "modis_ice",
 ]  # + wc_<sınıf> sütunları (masks.worldcover_classes)
 
 PREVIEW_BBOX = (29.0, 37.0, 30.5, 38.0)  # Salda çevresi
@@ -191,6 +191,12 @@ def build_image(cell_km: float, lat: float):
     # --- Maskeler: WorldCover sınıf oranları (10 m -> 500 m -> kare)
     wc = ee.ImageCollection("ESA/WorldCover/v200").first().select("Map")
     wc_bands = [grid(wc.eq(int(c)).rename(f"wc_{c}"), 10) for c in cfg["masks"]["worldcover_classes"]]
+    # Buz yedeği: MODIS MCD12Q1 "kalıcı kar ve buz" (IGBP 15) oranı. Antarktika dahil küreseldir;
+    # WorldCover'ın kapsamadığı yerde buz tabakası bu bantla maskelenir (features.py: max(wc_70, modis_ice)).
+    ice = cfg["masks"]["ice_fallback"]
+    lc = (ee.ImageCollection(ice["source"]).filter(ee.Filter.calendarRange(ice["year"], ice["year"], "year"))
+          .first().select("LC_Type1"))
+    modis_ice = grid(lc.eq(ice["igbp_class"]).rename("modis_ice"), 500)
 
     # --- Operasyon etiketleri
     access = ee.Image(cfg["ops_tags"]["road_access"]["source"]).select("accessibility").rename("access_min")
@@ -202,7 +208,7 @@ def build_image(cell_km: float, lat: float):
         grid(slope, mid_m), grid(rough, mid_m),
         grid(lst_day, 1000), grid(lst_night, 1000), grid(ndvi, 1000), grid(precip, 11132),
         grid(aod, 1000), grid(aster_mi, 100), grid(aster_ci, 100), permafrost,
-        grid(access, 1000), grid(pop, 1000), *wc_bands,
+        grid(access, 1000), grid(pop, 1000), modis_ice, *wc_bands,
     ]
     data = ee.Image.cat(bands).unmask(exp["nodata"])
     lonlat = ee.Image.pixelLonLat().reproject(proj).rename(["lon", "lat"])

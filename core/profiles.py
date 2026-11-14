@@ -189,4 +189,6 @@ def load_grid_config(path: Path | None = None) -> dict:
             raise ValueError(f"grid.yaml > indices > {key}: breaks artan 4 değer olmalı")
     if not 0 < data["masks"]["max_masked_fraction"] <= 1:
         raise ValueError("grid.yaml: max_masked_fraction 0-1 arasında olmalı")
+    if not 0 <= data["masks"].get("min_land_fraction", 0) <= 1:
+        raise ValueError("grid.yaml: min_land_fraction 0-1 arasında olmalı")
     return data

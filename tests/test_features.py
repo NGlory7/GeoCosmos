@@ -14,7 +14,7 @@ def raw_row(lat, lon, **kw):
     row = dict(lon=lon, lat=lat, land_frac=1.0, slope_deg=3.0, roughness_m=20.0,
                lst_day_c=40.0, lst_night_c=10.0, ndvi=0.05, precip_mm=50.0, aod=0.3,
                aster_mi=1.02, aster_ci=1.025, permafrost=0.0, access_min=120.0, pop_density=0.5,
-               wc_40=0.0, wc_50=0.0, wc_70=0.0, wc_80=0.0)
+               modis_ice=0.0, wc_40=0.0, wc_50=0.0, wc_70=0.0, wc_80=0.0)
     row.update(kw)
     return row
 
@@ -29,6 +29,9 @@ def grid(tmp_path):
         raw_row(-20.0, 20.0, aod=NODATA, permafrost=NODATA), # veri boşluğu
         raw_row(78.0, -60.0, permafrost=80.0, ndvi=0.0, precip_mm=150),  # yüzde gelen permafrost
         raw_row(0.0, 0.0),                                   # sıradan, uzak kare
+        raw_row(-80.0, 100.0, wc_70=0.0, modis_ice=0.9),     # Antarktika: WorldCover yok, MODIS buz
+        raw_row(5.0, 40.0, land_frac=0.2),                   # çoğu deniz kıyı karesi
+        raw_row(29.16, -13.44, land_frac=0.3),               # Lanzarote: kıyı ama doğrulama karesi
     ]
     df = pd.DataFrame(rows)
     df.iloc[:3].to_csv(raw / "a.csv", index=False)
@@ -37,7 +40,7 @@ def grid(tmp_path):
 
 
 def test_columns_and_dedup(grid):
-    assert len(grid) == 5
+    assert len(grid) == 8
     assert set(load_parameters()) <= set(grid.columns)
     assert {"id", "name", "lat", "lon", "is_new", "masked", "known_id",
             "ops_road_access", "ops_remote"} <= set(grid.columns)
@@ -78,3 +81,27 @@ def test_haversine():
 
 def test_raw_columns_cover_features():
     assert {"slope_deg", "aster_ci", "permafrost", "access_min"} <= set(RAW_COLUMNS)
+
+
+def test_ice_fallback_masks_antarctica(grid):
+    ice = grid[grid["lat"] == -80.0].iloc[0]
+    assert ice["masked"] and ice["masked_fraction"] == pytest.approx(0.9)
+
+
+def test_low_land_fraction_masked_except_known(grid):
+    assert grid[grid["lat"] == 5.0].iloc[0]["masked"]
+    assert not grid[grid["known_id"] == "lanzarote"].iloc[0]["masked"]
+
+
+def test_old_csv_without_new_columns(tmp_path):
+    raw = tmp_path / "raw"
+    raw.mkdir()
+    row = raw_row(0.0, 0.0)
+    del row["modis_ice"], row["land_frac"]
+    pd.DataFrame([row]).to_csv(raw / "old.csv", index=False)
+    g = build_grid(raw, tmp_path / "g.parquet", cell_km=25)
+    assert not g.iloc[0]["masked"]
+
+
+def test_raw_columns_include_ice_fallback():
+    assert "modis_ice" in RAW_COLUMNS

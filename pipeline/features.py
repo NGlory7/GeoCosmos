@@ -8,7 +8,9 @@ Kurallar config/grid.yaml'dan okunur (core.profiles.load_grid_config):
 - aridity: indices.aridity formülü (IMERG yağış + MODIS NDVI).
 - mafic_index, carbonate_index: ASTER oranı -> indices.<param>.breaks ile 0-1 sıralı ölçek.
 - ground_ice: ESA CCI Permafrost oranı (0-1; yüzde gelirse 100'e bölünür).
-- masked: masks.worldcover_classes oranı masks.max_masked_fraction'ı geçen kareler. Satırlar
+- masked: (1) masks.worldcover_classes oranı masks.max_masked_fraction'ı geçen kareler; buz oranı
+  max(wc_70, modis_ice) alınır (WorldCover'ın kapsamadığı Antarktika için MODIS yedeği);
+  (2) kara oranı masks.min_land_fraction'ın altındaki kıyı/ada kareleri. Satırlar
   silinmez, sadece işaretlenir: doğrulamanın yüzdelik paydası için gerekir. Doğrulama yerlerinin
   kendi kareleri hiçbir zaman maskelenmez (masks.never_mask_known_analogs).
 - is_new: bilinen tüm sahalara (doğrulama seti + exclude_only) exclude_radius_km'den uzak kare.
@@ -89,8 +91,13 @@ def compute_features(raw: pd.DataFrame, cell_km: float) -> pd.DataFrame:
     g["ground_ice"] = (pf / 100 if pf.max(skipna=True) > 1 else pf).clip(0, 1)
 
     # Maske: WorldCover sınıf oranları
-    wc_cols = [f"wc_{c}" for c in cfg["masks"]["worldcover_classes"] if f"wc_{c}" in raw]
-    g["masked_fraction"] = raw[wc_cols].fillna(0).sum(axis=1).clip(0, 1) if wc_cols else 0.0
+    wc = pd.DataFrame({c: raw[f"wc_{c}"] for c in cfg["masks"]["worldcover_classes"] if f"wc_{c}" in raw},
+                      index=raw.index).fillna(0)
+    ice_cls = 70  # WorldCover "kalıcı kar ve buz"
+    if "modis_ice" in raw:
+        wc[ice_cls] = np.maximum(wc.get(ice_cls, 0.0), raw["modis_ice"].fillna(0))
+    g["masked_fraction"] = wc.sum(axis=1).clip(0, 1) if len(wc.columns) else 0.0
+    g["land_frac"] = raw["land_frac"] if "land_frac" in raw else 1.0
 
     # Bilinen sahalara uzaklık -> is_new; doğrulama yerlerinin kendi kareleri -> known_id
     lat, lon = g["lat"].to_numpy(), g["lon"].to_numpy()
@@ -107,7 +114,8 @@ def compute_features(raw: pd.DataFrame, cell_km: float) -> pd.DataFrame:
             g.loc[i, "known_id"] = a.id
 
     never_mask = cfg["masks"].get("never_mask_known_analogs", True)
-    g["masked"] = g["masked_fraction"] > cfg["masks"]["max_masked_fraction"]
+    g["masked"] = ((g["masked_fraction"] > cfg["masks"]["max_masked_fraction"])
+                   | (g["land_frac"] < cfg["masks"].get("min_land_fraction", 0.0)))
     if never_mask:
         g.loc[g["known_id"].notna(), "masked"] = False
 

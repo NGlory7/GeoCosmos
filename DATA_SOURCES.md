@@ -66,6 +66,8 @@ Kartta ✓/✗ olarak gösterilir, skora girmez.
 | ASTER GED | 2000–2008 açık hava pikselleri; bulutlu tropiklerde boşluk | Eksik kare 0 benzerlik alır (`core/scoring.py`) |
 | MODIS AOD | Kar/buz üzerinde yok | Eksik kare 0 benzerlik alır |
 | ESA CCI Permafrost | Permafrost dışı bölgelerde 0 | Doğru davranış: permafrost yoksa `ground_ice = 0` |
+| ESA WorldCover | Antarktika kapsamı doğrulanamadı | Buz maskesi `max(WorldCover buz, MODIS MCD12Q1 buz)`; MODIS küresel (`grid.yaml > masks > ice_fallback`) |
+| Kıyı ve ada kareleri | Değerler küçük bir kara parçasından gelir | Kara oranı %50'nin altındaysa kare maskelenir (`min_land_fraction`); doğrulama kareleri hariç |
 | Ay `dust_aod` | Atmosfer yok, değer tanımsız | Hedefte yazılmaz, motor ağırlığı diğerlerine dağıtır |
 
 ## Hesaplar ve erişim

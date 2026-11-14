@@ -137,7 +137,7 @@ Tüm Dünya iki aşamada taranır. Ağır işlem Earth Engine'de, puanlama lokal
 | Aşama | Ne yapılır | Boyut |
 | --- | --- | --- |
 | 1. Kaba tarama | Tüm karalar 25 km'lik karelerle puanlanır | ~240 bin kare |
-| 2. Filtre | Yarısından fazlası şehir, tarım, su ya da kalıcı buz olan kareler (ESA WorldCover) çıkarılır; bilinen analoglara 50 km'den yakın kareler doğrulama setine ayrılır | — |
+| 2. Filtre | Yarısından fazlası şehir, tarım, su ya da kalıcı buz olan kareler (ESA WorldCover; buz için MODIS yedeği) ve yarısından azı kara olan kıyı kareleri çıkarılır; bilinen analoglara 50 km'den yakın kareler doğrulama setine ayrılır | — |
 | 3. Yakın tarama | Her test amacı için en iyi 50–100 karenin çevresi 5 km'lik karelerle yeniden puanlanır | Birkaç bin kare |
 | 4. Elle kontrol | En iyi 3–5 aday NASA Worldview ve Sentinel-2 görüntüsüyle, lav akıntısı adayları RADARSAT/Sentinel-1 radarıyla, kurak bölgedekiler EMIT mineral haritalarıyla incelenir; en ilginç 1–2'si sunuma taşınır | — |
 
