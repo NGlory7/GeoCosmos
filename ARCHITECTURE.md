@@ -156,6 +156,10 @@ Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun il
 }
 ```
 
+### Arayüz etiketleri (`meta.json`)
+
+`make data` her zaman üretir. Test adları, parametre etiketleri, kopma açıklamaları (`core/breakdown.py`) ve test gerekçeleri tek kaynaktan, `config/`'ten gelir; frontend metin tekrarlamaz. Tipi: `Meta` (`frontend/src/types.ts`).
+
 ### Analog listesi (`analogs/index.json`)
 
 Hangi hedef × test dosyasının var olduğunu ve neden olmadığını söyler. Frontend dosya adını tahmin etmek yerine buradan okur.
@@ -237,6 +241,16 @@ Hazır sonuçlar statik dosyadır; API sadece canlı senaryo içindir.
 - "Geçmiş testler" bilgisi Gemini'ye yazdırılmaz; elle ve kaynaklı girilir.
 
 ## Frontend notları
+
+| Yol | Sayfa | Okuduğu |
+| --- | --- | --- |
+| `/` | Giriş: gök cismi seçimi | `targets.geojson` |
+| `/mars`, `/moon` | Ay/Mars haritası (NASA Trek), hedef ve test seçimi | `targets.geojson`, `meta.json`, `analogs/index.json` |
+| `/:body/:hedef/:test` | Dünya haritası (NASA GIBS), ısı haritası, adaylar, analog kartı, senaryo kutusu | `analogs/<hedef>_<test>.geojson`, `heatmaps/index.json`, `POST /scenario` |
+| `/dogrulama` | Doğrulama paneli | `validation.json` |
+
+- **Taban haritalar challenge kaynaklarından:** Ay/Mars için NASA Trek WMTS (MOLA renkli kabartma, LRO WAC mozaik; Leaflet `CRS.EPSG4326`), Dünya için NASA GIBS (Worldview) Blue Marble (Web Mercator).
+- Harita ve grafik kütüphaneleri ayrı parçada yüklenir (`React.lazy`); giriş sayfası onları beklemez.
 
 - **Büyük veri tarayıcıya gitmez.** Haritaya sadece en iyi adaylar pin olarak gelir; Dünya geneli görünüm hazır PNG ısı haritasıdır (Leaflet `ImageOverlay`).
 - **Ay ve Mars haritaları Dünya projeksiyonunda değildir.** Moon Trek / Mars Trek katmanları hackathon öncesi denenir. B planı: tek büyük görsel + `CRS.Simple` + `ImageOverlay`.
@@ -375,7 +389,7 @@ VITE_API_URL=http://localhost:8000
 
 | Parça | Nerede | Not |
 | --- | --- | --- |
-| Frontend | GitHub Pages, Vercel veya Netlify | Statik; ücretsiz |
+| Frontend | **GitHub Pages** (`.github/workflows/pages.yml`) | Statik; `VITE_BASE=/GeoCosmos/`; derin bağlantılar için `404.html`. Kurulum: STATUS.md > Yayın |
 | Backend | Render, Railway veya Hugging Face Spaces | Ücretsiz planlar uyuyabilir; demodan 5 dk önce uyandırın. Koşulları önceden kontrol edin |
 | Yedek | Laptopta `make api` + `make web` | İnternet yoksa demo buradan |
 

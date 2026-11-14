@@ -17,7 +17,8 @@
 | **Gerçek Dünya verisi (`grid.parquet`)** | ❌ Yok | Earth Engine hesabı bekleniyor; **asıl engel bu** |
 | Hedef değerleri (`config/targets.yaml`) | ✅ Hazır | Mars hedefleri tüm parametreler; Ay'da sadece tanımı gereği olmayanlar boş. Üç betikle yeniden üretilebilir |
 | Gemini yorumları | ⏳ Bekliyor | `.env` > `GEMINI_API_KEY` |
-| Frontend (`frontend/`) | 🟡 Çağrı: giriş sayfası ve hedef listesi hazır | Mars/Ay shader'lı giriş, gök cismine göre hedef listesi; `targets.geojson`'u okuyor. Sırada: test amacı seçimi, Dünya haritası, analog kartı, doğrulama paneli, senaryo kutusu |
+| Frontend (`frontend/`) | ✅ Hazır | Giriş (Çağrı) → Ay/Mars haritası (NASA Trek) + hedef ve test seçimi → Dünya haritası (NASA GIBS + ısı haritası + pinler) → analog kartı → senaryo kutusu; doğrulama paneli. Veri yokken her ekran "henüz çalıştırılmadı" der |
+| Yayın (GitHub Pages) | ⏳ Repo ayarı bekleniyor | `.github/workflows/pages.yml` hazır; aşağıdaki "Yayın" bölümü |
 
 Şu an `make data` sadece `targets.geojson` üretir; `grid.parquet` gelince analog, doğrulama ve ısı haritası dosyaları da otomatik üretilir.
 
@@ -45,6 +46,16 @@ cp .env.example .env                   # EE_PROJECT, GEMINI_API_KEY doldurun
 
 Tüm Dünya exportu beklenirken bölgesel deneme: `python -m pipeline.ee_export --bbox -112 37 -109 40` (Hanksville). Bölgesel sonuçlar sunumda kullanılmaz.
 
+## Yayın
+
+Frontend her `main` push'unda GitHub Pages'e çıkar (`.github/workflows/pages.yml`). Bir kerelik kurulum, repo sahibi:
+
+1. GitHub > Settings > Pages > Build and deployment > Source: **GitHub Actions**
+2. Settings > Secrets and variables > Actions > **Variables** > `PAGES_ENABLED` = `true`
+3. Actions > "yayin" > Run workflow (ya da bir sonraki push). Adres: `https://<kullanıcı>.github.io/GeoCosmos/`
+
+Yayında canlı API yoktur; senaryo kutusu "çevrimdışı" der, geri kalan her şey statik dosyalardan çalışır. API yayınlanırsa adresi `API_URL` değişkenine yazın.
+
 ## Yapılacaklar
 
 | # | İş | Kim | Engel mi? |
@@ -56,7 +67,10 @@ Tüm Dünya exportu beklenirken bölgesel deneme: `python -m pipeline.ee_export 
 | 5 | İlk gerçek doğrulama sonucu; ağırlık ayarı **sadece ayar (tune) yerlerine bakarak** | A + B | — |
 | 6 | 5 km yakın tarama: `data/processed/fine_scan.json` içindeki komutlar | A | Hayır (olursa iyi) |
 | 7 | Burak'ın veri seti listesine eklenmeli: **MODIS MCD12Q1** (buz maskesi yedeği, NASA Earthdata), **Diviner Polar Resource Product** (`dlre_prp_south`, Ay kutup sıcaklığı ve buz), **Mars Climate Database v6.2** (Mars sıcaklık ve toz; NASA dışı, atıf gerekir). Listeden çıkabilecekler: Mars için TES/THEMIS sıcaklıkları ve SWIM (kullanılmadı) | Burak | Hayır |
-| 8 | Frontend sıradaki ekranlar: test amacı seçimi → Dünya haritası (`analogs/index.json` + `heatmaps/index.json`) → analog kartı (radar, kopma kutusu, geçmiş testler) → doğrulama paneli (`validation.json`) → senaryo kutusu (`POST /scenario`). Formatlar: [ARCHITECTURE.md > Veri sözleşmesi](ARCHITECTURE.md#veri-sözleşmesi), tipler: `frontend/src/types.ts` | Çağrı | Hayır: `grid.parquet` gelene kadar `analogs/` boş; ekranlar "veri yok" durumunu göstermeli |
+| 8 | ~~Frontend ekranları~~ ✅ Hazır; Çağrı gözden geçirip görsel dile uyarlayabilir | Çağrı | Hayır |
+| 9 | GitHub Pages'i aç (aşağıda) | Repo sahibi | Hayır |
+| 10 | Sunum, rapor, demo videosu (`docs/`); demo senaryosu gerçek sonuçlarla son gün | Ekip | Hayır |
+| 11 | Hackathon resmi kurallarını oku: önceden ne hazırlanabilir, teslim şartları | Ekip | Hayır |
 
 `make data` her hedef × test için kaç parametrenin kullanıldığını `analogs/index.json` > `params_used` alanına yazar; eksik değerler girildikçe bu sayı artar.
 
@@ -90,3 +104,4 @@ Tüm Dünya exportu beklenirken bölgesel deneme: `python -m pipeline.ee_export 
 - Keşif, doğrulama, ısı haritası, Gemini yorumcu (uydurma sayı kontrolüyle), `make data` uçtan uca
 - `/scenario` API (Gemini tercüman, önbellek, maskeli kare filtresi, seyrek aday seçimi)
 - GitHub Actions: her push'ta testler ve üretilen dosya kontrolü
+- Frontend ekranları: Ay/Mars haritası (NASA Trek), test seçimi, Dünya haritası (NASA GIBS), ısı haritası, analog kartı, senaryo kutusu, doğrulama paneli; GitHub Pages yayın iş akışı

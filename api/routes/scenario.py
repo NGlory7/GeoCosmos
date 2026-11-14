@@ -11,6 +11,7 @@ from api.services import gemini
 from core.profiles import TestProfile, load_grid_config, load_parameters, load_targets, normalize_weights
 from core.schemas import BREAKDOWN_KEYS, ScenarioRequest, ScenarioResponse
 from core.scoring import top_analogs, usable_weights
+from pipeline.discovery import name_known_cells
 
 GRID_PATH = Path(__file__).resolve().parents[2] / "data" / "processed" / "grid.parquet"
 TOP_N = 20
@@ -45,6 +46,8 @@ def scenario(req: ScenarioRequest) -> ScenarioResponse:
         raise HTTPException(422, "Bu metinden hedefte karşılığı olan bir parametre çıkarılamadı.")
 
     profile = TestProfile(id="custom", label=req.text, weights=weights, breakdown=BREAKDOWN_KEYS)
-    analogs = top_analogs(load_grid(), target, profile, n=TOP_N, params=params,
+    grid = load_grid()
+    analogs = top_analogs(grid, target, profile, n=TOP_N, params=params,
                           min_separation_km=load_grid_config()["discovery"]["min_separation_km"])
+    name_known_cells(analogs, grid)
     return ScenarioResponse(weights=weights, unsupported=raw.get("unsupported", []), analogs=analogs)

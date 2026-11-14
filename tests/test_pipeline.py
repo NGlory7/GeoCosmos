@@ -133,3 +133,31 @@ def test_number_check_accepts_turkish_decimals():
 def test_build_without_grid(tmp_path):
     report = build_mod.build(tmp_path / "yok.parquet", tmp_path / "out")
     assert report["grid"] == "yok" and (tmp_path / "out" / "targets.geojson").exists()
+
+
+def test_meta_json_matches_config(built):
+    tmp, _ = built
+    meta = json.loads((tmp / "out" / "meta.json").read_text(encoding="utf-8"))
+    assert [t["id"] for t in meta["tests"]] == list(load_profiles())
+    assert set(meta["parameters"]) >= {"slope_deg", "carbonate_index"}
+    assert set(meta["breakdown_notes"]) == {"moon", "mars"}
+    assert meta["tests"][-1]["at_least"] == ["carbonate_index"]  # biyo-imza: Salda kararı
+
+
+def test_scenario_names_known_cells(grid, tmp_path, monkeypatch):
+    from fastapi.testclient import TestClient
+    from api.main import app
+    from api.routes import scenario as sc
+
+    grid.to_parquet(tmp_path / "grid.parquet")
+    monkeypatch.setattr(sc, "GRID_PATH", tmp_path / "grid.parquet")
+    sc.load_grid.cache_clear()
+    monkeypatch.setattr(sc.gemini, "translate", lambda t, p: {"weights": {"aridity": 1}, "unsupported": []})
+    r = TestClient(app).post("/scenario", json={"text": "kurak", "target_id": "mars_gale"})
+    sc.load_grid.cache_clear()
+    assert r.status_code == 200
+    analogs = r.json()["analogs"]
+    assert analogs and all(a["test_id"] == "custom" for a in analogs)
+    for a in analogs:
+        if a["past_tests"]:
+            assert "(" in a["name"]  # bilinen saha gerçek adıyla

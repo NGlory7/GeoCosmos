@@ -1,7 +1,7 @@
 """make data: frontend/public/data/ altındaki tüm dosyaları üretir.
 
 Sıra:
-  1. targets.geojson                      (her zaman; sadece config/targets.yaml gerekir)
+  1. targets.geojson, meta.json           (her zaman; sadece config/ gerekir)
   2. analogs/<hedef>_<test>.geojson       (pipeline/discovery.py)   \
   3. validation.json                      (pipeline/validation.py)   } data/processed/grid.parquet gerekir
   4. heatmaps/<hedef>_<test>.png          (pipeline/heatmap.py)      /
@@ -20,7 +20,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from core.profiles import load_profiles, load_targets
+from core.breakdown import ALWAYS, NOTES
+from core.profiles import load_grid_config, load_parameters, load_profiles, load_targets
+from core.schemas import SCORE_KEYS
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "frontend" / "public" / "data"
@@ -44,6 +46,34 @@ def write_targets(out_dir: Path = OUT_DIR) -> Path:
     return path
 
 
+def write_meta(out_dir: Path = OUT_DIR) -> Path:
+    """meta.json: arayüzün göstereceği etiketler, tek kaynaktan (config + core/breakdown.py).
+    Zaman damgası yok: CI "üretilen dosyalar güncel mi" kontrolü kararlı kalsın."""
+    import yaml
+    from core.profiles import CONFIG_DIR
+
+    raw_tests = yaml.safe_load((CONFIG_DIR / "test_profiles.yaml").read_text(encoding="utf-8"))["tests"]
+    meta = {
+        "score_keys": list(SCORE_KEYS),
+        "score_labels": {"topography": "Topoğrafya", "geology": "Jeoloji", "climate": "İklim"},
+        "tests": [{"id": p.id, "label": p.label, "weights": p.weights, "breakdown": list(p.breakdown),
+                   "at_least": list(p.at_least), "rationale": raw_tests[p.id].get("rationale", "")}
+                  for p in load_profiles().values()],
+        "parameters": {k: {"label": p.label, "dimension": p.dimension, "tolerance": p.tolerance,
+                           "earth_source": p.earth_source} for k, p in load_parameters().items()},
+        "breakdown_always": list(ALWAYS),
+        "breakdown_labels": {"gravity": "Yerçekimi", "atmosphere": "Atmosfer", "radiation": "Radyasyon",
+                             "liquid_water": "Sıvı su", "biology": "Biyoloji"},
+        "breakdown_notes": NOTES,
+        "ops_labels": {"road_access": "Yola erişim (şehre < 6 saat)", "remote": "Issız (< 1 kişi/km²)"},
+        "grid_km": load_grid_config()["grid"]["coarse_km"],
+    }
+    path = out_dir / "meta.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
+    return path
+
+
 def build(grid_path: Path = GRID_PATH, out_dir: Path = OUT_DIR,
           commentary: bool = True, heatmaps: bool = True, fine_scan_path: Path | None = None,
           generate=None) -> dict:
@@ -52,6 +82,7 @@ def build(grid_path: Path = GRID_PATH, out_dir: Path = OUT_DIR,
 
     load_profiles()  # config hatalarını en başta yakala
     target_path = write_targets(out_dir)
+    write_meta(out_dir)
     report: dict = {"targets": str(target_path.relative_to(ROOT) if target_path.is_relative_to(ROOT) else target_path)}
     if not grid_path.exists():
         report["grid"] = "yok"

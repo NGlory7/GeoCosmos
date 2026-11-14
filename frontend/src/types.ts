@@ -56,6 +56,28 @@ export interface Analog {
   ai_comment: string;
 }
 
+// meta.json (pipeline/build.py > write_meta): arayüz etiketleri, tek kaynak config/
+export interface TestMeta {
+  id: TestId;
+  label: string;
+  weights: Record<string, number>;
+  breakdown: BreakdownKey[];
+  at_least: string[];
+  rationale: string;
+}
+
+export interface Meta {
+  score_keys: ScoreKey[];
+  score_labels: Record<ScoreKey, string>;
+  tests: TestMeta[];
+  parameters: Record<string, { label: string; dimension: ScoreKey; tolerance: number; earth_source: string }>;
+  breakdown_always: BreakdownKey[];
+  breakdown_labels: Record<BreakdownKey, string>;
+  breakdown_notes: Record<Body, Record<BreakdownKey, string>>;
+  ops_labels: Record<string, string>;
+  grid_km: number;
+}
+
 // analogs/index.json
 export interface AnalogIndexEntry {
   target_id: string;

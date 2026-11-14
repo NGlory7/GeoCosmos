@@ -41,6 +41,20 @@ def candidates(grid: pd.DataFrame) -> pd.DataFrame:
     return grid[~grid["masked"]] if "masked" in grid else grid
 
 
+def name_known_cells(analogs, grid: pd.DataFrame) -> None:
+    """Doğrulama yerinin kendi karesine gerçek adını ve kaynaklı geçmiş testlerini yazar (yerinde).
+    discovery ve /scenario ortak kullanır."""
+    if "known_id" not in grid:
+        return
+    known = {a.id: a for a in load_known_analogs().analogs}
+    by_cell = grid.set_index("id")["known_id"].dropna().to_dict()
+    for a in analogs:
+        k = by_cell.get(a.id)
+        if k in known:
+            a.name = known[k].name
+            a.past_tests = list(known[k].past_tests)
+
+
 def to_feature(analog) -> dict:
     return {"type": "Feature",
             "geometry": {"type": "Point", "coordinates": [analog.lon, analog.lat]},
@@ -58,9 +72,7 @@ def run_discovery(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> 
     grid = load_grid() if grid is None else grid
     cfg = load_grid_config()["discovery"]
     params = load_parameters()
-    known = {a.id: a for a in load_known_analogs().analogs}
     pool = candidates(grid)
-    known_by_cell = pool.set_index("id")["known_id"].dropna().to_dict() if "known_id" in pool else {}
     index = []
     for target in load_targets().values():
         for profile in load_profiles().values():
@@ -73,11 +85,7 @@ def run_discovery(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> 
                 continue
             analogs = top_analogs(pool, target, profile, n=cfg["top_n"], params=params,
                                   min_separation_km=cfg["min_separation_km"])
-            for a in analogs:
-                k = known_by_cell.get(a.id)
-                if k in known:
-                    a.name = known[k].name
-                    a.past_tests = list(known[k].past_tests)
+            name_known_cells(analogs, pool)
             write_geojson(out_dir / entry["file"], [to_feature(a) for a in analogs])
             index.append({**entry, "count": len(analogs),
                           "new_count": sum(a.is_new for a in analogs),

@@ -15,4 +15,8 @@ npm run build    # dist/
 | Yol | Sayfa |
 | --- | --- |
 | `/` | Giriş: gök cismi seçimi |
-| `/mars`, `/moon` | Hedef listesi (geçici; harita ve test seçimi sonraki adım) |
+| `/mars`, `/moon` | Ay/Mars haritası (NASA Trek), hedef ve test seçimi |
+| `/:body/:hedef/:test` | Dünya haritası (NASA GIBS), ısı haritası, adaylar, analog kartı, senaryo kutusu |
+| `/dogrulama` | Doğrulama paneli |
+
+- API adresi: `VITE_API_URL` (varsayılan `http://localhost:8000`; boş = yayında API yok).

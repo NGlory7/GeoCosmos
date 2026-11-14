@@ -11,9 +11,14 @@ export default function SpaceLayout({ children }: { children: ReactNode }) {
         <Link to="/" className="font-mono text-sm font-semibold tracking-[0.35em] text-white">
           GEOCOSMOS
         </Link>
-        <span className="hidden font-mono text-[11px] tracking-[0.2em] text-slate-500 sm:block">
-          AY VE MARS İÇİN DÜNYA'DA ANALOG TEST SAHASI
-        </span>
+        <nav className="flex items-center gap-5">
+          <span className="hidden font-mono text-[11px] tracking-[0.2em] text-slate-500 lg:block">
+            AY VE MARS İÇİN DÜNYA'DA ANALOG TEST SAHASI
+          </span>
+          <Link to="/dogrulama" className="font-mono text-[11px] tracking-[0.2em] text-slate-400 hover:text-white">
+            DOĞRULAMA
+          </Link>
+        </nav>
       </header>
       <div className="relative z-10">{children}</div>
     </div>

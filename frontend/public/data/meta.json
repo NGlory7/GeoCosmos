@@ -1,0 +1,193 @@
+{
+ "score_keys": [
+  "topography",
+  "geology",
+  "climate"
+ ],
+ "score_labels": {
+  "topography": "Topoğrafya",
+  "geology": "Jeoloji",
+  "climate": "İklim"
+ },
+ "tests": [
+  {
+   "id": "rover",
+   "label": "Rover sürüşü ve tekerlek aşınması",
+   "weights": {
+    "slope_deg": 0.25,
+    "roughness_m": 0.25,
+    "mafic_index": 0.2,
+    "aridity": 0.15,
+    "dust_aod": 0.1,
+    "temp_range_c": 0.05
+   },
+   "breakdown": [
+    "gravity",
+    "atmosphere",
+    "radiation"
+   ],
+   "at_least": [],
+   "rationale": ""
+  },
+  {
+   "id": "ice_drilling",
+   "label": "Donmuş zeminde buz sondajı (ISRU)",
+   "weights": {
+    "ground_ice": 0.4,
+    "surface_temp_c": 0.25,
+    "temp_range_c": 0.1,
+    "slope_deg": 0.1,
+    "aridity": 0.15
+   },
+   "breakdown": [
+    "gravity",
+    "atmosphere",
+    "liquid_water"
+   ],
+   "at_least": [],
+   "rationale": ""
+  },
+  {
+   "id": "lava_tube",
+   "label": "Lav tüpü ve yeraltı habitatı",
+   "weights": {
+    "mafic_index": 0.45,
+    "roughness_m": 0.2,
+    "slope_deg": 0.15,
+    "temp_range_c": 0.1,
+    "aridity": 0.1
+   },
+   "breakdown": [
+    "gravity",
+    "radiation",
+    "atmosphere"
+   ],
+   "at_least": [],
+   "rationale": "Lav tüpleri yörüngeden görülmez; motor sadece tüp oluşabilecek araziyi (genç, mafik, düşük eğimli lav akıntısı) ölçer. Bu yüzden mafik yüzey baskın, eğim düşük tutulur."
+  },
+  {
+   "id": "dust",
+   "label": "Toz fırtınası ve aşınma",
+   "weights": {
+    "dust_aod": 0.4,
+    "aridity": 0.25,
+    "slope_deg": 0.1,
+    "roughness_m": 0.1,
+    "temp_range_c": 0.15
+   },
+   "breakdown": [
+    "gravity",
+    "atmosphere"
+   ],
+   "at_least": [],
+   "rationale": "Toz testinin belirleyicisi havadaki toz (AOD) ve onu besleyen kuru, bitkisiz yüzeydir; büyük gece-gündüz farkı termal rüzgarları ve fiziksel aşınmayı artırır."
+  },
+  {
+   "id": "biosignature",
+   "label": "Biyo-imza ve antik yaşam izi",
+   "weights": {
+    "carbonate_index": 0.45,
+    "aridity": 0.2,
+    "surface_temp_c": 0.15,
+    "temp_range_c": 0.1,
+    "dust_aod": 0.1
+   },
+   "breakdown": [
+    "liquid_water",
+    "biology",
+    "radiation"
+   ],
+   "at_least": [
+    "carbonate_index"
+   ],
+   "rationale": ""
+  }
+ ],
+ "parameters": {
+  "slope_deg": {
+   "label": "Ortalama eğim (°, 500 m taban; config/grid.yaml > scale)",
+   "dimension": "topography",
+   "tolerance": 15.0,
+   "earth_source": "Copernicus DEM GLO-30"
+  },
+  "roughness_m": {
+   "label": "Yüzey pürüzlülüğü (m, 500 m yüksekliğin 5 km pencerede std'si)",
+   "dimension": "topography",
+   "tolerance": 50.0,
+   "earth_source": "Copernicus DEM GLO-30"
+  },
+  "surface_temp_c": {
+   "label": "Ortalama yüzey sıcaklığı (°C)",
+   "dimension": "climate",
+   "tolerance": 60.0,
+   "earth_source": "MODIS LST (MOD11A2)"
+  },
+  "temp_range_c": {
+   "label": "Gece-gündüz sıcaklık farkı (°C)",
+   "dimension": "climate",
+   "tolerance": 60.0,
+   "earth_source": "MODIS LST (MOD11A2)"
+  },
+  "aridity": {
+   "label": "Kuraklık (0 = nemli, 1 = tamamen kuru)",
+   "dimension": "climate",
+   "tolerance": 0.6,
+   "earth_source": "GPM IMERG V07 + MODIS NDVI"
+  },
+  "dust_aod": {
+   "label": "Toz / aerosol optik derinliği (550 nm)",
+   "dimension": "climate",
+   "tolerance": 0.8,
+   "earth_source": "MODIS MAIAC AOD (MCD19A2)"
+  },
+  "mafic_index": {
+   "label": "Mafik / bazaltik yüzey (0-1 sıralı ölçek)",
+   "dimension": "geology",
+   "tolerance": 0.6,
+   "earth_source": "ASTER GED (AG100) TIR"
+  },
+  "carbonate_index": {
+   "label": "Karbonat izi (0-1 sıralı ölçek)",
+   "dimension": "geology",
+   "tolerance": 0.6,
+   "earth_source": "ASTER GED (AG100) TIR"
+  },
+  "ground_ice": {
+   "label": "Donmuş zemin / yüzeye yakın buz (0-1)",
+   "dimension": "geology",
+   "tolerance": 0.6,
+   "earth_source": "ESA CCI Permafrost"
+  }
+ },
+ "breakdown_always": [
+  "gravity"
+ ],
+ "breakdown_labels": {
+  "gravity": "Yerçekimi",
+  "atmosphere": "Atmosfer",
+  "radiation": "Radyasyon",
+  "liquid_water": "Sıvı su",
+  "biology": "Biyoloji"
+ },
+ "breakdown_notes": {
+  "moon": {
+   "gravity": "Yerçekimi Dünya'nın ~1/6'sı (1,62 m/s²); toz ve tekerlek davranışı farklı.",
+   "atmosphere": "Atmosfer yok denecek kadar ince; rüzgar aşınması ve ısı taşınımı yok.",
+   "radiation": "Manyetik alan ve atmosfer koruması yok; yüzey doğrudan kozmik ışına açık.",
+   "liquid_water": "Yüzeyde sıvı su yok; buz sadece kalıcı gölgelerde.",
+   "biology": "Bilinen bir biyolojik süreç yok; Dünya'daki her sahada mikrobiyal yaşam var."
+  },
+  "mars": {
+   "gravity": "Yerçekimi Dünya'nın ~%38'i (3,71 m/s²).",
+   "atmosphere": "Atmosfer çok ince (~%0,6) ve çoğunlukla CO₂; toz taşınımı farklı işler.",
+   "radiation": "Küresel manyetik alan yok; yüzey radyasyonu Dünya'dan çok yüksek.",
+   "liquid_water": "Bugün yüzeyde kalıcı sıvı su yok; Dünya sahalarında su döngüsü sürüyor.",
+   "biology": "Dünya sahalarında modern yaşam var; biyo-imza testinde kirlilik riski yaratır."
+  }
+ },
+ "ops_labels": {
+  "road_access": "Yola erişim (şehre < 6 saat)",
+  "remote": "Issız (< 1 kişi/km²)"
+ },
+ "grid_km": 25
+}
