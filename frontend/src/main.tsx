@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
 import Home from "./pages/Home";
+import { LangProvider } from "./i18n";
 
 // Harita/grafik kütüphaneleri ayrı parçada: giriş sayfası onları beklemez.
 const BodyPage = lazy(() => import("./pages/BodyPage"));
@@ -14,6 +15,7 @@ const ReportPage = lazy(() => import("./pages/ReportPage"));
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <LangProvider>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Suspense fallback={<div className="min-h-dvh bg-space" />}>
       <Routes>
@@ -26,5 +28,6 @@ createRoot(document.getElementById("root")!).render(
       </Routes>
       </Suspense>
     </BrowserRouter>
+    </LangProvider>
   </StrictMode>,
 );

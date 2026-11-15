@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { tx } from "../i18n";
 import type { TargetWithCoords } from "../services/data";
 import type { Body } from "../types";
 import { GLOBE_FRAG } from "./globeShader";
@@ -6,14 +7,16 @@ import Planet, { PLANET_FRACTION } from "./Planet";
 import { VERT } from "./planetShader";
 
 // NASA Trek eşdikdörtgen karoları (z0'da 2 x 1 karo, her seviyede 2 kat). CORS açık.
-const TREK: Record<Body, { url: string; credit: string }> = {
+const TREK: Record<Body, { url: string; credit: string; creditEn: string }> = {
   mars: {
     url: "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/default/default028mm/{z}/{y}/{x}.jpg",
     credit: "NASA Mars Trek · Viking MDIM 2.1 renkli mozaik",
+    creditEn: "NASA Mars Trek · Viking MDIM 2.1 color mosaic",
   },
   moon: {
     url: "https://trek.nasa.gov/tiles/Moon/EQ/LRO_WAC_Mosaic_Global_303ppd_v02/1.0.0/default/default028mm/{z}/{y}/{x}.jpg",
     credit: "NASA Moon Trek · LRO WAC küresel mozaik",
+    creditEn: "NASA Moon Trek · LRO WAC global mosaic",
   },
 };
 const TILE = 256;
@@ -392,7 +395,7 @@ export default function PlanetGlobe({
       </div>
       {caption && (
         <figcaption className="mt-2 text-center font-mono text-[10px] tracking-wider text-slate-600">
-          Sürükleyerek çevir · {TREK[body].credit}
+          {tx("Sürükleyerek çevir", "Drag to rotate")} · {tx(TREK[body].credit, TREK[body].creditEn)}
         </figcaption>
       )}
     </figure>

@@ -4,6 +4,8 @@ import { BODIES } from "../bodies";
 import PlanetGlobe from "../components/PlanetGlobe";
 import SpaceLayout from "../components/SpaceLayout";
 import { coord } from "../format";
+import { useLang } from "../i18n";
+import { localizeMeta, localizeTargets } from "../i18nData";
 import { loadAnalogIndex, loadMeta, loadTargets, targetsOf, type TargetWithCoords } from "../services/data";
 import type { AnalogIndexEntry, Body, Meta } from "../types";
 
@@ -11,6 +13,7 @@ import type { AnalogIndexEntry, Body, Meta } from "../types";
 function CustomScenario({ body, target }: { body: Body; target: TargetWithCoords }) {
   const [text, setText] = useState("");
   const navigate = useNavigate();
+  const { t } = useLang();
   return (
     <form
       className="rounded-lg border border-dashed border-cyan-400/25 px-3 py-2.5"
@@ -20,7 +23,7 @@ function CustomScenario({ body, target }: { body: Body; target: TargetWithCoords
       }}
     >
       <label className="font-mono text-[10px] tracking-[0.2em] text-cyan-200/70" htmlFor={`scn-${target.id}`}>
-        KENDİ SENARYON
+        {t("KENDİ SENARYON", "YOUR OWN SCENARIO")}
       </label>
       <div className="mt-1.5 flex gap-2">
         <input
@@ -28,11 +31,11 @@ function CustomScenario({ body, target }: { body: Body; target: TargetWithCoords
           value={text}
           onChange={(e) => setText(e.target.value)}
           maxLength={1000}
-          placeholder="Ne test etmek istiyorsun? (ör. toz fırtınasında güneş paneli)"
+          placeholder={t("Ne test etmek istiyorsun? (ör. toz fırtınasında güneş paneli)", "What do you want to test? (e.g. solar panels in a dust storm)")}
           className="min-w-0 flex-1 rounded-lg border border-white/10 bg-black/30 px-3 py-1.5 text-sm text-white placeholder:text-slate-600 focus:border-cyan-400/50 focus:outline-none"
         />
         <button disabled={!text.trim()} className="rounded-lg bg-cyan-500/80 px-3 py-1.5 text-sm font-medium text-black disabled:opacity-40">
-          Ara
+          {t("Ara", "Search")}
         </button>
       </div>
     </form>
@@ -40,6 +43,7 @@ function CustomScenario({ body, target }: { body: Body; target: TargetWithCoords
 }
 
 function TestPicker({ body, target, meta, index }: { body: Body; target: TargetWithCoords; meta: Meta; index: AnalogIndexEntry[] | null }) {
+  const { t } = useLang();
   return (
     <div className="mt-3 grid gap-2">
       {meta.tests.map((test) => {
@@ -50,7 +54,7 @@ function TestPicker({ body, target, meta, index }: { body: Body; target: TargetW
         const keys = Object.keys(test.weights);
         const have = keys.filter((k) => k in target.params).length;
         const disabled = have === 0;
-        const status = index === null ? "Dünya verisi bekleniyor" : entry?.file ? `${entry.count} aday · ${entry.new_count ?? 0} yeni` : "";
+        const status = index === null ? t("Dünya verisi bekleniyor", "Waiting for Earth data") : entry?.file ? `${entry.count} ${t("aday", "candidates")} · ${entry.new_count ?? 0} ${t("yeni", "new")}` : "";
         return (
           <Link
             key={test.id}
@@ -74,8 +78,11 @@ function TestPicker({ body, target, meta, index }: { body: Body; target: TargetW
 
 export default function BodyPage() {
   const { body } = useParams();
-  const [targets, setTargets] = useState<TargetWithCoords[] | null>(null);
-  const [meta, setMeta] = useState<Meta | null>(null);
+  const { t, lang } = useLang();
+  const [rawTargets, setTargets] = useState<TargetWithCoords[] | null>(null);
+  const [rawMeta, setMeta] = useState<Meta | null>(null);
+  const targets = useMemo(() => (rawTargets ? localizeTargets(rawTargets, lang) : null), [rawTargets, lang]);
+  const meta = localizeMeta(rawMeta, lang);
   const [index, setIndex] = useState<AnalogIndexEntry[] | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -103,16 +110,16 @@ export default function BodyPage() {
     <SpaceLayout>
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-8">
         <Link to="/" className="font-mono text-xs tracking-wider text-slate-500 hover:text-slate-300">
-          ‹ GERİ
+          ‹ {t("GERİ", "BACK")}
         </Link>
         <h1 className="mt-4 font-mono text-2xl font-semibold tracking-wider text-white">
-          {meta_.name} <span className="font-normal text-white/40">// {meta_.tagline}</span>
+          {lang === "en" ? meta_.nameEn : meta_.name} <span className="font-normal text-white/40">// {meta_.tagline}</span>
         </h1>
-        <p className="mt-2 text-sm text-slate-400">Hedefi seç, sonra Dünya'da prova etmek istediğin testi seç.</p>
+        <p className="mt-2 text-sm text-slate-400">{t("Hedefi seç, sonra Dünya'da prova etmek istediğin testi seç.", "Pick a target, then pick the test you want to rehearse on Earth.")}</p>
         {error && <p className="mt-4 text-sm text-rose-300">{error}</p>}
         {index === null && targets && (
           <p className="mt-4 rounded-lg border border-amber-400/20 bg-amber-400/5 px-3 py-2 text-xs text-amber-200/80">
-            Dünya taraması henüz çalıştırılmadı: test sayfalarında aday ve ısı haritası görünmez (STATUS.md).
+            {t("Dünya taraması henüz çalıştırılmadı: test sayfalarında aday ve ısı haritası görünmez (STATUS.md).", "The Earth scan has not been run yet: test pages show no candidates or heat map (STATUS.md).")}
           </p>
         )}
 
@@ -122,7 +129,7 @@ export default function BodyPage() {
             <PlanetGlobe key={b} body={b} targets={own} selected={selected} onSelect={setSelected} />
           </div>
           <ul className="grid content-start gap-4">
-            {targets === null && !error && <li className="font-mono text-xs text-slate-500">Yükleniyor…</li>}
+            {targets === null && !error && <li className="font-mono text-xs text-slate-500">{t("Yükleniyor…", "Loading…")}</li>}
             {own.map((t) => {
               const on = t.id === selected;
               return (

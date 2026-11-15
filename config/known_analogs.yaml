@@ -98,8 +98,10 @@ analogs:
       - title: "Perseverance ekibinin Jezero hazırlık saha çalışması (NASA Earth Observatory, 2021)"
         url: https://science.nasa.gov/blogs/earth-matters/2021/02/17/what-a-lake-in-turkey-can-tell-us-about-mars
     note: >-
-      Göl ~45 km², 25 km'lik karenin küçük bir kısmı; max_masked_fraction kuralı (config/grid.yaml)
-      kareyi elemez. Asıl hedef göl suyu değil, kıyıdaki hidromagnezit çökelleri.
+      Asıl hedef göl suyu değil, kıyıdaki hidromanyezit çökelleri: birkaç km²'lik bir şerit. 25 km'lik
+      karede çevre kayaç ve göl suyuyla ortalanınca karbonat sinyali kayboluyor (karenin ASTER karbonat
+      oranı 1,0003, dünya medyanının altında). Düşük sıra ağırlık değil çözünürlük sorunu; çözüm 5 km
+      yakın tarama. Sınav setinde kalıyor: sonuca bakarak çıkarılmadı.
 
   - id: lut
     name: Lut Çölü (İran)

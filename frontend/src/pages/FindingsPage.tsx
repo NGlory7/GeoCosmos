@@ -1,7 +1,9 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import SpaceLayout from "../components/SpaceLayout";
-import { coord, num, pct, shortLabel } from "../format";
+import { coord, int, num, pct, shortLabel } from "../format";
+import { useLang, type Lang } from "../i18n";
+import { localizeMeta, localizeTargets, localizeValidation } from "../i18nData";
 import { loadAnalogIndex, loadAnalogs, loadMeta, loadTargets, loadValidation, type TargetWithCoords } from "../services/data";
 import type { Analog, AnalogIndexEntry, Body, Meta, TestId, ValidationResult } from "../types";
 
@@ -21,6 +23,7 @@ interface Finding {
   use: string;
   caveat: string;
   image: { layer: string; date?: string; credit: string };
+  en: { place: string; region: string; title: string; why: string; use: string; caveat: string; credit: string };
   compareWith?: string; // validation.json'daki bilinen saha (aynı test ve hedef)
 }
 
@@ -38,6 +41,16 @@ const FINDINGS: Finding[] = [
     use: "Toz fırtınasında güneş paneli kirlenmesi, eklem ve contalara toz girişi, rüzgar aşındırması ve dağ eteğinde rover sürüşü aynı sahada denenebilir.",
     caveat: "Gece-gündüz sıcaklık farkı Mars'tan çok küçük. Toz, Mars'ın ince karbondioksit atmosferinde Dünya'dakinden farklı taşınır.",
     image: { layer: "Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual", credit: "NASA GIBS · Landsat WELD yıllık mozaik" },
+    en: {
+      place: "Southern edge of the Taklamakan Desert",
+      region: "Keriya County, Hotan, Xinjiang (China)",
+      title: "A rehearsal for Martian dust on Earth",
+      why:
+        "The amount of dust in the air over this cell is almost the same as the value calculated for Gale Crater, where Curiosity drives. The roughness of the terrain also closely matches Gale's. The cell lies at the foot of the Kunlun Mountains, on the edge of the Taklamakan Desert, one of the world's largest dust sources.",
+      use: "Solar panel soiling in dust storms, dust getting into joints and seals, wind abrasion and rover driving on a mountain foot can all be tested at the same site.",
+      caveat: "The day-night temperature swing is much smaller than on Mars. Dust moves differently in Mars' thin carbon dioxide atmosphere than on Earth.",
+      credit: "NASA GIBS · Landsat WELD annual mosaic",
+    },
   },
   {
     cell: "g25_77.889_-96.496",
@@ -52,6 +65,16 @@ const FINDINGS: Finding[] = [
     use: "Buzlu zeminde matkap ve örnek alma, yüzeye yakın buzdan su elde etme (ISRU) denemeleri ve düz arazide iniş alanı değerlendirmesi için uygun.",
     caveat: "Arcadia çok daha soğuk ve gece-gündüz farkı çok daha büyük. Arktik yazında yüzey eriyip sıvı su oluşur; Mars'ta bu olmaz.",
     image: { layer: "MODIS_Terra_CorrectedReflectance_TrueColor", date: "2023-07-28", credit: "NASA GIBS · MODIS Terra, 28 Temmuz 2023" },
+    en: {
+      place: "Amund Ringnes Island",
+      region: "Canadian Arctic Archipelago, Nunavut (Canada)",
+      title: "Arcadia's icy plain, in northern Canada",
+      why:
+        "Arcadia Planitia is one of the regions discussed for a crewed Mars landing: flat, dry and full of near-surface ice. So is this island. Its frozen-ground fraction and flatness come out almost identical to Arcadia's.",
+      use: "Suited to drilling and sampling in icy ground, extracting water from near-surface ice (ISRU) and assessing landing sites on flat terrain.",
+      caveat: "Arcadia is much colder and its day-night swing is much larger. In the Arctic summer the surface thaws and liquid water forms; that does not happen on Mars.",
+      credit: "NASA GIBS · MODIS Terra, 28 July 2023",
+    },
     compareWith: "haughton",
   },
   {
@@ -68,6 +91,17 @@ const FINDINGS: Finding[] = [
     caveat:
       "Burada yağış ve bitki var, Ay'da yok. Ay kutbunun alçak güneşi ve kilometrelerce uzanan gölgeleri rover testinin hesabında yer almıyor; \"Üs kurulumu ve iniş alanı\" testi güneş yüksekliğini de ölçüyor (Shackleton için ilk aday Ellesmere Adası, Kanada).",
     image: { layer: "Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual", credit: "NASA GIBS · Landsat WELD yıllık mozaik" },
+    en: {
+      place: "Peruvian Andes",
+      region: "Corculla, Páucar del Sara Sara, Ayacucho (Peru)",
+      title: "Rugged terrain like a crater rim at the Moon's south pole",
+      why:
+        "The rim of Shackleton Crater, considered as the Artemis base region, is steep and rugged. This cell's roughness matches Shackleton's almost metre for metre, and its slope is very close too. It also has road access: getting a crew and equipment there is easy.",
+      use: "Rover driving on steep, rugged terrain, traction and tip-over limits on slopes, autonomous path-planning algorithms.",
+      caveat:
+        "There is rain and vegetation here; there is none on the Moon. The low Sun and kilometre-long shadows of the lunar pole are not part of the rover test; the \"Base construction and landing site\" test also measures Sun elevation (first candidate for Shackleton: Ellesmere Island, Canada).",
+      credit: "NASA GIBS · Landsat WELD annual mosaic",
+    },
   },
 ];
 
@@ -107,7 +141,14 @@ interface Loaded {
 }
 
 export default function FindingsPage() {
-  const [data, setData] = useState<Loaded | null>(null);
+  const { t, lang, en } = useLang();
+  const [raw, setData] = useState<Loaded | null>(null);
+  const data: Loaded | null = raw && {
+    ...raw,
+    meta: localizeMeta(raw.meta, lang),
+    targets: localizeTargets(raw.targets, lang),
+    validation: raw.validation && { ...raw.validation, analogs: raw.validation.analogs.map((a) => localizeValidation(a, lang)) },
+  };
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -134,43 +175,55 @@ export default function FindingsPage() {
   return (
     <SpaceLayout>
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-8">
-        <p className="font-mono text-[11px] tracking-[0.3em] text-cyan-300/70">BULGULAR</p>
+        <p className="font-mono text-[11px] tracking-[0.3em] text-cyan-300/70">{t("BULGULAR", "FINDINGS")}</p>
         <h1 className="mt-2 max-w-3xl text-3xl font-semibold leading-tight text-white sm:text-4xl">
-          Ay'a ve Mars'a gitmeden önce Dünya'da nerede prova yapmalı?
+          {t("Ay'a ve Mars'a gitmeden önce Dünya'da nerede prova yapmalı?", "Where on Earth should we rehearse before going to the Moon and Mars?")}
         </h1>
         <p className="mt-4 max-w-3xl text-slate-300">
-          Uydu verisiyle Dünya'nın bütün karalarını taradık ve her yeri, Ay'daki ve Mars'taki gerçek hedeflerle karşılaştırdık. Amacımız
-          zaten bilinen ünlü sahaları yeniden bulmak değil, az bilinen yeni test sahaları bulmaktı. Burada bunlardan üçünü anlatıyoruz:
-          neden benzediklerini ve, en az onun kadar önemli, nerede benzemediklerini.
+          {t(
+            "Uydu verisiyle Dünya'nın bütün karalarını taradık ve her yeri, Ay'daki ve Mars'taki gerçek hedeflerle karşılaştırdık. Amacımız zaten bilinen ünlü sahaları yeniden bulmak değil, az bilinen yeni test sahaları bulmaktı. Burada bunlardan üçünü anlatıyoruz: neden benzediklerini ve, en az onun kadar önemli, nerede benzemediklerini.",
+            "We scanned all of Earth's land with satellite data and compared every place with real targets on the Moon and Mars. Our goal was not to rediscover famous, well-known sites but to find lesser-known new test sites. Here we describe three of them: why they are similar and, just as important, where they are not.",
+          )}
         </p>
         {error && <p className="mt-4 text-sm text-rose-300">{error}</p>}
 
         {/* Neden ve nasıl */}
         <section className="mt-10 grid gap-4 md:grid-cols-3">
-          <Info title="Neden Dünya'da prova?">
-            Bir rover'ı Mars'ta tamir etmek mümkün değil. Bu yüzden ekipman, yöntem ve ekipler önce Dünya'da, Ay'a veya Mars'a benzeyen
-            yerlerde (analog sahalarda) denenir. Ama hiçbir yer her açıdan benzemez: bir yer rover sürüşü için mükemmel, buz sondajı için
-            işe yaramaz olabilir.
+          <Info title={t("Neden Dünya'da prova?", "Why rehearse on Earth?")}>
+            {t(
+              "Bir rover'ı Mars'ta tamir etmek mümkün değil. Bu yüzden ekipman, yöntem ve ekipler önce Dünya'da, Ay'a veya Mars'a benzeyen yerlerde (analog sahalarda) denenir. Ama hiçbir yer her açıdan benzemez: bir yer rover sürüşü için mükemmel, buz sondajı için işe yaramaz olabilir.",
+              "You cannot repair a rover on Mars. So equipment, methods and crews are first tried on Earth, in places that resemble the Moon or Mars (analog sites). But no place is similar in every way: a site can be perfect for rover driving and useless for ice drilling.",
+            )}
           </Info>
-          <Info title="Nasıl aradık?">
-            Dünya'yı {data ? `${data.meta.grid_km} km'lik` : "eşit"} karelere böldük. Her karede NASA ve ESA uydu verisinden eğimi,
-            engebeyi, sıcaklığı, kuraklığı, havadaki tozu, kayaç türünü ve donmuş zemini ölçtük. Sonra her kareyi bir hedef ve bir test
-            amacı için puanladık: her test, kendi önemli gördüğü özelliklere daha çok ağırlık veriyor.
+          <Info title={t("Nasıl aradık?", "How did we search?")}>
+            {en
+              ? `We divided Earth into ${data ? `${data.meta.grid_km} km` : "equal"} cells. In each cell we measured slope, roughness, temperature, aridity, airborne dust, rock type and frozen ground from NASA and ESA satellite data. Then we scored every cell for a target and a test purpose: each test gives more weight to the properties that matter to it.`
+              : `Dünya'yı ${data ? `${data.meta.grid_km} km'lik` : "eşit"} karelere böldük. Her karede NASA ve ESA uydu verisinden eğimi, engebeyi, sıcaklığı, kuraklığı, havadaki tozu, kayaç türünü ve donmuş zemini ölçtük. Sonra her kareyi bir hedef ve bir test amacı için puanladık: her test, kendi önemli gördüğü özelliklere daha çok ağırlık veriyor.`}
           </Info>
-          <Info title="Ne bulduk?">
+          <Info title={t("Ne bulduk?", "What did we find?")}>
             {newTotal !== undefined ? (
-              <>
-                {data?.targets.length} hedef ve {data?.meta.tests.length} test amacının anlamlı{" "}
-                {data?.index?.filter((e) => e.file).length} eşleşmesi için toplam{" "}
-                <b className="text-white">{newTotal.toLocaleString("tr-TR")}</b> yeni aday.{" "}
-              </>
+              en ? (
+                <>
+                  A total of <b className="text-white">{int(newTotal)}</b> new candidates across the{" "}
+                  {data?.index?.filter((e) => e.file).length} meaningful combinations of {data?.targets.length} targets and{" "}
+                  {data?.meta.tests.length} test purposes.{" "}
+                </>
+              ) : (
+                <>
+                  {data?.targets.length} hedef ve {data?.meta.tests.length} test amacının anlamlı{" "}
+                  {data?.index?.filter((e) => e.file).length} eşleşmesi için toplam <b className="text-white">{int(newTotal)}</b> yeni aday.{" "}
+                </>
+              )
             ) : null}
-            Bilinen ünlü sahalar (Atacama, Haughton, İzlanda, Hawaii…) listeye bilerek alınmadı; onlar motoru sınamak için kullanıldı.
+            {t(
+              "Bilinen ünlü sahalar (Atacama, Haughton, İzlanda, Hawaii…) listeye bilerek alınmadı; onlar motoru sınamak için kullanıldı.",
+              "Famous known sites (Atacama, Haughton, Iceland, Hawaii…) were deliberately left out of the list; they were used to test the engine.",
+            )}
           </Info>
         </section>
 
         {/* Yıldız adaylar */}
-        <h2 className="mt-14 font-mono text-sm tracking-[0.25em] text-slate-400">ÜÇ YILDIZ ADAY</h2>
+        <h2 className="mt-14 font-mono text-sm tracking-[0.25em] text-slate-400">{t("ÜÇ YILDIZ ADAY", "THREE STANDOUT CANDIDATES")}</h2>
         <div className="mt-4 grid gap-8">
           {FINDINGS.map((f, i) => (
             <FindingCard key={f.cell} n={i + 1} f={f} data={data} />
@@ -180,17 +233,19 @@ export default function FindingsPage() {
         {/* Dünya'nın taklit edemedikleri */}
         {data && (
           <section className="mt-14">
-            <h2 className="font-mono text-sm tracking-[0.25em] text-slate-400">DÜNYA'NIN TAKLİT EDEMEDİKLERİ</h2>
+            <h2 className="font-mono text-sm tracking-[0.25em] text-slate-400">{t("DÜNYA'NIN TAKLİT EDEMEDİKLERİ", "WHAT EARTH CANNOT IMITATE")}</h2>
             <p className="mt-2 max-w-3xl text-slate-300">
-              Hiçbir analog saha her şeyi sağlamaz. Aşağıdakiler, Dünya'nın hiçbir yerinde gerçek anlamda bulunamayan koşullar. Bunlar için
-              vakum odaları, parabolik uçuşlar ve bilgisayar benzetimleri gerekir.
+              {t(
+                "Hiçbir analog saha her şeyi sağlamaz. Aşağıdakiler, Dünya'nın hiçbir yerinde gerçek anlamda bulunamayan koşullar. Bunlar için vakum odaları, parabolik uçuşlar ve bilgisayar benzetimleri gerekir.",
+                "No analog site provides everything. The conditions below cannot truly be found anywhere on Earth. They need vacuum chambers, parabolic flights and computer simulations.",
+              )}
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[36rem] text-left text-sm">
                 <thead className="font-mono text-[10px] tracking-wider text-slate-500">
                   <tr>
                     <th className="py-2 pr-4" />
-                    <th className="pr-4">AY</th>
+                    <th className="pr-4">{t("AY", "MOON")}</th>
                     <th>MARS</th>
                   </tr>
                 </thead>
@@ -210,38 +265,69 @@ export default function FindingsPage() {
 
         {/* Dürüst sınırlar */}
         <section className="mt-14 rounded-2xl border border-amber-400/20 bg-amber-400/[0.04] p-6">
-          <h2 className="font-mono text-sm tracking-[0.25em] text-amber-200/80">BİLMENİZ GEREKENLER</h2>
+          <h2 className="font-mono text-sm tracking-[0.25em] text-amber-200/80">{t("BİLMENİZ GEREKENLER", "WHAT YOU SHOULD KNOW")}</h2>
           <ul className="mt-3 grid gap-3 text-sm text-slate-300">
             {data?.validation && (
               <li>
-                <b className="text-white">Sınav sonucu: {data.validation.hits}/{data.validation.holdout_total}.</b> Motoru, NASA ve ESA'nın
-                kullandığı dört ünlü saha üzerinde sınadık: her biri kendi testinde Dünya'nın en iyi {pct(data.validation.top_percent, 0)}'ine
-                girmeliydi ve en az {data.validation.min_hits} tanesinin girmesi gerekiyordu.{" "}
-                {closest(data.validation) && <>En yakın olanlar: {closest(data.validation)}. </>}
-                Bu sonucu gizlemiyoruz;{" "}
-                <Link to="/dogrulama" className="text-cyan-300 hover:underline">
-                  ayrıntılar doğrulama sayfasında
-                </Link>
-                .
+                {en ? (
+                  <>
+                    <b className="text-white">
+                      Test result: {data.validation.hits}/{data.validation.holdout_total}.
+                    </b>{" "}
+                    We tested the engine on {data.validation.holdout_total} famous sites used by NASA and ESA: each had to reach the top{" "}
+                    {pct(data.validation.top_percent, 0)} of Earth for its own test, and at least {data.validation.min_hits} had to make it.{" "}
+                    {closest(data.validation, lang) && <>Closest: {closest(data.validation, lang)}. </>}
+                    We do not hide this result;{" "}
+                    <Link to="/dogrulama" className="text-cyan-300 hover:underline">
+                      details and a comparison with chance are on the validation page
+                    </Link>
+                    .
+                  </>
+                ) : (
+                  <>
+                    <b className="text-white">
+                      Sınav sonucu: {data.validation.hits}/{data.validation.holdout_total}.
+                    </b>{" "}
+                    Motoru, NASA ve ESA'nın kullandığı {data.validation.holdout_total} ünlü saha üzerinde sınadık: her biri kendi testinde
+                    Dünya'nın en iyi {pct(data.validation.top_percent, 0)}'ine girmeliydi ve en az {data.validation.min_hits} tanesinin girmesi
+                    gerekiyordu. {closest(data.validation, lang) && <>En yakın olanlar: {closest(data.validation, lang)}. </>}
+                    Bu sonucu gizlemiyoruz;{" "}
+                    <Link to="/dogrulama" className="text-cyan-300 hover:underline">
+                      ayrıntılar ve şansla karşılaştırma doğrulama sayfasında
+                    </Link>
+                    .
+                  </>
+                )}
               </li>
             )}
             <li>
-              <b className="text-white">{data ? `${data.meta.grid_km} km` : "Kare"} çözünürlük.</b> Bir kare küçük bir krateri, bir göl
-              kıyısını ya da bir vadiyi ortalamada kaybedebilir. Yıldız adaylar, sahaya gidilmeden önce daha ince ölçekte incelenmeli.
+              <b className="text-white">
+                {data ? `${data.meta.grid_km} km` : t("Kare", "Cell")} {t("çözünürlük.", "resolution.")}
+              </b>{" "}
+              {t(
+                "Bir kare küçük bir krateri, bir göl kıyısını ya da bir vadiyi ortalamada kaybedebilir. Yıldız adaylar, sahaya gidilmeden önce daha ince ölçekte incelenmeli.",
+                "A cell can average away a small crater, a lake shore or a valley. Standout candidates should be examined at a finer scale before anyone goes to the field.",
+              )}
             </li>
             <li>
-              <b className="text-white">Mağaralar ve lav tüpleri yörüngeden görünmez.</b> Motor sadece tüp oluşabilecek araziyi ölçebiliyor.
+              <b className="text-white">{t("Mağaralar ve lav tüpleri yörüngeden görünmez.", "Caves and lava tubes cannot be seen from orbit.")}</b>{" "}
+              {t("Motor sadece tüp oluşabilecek araziyi ölçebiliyor.", "The engine can only measure terrain where tubes can form.")}
             </li>
             <li>
-              <b className="text-white">Ay ve Mars değerleri tek bir noktadan.</b> Her hedef için değerler NASA görev verisi (LOLA, Diviner,
-              MOLA) ve yayımlanmış makalelerden; kaynakların hepsi aday kartlarında yazıyor.
+              <b className="text-white">{t("Ay ve Mars değerleri tek bir noktadan.", "Moon and Mars values come from a single point.")}</b>{" "}
+              {t(
+                "Her hedef için değerler NASA görev verisi (LOLA, Diviner, MOLA) ve yayımlanmış makalelerden; kaynakların hepsi aday kartlarında yazıyor.",
+                "Values for each target come from NASA mission data (LOLA, Diviner, MOLA) and published papers; every source is listed on the candidate cards.",
+              )}
             </li>
           </ul>
         </section>
 
         <p className="mt-10 text-xs text-slate-500">
-          Veri: NASA (MODIS, GPM IMERG, ASTER GED, SEDAC, LRO LOLA ve Diviner, MGS MOLA, GIBS), ESA (Copernicus DEM, CCI Permafrost), Mars
-          Climate Database (LMD/ESA/CNES). Yer adları: OpenStreetMap Nominatim. Ayrıntılı kaynak listesi: DATA_SOURCES.md.
+          {t(
+            "Veri: NASA (MODIS, GPM IMERG, ASTER GED, SEDAC, LRO LOLA ve Diviner, MGS MOLA, GIBS), ESA (Copernicus DEM, CCI Permafrost), Mars Climate Database (LMD/ESA/CNES). Yer adları: OpenStreetMap Nominatim. Ayrıntılı kaynak listesi: DATA_SOURCES.md.",
+            "Data: NASA (MODIS, GPM IMERG, ASTER GED, SEDAC, LRO LOLA and Diviner, MGS MOLA, GIBS), ESA (Copernicus DEM, CCI Permafrost), Mars Climate Database (LMD/ESA/CNES). Place names: OpenStreetMap Nominatim. Full source list: DATA_SOURCES.md.",
+          )}
         </p>
       </main>
     </SpaceLayout>
@@ -249,12 +335,12 @@ export default function FindingsPage() {
 }
 
 /** Sınav sahalarından en iyi iki dilim: "Svalbard (%2,6), Lut (%5,5)". */
-function closest(v: ValidationResult) {
+function closest(v: ValidationResult, lang: Lang) {
   return v.analogs
     .filter((a) => a.split === "holdout" && a.status === "ok" && a.percentile !== undefined)
     .sort((a, b) => (a.percentile ?? 0) - (b.percentile ?? 0))
     .slice(0, 2)
-    .map((a) => `${a.name} (en iyi ${pct(a.percentile ?? 0, 1)})`)
+    .map((a) => (lang === "en" ? `${a.name} (top ${pct(a.percentile ?? 0, 1)})` : `${a.name} (en iyi ${pct(a.percentile ?? 0, 1)})`))
     .join(", ");
 }
 
@@ -267,7 +353,9 @@ function Info({ title, children }: { title: string; children: ReactNode }) {
   );
 }
 
-function FindingCard({ n, f, data }: { n: number; f: Finding; data: Loaded | null }) {
+function FindingCard({ n, f: base, data }: { n: number; f: Finding; data: Loaded | null }) {
+  const { t, lang, en } = useLang();
+  const f = en ? { ...base, ...base.en, image: { ...base.image, credit: base.en.credit } } : base;
   const list = data?.lists[`${f.targetId}_${f.testId}`] ?? [];
   const a = list.find((x) => x.id === f.cell);
   const target = data?.targets.find((t) => t.id === f.targetId);
@@ -284,7 +372,7 @@ function FindingCard({ n, f, data }: { n: number; f: Finding; data: Loaded | nul
             <div className="relative aspect-square">
               <img
                 src={gibsUrl(f, a.lat, a.lon)}
-                alt={`${f.place} uydu görüntüsü`}
+                alt={t(`${f.place} uydu görüntüsü`, `Satellite image of ${f.place}`)}
                 decoding="async"
                 className="aspect-square w-full object-cover"
               />
@@ -295,19 +383,19 @@ function FindingCard({ n, f, data }: { n: number; f: Finding; data: Loaded | nul
                 aria-hidden
               />
               <figcaption className="absolute bottom-0 left-0 right-0 bg-black/60 px-3 py-1.5 font-mono text-[10px] text-slate-300">
-                {f.image.credit} · çerçeve: puanlanan {data?.meta.grid_km} km'lik kare
+                {f.image.credit} · {en ? `frame: the scored ${data?.meta.grid_km} km cell` : `çerçeve: puanlanan ${data?.meta.grid_km} km'lik kare`}
               </figcaption>
             </div>
           ) : (
             <div className="flex aspect-square items-center justify-center p-6 text-center text-sm text-slate-500">
-              {data ? "Bu kare güncel tarama sonuçlarında yok: anlatı güncellenmeli." : "Yükleniyor…"}
+              {data ? t("Bu kare güncel tarama sonuçlarında yok: anlatı güncellenmeli.", "This cell is not in the current scan results: the story needs updating.") : t("Yükleniyor…", "Loading…")}
             </div>
           )}
         </figure>
 
         <div className="p-6">
           <p className="font-mono text-[11px] tracking-wider text-cyan-300/80">
-            {String(n).padStart(2, "0")} · {f.body === "mars" ? "MARS" : "AY"} · {target?.name ?? f.targetId} · {test?.label ?? f.testId}
+            {String(n).padStart(2, "0")} · {f.body === "mars" ? "MARS" : t("AY", "MOON")} · {target?.name ?? f.targetId} · {test?.label ?? f.testId}
           </p>
           <h3 className="mt-2 text-2xl font-semibold text-white">{f.place}</h3>
           <p className="text-sm text-slate-400">
@@ -323,19 +411,40 @@ function FindingCard({ n, f, data }: { n: number; f: Finding; data: Loaded | nul
                 <span className="ml-1 text-xs text-slate-500">/ 100</span>
               </div>
               <p className="text-xs text-slate-400">
-                Bu testte <b className="text-slate-200">{a.rank}.</b> sırada
-                {near >= 8 && <> · ilk 20 adayın {near}'i bu yerin 1.000 km çevresinde: tek bir şanslı kare değil, bölgesel bir sinyal</>}
+                {en ? (
+                  <>
+                    Rank <b className="text-slate-200">#{a.rank}</b> in this test
+                    {near >= 8 && <> · {near} of the top 20 candidates lie within 1,000 km of here: not one lucky cell but a regional signal</>}
+                  </>
+                ) : (
+                  <>
+                    Bu testte <b className="text-slate-200">{a.rank}.</b> sırada
+                    {near >= 8 && <> · ilk 20 adayın {near}'i bu yerin 1.000 km çevresinde: tek bir şanslı kare değil, bölgesel bir sinyal</>}
+                  </>
+                )}
               </p>
             </div>
           )}
 
           {known && a && (
             <p className="mt-3 rounded-lg border border-cyan-400/20 bg-cyan-400/[0.05] px-3 py-2 text-xs text-slate-300">
-              Karşılaştırma: aynı testte NASA'nın bilinen sahası <b className="text-white">{known.name}</b> {num(known.score_total, 1)} puan
-              alıyor (Dünya'nın en iyi {pct(known.percentile ?? 0, 1)}'i).{" "}
-              {a.score_total > (known.score_total ?? 0)
-                ? `Bu az bilinen ada ${num(a.score_total, 1)} puanla daha yüksekte.`
-                : `Bu aday ${num(a.score_total, 1)} puan alıyor.`}
+              {en ? (
+                <>
+                  Comparison: in the same test NASA's known site <b className="text-white">{known.name}</b> scores {num(known.score_total, 1)}{" "}
+                  (top {pct(known.percentile ?? 0, 1)} of Earth).{" "}
+                  {a.score_total > (known.score_total ?? 0)
+                    ? `This little-known island scores higher, at ${num(a.score_total, 1)}.`
+                    : `This candidate scores ${num(a.score_total, 1)}.`}
+                </>
+              ) : (
+                <>
+                  Karşılaştırma: aynı testte NASA'nın bilinen sahası <b className="text-white">{known.name}</b> {num(known.score_total, 1)} puan
+                  alıyor (Dünya'nın en iyi {pct(known.percentile ?? 0, 1)}'i).{" "}
+                  {a.score_total > (known.score_total ?? 0)
+                    ? `Bu az bilinen ada ${num(a.score_total, 1)} puanla daha yüksekte.`
+                    : `Bu aday ${num(a.score_total, 1)} puan alıyor.`}
+                </>
+              )}
             </p>
           )}
 
@@ -343,23 +452,23 @@ function FindingCard({ n, f, data }: { n: number; f: Finding; data: Loaded | nul
 
           {a && (
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              <ParamList title="Benzeyen" ok items={a.params.filter((p) => p.match)} label={label} />
-              <ParamList title="Benzemeyen" ok={false} items={a.params.filter((p) => !p.match)} label={label} />
+              <ParamList title={t("Benzeyen", "Similar")} ok items={a.params.filter((p) => p.match)} label={label} />
+              <ParamList title={t("Benzemeyen", "Not similar")} ok={false} items={a.params.filter((p) => !p.match)} label={label} />
             </div>
           )}
 
           <div className="mt-4 grid gap-3 text-sm">
             <p>
-              <span className="font-mono text-[10px] tracking-wider text-emerald-300/80">BURADA NE DENENİR · </span>
+              <span className="font-mono text-[10px] tracking-wider text-emerald-300/80">{t("BURADA NE DENENİR · ", "WHAT CAN BE TESTED HERE · ")}</span>
               <span className="text-slate-300">{f.use}</span>
             </p>
             <p>
-              <span className="font-mono text-[10px] tracking-wider text-rose-300/80">ANALOJİ NEREDE KOPUYOR · </span>
+              <span className="font-mono text-[10px] tracking-wider text-rose-300/80">{t("ANALOJİ NEREDE KOPUYOR · ", "WHERE THE ANALOGY BREAKS · ")}</span>
               <span className="text-slate-300">{f.caveat}</span>
               {a && data && (
                 <span className="text-slate-400">
                   {" "}
-                  Ayrıca: {a.breakdown.map((k) => data.meta.breakdown_labels[k].toLocaleLowerCase("tr-TR")).join(", ")}.
+                  {t("Ayrıca:", "Also:")} {a.breakdown.map((k) => data.meta.breakdown_labels[k].toLocaleLowerCase(lang === "en" ? "en-US" : "tr-TR")).join(", ")}.
                 </span>
               )}
             </p>
@@ -373,7 +482,7 @@ function FindingCard({ n, f, data }: { n: number; f: Finding; data: Loaded | nul
                 </span>
               ))}
               <Link to={`/${f.body}/${f.targetId}/${f.testId}`} className="ml-auto font-mono text-cyan-300 hover:underline">
-                HARİTADA AÇ →
+                {t("HARİTADA AÇ →", "OPEN ON MAP →")}
               </Link>
             </div>
           )}
@@ -394,11 +503,12 @@ function ParamList({
   items: Analog["params"];
   label: (key: string) => string;
 }) {
+  const { t, lang } = useLang();
   if (!items.length) return null;
   return (
     <div>
       <p className={`font-mono text-[10px] tracking-wider ${ok ? "text-emerald-300/80" : "text-rose-300/80"}`}>
-        {title.toLocaleUpperCase("tr-TR")} <span className="text-slate-500">· DÜNYA / HEDEF</span>
+        {title.toLocaleUpperCase(lang === "en" ? "en-US" : "tr-TR")} <span className="text-slate-500">· {t("DÜNYA / HEDEF", "EARTH / TARGET")}</span>
       </p>
       <ul className="mt-1 grid gap-1 text-xs">
         {items.map((p) => (
