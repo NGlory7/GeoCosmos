@@ -295,3 +295,11 @@ def test_translation_with_engine_field_rejected(fresh_analogs, tmp_path):
     res = add_translations(fresh_analogs, generate=lambda p: 'Slope gave a "match": true result here.',
                            cache_path=tmp_path / "c.json", kept={})
     assert res["written"] == 0 and res["empty"] > 0
+
+
+def test_fix_directions_follows_turkish_comment():
+    from pipeline.commentary import fix_directions
+
+    tr = "73,82°K, 94,49°B konumundaki bölge; 12.5°G 30°D"
+    en = "The region at 73.82°W, 94.49°E; 12.5° N 30°W and 5°N elsewhere"
+    assert fix_directions(en, tr) == "The region at 73.82°N, 94.49°W; 12.5° S 30°E and 5°N elsewhere"

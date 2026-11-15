@@ -304,6 +304,18 @@ def tidy_translation(text: str) -> str:
     return re.sub(r"`([^`]*)`", r"\1", text)
 
 
+_DIR_TR = re.compile(r"(\d+(?:[.,]\d+)?)\s*°\s*([KGDB])\b")
+_DIR_EN = re.compile(r"(\d+(?:[.,]\d+)?)(\s*°\s*)([NSEW])\b")
+_TR_TO_EN = {"K": "N", "G": "S", "D": "E", "B": "W"}
+
+
+def fix_directions(en: str, tr: str) -> str:
+    """Gemini koordinat yönlerini karıştırabiliyor (73.82°K -> 73.82°W). Sayı kontrolü bunu yakalamaz:
+    her "sayı° yön" çiftinin yönü Türkçe yorumdaki aynı sayının yönünden (K/G/D/B -> N/S/E/W) yeniden yazılır."""
+    want = {a.replace(",", "."): _TR_TO_EN[d] for a, d in _DIR_TR.findall(tr)}
+    return _DIR_EN.sub(lambda m: m.group(1) + m.group(2) + want.get(m.group(1).replace(",", "."), m.group(3)), en)
+
+
 def existing_translations(analog_dir: Path = ANALOG_DIR) -> dict[str, str]:
     """Diskteki çeviriler, Türkçe yorumun özetine göre (yorum değişirse çeviri yeniden yapılır)."""
     kept: dict[str, str] = {}
@@ -327,10 +339,10 @@ def translation_for(props: dict, generate: Callable[[str], str] | None, cache: d
         return ""
     key = _text_key(tr)
     if key in kept:
-        return tidy_translation(kept[key])
+        return fix_directions(tidy_translation(kept[key]), tr)
     ckey = "en2:" + key  # en2: alan adlarını sade dille yazan istem
     if ckey in cache:
-        return tidy_translation(cache[ckey])
+        return fix_directions(tidy_translation(cache[ckey]), tr)
     if generate is None:
         return ""
     try:
@@ -341,7 +353,7 @@ def translation_for(props: dict, generate: Callable[[str], str] | None, cache: d
     text = ""
     for _ in range(max_retries + 1):
         candidate = generate(TRANSLATE_PROMPT.format(text=tr))
-        candidate = tidy_translation(candidate or "")
+        candidate = fix_directions(tidy_translation(candidate or ""), tr)
         if candidate and not invented_numbers(candidate, allowed) and not ENGINE_WORDS.search(candidate):
             text = candidate
             break
