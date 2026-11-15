@@ -472,7 +472,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "Dünya üzerindeki 60.71°K, 70.92°B koordinatlarında yer alan bu bölge, Arcadia Planitia hedefi için 79.7 toplam skor elde etmiştir. Jeoloji alt skorunun 99.8 ve topografya alt skorunun 90.6 olması, ortalama eğim (Dünya'da 0.8, hedefte 0.25), yüzey pürüzlülüğü (Dünya'da 12.76 m, hedefte 4.63 m), yıllık ortalama öğlen güneş yüksekliği (Dünya'da 29.29°, hedefte 43.0°), donmuş zemin (Dünya ve hedefte 0.75) ile kuraklık (Dünya'da 0.79, hedefte 1.0) parametrelerinin \"match\": true koşulunu sağlaması sayesinde bu alanın üs kurulumu ve iniş alanı testleri için uygun olabileceğini göstermektedir. Bölge ayrıca yeni aday statüsündedir, yol erişimi bulunmamaktadır (road_access: false) ve uzaktır (remote: true).\n\nBuna karşın iklim alt skoru 59.6'da kalmıştır ve bazı temel çevresel kopma noktalarında hedefle uyuşmamaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, küresel manyetik alan bulunmamaktadır ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Ayrıca atmosfer çok ince (~%0,6) olup çoğunlukla CO₂'den oluşur ve toz taşınımı farklı işler."
    }
   },
   {
@@ -551,7 +551,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "72.69°K, 100.71°B konumundaki bu bölge, Arcadia Planitia hedefi için toplam 79.7 skorla değerlendirilmiştir. Topoğrafya (99.4) ve jeoloji (50.4 iklim skorunun yanı sıra genel alt başlıklarda) kategorilerinde yüksek uyum gösteren bu saha; ortalama eğim (0.23 Dünya, 0.25 hedef), yüzey pürüzlülüğü (4.08 Dünya, 4.63 hedef), donmuş zemin/yüzeye yakın buz (0.76 Dünya, 0.75 hedef) ve kuraklık (0.92 Dünya, 1.0 hedef) parametrelerinde eşleşme sağlamaktadır. Ayrıca yol erişimi bulunmamakta ve bölge uzaktır.\n\nBuna karşın, yıllık ortalama öğlen güneş yüksekliği parametresinde (17.31 Dünya, 43.0 hedef) uyum sağlanamamıştır. İklim skoru 50.4 seviyesinde kalırken; yerçekimi Dünya'nın ~%38'i (3,71 m/s²), küresel manyetik alan yok, yüzey radyasyonu Dünya'dan çok yüksek, yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Atmosfer çok ince (~%0,6) olup çoğunlukla CO₂ içerir ve toz taşınımı farklı işler."
    }
   },
   {
@@ -630,7 +630,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "69.75°K, 98.10°B koordinatlarında yer alan bu bölge, 79.7 toplam skorla Arcadia Planitia hedefi için üs kurulumu ve iniş alanı testlerinde bazı açılardan yüksek uyum göstermektedir. Özellikle ortalama eğim (Dünya'da 0.31, hedefte 0.25), yüzey pürüzlülüğü (Dünya'da 6.42 m, hedefte 4.63 m), donmuş zemin / yüzeye yakın buz oranları (Dünya'da 0.76, hedefte 0.75) ve kuraklık değerleri (Dünya'da 0.88, hedefte 1.0) açısından benzerlik göstererek \"match\": true çıktısı vermiştir. Topografya skoru 98.1 ve jeoloji skoru 98.5 olarak hesaplanmıştır.\n\nBuna karşın, iklim skoru 51.8'de kalmakta olup yıllık ortalama öğlen güneş yüksekliği Dünya'da 20.25° iken hedefte 43.0° olarak eşleşmemektedir. Ayrıca, operasyonel olarak yol erişimi bulunmamakta ve bölge izole (remote) durumdadır. Bu coğrafi konumun ötesindeki fiziksel ve çevresel kopma noktalarında ise yerçekimi Dünya'nın ~%38'i (3,71 m/s²) kadardır, küresel manyetik alan yoktur ve yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişerek Dünya'daki çöl analoglarından onlarca derece soğuktur; ayrıca atmosfer çok ince olup (~%0,6) çoğunlukla CO₂'den oluşur ve toz taşınımı farklı işler."
    }
   },
   {
@@ -709,7 +709,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "58.22°K, 94.63°B konumundaki bu bölge, Arcadia Planitia hedefi için 79.6 toplam skor sunmaktadır. Topografya (99.2) ve jeoloji (98.5) boyut skorları oldukça yüksektir. Ortalama eğim, yüzey pürüzlülüğü, yıllık ortalama öğlen güneş yüksekliği ve donmuş zemin parametrelerinde hedef ile uyum sağlanmış olup (`match`: true), kuraklık parametresinde ise uyum sağlanmamıştır (`match`: false).\n\nBuna karşın, iklim boyut skorunun 50.5'te kalması ve bazı temel çevresel faktörler önemli kopma noktaları oluşturmaktadır. Yerçekimi Dünya'nın ~%38'i (3,71 m/s²) düzeyindedir ve küresel manyetik alan bulunmamaktadır. Yüzey radyasyonu Dünya'dan çok yüksektir. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasındadır ve Dünya'daki çöl analoglarından onlarca derece soğuktur. Ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'den oluşmakta, toz taşınımı farklı işlemektedir. Yol erişimi bulunmamakta ve bölge uzaktır (`remote`: true)."
    }
   },
   {
@@ -788,7 +788,7 @@
      "atmosphere"
     ],
     "past_tests": [],
-    "ai_comment": ""
+    "ai_comment": "71.56°K, 99.26°B konumundaki bu bölge, 79.4 toplam skor ile Arcadia Planitia hedefi için üs kurulumu ve iniş alanı testlerinde değerlendirilmiştir. Topografya (98.4) ve jeoloji (99.1) boyut skorları oldukça yüksektir. Ortalama eğim Dünya'da 0.27 iken hedefte 0.25'tir; yüzey pürüzlülüğü Dünya'da 6.31 m, hedefte ise 4.63 m'dir ve bu parametreler ile donmuş zemin (Dünya 0.74, hedef 0.75) ve kuraklık (Dünya 0.9, hedef 1.0) değerleri eşleşmektedir (`benziyor`: true). Ayrıca bölge `road_access`: false ve `remote`: true özelliklerine sahip yeni bir adaydır.\n\nBuna karşın, iklim boyut skorunun 50.7'de kalması nedeniyle önemli farklılıklar bulunmaktadır. Yıllık ortalama öğlen güneş yüksekliği Dünya'da 18.44° iken hedefte 43.0°'dir ve bu parametre eşleşmemektedir (`benziyor`: false). Kopma noktaları arasında yerçekiminin Dünya'nın yaklaşık %38'i (3,71 m/s²) olması, küresel manyetik alanın bulunmaması ve yüzey radyasyonunun Dünya'dan çok yüksek olması yer almaktadır. Yıllık ortalama yüzey sıcaklığı hedefe göre yaklaşık −40 ile −75 °C arasında değişmekte olup Dünya'daki çöl analoglarından onlarca derece soğuktur; ayrıca atmosfer çok ince (~%0,6) ve çoğunlukla CO₂'dir, bu da toz taşınımının farklı işlemesine neden olmaktadır."
    }
   },
   {

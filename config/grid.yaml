@@ -112,7 +112,7 @@ heatmap:
   colormap: magma
   alpha: 0.75                # veri olmayan/maskeli kareler tamamen saydam
 commentary:
-  top_k: 5                   # her dosyada ilk kaç adaya Gemini yorumu yazılır (kota)
+  top_k: 20                  # her dosyada ilk kaç adaya Gemini yorumu yazılır (20 = tüm pinler; 25 x 20 = 500 yorum, ücretsiz kota ~1 gün)
   max_retries: 2             # yorumda motorda olmayan sayı çıkarsa yeniden üret
   min_interval_s: 4.5        # istekler arası bekleme: ücretsiz kota dakikada 15 istek (lite); 4,5 sn ≈ 13/dk
   rate_limit_retries: 5      # 429 (kota) ya da 500/503 (Gemini yoğun) gelirse bekleyip yeniden dene
