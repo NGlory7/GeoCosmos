@@ -5,7 +5,7 @@ Sıra:
   2. analogs/<hedef>_<test>.geojson       (pipeline/discovery.py)   \
   3. validation.json                      (pipeline/validation.py)   } data/processed/grid.parquet gerekir
   4. heatmaps/<hedef>_<test>.png          (pipeline/heatmap.py)      /
-  5. ai_comment alanları                  (pipeline/commentary.py; GEMINI_API_KEY gerekir)
+  5. ai_comment, ai_comment_en alanları   (pipeline/commentary.py; GEMINI_API_KEY gerekir)
   6. logistics.json                       (pipeline/logistics.py; yeni aday kareleri için Earth Engine gerekir,
                                            yoksa mevcut değerlerle puanlar yeniden hesaplanır)
 
@@ -93,6 +93,7 @@ def build(grid_path: Path = GRID_PATH, out_dir: Path = OUT_DIR,
     grid = pd.read_parquet(grid_path)
     report["grid"] = f"{len(grid)} kare"
     kept = comm.existing_comments(out_dir / "analogs")  # yeniden yazmadan önce: yorumlar silinmesin
+    kept_en = comm.existing_translations(out_dir / "analogs")
     idx = discovery.run_discovery(grid, out_dir / "analogs")
     report["analogs"] = sum(1 for e in idx if e["file"])
     report["analogs_skipped"] = [f"{e['target_id']}/{e['test_id']}" for e in idx if not e["file"]]
@@ -105,6 +106,8 @@ def build(grid_path: Path = GRID_PATH, out_dir: Path = OUT_DIR,
     kw = {"cache_path": fine_scan_path.parent / "commentary_cache.json"} if fine_scan_path else {}
     report["commentary"] = comm.add_comments(out_dir / "analogs", generate=generate, kept=kept,
                                              allow_generate=commentary, **kw)
+    report["commentary_en"] = comm.add_translations(out_dir / "analogs", generate=generate, kept=kept_en,
+                                                    allow_generate=commentary, **kw)
     report["logistics"] = logistics.run(out_dir / "analogs", out_dir / "logistics.json", online=logistics_online)
     return report
 

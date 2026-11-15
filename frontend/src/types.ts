@@ -56,6 +56,7 @@ export interface Analog {
   breakdown: BreakdownKey[];
   past_tests: PastTest[];
   ai_comment: string;
+  ai_comment_en?: string; // Gemini çevirisi; yoksa İngilizce arayüzde Türkçe yorum gösterilir
 }
 
 // logistics.json (pipeline/logistics.py -> core/logistics.py): kurulum kolaylığı, benzerliğe katılmaz

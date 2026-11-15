@@ -243,3 +243,55 @@ def test_rebuild_keeps_comments_without_key_or_cache(grid, tmp_path):
                              heatmaps=False, commentary=False)
     after = json.loads(next((out / "analogs").glob("*.geojson")).read_text(encoding="utf-8"))
     assert [f["properties"]["ai_comment"] for f in after["features"]] == before
+
+
+
+@pytest.fixture
+def fresh_analogs(grid, tmp_path):
+    """Kendi derlemesi: modül çapındaki built klasörünü başka testler değiştiriyor."""
+    grid.to_parquet(tmp_path / "grid.parquet")
+    build_mod.build(tmp_path / "grid.parquet", tmp_path / "out", fine_scan_path=tmp_path / "fs" / "fs.json",
+                    heatmaps=False, generate=fake_gemini)
+    return tmp_path / "out" / "analogs"
+
+
+def test_translations_written_and_kept(fresh_analogs, tmp_path):
+    """Yorumu olan her adayın İngilizce çevirisi var; yeniden çalıştırmada Gemini çağrılmaz."""
+    from pipeline.commentary import add_translations
+
+    feats = [f["properties"] for p in fresh_analogs.glob("*.geojson")
+             for f in json.loads(p.read_text(encoding="utf-8"))["features"]]
+    with_comment = [p for p in feats if p.get("ai_comment")]
+    assert with_comment and all(p.get("ai_comment_en") for p in with_comment)
+    assert not any(p.get("ai_comment_en") for p in feats if not p.get("ai_comment"))
+
+    def must_not_call(prompt):
+        raise AssertionError("diskteki çeviri için Gemini çağrılmamalı")
+
+    res = add_translations(fresh_analogs, generate=must_not_call, cache_path=tmp_path / "c.json")
+    assert res["written"] == len(with_comment) and res["empty"] == 0
+
+
+def test_translation_with_invented_number_rejected(fresh_analogs, tmp_path):
+    from pipeline.commentary import add_translations
+
+    res = add_translations(fresh_analogs, generate=lambda p: "This site is 98765.4 km from the nearest city.",
+                           cache_path=tmp_path / "c.json", kept={})
+    assert res["written"] == 0 and res["empty"] > 0
+
+
+def test_tidy_translation_drops_engine_fields():
+    from pipeline.commentary import tidy_translation
+
+    s = "Similar parameters (`benziyor: true`) are: slope 0.67. It is remote (`remote: true`)."
+    assert tidy_translation(s) == "Similar parameters are: slope 0.67. It is remote."
+    assert tidy_translation("uses `road_access` flag") == "uses road_access flag"
+    assert tidy_translation('ratios of 0.72 and 0.56 ("similar": true).') == "ratios of 0.72 and 0.56."
+
+
+def test_translation_with_engine_field_rejected(fresh_analogs, tmp_path):
+    from pipeline.commentary import add_translations
+
+    res = add_translations(fresh_analogs, generate=lambda p: 'Slope gave a "match": true result here.',
+                           cache_path=tmp_path / "c.json", kept={})
+    assert res["written"] == 0 and res["empty"] > 0

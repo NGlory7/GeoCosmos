@@ -91,6 +91,7 @@ class Analog(BaseModel):
     breakdown: list[BreakdownKey]
     past_tests: list[PastTest] = []
     ai_comment: str = ""
+    ai_comment_en: str = ""  # ai_comment'in İngilizce çevirisi (pipeline/commentary.py > add_translations)
 
 
 # --- API ---------------------------------------------------------------------

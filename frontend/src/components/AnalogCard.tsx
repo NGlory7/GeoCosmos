@@ -230,8 +230,10 @@ export default function AnalogCard({ analog, meta, body, targetName, logistics }
 
       {analog.ai_comment && (
         <section>
-          <h3 className="font-mono text-[11px] tracking-[0.2em] text-slate-500">{t("YORUM (GEMINI · SADECE MOTORUN SAYILARIYLA)", "COMMENTARY (GEMINI · ENGINE NUMBERS ONLY · IN TURKISH)")}</h3>
-          <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-300">{analog.ai_comment}</p>
+          <h3 className="font-mono text-[11px] tracking-[0.2em] text-slate-500">
+            {t("YORUM (GEMINI · SADECE MOTORUN SAYILARIYLA)", `COMMENTARY (GEMINI · ENGINE NUMBERS ONLY${analog.ai_comment_en ? "" : " · IN TURKISH"})`)}
+          </h3>
+          <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-300">{t(analog.ai_comment, analog.ai_comment_en || analog.ai_comment)}</p>
         </section>
       )}
     </article>

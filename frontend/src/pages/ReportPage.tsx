@@ -188,8 +188,10 @@ export default function ReportPage() {
 
         {analog.ai_comment && (
           <section className="break-inside-avoid">
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-700">{t("5. Yorum (Gemini, sadece motorun sayılarıyla)", "5. Commentary (Gemini, engine numbers only, in Turkish)")}</h2>
-            <p className="mt-2 whitespace-pre-line text-xs leading-relaxed text-slate-700">{analog.ai_comment}</p>
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-700">
+              {t("5. Yorum (Gemini, sadece motorun sayılarıyla)", `5. Commentary (Gemini, engine numbers only${analog.ai_comment_en ? "" : ", in Turkish"})`)}
+            </h2>
+            <p className="mt-2 whitespace-pre-line text-xs leading-relaxed text-slate-700">{t(analog.ai_comment, analog.ai_comment_en || analog.ai_comment)}</p>
           </section>
         )}
 

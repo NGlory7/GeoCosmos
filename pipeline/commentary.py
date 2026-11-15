@@ -273,5 +273,124 @@ def add_comments(analog_dir: Path = ANALOG_DIR, generate: Callable[[str], str] |
     return {"written": written, "empty": empty, "kept": reused, "skipped": skipped}
 
 
+# --- İngilizce çeviri (ai_comment_en) -------------------------------------------------------
+# Yorum yeniden yazılmaz, Türkçe yorum (sayı kontrolünden geçmiş hali) çevrilir. Çeviride Türkçe
+# yorumda ya da motorun çıktısında olmayan bir sayı varsa çeviri reddedilir (boş kalır).
+
+TRANSLATE_PROMPT = """Translate the following Turkish text into clear, natural English for an international
+science jury. Keep every number exactly as written; use a dot as the decimal separator and no thousands
+separators. Do not add, remove or round any number, name or claim. The Turkish text sometimes quotes
+engine fields such as "benziyor": true, `remote: true` or road_access: false; express them in plain words
+instead (e.g. "matches the target", "is remote", "has no road access") and never write the words true or
+false or any field name. Output only the translation.
+
+{text}
+"""
+
+
+ENGINE_WORDS = re.compile(r"\b(?:true|false|benziyor|road_access)\b")  # çeviride kalmamalı
+
+
+def _text_key(text: str) -> str:
+    return hashlib.sha256(text.encode()).hexdigest()
+
+
+def tidy_translation(text: str) -> str:
+    """Türkçe yorumdan geçen motor alanı parçalarını atar: "(`benziyor: true`)", "`remote: true`".
+    Cümle zaten aynı şeyi söylüyor; sadece karakter siler, sayı eklemez."""
+    text = re.sub(r"\s*\(`[^`]*`\)", "", text)
+    text = re.sub(r"\s*\([^()]*\b(?:true|false)\b[^()]*\)", "", text)  # ("similar": true), (remote: true, ...)
+    text = re.sub(r"\s*\(\s*\)", "", text)
+    return re.sub(r"`([^`]*)`", r"\1", text)
+
+
+def existing_translations(analog_dir: Path = ANALOG_DIR) -> dict[str, str]:
+    """Diskteki çeviriler, Türkçe yorumun özetine göre (yorum değişirse çeviri yeniden yapılır)."""
+    kept: dict[str, str] = {}
+    for path in sorted(analog_dir.glob("*.geojson")):
+        try:
+            feats = json.loads(path.read_text(encoding="utf-8"))["features"]
+        except (json.JSONDecodeError, KeyError):
+            continue
+        for feat in feats:
+            p = feat.get("properties", {})
+            # Alan adı (true/false) kalmış eski çeviri alınmaz: yeniden çevrilsin
+            if p.get("ai_comment") and p.get("ai_comment_en") and not ENGINE_WORDS.search(tidy_translation(p["ai_comment_en"])):
+                kept[_text_key(p["ai_comment"])] = p["ai_comment_en"]
+    return kept
+
+
+def translation_for(props: dict, generate: Callable[[str], str] | None, cache: dict, max_retries: int,
+                    kept: dict[str, str]) -> str:
+    tr = props.get("ai_comment") or ""
+    if not tr:
+        return ""
+    key = _text_key(tr)
+    if key in kept:
+        return tidy_translation(kept[key])
+    ckey = "en2:" + key  # en2: alan adlarını sade dille yazan istem
+    if ckey in cache:
+        return tidy_translation(cache[ckey])
+    if generate is None:
+        return ""
+    try:
+        allowed = prompt_for(props)[1]
+    except KeyError:
+        allowed = set()
+    allowed = allowed | allowed_numbers({"t": tr})
+    text = ""
+    for _ in range(max_retries + 1):
+        candidate = generate(TRANSLATE_PROMPT.format(text=tr))
+        candidate = tidy_translation(candidate or "")
+        if candidate and not invented_numbers(candidate, allowed) and not ENGINE_WORDS.search(candidate):
+            text = candidate
+            break
+    cache[ckey] = text
+    return text
+
+
+def add_translations(analog_dir: Path = ANALOG_DIR, generate: Callable[[str], str] | None = None,
+                     cache_path: Path = CACHE_PATH, kept: dict[str, str] | None = None,
+                     allow_generate: bool = True) -> dict:
+    """ai_comment olan her adaya ai_comment_en yazar. Dönüş: {"written", "empty", "skipped"}."""
+    load_dotenv(ROOT / ".env")
+    if kept is None:
+        kept = existing_translations(analog_dir)
+    skipped = None
+    if not allow_generate:
+        generate, skipped = None, "yeni çeviri kapalı (--skip-commentary)"
+    elif generate is None:
+        if os.getenv("GEMINI_API_KEY"):
+            generate = gemini_generate
+        else:
+            skipped = "GEMINI_API_KEY yok"
+    cfg = load_grid_config()["commentary"]
+    try:
+        cache = json.loads(cache_path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        cache = {}
+    written = empty = 0
+    for path in sorted(analog_dir.glob("*.geojson")):
+        fc = json.loads(path.read_text(encoding="utf-8"))
+        for feat in fc["features"]:
+            props = feat["properties"]
+            if not props.get("ai_comment"):
+                props.pop("ai_comment_en", None)
+                continue
+            try:
+                text = translation_for(props, generate, cache, cfg["max_retries"], kept)
+            except DailyQuotaExhausted:
+                generate, skipped = None, "Gemini günlük kotası doldu; yarın yeniden çalıştır"
+                text = translation_for(props, None, cache, cfg["max_retries"], kept)
+            props["ai_comment_en"] = text
+            written += bool(text)
+            empty += not text
+        path.write_text(json.dumps(fc, ensure_ascii=False, indent=1), encoding="utf-8")
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+    return {"written": written, "empty": empty, "skipped": skipped}
+
+
 if __name__ == "__main__":
     print(add_comments())
+    print(add_translations())
