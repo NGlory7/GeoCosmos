@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_-10.513_-77.116",
     "name": "10.51°G, 77.12°B",
+    "place": {
+     "tr": "Cajatambo, Lima, Peru",
+     "en": "Province of Cajatambo, Lima, Peru"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -81,6 +85,10 @@
    "properties": {
     "id": "g25_34.253_78.168",
     "name": "34.25°K, 78.17°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -149,6 +157,10 @@
    "properties": {
     "id": "g25_38.323_70.602",
     "name": "38.32°K, 70.60°D",
+    "place": {
+     "tr": "Darvoz District, Gorno-Badakhshan Autonomous Region, Tacikistan",
+     "en": "Darvoz District, Gorno-Badakhshan Autonomous Region, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -217,6 +229,10 @@
    "properties": {
     "id": "g25_30.409_95.062",
     "name": "30.41°K, 95.06°D",
+    "place": {
+     "tr": "Bomê County, Xizang Özerk Bölgesi, Çin",
+     "en": "Bomê County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -285,6 +301,10 @@
    "properties": {
     "id": "g25_35.157_74.682",
     "name": "35.16°K, 74.68°D",
+    "place": {
+     "tr": "Astore District, Gilgit-Baltistan, Pakistan",
+     "en": "Astore District, Gilgit-Baltistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -353,6 +373,10 @@
    "properties": {
     "id": "g25_36.062_74.146",
     "name": "36.06°K, 74.15°D",
+    "place": {
+     "tr": "Gilgit District, Gilgit-Baltistan, Pakistan",
+     "en": "Gilgit District, Gilgit-Baltistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -421,6 +445,10 @@
    "properties": {
     "id": "g25_-15.713_-72.308",
     "name": "15.71°G, 72.31°B",
+    "place": {
+     "tr": "Castilla, Arequipa, Peru",
+     "en": "Province of Castilla, Arequipa, Peru"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -489,6 +517,10 @@
    "properties": {
     "id": "g25_36.740_74.950",
     "name": "36.74°K, 74.95°D",
+    "place": {
+     "tr": "Hunza District, Gilgit-Baltistan, Pakistan",
+     "en": "Hunza District, Gilgit-Baltistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -557,6 +589,10 @@
    "properties": {
     "id": "g25_35.157_76.023",
     "name": "35.16°K, 76.02°D",
+    "place": {
+     "tr": "Ghanche District, Gilgit-Baltistan, Pakistan",
+     "en": "Ghanche District, Gilgit-Baltistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -625,6 +661,10 @@
    "properties": {
     "id": "g25_35.384_72.805",
     "name": "35.38°K, 72.81°D",
+    "place": {
+     "tr": "Upper Kohistan District, Khyber Pakhtunkhwa, Pakistan",
+     "en": "Upper Kohistan District, Khyber Pakhtunkhwa, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -693,6 +733,10 @@
    "properties": {
     "id": "g25_38.097_72.076",
     "name": "38.10°K, 72.08°D",
+    "place": {
+     "tr": "Rushon District, Gorno-Badakhshan Autonomous Region, Tacikistan",
+     "en": "Rushon District, Gorno-Badakhshan Autonomous Region, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -761,6 +805,10 @@
    "properties": {
     "id": "g25_28.827_98.209",
     "name": "28.83°K, 98.21°D",
+    "place": {
+     "tr": "Zayu County, Xizang Özerk Bölgesi, Çin",
+     "en": "Zayu County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -829,6 +877,10 @@
    "properties": {
     "id": "g25_38.549_75.319",
     "name": "38.55°K, 75.32°D",
+    "place": {
+     "tr": "Aqto County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aqto County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -897,6 +949,10 @@
    "properties": {
     "id": "g25_36.514_72.269",
     "name": "36.51°K, 72.27°D",
+    "place": {
+     "tr": "Çitral, Khyber Pakhtunkhwa, Pakistan",
+     "en": "Chitrāl District, Khyber Pakhtunkhwa, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -965,6 +1021,10 @@
    "properties": {
     "id": "g25_30.183_80.850",
     "name": "30.18°K, 80.85°D",
+    "place": {
+     "tr": "Dharchula, Uttarakhand, Hindistan",
+     "en": "Dharchula Tehsil, Uttarakhand, India"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -1033,6 +1093,10 @@
    "properties": {
     "id": "g25_-29.957_-70.337",
     "name": "29.96°G, 70.34°B",
+    "place": {
+     "tr": "Provincia de Elqui, Región de Coquimbo, Şili",
+     "en": "Provincia de Elqui, Coquimbo Region, Chile"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -1101,6 +1165,10 @@
    "properties": {
     "id": "g25_41.940_80.330",
     "name": "41.94°K, 80.33°D",
+    "place": {
+     "tr": "Onsu İlçesi, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Onsu County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -1169,6 +1237,10 @@
    "properties": {
     "id": "g25_65.906_141.213",
     "name": "65.91°K, 141.21°D",
+    "place": {
+     "tr": "Momsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Momsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -1237,6 +1309,10 @@
    "properties": {
     "id": "g25_33.123_77.632",
     "name": "33.12°K, 77.63°D",
+    "place": {
+     "tr": "Leh district, Ladakh, Hindistan",
+     "en": "Leh district, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",
@@ -1305,6 +1381,10 @@
    "properties": {
     "id": "g25_43.523_84.541",
     "name": "43.52°K, 84.54°D",
+    "place": {
+     "tr": "Nilka County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Nilka County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "rover",

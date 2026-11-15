@@ -23,6 +23,8 @@ import pandas as pd
 from core.profiles import (load_grid_config, load_known_analogs, load_parameters, load_profiles,
                            load_targets)
 from core.scoring import skip_reason, top_analogs, usable_weights
+from pipeline.placenames import attach_places
+from pipeline.placenames import load_cache as load_place_cache
 
 ROOT = Path(__file__).resolve().parent.parent
 GRID_PATH = ROOT / "data" / "processed" / "grid.parquet"
@@ -74,6 +76,7 @@ def run_discovery(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> 
     cfg = load_grid_config()["discovery"]
     params = load_parameters()
     pool = candidates(grid)
+    places = load_place_cache()  # yer adları sadece önbellekten (ağ yok): python -m pipeline.placenames
     index = []
     for target in load_targets().values():
         for profile in load_profiles().values():
@@ -87,6 +90,7 @@ def run_discovery(grid: pd.DataFrame | None = None, out_dir: Path = OUT_DIR) -> 
             analogs = top_analogs(pool, target, profile, n=cfg["top_n"], params=params,
                                   min_separation_km=cfg["min_separation_km"])
             name_known_cells(analogs, pool)
+            attach_places(analogs, places)
             write_geojson(out_dir / entry["file"], [to_feature(a) for a in analogs])
             index.append({**entry, "count": len(analogs),
                           "new_count": sum(a.is_new for a in analogs),

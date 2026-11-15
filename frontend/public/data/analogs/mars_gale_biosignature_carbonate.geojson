@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_8.705_48.965",
     "name": "8.70°K, 48.96°D",
+    "place": {
+     "tr": "Garowe District, Nugaal, Somali",
+     "en": "Garowe District, Nugaal, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -68,6 +72,10 @@
    "properties": {
     "id": "g25_8.252_49.865",
     "name": "8.25°K, 49.87°D",
+    "place": {
+     "tr": "Eyl District, Nugaal, Somali",
+     "en": "Eyl District, Nugaal, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -123,6 +131,10 @@
    "properties": {
     "id": "g25_7.800_42.661",
     "name": "7.80°K, 42.66°D",
+    "place": {
+     "tr": "Nogob, Somali Bölgesi, Etiyopya",
+     "en": "Nogob, Somali Region, Ethiopia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -178,6 +190,10 @@
    "properties": {
     "id": "g25_2.374_41.086",
     "name": "2.37°K, 41.09°D",
+    "place": {
+     "tr": "El Wak District, Gedo, Somali",
+     "en": "El Wak District, Gedo, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -233,6 +249,10 @@
    "properties": {
     "id": "g25_15.940_49.878",
     "name": "15.94°K, 49.88°D",
+    "place": {
+     "tr": "Al Saum District, Hadramut (il), Yemen",
+     "en": "Al Saum District, Hadramaut Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -288,6 +308,10 @@
    "properties": {
     "id": "g25_15.487_48.952",
     "name": "15.49°K, 48.95°D",
+    "place": {
+     "tr": "Sah District, Hadramut (il), Yemen",
+     "en": "Sah District, Hadramaut Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -343,6 +367,10 @@
    "properties": {
     "id": "g25_10.513_49.647",
     "name": "10.51°K, 49.65°D",
+    "place": {
+     "tr": "Iskushuban, Bari, Somali",
+     "en": "Iskushuban, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -398,6 +426,10 @@
    "properties": {
     "id": "g25_18.879_56.822",
     "name": "18.88°K, 56.82°D",
+    "place": {
+     "tr": "Ad Duqm Province, El Vusta valiliği, Umman",
+     "en": "Ad Duqm Province, Al Wusta Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -453,6 +485,10 @@
    "properties": {
     "id": "g25_17.974_54.970",
     "name": "17.97°K, 54.97°D",
+    "place": {
+     "tr": "Shalim Wa Juzor Al Hallaniyat Province, Zufar valiliği, Umman",
+     "en": "Shalim Wa Juzor Al Hallaniyat Province, Dhofar Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -508,6 +544,10 @@
    "properties": {
     "id": "g25_17.070_52.656",
     "name": "17.07°K, 52.66°D",
+    "place": {
+     "tr": "Shihan District, El-Mehra (il), Yemen",
+     "en": "Shihan District, Al Mahrah Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -563,6 +603,10 @@
    "properties": {
     "id": "g25_15.035_50.110",
     "name": "15.04°K, 50.11°D",
+    "place": {
+     "tr": "Ad Dis ash Sharqiah District, Hadramut (il), Yemen",
+     "en": "Ad Dis ash Sharqiah District, Hadramaut Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -618,6 +662,10 @@
    "properties": {
     "id": "g25_10.287_50.804",
     "name": "10.29°K, 50.80°D",
+    "place": {
+     "tr": "Iskushuban, Bari, Somali",
+     "en": "Iskushuban, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -673,6 +721,10 @@
    "properties": {
     "id": "g25_9.383_50.572",
     "name": "9.38°K, 50.57°D",
+    "place": {
+     "tr": "Bandarbayla, Bari, Somali",
+     "en": "Bayla District, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -728,6 +780,10 @@
    "properties": {
     "id": "g25_-10.513_-39.631",
     "name": "10.51°G, 39.63°B",
+    "place": {
+     "tr": "Monte Santo, Bahia, Brezilya",
+     "en": "Monte Santo, Bahia, Brazil"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -783,6 +839,10 @@
    "properties": {
     "id": "g25_26.566_-101.405",
     "name": "26.57°K, 101.41°B",
+    "place": {
+     "tr": "Castaños, Coahuila, Meksika",
+     "en": "Castaños, Coahuila, Mexico"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -838,6 +898,10 @@
    "properties": {
     "id": "g25_26.792_55.927",
     "name": "26.79°K, 55.93°D",
+    "place": {
+     "tr": "Qeshm County, Hürmüzgan Eyaleti, İran",
+     "en": "Qeshm County, Hormozgan Province, Iran"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -893,6 +957,10 @@
    "properties": {
     "id": "g25_-12.548_-76.046",
     "name": "12.55°G, 76.05°B",
+    "place": {
+     "tr": "Ayauca, Lima, Peru",
+     "en": "Ayauca, Lima, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -948,6 +1016,10 @@
    "properties": {
     "id": "g25_-13.226_-75.111",
     "name": "13.23°G, 75.11°B",
+    "place": {
+     "tr": "Huaytará, Huancavelica, Peru",
+     "en": "Province of Huaytará, Huancavelica, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -1003,6 +1075,10 @@
    "properties": {
     "id": "g25_30.862_-102.034",
     "name": "30.86°K, 102.03°B",
+    "place": {
+     "tr": "Pecos County, Teksas, Amerika Birleşik Devletleri",
+     "en": "Pecos County, Texas, United States"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",
@@ -1058,6 +1134,10 @@
    "properties": {
     "id": "g25_37.192_34.190",
     "name": "37.19°K, 34.19°D",
+    "place": {
+     "tr": "Ayrancı, Türkiye",
+     "en": "Ayrancı, Turkey"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "biosignature_carbonate",

@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_80.150_-88.391",
     "name": "80.15°K, 88.39°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -81,6 +85,10 @@
    "properties": {
     "id": "g25_10.739_48.952",
     "name": "10.74°K, 48.95°D",
+    "place": {
+     "tr": "Las Khorey District, Sanaag, Somaliland",
+     "en": "Las Khorey District, Sanaag, Somaliland"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -149,6 +157,10 @@
    "properties": {
     "id": "g25_78.567_-68.926",
     "name": "78.57°K, 68.93°B",
+    "place": {
+     "tr": "Avannaata, Grönland",
+     "en": "Avannaata, Greenland"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -217,6 +229,10 @@
    "properties": {
     "id": "g25_79.698_94.515",
     "name": "79.70°K, 94.52°D",
+    "place": {
+     "tr": "Taymyrsky Dolgano-Nenetsky District, Krasnoyarsk Krai, Rusya Federasyonu",
+     "en": "Taymyrsky Dolgano-Nenetsky District, Krasnoyarsk Krai, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -285,6 +301,10 @@
    "properties": {
     "id": "g25_81.733_-22.357",
     "name": "81.73°K, 22.36°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -353,6 +373,10 @@
    "properties": {
     "id": "g25_71.332_124.528",
     "name": "71.33°K, 124.53°D",
+    "place": {
+     "tr": "Bulunsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Bulunsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -421,6 +445,10 @@
    "properties": {
     "id": "g25_69.976_150.943",
     "name": "69.98°K, 150.94°D",
+    "place": {
+     "tr": "Allaikhovsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Allaikhovsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -489,6 +517,10 @@
    "properties": {
     "id": "g25_65.906_109.031",
     "name": "65.91°K, 109.03°D",
+    "place": {
+     "tr": "Mirninsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Mirninsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -557,6 +589,10 @@
    "properties": {
     "id": "g25_67.263_149.392",
     "name": "67.26°K, 149.39°D",
+    "place": {
+     "tr": "Verkhnekolymsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Verkhnekolymsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -625,6 +661,10 @@
    "properties": {
     "id": "g25_66.358_111.805",
     "name": "66.36°K, 111.81°D",
+    "place": {
+     "tr": "Mirninsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Mirninsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -693,6 +733,10 @@
    "properties": {
     "id": "g25_47.366_102.645",
     "name": "47.37°K, 102.65°D",
+    "place": {
+     "tr": "Kharkhorin, Övörhangay, Moğolistan",
+     "en": "Kharkhorin, Övörkhangai, Mongolia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -761,6 +805,10 @@
    "properties": {
     "id": "g25_65.002_-19.143",
     "name": "65.00°K, 19.14°B",
+    "place": {
+     "tr": "Húnabyggð, İzlanda",
+     "en": "Húnabyggð, Iceland"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -829,6 +877,10 @@
    "properties": {
     "id": "g25_69.071_131.211",
     "name": "69.07°K, 131.21°D",
+    "place": {
+     "tr": "Bulunsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Bulunsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -897,6 +949,10 @@
    "properties": {
     "id": "g25_70.202_122.538",
     "name": "70.20°K, 122.54°D",
+    "place": {
+     "tr": "Bulunsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Bulunsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -965,6 +1021,10 @@
    "properties": {
     "id": "g25_22.722_58.139",
     "name": "22.72°K, 58.14°D",
+    "place": {
+     "tr": "Al Mudhaibi Province, Ash Sharqiyah North Governorate, Umman",
+     "en": "Al Mudhaibi Province, Ash Sharqiyah North Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -1033,6 +1093,10 @@
    "properties": {
     "id": "g25_64.776_113.993",
     "name": "64.78°K, 113.99°D",
+    "place": {
+     "tr": "Mirninsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Mirninsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -1101,6 +1165,10 @@
    "properties": {
     "id": "g25_68.619_-136.059",
     "name": "68.62°K, 136.06°B",
+    "place": {
+     "tr": "Inuvik Region, Kuzeybatı Toprakları, Kanada",
+     "en": "Inuvik Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -1169,6 +1237,10 @@
    "properties": {
     "id": "g25_64.776_160.199",
     "name": "64.78°K, 160.20°D",
+    "place": {
+     "tr": "Severo-Evensky Urban District, Magadan Oblast, Rusya Federasyonu",
+     "en": "Severo-Evensky Urban District, Magadan Oblast, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -1237,6 +1309,10 @@
    "properties": {
     "id": "g25_67.037_160.079",
     "name": "67.04°K, 160.08°D",
+    "place": {
+     "tr": "Bilibinsky District, Chukotka Autonomous Okrug, Rusya Federasyonu",
+     "en": "Bilibinsky District, Chukotka Autonomous Okrug, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",
@@ -1305,6 +1381,10 @@
    "properties": {
     "id": "g25_60.254_136.030",
     "name": "60.25°K, 136.03°D",
+    "place": {
+     "tr": "Ust-Maysky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Ust-Maysky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "rover",

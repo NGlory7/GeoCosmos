@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_40.584_88.585",
     "name": "40.58°K, 88.58°D",
+    "place": {
+     "tr": "Yuli County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Yuli County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -87,6 +91,10 @@
    "properties": {
     "id": "g25_38.097_83.868",
     "name": "38.10°K, 83.87°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -161,6 +169,10 @@
    "properties": {
     "id": "g25_38.323_85.047",
     "name": "38.32°K, 85.05°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -235,6 +247,10 @@
    "properties": {
     "id": "g25_38.323_82.689",
     "name": "38.32°K, 82.69°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -309,6 +325,10 @@
    "properties": {
     "id": "g25_39.453_81.215",
     "name": "39.45°K, 81.21°D",
+    "place": {
+     "tr": "Lop County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Lop County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -383,6 +403,10 @@
    "properties": {
     "id": "g25_40.358_83.868",
     "name": "40.36°K, 83.87°D",
+    "place": {
+     "tr": "Shayar County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Shayar County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -457,6 +481,10 @@
    "properties": {
     "id": "g25_39.227_82.394",
     "name": "39.23°K, 82.39°D",
+    "place": {
+     "tr": "Keriya County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Keriya County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -531,6 +559,10 @@
    "properties": {
     "id": "g25_40.358_89.764",
     "name": "40.36°K, 89.76°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -605,6 +637,10 @@
    "properties": {
     "id": "g25_37.644_81.215",
     "name": "37.64°K, 81.21°D",
+    "place": {
+     "tr": "Çira, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Chira County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -679,6 +715,10 @@
    "properties": {
     "id": "g25_39.001_86.816",
     "name": "39.00°K, 86.82°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -753,6 +793,10 @@
    "properties": {
     "id": "g25_39.453_79.446",
     "name": "39.45°K, 79.45°D",
+    "place": {
+     "tr": "Maralbexi County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Maralbexi County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -827,6 +871,10 @@
    "properties": {
     "id": "g25_38.549_81.510",
     "name": "38.55°K, 81.51°D",
+    "place": {
+     "tr": "Çira, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Chira County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -901,6 +949,10 @@
    "properties": {
     "id": "g25_37.418_82.394",
     "name": "37.42°K, 82.39°D",
+    "place": {
+     "tr": "Keriya County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Keriya County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -975,6 +1027,10 @@
    "properties": {
     "id": "g25_40.358_81.804",
     "name": "40.36°K, 81.80°D",
+    "place": {
+     "tr": "Aksu, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aksu City, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -1049,6 +1105,10 @@
    "properties": {
     "id": "g25_38.323_80.330",
     "name": "38.32°K, 80.33°D",
+    "place": {
+     "tr": "Karakaş, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qaraqash County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -1123,6 +1183,10 @@
    "properties": {
     "id": "g25_23.627_-7.498",
     "name": "23.63°K, 7.50°B",
+    "place": {
+     "tr": "Tiris Zemmour, Moritanya",
+     "en": "Tiris Zemmour, Mauritania"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -1197,6 +1261,10 @@
    "properties": {
     "id": "g25_27.922_63.056",
     "name": "27.92°K, 63.06°D",
+    "place": {
+     "tr": "Washuk District, Balochistan, Pakistan",
+     "en": "Washuk District, Balochistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -1271,6 +1339,10 @@
    "properties": {
     "id": "g25_39.453_89.174",
     "name": "39.45°K, 89.17°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -1345,6 +1417,10 @@
    "properties": {
     "id": "g25_27.470_-0.615",
     "name": "27.47°K, 0.61°B",
+    "place": {
+     "tr": "Fenoughil District, Adrar Vilayeti, Cezayir",
+     "en": "Fenoughil District, Adrar, Algeria"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",
@@ -1419,6 +1495,10 @@
    "properties": {
     "id": "g25_24.305_-6.515",
     "name": "24.30°K, 6.51°B",
+    "place": {
+     "tr": "Tiris Zemmour, Moritanya",
+     "en": "Tiris Zemmour, Mauritania"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "dust",

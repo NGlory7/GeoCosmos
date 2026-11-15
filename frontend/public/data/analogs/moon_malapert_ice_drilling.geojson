@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_35.157_77.364",
     "name": "35.16°K, 77.36°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -80,6 +84,10 @@
    "properties": {
     "id": "g25_34.479_78.436",
     "name": "34.48°K, 78.44°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -147,6 +155,10 @@
    "properties": {
     "id": "g25_36.288_76.023",
     "name": "36.29°K, 76.02°D",
+    "place": {
+     "tr": "Taşkurgan, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Taxkorgan Tajik Autonomous County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -214,6 +226,10 @@
    "properties": {
     "id": "g25_38.775_75.024",
     "name": "38.77°K, 75.02°D",
+    "place": {
+     "tr": "Aqto County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aqto County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -281,6 +297,10 @@
    "properties": {
     "id": "g25_34.253_77.364",
     "name": "34.25°K, 77.36°D",
+    "place": {
+     "tr": "Leh district, Ladakh, Hindistan",
+     "en": "Leh district, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -348,6 +368,10 @@
    "properties": {
     "id": "g25_36.740_71.464",
     "name": "36.74°K, 71.46°D",
+    "place": {
+     "tr": "İşkaşim, Badahşan Vilayeti, Afganistan",
+     "en": "Ishkashim, Badakhshan Province, Afghanistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -415,6 +439,10 @@
    "properties": {
     "id": "g25_36.062_79.509",
     "name": "36.06°K, 79.51°D",
+    "place": {
+     "tr": "Hotan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Hotan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -482,6 +510,10 @@
    "properties": {
     "id": "g25_37.871_75.319",
     "name": "37.87°K, 75.32°D",
+    "place": {
+     "tr": "Taşkurgan, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Taxkorgan Tajik Autonomous County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -549,6 +581,10 @@
    "properties": {
     "id": "g25_37.871_72.371",
     "name": "37.87°K, 72.37°D",
+    "place": {
+     "tr": "Shughnon District, Gorno-Badakhshan Autonomous Region, Tacikistan",
+     "en": "Shughnon District, Gorno-Badakhshan Autonomous Region, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -616,6 +652,10 @@
    "properties": {
     "id": "g25_36.740_73.341",
     "name": "36.74°K, 73.34°D",
+    "place": {
+     "tr": "Çitral, Khyber Pakhtunkhwa, Pakistan",
+     "en": "Chitrāl District, Khyber Pakhtunkhwa, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -683,6 +723,10 @@
    "properties": {
     "id": "g25_36.966_78.168",
     "name": "36.97°K, 78.17°D",
+    "place": {
+     "tr": "Pishan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Pishan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -750,6 +794,10 @@
    "properties": {
     "id": "g25_36.514_82.727",
     "name": "36.51°K, 82.73°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -817,6 +865,10 @@
    "properties": {
     "id": "g25_39.453_72.961",
     "name": "39.45°K, 72.96°D",
+    "place": {
+     "tr": "Alay ilçesi, Oş İli, Kırgızistan",
+     "en": "Alay District, Osh Region, Kyrgyzstan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -884,6 +936,10 @@
    "properties": {
     "id": "g25_41.036_77.383",
     "name": "41.04°K, 77.38°D",
+    "place": {
+     "tr": "At-Başı ilçesi, Narın ili, Kırgızistan",
+     "en": "At-Bashy District, Naryn Region, Kyrgyzstan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -951,6 +1007,10 @@
    "properties": {
     "id": "g25_39.453_71.487",
     "name": "39.45°K, 71.49°D",
+    "place": {
+     "tr": "Lakhsh, Districts of Republican Subordination, Tacikistan",
+     "en": "Lakhsh, Districts of Republican Subordination, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -1018,6 +1078,10 @@
    "properties": {
     "id": "g25_32.670_79.509",
     "name": "32.67°K, 79.51°D",
+    "place": {
+     "tr": "Gar County, Xizang Özerk Bölgesi, Çin",
+     "en": "Gar County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -1085,6 +1149,10 @@
    "properties": {
     "id": "g25_38.323_87.995",
     "name": "38.32°K, 88.00°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -1152,6 +1220,10 @@
    "properties": {
     "id": "g25_35.384_69.855",
     "name": "35.38°K, 69.86°D",
+    "place": {
+     "tr": "Khenj District, Pencşir, Afganistan",
+     "en": "Khenj District, Panjshir Province, Afghanistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -1219,6 +1291,10 @@
    "properties": {
     "id": "g25_39.227_93.006",
     "name": "39.23°K, 93.01°D",
+    "place": {
+     "tr": "Aksay Kazak Özerk İlçesi, Kansu, Çin",
+     "en": "Aksay Kazakh Autonomous County, Gansu, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",
@@ -1286,6 +1362,10 @@
    "properties": {
     "id": "g25_39.453_98.313",
     "name": "39.45°K, 98.31°D",
+    "place": {
+     "tr": "Sunan Yugur Autonomous County, Kansu, Çin",
+     "en": "Sunan Yugur Autonomous County, Gansu, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "ice_drilling",

@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_36.288_56.984",
     "name": "36.29°K, 56.98°D",
+    "place": {
+     "tr": "Davarzan County, Razavi Horasan Eyaleti, İran",
+     "en": "Davarzan County, Razavi Khorasan, Iran"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_15.261_48.721",
     "name": "15.26°K, 48.72°D",
+    "place": {
+     "tr": "Hawrah District, Hadramut (il), Yemen",
+     "en": "Hawrah District, Hadramaut Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_9.609_50.804",
     "name": "9.61°K, 50.80°D",
+    "place": {
+     "tr": "Bandarbayla, Bari, Somali",
+     "en": "Bayla District, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_17.748_55.202",
     "name": "17.75°K, 55.20°D",
+    "place": {
+     "tr": "Shalim Wa Juzor Al Hallaniyat Province, Zufar valiliği, Umman",
+     "en": "Shalim Wa Juzor Al Hallaniyat Province, Dhofar Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_24.079_55.927",
     "name": "24.08°K, 55.93°D",
+    "place": {
+     "tr": "Al Ain, Abu Dabi Emirliği, Birleşik Arap Emirlikleri",
+     "en": "Al Ain, Abu Dhabi Emirate, United Arab Emirates"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_74.950_-89.943",
     "name": "74.95°K, 89.94°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": false,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_73.819_-94.492",
     "name": "73.82°K, 94.49°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_10.513_50.110",
     "name": "10.51°K, 50.11°D",
+    "place": {
+     "tr": "Iskushuban, Bari, Somali",
+     "en": "Iskushuban, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_43.071_-120.127",
     "name": "43.07°K, 120.13°B",
+    "place": {
+     "tr": "Lake County, Oregon, Amerika Birleşik Devletleri",
+     "en": "Lake County, Oregon, United States"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_42.845_84.163",
     "name": "42.84°K, 84.16°D",
+    "place": {
+     "tr": "Hejing County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Hejing County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_66.810_-91.275",
     "name": "66.81°K, 91.28°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_71.106_-79.770",
     "name": "71.11°K, 79.77°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_8.931_48.064",
     "name": "8.93°K, 48.06°D",
+    "place": {
+     "tr": "Taleh District, Sool, Somaliland",
+     "en": "Taleh District, Sool, Somaliland"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_71.558_-94.208",
     "name": "71.56°K, 94.21°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_72.915_-93.701",
     "name": "72.91°K, 93.70°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_33.123_-104.984",
     "name": "33.12°K, 104.98°B",
+    "place": {
+     "tr": "Chaves County, Yeni Meksika, Amerika Birleşik Devletleri",
+     "en": "Chaves County, New Mexico, United States"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_49.175_-112.396",
     "name": "49.18°K, 112.40°B",
+    "place": {
+     "tr": "County of Warner, Alberta, Kanada",
+     "en": "County of Warner, Alberta, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_27.922_-103.126",
     "name": "27.92°K, 103.13°B",
+    "place": {
+     "tr": "Ocampo, Coahuila, Meksika",
+     "en": "Ocampo, Coahuila, Mexico"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_60.480_-71.852",
     "name": "60.48°K, 71.85°B",
+    "place": {
+     "tr": "Kativik, Québec, Kanada",
+     "en": "Kativik, Quebec, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_15.713_49.647",
     "name": "15.71°K, 49.65°D",
+    "place": {
+     "tr": "Al Saum District, Hadramut (il), Yemen",
+     "en": "Al Saum District, Hadramaut Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "lava_tube",

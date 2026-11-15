@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_35.610_82.191",
     "name": "35.61°K, 82.19°D",
+    "place": {
+     "tr": "Keriya County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Keriya County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -80,6 +84,10 @@
    "properties": {
     "id": "g25_35.836_77.364",
     "name": "35.84°K, 77.36°D",
+    "place": {
+     "tr": "Cenling County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Cenling County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -147,6 +155,10 @@
    "properties": {
     "id": "g25_35.610_80.582",
     "name": "35.61°K, 80.58°D",
+    "place": {
+     "tr": "Çira, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Chira County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -214,6 +226,10 @@
    "properties": {
     "id": "g25_33.123_79.777",
     "name": "33.12°K, 79.78°D",
+    "place": {
+     "tr": "Rutog County, Xizang Özerk Bölgesi, Çin",
+     "en": "Rutog County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -281,6 +297,10 @@
    "properties": {
     "id": "g25_37.192_85.409",
     "name": "37.19°K, 85.41°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -348,6 +368,10 @@
    "properties": {
     "id": "g25_72.011_-54.504",
     "name": "72.01°K, 54.50°B",
+    "place": {
+     "tr": "Avannaata, Grönland",
+     "en": "Avannaata, Greenland"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -415,6 +439,10 @@
    "properties": {
     "id": "g25_71.785_-76.161",
     "name": "71.78°K, 76.16°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -482,6 +510,10 @@
    "properties": {
     "id": "g25_81.507_-76.323",
     "name": "81.51°K, 76.32°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -549,6 +581,10 @@
    "properties": {
     "id": "g25_38.323_75.024",
     "name": "38.32°K, 75.02°D",
+    "place": {
+     "tr": "Aqto County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aqto County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -616,6 +652,10 @@
    "properties": {
     "id": "g25_40.131_74.729",
     "name": "40.13°K, 74.73°D",
+    "place": {
+     "tr": "Ulugqat County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ulugqat County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -683,6 +723,10 @@
    "properties": {
     "id": "g25_39.453_96.839",
     "name": "39.45°K, 96.84°D",
+    "place": {
+     "tr": "Subeigiin Mongolian Autonomous County, Kansu, Çin",
+     "en": "Subeigiin Mongolian Autonomous County, Gansu, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -750,6 +794,10 @@
    "properties": {
     "id": "g25_38.549_72.961",
     "name": "38.55°K, 72.96°D",
+    "place": {
+     "tr": "Murghob District, Gorno-Badakhshan Autonomous Region, Tacikistan",
+     "en": "Murghob District, Gorno-Badakhshan Autonomous Region, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -817,6 +865,10 @@
    "properties": {
     "id": "g25_61.384_-140.681",
     "name": "61.38°K, 140.68°B",
+    "place": {
+     "tr": "Yukon, Kanada",
+     "en": "Yukon, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -884,6 +936,10 @@
    "properties": {
     "id": "g25_37.192_72.805",
     "name": "37.19°K, 72.81°D",
+    "place": {
+     "tr": "Vahan, Badahşan Vilayeti, Afganistan",
+     "en": "Wakhan District, Badakhshan Province, Afghanistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -951,6 +1007,10 @@
    "properties": {
     "id": "g25_34.479_78.168",
     "name": "34.48°K, 78.17°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -1018,6 +1078,10 @@
    "properties": {
     "id": "g25_81.733_-53.195",
     "name": "81.73°K, 53.20°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -1085,6 +1149,10 @@
    "properties": {
     "id": "g25_46.688_91.330",
     "name": "46.69°K, 91.33°D",
+    "place": {
+     "tr": "Bulgan, Bayan-Ölgiy ili, Moğolistan",
+     "en": "Bulgan, Bayan-Ölgii, Mongolia"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -1152,6 +1220,10 @@
    "properties": {
     "id": "g25_66.358_-65.197",
     "name": "66.36°K, 65.20°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -1219,6 +1291,10 @@
    "properties": {
     "id": "g25_33.801_78.973",
     "name": "33.80°K, 78.97°D",
+    "place": {
+     "tr": "Rutog County, Xizang Özerk Bölgesi, Çin",
+     "en": "Rutog County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",
@@ -1286,6 +1362,10 @@
    "properties": {
     "id": "g25_30.183_82.191",
     "name": "30.18°K, 82.19°D",
+    "place": {
+     "tr": "Zhongba County, Xizang Özerk Bölgesi, Çin",
+     "en": "Zhongba County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "ice_drilling",

@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_-15.487_-74.411",
     "name": "15.49°G, 74.41°B",
+    "place": {
+     "tr": "Caravelí, Arequipa, Peru",
+     "en": "Province of Caravelí, Arequipa, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_-16.844_-71.140",
     "name": "16.84°G, 71.14°B",
+    "place": {
+     "tr": "Puquina, Moquegua, Peru",
+     "en": "Puquina, Moquegua, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_-15.940_-72.542",
     "name": "15.94°G, 72.54°B",
+    "place": {
+     "tr": "Aplao, Arequipa, Peru",
+     "en": "Aplao, Arequipa, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_-13.000_-76.046",
     "name": "13.00°G, 76.05°B",
+    "place": {
+     "tr": "Lunahuaná, Lima, Peru",
+     "en": "Lunahuaná, Lima, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_-11.870_-76.747",
     "name": "11.87°G, 76.75°B",
+    "place": {
+     "tr": "San Antonio, Lima, Peru",
+     "en": "San Antonio, Lima, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_23.175_57.647",
     "name": "23.17°K, 57.65°D",
+    "place": {
+     "tr": "Al Awabi Province, Al Batinah South Governorate, Umman",
+     "en": "Al Awabi Province, Al Batinah South Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_-8.478_-78.471",
     "name": "8.48°G, 78.47°B",
+    "place": {
+     "tr": "Chao, La Libertad, Peru",
+     "en": "Chao, La Libertad, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_-14.131_-75.111",
     "name": "14.13°G, 75.11°B",
+    "place": {
+     "tr": "Palpa, Ica, Peru",
+     "en": "Province of Palpa, Ica, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_-24.305_-68.088",
     "name": "24.30°G, 68.09°B",
+    "place": {
+     "tr": "Provincia de Antofagasta, Región de Antofagasta, Şili",
+     "en": "Provincia de Antofagasta, Antofagasta Region, Chile"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_17.522_38.074",
     "name": "17.52°K, 38.07°D",
+    "place": {
+     "tr": "Kuzey Kızıldeniz, Eritre",
+     "en": "Northern Red Sea Region, Eritrea"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_-29.505_-69.088",
     "name": "29.51°G, 69.09°B",
+    "place": {
+     "tr": "Iglesia, San Juan, Arjantin",
+     "en": "Iglesia, San Juan, Argentina"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_-28.827_-69.837",
     "name": "28.83°G, 69.84°B",
+    "place": {
+     "tr": "Provincia de Huasco, Región de Atacama, Şili",
+     "en": "Provincia de Huasco, Atacama Region, Chile"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_-30.409_-70.337",
     "name": "30.41°G, 70.34°B",
+    "place": {
+     "tr": "Provincia de Limarí, Región de Coquimbo, Şili",
+     "en": "Provincia de Limarí, Coquimbo Region, Chile"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_-21.818_-68.338",
     "name": "21.82°G, 68.34°B",
+    "place": {
+     "tr": "Provincia de El Loa, Región de Antofagasta, Şili",
+     "en": "Provincia de El Loa, Antofagasta Region, Chile"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_-10.287_-77.567",
     "name": "10.29°G, 77.57°B",
+    "place": {
+     "tr": "Colquioc, Ancash, Peru",
+     "en": "Colquioc, Ancash, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_-24.531_-66.089",
     "name": "24.53°G, 66.09°B",
+    "place": {
+     "tr": "Rosario de Lerma, Salta, Arjantin",
+     "en": "Rosario de Lerma, Salta, Argentina"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_-15.035_-72.775",
     "name": "15.04°G, 72.78°B",
+    "place": {
+     "tr": "La Unión, Arequipa, Peru",
+     "en": "Province of La Unión, Arequipa, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_-31.766_-70.215",
     "name": "31.77°G, 70.21°B",
+    "place": {
+     "tr": "Calingasta, San Juan, Arjantin",
+     "en": "Calingasta, San Juan, Argentina"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_-17.522_-70.205",
     "name": "17.52°G, 70.21°B",
+    "place": {
+     "tr": "Héroes Albarracín, Tacna, Peru",
+     "en": "Héroes Albarracín, Tacna, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_-26.566_-67.089",
     "name": "26.57°G, 67.09°B",
+    "place": {
+     "tr": "Departamento Antofagasta de la Sierra, Catamarca, Arjantin",
+     "en": "Departamento Antofagasta de la Sierra, Catamarca, Argentina"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "base_site",

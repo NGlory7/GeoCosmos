@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_-15.261_-73.242",
     "name": "15.26°G, 73.24°B",
+    "place": {
+     "tr": "Páucar del Sara Sara, Ayacucho, Peru",
+     "en": "Province of Páucar del Sara Sara, Ayacucho, Peru"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -81,6 +85,10 @@
    "properties": {
     "id": "g25_-33.801_-70.215",
     "name": "33.80°G, 70.21°B",
+    "place": {
+     "tr": "Provincia de Cordillera, Región Metropolitana de Santiago, Şili",
+     "en": "Provincia de Cordillera, Santiago Metropolitan Region, Chile"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -149,6 +157,10 @@
    "properties": {
     "id": "g25_34.931_77.096",
     "name": "34.93°K, 77.10°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -217,6 +229,10 @@
    "properties": {
     "id": "g25_-12.322_-76.280",
     "name": "12.32°G, 76.28°B",
+    "place": {
+     "tr": "Quinocay, Lima, Peru",
+     "en": "Quinocay, Lima, Peru"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -285,6 +301,10 @@
    "properties": {
     "id": "g25_38.775_75.024",
     "name": "38.77°K, 75.02°D",
+    "place": {
+     "tr": "Aqto County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aqto County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -353,6 +373,10 @@
    "properties": {
     "id": "g25_41.940_80.625",
     "name": "41.94°K, 80.63°D",
+    "place": {
+     "tr": "Onsu İlçesi, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Onsu County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -421,6 +445,10 @@
    "properties": {
     "id": "g25_35.836_72.269",
     "name": "35.84°K, 72.27°D",
+    "place": {
+     "tr": "Çitral, Khyber Pakhtunkhwa, Pakistan",
+     "en": "Chitrāl District, Khyber Pakhtunkhwa, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -489,6 +517,10 @@
    "properties": {
     "id": "g25_-30.183_-70.587",
     "name": "30.18°G, 70.59°B",
+    "place": {
+     "tr": "Provincia de Elqui, Región de Coquimbo, Şili",
+     "en": "Provincia de Elqui, Coquimbo Region, Chile"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -557,6 +589,10 @@
    "properties": {
     "id": "g25_-10.287_-77.116",
     "name": "10.29°G, 77.12°B",
+    "place": {
+     "tr": "La Primavera, Ancash, Peru",
+     "en": "La Primavera, Ancash, Peru"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -625,6 +661,10 @@
    "properties": {
     "id": "g25_-9.157_-77.567",
     "name": "9.16°G, 77.57°B",
+    "place": {
+     "tr": "Carhuaz, Ancash, Peru",
+     "en": "Province of Carhuaz, Ancash, Peru"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -693,6 +733,10 @@
    "properties": {
     "id": "g25_28.149_85.918",
     "name": "28.15°K, 85.92°D",
+    "place": {
+     "tr": "Nyalam County, Xizang Özerk Bölgesi, Çin",
+     "en": "Nyalam County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -761,6 +805,10 @@
    "properties": {
     "id": "g25_51.888_-118.060",
     "name": "51.89°K, 118.06°B",
+    "place": {
+     "tr": "Columbia-Shuswap Regional District, Britanya Kolumbiyası, Kanada",
+     "en": "Columbia-Shuswap Regional District, British Columbia, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -829,6 +877,10 @@
    "properties": {
     "id": "g25_36.288_76.559",
     "name": "36.29°K, 76.56°D",
+    "place": {
+     "tr": "Cenling County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Cenling County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -897,6 +949,10 @@
    "properties": {
     "id": "g25_38.549_72.666",
     "name": "38.55°K, 72.67°D",
+    "place": {
+     "tr": "Rushon District, Gorno-Badakhshan Autonomous Region, Tacikistan",
+     "en": "Rushon District, Gorno-Badakhshan Autonomous Region, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -965,6 +1021,10 @@
    "properties": {
     "id": "g25_52.114_-125.848",
     "name": "52.11°K, 125.85°B",
+    "place": {
+     "tr": "Central Coast Regional District, Britanya Kolumbiyası, Kanada",
+     "en": "Central Coast Regional District, British Columbia, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -1033,6 +1093,10 @@
    "properties": {
     "id": "g25_39.453_70.602",
     "name": "39.45°K, 70.60°D",
+    "place": {
+     "tr": "Rasht District, Districts of Republican Subordination, Tacikistan",
+     "en": "Rasht District, Districts of Republican Subordination, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -1101,6 +1165,10 @@
    "properties": {
     "id": "g25_39.001_68.834",
     "name": "39.00°K, 68.83°D",
+    "place": {
+     "tr": "Varzob District, Districts of Republican Subordination, Tacikistan",
+     "en": "Varzob District, Districts of Republican Subordination, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -1169,6 +1237,10 @@
    "properties": {
     "id": "g25_29.957_82.191",
     "name": "29.96°K, 82.19°D",
+    "place": {
+     "tr": "Humla, Karnali, Nepal",
+     "en": "Humla, Karnali Province, Nepal"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -1237,6 +1309,10 @@
    "properties": {
     "id": "g25_36.514_71.196",
     "name": "36.51°K, 71.20°D",
+    "place": {
+     "tr": "Curm, Badahşan Vilayeti, Afganistan",
+     "en": "Jurm, Badakhshan Province, Afghanistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",
@@ -1305,6 +1381,10 @@
    "properties": {
     "id": "g25_50.532_-116.998",
     "name": "50.53°K, 117.00°B",
+    "place": {
+     "tr": "Regional District of Central Kootenay, Britanya Kolumbiyası, Kanada",
+     "en": "Regional District of Central Kootenay, British Columbia, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "rover",

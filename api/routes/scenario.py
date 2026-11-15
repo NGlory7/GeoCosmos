@@ -13,6 +13,8 @@ from core.profiles import (TestProfile, custom_at_least, load_grid_config, load_
 from core.schemas import BREAKDOWN_KEYS, ScenarioRequest, ScenarioResponse
 from core.scoring import top_analogs, usable_weights
 from pipeline.discovery import name_known_cells
+from pipeline.placenames import attach_places
+from pipeline.placenames import load_cache as load_place_cache
 
 GRID_PATH = Path(__file__).resolve().parents[2] / "data" / "processed" / "grid.parquet"
 TOP_N = 20
@@ -53,4 +55,5 @@ def scenario(req: ScenarioRequest) -> ScenarioResponse:
     analogs = top_analogs(grid, target, profile, n=TOP_N, params=params,
                           min_separation_km=load_grid_config()["discovery"]["min_separation_km"])
     name_known_cells(analogs, grid)
+    attach_places(analogs, load_place_cache())  # sadece önbellek; serbest metnin yeni kareleri koordinatla kalır
     return ScenarioResponse(weights=weights, unsupported=raw.get("unsupported", []), analogs=analogs)

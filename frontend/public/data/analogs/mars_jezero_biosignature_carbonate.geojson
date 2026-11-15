@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_3.731_35.683",
     "name": "3.73°K, 35.68°D",
+    "place": {
+     "tr": "Turkana North, Turkana, Kenya",
+     "en": "Turkana North, Turkana County, Kenya"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -68,6 +72,10 @@
    "properties": {
     "id": "g25_8.252_48.515",
     "name": "8.25°K, 48.51°D",
+    "place": {
+     "tr": "Garowe District, Nugaal, Somali",
+     "en": "Garowe District, Nugaal, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -123,6 +131,10 @@
    "properties": {
     "id": "g25_15.261_48.721",
     "name": "15.26°K, 48.72°D",
+    "place": {
+     "tr": "Hawrah District, Hadramut (il), Yemen",
+     "en": "Hawrah District, Hadramaut Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -178,6 +190,10 @@
    "properties": {
     "id": "g25_11.192_49.415",
     "name": "11.19°K, 49.42°D",
+    "place": {
+     "tr": "Bosaso District, Bari, Somali",
+     "en": "Bosaso District, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -233,6 +249,10 @@
    "properties": {
     "id": "g25_10.513_46.638",
     "name": "10.51°K, 46.64°D",
+    "place": {
+     "tr": "El Afweyn District, Sanaag, Somaliland",
+     "en": "El Afweyn District, Sanaag, Somaliland"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -288,6 +308,10 @@
    "properties": {
     "id": "g25_10.287_49.647",
     "name": "10.29°K, 49.65°D",
+    "place": {
+     "tr": "Iskushuban, Bari, Somali",
+     "en": "Iskushuban, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -343,6 +367,10 @@
    "properties": {
     "id": "g25_18.200_56.359",
     "name": "18.20°K, 56.36°D",
+    "place": {
+     "tr": "Al Jazir Province, El Vusta valiliği, Umman",
+     "en": "Al Jazir Province, Al Wusta Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -398,6 +426,10 @@
    "properties": {
     "id": "g25_17.748_55.202",
     "name": "17.75°K, 55.20°D",
+    "place": {
+     "tr": "Shalim Wa Juzor Al Hallaniyat Province, Zufar valiliği, Umman",
+     "en": "Shalim Wa Juzor Al Hallaniyat Province, Dhofar Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -453,6 +485,10 @@
    "properties": {
     "id": "g25_-8.252_-78.245",
     "name": "8.25°G, 78.24°B",
+    "place": {
+     "tr": "Santiago de Chuco, La Libertad, Peru",
+     "en": "Santiago de Chuco, La Libertad, Peru"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -508,6 +544,10 @@
    "properties": {
     "id": "g25_-10.513_-40.985",
     "name": "10.51°G, 40.99°B",
+    "place": {
+     "tr": "Umburanas, Bahia, Brezilya",
+     "en": "Umburanas, Bahia, Brazil"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -563,6 +603,10 @@
    "properties": {
     "id": "g25_-4.409_37.598",
     "name": "4.41°G, 37.60°D",
+    "place": {
+     "tr": "Same, Kilimanjaro bölgesi, Tanzanya",
+     "en": "Same, Kilimanjaro, Tanzania"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -618,6 +662,10 @@
    "properties": {
     "id": "g25_22.948_-100.422",
     "name": "22.95°K, 100.42°B",
+    "place": {
+     "tr": "Guadalcázar, San Luis Potosí, Meksika",
+     "en": "Guadalcázar, San Luis Potosí, Mexico"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -673,6 +721,10 @@
    "properties": {
     "id": "g25_-11.418_-75.812",
     "name": "11.42°G, 75.81°B",
+    "place": {
+     "tr": "Tarma, Junín, Peru",
+     "en": "Tarma, Junín, Peru"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -728,6 +780,10 @@
    "properties": {
     "id": "g25_-12.774_-75.345",
     "name": "12.77°G, 75.35°B",
+    "place": {
+     "tr": "Huancavelica, Peru",
+     "en": "Province of Huancavelica, Huancavelica, Peru"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -783,6 +839,10 @@
    "properties": {
     "id": "g25_30.409_-102.571",
     "name": "30.41°K, 102.57°B",
+    "place": {
+     "tr": "Pecos County, Teksas, Amerika Birleşik Devletleri",
+     "en": "Pecos County, Texas, United States"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -838,6 +898,10 @@
    "properties": {
     "id": "g25_29.505_-102.839",
     "name": "29.51°K, 102.84°B",
+    "place": {
+     "tr": "Brewster County, Teksas, Amerika Birleşik Devletleri",
+     "en": "Brewster County, Texas, United States"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -893,6 +957,10 @@
    "properties": {
     "id": "g25_34.479_81.386",
     "name": "34.48°K, 81.39°D",
+    "place": {
+     "tr": "Rutog County, Xizang Özerk Bölgesi, Çin",
+     "en": "Rutog County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -948,6 +1016,10 @@
    "properties": {
     "id": "g25_33.575_95.330",
     "name": "33.57°K, 95.33°D",
+    "place": {
+     "tr": "Zhidoi County, Çinghay, Çin",
+     "en": "Zhidoi County, Qinghai, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -1003,6 +1075,10 @@
    "properties": {
     "id": "g25_29.731_92.381",
     "name": "29.73°K, 92.38°D",
+    "place": {
+     "tr": "Sangri County, Xizang Özerk Bölgesi, Çin",
+     "en": "Sangri County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",
@@ -1058,6 +1134,10 @@
    "properties": {
     "id": "g25_33.349_97.744",
     "name": "33.35°K, 97.74°D",
+    "place": {
+     "tr": "Sêrxü County, Siçuan, Çin",
+     "en": "Sêrxü County, Sichuan, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_carbonate",

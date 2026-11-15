@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_38.549_75.319",
     "name": "38.55°K, 75.32°D",
+    "place": {
+     "tr": "Aqto County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aqto County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_36.514_74.146",
     "name": "36.51°K, 74.15°D",
+    "place": {
+     "tr": "Nagar District, Gilgit-Baltistan, Pakistan",
+     "en": "Nagar District, Gilgit-Baltistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_36.514_72.269",
     "name": "36.51°K, 72.27°D",
+    "place": {
+     "tr": "Çitral, Khyber Pakhtunkhwa, Pakistan",
+     "en": "Chitrāl District, Khyber Pakhtunkhwa, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_81.959_-82.491",
     "name": "81.96°K, 82.49°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_81.507_-76.323",
     "name": "81.51°K, 76.32°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_35.610_76.291",
     "name": "35.61°K, 76.29°D",
+    "place": {
+     "tr": "Ghanche District, Gilgit-Baltistan, Pakistan",
+     "en": "Ghanche District, Gilgit-Baltistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_34.253_78.168",
     "name": "34.25°K, 78.17°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_35.157_74.682",
     "name": "35.16°K, 74.68°D",
+    "place": {
+     "tr": "Astore District, Gilgit-Baltistan, Pakistan",
+     "en": "Astore District, Gilgit-Baltistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_38.097_72.076",
     "name": "38.10°K, 72.08°D",
+    "place": {
+     "tr": "Rushon District, Gorno-Badakhshan Autonomous Region, Tacikistan",
+     "en": "Rushon District, Gorno-Badakhshan Autonomous Region, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_83.315_-29.616",
     "name": "83.32°K, 29.62°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_36.062_79.509",
     "name": "36.06°K, 79.51°D",
+    "place": {
+     "tr": "Hotan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Hotan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_81.733_-53.195",
     "name": "81.73°K, 53.20°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_41.940_80.330",
     "name": "41.94°K, 80.33°D",
+    "place": {
+     "tr": "Onsu İlçesi, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Onsu County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_82.637_-66.733",
     "name": "82.64°K, 66.73°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_36.514_82.727",
     "name": "36.51°K, 82.73°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_35.157_77.364",
     "name": "35.16°K, 77.36°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_38.097_87.700",
     "name": "38.10°K, 87.70°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_72.237_-53.782",
     "name": "72.24°K, 53.78°B",
+    "place": {
+     "tr": "Avannaata, Grönland",
+     "en": "Avannaata, Greenland"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_69.750_-53.837",
     "name": "69.75°K, 53.84°B",
+    "place": {
+     "tr": "Qeqertalik, Grönland",
+     "en": "Qeqertalik, Greenland"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_80.828_-68.681",
     "name": "80.83°K, 68.68°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_malapert",
     "test_id": "base_site",

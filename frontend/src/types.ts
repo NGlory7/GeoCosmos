@@ -41,6 +41,8 @@ export type Scores = Record<ScoreKey, number | null>;
 export interface Analog {
   id: string;
   name: string;
+  // Kare merkezinin yer adı (OpenStreetMap, pipeline/placenames.py); önbellekte yoksa null/eksik
+  place?: { tr: string; en: string } | null;
   is_new: boolean;
   target_id: string;
   test_id: TestId | "custom"; // "custom": /scenario sonucu

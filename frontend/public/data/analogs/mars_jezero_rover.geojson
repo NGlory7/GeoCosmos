@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_73.819_-94.492",
     "name": "73.82°K, 94.49°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_17.748_55.202",
     "name": "17.75°K, 55.20°D",
+    "place": {
+     "tr": "Shalim Wa Juzor Al Hallaniyat Province, Zufar valiliği, Umman",
+     "en": "Shalim Wa Juzor Al Hallaniyat Province, Dhofar Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_9.609_50.804",
     "name": "9.61°K, 50.80°D",
+    "place": {
+     "tr": "Bandarbayla, Bari, Somali",
+     "en": "Bayla District, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_36.288_56.984",
     "name": "36.29°K, 56.98°D",
+    "place": {
+     "tr": "Davarzan County, Razavi Horasan Eyaleti, İran",
+     "en": "Davarzan County, Razavi Khorasan, Iran"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_74.950_-89.943",
     "name": "74.95°K, 89.94°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": false,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_15.261_48.721",
     "name": "15.26°K, 48.72°D",
+    "place": {
+     "tr": "Hawrah District, Hadramut (il), Yemen",
+     "en": "Hawrah District, Hadramaut Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_24.079_55.927",
     "name": "24.08°K, 55.93°D",
+    "place": {
+     "tr": "Al Ain, Abu Dabi Emirliği, Birleşik Arap Emirlikleri",
+     "en": "Al Ain, Abu Dhabi Emirate, United Arab Emirates"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_10.513_50.110",
     "name": "10.51°K, 50.11°D",
+    "place": {
+     "tr": "Iskushuban, Bari, Somali",
+     "en": "Iskushuban, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_71.106_-79.770",
     "name": "71.11°K, 79.77°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_71.558_-94.208",
     "name": "71.56°K, 94.21°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_67.037_-91.275",
     "name": "67.04°K, 91.28°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_72.915_-93.701",
     "name": "72.91°K, 93.70°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_78.567_-68.926",
     "name": "78.57°K, 68.93°B",
+    "place": {
+     "tr": "Avannaata, Grönland",
+     "en": "Avannaata, Greenland"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_69.524_162.173",
     "name": "69.52°K, 162.17°D",
+    "place": {
+     "tr": "Nizhnekolymsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Nizhnekolymsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_69.976_152.264",
     "name": "69.98°K, 152.26°D",
+    "place": {
+     "tr": "Allaikhovsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Allaikhovsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_71.785_140.410",
     "name": "71.78°K, 140.41°D",
+    "place": {
+     "tr": "Ust-Yansky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Ust-Yansky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_79.924_-84.463",
     "name": "79.92°K, 84.46°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_71.785_-89.155",
     "name": "71.78°K, 89.16°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_81.733_-22.357",
     "name": "81.73°K, 22.36°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_71.332_125.250",
     "name": "71.33°K, 125.25°D",
+    "place": {
+     "tr": "Bulunsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Bulunsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "rover",

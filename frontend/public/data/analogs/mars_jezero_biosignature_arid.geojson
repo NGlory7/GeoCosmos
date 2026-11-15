@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_37.871_85.047",
     "name": "37.87°K, 85.05°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -75,6 +79,10 @@
    "properties": {
     "id": "g25_39.679_88.879",
     "name": "39.68°K, 88.88°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -137,6 +145,10 @@
    "properties": {
     "id": "g25_36.288_83.531",
     "name": "36.29°K, 83.53°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -199,6 +211,10 @@
    "properties": {
     "id": "g25_37.418_83.868",
     "name": "37.42°K, 83.87°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -261,6 +277,10 @@
    "properties": {
     "id": "g25_40.584_88.585",
     "name": "40.58°K, 88.58°D",
+    "place": {
+     "tr": "Yuli County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Yuli County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -323,6 +343,10 @@
    "properties": {
     "id": "g25_36.966_82.191",
     "name": "36.97°K, 82.19°D",
+    "place": {
+     "tr": "Keriya County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Keriya County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -385,6 +409,10 @@
    "properties": {
     "id": "g25_38.775_86.226",
     "name": "38.77°K, 86.23°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -447,6 +475,10 @@
    "properties": {
     "id": "g25_38.549_87.405",
     "name": "38.55°K, 87.41°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -509,6 +541,10 @@
    "properties": {
     "id": "g25_39.453_87.405",
     "name": "39.45°K, 87.41°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -571,6 +607,10 @@
    "properties": {
     "id": "g25_40.358_89.764",
     "name": "40.36°K, 89.76°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -633,6 +673,10 @@
    "properties": {
     "id": "g25_38.549_81.510",
     "name": "38.55°K, 81.51°D",
+    "place": {
+     "tr": "Çira, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Chira County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -695,6 +739,10 @@
    "properties": {
     "id": "g25_38.323_82.984",
     "name": "38.32°K, 82.98°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -757,6 +805,10 @@
    "properties": {
     "id": "g25_37.644_81.215",
     "name": "37.64°K, 81.21°D",
+    "place": {
+     "tr": "Çira, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Chira County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -819,6 +871,10 @@
    "properties": {
     "id": "g25_38.775_85.047",
     "name": "38.77°K, 85.05°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -881,6 +937,10 @@
    "properties": {
     "id": "g25_38.775_90.353",
     "name": "38.77°K, 90.35°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -943,6 +1003,10 @@
    "properties": {
     "id": "g25_38.323_93.006",
     "name": "38.32°K, 93.01°D",
+    "place": {
+     "tr": "Mangnai City, Çinghay, Çin",
+     "en": "Mangnai City, Qinghai, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -1005,6 +1069,10 @@
    "properties": {
     "id": "g25_40.584_83.573",
     "name": "40.58°K, 83.57°D",
+    "place": {
+     "tr": "Shayar County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Shayar County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -1067,6 +1135,10 @@
    "properties": {
     "id": "g25_40.131_81.510",
     "name": "40.13°K, 81.51°D",
+    "place": {
+     "tr": "Aksu, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aksu City, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -1129,6 +1201,10 @@
    "properties": {
     "id": "g25_25.888_5.040",
     "name": "25.89°K, 5.04°D",
+    "place": {
+     "tr": "de Tamanrasset District, Tamanrasset Vilayeti, Cezayir",
+     "en": "de Tamanrasset District, Tamanrasset, Algeria"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",
@@ -1191,6 +1267,10 @@
    "properties": {
     "id": "g25_39.679_90.648",
     "name": "39.68°K, 90.65°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "biosignature_arid",

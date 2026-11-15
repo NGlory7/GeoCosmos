@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_81.959_-82.491",
     "name": "81.96°K, 82.49°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_81.507_-76.323",
     "name": "81.51°K, 76.32°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_36.288_76.559",
     "name": "36.29°K, 76.56°D",
+    "place": {
+     "tr": "Cenling County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Cenling County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_82.637_-66.733",
     "name": "82.64°K, 66.73°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_36.062_72.805",
     "name": "36.06°K, 72.81°D",
+    "place": {
+     "tr": "Gupis-Yasin District, Gilgit-Baltistan, Pakistan",
+     "en": "Gupis-Yasin District, Gilgit-Baltistan, Pakistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_38.549_72.666",
     "name": "38.55°K, 72.67°D",
+    "place": {
+     "tr": "Rushon District, Gorno-Badakhshan Autonomous Region, Tacikistan",
+     "en": "Rushon District, Gorno-Badakhshan Autonomous Region, Tajikistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_81.733_-53.195",
     "name": "81.73°K, 53.20°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_83.315_-29.616",
     "name": "83.32°K, 29.62°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_36.966_73.341",
     "name": "36.97°K, 73.34°D",
+    "place": {
+     "tr": "Vahan, Badahşan Vilayeti, Afganistan",
+     "en": "Wakhan District, Badakhshan Province, Afghanistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_80.828_-68.681",
     "name": "80.83°K, 68.68°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_34.479_77.632",
     "name": "34.48°K, 77.63°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_38.775_75.024",
     "name": "38.77°K, 75.02°D",
+    "place": {
+     "tr": "Aqto County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aqto County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_37.871_75.614",
     "name": "37.87°K, 75.61°D",
+    "place": {
+     "tr": "Taşkurgan, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Taxkorgan Tajik Autonomous County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_82.863_-75.631",
     "name": "82.86°K, 75.63°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_72.237_-53.782",
     "name": "72.24°K, 53.78°B",
+    "place": {
+     "tr": "Avannaata, Grönland",
+     "en": "Avannaata, Greenland"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_79.019_15.050",
     "name": "79.02°K, 15.05°D",
+    "place": {
+     "tr": "Svalbard ve Jan Mayen Adaları, Norveç",
+     "en": "Svalbard, Norway"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_78.793_-88.495",
     "name": "78.79°K, 88.50°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_42.166_79.741",
     "name": "42.17°K, 79.74°D",
+    "place": {
+     "tr": "Ak-Su ilçesi, Issık-Göl ili, Kırgızistan",
+     "en": "Ak-Suu District, Issyk-Kul Region, Kyrgyzstan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_71.785_-76.161",
     "name": "71.78°K, 76.16°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_36.514_71.196",
     "name": "36.51°K, 71.20°D",
+    "place": {
+     "tr": "Curm, Badahşan Vilayeti, Afganistan",
+     "en": "Jurm, Badakhshan Province, Afghanistan"
+    },
     "is_new": true,
     "target_id": "moon_shackleton",
     "test_id": "base_site",

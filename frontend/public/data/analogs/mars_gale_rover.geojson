@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_72.237_-53.782",
     "name": "72.24°K, 53.78°B",
+    "place": {
+     "tr": "Avannaata, Grönland",
+     "en": "Avannaata, Greenland"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_62.289_-143.936",
     "name": "62.29°K, 143.94°B",
+    "place": {
+     "tr": "Unorganized Borough, Alaska, Amerika Birleşik Devletleri",
+     "en": "Unorganized Borough, Alaska, United States"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_71.785_-27.071",
     "name": "71.78°K, 27.07°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_67.263_-53.030",
     "name": "67.26°K, 53.03°B",
+    "place": {
+     "tr": "Qeqqata, Grönland",
+     "en": "Qeqqata, Greenland"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_34.479_47.330",
     "name": "34.48°K, 47.33°D",
+    "place": {
+     "tr": "Harsin County, Kirmanşah Eyaleti, İran",
+     "en": "Harsin County, Kermanshah Province, Iran"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_73.593_-24.908",
     "name": "73.59°K, 24.91°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_39.679_44.366",
     "name": "39.68°K, 44.37°D",
+    "place": {
+     "tr": "Aralık, Türkiye",
+     "en": "Aralık, Turkey"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_30.862_51.621",
     "name": "30.86°K, 51.62°D",
+    "place": {
+     "tr": "Semirom County, İsfahan Eyaleti, İran",
+     "en": "Semirom County, Isfahan Province, Iran"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_31.540_50.280",
     "name": "31.54°K, 50.28°D",
+    "place": {
+     "tr": "Dezpart County, Huzistan Eyaleti, İran",
+     "en": "Dezpart County, Khuzestan Province, Iran"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_59.349_-134.176",
     "name": "59.35°K, 134.18°B",
+    "place": {
+     "tr": "Stikine Region, Britanya Kolumbiyası, Kanada",
+     "en": "Stikine Region, British Columbia, Canada"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_39.905_71.487",
     "name": "39.91°K, 71.49°D",
+    "place": {
+     "tr": "Kadamcay İlçesi, Batken ili, Kırgızistan",
+     "en": "Kadamjay District, Batken Region, Kyrgyzstan"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_49.627_-116.998",
     "name": "49.63°K, 117.00°B",
+    "place": {
+     "tr": "Regional District of Central Kootenay, Britanya Kolumbiyası, Kanada",
+     "en": "Regional District of Central Kootenay, British Columbia, Canada"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_60.932_-142.541",
     "name": "60.93°K, 142.54°B",
+    "place": {
+     "tr": "Unorganized Borough, Alaska, Amerika Birleşik Devletleri",
+     "en": "Unorganized Borough, Alaska, United States"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_61.158_-152.772",
     "name": "61.16°K, 152.77°B",
+    "place": {
+     "tr": "Kenai Peninsula Borough, Alaska, Amerika Birleşik Devletleri",
+     "en": "Kenai Peninsula Borough, Alaska, United States"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_-9.383_-77.567",
     "name": "9.38°G, 77.57°B",
+    "place": {
+     "tr": "Tarica, Ancash, Peru",
+     "en": "Tarica, Ancash, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_40.131_72.666",
     "name": "40.13°K, 72.67°D",
+    "place": {
+     "tr": "Nookat ilçesi, Oş İli, Kırgızistan",
+     "en": "Nookat District, Osh Region, Kyrgyzstan"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_74.498_-21.087",
     "name": "74.50°K, 21.09°B",
+    "place": {
+     "tr": "Grönland",
+     "en": "Greenland"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_23.175_57.647",
     "name": "23.17°K, 57.65°D",
+    "place": {
+     "tr": "Al Awabi Province, Al Batinah South Governorate, Umman",
+     "en": "Al Awabi Province, Al Batinah South Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_-6.670_-79.148",
     "name": "6.67°G, 79.15°B",
+    "place": {
+     "tr": "Santa Cruz, Cajamarca, Peru",
+     "en": "Province of Santa Cruz, Cajamarca, Peru"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_57.541_-131.200",
     "name": "57.54°K, 131.20°B",
+    "place": {
+     "tr": "Regional District of Kitimat-Stikine, Britanya Kolumbiyası, Kanada",
+     "en": "Regional District of Kitimat-Stikine, British Columbia, Canada"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "rover",

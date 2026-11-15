@@ -171,8 +171,15 @@ export function localizeValidation(a: ValidationAnalog, lang: Lang): ValidationA
   return { ...a, name: KNOWN[a.id].name, note: a.note ? KNOWN[a.id].note ?? a.note : "" };
 }
 
-/** Yeni adayların adı kare merkezidir ("36.29°K, 82.46°D"); İngilizcede N/S/E/W ile yazılır. */
-export function analogName(a: Pick<Analog, "name">, lang: Lang): string {
+/** Adayın adı koordinatsa ("36.29°K, 82.46°D") ve yer adı varsa yer adı (OpenStreetMap, pipeline/placenames.py);
+ * bilinen sahanın adı ("Hanksville / MDRS çevresi") olduğu gibi kalır. Yer adı yoksa koordinat,
+ * İngilizcede N/S/E/W ile yazılır. */
+export function isCoordName(name: string): boolean {
+  return /^-?\d/.test(name);
+}
+
+export function analogName(a: Pick<Analog, "name" | "place">, lang: Lang): string {
+  if (a.place && isCoordName(a.name)) return a.place[lang];
   if (lang === "tr") return a.name;
   if (KNOWN_BY_TR_NAME[a.name]) return KNOWN_BY_TR_NAME[a.name];
   return a.name.replace(/°K\b/g, "°N").replace(/°G\b/g, "°S").replace(/°D\b/g, "°E").replace(/°B\b/g, "°W");

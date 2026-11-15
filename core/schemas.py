@@ -65,9 +65,18 @@ class Scores(BaseModel):
     climate: float | None = Field(default=None, ge=0, le=100)
 
 
+class Place(BaseModel):
+    """Karenin merkezinin yer adı (ters coğrafi kodlama, OpenStreetMap Nominatim; pipeline/placenames.py).
+    Kartta başlık olarak gösterilir; name (koordinat ya da bilinen sahanın adı) değişmez, çünkü Gemini
+    istemi name'i içerir ve yorum önbelleği istem özetine bağlıdır."""
+    tr: str
+    en: str
+
+
 class Analog(BaseModel):
     id: str
     name: str
+    place: Place | None = None  # önbellekte yoksa None: arayüz koordinata düşer
     is_new: bool
     target_id: str
     test_id: TestId | Literal["custom"]  # "custom": /scenario serbest metin sonucu
