@@ -2,7 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import SpaceLayout from "../components/SpaceLayout";
 import { coord, int, num, pct, shortLabel } from "../format";
-import { useLang, type Lang } from "../i18n";
+import { useLang } from "../i18n";
 import { localizeMeta, localizeTargets, localizeValidation } from "../i18nData";
 import { loadAnalogIndex, loadAnalogs, loadMeta, loadTargets, loadValidation, type TargetWithCoords } from "../services/data";
 import type { Analog, AnalogIndexEntry, Body, Meta, TestId, ValidationResult } from "../types";
@@ -265,66 +265,6 @@ export default function FindingsPage() {
           </section>
         )}
 
-        {/* Dürüst sınırlar */}
-        <section className="mt-14 rounded-2xl border border-amber-400/20 bg-amber-400/[0.04] p-6">
-          <h2 className="font-mono text-sm tracking-[0.25em] text-amber-200/80">{t("BİLMENİZ GEREKENLER", "WHAT YOU SHOULD KNOW")}</h2>
-          <ul className="mt-3 grid gap-3 text-sm text-slate-300">
-            {data?.validation && (
-              <li>
-                {en ? (
-                  <>
-                    <b className="text-white">
-                      Test result: {data.validation.hits}/{data.validation.holdout_total}.
-                    </b>{" "}
-                    We tested the engine on {data.validation.holdout_total} famous sites used by NASA and ESA: each had to reach the top{" "}
-                    {pct(data.validation.top_percent, 1)} of Earth for its own test, and at least {data.validation.min_hits} had to make it (the original criterion was the top 1%, where the result was 0/4; it was relaxed after that result was seen).{" "}
-                    {closest(data.validation, lang) && <>Closest: {closest(data.validation, lang)}. </>}
-                    We do not hide this result;{" "}
-                    <Link to="/dogrulama" className="text-cyan-300 hover:underline">
-                      details and a comparison with chance are on the validation page
-                    </Link>
-                    .
-                  </>
-                ) : (
-                  <>
-                    <b className="text-white">
-                      Sınav sonucu: {data.validation.hits}/{data.validation.holdout_total}.
-                    </b>{" "}
-                    Motoru, NASA ve ESA'nın kullandığı {data.validation.holdout_total} ünlü saha üzerinde sınadık: her biri kendi testinde
-                    Dünya'nın en iyi {pct(data.validation.top_percent, 1)}'ine girmeliydi ve en az {data.validation.min_hits} tanesinin girmesi
-                    gerekiyordu (ilk ölçüt en iyi %1'di ve sonuç 0/4'tü; ölçüt bu sonuç görüldükten sonra gevşetildi). {closest(data.validation, lang) && <>En yakın olanlar: {closest(data.validation, lang)}. </>}
-                    Bu sonucu gizlemiyoruz;{" "}
-                    <Link to="/dogrulama" className="text-cyan-300 hover:underline">
-                      ayrıntılar ve şansla karşılaştırma doğrulama sayfasında
-                    </Link>
-                    .
-                  </>
-                )}
-              </li>
-            )}
-            <li>
-              <b className="text-white">
-                {data ? `${data.meta.grid_km} km` : t("Kare", "Cell")} {t("çözünürlük.", "resolution.")}
-              </b>{" "}
-              {t(
-                "Bir kare küçük bir krateri, bir göl kıyısını ya da bir vadiyi ortalamada kaybedebilir. Yıldız adaylar, sahaya gidilmeden önce daha ince ölçekte incelenmeli.",
-                "A cell can average away a small crater, a lake shore or a valley. Standout candidates should be examined at a finer scale before anyone goes to the field.",
-              )}
-            </li>
-            <li>
-              <b className="text-white">{t("Mağaralar ve lav tüpleri yörüngeden görünmez.", "Caves and lava tubes cannot be seen from orbit.")}</b>{" "}
-              {t("Motor sadece tüp oluşabilecek araziyi ölçebiliyor.", "The engine can only measure terrain where tubes can form.")}
-            </li>
-            <li>
-              <b className="text-white">{t("Ay ve Mars değerleri tek bir noktadan.", "Moon and Mars values come from a single point.")}</b>{" "}
-              {t(
-                "Her hedef için değerler NASA görev verisi (LOLA, Diviner, MOLA) ve yayımlanmış makalelerden; kaynakların hepsi aday kartlarında yazıyor.",
-                "Values for each target come from NASA mission data (LOLA, Diviner, MOLA) and published papers; every source is listed on the candidate cards.",
-              )}
-            </li>
-          </ul>
-        </section>
-
         <p className="mt-10 text-xs text-slate-500">
           {t(
             "Veri: NASA (MODIS, GPM IMERG, ASTER GED, SEDAC, LRO LOLA ve Diviner, MGS MOLA, GIBS), ESA (Copernicus DEM, CCI Permafrost), Mars Climate Database (LMD/ESA/CNES). Yer adları: OpenStreetMap Nominatim. Ayrıntılı kaynak listesi: DATA_SOURCES.md.",
@@ -334,16 +274,6 @@ export default function FindingsPage() {
       </main>
     </SpaceLayout>
   );
-}
-
-/** Sınav sahalarından en iyi iki dilim: "Svalbard (%2,6), Lut (%5,5)". */
-function closest(v: ValidationResult, lang: Lang) {
-  return v.analogs
-    .filter((a) => a.split === "holdout" && a.status === "ok" && a.percentile !== undefined)
-    .sort((a, b) => (a.percentile ?? 0) - (b.percentile ?? 0))
-    .slice(0, 2)
-    .map((a) => (lang === "en" ? `${a.name} (top ${pct(a.percentile ?? 0, 1)})` : `${a.name} (en iyi ${pct(a.percentile ?? 0, 1)})`))
-    .join(", ");
 }
 
 // Malapert × üs kurulumu: ilk adaylar iki gruba ayrılıyor; iki koşulu birden sağlayan kare yok.
