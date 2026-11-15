@@ -137,7 +137,12 @@ def gemini_generate(prompt: str) -> str:
     from google import genai  # sadece gerektiğinde yükle
     from google.genai import errors
 
-    import httpx
+    # google-genai 3.x HTTP için httpx yerine httpx2 kullanır; eski sürümlerde httpx. Yanlış
+    # kütüphanenin zaman aşımı yakalanırsa takılan istek yeniden denenmez, üretim durur.
+    try:
+        from httpx2 import TimeoutException
+    except ImportError:
+        from httpx import TimeoutException
 
     cfg = load_grid_config()["commentary"]
     # Zaman sınırı olmadan takılan bir istek tüm üretimi sessizce durduruyordu (60 sn, ms cinsinden).
@@ -158,7 +163,7 @@ def gemini_generate(prompt: str) -> str:
             if e.code not in (429, 500, 503) or attempt == cfg.get("rate_limit_retries", 5):
                 raise
             time.sleep(_retry_delay_s(e, default=30 * (attempt + 1)))
-        except httpx.TimeoutException:
+        except TimeoutException:
             if attempt == cfg.get("rate_limit_retries", 5):
                 raise
     raise RuntimeError("ulaşılamaz")
