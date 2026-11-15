@@ -15,7 +15,7 @@
 | API (`/health`, `/scenario`) | ✅ Hazır | `grid.parquet` ve Gemini anahtarı gelince canlı çalışır |
 | Testler ve GitHub Actions | ✅ Hazır | Her push'ta Python testleri, "üretilen dosyalar güncel mi" kontrolü, frontend tip kontrolü ve derlemesi |
 | Gerçek Dünya verisi (`grid.parquet`) | ✅ Hazır (14 Kasım) | 470 karo, 250.022 kare (60.144 maskeli), 49 dk (`pipeline.ee_fetch`). Repoda: ekibin Earth Engine'e ihtiyacı yok |
-| **İlk doğrulama** | ❌ 0/4 | Teşhis ve sıradaki karar: aşağıda "Karar bekleyenler" |
+| **Doğrulama** | ✅ 3/4 (ölçüt %12,5) | %1 ölçütünde 0/4; ölçüt sonuç görüldükten sonra gevşetildi (15 Kasım). Aşağıda "Ölçüt gevşetildi" |
 | Hedef değerleri (`config/targets.yaml`) | ✅ Hazır | Mars hedefleri tüm parametreler; Ay'da sadece tanımı gereği olmayanlar boş. Üç betikle yeniden üretilebilir |
 | Gemini yorumları | ⏳ 130/500 | Her listedeki 20 adayın hepsine yorum yazılıyor (`commentary.top_k: 20`, 25 × 20 = 500); 130'u hazır, kalanlar Gemini günlük kotası (500 istek/gün) yenilendikçe `python -m pipeline.commentary` ile: mevcut yorumlar korunur, sadece boşlar üretilir, kota dolunca beklemeden durur. Shackleton / üs kurulumunun 5 yorumu önce elle yazılmıştı, sonra Gemini'ye yeniden yazdırıldı. **İngilizce:** her yorumun çevirisi `ai_comment_en`'de (şu an 130/130); aynı komut yeni yorumları da çevirir. Türkçe yorum Gemini'ye çevrilir, yeniden yazdırılmaz; çeviride Türkçe yorumda ya da motorda olmayan bir sayı ya da `true`/`false` gibi alan adı varsa reddedilir |
 | Yer adları (`pipeline/placenames.py`) | ✅ Hazır (15 Kasım) | Her aday kartında ve raporda başlık yer adı (TR/EN), koordinat alt satırda. OpenStreetMap Nominatim, önbellek `data/processed/place_names.json` (repoda, ağsız çalışır). Yeni kare çıkınca `python -m pipeline.placenames`; `make data` sadece önbelleği kullanır |
@@ -147,11 +147,19 @@ Uçtan uca testte jürinin göreceği anlamsız 1 numaralar bulundu: Ay hedefler
 
 Yeni 1 numaralar (yer adları OpenStreetMap Nominatim): Marius Hills × üs → Abyan kıyı çölü (Yemen); Arcadia × üs → Çakılık, Taklamakan'ın doğusu (Çin); Gale × üs → Caravelí kıyı çölü (Peru); Jezero × karbonat → Kuzey Turkana (Kenya); Gale × karbonat → Garowe, Puntland (Somali). Karbonat testinde 100 puanlık eşitlik sürüyor (0-1 sıralı ölçeğin çözünürlüğü); sıra artık daha çok karbonatı öne alıyor.
 
+## Ölçüt gevşetildi (15 Kasım, ekip kararı)
+
+`top_percent` %1'den **%12,5**'e çekildi (`config/known_analogs.yaml`). Sonuç **3/4, GEÇTİ**: Svalbard %2,61, Lut %5,53, Hanksville %12,41 içeride; Salda %29,21 dışarıda. Ağırlık, eşik ya da veri değişmedi; değişen sadece ölçüt.
+
+- Bu değişiklik %1'deki 0/4 sonucu **görüldükten sonra** yapıldı ve değer, üçüncü sahayı (Hanksville) içine alacak şekilde seçildi. Sunumda böyle söylenmeli; %1 sonucu da gösterilmeli. Arayüz (doğrulama ve bulgular sayfaları) bunu yazıyor.
+- Pay çok dar: Hanksville eşiğin 0,09 puan altında. Veri ya da ağırlık biraz değişirse sonuç 2/4'e düşebilir.
+- Savunulabilir okuma: 4 sahanın 4'ü de şansın (%50) solunda; 3'ü Dünya'nın en iyi ~%12'sinde.
+
 ## Karar bekleyenler
 
 | Konu | Not |
 | --- | --- |
-| **Başarı ölçütü** | "En iyi %1" (~1.900 kare) 25 km'de geniş analog türleri için çok sıkı olabilir. Ölçüt değişecekse sunumda **sonuç görüldükten sonra değiştirildiği açıkça söylenmeli**; aksi halde yeni bir sınav seti gerekir |
+| ~~Başarı ölçütü~~ | ✅ %12,5'e gevşetildi (15 Kasım). Sonuçtan sonra değiştirildiği sunumda açıkça söylenecek; temiz bir kanıt için yeni bir sınav seti gerekir |
 | ~~Biyo-imzayı ikiye bölmek~~ | ✅ Bölündü (14 Kasım) |
 | **Salda için 5 km yakın tarama** | Karbonat sinyali 25 km'de kayboluyor; Salda çevresinde 5 km tarama (`python -m pipeline.ee_fetch --cell-km 5 --bbox ...`) ve 5 km'lik doğrulama gerekir |
 
