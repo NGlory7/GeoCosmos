@@ -230,6 +230,8 @@ export default function FindingsPage() {
           ))}
         </div>
 
+        <MalapertDilemma />
+
         {/* Dünya'nın taklit edemedikleri */}
         {data && (
           <section className="mt-14">
@@ -342,6 +344,83 @@ function closest(v: ValidationResult, lang: Lang) {
     .slice(0, 2)
     .map((a) => (lang === "en" ? `${a.name} (top ${pct(a.percentile ?? 0, 1)})` : `${a.name} (en iyi ${pct(a.percentile ?? 0, 1)})`))
     .join(", ");
+}
+
+// Malapert × üs kurulumu: ilk adaylar iki gruba ayrılıyor; iki koşulu birden sağlayan kare yok.
+// Sayılar: frontend/public/data/analogs/moon_malapert_base_site.geojson (1-5. adaylar) ve
+// grid.parquet (maskesiz 189.878 kare; pürüzlülük ≥ 417 m olan 331 karenin en kuzeydekisi 52,3°;
+// |enlem| ≥ 56° karelerin en pürüzlüsü 382 m). Veri değişirse burası elle güncellenmeli.
+const DILEMMA_SIDES = [
+  {
+    tr: { head: "Arazisi benzeyen", where: "Karakurum (Çin–Pakistan), 1-3. sıra", rough: "~480 m", sun: "~52°", score: "60,4" },
+    en: { head: "Terrain matches", where: "Karakoram (China–Pakistan), ranks 1-3", rough: "~480 m", sun: "~52°", score: "60.4" },
+    ok: "rough" as const,
+  },
+  {
+    tr: { head: "Işığı benzeyen", where: "Ellesmere Adası (Kanada, 82°K), 4-5. sıra", rough: "~240 m", sun: "~8°", score: "58,7" },
+    en: { head: "Light matches", where: "Ellesmere Island (Canada, 82°N), ranks 4-5", rough: "~240 m", sun: "~8°", score: "58.7" },
+    ok: "sun" as const,
+  },
+];
+
+function MalapertDilemma() {
+  const { t, en } = useLang();
+  return (
+    <section className="mt-14 rounded-2xl border border-violet-400/20 bg-violet-400/[0.04] p-6">
+      <p className="font-mono text-[11px] tracking-[0.3em] text-violet-300/80">{t("BULAMADIĞIMIZ YER", "THE PLACE WE COULD NOT FIND")}</p>
+      <h2 className="mt-2 text-2xl font-semibold text-white">{t("Malapert'in ikilemi", "The Malapert dilemma")}</h2>
+      <p className="mt-3 max-w-3xl text-slate-300">
+        {t(
+          "Malapert Masifi, Artemis'in Ay güney kutbundaki aday bölgelerinden biri: hem dağlık (engebe 467 m) hem de güneş ufka çok yakın (öğlen ortalama 4°). Üs kurulumu testi ikisine de önem veriyor. Motorun ilk adayları iki gruba ayrıldı ve puanları neredeyse eşit: biri araziyi, öbürü ışığı tutturuyor, ikisini birden tutturan yok.",
+          "Malapert Massif is one of the Artemis candidate regions at the Moon's south pole: mountainous (roughness 467 m) with the Sun very close to the horizon (4° at noon on average). The base construction test cares about both. The engine's top candidates split into two groups with almost equal scores: one matches the terrain, the other the light, and none matches both.",
+        )}
+      </p>
+      <div className="mt-5 grid gap-4 sm:grid-cols-2">
+        {DILEMMA_SIDES.map((s) => {
+          const x = en ? s.en : s.tr;
+          return (
+            <div key={s.ok} className="rounded-xl border border-white/10 bg-black/20 p-4">
+              <p className="font-medium text-white">{x.head}</p>
+              <p className="mt-0.5 text-xs text-slate-400">{x.where}</p>
+              <dl className="mt-3 grid grid-cols-[1fr_auto_auto] gap-x-3 gap-y-1 text-sm">
+                <dt className="text-slate-400">{t("Engebe", "Roughness")}</dt>
+                <dd className="font-mono text-slate-200">{x.rough}</dd>
+                <dd className={s.ok === "rough" ? "text-emerald-300" : "text-rose-300"}>{s.ok === "rough" ? "✓" : "✗"}</dd>
+                <dt className="text-slate-400">{t("Öğlen güneşi", "Noon Sun")}</dt>
+                <dd className="font-mono text-slate-200">{x.sun}</dd>
+                <dd className={s.ok === "sun" ? "text-emerald-300" : "text-rose-300"}>{s.ok === "sun" ? "✓" : "✗"}</dd>
+                <dt className="text-slate-400">{t("Puan", "Score")}</dt>
+                <dd className="font-mono text-slate-200">{x.score}</dd>
+                <dd />
+              </dl>
+            </div>
+          );
+        })}
+      </div>
+      <p className="mt-5 max-w-3xl text-sm text-slate-300">
+        {t(
+          "Bu bir rastlantı değil. Dünya'nın 189.878 karesinde Malapert kadar engebeli (417 m üstü) 331 kare var ve en kuzeydekisi 52° enlemde. Güneşin yeterince alçak olduğu 56°'nin kuzeyinde en engebeli kare 382 m. Dünya'nın en sarp dağları orta enlemlerde; kutuplarda bu kadar engebeli buzsuz arazi yok.",
+          "This is not a coincidence. Of Earth's 189,878 cells, 331 are as rough as Malapert (above 417 m), and the northernmost lies at 52°. North of 56°, where the Sun is low enough, the roughest cell is 382 m. Earth's steepest mountains are at mid-latitudes; the poles have no ice-free land this rugged.",
+        )}
+      </p>
+      <p className="mt-3 max-w-3xl text-sm text-slate-300">
+        <b className="text-white">{t("Sonuç:", "Takeaway:")}</b>{" "}
+        {t(
+          "Malapert'e gidecek bir görevin provası Dünya'da tek bir sahada yapılamaz. Arazi provası Karakurum'da, alçak güneş ve uzun gölge provası Arktik'te ayrı ayrı yapılmalı.",
+          "A mission to Malapert cannot be rehearsed at a single site on Earth. Terrain must be rehearsed in the Karakoram, and the low Sun and long shadows separately in the Arctic.",
+        )}
+      </p>
+      <p className="mt-3 max-w-3xl text-xs text-slate-500">
+        {t(
+          "Not: güneş yüksekliği sadece enlemden hesaplanıyor; Malapert'in tepesinin yerel ufkun üstünde kalıp daha uzun güneş alması modelde yok. 25 km'den küçük ölçekte (ör. Alaska ve Grönland kıyı dağları) ikilem yumuşayabilir ama kalkmaz.",
+          "Note: Sun elevation is computed from latitude only; Malapert's summit staying above the local horizon and getting longer sunlight is not modelled. At scales finer than 25 km (e.g. coastal mountains of Alaska and Greenland) the dilemma may soften but does not go away.",
+        )}{" "}
+        <Link to="/moon/moon_malapert/base_site" className="text-cyan-300 hover:underline">
+          {t("Adayların tam listesi", "Full candidate list")}
+        </Link>
+      </p>
+    </section>
+  );
 }
 
 function Info({ title, children }: { title: string; children: ReactNode }) {
