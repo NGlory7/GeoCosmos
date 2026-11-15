@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_76.985_-118.548",
     "name": "76.98°K, 118.55°B",
+    "place": {
+     "tr": "Inuvik Region, Kuzeybatı Toprakları, Kanada",
+     "en": "Inuvik Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_69.071_-97.272",
     "name": "69.07°K, 97.27°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_69.976_-101.399",
     "name": "69.98°K, 101.40°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_72.237_-105.759",
     "name": "72.24°K, 105.76°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_70.428_-108.666",
     "name": "70.43°K, 108.67°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_18.427_56.590",
     "name": "18.43°K, 56.59°D",
+    "place": {
+     "tr": "Al Jazir Province, El Vusta valiliği, Umman",
+     "en": "Al Jazir Province, Al Wusta Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_68.845_-102.726",
     "name": "68.85°K, 102.73°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_68.619_-82.120",
     "name": "68.62°K, 82.12°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_64.323_-85.558",
     "name": "64.32°K, 85.56°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_66.810_-100.708",
     "name": "66.81°K, 100.71°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_76.080_-122.214",
     "name": "76.08°K, 122.21°B",
+    "place": {
+     "tr": "Inuvik Region, Kuzeybatı Toprakları, Kanada",
+     "en": "Inuvik Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_10.513_49.647",
     "name": "10.51°K, 49.65°D",
+    "place": {
+     "tr": "Iskushuban, Bari, Somali",
+     "en": "Iskushuban, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_66.358_-97.379",
     "name": "66.36°K, 97.38°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_67.941_-76.666",
     "name": "67.94°K, 76.67°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_74.950_150.191",
     "name": "74.95°K, 150.19°D",
+    "place": {
+     "tr": "Bulunsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Bulunsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_67.941_-104.544",
     "name": "67.94°K, 104.54°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_71.558_-98.540",
     "name": "71.56°K, 98.54°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_72.011_140.410",
     "name": "72.01°K, 140.41°D",
+    "place": {
+     "tr": "Ust-Yansky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Ust-Yansky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_71.106_149.073",
     "name": "71.11°K, 149.07°D",
+    "place": {
+     "tr": "Allaikhovsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Allaikhovsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_69.297_-110.648",
     "name": "69.30°K, 110.65°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "rover",

@@ -61,7 +61,8 @@ export default function AnalogPage() {
   }, [targetId, testId]);
 
   const shown = useMemo(
-    () => (scenario ? scenario.analogs : analogs).map((a) => (lang === "en" ? { ...a, name: analogName(a, lang) } : a)),
+    // Yer adı (varsa) her iki dilde başlık olur; koordinat kartta ayrıca yazılır.
+    () => (scenario ? scenario.analogs : analogs).map((a) => ({ ...a, name: analogName(a, lang) })),
     [scenario, analogs, lang],
   );
   const selected = useMemo(() => shown.find((a) => a.id === selectedId) ?? shown[0] ?? null, [shown, selectedId]);

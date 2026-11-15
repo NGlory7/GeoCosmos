@@ -1,5 +1,5 @@
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from "recharts";
-import { num, shortLabel } from "../format";
+import { coord, num, shortLabel } from "../format";
 import { useLang } from "../i18n";
 import { sourceEn } from "../i18nData";
 import type { Analog, Body, Logistics, Meta } from "../types";
@@ -147,6 +147,11 @@ export default function AnalogCard({ analog, meta, body, targetName, logistics }
           )}
         </div>
         <h2 className="mt-1 text-lg font-semibold text-white">{analog.name}</h2>
+        {analog.place && (
+          <p className="font-mono text-[11px] text-slate-500">
+            {coord(analog.lat, analog.lon)} · {t("yer adı: OpenStreetMap", "place name: OpenStreetMap")}
+          </p>
+        )}
         <p className="mt-1 text-sm text-slate-400">
           {t(`${targetName} için benzerlik:`, `Similarity to ${targetName}:`)} <span className="font-mono text-2xl font-semibold text-cyan-300">{num(analog.score_total, 1)}</span>
           <span className="text-slate-500"> / 100</span>

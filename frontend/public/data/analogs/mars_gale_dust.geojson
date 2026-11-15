@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_36.288_82.459",
     "name": "36.29°K, 82.46°D",
+    "place": {
+     "tr": "Keriya County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Keriya County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -87,6 +91,10 @@
    "properties": {
     "id": "g25_37.192_85.677",
     "name": "37.19°K, 85.68°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -161,6 +169,10 @@
    "properties": {
     "id": "g25_38.097_87.405",
     "name": "38.10°K, 87.41°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -235,6 +247,10 @@
    "properties": {
     "id": "g25_34.479_78.436",
     "name": "34.48°K, 78.44°D",
+    "place": {
+     "tr": "Nubra, Ladakh, Hindistan",
+     "en": "Nubra, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -309,6 +325,10 @@
    "properties": {
     "id": "g25_38.775_88.879",
     "name": "38.77°K, 88.88°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -383,6 +403,10 @@
    "properties": {
     "id": "g25_36.514_77.632",
     "name": "36.51°K, 77.63°D",
+    "place": {
+     "tr": "Pishan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Pishan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -457,6 +481,10 @@
    "properties": {
     "id": "g25_36.288_83.800",
     "name": "36.29°K, 83.80°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -531,6 +559,10 @@
    "properties": {
     "id": "g25_39.905_88.585",
     "name": "39.91°K, 88.58°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -605,6 +637,10 @@
    "properties": {
     "id": "g25_37.644_84.458",
     "name": "37.64°K, 84.46°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -679,6 +715,10 @@
    "properties": {
     "id": "g25_33.801_77.632",
     "name": "33.80°K, 77.63°D",
+    "place": {
+     "tr": "Leh district, Ladakh, Hindistan",
+     "en": "Leh district, Ladakh, India"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -753,6 +793,10 @@
    "properties": {
     "id": "g25_37.192_83.263",
     "name": "37.19°K, 83.26°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -827,6 +871,10 @@
    "properties": {
     "id": "g25_39.453_87.405",
     "name": "39.45°K, 87.41°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -901,6 +949,10 @@
    "properties": {
     "id": "g25_23.175_57.647",
     "name": "23.17°K, 57.65°D",
+    "place": {
+     "tr": "Al Awabi Province, Al Batinah South Governorate, Umman",
+     "en": "Al Awabi Province, Al Batinah South Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -975,6 +1027,10 @@
    "properties": {
     "id": "g25_39.001_73.845",
     "name": "39.00°K, 73.85°D",
+    "place": {
+     "tr": "Aqto County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Aqto County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -1049,6 +1105,10 @@
    "properties": {
     "id": "g25_22.496_44.127",
     "name": "22.50°K, 44.13°D",
+    "place": {
+     "tr": "Al Quwayiyah, Riyad Bölgesi, Suudi Arabistan",
+     "en": "Al Quwayiyah, Riyadh Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -1123,6 +1183,10 @@
    "properties": {
     "id": "g25_37.871_82.394",
     "name": "37.87°K, 82.39°D",
+    "place": {
+     "tr": "Keriya County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Keriya County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -1197,6 +1261,10 @@
    "properties": {
     "id": "g25_22.044_43.143",
     "name": "22.04°K, 43.14°D",
+    "place": {
+     "tr": "Al Khurmah, Mekke Bölgesi, Suudi Arabistan",
+     "en": "Al Khurmah, Makkah Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -1271,6 +1339,10 @@
    "properties": {
     "id": "g25_20.914_43.881",
     "name": "20.91°K, 43.88°D",
+    "place": {
+     "tr": "Wadi Ad Dawasir, Riyad Bölgesi, Suudi Arabistan",
+     "en": "Wadi Ad Dawasir, Riyadh Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -1345,6 +1417,10 @@
    "properties": {
     "id": "g25_20.235_43.143",
     "name": "20.24°K, 43.14°D",
+    "place": {
+     "tr": "Tathlith, Asir Bölgesi, Suudi Arabistan",
+     "en": "Tathlith, 'Asir Province, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",
@@ -1419,6 +1495,10 @@
    "properties": {
     "id": "g25_38.775_86.226",
     "name": "38.77°K, 86.23°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_gale",
     "test_id": "dust",

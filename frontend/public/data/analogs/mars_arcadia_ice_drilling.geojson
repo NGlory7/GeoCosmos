@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_77.889_-96.496",
     "name": "77.89°K, 96.50°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -87,6 +91,10 @@
    "properties": {
     "id": "g25_76.306_-97.865",
     "name": "76.31°K, 97.86°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -161,6 +169,10 @@
    "properties": {
     "id": "g25_72.689_-100.706",
     "name": "72.69°K, 100.71°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -235,6 +247,10 @@
    "properties": {
     "id": "g25_73.819_-100.027",
     "name": "73.82°K, 100.03°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -309,6 +325,10 @@
    "properties": {
     "id": "g25_71.558_-99.262",
     "name": "71.56°K, 99.26°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -383,6 +403,10 @@
    "properties": {
     "id": "g25_75.628_-101.611",
     "name": "75.63°K, 101.61°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -457,6 +481,10 @@
    "properties": {
     "id": "g25_76.759_-120.583",
     "name": "76.76°K, 120.58°B",
+    "place": {
+     "tr": "Inuvik Region, Kuzeybatı Toprakları, Kanada",
+     "en": "Inuvik Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -531,6 +559,10 @@
    "properties": {
     "id": "g25_38.775_96.544",
     "name": "38.77°K, 96.54°D",
+    "place": {
+     "tr": "Subeigiin Mongolian Autonomous County, Kansu, Çin",
+     "en": "Subeigiin Mongolian Autonomous County, Gansu, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -605,6 +637,10 @@
    "properties": {
     "id": "g25_33.801_84.336",
     "name": "33.80°K, 84.34°D",
+    "place": {
+     "tr": "Gêrzê County, Xizang Özerk Bölgesi, Çin",
+     "en": "Gêrzê County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -679,6 +715,10 @@
    "properties": {
     "id": "g25_80.150_-88.391",
     "name": "80.15°K, 88.39°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -753,6 +793,10 @@
    "properties": {
     "id": "g25_37.418_89.764",
     "name": "37.42°K, 89.76°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -827,6 +871,10 @@
    "properties": {
     "id": "g25_70.428_-72.994",
     "name": "70.43°K, 72.99°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -901,6 +949,10 @@
    "properties": {
     "id": "g25_36.966_88.358",
     "name": "36.97°K, 88.36°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -975,6 +1027,10 @@
    "properties": {
     "id": "g25_74.724_-114.042",
     "name": "74.72°K, 114.04°B",
+    "place": {
+     "tr": "Inuvik Region, Kuzeybatı Toprakları, Kanada",
+     "en": "Inuvik Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -1049,6 +1105,10 @@
    "properties": {
     "id": "g25_75.854_-111.912",
     "name": "75.85°K, 111.91°B",
+    "place": {
+     "tr": "Inuvik Region, Kuzeybatı Toprakları, Kanada",
+     "en": "Inuvik Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -1123,6 +1183,10 @@
    "properties": {
     "id": "g25_72.915_-107.934",
     "name": "72.91°K, 107.93°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -1197,6 +1261,10 @@
    "properties": {
     "id": "g25_35.157_79.777",
     "name": "35.16°K, 79.78°D",
+    "place": {
+     "tr": "Hotan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Hotan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -1271,6 +1339,10 @@
    "properties": {
     "id": "g25_78.567_-67.823",
     "name": "78.57°K, 67.82°B",
+    "place": {
+     "tr": "Avannaata, Grönland",
+     "en": "Avannaata, Greenland"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -1345,6 +1417,10 @@
    "properties": {
     "id": "g25_35.384_89.163",
     "name": "35.38°K, 89.16°D",
+    "place": {
+     "tr": "Amdo County, Xizang Özerk Bölgesi, Çin",
+     "en": "Amdo County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",
@@ -1419,6 +1495,10 @@
    "properties": {
     "id": "g25_69.750_-98.097",
     "name": "69.75°K, 98.10°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "ice_drilling",

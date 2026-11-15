@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_13.679_46.869",
     "name": "13.68°K, 46.87°D",
+    "place": {
+     "tr": "Ahwar District, Abyan (il), Yemen",
+     "en": "Ahwar District, Abyan Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_-13.905_-76.046",
     "name": "13.90°G, 76.05°B",
+    "place": {
+     "tr": "Salas, Ica, Peru",
+     "en": "Salas, Ica, Peru"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_-17.748_12.032",
     "name": "17.75°G, 12.03°D",
+    "place": {
+     "tr": "Kunene, Namibya",
+     "en": "Kunene Region, Namibia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_14.131_47.795",
     "name": "14.13°K, 47.80°D",
+    "place": {
+     "tr": "Rudum District, Şebve, Yemen",
+     "en": "Rudum District, Shabwah Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_10.966_51.035",
     "name": "10.97°K, 51.04°D",
+    "place": {
+     "tr": "Iskushuban, Bari, Somali",
+     "en": "Iskushuban, Bari, Somalia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_-15.487_-74.878",
     "name": "15.49°G, 74.88°B",
+    "place": {
+     "tr": "Caravelí, Arequipa, Peru",
+     "en": "Province of Caravelí, Arequipa, Peru"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_-18.653_12.499",
     "name": "18.65°G, 12.50°D",
+    "place": {
+     "tr": "Kunene, Namibya",
+     "en": "Kunene Region, Namibia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_13.453_42.009",
     "name": "13.45°K, 42.01°D",
+    "place": {
+     "tr": "Güney Kızıldeniz, Eritre",
+     "en": "Southern Red Sea Region, Eritrea"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_19.105_22.494",
     "name": "19.10°K, 22.49°D",
+    "place": {
+     "tr": "East Ennedi, Çad",
+     "en": "East Ennedi, Chad"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_-16.844_-71.841",
     "name": "16.84°G, 71.84°B",
+    "place": {
+     "tr": "Mollendo, Arequipa, Peru",
+     "en": "Mollendo, Arequipa, Peru"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_15.940_47.564",
     "name": "15.94°K, 47.56°D",
+    "place": {
+     "tr": "Al Abar District, Hadramut (il), Yemen",
+     "en": "Al Abar District, Hadramaut Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_19.331_19.298",
     "name": "19.33°K, 19.30°D",
+    "place": {
+     "tr": "Tibesti, Çad",
+     "en": "Tibesti, Chad"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_-20.235_13.434",
     "name": "20.24°G, 13.43°D",
+    "place": {
+     "tr": "Kunene, Namibya",
+     "en": "Kunene Region, Namibia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_20.235_36.998",
     "name": "20.24°K, 37.00°D",
+    "place": {
+     "tr": "Kızıldeniz, Sudan",
+     "en": "Red Sea State, Sudan"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_16.618_29.973",
     "name": "16.62°K, 29.97°D",
+    "place": {
+     "tr": "Ad Dabbah, Kuzey, Sudan",
+     "en": "Ad Dabbah, Northern State, Sudan"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_14.809_46.406",
     "name": "14.81°K, 46.41°D",
+    "place": {
+     "tr": "Merkhah As Sufla District, Şebve, Yemen",
+     "en": "Merkhah As Sufla District, Shabwah Governorate, Yemen"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_21.366_12.169",
     "name": "21.37°K, 12.17°D",
+    "place": {
+     "tr": "Bilma, Nijer",
+     "en": "Bilma, Agadez Region, Niger"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_14.357_41.314",
     "name": "14.36°K, 41.31°D",
+    "place": {
+     "tr": "Güney Kızıldeniz, Eritre",
+     "en": "Southern Red Sea Region, Eritrea"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_22.496_12.169",
     "name": "22.50°K, 12.17°D",
+    "place": {
+     "tr": "Bilma, Nijer",
+     "en": "Bilma, Agadez Region, Niger"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_10.739_48.952",
     "name": "10.74°K, 48.95°D",
+    "place": {
+     "tr": "Las Khorey District, Sanaag, Somaliland",
+     "en": "Las Khorey District, Sanaag, Somaliland"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "base_site",

@@ -138,6 +138,7 @@ Python tarafı ve frontend aynı formata bağlıdır. Bu format **hackathonun il
 {
   "id": "analog_001",
   "name": "Aday bölge adı",
+  "place": { "tr": "Keriya County, Sincan Uygur Özerk Bölgesi, Çin", "en": "Keriya County, Xinjiang, China" },
   "is_new": true,
   "target_id": "mars_jezero",
   "test_id": "biosignature_carbonate",

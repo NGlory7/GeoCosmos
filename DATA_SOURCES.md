@@ -17,6 +17,7 @@
 | **ESA Open Science Catalog** | ESA CCI Permafrost (donmuş zemin); ESA WorldCover 10 m sadece elle kontrol ve görsel (tüm dünya maskesi için Earth Engine sınırını aşıyor; maske MODIS MCD12Q1) | CCI: CEDA'dan NetCDF (v5.0, 2023, Kuzey Yarımküre) `data/raw/permafrost/` altına konur, `pipeline/permafrost.py` yerelde ızgaraya ortalar; WorldCover: `ESA/WorldCover/v200` (elle kontrol) |
 | **JAXA G-Portal** | GSMaP yağış (IMERG ile çapraz kontrol); GCOM-C SGLI yüzey sıcaklığı (opsiyonel kontrol) | GSMaP Earth Engine'de (`JAXA/GPM_L3/GSMaP/v8/operational`); SGLI G-Portal'dan |
 | **CSA RADARSAT-1 / RCM** | Lav akıntısı adaylarında yüzey dokusunun radar ile elle kontrolü; Ay Mini-RF ile görsel karşılaştırma | CSA açık veri portalı; işleme için CSA SAR Python eğitimi |
+| **OpenStreetMap Nominatim** (NASA dışı) | Aday karelerin yer adı (kartta başlık; TR ve EN). Puana katılmaz | `python -m pipeline.placenames`: saniyede en fazla 1 istek, sonuçlar `data/processed/place_names.json` önbelleğinde (repoda). Atıf: © OpenStreetMap katkıcıları, ODbL |
 
 ## Parametreler
 

@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_20.461_36.998",
     "name": "20.46°K, 37.00°D",
+    "place": {
+     "tr": "Kızıldeniz, Sudan",
+     "en": "Red Sea State, Sudan"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_19.557_19.544",
     "name": "19.56°K, 19.54°D",
+    "place": {
+     "tr": "Ennedi-Ouest, Çad",
+     "en": "Ennedi-Ouest, Chad"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_-19.331_12.966",
     "name": "19.33°G, 12.97°D",
+    "place": {
+     "tr": "Kunene, Namibya",
+     "en": "Kunene Region, Namibia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_19.331_18.314",
     "name": "19.33°K, 18.31°D",
+    "place": {
+     "tr": "Tibesti, Çad",
+     "en": "Tibesti, Chad"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_-18.200_12.032",
     "name": "18.20°G, 12.03°D",
+    "place": {
+     "tr": "Kunene, Namibya",
+     "en": "Kunene Region, Namibia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_20.688_31.589",
     "name": "20.69°K, 31.59°D",
+    "place": {
+     "tr": "Halfa, Kuzey, Sudan",
+     "en": "Halfa, Northern State, Sudan"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_20.688_-12.660",
     "name": "20.69°K, 12.66°B",
+    "place": {
+     "tr": "Adrar, Moritanya",
+     "en": "Adrar, Mauritania"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_22.496_35.523",
     "name": "22.50°K, 35.52°D",
+    "place": {
+     "tr": "Kızıldeniz, Mısır",
+     "en": "Red Sea, Egypt"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_19.105_37.243",
     "name": "19.10°K, 37.24°D",
+    "place": {
+     "tr": "Kızıldeniz, Sudan",
+     "en": "Red Sea State, Sudan"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_20.914_35.523",
     "name": "20.91°K, 35.52°D",
+    "place": {
+     "tr": "Kızıldeniz, Sudan",
+     "en": "Red Sea State, Sudan"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_20.914_13.644",
     "name": "20.91°K, 13.64°D",
+    "place": {
+     "tr": "Bilma, Agadez, Nijer",
+     "en": "Bilma, Niger"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_19.783_22.494",
     "name": "19.78°K, 22.49°D",
+    "place": {
+     "tr": "East Ennedi, Çad",
+     "en": "East Ennedi, Chad"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_22.270_36.506",
     "name": "22.27°K, 36.51°D",
+    "place": {
+     "tr": "Kızıldeniz, Mısır",
+     "en": "Red Sea, Egypt"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_20.461_19.544",
     "name": "20.46°K, 19.54°D",
+    "place": {
+     "tr": "Tibesti, Çad",
+     "en": "Tibesti, Chad"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_-20.914_13.667",
     "name": "20.91°G, 13.67°D",
+    "place": {
+     "tr": "Kunene, Namibya",
+     "en": "Kunene Region, Namibia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_21.366_32.818",
     "name": "21.37°K, 32.82°D",
+    "place": {
+     "tr": "Nil Nehri, Sudan",
+     "en": "River Nile State, Sudan"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_21.366_-11.923",
     "name": "21.37°K, 11.92°B",
+    "place": {
+     "tr": "Adrar, Moritanya",
+     "en": "Adrar, Mauritania"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_22.722_34.048",
     "name": "22.72°K, 34.05°D",
+    "place": {
+     "tr": "Kızıldeniz, Mısır",
+     "en": "Red Sea, Egypt"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_21.818_25.198",
     "name": "21.82°K, 25.20°D",
+    "place": {
+     "tr": "Halfa, Kuzey, Sudan",
+     "en": "Halfa, Northern State, Sudan"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_20.688_45.356",
     "name": "20.69°K, 45.36°D",
+    "place": {
+     "tr": "As Sulayyil, Riyad Bölgesi, Suudi Arabistan",
+     "en": "As Sulayyil, Riyadh Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "base_site",

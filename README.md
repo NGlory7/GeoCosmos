@@ -69,6 +69,7 @@ cp .env.example .env
 | — | `python -m pipeline.ee_export --plan` | Export şerit planını yazdırır (Earth Engine gerekmez) |
 | `make export` | `python -m pipeline.ee_export` | Tüm karaları Drive'a CSV olarak export eder |
 | — | `python -m pipeline.target_values --target <id> --dem <dosya>` | Hedefin eğim/pürüzlülüğünü Dünya ile aynı kuralla hesaplar |
+| — | `python -m pipeline.placenames` | Yeni aday karelere yer adı çeker (OpenStreetMap, önbellekli); `--offline` sadece önbelleği uygular |
 | `make grid` | `python -m pipeline.features` | `data/raw/*.csv` → `data/processed/grid.parquet` |
 | `make web` | `cd frontend && npm ci && npm run dev` | Arayüzü açar (`localhost:5173`) |
 | `make data` | `python -m pipeline.build` | `frontend/public/data/` dosyalarını üretir |

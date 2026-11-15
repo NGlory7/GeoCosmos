@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_10.739_48.952",
     "name": "10.74°K, 48.95°D",
+    "place": {
+     "tr": "Las Khorey District, Sanaag, Somaliland",
+     "en": "Las Khorey District, Sanaag, Somaliland"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_22.722_58.139",
     "name": "22.72°K, 58.14°D",
+    "place": {
+     "tr": "Al Mudhaibi Province, Ash Sharqiyah North Governorate, Umman",
+     "en": "Al Mudhaibi Province, Ash Sharqiyah North Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_71.332_124.528",
     "name": "71.33°K, 124.53°D",
+    "place": {
+     "tr": "Bulunsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Bulunsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_72.915_-92.119",
     "name": "72.91°K, 92.12°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_69.976_150.943",
     "name": "69.98°K, 150.94°D",
+    "place": {
+     "tr": "Allaikhovsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Allaikhovsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_65.906_109.031",
     "name": "65.91°K, 109.03°D",
+    "place": {
+     "tr": "Mirninsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Mirninsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_67.263_149.392",
     "name": "67.26°K, 149.39°D",
+    "place": {
+     "tr": "Verkhnekolymsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Verkhnekolymsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_47.366_102.645",
     "name": "47.37°K, 102.65°D",
+    "place": {
+     "tr": "Kharkhorin, Övörhangay, Moğolistan",
+     "en": "Kharkhorin, Övörkhangai, Mongolia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_66.358_111.805",
     "name": "66.36°K, 111.81°D",
+    "place": {
+     "tr": "Mirninsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Mirninsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_69.071_131.211",
     "name": "69.07°K, 131.21°D",
+    "place": {
+     "tr": "Bulunsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Bulunsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_71.558_-81.214",
     "name": "71.56°K, 81.21°B",
+    "place": {
+     "tr": "Qikiqtaaluk Region, Nunavut, Kanada",
+     "en": "Qikiqtaaluk Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_66.132_-92.385",
     "name": "66.13°K, 92.39°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_70.202_122.538",
     "name": "70.20°K, 122.54°D",
+    "place": {
+     "tr": "Bulunsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Bulunsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_64.776_113.993",
     "name": "64.78°K, 113.99°D",
+    "place": {
+     "tr": "Mirninsky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Mirninsky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_68.619_-136.059",
     "name": "68.62°K, 136.06°B",
+    "place": {
+     "tr": "Inuvik Region, Kuzeybatı Toprakları, Kanada",
+     "en": "Inuvik Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_64.776_160.199",
     "name": "64.78°K, 160.20°D",
+    "place": {
+     "tr": "Severo-Evensky Urban District, Magadan Oblast, Rusya Federasyonu",
+     "en": "Severo-Evensky Urban District, Magadan Oblast, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_67.037_160.079",
     "name": "67.04°K, 160.08°D",
+    "place": {
+     "tr": "Bilibinsky District, Chukotka Autonomous Okrug, Rusya Federasyonu",
+     "en": "Bilibinsky District, Chukotka Autonomous Okrug, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_60.254_136.030",
     "name": "60.25°K, 136.03°D",
+    "place": {
+     "tr": "Ust-Maysky Ulus, Yakutistan, Rusya Federasyonu",
+     "en": "Ust-Maysky Ulus, Sakha Republic, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_-24.757_-67.839",
     "name": "24.76°G, 67.84°B",
+    "place": {
+     "tr": "Los Andes, Salta, Arjantin",
+     "en": "Los Andes, Salta, Argentina"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_66.584_104.037",
     "name": "66.58°K, 104.04°D",
+    "place": {
+     "tr": "Evenkiysky Rayon, Krasnoyarsk Krai, Rusya Federasyonu",
+     "en": "Evenkiysky Rayon, Krasnoyarsk Krai, Russia"
+    },
     "is_new": true,
     "target_id": "moon_marius_hills",
     "test_id": "lava_tube",

@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_37.192_83.800",
     "name": "37.19°K, 83.80°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -87,6 +91,10 @@
    "properties": {
     "id": "g25_37.644_85.047",
     "name": "37.64°K, 85.05°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -161,6 +169,10 @@
    "properties": {
     "id": "g25_21.140_44.127",
     "name": "21.14°K, 44.13°D",
+    "place": {
+     "tr": "Wadi Ad Dawasir, Riyad Bölgesi, Suudi Arabistan",
+     "en": "Wadi Ad Dawasir, Riyadh Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -235,6 +247,10 @@
    "properties": {
     "id": "g25_17.974_55.664",
     "name": "17.97°K, 55.66°D",
+    "place": {
+     "tr": "Shalim Wa Juzor Al Hallaniyat Province, Zufar valiliği, Umman",
+     "en": "Shalim Wa Juzor Al Hallaniyat Province, Dhofar Governorate, Oman"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -309,6 +325,10 @@
    "properties": {
     "id": "g25_39.679_87.995",
     "name": "39.68°K, 88.00°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -383,6 +403,10 @@
    "properties": {
     "id": "g25_38.549_87.405",
     "name": "38.55°K, 87.41°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -457,6 +481,10 @@
    "properties": {
     "id": "g25_15.940_11.457",
     "name": "15.94°K, 11.46°D",
+    "place": {
+     "tr": "Tesker, Zinder, Nijer",
+     "en": "Tesker, Zinder Region, Niger"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -531,6 +559,10 @@
    "properties": {
     "id": "g25_22.722_44.127",
     "name": "22.72°K, 44.13°D",
+    "place": {
+     "tr": "Al Quwayiyah, Riyad Bölgesi, Suudi Arabistan",
+     "en": "Al Quwayiyah, Riyadh Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -605,6 +637,10 @@
    "properties": {
     "id": "g25_36.966_82.459",
     "name": "36.97°K, 82.46°D",
+    "place": {
+     "tr": "Niye, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Minfeng County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -679,6 +715,10 @@
    "properties": {
     "id": "g25_18.200_11.688",
     "name": "18.20°K, 11.69°D",
+    "place": {
+     "tr": "Bilma, Agadez, Nijer",
+     "en": "Bilma, Agadez Region, Niger"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -753,6 +793,10 @@
    "properties": {
     "id": "g25_19.105_49.043",
     "name": "19.10°K, 49.04°D",
+    "place": {
+     "tr": "Şarure, Necran Bölgesi, Suudi Arabistan",
+     "en": "Sharurah, Najran Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -827,6 +871,10 @@
    "properties": {
     "id": "g25_22.044_44.864",
     "name": "22.04°K, 44.86°D",
+    "place": {
+     "tr": "Wadi Ad Dawasir, Riyad Bölgesi, Suudi Arabistan",
+     "en": "Wadi Ad Dawasir, Riyadh Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -901,6 +949,10 @@
    "properties": {
     "id": "g25_26.114_48.797",
     "name": "26.11°K, 48.80°D",
+    "place": {
+     "tr": "Al Nuayriyah Governorate, Doğu Bölgesi, Suudi Arabistan",
+     "en": "Al Nuayriyah Governorate, Eastern Province, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -975,6 +1027,10 @@
    "properties": {
     "id": "g25_39.453_89.764",
     "name": "39.45°K, 89.76°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -1049,6 +1105,10 @@
    "properties": {
     "id": "g25_24.079_51.010",
     "name": "24.08°K, 51.01°D",
+    "place": {
+     "tr": "Al Udayd Governorate, Doğu Bölgesi, Suudi Arabistan",
+     "en": "Al Udayd Governorate, Eastern Province, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -1123,6 +1183,10 @@
    "properties": {
     "id": "g25_19.105_48.060",
     "name": "19.10°K, 48.06°D",
+    "place": {
+     "tr": "Şarure, Necran Bölgesi, Suudi Arabistan",
+     "en": "Sharurah, Najran Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -1197,6 +1261,10 @@
    "properties": {
     "id": "g25_38.097_86.226",
     "name": "38.10°K, 86.23°D",
+    "place": {
+     "tr": "Qarqan County, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Qarqan County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -1271,6 +1339,10 @@
    "properties": {
     "id": "g25_18.653_10.531",
     "name": "18.65°K, 10.53°D",
+    "place": {
+     "tr": "Iferouane, Nijer",
+     "en": "Iferouane, Niger"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -1345,6 +1417,10 @@
    "properties": {
     "id": "g25_18.200_47.564",
     "name": "18.20°K, 47.56°D",
+    "place": {
+     "tr": "Şarure, Necran Bölgesi, Suudi Arabistan",
+     "en": "Sharurah, Najran Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",
@@ -1419,6 +1495,10 @@
    "properties": {
     "id": "g25_20.914_39.702",
     "name": "20.91°K, 39.70°D",
+    "place": {
+     "tr": "Bahrah, Mekke Bölgesi, Suudi Arabistan",
+     "en": "Bahrah, Makkah Region, Saudi Arabia"
+    },
     "is_new": true,
     "target_id": "mars_jezero",
     "test_id": "dust",

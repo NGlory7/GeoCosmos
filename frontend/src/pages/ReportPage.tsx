@@ -77,7 +77,7 @@ export default function ReportPage() {
           <p className="font-mono text-[11px] tracking-[0.25em] text-slate-500">{t("GEOCOSMOS · ANALOG SAHA RAPORU", "GEOCOSMOS · ANALOG SITE REPORT")}</p>
           <h1 className="mt-2 text-2xl font-semibold">{analog.name}</h1>
           <p className="mt-1 text-sm text-slate-600">
-            {analog.is_new ? "" : `${coord(analog.lat, analog.lon)} · `}
+            {analog.is_new && !analog.place ? "" : `${coord(analog.lat, analog.lon)} · `}
             {en ? `${meta.grid_km} km cell` : `${meta.grid_km} km'lik kare`} · {analog.is_new ? t("yeni aday", "new candidate") : t("bilinen analog saha", "known analog site")}
           </p>
           <p className="mt-1 text-sm text-slate-600">

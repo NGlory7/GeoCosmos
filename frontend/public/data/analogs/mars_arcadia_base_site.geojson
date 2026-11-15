@@ -13,6 +13,10 @@
    "properties": {
     "id": "g25_37.418_89.764",
     "name": "37.42°K, 89.76°D",
+    "place": {
+     "tr": "Çakılık, Sincan Uygur Özerk Bölgesi, Çin",
+     "en": "Ruoqiang County, Xinjiang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -88,6 +92,10 @@
    "properties": {
     "id": "g25_35.384_89.163",
     "name": "35.38°K, 89.16°D",
+    "place": {
+     "tr": "Amdo County, Xizang Özerk Bölgesi, Çin",
+     "en": "Amdo County, Xizang, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -163,6 +171,10 @@
    "properties": {
     "id": "g25_62.515_-82.511",
     "name": "62.51°K, 82.51°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -238,6 +250,10 @@
    "properties": {
     "id": "g25_63.419_-84.543",
     "name": "63.42°K, 84.54°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -313,6 +329,10 @@
    "properties": {
     "id": "g25_69.071_-96.060",
     "name": "69.07°K, 96.06°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -388,6 +408,10 @@
    "properties": {
     "id": "g25_60.706_-70.922",
     "name": "60.71°K, 70.92°B",
+    "place": {
+     "tr": "Kativik, Québec, Kanada",
+     "en": "Kativik, Quebec, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -463,6 +487,10 @@
    "properties": {
     "id": "g25_72.689_-100.706",
     "name": "72.69°K, 100.71°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -538,6 +566,10 @@
    "properties": {
     "id": "g25_69.750_-98.097",
     "name": "69.75°K, 98.10°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -613,6 +645,10 @@
    "properties": {
     "id": "g25_58.219_-94.625",
     "name": "58.22°K, 94.63°B",
+    "place": {
+     "tr": "Unorganized Division No., Manitoba, Kanada",
+     "en": "Unorganized Division No., Manitoba, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -688,6 +724,10 @@
    "properties": {
     "id": "g25_71.558_-99.262",
     "name": "71.56°K, 99.26°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -763,6 +803,10 @@
    "properties": {
     "id": "g25_67.263_-98.484",
     "name": "67.26°K, 98.48°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -838,6 +882,10 @@
    "properties": {
     "id": "g25_69.750_-101.399",
     "name": "69.75°K, 101.40°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -913,6 +961,10 @@
    "properties": {
     "id": "g25_59.349_-70.809",
     "name": "59.35°K, 70.81°B",
+    "place": {
+     "tr": "Kativik, Québec, Kanada",
+     "en": "Kativik, Quebec, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -988,6 +1040,10 @@
    "properties": {
     "id": "g25_38.323_97.428",
     "name": "38.32°K, 97.43°D",
+    "place": {
+     "tr": "Delingha City, Çinghay, Çin",
+     "en": "Delingha City, Qinghai, China"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -1063,6 +1119,10 @@
    "properties": {
     "id": "g25_61.384_-102.546",
     "name": "61.38°K, 102.55°B",
+    "place": {
+     "tr": "South Slave Region, Kuzeybatı Toprakları, Kanada",
+     "en": "South Slave Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -1138,6 +1198,10 @@
    "properties": {
     "id": "g25_67.263_-96.060",
     "name": "67.26°K, 96.06°B",
+    "place": {
+     "tr": "Kitikmeot Region, Nunavut, Kanada",
+     "en": "Kitikmeot Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -1213,6 +1277,10 @@
    "properties": {
     "id": "g25_65.906_-99.598",
     "name": "65.91°K, 99.60°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -1288,6 +1356,10 @@
    "properties": {
     "id": "g25_62.063_-116.033",
     "name": "62.06°K, 116.03°B",
+    "place": {
+     "tr": "North Slave Region, Kuzeybatı Toprakları, Kanada",
+     "en": "North Slave Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -1363,6 +1435,10 @@
    "properties": {
     "id": "g25_61.384_-97.430",
     "name": "61.38°K, 97.43°B",
+    "place": {
+     "tr": "Kivalliq Region, Nunavut, Kanada",
+     "en": "Kivalliq Region, Nunavut, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
@@ -1438,6 +1514,10 @@
    "properties": {
     "id": "g25_61.836_-104.871",
     "name": "61.84°K, 104.87°B",
+    "place": {
+     "tr": "South Slave Region, Kuzeybatı Toprakları, Kanada",
+     "en": "South Slave Region, Northwest Territories, Canada"
+    },
     "is_new": true,
     "target_id": "mars_arcadia",
     "test_id": "base_site",
