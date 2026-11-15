@@ -5,11 +5,13 @@
 from __future__ import annotations
 
 import os
+from contextlib import asynccontextmanager
 
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from api import grid_source
 from api.routes import scenario
 
 load_dotenv()
@@ -28,7 +30,13 @@ def parse_origins(raw: str | None) -> list[str]:
     return [o for o in origins if o] or list(DEFAULT_ORIGINS)
 
 
-app = FastAPI(title="GeoCosmos API")
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    grid_source.start(scenario.GRID_PATH)  # GRID_URL varsa ve dosya yoksa arka planda indir
+    yield
+
+
+app = FastAPI(title="GeoCosmos API", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=parse_origins(os.getenv("API_ALLOWED_ORIGIN")),
@@ -40,4 +48,10 @@ app.include_router(scenario.router)
 
 @app.get("/health")
 def health() -> dict:
-    return {"status": "ok"}
+    # Barındırmanın sağlık kontrolü sadece "status"a bakar; diğerleri teşhis için.
+    return {
+        "status": "ok",
+        "grid": scenario.GRID_PATH.exists(),
+        "grid_downloading": grid_source.downloading(),
+        "gemini": bool(os.getenv("GEMINI_API_KEY")),
+    }

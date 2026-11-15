@@ -166,6 +166,9 @@ export interface ScenarioRequest {
 }
 
 export interface ScenarioResponse {
+  // gemini: canlı çeviri · cache: önbellek · keywords: Gemini yok, anahtar kelimeyle hazır testler
+  method: "gemini" | "cache" | "keywords";
+  matched_tests: TestId[]; // sadece keywords
   weights: Record<string, number>;
   unsupported: string[];
   analogs: Analog[];

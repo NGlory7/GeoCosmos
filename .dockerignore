@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+venv
+**/__pycache__
+**/*.pyc
+.env
+frontend
+notebooks
+docs
+tests
+data/raw
+data/processed/*cache*.json
+*.md

@@ -1,0 +1,25 @@
+# /scenario yedeği: Gemini'ye ulaşılamazsa (anahtar yok, kota, ağ) serbest metin buradaki
+# anahtar kelimelerle hazır testlere eşlenir. Ağırlıklar eşleşen testlerin ağırlıklarının
+# ortalamasıdır (config/test_profiles.yaml); burada yeni ağırlık YAZILMAZ.
+#
+# Eşleşme: küçük harfe çevrilmiş metinde kelime BAŞI ("tozlanması" -> "toz"; "okuma" "kum" değil).
+# Türkçe İ/ı korunur. Kısa ve belirsiz kökler için ifade yazılır ("üs" değil "üs kur", "üssü").
+# Bir kelime birden fazla teste ait olabilir ("biyo" iki biyo-imza testine). Hedefte anlamsız
+# testler atılır (test_profiles.yaml > applies_to; ör. Ay'da toz ve biyo-imza yok).
+# Yanıtta method = "keywords" ve eşleşen testler döner; arayüz bunu açıkça söyler.
+# Arayüz İngilizce de olabildiği için İngilizce anahtar kelimeler de var.
+
+tests:
+  rover: [rover, tekerlek, sürüş, sürmek, gezgin, araç, otonom, navigasyon, wheel, drive, driving, traverse, mobility]
+  ice_drilling: [buz, sondaj, matkap, delme, permafrost, donmuş, isru, su elde, ice, drill, frozen]
+  lava_tube: [lav, tüp, mağara, yeraltı, yer altı, sığınak, cave, lava tube, underground]
+  dust: [toz, fırtına, aşınma, rüzgar, kum, güneş panel, dust, storm, abrasion, wind]
+  biosignature_arid: [biyo, yaşam, kurak, organik, mikrop, korunma, life, biosignature, arid, organic, microb]
+  biosignature_carbonate: [biyo, yaşam, karbonat, fosil, serpantin, mineral, life, biosignature, carbonate, fossil]
+  base_site: [üs kur, üssü, üssün, üsse, üsler, iniş, inşaat, habitat, yerleşim, aydınlanma, güneş ışığı, base, landing, construction, settlement, illumination]
+
+# Dünya'da karşılığı olmayan istekler: yanıtın "unsupported" listesine yazılır (Gemini kuralıyla aynı)
+unsupported:
+  düşük yerçekimi: [yerçekimi, gravity]
+  vakum: [vakum, vacuum, atmosfersiz]
+  yüksek radyasyon: [radyasyon, radiation, kozmik ışın]

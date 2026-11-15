@@ -100,6 +100,15 @@ export default function ScenarioBox({ targetId, meta, onResult, initialText = ""
       )}
       {last && (
         <div className="mt-3 space-y-2 text-xs text-slate-400">
+          {last.method === "keywords" && (
+            <p className="rounded-md border border-amber-400/20 bg-amber-400/5 px-2 py-1.5 text-amber-200/80">
+              {t(
+                "Gemini'ye şu an ulaşılamadı. Metindeki anahtar kelimelerle hazır testlerin ağırlıkları kullanıldı:",
+                "Gemini could not be reached. Keywords in your text were matched to the ready-made tests, using their weights:",
+              )}{" "}
+              {last.matched_tests.map((id) => meta.tests.find((x) => x.id === id)?.label ?? id).join(", ")}.
+            </p>
+          )}
           <p>
             {t("Ağırlıklar:", "Weights:")}{" "}
             {Object.entries(last.weights)
