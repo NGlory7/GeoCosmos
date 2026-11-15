@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { CircleMarker, ImageOverlay, MapContainer, TileLayer, Tooltip, useMap } from "react-leaflet";
+import { num } from "../format";
 import type { Analog } from "../types";
 
 // NASA GIBS (Worldview'in karo servisi), Web Mercator: ısı haritası PNG'leri de Web Mercator.
@@ -47,7 +48,7 @@ export default function EarthMap({ analogs, selected, onSelect, heatmap, showHea
             eventHandlers={{ click: () => onSelect(a) }}
           >
             <Tooltip direction="top" offset={[0, -8]}>
-              #{a.rank} {a.name} · {a.score_total.toLocaleString("tr-TR")}
+              #{a.rank} {a.name} · {num(a.score_total, 1)}
             </Tooltip>
           </CircleMarker>
         );

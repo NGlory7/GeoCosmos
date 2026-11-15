@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BODIES } from "../bodies";
+import { useLang } from "../i18n";
+import { localizeTargets } from "../i18nData";
 import PlanetGlobe from "../components/PlanetGlobe";
 import SpaceLayout from "../components/SpaceLayout";
 import { loadTargets, targetsOf, type TargetWithCoords } from "../services/data";
@@ -8,17 +10,19 @@ import type { Body } from "../types";
 
 function BodyCard({ body, targets, size }: { body: Body; targets: TargetWithCoords[]; size: string }) {
   const meta = BODIES[body];
-  const own = targetsOf(targets, body);
+  const { t, lang } = useLang();
+  const own = targetsOf(localizeTargets(targets, lang), body);
+  const name = lang === "en" ? meta.nameEn : meta.name;
   // "Jezero Krateri" -> "JEZERO" (özel isimler: Türkçe büyük harf kuralı uygulanmaz)
   const names = own.map((t) => t.name.split(" ")[0].toUpperCase());
-  const count = own.length ? `${own.length} HEDEF` : "HEDEFLER YÜKLENİYOR";
+  const count = own.length ? `${own.length} ${t("HEDEF", own.length === 1 ? "TARGET" : "TARGETS")}` : t("HEDEFLER YÜKLENİYOR", "LOADING TARGETS");
   const sub = own.length ? `${count} · ${names.join(" · ")}` : count;
 
   return (
     <Link
       to={`/${body}`}
       className={`group relative block aspect-square shrink-0 rounded-full outline-none ${size}`}
-      aria-label={`${meta.name}: ${sub}`}
+      aria-label={`${name}: ${sub}`}
     >
       {/* Hedef sayfasındaki NASA Trek mozaiğiyle aynı küre: sadece döner, tıklama bağlantıya gider */}
       <PlanetGlobe
@@ -31,7 +35,7 @@ function BodyCard({ body, targets, size }: { body: Body; targets: TargetWithCoor
         <span className={`size-1.5 rounded-full shadow-[0_0_8px] ${meta.dot}`} />
         <span className="flex flex-col gap-0.5 leading-tight">
           <span className="font-mono text-[12px] font-semibold tracking-wider text-white sm:text-[13px]">
-            {meta.name} <span className="font-normal text-white/40">// {meta.tagline}</span>
+            {name} <span className="font-normal text-white/40">// {meta.tagline}</span>
           </span>
           <span className={`font-mono text-[9px] tracking-wider sm:text-[10px] ${meta.accent}`}>
             {count}
@@ -47,6 +51,7 @@ function BodyCard({ body, targets, size }: { body: Body; targets: TargetWithCoor
 }
 
 export default function Home() {
+  const { t } = useLang();
   const [targets, setTargets] = useState<TargetWithCoords[]>([]);
 
   useEffect(() => {
@@ -56,13 +61,13 @@ export default function Home() {
   return (
     <SpaceLayout>
       <main className="flex min-h-[calc(100dvh-57px)] flex-col items-center justify-center gap-8 px-4 py-10">
-        <p className="font-mono text-[11px] tracking-[0.3em] text-slate-500">HEDEF GÖK CİSMİNİ SEÇ</p>
+        <p className="font-mono text-[11px] tracking-[0.3em] text-slate-500">{t("HEDEF GÖK CİSMİNİ SEÇ", "CHOOSE A TARGET WORLD")}</p>
         <div className="flex flex-col items-center justify-center md:flex-row md:gap-4">
           <BodyCard body="mars" targets={targets} size="w-[min(92vw,34rem)] md:w-[min(48vw,34rem)]" />
           <BodyCard body="moon" targets={targets} size="w-[min(78vw,28rem)] md:w-[min(40vw,28rem)]" />
         </div>
         <p className="font-mono text-[10px] tracking-wider text-slate-600">
-          NASA Mars Trek · Viking MDIM 2.1 · NASA Moon Trek · LRO WAC küresel mozaik
+          NASA Mars Trek · Viking MDIM 2.1 · NASA Moon Trek · LRO WAC {t("küresel mozaik", "global mosaic")}
         </p>
       </main>
     </SpaceLayout>
