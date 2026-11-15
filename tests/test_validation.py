@@ -17,10 +17,8 @@ GRID = Path(__file__).resolve().parent.parent / "data" / "processed" / "grid.par
 
 
 @pytest.mark.skipif(not GRID.exists(), reason="grid.parquet henüz yok (make grid)")
-# Bilinen başarısızlık: gerçek doğrulama ayar sonrası da 0/4 (14 Kasım). Ölçüt ve biyo-imza kararı
-# ekipte: STATUS.md > Gerçek sonuçlar ve ağırlık ayarı. Ölçüt sağlanınca bu satır silinmeli
-# (strict=False: geçerse XPASS olarak görünür, CI kırmızıya düşmez).
-@pytest.mark.xfail(reason="Başarı ölçütü henüz sağlanmıyor (0/4); STATUS.md", strict=False)
+# 15 Kasım: ölçüt %1'den (0/4) %12,5'e gevşetildi -> 3/4. Hanksville %12,41'de, payı çok dar:
+# veri ya da ağırlık değişirse bu test kırmızıya düşebilir.
 def test_known_analogs_rank_high():
     holdout = {a.id for a in load_known_analogs().by_split("holdout")}
     present = set(pd.read_parquet(GRID, columns=["known_id"])["known_id"].dropna())

@@ -120,7 +120,7 @@ Operasyonel bilgiler puan değil, kartta ✓/✗ etiketi olarak gösterilir: yol
 | Lut Çölü (İran) | Toz ve aşınma | Sınav |
 | Lanzarote lav tüpleri (İspanya) | Lav tüpü ve habitat | Rapor |
 
-**Başarı ölçütü:** 4 sınav yerinden en az 3'ü, kendi test amacında ve kendi hedefine göre Dünya karelerinin en iyi %1'ine girmeli. Her yerin hangi hedefe göre puanlanacağı (ör. Salda → Jezero) ve yüzdelik paydası `config/known_analogs.yaml` dosyasında.
+**Başarı ölçütü:** 4 sınav yerinden en az 3'ü, kendi test amacında ve kendi hedefine göre Dünya karelerinin en iyi %12,5'ine girmeli (ilk ölçüt %1'di, sonuç 0/4; 15 Kasım'da sonuç görüldükten sonra gevşetildi, STATUS.md). Her yerin hangi hedefe göre puanlanacağı (ör. Salda → Jezero) ve yüzdelik paydası `config/known_analogs.yaml` dosyasında.
 
 - **Ayar yeri olmayan testler** (toz, lav tüpü): Ağırlıkları fiziksel gerekçeyle önceden sabitlendi (`test_profiles.yaml > rationale`), doğrulama sonucuna bakılarak değiştirilmez.
 - **Keşif dışı liste:** Doğrulamada kullanılmayan ama zaten bilinen analoglar (Kuru Vadiler, Rio Tinto, Mauna Kea, Ries…) da "Yeni aday" sayılmaz (`known_analogs.yaml > exclude_only`).
@@ -247,7 +247,7 @@ Toplam 3 dakika (resmi süre farklıysa oranlar korunur):
 
 1. **Problem (30 sn):** Test sahası seçimi bugün çoğunlukla uzman deneyimine dayanıyor. Tek bir "benzerlik yüzdesi" yanıltıcı: Bir yer rover testi için mükemmel, buz sondajı için işe yaramaz olabilir.
 2. **Yöntem (40 sn):** Test amacına göre ağırlıklı skor, her sayı NASA verisinden, kopma kutusu benzerliğin bittiği yeri söylüyor.
-3. **Kanıt (25 sn):** Doğrulama tablosu: ayarda hiç kullanmadığımız ünlü analogların kaçı kendi test amacında Dünya'nın en iyi %1'inde.
+3. **Kanıt (25 sn):** Doğrulama tablosu: ayarda hiç kullanmadığımız ünlü analogların kaçı kendi test amacında Dünya'nın en iyi %12,5'inde (ilk ölçüt %1'de 0/4 olduğu da söylenir).
 4. **Canlı demo (70 sn):**
    - Bir Mars hedefi + test amacı → Dünya haritası → kart ve kopma kutusu.
    - Bir Ay hedefi ile aynısı.

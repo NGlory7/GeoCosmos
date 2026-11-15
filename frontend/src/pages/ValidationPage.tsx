@@ -98,7 +98,7 @@ function PercentileChart({ res }: { res: ValidationResult }) {
             {t("şans", "chance")}
           </span>
           <span className="absolute left-0 top-4 whitespace-nowrap font-mono text-[10px] text-emerald-300/80">
-            {t(`ölçüt: en iyi ${pct(res.top_percent, 0)}`, `criterion: top ${pct(res.top_percent, 0)}`)}
+            {t(`ölçüt: en iyi ${pct(res.top_percent, 1)}`, `criterion: top ${pct(res.top_percent, 1)}`)}
           </span>
         </div>
         <span className="hidden sm:block" />
@@ -108,14 +108,20 @@ function PercentileChart({ res }: { res: ValidationResult }) {
         {en ? (
           <>
             A randomly chosen cell lands on average at the {pct(CHANCE, 0)} mark (the yellow line). {leftOfChance} of {holdout.length} test
-            sites sit to its left: the engine ranks these known analogs better than chance. But only a dot inside the green band counts as a hit, and the criterion was{" "}
-            <b className="text-slate-200">fixed before the test and not changed after seeing the result</b>.
+            sites sit to its left: the engine ranks these known analogs better than chance. But only a dot inside the green band counts as a hit.{" "}
+            <b className="text-slate-200">
+              The criterion was originally the top 1% (result: 0/4); it was relaxed to the current value after that result was seen
+            </b>
+            .
           </>
         ) : (
           <>
             Rastgele seçilen bir kare ortalamada {pct(CHANCE, 0)}'lik dilime düşer (sarı çizgi). {holdout.length} sınav sahasının{" "}
-            {leftOfChance} tanesi bunun solunda: motor bu bilinen analogları şanstan iyi sıralıyor. Ama isabet sayılan sadece yeşil bölgedeki noktalar ve ölçüt{" "}
-            <b className="text-slate-200">sınavdan önce kondu, sonuç görüldükten sonra değiştirilmedi</b>.
+            {leftOfChance} tanesi bunun solunda: motor bu bilinen analogları şanstan iyi sıralıyor. Ama isabet sayılan sadece yeşil bölgedeki noktalar.{" "}
+            <b className="text-slate-200">
+              Ölçüt başta en iyi %1'di (sonuç: 0/4); bu sonuç görüldükten sonra bugünkü değere gevşetildi
+            </b>
+            .
           </>
         )}
       </p>
@@ -188,8 +194,8 @@ export default function ValidationPage() {
               </p>
               <p className="mt-1 text-sm text-slate-300">
                 {en
-                  ? `test sites in the top ${pct(res.top_percent, 0)} of Earth for their own test (needed: ${res.min_hits})`
-                  : `sınav sahası kendi test amacında Dünya'nın en iyi ${pct(res.top_percent, 0)}'inde (gereken: ${res.min_hits})`}{" "}
+                  ? `test sites in the top ${pct(res.top_percent, 1)} of Earth for their own test (needed: ${res.min_hits})`
+                  : `sınav sahası kendi test amacında Dünya'nın en iyi ${pct(res.top_percent, 1)}'inde (gereken: ${res.min_hits})`}{" "}
                 · <span className={res.passed ? "text-emerald-300" : "text-rose-300"}>{res.passed ? t("GEÇTİ", "PASSED") : t("GEÇMEDİ", "NOT PASSED")}</span>
               </p>
               <p className="mt-1 text-xs text-slate-500">
