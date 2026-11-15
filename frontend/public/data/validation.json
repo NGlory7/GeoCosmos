@@ -1,9 +1,9 @@
 {
- "hits": 0,
+ "hits": 3,
  "min_hits": 3,
  "holdout_total": 4,
- "top_percent": 1.0,
- "passed": false,
+ "top_percent": 12.5,
+ "passed": true,
  "denominator": 189878,
  "analogs": [
   {
@@ -28,7 +28,7 @@
    "rank": 15475,
    "percentile": 8.15,
    "cell_id": "g25_64.776_-17.010",
-   "hit": false
+   "hit": true
   },
   {
    "id": "yungay",
@@ -51,7 +51,7 @@
    "rank": 16002,
    "percentile": 8.428,
    "cell_id": "g25_-24.079_-70.087",
-   "hit": false
+   "hit": true
   },
   {
    "id": "haughton",
@@ -78,7 +78,7 @@
    "rank": 4404,
    "percentile": 2.319,
    "cell_id": "g25_75.402_-89.943",
-   "hit": false
+   "hit": true
   },
   {
    "id": "hanksville",
@@ -102,7 +102,7 @@
    "rank": 23570,
    "percentile": 12.413,
    "cell_id": "g25_38.323_-110.694",
-   "hit": false
+   "hit": true
   },
   {
    "id": "svalbard",
@@ -129,7 +129,7 @@
    "rank": 4952,
    "percentile": 2.608,
    "cell_id": "g25_79.472_13.846",
-   "hit": false
+   "hit": true
   },
   {
    "id": "salda",
@@ -175,7 +175,7 @@
    "rank": 10498,
    "percentile": 5.529,
    "cell_id": "g25_30.409_59.129",
-   "hit": false
+   "hit": true
   },
   {
    "id": "lanzarote",

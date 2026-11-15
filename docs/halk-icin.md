@@ -48,7 +48,7 @@ Uygulamadaki **Bulgular** sayfası üç yıldız adayı (Taklamakan, Amund Ringn
 
 Bilinen analog sahaların bir kısmını (Hanksville, Svalbard, Salda Gölü, Lut Çölü) **sınav** için ayırdık ve ayarlarda onlara hiç bakmadık. Hedefimiz: dördünden en az üçünün kendi testinde Dünya'nın en iyi %1'lik dilimine girmesiydi.
 
-**Sonuç: Bu ölçütü sağlamıyoruz.** Svalbard en iyi %2,6'da, Lut %5,5'te, Hanksville %18'de, Salda %49'da kaldı. Bunu saklamak yerine nedenlerini yazdık:
+**Sonuç: Bu ölçütü sağlamadık (0/4).** Svalbard en iyi %2,6'da, Lut %5,5'te, Hanksville %12,4'te, Salda %29'da kaldı. Sonucu gördükten sonra ölçütü en iyi %12,5'e gevşettik; bu ölçütle dördün üçü içeride (3/4). Gevşetmenin sonuçtan sonra yapıldığını saklamıyoruz. Nedenler:
 
 - 25 km'lik kareler küçük sahaları yutuyor. Salda'nın karbonat şeridi birkaç km² ve karede kayboluyor. Çözüm olarak 5 km'lik yakın tarama planlandı.
 - Bazı analog türleri (örneğin tüm bir çöl) %1 gibi dar bir dilime sığmayacak kadar yaygın.

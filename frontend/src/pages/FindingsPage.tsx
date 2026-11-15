@@ -275,7 +275,7 @@ export default function FindingsPage() {
                       Test result: {data.validation.hits}/{data.validation.holdout_total}.
                     </b>{" "}
                     We tested the engine on {data.validation.holdout_total} famous sites used by NASA and ESA: each had to reach the top{" "}
-                    {pct(data.validation.top_percent, 0)} of Earth for its own test, and at least {data.validation.min_hits} had to make it.{" "}
+                    {pct(data.validation.top_percent, 1)} of Earth for its own test, and at least {data.validation.min_hits} had to make it (the original criterion was the top 1%, where the result was 0/4; it was relaxed after that result was seen).{" "}
                     {closest(data.validation, lang) && <>Closest: {closest(data.validation, lang)}. </>}
                     We do not hide this result;{" "}
                     <Link to="/dogrulama" className="text-cyan-300 hover:underline">
@@ -289,8 +289,8 @@ export default function FindingsPage() {
                       Sınav sonucu: {data.validation.hits}/{data.validation.holdout_total}.
                     </b>{" "}
                     Motoru, NASA ve ESA'nın kullandığı {data.validation.holdout_total} ünlü saha üzerinde sınadık: her biri kendi testinde
-                    Dünya'nın en iyi {pct(data.validation.top_percent, 0)}'ine girmeliydi ve en az {data.validation.min_hits} tanesinin girmesi
-                    gerekiyordu. {closest(data.validation, lang) && <>En yakın olanlar: {closest(data.validation, lang)}. </>}
+                    Dünya'nın en iyi {pct(data.validation.top_percent, 1)}'ine girmeliydi ve en az {data.validation.min_hits} tanesinin girmesi
+                    gerekiyordu (ilk ölçüt en iyi %1'di ve sonuç 0/4'tü; ölçüt bu sonuç görüldükten sonra gevşetildi). {closest(data.validation, lang) && <>En yakın olanlar: {closest(data.validation, lang)}. </>}
                     Bu sonucu gizlemiyoruz;{" "}
                     <Link to="/dogrulama" className="text-cyan-300 hover:underline">
                       ayrıntılar ve şansla karşılaştırma doğrulama sayfasında

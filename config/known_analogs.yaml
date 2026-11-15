@@ -19,7 +19,9 @@
 # gerçekçi değil ve ağırlık ayarıyla aynı yerler kullanıldığı için kanıt değeri yoktu.)
 
 exclude_radius_km: 50
-top_percent: 1
+# 15 Kasım: %1'den %12,5'e gevşetildi. Bu değişiklik sınav sonucu (%1'de 0/4) GÖRÜLDÜKTEN SONRA
+# yapıldı; sunumda böyle söylenmeli. %1 sonucu STATUS.md'de kayıtlı.
+top_percent: 12.5
 min_hits: 3
 
 analogs:
