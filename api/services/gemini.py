@@ -15,6 +15,7 @@ from core.profiles import Parameter
 
 CACHE_PATH = Path(__file__).resolve().parents[2] / "data" / "processed" / "gemini_cache.json"
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+TIMEOUT_MS = 20_000
 
 
 class GeminiError(RuntimeError):
@@ -66,7 +67,7 @@ def translate(text: str, params: dict[str, Parameter]) -> dict:
     key = _cache_key(text, params)
     cache = _read_cache()
     if key in cache:
-        return cache[key]
+        return {**cache[key], "method": "cache"}
 
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
@@ -76,7 +77,8 @@ def translate(text: str, params: dict[str, Parameter]) -> dict:
 
     param_list = "\n".join(f"- {p.key}: {p.label}" for p in params.values())
     try:
-        client = genai.Client(api_key=api_key)
+        # Zaman sınırı: takılan istek kullanıcıyı bekletmesin, anahtar kelime yedeğine düşülsün (ms).
+        client = genai.Client(api_key=api_key, http_options={"timeout": TIMEOUT_MS})
         resp = client.models.generate_content(
             model=MODEL,
             contents=PROMPT.format(params=param_list, text=text),
@@ -91,6 +93,9 @@ def translate(text: str, params: dict[str, Parameter]) -> dict:
         "unsupported": parsed.unsupported,
     }
     cache[key] = result
-    CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
-    return result
+    try:
+        CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+    except OSError:  # salt okunur dosya sistemi (bazı barındırmalar): önbelleksiz devam
+        pass
+    return {**result, "method": "gemini"}

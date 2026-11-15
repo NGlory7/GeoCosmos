@@ -1,0 +1,10 @@
+# Sadece canlı API (Dockerfile). Veri hattı paketleri (Earth Engine, rasterio, geopandas...) girmez.
+fastapi
+uvicorn[standard]
+pydantic>=2
+python-dotenv
+pandas
+numpy
+pyarrow
+pyyaml
+google-genai

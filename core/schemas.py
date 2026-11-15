@@ -101,6 +101,10 @@ class ScenarioRequest(BaseModel):
 
 
 class ScenarioResponse(BaseModel):
+    # gemini: canlı çeviri · cache: aynı metin daha önce çevrildi ·
+    # keywords: Gemini'ye ulaşılamadı, anahtar kelimeyle hazır testler (config/scenario_fallback.yaml)
+    method: Literal["gemini", "cache", "keywords"] = "gemini"
+    matched_tests: list[str] = []  # sadece keywords
     weights: dict[str, float]
     unsupported: list[str] = []
     analogs: list[Analog]
