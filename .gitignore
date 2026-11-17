@@ -21,3 +21,7 @@ data/processed/commentary_cache.json
 
 # Yerel araç ayarları
 .claude/
+
+# Office kilit dosyaları ve sunumlar (sunumlar GitHub Releases: sunum-2026)
+~$*
+docs/*.pptx
