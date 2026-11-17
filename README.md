@@ -75,3 +75,9 @@ cp .env.example .env
 | `make data` | `python -m pipeline.build` | `frontend/public/data/` dosyalarını üretir |
 | `make api` | `uvicorn api.main:app --reload` | API'yi açar (`localhost:8000`) |
 | `make test` | `python -m pytest -q` | Testleri çalıştırır |
+
+## License / Lisans
+
+Code: [MIT](LICENSE). Satellite and reference datasets keep their own terms; see [DATA_SOURCES.md](DATA_SOURCES.md).
+
+Kod: [MIT](LICENSE). Uydu ve referans veri setleri kendi kullanım koşullarına tabidir; bkz. [DATA_SOURCES.md](DATA_SOURCES.md).
